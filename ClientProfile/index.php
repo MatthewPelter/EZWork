@@ -95,7 +95,7 @@ require_once("../classes/DB.php");
                 <div class="line3"></div>
             </div>
             <div class="logo">
-                <a href="../ClientProfile/index.html"><h2>E<span>z</span>Work</h2></a>
+                <a href="../ClientProfile/index.php"><h2>E<span>z</span>Work</h2></a>
             </div>
             <div class="searchBar">
                 <form id="searchContainer">
