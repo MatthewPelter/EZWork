@@ -23,14 +23,13 @@
             echo "error passwords do not match!";
             die;
         }
-
+        $username = $firstname . "" . $lastname;
         $password_hash = password_hash($password, PASSWORD_BCRYPT);
-        $sql="INSERT INTO clients(username,firstname,lastname,email,password,phone) VALUES('$firstname', '$firstname', '$lastname', '$email', '$password_hash', '$phone')";
+        $sql="INSERT INTO clients(username,firstname,lastname,email,password,phone) VALUES('$username', '$firstname', '$lastname', '$email', '$password_hash', '$phone')";
         
         $result = mysqli_query($conn, $sql) or die(mysqli_errno());
 
         if ($result) {
-            $username = $firstname . "" . $lastname;
             $_SESSION['userid'] = $username;
             header("Location: ../ClientProfile/index.php");
         } else {
