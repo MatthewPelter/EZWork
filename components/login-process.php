@@ -14,7 +14,7 @@
 			$email = securityscan($_POST['email']);
 			$password = securityscan($_POST['password']);
 			
-			$sql = "SELECT * FROM client WHERE email='$email' LIMIT 1";
+			$sql = "SELECT * FROM clients WHERE email='$email' LIMIT 1";
 			$result = mysqli_query($conn, $sql);
 			$data = mysqli_fetch_assoc($result);
 				if (password_verify($password, $data['password'])) {

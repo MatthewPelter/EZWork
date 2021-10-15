@@ -6,7 +6,7 @@ if (!isset($_SESSION['userid'])) {
     echo "NOT LOGGED IN";
 } else {
     $username = $_SESSION['userid'];
-    $sql = "SELECT * FROM client WHERE username = '$username' limit 1";
+    $sql = "SELECT * FROM clients WHERE username = '$username' limit 1";
     $result = mysqli_query($conn, $sql);
     if (mysqli_num_rows($result) == 0) {
         header('Location: ../index.php');
