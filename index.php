@@ -3,9 +3,6 @@ session_start();
 require_once("classes/DB.php");
 
 
-if (isset($_SESSION['userid'])) {
-    echo "session active";
-}
 ?>
 
 <!--
@@ -236,9 +233,20 @@ HOME INDEX
                 <datalist id="allskills"></datalist>
                 <input type="button" value="Search" id="submit">
             </div>
+
+            <?php 
+                if (!isset($_SESSION['userid'])) {
+                    //echo "session active";
+                ?>
             <div class="login">
                 <button class="login-btn" onclick="location.href='./login/index.php'">Log In</button>
                 <button class="sign-up-btn" id="signUpBtn" onclick="location.href='./register/index.php'">Sign Up</button>
+            </div>
+            <?php 
+                } else {
+            ?>
+            <div class="login">
+                <button class="sign-up-btn" id="signUpBtn" onclick="location.href='./ClientProfile/index.php'">Profile</button>
             </div>
         </div>
         <div id="categories" class="categories">
