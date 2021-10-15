@@ -1,0 +1,2393 @@
+$color1: #0a345e;
+$lightColor: #054e97;
+$darktext: rgb(121, 121, 121);
+/*Header Section */
+a {
+  text-decoration: none;
+}
+header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background: white;
+  height: fit-content;
+  width: 100%;
+}
+.header-container {
+  margin: 0rem 1.5rem;
+  border-bottom: 1.5px lightgrey solid;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  .burger {
+    display: none;
+  }
+  .logo {
+    margin: 0rem 2rem;
+    cursor: pointer;
+    margin: 1rem;
+    h3 {
+      font-family: "Archivo Black", sans-serif;
+      color: rgb(78, 101, 202);
+      font-size: 2rem;
+    }
+    span {
+      font-size: 2rem;
+      color: $lightColor;
+    }
+  }
+  .links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: stretch;
+      li {
+        margin: 0rem 15px;
+        color: $darktext;
+        list-style: none;
+        text-decoration: none;
+        cursor: pointer;
+        &:hover {
+          color: $lightColor;
+        }
+        i {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+  .searchBar {
+    display: flex;
+    flex-direction: row;
+    border-radius: 25px;
+    width: 20rem;
+    height: fit-content;
+    border: 0.75px solid lightgray;
+    #search {
+      border: none;
+      width: 80%;
+      margin-left: 0.8rem;
+      font-size: 1.1rem;
+      &:focus {
+        outline: none;
+      }
+    }
+    #submit {
+      width: 20%;
+      height: 2rem;
+      border: none;
+      color: $darktext;
+      font-size: 1rem;
+      cursor: pointer;
+      background: transparent;
+      &:hover {
+        color: $lightColor;
+      }
+    }
+  }
+  .login {
+    button {
+      cursor: pointer;
+      font-size: 1.2rem;
+      color: $darktext;
+      border: none;
+      background: none;
+      margin: 0rem 0.5rem;
+      &:hover {
+        color: $lightColor;
+      }
+    }
+    .sign-up-btn {
+      padding: 0.4rem 1.3rem;
+      border-radius: 25px;
+      background: $lightColor;
+      color: white;
+      &:hover {
+        background-color: $color1;
+        color: white;
+      }
+    }
+  }
+}
+/*Pull down section begins */
+.client-pulldown,
+.freelance-pulldown,
+.ezwork-pulldown {
+  width: 100%;
+  background: white;
+  display: none;
+  height: fit-content;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  /* First pulldown */
+  .client-card-container {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    flex-direction: row;
+    padding: 2rem;
+    justify-content: flex-start;
+    align-items: center;
+    .client-map {
+      display: flex;
+      flex-direction: column;
+      height: fit-content;
+      width: 30%;
+      border-right: 0.75px solid lightgray;
+      height: fit-content;
+      .client-map-link {
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+        padding: 1rem;
+        cursor: pointer;
+        width: 80%;
+        h3 {
+          width: 100%;
+          font-weight: lighter;
+          font-size: 1rem;
+          color: rgb(39, 39, 39);
+        }
+        p {
+          font-size: 0.85rem;
+          color: $darktext;
+        }
+        i {
+          width: 100%;
+          text-align: end;
+          color: $lightColor;
+        }
+        &:hover {
+          background-color: rgba($color: $lightColor, $alpha: 0.1);
+        }
+      }
+    }
+  }
+  .job-result {
+    width: 60%;
+    height: fit-content;
+
+    .result-container {
+      width: 100%;
+      height: fit-content;
+      display: flex;
+      flex-direction: row;
+      .job-result-card1 {
+        width: 50%;
+        margin: 1rem;
+        border-top: 3px solid $lightColor;
+        border-bottom: 3px solid $lightColor;
+        height: fit-content;
+        h4 {
+          color: rgb(27, 27, 27);
+          font-size: 1.1rem;
+          margin: 1rem 0rem;
+        }
+        p {
+          width: 70%;
+          color: $darktext;
+          font-size: 0.85rem;
+        }
+        button {
+          margin: 1rem 0rem;
+          color: $lightColor;
+          font-size: 0.85rem;
+          border: none;
+          cursor: pointer;
+          background: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+      .job-result-card2 {
+        width: 50%;
+        height: fit-content;
+        ul {
+          li {
+            width: 50%;
+            font-size: 0.9rem;
+            color: rgb(24, 24, 24);
+            margin: 2px;
+            padding: 0.5rem 1rem;
+            list-style: none;
+            border-radius: 10px;
+            &:hover {
+              background-color: rgba($color: $lightColor, $alpha: 0.1);
+            }
+          }
+        }
+      }
+    }
+  }
+  .projects-result {
+    width: 60%;
+    height: fit-content;
+    display: none;
+    .projects-container {
+      width: 100%;
+      height: fit-content;
+      display: flex;
+      flex-direction: row;
+      .projects-card1 {
+        width: 40%;
+        margin: 1rem;
+        border-top: 3px solid $lightColor;
+        border-bottom: 3px solid $lightColor;
+        height: fit-content;
+        h4 {
+          color: rgb(27, 27, 27);
+          font-size: 1.1rem;
+          margin: 1rem 0rem;
+        }
+        p {
+          width: 70%;
+          color: $darktext;
+          font-size: 0.85rem;
+        }
+        button {
+          margin: 1rem 0rem;
+          color: $lightColor;
+          font-size: 0.85rem;
+          border: none;
+          cursor: pointer;
+          background: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+      .projects-card2 {
+        width: 70%;
+        height: fit-content;
+        margin: 1rem 0rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        .image-card {
+          cursor: pointer;
+          width: 10rem;
+          height: 10rem;
+          margin: 0.5rem;
+          border-radius: 20px;
+          border: 0.8px solid lightgray;
+          img {
+            border-top-right-radius: 20px;
+            border-top-left-radius: 20px;
+            object-fit: cover;
+            width: 100%;
+          }
+          p {
+            margin-top: 0.75rem;
+            width: 100%;
+            text-align: center;
+            font-size: 0.9rem;
+          }
+          &:hover {
+            background: rgba($color: $lightColor, $alpha: 0.1);
+          }
+        }
+      }
+    }
+  }
+  .categories-result {
+    width: 60%;
+    height: fit-content;
+    display: none;
+    .categories-container {
+      width: 100%;
+      height: fit-content;
+      display: flex;
+      flex-direction: row;
+    }
+    .categories-card1 {
+      width: 50%;
+      border-top: 3px solid $lightColor;
+      border-bottom: 3px solid $lightColor;
+      height: fit-content;
+      margin: 1rem;
+      h4 {
+        color: rgb(27, 27, 27);
+        font-size: 1.1rem;
+        margin: 1rem 0rem;
+      }
+      p {
+        width: 70%;
+        color: $darktext;
+        font-size: 0.85rem;
+      }
+      button {
+        margin: 1rem 0rem;
+        color: $lightColor;
+        font-size: 0.85rem;
+        border: none;
+        cursor: pointer;
+        background: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .categories-card2 {
+      width: 50%;
+      height: fit-content;
+      margin: 1.5rem;
+      ul {
+        li {
+          width: 50%;
+          font-size: 0.9rem;
+          color: rgb(24, 24, 24);
+          margin: 2px;
+          padding: 0.5rem 1rem;
+          list-style: none;
+          border-radius: 10px;
+          &:hover {
+            background-color: rgba($color: $lightColor, $alpha: 0.1);
+          }
+        }
+      }
+    }
+  }
+  /*Secong pull down*/
+  .card-container2 {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    flex-direction: row;
+    padding: 2rem;
+    justify-content: flex-start;
+    align-items: center;
+    .card2 {
+      width: 20%;
+      height: fit-content;
+      cursor: pointer;
+      border-radius: 15px;
+      padding: 1rem;
+      h3 {
+        width: 100%;
+        font-weight: lighter;
+        font-size: 1rem;
+        color: rgb(39, 39, 39);
+        padding: 0.4rem 0rem;
+      }
+      p {
+        width: 90%;
+        font-size: 0.85rem;
+        color: $darktext;
+      }
+      &:hover {
+        background-color: rgb(236, 236, 236);
+      }
+    }
+  }
+  /* Third Pull Down */
+  .ezwork-main-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    padding: 2rem;
+    .card-container3-reviews {
+      width: 70%;
+      height: fit-content;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      .card3 {
+        width: 70%;
+        height: fit-content;
+        cursor: pointer;
+        border-radius: 15px;
+        padding: 2rem;
+        h3 {
+          font-size: 1rem;
+          padding: 1rem 0rem;
+        }
+        p {
+          font-size: 0.8rem;
+          color: $darktext;
+        }
+        &:hover {
+          background-color: rgb(236, 236, 236);
+        }
+      }
+    }
+    .card-container3-guides {
+      display: flex;
+      flex-direction: column;
+      width: 30%;
+      justify-content: center;
+      h3 {
+        font-size: 1rem;
+      }
+      .guide {
+        width: 80%;
+        cursor: pointer;
+        border-radius: 15px;
+        padding: 1rem;
+        margin: 5px;
+        border: 0.75px solid lightgray;
+        &:hover {
+          background-color: rgb(233, 232, 232);
+        }
+        h4 {
+          font-size: 0.8rem;
+          color: $darktext;
+          font-weight: lighter;
+        }
+      }
+      a {
+        margin: 1rem;
+        color: $lightColor;
+      }
+    }
+  }
+}
+/* THe next three id are used to style the arrow up which appears when user pulld down the nav */
+#arrow1UP,
+#arrow2UP,
+#arrow3UP {
+  color: $darktext;
+  margin-left: 5px;
+}
+/*Pull Down Section ends */
+.categories {
+  padding: 1rem;
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    a {
+      cursor: pointer;
+      text-decoration: none;
+      list-style: none;
+      li {
+        color: $darktext;
+        font-size: 1.1rem;
+        &:hover {
+          color: $lightColor;
+        }
+      }
+    }
+  }
+}
+/* Header Section Ends */
+.intro-container {
+  margin-top: 5.5rem;
+  width: 100%;
+  height: 95vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  .intro-title {
+    width: 50%;
+    h2 {
+      color: $lightColor;
+      font-size: 3.8rem;
+    }
+    h3 {
+      width: 70%;
+      color: $darktext;
+      font-size: 1.65rem;
+      font-weight: lighter;
+    }
+  }
+  .intro-image {
+    margin: 1rem;
+    img {
+      object-fit: cover;
+      width: 27rem;
+      height: 27rem;
+      border-radius: 50%;
+    }
+  }
+  button {
+    cursor: pointer;
+    font-size: 1rem;
+    color: white;
+    border: none;
+    background: $lightColor;
+    padding: 0.4rem 1.3rem;
+    margin: 1rem 0.5rem;
+    border-radius: 25px;
+    &:hover {
+      background: #054688;
+    }
+  }
+  .find-work-btn {
+    padding: 0.4rem 1.3rem;
+    border: 2px solid $lightColor;
+    border-radius: 25px;
+    background: transparent;
+    color: $lightColor;
+    &:hover {
+      background-color: rgba($color: $lightColor, $alpha: 0.1);
+    }
+  }
+}
+/*Second card: Clients section */
+.clients {
+  width: 100%;
+  height: 110vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .clients-container {
+    width: 95%;
+    height: 95%;
+    border-radius: 25px;
+    background-image: url("/Image/clients-container-bgImage.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    color: white;
+    font-weight: bold;
+    #for-client {
+      width: 100%;
+      text-align: start;
+      font-size: 1.5rem;
+      margin: 1rem 0rem 1rem 2rem;
+    }
+    #description-for-client {
+      width: 30%;
+      text-align: start;
+      font-size: 1.35rem;
+      margin: 1rem 0rem 0rem 2rem;
+    }
+    h2 {
+      font-family: "Kaisei Tokumin", serif;
+      width: 40%;
+      margin: 2rem 0rem 1rem 2rem;
+      text-align: start;
+      font-size: 4rem;
+    }
+    .card-container {
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin: 2rem 0rem 0rem 0rem;
+      .card {
+        h4 {
+          font-size: 1.75rem;
+          margin: 0rem 3rem 2rem 0rem;
+        }
+        p {
+          font-size: 1.25rem;
+        }
+        margin: 1rem;
+        width: 30%;
+        border-radius: 25px;
+        padding: 1.5rem;
+        background: $lightColor;
+        cursor: pointer;
+        &:hover {
+          transition: all 0.3s ease;
+          background: white;
+          color: $color1;
+        }
+      }
+    }
+  }
+}
+/*Third card: Categorized skills section */
+.skills {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .skills-container {
+    width: 95%;
+    height: 95%;
+    padding: 2rem 0rem;
+    margin: 2rem 4rem;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    .skills-title {
+      display: flex;
+      justify-content: flex-start;
+      width: 50%;
+      margin-left: 5rem;
+      h3 {
+        width: 100%;
+        color: rgb(41, 39, 39);
+        font-weight: bold;
+        font-size: 4rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+    .skills-container-content {
+      display: flex;
+      flex-direction: row;
+      .card1 {
+        width: 50%;
+        .skills-tree {
+          margin-left: 5rem;
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          height: 100%;
+          a {
+            font-weight: bolder;
+            width: fit-content;
+            margin-bottom: 0.9rem;
+            color: $darktext;
+            font-size: 1.7rem;
+            &:hover {
+              color: $color1;
+            }
+          }
+          .current {
+            color: $lightColor;
+          }
+        }
+      }
+      .card2 {
+        width: 50%;
+        .skills-result {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          .image-container {
+            display: flex;
+            width: 100%;
+            height: 65%;
+            img {
+              border-radius: 20px;
+              object-fit: cover;
+              width: 50%;
+              height: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* use in relation with skills section above */
+.show2 {
+  transition: all.5s ease;
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  a {
+    transition: all.5s ease;
+    font-size: 1.2rem;
+    margin: 0.5rem;
+    width: fit-content;
+    border: 1px solid $darktext;
+    border-radius: 25px;
+    padding: 0.5rem;
+    color: $darktext;
+    &:hover {
+      background: rgb(240, 240, 240);
+    }
+  }
+}
+/*Fourth Card: Talent or freelancers section */
+.talent-section {
+  p {
+    font-family: "Kaisei Tokumin", serif;
+    color: white;
+    font-size: 1.25rem;
+  }
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .talent-container {
+    width: 95%;
+    height: 95%;
+    background: #49af7c;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    .image-card {
+      width: 50%;
+      img {
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        width: 100%;
+        height: 100%;
+        object-position: bottom;
+        object-fit: cover;
+      }
+    }
+    .text-card {
+      width: 50%;
+      border-top-right-radius: 25px;
+      border-bottom-right-radius: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 2rem;
+      #card-title-name {
+        font-size: 1.5rem;
+      }
+      #card-text {
+        width: 70%;
+      }
+      h2 {
+        font-size: 4rem;
+        color: white;
+        font-family: "Kaisei Tokumin", serif;
+        width: 60%;
+        margin: 1.2rem 0rem;
+      }
+      .card-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+        margin-top: 4.5rem;
+        border-top: 0.75px solid lightgray;
+        .card {
+          width: 30%;
+          margin: 0.5rem 1rem 2rem 0rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+        }
+      }
+    }
+    button {
+      cursor: pointer;
+      width: 45%;
+      border-radius: 25px;
+      border: none;
+      background: white;
+      color: #49af7c;
+      font-size: 1.25rem;
+      padding: 0.3rem;
+      &:hover {
+        background: rgb(226, 225, 225);
+      }
+    }
+  }
+}
+/*Fifth card: Customer reviews section */
+.reviews {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .reviews-container {
+    width: 95%;
+    height: 95%;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .card1 {
+      width: 100%;
+      h2 {
+        font-family: "Kaisei Tokumin", serif;
+        font-size: 4rem;
+        color: rgb(46, 46, 46);
+      }
+    }
+    .card {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .card2,
+    .card3,
+    .card4 {
+      width: 65%;
+      display: flex;
+    }
+    .review {
+      width: 100%;
+      height: fit-content;
+      padding: 1rem;
+      margin: 1rem 0rem;
+      background: $lightColor;
+      font-family: "Kaisei Tokumin", serif;
+      font-weight: bolder;
+      border-radius: 25px;
+      border: white 3px solid;
+      .comment {
+        padding-bottom: 1rem;
+        margin: 0.5rem;
+        border-bottom: lightgray 0.75px solid;
+        p {
+          font-size: 1.3rem;
+          color: white;
+        }
+      }
+      .review-info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .profile-pic {
+          img {
+            width: 5rem;
+            height: 5rem;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0.5rem;
+            border: 3px white solid;
+          }
+        }
+        .profile-info {
+          p {
+            color: white;
+            font-size: 1.2rem;
+          }
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+  #green-review {
+    background: #49af7c;
+  }
+}
+/*Sixth card: About ezwork section section */
+.ezwork-about {
+  width: 100%;
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .ezwork-about-container {
+    width: 95%;
+    height: 95%;
+    display: flex;
+    flex-direction: row;
+    .text-section {
+      border-top-left-radius: 25px;
+      border-bottom-left-radius: 25px;
+      width: 50%;
+      background: $lightColor;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 2rem;
+      .title {
+        display: flex;
+        justify-content: flex-start;
+        width: 80%;
+        margin: 0rem 0rem 0.5rem 0rem;
+        h2 {
+          font-family: "Kaisei Tokumin", serif;
+          font-size: 3.5rem;
+          color: white;
+        }
+      }
+      p {
+        font-family: "Kaisei Tokumin", serif;
+        font-size: 1.5rem;
+        color: white;
+      }
+      .card-container {
+        margin-top: 6.5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+        .card {
+          width: 50%;
+          margin: 0rem 1.5em 1rem 0rem;
+          border-top: 0.75px solid lightgray;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          p {
+            margin: 0.5rem 0rem;
+            font-size: 1.2rem;
+          }
+          .star-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            p {
+              margin: 0.5rem 1rem 0.5rem 0rem;
+              font-size: 1.4rem;
+            }
+            #empty {
+              color: rgb(165, 165, 165);
+            }
+            i {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+    .image-section {
+      width: 50%;
+      img {
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+/*Seventh card: Secong skills in sorted order section */
+.skills-directory {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .popular-skills-container {
+    width: 95%;
+    height: 95%;
+    padding: 3rem 2rem;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    .sort {
+      width: 37%;
+      align-items: center;
+      justify-content: center;
+      i {
+        display: none;
+      }
+      h3 {
+        cursor: pointer;
+        font-size: 2.3rem;
+        color: rgb(175, 175, 175);
+        &:hover {
+          color: $color1;
+        }
+      }
+      .current {
+        color: $lightColor;
+      }
+    }
+    .results {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
+/*Footer section */
+.footer {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $color1;
+  .footer-container {
+    width: 95%;
+    height: 95%;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.78rem;
+    margin: 0rem 3rem;
+    /*Mobile view directory tree*/
+    .mobile-directory-tree {
+      display: none;
+      .mobile-user-footer,
+      .mobile-talent-footer,
+      .mobile-resource-footer,
+      .mobile-about-footer {
+        display: none;
+      }
+    }
+    .directory-tree {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      margin: 2rem 0rem;
+      h6 {
+        font-size: 0.83rem;
+        color: whitesmoke;
+      }
+      .directory-tree-user,
+      .directory-tree-talent,
+      .directory-tree-resource,
+      .directory-tree-ezwork {
+        display: flex;
+        flex-direction: column;
+        margin: 0rem 10rem 0rem 0rem;
+        a {
+          margin: 0.5rem 0rem;
+          color: white;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .social-links {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      border-bottom: 0.8px solid lightgrey;
+      border-top: 0.8px solid lightgrey;
+      padding: 1rem 0rem;
+      p {
+        color: white;
+        margin: 0rem 1rem 0rem 0rem;
+      }
+      a {
+        border-radius: 50%;
+        margin: 0.5rem;
+        color: lightgray;
+        border: lightgray 0.9px solid;
+        i {
+          border-radius: 50%;
+          background: $color1;
+          padding: 0.5rem;
+          &:hover {
+            background: $lightColor;
+          }
+        }
+      }
+    }
+    .copyright-section {
+      display: flex;
+      padding: 1rem 0rem 2rem 0rem;
+      align-items: center;
+      flex-direction: row;
+      justify-content: flex-start;
+      color: whitesmoke;
+      p {
+        margin: 0rem 0rem 0rem 2rem;
+      }
+      a {
+        cursor: pointer;
+        color: whitesmoke;
+        padding: 0rem 2rem;
+      }
+    }
+    .mobile-copyright {
+      display: none;
+    }
+  }
+}
+
+//Other classes used in the system
+/* Hide and show is used for javascript */
+.hide {
+  display: none;
+  a {
+    transition: all.5s ease;
+    display: none;
+  }
+}
+.show {
+  display: flex;
+  flex-direction: column;
+  margin: 0rem 1rem;
+  a {
+    transition: all.5s ease;
+    font-size: 1.4rem;
+    color: $darktext;
+    margin: 0.45rem 0rem;
+    &:hover {
+      color: $color1;
+    }
+  }
+  transition: all.5s ease;
+}
+//For getting the images off the categories section
+//nav animation
+.change .line1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+.change .line2 {
+  opacity: 0;
+}
+.change .line3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+/* Mobile nav code start here*/
+.mobile-nav {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  .mobile-nav-content {
+    position: relative;
+    top: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .mobile-nav-searchBar {
+      display: flex;
+      flex-direction: row;
+      border-radius: 25px;
+      width: 20rem;
+      height: fit-content;
+      border: 0.75px solid lightgray;
+      #search {
+        border: none;
+        width: 80%;
+        margin-left: 0.8rem;
+        font-size: 1.1rem;
+        &:focus {
+          outline: none;
+        }
+      }
+      #submit {
+        width: 20%;
+        height: 2rem;
+        border: none;
+        color: $darktext;
+        font-size: 1rem;
+        cursor: pointer;
+        background: transparent;
+        &:hover {
+          color: $lightColor;
+        }
+      }
+    }
+    .mobile-nav-links {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: fit-content;
+      margin-top: 1rem;
+      .mobile-nav-links-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        .card {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          padding: 1rem 0rem;
+          h6 {
+            width: 95%;
+            margin-left: 1rem;
+            color: rgb(34, 34, 34);
+            font-size: 1rem;
+          }
+          i {
+            display: flex;
+            justify-self: flex-end;
+            align-self: flex-end;
+            font-size: 1rem;
+            color: $darktext;
+            cursor: pointer;
+            margin-right: 1rem;
+          }
+          #MobileNavAbout {
+            cursor: pointer;
+          }
+          #mobile-nav-up1,
+          #mobile-nav-up2,
+          #mobile-nav-up3 {
+            display: none;
+          }
+        }
+        .mobile-talent {
+          display: none;
+          width: 100%;
+          .mobile-talent-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin: 1rem 1.5rem;
+            .card {
+              display: flex;
+              flex-direction: column;
+              width: 92.5%;
+              cursor: pointer;
+              h3 {
+                font-size: 1rem;
+                font-weight: lighter;
+              }
+              p {
+                color: $darktext;
+                margin-top: 0.5rem;
+                font-size: 0.8rem;
+              }
+              i {
+                height: fit-content;
+                cursor: pointer;
+                font-size: 0.7rem;
+              }
+            }
+            .MobileFindFreelancer {
+              display: none;
+              width: 100%;
+              height: 100%;
+              position: fixed;
+              top: 8%;
+              left: 0;
+              background-color: white;
+              overflow-x: hidden;
+              .MobileFindFreelancerHeader {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 0.7rem 0rem;
+                border-bottom: 0.3px solid whitesmoke;
+                i {
+                  margin: 0rem 1rem;
+                  font-size: 0.9rem;
+                  color: $darktext;
+                  cursor: pointer;
+                }
+                h3 {
+                  color: $color1;
+                }
+              }
+              .MobileFindFreelancerContainer {
+                width: 100%;
+                margin: 0rem 0.7rem;
+                display: flex;
+                flex-direction: column;
+                padding: 0.7rem 1rem;
+                .MobileFindFreelancerCard {
+                  p {
+                    font-size: 0.8rem;
+                    padding: 0.6rem 0rem 0.3rem 0rem;
+                    a {
+                      color: $lightColor;
+                      cursor: pointer;
+                      &:hover {
+                        text-decoration: underline;
+                      }
+                    }
+                  }
+                  ul {
+                    list-style: none;
+                    a {
+                      cursor: pointer;
+                      color: black;
+                      li {
+                        margin: 1.5rem 0rem;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            .MobileProject {
+              display: none;
+              width: 100%;
+              height: 100%;
+              position: fixed;
+              top: 8%;
+              left: 0;
+              background-color: white;
+              .MobileProjectHeader {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 0.6rem 0rem;
+                border-bottom: 0.3px solid whitesmoke;
+                i {
+                  margin: 0rem 1rem;
+                  font-size: 0.9rem;
+                  color: $darktext;
+                  cursor: pointer;
+                }
+                h3 {
+                  color: $color1;
+                }
+              }
+              .MobileProjectContainer {
+                width: 100%;
+                margin: 0rem 0.7rem;
+                display: flex;
+                flex-direction: column;
+                padding: 0.5rem 1rem;
+                .MobileProjectCard {
+                  p {
+                    font-size: 0.8rem;
+                    padding: 0.3rem 0rem 0.3rem 0rem;
+                    a {
+                      color: $lightColor;
+                      cursor: pointer;
+                      &:hover {
+                        text-decoration: underline;
+                      }
+                    }
+                  }
+                }
+                .MobileProjectCard2 {
+                  .image-card {
+                    cursor: pointer;
+                    display: flex;
+                    flex-direction: row;
+                    border-radius: 10px;
+                    border: 0.7px solid lightgray;
+                    margin: 0.7rem 1rem 0.7rem 0rem;
+                    img {
+                      border-top-left-radius: 10px;
+                      border-bottom-left-radius: 10px;
+                      width: 5.5rem;
+                      height: 100%;
+                      object-fit: contain;
+                    }
+                    p {
+                      font-size: 1rem;
+                      width: 100%;
+                      margin-left: 1rem;
+                      text-align: left;
+                      align-self: center;
+                    }
+                    &:hover {
+                      background: rgb(238, 238, 238);
+                    }
+                  }
+                  p {
+                    font-size: 0.8rem;
+                    a {
+                      color: $lightColor;
+                      cursor: pointer;
+                      &:hover {
+                        text-decoration: underline;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            .MobileSkills {
+              display: none;
+              width: 100%;
+              height: 100%;
+              position: fixed;
+              top: 8%;
+              left: 0;
+              background-color: white;
+              overflow-x: hidden;
+              .MobileSkillsHeader {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 0.7rem 0rem;
+                border-bottom: 0.3px solid whitesmoke;
+                i {
+                  margin: 0rem 1rem;
+                  font-size: 0.9rem;
+                  color: $darktext;
+                  cursor: pointer;
+                }
+                h3 {
+                  color: $color1;
+                }
+              }
+              .MobileSkillsContainer {
+                width: 100%;
+                margin: 0rem 0.7rem;
+                display: flex;
+                flex-direction: column;
+                padding: 0.7rem 1rem;
+                .MobileSkillsCard {
+                  p {
+                    font-size: 0.8rem;
+                    padding: 0.6rem 0rem 0.3rem 0rem;
+                    a {
+                      color: $lightColor;
+                      cursor: pointer;
+                      &:hover {
+                        text-decoration: underline;
+                      }
+                    }
+                  }
+                  ul {
+                    list-style: none;
+                    a {
+                      cursor: pointer;
+                      color: black;
+                      li {
+                        margin: 1.5rem 0rem;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .mobile-work {
+          display: none;
+          width: 100%;
+          .mobile-work-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin: 0rem 1.5rem;
+            .card {
+              display: flex;
+              flex-direction: column;
+              width: 80%;
+              h3 {
+                font-size: 1rem;
+                font-weight: lighter;
+              }
+              p {
+                color: $darktext;
+                margin-top: 0.5rem;
+                font-size: 0.8rem;
+              }
+            }
+          }
+        }
+        .mobile-ezwork {
+          display: none;
+          width: 100%;
+          .mobile-ezwork-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin: 0rem 1.5rem;
+            .mobile-ezwork-reviews {
+              .card {
+                cursor: pointer;
+                h3 {
+                  color: rgb(27, 27, 27);
+                  font-size: 1rem;
+                  font-weight: lighter;
+                }
+              }
+            }
+            .mobile-ezwork-guides {
+              width: 100%;
+              h3 {
+                color: rgb(24, 24, 24);
+                font-size: 1.3rem;
+              }
+              .guide {
+                width: 80%;
+                border: 0.7px solid lightgray;
+                border-radius: 15px;
+                padding: 1rem;
+                margin-top: 1rem;
+                cursor: pointer;
+                h4 {
+                  font-size: 1rem;
+                  color: $darktext;
+                  font-weight: lighter;
+                }
+                p {
+                  font-size: 0.8rem;
+                  color: $darktext;
+                }
+              }
+              a {
+                font-size: 0.7rem;
+                color: $lightColor;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
+    .mobile-nav-login {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 0.5rem;
+      .nav-sign-up-btn {
+        cursor: pointer;
+        width: 90%;
+        padding: 0.5rem;
+        border-radius: 15px;
+        border: none;
+        font-size: 1rem;
+        background: $lightColor;
+        color: white;
+        &:hover {
+          color: lightgray;
+        }
+      }
+    }
+  }
+}
+// Other classes end
+
+//Media Queires
+@media screen and (max-width: 754px) {
+  /*Header Section */
+  header {
+    bottom: auto;
+    height: fit-content;
+    width: 100%;
+  }
+  .header-container {
+    margin: 0;
+    padding: 0rem 1rem;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .burger {
+      z-index: 2;
+      display: inline-block;
+      cursor: pointer;
+      .line1,
+      .line2,
+      .line3 {
+        width: 1.7rem;
+        height: 0.3rem;
+        margin: 0.3rem;
+        border-radius: 5px;
+        background: $lightColor;
+        pointer-events: none;
+        transition: 0.4s;
+      }
+    }
+    .logo {
+      width: 40%;
+      text-align: end;
+      h3 {
+        font-size: 1.5rem;
+      }
+      span {
+        font-size: 1.5rem;
+      }
+    }
+    .links {
+      display: none;
+    }
+    .searchBar {
+      display: none;
+    }
+    .login {
+      margin-left: 0;
+      button {
+        cursor: pointer;
+        font-size: 0.9rem;
+        color: $darktext;
+        border: none;
+        background: none;
+        margin: 0;
+        &:hover {
+          color: $darktext;
+        }
+      }
+      .sign-up-btn {
+        padding: 0;
+        margin-left: 0.4rem;
+        border-radius: 0;
+        background: none;
+        color: $darktext;
+        &:hover {
+          background: none;
+          color: $darktext;
+        }
+      }
+    }
+  }
+  /*Pull Down Section ends */
+  .categories {
+    display: none;
+  }
+  /* Header Section Ends */
+  /*First Card with intro */
+  .intro-container {
+    margin: 5rem 1rem 1rem 1rem;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    .intro-title {
+      width: 80%;
+      h2 {
+        margin-top: 1rem;
+        color: $lightColor;
+        font-size: 3rem;
+        font-weight: bolder;
+      }
+      h3 {
+        margin-top: 1rem;
+        width: 100%;
+        color: $darktext;
+        font-size: 1.5rem;
+        font-weight: lighter;
+      }
+    }
+    .intro-image {
+      display: none;
+    }
+    button {
+      cursor: pointer;
+      font-size: 1rem;
+      color: white;
+      border: none;
+      background: $lightColor;
+      padding: 0.7rem 1.5rem;
+      margin: 1rem 0.5rem 1rem 0rem;
+      border-radius: 25px;
+      &:hover {
+        background: #054688;
+      }
+    }
+    .find-work-btn {
+      border: 2px solid $lightColor;
+      border-radius: 25px;
+      background: transparent;
+      color: $lightColor;
+      &:hover {
+        background-color: rgba($color: $lightColor, $alpha: 0.1);
+      }
+    }
+  }
+  /*Second card: Clients section */
+  .clients {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .clients-container {
+      width: 100%;
+      height: fit-content;
+      border-radius: 0;
+      background-image: url("/Image/clients-container-bgImage.jpg");
+      background-size: cover;
+      background-position: right;
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      color: white;
+      font-weight: bold;
+      #for-client {
+        width: 100%;
+        text-align: start;
+        font-size: 1.25rem;
+        margin: 2rem 0rem 1rem 2rem;
+      }
+      h2 {
+        font-family: "Kaisei Tokumin", serif;
+        width: 70%;
+        margin: 2rem 0rem 1rem 2rem;
+        text-align: start;
+        font-size: 2.3rem;
+      }
+      #description-for-client {
+        width: 90%;
+        text-align: start;
+        font-size: 1.1rem;
+        margin: 1rem 0rem 0rem 2rem;
+      }
+      .card-container {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 2rem 0rem;
+        .card {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          h4 {
+            width: 45%;
+            font-size: 1.2rem;
+            margin: 0;
+            margin-top: 1rem;
+          }
+          p {
+            width: 60%;
+            text-align: end;
+            margin-top: 3.5rem;
+            font-size: 1rem;
+          }
+          margin: 1rem;
+          width: 90%;
+          border-radius: 15px;
+          padding: 1rem;
+          background: $lightColor;
+          cursor: pointer;
+          &:hover {
+            transition: all 0.3s ease;
+            background: white;
+            color: $color1;
+          }
+        }
+      }
+    }
+  }
+  /*Third card: Categorized skills section */
+  .skills {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0rem;
+    .skills-container {
+      width: 95%;
+      height: 95%;
+      padding: 0;
+      margin: 1rem;
+      border-radius: 25px;
+      display: flex;
+      flex-direction: column;
+      .skills-title {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        margin-left: 0rem;
+        h3 {
+          width: 70%;
+          color: rgb(41, 39, 39);
+          font-weight: bold;
+          font-size: 2.5rem;
+          margin-bottom: 0.5rem;
+        }
+      }
+      .skills-container-content {
+        display: flex;
+        flex-direction: column;
+        .card1 {
+          width: fit-content;
+          .skills-tree {
+            margin-left: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            a {
+              font-weight: bolder;
+              width: fit-content;
+              margin-bottom: 0;
+              margin: 1rem;
+              color: $darktext;
+              font-size: 1.1rem;
+              text-decoration: underline;
+              &:hover {
+                color: $color1;
+              }
+            }
+            .current {
+              color: $lightColor;
+            }
+          }
+        }
+        .card2 {
+          width: 100%;
+          .skills-result {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            /*Text is in show2 class */
+            .image-container {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  .show2 {
+    transition: all.5s ease;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    a {
+      transition: all.5s ease;
+      font-size: 1rem;
+      margin: 0.5rem;
+      width: fit-content;
+      border: 1px solid $darktext;
+      border-radius: 25px;
+      padding: 0.5rem;
+      color: $darktext;
+      &:hover {
+        background: rgb(240, 240, 240);
+      }
+    }
+  }
+  /*Fourth Card: Talent or freelancers section */
+  .talent-section {
+    p {
+      font-family: "Kaisei Tokumin", serif;
+      color: white;
+      font-size: 1.25rem;
+    }
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .talent-container {
+      width: 100%;
+      height: fit-content;
+      background: #49af7c;
+      border-radius: 0;
+      display: flex;
+      flex-direction: column;
+      padding: 0rem 0rem 2rem 0rem;
+      .image-card {
+        width: 100%;
+        height: 20rem;
+        img {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+          width: 100%;
+          height: 100%;
+          object-position: bottom;
+          object-fit: cover;
+        }
+      }
+      .text-card {
+        width: 100%;
+        height: fit-content;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 0rem;
+        margin: 1rem;
+        #card-title-name {
+          font-size: 1.5rem;
+        }
+        h2 {
+          font-size: 2.5rem;
+          color: white;
+          font-family: "Kaisei Tokumin", serif;
+          width: 50%;
+          margin: 1.2rem 0rem;
+        }
+        #card-text {
+          width: 95%;
+        }
+        .card-container {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+          width: 100%;
+          margin-top: 3rem;
+          border-top: 0.75px solid lightgray;
+          .card {
+            width: 45%;
+            margin: 1rem 1rem 1rem 0rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+          }
+        }
+      }
+      button {
+        margin-top: 1rem;
+        cursor: pointer;
+        width: 45%;
+        border-radius: 25px;
+        border: none;
+        background: white;
+        color: #49af7c;
+        font-size: 1.25rem;
+        padding: 0.3rem;
+        &:hover {
+          background: rgb(226, 225, 225);
+        }
+      }
+    }
+  }
+  /*Fifth card: Customer reviews section */
+  .reviews {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .reviews-container {
+      width: 95%;
+      height: 95%;
+      border-radius: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 2rem 0rem;
+      .card1 {
+        width: 100%;
+        h2 {
+          width: 60%;
+          font-family: "Kaisei Tokumin", serif;
+          font-size: 2.55rem;
+          color: rgb(46, 46, 46);
+        }
+      }
+      .card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      .card2,
+      .card3,
+      .card4 {
+        width: 100%;
+        display: flex;
+      }
+      .review {
+        width: 100%;
+        height: fit-content;
+        padding: 0.8rem;
+        margin: 0.8rem 0rem;
+        background: $color1;
+        font-family: "Kaisei Tokumin", serif;
+        font-weight: bolder;
+        border-radius: 15px;
+        border: white 3px solid;
+        .comment {
+          padding-bottom: 1rem;
+          margin: 0.5rem;
+          border-bottom: lightgray 0.75px solid;
+          p {
+            font-size: 1rem;
+            color: white;
+          }
+        }
+        .review-info {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          .profile-pic {
+            img {
+              width: 4rem;
+              height: 4rem;
+              border-radius: 50%;
+              object-fit: cover;
+              margin: 0.5rem;
+              border: 3px #49af7c solid;
+            }
+          }
+          .profile-info {
+            p {
+              color: white;
+              font-size: 1rem;
+            }
+            display: flex;
+            flex-direction: column;
+          }
+        }
+      }
+    }
+    #green-review {
+      background: #49af7c;
+      img {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 0.5rem;
+        border: 3px $color1 solid;
+      }
+    }
+  }
+  /*Sixth card: About ezwork section section */
+  .ezwork-about {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .ezwork-about-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 2rem 0rem 0rem 0rem;
+      .text-section {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        width: 100%;
+        background: $lightColor;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 2rem;
+        .title {
+          display: flex;
+          justify-content: flex-start;
+          width: 80%;
+          margin: 0rem 0rem 0.5rem 0rem;
+          h2 {
+            font-family: "Kaisei Tokumin", serif;
+            font-size: 3rem;
+            color: white;
+          }
+        }
+        p {
+          font-family: "Kaisei Tokumin", serif;
+          font-size: 1.3rem;
+          color: white;
+        }
+        .card-container {
+          margin-top: 3rem;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          width: 100%;
+          .card {
+            width: 50%;
+            margin: 0rem 1.5em 1rem 0rem;
+            border-top: 0.75px solid lightgray;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            p {
+              margin: 0.5rem 0rem;
+              font-size: 1.2rem;
+            }
+            .star-container {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              p {
+                margin: 0.5rem 1rem 0.5rem 0rem;
+                font-size: 1.3rem;
+              }
+              #empty {
+                color: rgb(165, 165, 165);
+              }
+              i {
+                color: white;
+              }
+            }
+          }
+        }
+      }
+      .image-section {
+        width: 100%;
+        height: 70%;
+        img {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  /*Seventh card: Secong skills in sorted order section */
+  .skills-directory {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .popular-skills-container {
+      width: 95%;
+      height: 95%;
+      padding: 3rem 0rem;
+      border-radius: 25px;
+      display: flex;
+      flex-direction: column;
+      .sort {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: fit-content;
+        i {
+          display: inline-block;
+          font-size: 1rem;
+          color: $lightColor;
+          cursor: pointer;
+        }
+        #skills-directory-left {
+          display: none;
+        }
+        h3 {
+          cursor: pointer;
+          font-size: 1.5rem;
+          margin: 1.5rem;
+          text-align: center;
+          color: rgb(175, 175, 175);
+          &:hover {
+            color: $color1;
+          }
+        }
+        #projects {
+          display: none;
+        }
+        #topSkillsUs {
+          display: none;
+        }
+        .current {
+          color: $lightColor;
+        }
+      }
+      .results {
+        display: flex;
+        flex-direction: row;
+        .show {
+          display: flex;
+          flex-direction: column;
+          margin: 0;
+          a {
+            transition: all.5s ease;
+            font-size: 1rem;
+            font-weight: bold;
+            color: $darktext;
+            margin: 0.7rem;
+            &:hover {
+              color: $color1;
+            }
+          }
+          transition: all.5s ease;
+        }
+      }
+    }
+  }
+  /*Foooter */
+  .footer {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $color1;
+    .footer-container {
+      width: 95%;
+      height: fit-content;
+      border-radius: 25px;
+      display: flex;
+      flex-direction: column;
+      font-size: 0.78rem;
+      margin: 0rem 1rem;
+      /*Mobile view directory tree*/
+      .mobile-directory-tree {
+        display: inline-block;
+        margin: 0rem 0.5rem;
+        .mobile-directory-container {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          .card {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            padding: 1rem 0rem;
+            border-bottom: 0.75px solid lightgray;
+            h6 {
+              width: 95%;
+              pointer-events: none;
+              color: white;
+              font-size: 0.9rem;
+            }
+            i {
+              display: flex;
+              justify-self: flex-end;
+              align-self: flex-end;
+              font-size: 1rem;
+              color: white;
+              cursor: pointer;
+            }
+            #mobile-footer-up1,
+            #mobile-footer-up2,
+            #mobile-footer-up3,
+            #mobile-footer-up4 {
+              display: none;
+            }
+          }
+          .mobile-user-footer {
+            display: none;
+            .mobile-user-links {
+              display: flex;
+              flex-direction: column;
+              margin-right: 16rem;
+              margin-bottom: 1rem;
+              a {
+                margin: 0.5rem 0rem;
+                color: white;
+                font-size: 0.8rem;
+              }
+              a:hover {
+                margin: 0.5rem 0rem;
+                color: white;
+                font-size: 0.8rem;
+                text-decoration: underline;
+              }
+            }
+          }
+          .mobile-talent-footer {
+            display: none;
+            .mobile-talent-links {
+              display: flex;
+              flex-direction: column;
+              margin-right: 16rem;
+              margin-bottom: 1rem;
+              a {
+                margin: 0.5rem 0rem;
+                color: white;
+                font-size: 0.8rem;
+              }
+              a:hover {
+                margin: 0.5rem 0rem;
+                color: white;
+                font-size: 0.8rem;
+                text-decoration: underline;
+              }
+            }
+          }
+          .mobile-resource-footer {
+            display: none;
+            .mobile-resource-links {
+              display: flex;
+              flex-direction: column;
+              margin-right: 17rem;
+              margin-bottom: 1rem;
+              a {
+                margin: 0.5rem 0rem;
+                color: white;
+                font-size: 0.8rem;
+              }
+              a:hover {
+                margin: 0.5rem 0rem;
+                color: white;
+                font-size: 0.8rem;
+                text-decoration: underline;
+              }
+            }
+          }
+          .mobile-about-footer {
+            display: none;
+            .mobile-about-links {
+              display: flex;
+              flex-direction: column;
+              margin-right: 18rem;
+              margin-bottom: 1rem;
+              a {
+                margin: 0.5rem 0rem;
+                color: white;
+                font-size: 0.8rem;
+              }
+              a:hover {
+                margin: 0.5rem 0rem;
+                color: white;
+                font-size: 0.8rem;
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+      .directory-tree {
+        display: none;
+      }
+      .social-links {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row;
+        align-items: center;
+        border-bottom: 0.8px solid lightgrey;
+        border-top: 0;
+        padding: 0.5rem 0rem;
+        width: 100%;
+        p {
+          color: white;
+          margin-left: 0.5rem;
+        }
+        a {
+          border-radius: 50%;
+          margin: 0.5rem;
+          color: lightgray;
+          border: lightgray 0.9px solid;
+          i {
+            border-radius: 50%;
+            background: $color1;
+            padding: 0.5rem;
+            &:hover {
+              background: $lightColor;
+            }
+          }
+        }
+      }
+      .copyright-section {
+        display: none;
+      }
+      .mobile-copyright {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem 0rem;
+        width: 100%;
+        .card1 {
+          width: 100%;
+          color: white;
+          text-align: left;
+        }
+        .card2 {
+          margin-top: 0.8rem;
+          width: 100%;
+          a {
+            margin-right: 1rem;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+  .hide {
+    display: none;
+    a {
+      transition: all.5s ease;
+      display: none;
+    }
+  }
+  .show {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    a {
+      margin: 1rem;
+      transition: all.5s ease;
+      font-size: 1rem;
+      color: $darktext;
+      margin: 0;
+      &:hover {
+        color: $color1;
+      }
+    }
+    transition: all.5s ease;
+  }
+}
