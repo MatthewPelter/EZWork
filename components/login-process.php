@@ -10,16 +10,15 @@
     if(isset($_POST['submit'])){
 		if (!empty($_POST['email']) && !empty($_POST['password'])) {
 			require_once("../classes/DB.php");
-			$db_handle = new DBController();
 			
 			$email = securityscan($_POST['email']);
 			$password = securityscan($_POST['password']);
 			
 			$sql = "SELECT * FROM client WHERE email='$email' LIMIT 1";
-			$result = $db_handle->runQuery($sql);
-
-				if (password_verify($password, $result['password'])) {
-					$_SESSION['userid'] = $result['username'];	
+			$result = mysqli_query($conn, $sql);
+			$data = mysqli_fetch_assoc($result);
+				if (password_verify($password, $data['password'])) {
+					$_SESSION['userid'] = $data['username'];	
 					header("Location: ../ClientProfile/index.php");
 				} else {
 					header("Location: ../login/index.php?error=1");

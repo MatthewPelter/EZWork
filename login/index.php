@@ -6,7 +6,6 @@ LOGIN INDEX
 <?php
 session_start();
 require_once("../classes/DB.php");
-$db_handle = new DBController();
 if (isset($_SESSION["userid"])) {
 	header("Location: ../ClientProfile/index.php");
 }

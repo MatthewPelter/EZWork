@@ -2,7 +2,6 @@
 session_start();
 include '../components/session-checker.php';
 require_once("../classes/DB.php");
-$db_handle = new DBController();
 ?>
 
 <!DOCTYPE html>

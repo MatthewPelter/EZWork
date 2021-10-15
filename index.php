@@ -1,7 +1,7 @@
 <?php 
 session_start();
-//require_once("classes/DB.php");
-//$db_handle = new DBController();
+require_once("classes/DB.php");
+
 
 if (isset($_SESSION['userid'])) {
     echo "session active";

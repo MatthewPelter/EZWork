@@ -10,7 +10,6 @@
 	
     if(isset($_POST['submit'])){
         require_once("../classes/DB.php");
-	    $db_handle = new DBController();
 
         $firstname = securityscan($_POST['firstName']);
         $lastname = securityscan($_POST['lastName']);
@@ -28,7 +27,7 @@
         $password_hash = password_hash($password, PASSWORD_BCRYPT);
         $sql="INSERT INTO client(username,firstname,lastname,email,password,phone) VALUES('$firstname', '$firstname', '$lastname', '$email', '$password_hash', '$phone')";
         
-        $result = mysqli_query($db_handle->conn, $sql) or die(mysqli_errno());
+        $result = mysqli_query($conn, $sql) or die(mysqli_errno());
 
         if ($result) {
             $username = $firstname . "" . $lastname;
