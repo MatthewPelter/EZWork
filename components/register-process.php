@@ -31,7 +31,7 @@
 
         if ($result) {
             $_SESSION['userid'] = $username;
-            header("Location: ../ClientProfile/index.php");
+            header("Location: ../ClientProfile/index");
         } else {
             echo "not working";
         }

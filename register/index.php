@@ -4,7 +4,7 @@
     session_start();
     require_once("../classes/DB.php");
     if (isset($_SESSION["userid"])) {
-        header("Location: ./index.php");
+        header("Location: ./index");
     }
 ?>
 
@@ -32,7 +32,7 @@
     <div class="register-header">
         <div class="register-header-container">
             <div class="logo">
-                <a href="../index.php"><h3><span>E</span>z<span>Work</span></h3></a>
+                <a href="../index"><h3><span>E</span>z<span>Work</span></h3></a>
             </div>
         </div>
     </div>
@@ -40,7 +40,7 @@
         <div class="container">
             <div class="register-container">
                 <h3>Create your Free Account</h3>
-                <form class="form" action="../components/register-process.php" method="post" name="register" id="myForm">
+                <form class="form" action="../components/register-process" method="post" name="register" id="myForm">
                     <div class="name">
                         <h4>Full Name</h4>
                         <p>
@@ -127,7 +127,7 @@
             <div class="login">
                 <div class="login-container">
                     <h3>Already have an account?</h3>
-                    <button onclick="location.href='../login/index.php'">Log In</button>
+                    <button onclick="location.href='../login/index'">Log In</button>
                 </div>
             </div>
         </div>

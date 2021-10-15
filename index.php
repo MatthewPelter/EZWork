@@ -205,7 +205,7 @@ HOME INDEX
                 </div>
             </div>
             <div class="mobile-nav-login">
-                <button class="nav-sign-up-btn" onclick="location.href='./register/index.php'">Sign Up</button>
+                <button class="nav-sign-up-btn" onclick="location.href='./register/index'">Sign Up</button>
             </div>
         </div>
     </div>
@@ -239,14 +239,14 @@ HOME INDEX
                     //echo "session active";
                 ?>
             <div class="login">
-                <button class="login-btn" onclick="location.href='./login/index.php'">Log In</button>
-                <button class="sign-up-btn" id="signUpBtn" onclick="location.href='./register/index.php'">Sign Up</button>
+                <button class="login-btn" onclick="location.href='./login/index'">Log In</button>
+                <button class="sign-up-btn" id="signUpBtn" onclick="location.href='./register/index'">Sign Up</button>
             </div>
             <?php 
                 } else {
             ?>
             <div class="login">
-                <button class="sign-up-btn" id="signUpBtn" onclick="location.href='./ClientProfile/index.php'">Profile</button>
+                <button class="sign-up-btn" id="signUpBtn" onclick="location.href='./ClientProfile/index'">Profile</button>
             </div>
             <?php
                 }

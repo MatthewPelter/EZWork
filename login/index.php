@@ -7,7 +7,7 @@ LOGIN INDEX
 session_start();
 require_once("../classes/DB.php");
 if (isset($_SESSION["userid"])) {
-	header("Location: ../ClientProfile/index.php");
+	header("Location: ../ClientProfile/index");
 }
 ?>
 
@@ -35,7 +35,7 @@ if (isset($_SESSION["userid"])) {
     <div class="login-header">
         <div class="login-header-container">
             <div class="logo">
-                <a href="../index.php"><h3><span>E</span>z<span>Work</span></h3></a>
+                <a href="../index"><h3><span>E</span>z<span>Work</span></h3></a>
             </div>
         </div>
     </div>
@@ -43,7 +43,7 @@ if (isset($_SESSION["userid"])) {
         <div class="container">
             <div class="login-container">
                 <h3>Log In To EzWork</h3>
-                <form class="form" role="form" action="../components/login-process.php" method="post" name="login">
+                <form class="form" role="form" action="../components/login-process" method="post" name="login">
                     <input type="email" name="email" id="email" placeholder="Email" required>
                     <span style="color: red;font-size: 0.9rem;" id="emailError"></span>
                     <input type="password" name="password" id="password" placeholder="Password" required>
@@ -59,7 +59,7 @@ if (isset($_SESSION["userid"])) {
             <div class="register">
                 <div class="register-container">
                     <h3>Don't have an account?</h3>
-                    <button onclick="location.href='../register/index.php'">Sign Up</button>
+                    <button onclick="location.href='../register/index'">Sign Up</button>
                 </div>
             </div>
         </div>

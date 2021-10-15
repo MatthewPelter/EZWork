@@ -19,9 +19,9 @@
 			$data = mysqli_fetch_assoc($result);
 				if (password_verify($password, $data['password'])) {
 					$_SESSION['userid'] = $data['username'];	
-					header("Location: ../ClientProfile/index.php");
+					header("Location: ../ClientProfile/index");
 				} else {
-					header("Location: ../login/index.php?error=1");
+					header("Location: ../login/index?error=1");
 				}
 		} else {
 			echo "Please fill in the data";

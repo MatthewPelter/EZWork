@@ -43,7 +43,7 @@ require_once("../classes/DB.php");
         </div>
         <div class="mobileJobCard">
             <ul>
-                <a href="./index.php"><li>My Jobs</li></a>
+                <a href="./index"><li>My Jobs</li></a>
                 <a href="#/"><li>All Job Posts</li></a>
                 <a href="#/"><li>All Contracts</li></a>
                 <a href="../PostAJob/PostAJob.html"><li>Post A Job</li></a>
@@ -73,7 +73,7 @@ require_once("../classes/DB.php");
                 <i class="fa fa-cog" aria-hidden="true"></i> Settings
             </p>
         </div>
-        <div class="mobileNavCard mobileNavLogOut" onclick="location.href='../components/logout.php'">
+        <div class="mobileNavCard mobileNavLogOut" onclick="location.href='../components/logout'">
             <p>
                 <i class="fa fa-sign-out-alt"></i> Sign Out
             </p>
@@ -95,7 +95,7 @@ require_once("../classes/DB.php");
                 <div class="line3"></div>
             </div>
             <div class="logo">
-                <a href="../ClientProfile/index.php"><h2>E<span>z</span>Work</h2></a>
+                <a href="../ClientProfile/index"><h2>E<span>z</span>Work</h2></a>
             </div>
             <div class="searchBar">
                 <form id="searchContainer">
@@ -537,19 +537,5 @@ async function toggleJobCard(){
     }
 }
 
-</script>
-<script>
-function showCustomer(str) {
-  if (str == "") {
-    document.getElementById("txtHint").innerHTML = "";
-    return;
-  }
-  const xhttp = new XMLHttpRequest();
-  xhttp.onload = function() {
-    document.getElementById("txtHint").innerHTML = this.responseText;
-  }
-  xhttp.open("GET", "getdata.php?q="+str);
-  xhttp.send();
-}
 </script>
 </html>
