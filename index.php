@@ -248,6 +248,9 @@ HOME INDEX
             <div class="login">
                 <button class="sign-up-btn" id="signUpBtn" onclick="location.href='./ClientProfile/index.php'">Profile</button>
             </div>
+            <?php
+                }
+            ?>
         </div>
         <div id="categories" class="categories">
             <ul>
