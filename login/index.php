@@ -76,6 +76,6 @@ if (isset($_SESSION["userid"])) {
             <a href="/404Page/index.html">Accesibility</a>
         </div>
     </div>
-    <!--<script src="/login/loginPage.js"></script>-->
+    <script src="/login/loginPage.js"></script>
 </body>
 </html>
