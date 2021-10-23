@@ -413,8 +413,8 @@ HOME INDEX
         <div class="intro-title">
             <h2>Find work in the work marketplace</h2>
             <h3>Find the best talent. Build your portfolio. Build your career to the next level.</h3>
-            <button>Find Talent</button>
-            <button class="find-work-btn">Find Work</button>
+            <button onclick="location.href='../login/index.php'">Find Freelancer</button>
+            <button class="find-work-btn" onclick="location.href='../login/index.php'">Find Work</button>
         </div>
         <div class="intro-image">
             <img src="./Image/introCartoon.jpg" alt="Cheerful guy earning money for his idea">
@@ -428,21 +428,21 @@ HOME INDEX
             <h2>Hire the best talent your way</h2>
             <p id="description-for-client">Connect with the largest network of freelancers from around the world and get things done.</p>
             <div class="card-container">
-                <div class="card">
+                <div class="card" onclick="location.href='../login/index.php'">
                     <h4>Post a job and hire professionals</h4>
                     <p>
                         Post a job
                         <i class="fas fa-arrow-right" aria-hidden="true"></i>
                     </p>
                 </div>
-                <div class="card">
+                <div class="card" onclick="location.href='../login/index.php'">
                     <h4>Browse and select through our talent</h4>
                     <p>
                         View our Talent
                         <i class="fas fa-arrow-right" aria-hidden="true"></i>
                     </p>
                 </div>
-                <div class="card">
+                <div class="card" onclick="location.href='../login/index.php'">
                     <h4>View our talent's projects.</h4>
                     <p>
                         View Projects
@@ -570,7 +570,7 @@ HOME INDEX
                         <p>Choose when, where, and how you work</p>
                     </div>
                 </div>
-                <button>Find Projects</button>
+                <button onclick="location.href='../login/index.php'">Find Jobs</button>
             </div>
         </div>
     </div>
@@ -837,14 +837,14 @@ HOME INDEX
                     </div>
                     <div class="mobile-user-footer">
                         <div class="mobile-user-links">
-                            <a href="/404Page/index.html">Find Talent</a>
-                            <a href="/404Page/index.html">See Projects</a>
-                            <a href="/404Page/index.html">Create Account</a>
+                            <a href="./login/index.php">Find Freelancer</a>
+                            <a href="./login/index.php">See Projects</a>
+                            <a href="./register/index.php">Create Account</a>
                             <a href="/404Page/index.html">How To See Progress</a>
                             <a href="/404Page/index.html">How To Pay Freelancer?</a>
-                            <a href="/404Page/index.html">View Current Listings</a>
-                            <a href="/404Page/index.html">Report</a>
-                            <a href="/404Page/index.html">Settings</a>
+                            <a href="./login/index.php">View Current Listings</a>
+                            <a href="./login/index.php">Report</a>
+                            <a href="./login/index.php">Settings</a>
                         </div>
                     </div>
                     <div class="card">
@@ -857,10 +857,10 @@ HOME INDEX
                             <a href="/404Page/index.html">How To Find Work</a>
                             <a href="/404Page/index.html">Agree Job</a>
                             <a href="/404Page/index.html">How to get pay</a>
-                            <a href="/404Page/index.html">Check Balance</a>
-                            <a href="/404Page/index.html">Manage Jobs</a>
-                            <a href="/404Page/index.html">Report</a>
-                            <a href="/404Page/index.html">Settings</a>
+                            <a href="./login/index.php">Check Balance</a>
+                            <a href="./login/index.php">Manage Jobs</a>
+                            <a href="./login/index.php">Report</a>
+                            <a href="./login/index.php">Settings</a>
                         </div>
                     </div>
                     <div class="card">
@@ -892,24 +892,24 @@ HOME INDEX
             <div class="directory-tree">
                 <div class="directory-tree-user">
                     <h6>For Users</h6>
-                    <a href="/404Page/index.html">Find Talent</a>
-                    <a href="/404Page/index.html">See Projects</a>
-                    <a href="/404Page/index.html">Create Account</a>
+                    <a href="./login/index.php">Find Freelancer</a>
+                    <a href="./login/index.php">See Projects</a>
+                    <a href="./register/index.php">Create Account</a>
                     <a href="/404Page/index.html">How To See Progress</a>
                     <a href="/404Page/index.html">How To Pay Freelancer?</a>
-                    <a href="/404Page/index.html">View Current Listings</a>
-                    <a href="/404Page/index.html">Report</a>
-                    <a href="/404Page/index.html">Settings</a>
+                    <a href="./login/index.php">View Current Listings</a>
+                    <a href="./login/index.php">Report</a>
+                    <a href="./login/index.php">Settings</a>
                 </div>
                 <div class="directory-tree-talent">
-                    <h6>For Talent</h6>
+                    <h6>For Freelancer</h6>
                     <a href="/404Page/index.html">How To Find Work</a>
                     <a href="/404Page/index.html">Agree Job</a>
                     <a href="/404Page/index.html">How to get pay</a>
-                    <a href="/404Page/index.html">Check Balance</a>
-                    <a href="/404Page/index.html">Manage Jobs</a>
-                    <a href="/404Page/index.html">Report</a>
-                    <a href="/404Page/index.html">Settings</a>
+                    <a href="./login/index.php">Check Balance</a>
+                    <a href="./login/index.php">Manage Jobs</a>
+                    <a href="./login/index.php">Report</a>
+                    <a href="./login/index.php">Settings</a>
                 </div>
                 <div class="directory-tree-resource">
                     <h6>Resource</h6>
