@@ -266,17 +266,17 @@ HOME INDEX
         <div class="client-pulldown">
             <div class="client-card-container">
                 <div class="client-map">
-                    <div class="client-map-link" id="client-pulldown-link1">
+                    <div class="client-map-link" id="client-pulldown-link1" onclick="location.href='../login/index.php'">
                         <h3>Post A Job & Hire a Freelancer</h3>
                         <i class="fa fa-arrow-right" aria-hidden="true"></i>
                         <p>View EzWork Marketplace</p>
                     </div>
-                    <div class="client-map-link" id="client-pulldown-link2">
+                    <div class="client-map-link" id="client-pulldown-link2" onclick="location.href='../login/index.php'">
                         <h3>Browse & Choose By Projects</h3>
                         <i class="fa fa-arrow-right" aria-hidden="true"></i>
                         <p>Projects Marketplace</p>
                     </div>
-                    <div class="client-map-link" id="client-pulldown-link3">
+                    <div class="client-map-link" id="client-pulldown-link3" onclick="location.href='../login/index.php'">
                         <h3>Browse through all Skills</h3>
                         <i class="fa fa-arrow-right" aria-hidden="true"></i>
                         <p>Skills Marketplace</p>
@@ -287,7 +287,7 @@ HOME INDEX
                         <div class="job-result-card1">
                             <h4>EzWork Marketplace</h4>
                             <p>Add a job or project to the job marketplace for freelancers to view.</p>
-                            <button>Post a Job <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                            <button onclick="location.href='../login/index.php'">Post a Job <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
                         </div>
                         <div class="job-result-card2">
                             <ul>
@@ -362,7 +362,7 @@ HOME INDEX
                     <h3>How to earn money</h3>
                     <p>Learn how you can earn money through EzWork</p>
                 </div>
-                <div class="card2">
+                <div class="card2" onclick="location.href='../login/index.php'">
                     <h3>Find work for your skills</h3>
                     <p>View the type of work in your field</p>
                 </div>
@@ -848,7 +848,7 @@ HOME INDEX
                         </div>
                     </div>
                     <div class="card">
-                        <h6>For Talent</h6>
+                        <h6>For Freelancer</h6>
                         <i class="fa fa-chevron-down" id="mobile-footer-down2" aria-hidden="true"></i>
                         <i class="fa fa-chevron-up" id="mobile-footer-up2" aria-hidden="true"></i>
                     </div>

@@ -206,16 +206,7 @@
                 </div>
             </div>
             <div class="detail-input-section">
-                <h3>Search Skills or Add your Own</h3>
-                <div class="skillSearch">
-                    <input type="text" name="skills" id="skills" list="allskills"  autocomplete="off" placeholder="Search Skills or Add Your Own">                  
-                    <button id="enterSkill">Add</button>
-                </div>
-                <span id="emptyError" style="color: red;font-size: 0.8rem;"></span>
-                <p id="SelectedSkillTitle" style="margin-top: 0.5rem;margin-left: 0.5rem;width: 100%;">Selected Skill <span id="alertMsg" style="font-size: 0.8rem;"></span></p>
-                <form id="selectedSkills" onsubmit="return false">
-                </form>
-                <h4>All Categories</h4>
+                <h4>Select a Category</h4>
                 <select name="category" id="categoryID">
                     <option selected value="AccountingConsulting">Accounting & Consulting</option>
                     <option value="AdminSupport">Admin Support</option>
@@ -234,6 +225,15 @@
                 <span style="font-size: 0.8rem;font-weight: lighter;padding: 0;margin: 0;">(Press on skill to add)</span>
                 
                 <div class="CategorySpecialtyContainer"></div>
+                <h3>Search Skills or Add your Own</h3>
+                <div class="skillSearch">
+                    <input type="text" name="skills" id="skills" list="allskills"  autocomplete="off" placeholder="Search Skills or Add Your Own">                  
+                    <button id="enterSkill">Add</button>
+                </div>
+                <span id="emptyError" style="color: red;font-size: 0.8rem;"></span>
+                <p id="SelectedSkillTitle" style="margin-top: 0.5rem;margin-left: 0.5rem;width: 100%;">Selected Skill <span id="alertMsg" style="font-size: 0.8rem;"></span></p>
+                <form id="selectedSkills" onsubmit="return false">
+                </form>
 
                 <span id="EmptyArrayError" style="color: red;font-size: 1rem;padding: 0.5rem;"></span>
                 <div class="CancelOrNext">
