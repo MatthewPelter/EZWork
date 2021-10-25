@@ -30,12 +30,17 @@ $userID = $row['id'];
     <h3>WORK IN PROGRESS</h3>
     <?php
 
-    $sql = "SELECT messages.*, clients.username FROM messages, clients WHERE receiver='$userID' OR sender='$userID' AND clients.id = messages.sender";
+    $sql = "SELECT messages.*, c.username FROM messages LEFT JOIN clients c ON messages.sender = c.id WHERE receiver='$userID' OR sender='$userID'";
     $result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 
     if (mysqli_num_rows($result) > 0) {
         while ($r = mysqli_fetch_assoc($result)) {
-            echo $r['body'] . " From " . $r['username'] . "<br />";
+            if (strlen($r['body']) > 10) {
+                $m = substr($r['body'], 0, 10) . " ...";
+            } else {
+                $m = $r['body'];
+            }
+            echo $m . " From " . $r['username'] . "<br />";
         }
     } else {
         echo "no messages";
