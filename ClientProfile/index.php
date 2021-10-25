@@ -560,123 +560,98 @@ require_once("../classes/DB.php");
     </datalist>
 </body>
 <script src="../SkillsContainer/searchProfile.js"></script>
+
 <script src="./app.js"></script>
+<!--nav bar script -->
 <script>
-    const close = document.querySelector('.closebtn');
-    const alert = document.querySelector('.alert');
-
-    close.onclick = function() {
-        alert.style.opacity = "0";
-        setTimeout(function() {
-            alert.style.display = "none";
-        }, 600);
-    }
-
-    setTimeout(() => {
-        alert.style.opacity = "0";
-        setTimeout(function() {
-            alert.style.display = "none";
-        }, 600);
-    }, 10000);
-
-
     var job = document.querySelector('.jobCard');
     var talent = document.querySelector('.talentCard');
     var project = document.querySelector('.projectCard');
     var help = document.querySelector('.helpCard');
     var session = document.querySelector('.sessionCard');
-
-    function toggleJob() {
+    function toggleJob(){
         var job = document.querySelector('.jobCard');
-        if (job.style.display === 'none') {
+        if(job.style.display === 'none'){
             job.style.display = 'inline-block';
             talent.style.display = 'none';
             project.style.display = 'none';
             help.style.display = 'none';
             session.style.display = 'none';
-        } else {
-            job.style.display = 'none';
-
+        }
+        else{
+            job.style.display='none';
+            
         }
     }
-
-    function toggleTalent() {
+    function toggleTalent(){
         var talent = document.querySelector('.talentCard');
-        if (talent.style.display === 'none') {
+        if(talent.style.display==='none'){
             talent.style.display = 'inline-block';
             job.style.display = 'none';
             project.style.display = 'none';
             help.style.display = 'none';
             session.style.display = 'none';
-        } else {
+        }
+        else{
             talent.style.display = 'none';
         }
     }
-
-    function toggleProject() {
+    function toggleProject(){
         var project = document.querySelector('.projectCard');
-        if (project.style.display === 'none') {
+        if(project.style.display==='none'){
             project.style.display = 'inline-block';
             talent.style.display = 'none';
             job.style.display = 'none';
             help.style.display = 'none';
             session.style.display = 'none';
-        } else {
+        }
+        else{
             project.style.display = 'none';
         }
     }
-
-    function toggleHelp() {
+    function toggleHelp(){
         var help = document.querySelector('.helpCard');
-        if (help.style.display === 'none') {
+        if(help.style.display==='none'){
             help.style.display = 'inline-block';
             talent.style.display = 'none';
             project.style.display = 'none';
             job.style.display = 'none';
             session.style.display = 'none';
-        } else {
+        }
+        else{
             help.style.display = 'none';
         }
     }
-
-    function toggleSession() {
-
-        if (session.style.display === 'none') {
+    function toggleSession(){
+       
+        if(session.style.display==='none'){
             session.style.display = 'inline-block';
             talent.style.display = 'none';
             project.style.display = 'none';
             help.style.display = 'none';
             job.style.display = 'none';
-        } else {
+        }
+        else{
             session.style.display = 'none';
         }
     }
 
+</script>
+<!--Toggle the nav burger button-->
+<script>
     const navIcon = document.getElementById("nav-burger");
     const profileMobileNav = document.querySelector(".profile-mobile-nav");
 
     function myFunction(x) {
         x.classList.toggle("change");
-        if (x.classList.contains('change')) {
+        if(x.classList.contains('change')){
             profileMobileNav.style.display = "inline-block";
-            searchIcon.style.opacity = '0';
-        } else {
-            profileMobileNav.style.display = 'none';
-            searchIcon.style.opacity = '1';
+            searchIcon.style.opacity='0';
         }
-    }
-
-    const sortDownBtn = document.getElementById('jobArrow');
-    async function toggleJobCard() {
-        var mobileJobCard = document.querySelector(".mobileJobCard");
-        if (mobileJobCard.style.display === "none") {
-            sortDownBtn.style.transform = "rotate(180deg)";
-            mobileJobCard.style.display = "inline-block";
-        } else {
-            mobileJobCard.style.display = "none";
-            sortDownBtn.style.transform = "rotate(360deg)";
+        else{
+            profileMobileNav.style.display='none';
+            searchIcon.style.opacity='1';
         }
     }
 </script>
-
 </html>

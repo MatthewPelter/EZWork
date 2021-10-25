@@ -26,6 +26,7 @@ function showSlides(n, no) {
   x[slideIndex[no] - 1].style.display = "block";
 }
 
+/*
 const quickLinkJob = document.getElementById("quick-link-job");
 const quickLinkJob2 = document.getElementById("quick-link-job2");
 quickLinkJob.addEventListener("click", () => {
@@ -77,3 +78,4 @@ deleteJob.addEventListener("click", () => {
   postedJob.style.display = "none";
   result.style.display = "flex";
 });
+*/
