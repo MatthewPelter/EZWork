@@ -4568,9 +4568,6 @@ section .container .login .login-container button:hover {
 
 /*Profiles*/
 .profile-header-container {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   background: #1d4354;
 }
