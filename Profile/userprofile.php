@@ -223,12 +223,17 @@ require_once("../classes/DB.php");
                 
                     if (mysqli_num_rows($result) > 0) {
                         $row = mysqli_fetch_assoc($result);
-                        echo "<span>". $row['firstname'] ."</span>";
-                        echo "<span>". $row['lastname'] ."</span>";
-                        echo "<span>". $row['email'] ."</span>";
-                        echo "<span>". $row['phone'] ."</span>";
-                    }
                     ?>
+                        <span><?php $row['firstname']; ?></span>
+                        <span><?php $row['lastname']; ?></span>
+                        <span><?php $row['email']; ?></span>
+                        <span><?php $row['phone']; ?></span>
+                    <?php
+                    } else {    
+                    ?>
+                    <span>User does not Exists</span>
+                    <?php } ?>
+                    
                 </div>
                 <div class="postedJob">
                     <div class="jobTitle">
