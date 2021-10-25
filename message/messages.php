@@ -49,6 +49,12 @@ if (isset($_POST['submit'])) {
     <link rel="stylesheet" href="../Styles/style.css">
     <!-- <link rel="stylesheet" href="../Styles/message-styles.css"> -->
     <script src="https://kit.fontawesome.com/e9089fea9d.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
     <title>My Messages</title>
 
     <style type="text/css">
