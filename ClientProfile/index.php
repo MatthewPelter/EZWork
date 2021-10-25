@@ -565,7 +565,7 @@ require_once("../classes/DB.php");
     const alert = document.querySelector('.alert');
     var i;
 
-    close.onclick = function closePopup() {
+    close.onclick = function() {
         var div = this.parentElement;
         div.style.opacity = "0";
         setTimeout(function() {
