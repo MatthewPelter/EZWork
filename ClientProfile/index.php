@@ -24,6 +24,44 @@ require_once("../classes/DB.php");
         <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
         <link rel="icon" href="../logo/logo.svg">
         <link rel="stylesheet" href="../Styles/style.css">
+
+        <style type="text/css">
+            .alert {
+                padding: 20px;
+                background-color: #f44336;
+                color: white;
+                opacity: 1;
+                transition: opacity 0.6s;
+                margin-bottom: 15px;
+            }
+
+            .alert.success {
+                background-color: #04AA6D;
+            }
+
+            .alert.info {
+                background-color: #2196F3;
+            }
+
+            .alert.warning {
+                background-color: #ff9800;
+            }
+
+            .closebtn {
+                margin-left: 15px;
+                color: white;
+                font-weight: bold;
+                float: right;
+                font-size: 22px;
+                line-height: 20px;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+
+            .closebtn:hover {
+                color: black;
+            }
+        </style>
     </head>
 </head>
 
@@ -496,6 +534,22 @@ require_once("../classes/DB.php");
             </p>
         </div>
     </div>
+
+    <?php
+    if (isset($_GET['messagestatus'])) {
+        if ($_GET['messagestatus'] == 1) {
+    ?>
+            <div class="alert success">
+                <span class="closebtn">&times;</span>
+                <strong>Success!</strong> Indicates a successful or positive action.
+            </div>
+
+    <?php
+        }
+    }
+    ?>
+
+
     <!--DataList-->
     <datalist id="allskills">
 
@@ -504,6 +558,22 @@ require_once("../classes/DB.php");
 <script src="../SkillsContainer/searchProfile.js"></script>
 <script src="./app.js"></script>
 <script>
+    var close = document.getElementsByClassName("closebtn");
+    var i;
+
+    for (i = 0; i < close.length; i++) {
+        close[i].onclick = function() {
+            var div = this.parentElement;
+            div.style.opacity = "0";
+            setTimeout(function() {
+                div.style.display = "none";
+            }, 600);
+        }
+    }
+
+
+
+
     var job = document.querySelector('.jobCard');
     var talent = document.querySelector('.talentCard');
     var project = document.querySelector('.projectCard');
@@ -575,9 +645,7 @@ require_once("../classes/DB.php");
             session.style.display = 'none';
         }
     }
-</script>
-<!--Toggle the nav burger button-->
-<script>
+
     const navIcon = document.getElementById("nav-burger");
     const profileMobileNav = document.querySelector(".profile-mobile-nav");
 
@@ -591,8 +659,7 @@ require_once("../classes/DB.php");
             searchIcon.style.opacity = '1';
         }
     }
-</script>
-<script>
+
     const sortDownBtn = document.getElementById('jobArrow');
     async function toggleJobCard() {
         var mobileJobCard = document.querySelector(".mobileJobCard");

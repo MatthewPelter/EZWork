@@ -31,7 +31,7 @@ if (isset($_POST['submit'])) {
         $insertresult = mysqli_query($conn, $insertSQL) or die(mysqli_errno($conn));
 
         if ($insertresult) {
-            header("Location: ../ClientProfile/index?mesagestatus=sucess");
+            header("Location: ../ClientProfile/index?messagestatus=1");
         } else {
             echo "Error Sending Message...";
         }
