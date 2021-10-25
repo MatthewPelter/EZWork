@@ -61,12 +61,11 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
+<div class="body-container">
 
     <!-- NAV BAR -->
     <?php include '../navbar.php'; ?>
     <!-- END NAVBAR -->
-
-    <div class="body-container">
 
     
     <?php
