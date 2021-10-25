@@ -1,3 +1,74 @@
+<div class="profile-mobile-nav">
+    <div class="profile-nav-search">
+        <form id="searchContainer">
+            <input type="text" list="allskills" autocomplete="off" name="searchNAV" placeholder="Search">
+            <input type="submit" value="Find">
+        </form>
+    </div>
+    <div class="mobileNavCard" id="navProfile">
+        <img src="../Users/user.svg" alt="">
+        <span id="user"><?php echo $_SESSION['userid']; ?></span>
+        <i class="fa fa-sort-down"></i>
+    </div>
+    <div class="mobileNavCard" id="mobile-job-card" onclick="toggleJobCard(this)">
+        <p>Jobs</p>
+        <i class="fa fa-sort-down" id="jobArrow"></i>
+    </div>
+    <div class="mobileJobCard">
+        <ul>
+            <a href="./index">
+                <li>My Jobs</li>
+            </a>
+            <a href="#/">
+                <li>All Job Posts</li>
+            </a>
+            <a href="#/">
+                <li>All Contracts</li>
+            </a>
+            <a href="../PostAJob/PostAJob.html">
+                <li>Post A Job</li>
+            </a>
+        </ul>
+    </div>
+    <div class="mobileNavCard">
+        <p>Talent</p>
+        <i class="fa fa-sort-down"></i>
+    </div>
+    <div class="mobileNavCard">
+        <p>Projects</p>
+        <i class="fa fa-sort-down"></i>
+    </div>
+    <div class="mobileNavCard">
+        <p>Messages</p>
+    </div>
+    <div class="mobileNavCard">
+        <p>Help</p>
+        <i class="fa fa-question" title="Help"></i>
+    </div>
+    <div class="mobileNavCard">
+        <p>Notifications</p>
+        <i class="fa fa-bell" title="Notification"></i>
+    </div>
+    <div class="mobileNavCard mobileNavSettings" onclick="location.href='../Settings/settings.html'">
+        <p>
+            <i class="fa fa-cog" aria-hidden="true"></i> Settings
+        </p>
+    </div>
+    <div class="mobileNavCard mobileNavLogOut" onclick="location.href='../components/logout'">
+        <p>
+            <i class="fa fa-sign-out-alt"></i> Sign Out
+        </p>
+    </div>
+</div>
+<div class="mobileSearchCard">
+    <div class="profile-nav-search">
+        <form id="searchContainer">
+            <input type="text" list="allskills" autocomplete="off" placeholder="Search" id="searchMain">
+            <input type="submit" value="Find">
+        </form>
+    </div>
+</div>
+
 <div class="profile-header-container">
     <div class="profileHeader">
         <div class="burger" id="nav-burger" onclick='myFunction(this)'>
