@@ -167,26 +167,42 @@ if (mysqli_num_rows($result) > 0) {
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <h1>Send Message</h1>
-        </div>
-        <div class="row">
-            <h4 style="text-align:center">To <?php echo $row['username']; ?></h4>
-        </div>
-        <div class="row input-container">
-            <form class="form" role="form" action="../components/send-message?user=<?php echo $cleanuname; ?>" method="post" name="message">
-                <div class="col-xs-12">
-                    <div class="styled-input wide">
-                        <textarea name="msg" id="msg" required></textarea>
-                        <label>Message</label>
+    <?php
+    if ($dataFound) {
+    ?>
+        <div class="container">
+            <div class="row">
+                <h1>Send Message</h1>
+            </div>
+            <div class="row">
+                <h4 style="text-align:center">To <?php echo $row['username']; ?></h4>
+            </div>
+            <div class="row input-container">
+                <form class="form" role="form" action="../components/send-message?user=<?php echo $cleanuname; ?>" method="post" name="message">
+                    <div class="col-xs-12">
+                        <div class="styled-input wide">
+                            <textarea name="msg" id="msg" required></textarea>
+                            <label>Message</label>
+                        </div>
                     </div>
-                </div>
-                <div class="col-xs-12">
-                    <input type="submit" value="Send Message" name="submit" class="btn-lrg submit-btn">
-                </div>
+                    <div class="col-xs-12">
+                        <input type="submit" value="Send Message" name="submit" class="btn-lrg submit-btn">
+                    </div>
+            </div>
         </div>
-    </div>
+    <?php
+    } else {
+    ?>
+
+        <div class="container">
+            <div class="row">
+                <h1>That user does not exist...</h1>
+            </div>
+
+        </div>
+
+    <?php } ?>
+
 </body>
 
 </html>
