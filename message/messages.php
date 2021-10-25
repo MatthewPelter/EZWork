@@ -165,12 +165,12 @@ require_once("../classes/DB.php");
                     $row = mysqli_fetch_assoc($getResult);
                     $userID = $row['id'];
 
-                    $sql = "SELECT s.username AS Sender, r.username AS Receiver, s.id AS SenderID, r.id AS ReceiverID FROM messages LEFT JOIN clients s ON s.id = messages.sender LEFT JOIN clients r ON r.id = messages.receiver WHERE (s.id = '$userID' OR r.id = '$userID')";
+                    $sql = "SELECT DISTINCT s.username AS Sender, r.username AS Receiver, s.id AS SenderID, r.id AS ReceiverID FROM messages LEFT JOIN clients s ON s.id = messages.sender LEFT JOIN clients r ON r.id = messages.receiver WHERE (s.id = '$userID' OR r.id = '$userID')";
                     $query = mysqli_query($conn, $sql);
 
                     $userMessages = array();
-                    if (mysqli_num_rows($result) > 0) {
-                        while ($r = mysqli_fetch_assoc($result)) {
+                    if (mysqli_num_rows($query) > 0) {
+                        while ($r = mysqli_fetch_assoc($query)) {
                             if ($r['SenderID'] == $userID && !in_array($r['Receiver'], $userMessages)) {
                                 array_push($userMessages, $r['Receiver']);
                             } else if ($r['ReceiverID'] == $userID && !in_array($r['Sender'], $userMessages)) {
