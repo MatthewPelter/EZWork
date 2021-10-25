@@ -203,7 +203,7 @@ require_once("../classes/DB.php");
                         </div>
                     </div>
                 </div>
-                <li>Messages</li>
+                <li><a href="../message/messages">Messages</a></li>
             </ul>
             <div class="guide">
                 <i class="fa fa-bell" title="Notification"></i>
@@ -576,7 +576,7 @@ require_once("../classes/DB.php");
         setTimeout(function() {
             alert.style.display = "none";
         }, 600);
-    }, 20000);
+    }, 10000);
 
 
     var job = document.querySelector('.jobCard');
