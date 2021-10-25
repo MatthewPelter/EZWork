@@ -113,3 +113,5 @@
         <i class="fa fa-times" id="ExitmobileSearch"></i>
     </div>
 </div>
+
+<script src="./app.js"></script>
