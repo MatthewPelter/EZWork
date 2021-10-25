@@ -8,7 +8,7 @@ if (isset($_POST['submit'])) {
         $uname = $_GET['user'];
         $cleanuname = mysqli_real_escape_string($conn, $uname);
 
-        $sql = "SELECT * FROM clients WHERE username='$cleanuname'";
+        $sql = "SELECT id FROM clients WHERE username='$cleanuname'";
         $result = mysqli_query($conn, $sql);
 
         if (mysqli_num_rows($result) > 0) {
@@ -18,7 +18,7 @@ if (isset($_POST['submit'])) {
         }
 
         $sendername = $_SESSION['userid'];
-        $senderSQL = "SELECT * FROM clients WHERE username='$sendername'";
+        $senderSQL = "SELECT id FROM clients WHERE username='$sendername'";
         $senderres = mysqli_query($conn, $senderSQL);
         $senderrow = mysqli_fetch_assoc($senderres);
         $senderID = $senderrow['id'];
