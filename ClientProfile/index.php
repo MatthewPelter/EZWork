@@ -33,6 +33,9 @@ require_once("../classes/DB.php");
                 opacity: 1;
                 transition: opacity 0.6s;
                 margin-bottom: 15px;
+                position: fixed;
+                top: 5rem;
+                right: 2rem;
             }
 
             .alert.success {
@@ -541,7 +544,7 @@ require_once("../classes/DB.php");
     ?>
             <div class="alert success">
                 <span class="closebtn">&times;</span>
-                <strong>Success!</strong> Indicates a successful or positive action.
+                <strong>Success!</strong> Your message was sent sucessfully!.
             </div>
 
     <?php
@@ -561,17 +564,15 @@ require_once("../classes/DB.php");
     var close = document.getElementsByClassName("closebtn");
     var i;
 
-    for (i = 0; i < close.length; i++) {
-        close[i].onclick = function() {
-            var div = this.parentElement;
-            div.style.opacity = "0";
-            setTimeout(function() {
-                div.style.display = "none";
-            }, 600);
-        }
+    close.onclick = function closePopup() {
+        var div = this.parentElement;
+        div.style.opacity = "0";
+        setTimeout(function() {
+            div.style.display = "none";
+        }, 600);
     }
 
-
+    setTimeout(closePopup(), 30000);
 
 
     var job = document.querySelector('.jobCard');
