@@ -29,13 +29,13 @@ $userID = $row['id'];
     <h3>Messages</h3>
 
     <?php
-    $sender = $_GET[''];
+
     $sql = "SELECT messages.* clients.username FROM messages, clients WHERE receiver='$userID' OR sender='$userID' AND clients.id = messages.sender";
     $result = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
 
     if (mysqli_num_rows($result) > 0) {
         while ($r = mysqli_fetch_assoc($result)) {
-            echo $r['body'] . " from " . $r['username'] . '<hr />';
+            print_r($r);
         }
     } else {
         echo "no messages";
