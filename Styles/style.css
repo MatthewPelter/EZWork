@@ -13305,7 +13305,7 @@ li {
   }
   .chat {
     width: 70%;
-    float: left;
+    float: none;
     background: #f2f5f8;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -13319,7 +13319,7 @@ li {
     float: left;
   }
   .chat .chat-header .chat-about {
-    float: left;
+    float: none;
     padding-left: 10px;
     margin-top: 6px;
   }
