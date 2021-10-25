@@ -47,7 +47,7 @@ if (isset($_POST['submit'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../logo/logo.svg">
     <link rel="stylesheet" href="../Styles/style.css">
-    <link rel="stylesheet" href="../Styles/message-styles.css">
+    <!-- <link rel="stylesheet" href="../Styles/message-styles.css"> -->
     <script src="https://kit.fontawesome.com/e9089fea9d.js" crossorigin="anonymous"></script>
     <title>My Messages</title>
 
@@ -87,7 +87,7 @@ if (isset($_POST['submit'])) {
     }
     ?>
 
-    <div class="container clearfix">
+    <div class="message-container clearfix">
         <div class="people-list" id="people-list">
             <div class="search">
                 <input type="text" placeholder="search" />
