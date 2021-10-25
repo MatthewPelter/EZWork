@@ -655,5 +655,17 @@ require_once("../classes/DB.php");
             searchIcon.style.opacity='1';
         }
     }
+
+    const sortDownBtn = document.getElementById('jobArrow');
+    async function toggleJobCard(){
+    var mobileJobCard = document.querySelector(".mobileJobCard"); 
+    if (mobileJobCard.style.display === "none") {
+        sortDownBtn.style.transform = "rotate(180deg)";
+        mobileJobCard.style.display = "inline-block";
+    } else {
+        mobileJobCard.style.display = "none";
+        sortDownBtn.style.transform = "rotate(360deg)";
+    }
+}
 </script>
 </html>
