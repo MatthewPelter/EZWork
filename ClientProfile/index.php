@@ -561,15 +561,13 @@ require_once("../classes/DB.php");
 <script src="../SkillsContainer/searchProfile.js"></script>
 <script src="./app.js"></script>
 <script>
-    var close = document.getElementsByClassName("closebtn");
+    const close = document.querySelector('.closebtn');
     const alert = document.querySelector('.alert');
-    var i;
 
     close.onclick = function() {
-        var div = this.parentElement;
-        div.style.opacity = "0";
+        alert.style.opacity = "0";
         setTimeout(function() {
-            div.style.display = "none";
+            alert.style.display = "none";
         }, 600);
     }
 
@@ -578,7 +576,7 @@ require_once("../classes/DB.php");
         setTimeout(function() {
             alert.style.display = "none";
         }, 600);
-    }, 30000);
+    }, 20000);
 
 
     var job = document.querySelector('.jobCard');
