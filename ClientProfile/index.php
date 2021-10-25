@@ -341,7 +341,7 @@ require_once("../classes/DB.php");
                 </div>
             </div>
 
-            <div class="profile-categories-container">
+            <div class="activeUsers profile-categories-container">
                 <div class="categories-title">
                     <h3>Current Users</h3>
                 </div>
