@@ -352,16 +352,18 @@ require_once("../classes/DB.php");
                 $result = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
                 if (mysqli_num_rows($result) > 0) {
                     while ($row = mysqli_fetch_assoc($result)) {
+                        if ($row['username'] != $_SESSION['userid']) {
                 ?>
 
-                        <a href="../Profile/userprofile.php?name=<?php echo $row['username']; ?>">
-                            <div class="categoryCard">
-                                <p><?php echo $row['username']; ?></p>
-                                <i class="fa fa-angle-right"></i>
-                            </div>
-                        </a>
+                            <a href="../Profile/userprofile.php?name=<?php echo $row['username']; ?>">
+                                <div class="categoryCard">
+                                    <p><?php echo $row['username']; ?></p>
+                                    <i class="fa fa-angle-right"></i>
+                                </div>
+                            </a>
 
                     <?php
+                        }
                     }
                 } else {
                     ?>
