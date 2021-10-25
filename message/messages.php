@@ -30,13 +30,16 @@ $userID = $row['id'];
 
     <?php
     $sender = $_GET[''];
-    $sql = "SELECT messages.* clients.username FROM messages, clients WHERE receiver='$userID' OR sender='$userID' AND users.id = messages.sender";
+    $sql = "SELECT messages.* clients.username FROM messages, clients WHERE receiver='$userID' OR sender='$userID' AND clients.id = messages.sender";
     $result = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
 
-    while ($r = mysqli_fetch_assoc($result)) {
-        echo $r['body'] . " from " . $r['username'] . '<hr />';
+    if (mysqli_num_rows($result) > 0) {
+        while ($r = mysqli_fetch_assoc($result)) {
+            echo $r['body'] . " from " . $r['username'] . '<hr />';
+        }
+    } else {
+        echo "no messages";
     }
-
 
 
     //"SELECT messages.id, messages.body, s.username AS Sender, r.username AS Receiver FROM messages LEFT JOIN clients s ON messages.sender = s.id LEFT JOIN clients r ON messages.receiver = r.id WHERE r.username='$username' AND s.username=''"
