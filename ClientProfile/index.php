@@ -343,7 +343,7 @@ require_once("../classes/DB.php");
 
             <div class="profile-categories-container">
                 <div class="categories-title">
-                    <h3>Categories</h3>
+                    <h3>Current Users</h3>
                 </div>
 
 
@@ -371,9 +371,6 @@ require_once("../classes/DB.php");
                 <?php
                 }
                 ?>
-
-
-
             </div>
 
 
