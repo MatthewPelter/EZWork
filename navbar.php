@@ -184,7 +184,9 @@
         <i class="fa fa-times" id="ExitmobileSearch"></i>
     </div>
 </div>
+<script src="../SkillsContainer/searchProfile.js"></script>
 
+<script src="./app.js"></script>
 <!--nav bar script -->
 <script>
     var job = document.querySelector('.jobCard');
@@ -277,5 +279,3 @@
         }
     }
 </script>
-<script src="./app.js"></script>
-<script src="../SkillsContainer/searchProfile.js"></script>

@@ -214,9 +214,9 @@ if (isset($_POST['submit'])) {
     </datalist>
 </div>
 </body>
-<script src="./app.js"></script>
 <script src="../SkillsContainer/searchProfile.js"></script>
 
+<script src="./app.js"></script>
 <!--nav bar script -->
 <script>
     var job = document.querySelector('.jobCard');
@@ -309,4 +309,5 @@ if (isset($_POST['submit'])) {
         }
     }
 </script>
+
 </html>
