@@ -296,41 +296,6 @@ require_once("../classes/DB.php");
             </div>
             <div class="how-to-work">
                 <div class="htw-title">
-                    <h3>Current Users</h3>
-                    <span>A list of all the users on the website.</span>
-                </div>
-                <?php
-                $sql = "SELECT * FROM clients";
-                $result = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
-                if (mysqli_num_rows($result) > 0) {
-                    while ($row = mysqli_fetch_assoc($result)) {
-                ?>
-
-                        <div class="step step1">
-                            <div class="step-content">
-                                <h4><?php echo $row['username']; ?></h4>
-                                <span><a href="../Profile/userprofile.php?name=<?php echo $row['username']; ?>">View Profile</a></span>
-                            </div>
-                        </div>
-
-                    <?php
-                    }
-                } else {
-                    ?>
-                    <div class="step step1">
-                        <div class="step-content">
-                            <h4>That's sad.....</h4>
-                            <span>There are no users on this website yet.</span>
-                        </div>
-                    </div>
-                <?php
-                }
-                ?>
-
-
-            </div>
-            <div class="how-to-work">
-                <div class="htw-title">
                     <h3>How to work with Freelancers</h3>
                     <span>Connect with thousands of freelancers, fast and at low cost.</span>
                 </div>
@@ -375,6 +340,44 @@ require_once("../classes/DB.php");
                     <p>Visit our <span>Help Center</span> for help.</p>
                 </div>
             </div>
+
+            <div class="profile-categories-container">
+                <div class="categories-title">
+                    <h3>Categories</h3>
+                </div>
+
+
+                <?php
+                $sql = "SELECT * FROM clients";
+                $result = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
+                if (mysqli_num_rows($result) > 0) {
+                    while ($row = mysqli_fetch_assoc($result)) {
+                ?>
+
+                        <a href="../Profile/userprofile.php?name=<?php echo $row['username']; ?>">
+                            <div class="categoryCard">
+                                <p><?php echo $row['username']; ?></p>
+                                <i class="fa fa-angle-right"></i>
+                            </div>
+                        </a>
+
+                    <?php
+                    }
+                } else {
+                    ?>
+                    <div class="categoryCard">
+                        <p>That's sad.. There are no users on this site yet.</p>
+                    </div>
+                <?php
+                }
+                ?>
+
+
+
+            </div>
+
+
+
             <div class="profile-categories-container">
                 <div class="categories-title">
                     <h3>Categories</h3>

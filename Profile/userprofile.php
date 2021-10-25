@@ -242,6 +242,7 @@ if (mysqli_num_rows($result) > 0) {
                     <?php
                     if ($dataFound) {
                     ?>
+                        <span>This is just temporary. We will not expose this information.</span>
                         <span><?php echo $row['firstname']; ?></span>
                         <span><?php echo $row['lastname']; ?></span>
                         <span><?php echo $row['email']; ?></span>
