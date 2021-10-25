@@ -415,8 +415,11 @@ require_once("../classes/DB.php");
                 <?php
                 }
                 ?>
+                    <div class="categoryCardEnd" style="border-bottom: none; padding: 1rem;">
+                        
+                    </div>
             </div>
-<!--Categories Card
+            <!--Categories Card
             <div class="profile-categories-container">
                 <div class="categories-title">
                     <h3>Categories</h3>
