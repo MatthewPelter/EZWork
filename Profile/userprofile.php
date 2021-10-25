@@ -259,9 +259,10 @@ if (mysqli_num_rows($result) > 0) {
         </div>
     </div>
 
-
-    <div class="profile">
-        <div class="user-profile-body">
+    <?php
+    if ($dataFound) {
+    ?>
+        <div class="user-profile-body portfolio-section">
             <div class="user-postings user-info">
                 <div class="card title">
                     <h3><?php echo $row['username']; ?>'s Portfolio</h3>
@@ -272,7 +273,7 @@ if (mysqli_num_rows($result) > 0) {
                 </div>
             </div>
         </div>
-    </div>
+    <?php } ?>
 
 
     <div class="profileFooter">
