@@ -202,6 +202,9 @@ if (isset($_POST['submit'])) {
         }
 ?>
 
+    <!--DataList-->
+    <datalist id="allskills">
+    </datalist>
 </body>
 
 </html>
