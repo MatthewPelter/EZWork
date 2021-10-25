@@ -1,12 +1,10 @@
 <?php
 session_start();
-require_once("../classes/DB.php");
-
-echo 'hello';
 
 if (isset($_POST['submit'])) {
     if (!empty($_POST['msg'])) {
-
+        require_once("../classes/DB.php");
+        echo "Were in";
         $uname = $_GET['user'];
         $cleanuname = mysqli_real_escape_string($conn, $uname);
 

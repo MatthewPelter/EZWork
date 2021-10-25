@@ -179,7 +179,7 @@ if (mysqli_num_rows($result) > 0) {
                 <h4 style="text-align:center">To <?php echo $row['username']; ?></h4>
             </div>
             <div class="row input-container">
-                <form class="form" role="form" action="../components/send-message.php?user=<?php echo $cleanuname; ?>" method="post" name="message">
+                <form class="form" action="../components/send-message.php?user=<?php echo $cleanuname; ?>" method="post" name="message">
                     <div class="col-xs-12">
                         <div class="styled-input wide">
                             <textarea name="msg" id="msg" required></textarea>
@@ -189,6 +189,7 @@ if (mysqli_num_rows($result) > 0) {
                     <div class="col-xs-12">
                         <input type="submit" value="Send Message" name="submit" class="btn-lrg submit-btn">
                     </div>
+                </form>
             </div>
         </div>
     <?php
