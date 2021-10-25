@@ -110,7 +110,7 @@ require_once("../classes/DB.php");
             <i class="fa fa-sort-down"></i>
         </div>
         <div class="mobileNavCard">
-            <p>Messages</p>
+            <p onclick="location.href='../message/messages'">Messages</p>
         </div>
         <div class="mobileNavCard">
             <p>Help</p>
