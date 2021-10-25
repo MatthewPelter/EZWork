@@ -54,7 +54,7 @@ if (isset($_SESSION["userid"])) {
             </div>
             <div class="help-container">
                 <h3><span>______________</span> Forgot Password? <span>______________</span></h3>
-                <button>Reset Password</button>
+                <a href="WIP.html"><button>Reset Password</button></a>
             </div>
             <div class="register">
                 <div class="register-container">
