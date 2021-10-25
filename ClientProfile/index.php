@@ -415,7 +415,7 @@ require_once("../classes/DB.php");
                 <?php
                 }
                 ?>
-                    <div class="categoryCardEnd" style="border-bottom: none; padding: 1rem;">
+                    <div class="categoryCardEnd" style="border-bottom: none; padding: .5rem;">
                         
                     </div>
             </div>

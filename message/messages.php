@@ -66,7 +66,9 @@ if (isset($_POST['submit'])) {
     <?php include '../navbar.php'; ?>
     <!-- END NAVBAR -->
 
+    <div class="body-container">
 
+    
     <?php
     // Selecting all the users you currently have a chat with.
     $sql = "SELECT DISTINCT s.username AS Sender, r.username AS Receiver, s.id AS SenderID, r.id as ReceiverID FROM messages LEFT JOIN clients s ON s.id = messages.sender LEFT JOIN clients r ON r.id = messages.receiver WHERE (s.id = '$userID' OR r.id = '$userID')";
@@ -205,6 +207,7 @@ if (isset($_POST['submit'])) {
     <!--DataList-->
     <datalist id="allskills">
     </datalist>
+</div>
 </body>
 <script src="./app.js"></script>
 <script src="../SkillsContainer/searchProfile.js"></script>

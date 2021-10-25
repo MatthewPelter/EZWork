@@ -78,7 +78,7 @@
         </div>
         <div class="logo">
             <a href="../ClientProfile/index">
-                <h2>E<span>z</span>Work</h2>
+                <h2 style="font-family: 'Archivo Black', sans-serif;">E<span>z</span>Work</h2>
             </a>
         </div>
         <div class="searchBar">
