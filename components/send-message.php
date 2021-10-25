@@ -2,6 +2,7 @@
 session_start();
 require_once("../classes/DB.php");
 
+echo 'hello';
 
 if (isset($_POST['submit'])) {
     if (!empty($_POST['msg'])) {
