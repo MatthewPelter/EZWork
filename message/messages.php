@@ -51,12 +51,19 @@ if (isset($_POST['submit'])) {
     <script src="https://kit.fontawesome.com/e9089fea9d.js" crossorigin="anonymous"></script>
     <title>My Messages</title>
 
+    <style type="text/css">
+        html {
+            -webkit-animation: none !important;
+            animation: none !important;
+        }
+    </style>
+
 </head>
 
 <body>
 
     <!-- NAV BAR -->
-    <?php include 'navbar.php'; ?>
+    <?php include '../navbar.php'; ?>
     <!-- END NAVBAR -->
 
 
