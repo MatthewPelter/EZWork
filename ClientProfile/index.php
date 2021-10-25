@@ -355,7 +355,7 @@ require_once("../classes/DB.php");
                         if ($row['username'] != $_SESSION['userid']) {
                 ?>
 
-                            <a href="../Profile/userprofile.php?name=<?php echo $row['username']; ?>">
+                            <a style="color: black; text-decoration: none;" href="../Profile/userprofile.php?name=<?php echo $row['username']; ?>">
                                 <div class="categoryCard">
                                     <p><?php echo $row['username']; ?></p>
                                     <i class="fa fa-angle-right"></i>
