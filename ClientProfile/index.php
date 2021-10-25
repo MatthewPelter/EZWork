@@ -343,7 +343,7 @@ require_once("../classes/DB.php");
 
             <div class="activeUsers profile-categories-container">
                 <div class="categories-title">
-                    <h3><i class="fa-solid fa-users"></i> Current Users</h3>
+                    <h3><i class="fa fa-users" aria-hidden="true"></i> Current Users</h3>
                 </div>
 
 
