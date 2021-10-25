@@ -13258,16 +13258,6 @@ li {
     background-color: #c7e3f3;
   }
   .message-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     margin: 150px auto 0;
     width: 100%;
     background: #444753;
