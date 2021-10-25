@@ -13258,7 +13258,7 @@ li {
     background-color: #c7e3f3;
   }
   .message-container {
-    margin: 150px auto;
+    margin: 150px auto 0;
     width: 100%;
     background: #444753;
     border-radius: 5px;
