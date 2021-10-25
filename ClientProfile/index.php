@@ -416,9 +416,7 @@ require_once("../classes/DB.php");
                 }
                 ?>
             </div>
-
-
-
+<!--Categories Card
             <div class="profile-categories-container">
                 <div class="categories-title">
                     <h3>Categories</h3>
@@ -487,6 +485,7 @@ require_once("../classes/DB.php");
                     <i class="fa fa-angle-right"></i>
                 </div>
             </div>
+            -->            
         </div>
     </div>
     <div class="profileFooter">
