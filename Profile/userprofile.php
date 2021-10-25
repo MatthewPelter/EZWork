@@ -241,15 +241,11 @@ if (mysqli_num_rows($result) > 0) {
                 <div class="card result">
                     <?php
                     if ($dataFound) {
-
-                        if (preg_match('/^\+\d(\d{3})(\d{3})(\d{4})$/', $row['phone'],  $matches)) {
-                            $phoneFormatted = $matches[1] . '-' . $matches[2] . '-' . $matches[3];
-                        }
                     ?>
                         <span><?php echo $row['firstname']; ?></span>
                         <span><?php echo $row['lastname']; ?></span>
                         <span><?php echo $row['email']; ?></span>
-                        <span><?php echo $phoneFormatted; ?></span>
+                        <span><?php echo $row['phone']; ?></span>
                     <?php
                     } else {
                     ?>

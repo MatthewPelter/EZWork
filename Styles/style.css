@@ -6407,7 +6407,7 @@ section .container .login .login-container button:hover {
   grid-column: 1 !important;
 }
 
-profile-portfolio {
+.profile-portfolio {
   grid-column: 2 !important;
 }
 
