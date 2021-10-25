@@ -18,7 +18,7 @@ li {
 }
 
 .container {
-  margin: 0 auto;
+  margin: 150px auto 0;
   width: 750px;
   background: #444753;
   border-radius: 5px;
