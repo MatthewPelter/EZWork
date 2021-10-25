@@ -13,6 +13,8 @@ $dataFound = false;
 if (mysqli_num_rows($result) > 0) {
     $dataFound = true;
     $row = mysqli_fetch_assoc($result);
+} else {
+    header('Location: ../ClientProfile/index');
 }
 ?>
 
@@ -126,7 +128,6 @@ if (mysqli_num_rows($result) > 0) {
         }
 
         .submit-btn {
-            float: right;
             padding: 7px 35px;
             border-radius: 60px;
             display: inline-block;
@@ -191,17 +192,8 @@ if (mysqli_num_rows($result) > 0) {
             </div>
         </div>
     <?php
-    } else {
+    }
     ?>
-
-        <div class="container">
-            <div class="row">
-                <h1>That user does not exist...</h1>
-            </div>
-
-        </div>
-
-    <?php } ?>
 
 </body>
 
