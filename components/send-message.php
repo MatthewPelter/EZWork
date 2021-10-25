@@ -18,8 +18,10 @@ if (isset($_POST['submit'])) {
         }
 
         $sendername = $_SESSION['userid'];
-        $senderSQL = "SELECT id FROM clients WHERE username='$sendername'";
-        $senderID = mysqli_query($conn, $senderSQL);
+        $senderSQL = "SELECT * FROM clients WHERE username='$sendername'";
+        $senderres = mysqli_query($conn, $senderSQL);
+        $senderrow = mysqli_fetch_assoc($senderres);
+        $senderID = $senderrow['id'];
 
         $receiverID = $row['id'];
         $message_body = $_POST['msg'];
