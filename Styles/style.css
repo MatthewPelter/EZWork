@@ -8764,7 +8764,6 @@ ul {
 }
 
 .postJob-detail-scope {
-  margin-top: 4.5rem;
   width: 100%;
   background: whitesmoke;
   padding: 2.5rem 10rem;
@@ -9338,7 +9337,6 @@ ul {
 }
 
 .postJob-detail-location {
-  margin-top: 4.5rem;
   width: 100%;
   background: whitesmoke;
   padding: 2.5rem 10rem;
@@ -9779,7 +9777,6 @@ ul {
 }
 
 .postJob-detail-budget {
-  margin-top: 4.5rem;
   width: 100%;
   background: whitesmoke;
   padding: 2.5rem 10rem;
@@ -10450,7 +10447,6 @@ ul {
 }
 
 .reviewJobPost-container {
-  margin-top: 4.5rem;
   width: 100%;
   background: whitesmoke;
   padding: 2.5rem 10rem;
@@ -10948,7 +10944,6 @@ ul {
     pointer-events: none;
   }
   .postJob-detail-skills {
-    margin-top: 3rem;
     width: 100%;
     background: whitesmoke;
     padding: 2.5rem 0rem;
@@ -11257,7 +11252,6 @@ ul {
     font-size: 0.5rem;
   }
   .postJob-detail-scope {
-    margin-top: 3.5rem;
     width: 100%;
     background: whitesmoke;
     padding: 1rem 0rem;
@@ -11769,7 +11763,6 @@ ul {
     padding: 0.2rem;
   }
   .postJob-detail-location {
-    margin-top: 3.5rem;
     width: 100%;
     background: whitesmoke;
     padding: 1rem 0rem;
@@ -12162,7 +12155,6 @@ ul {
     background: #0a345e;
   }
   .postJob-detail-budget {
-    margin-top: 3.5rem;
     width: 100%;
     background: whitesmoke;
     padding: 1rem 0rem;
@@ -12763,7 +12755,6 @@ ul {
     background: #0a345e;
   }
   .reviewJobPost-container {
-    margin-top: 3.5rem;
     width: 100%;
     background: whitesmoke;
     padding: 1rem 0rem;
