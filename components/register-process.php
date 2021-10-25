@@ -1,41 +1,43 @@
 <?php
-    session_start();
+session_start();
 
-	function securityscan($data) {
-	  $data = trim($data);
-	  $data = stripslashes($data);
-	  $data = htmlspecialchars($data);
-	  return $data;
-	}
-	
-    if(isset($_POST['submit'])){
-        require_once("../classes/DB.php");
+function securityscan($data)
+{
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
 
-        $firstname = securityscan($_POST['firstName']);
-        $lastname = securityscan($_POST['lastName']);
-        $birthday = securityscan($_POST['birthday']);
-        $phone = securityscan($_POST['phone']);
-        $email = securityscan($_POST['email']);
-        $password = securityscan($_POST['password']);
-        $password2 = securityscan($_POST['password2']);
+if (isset($_POST['submit'])) {
+    require_once("../classes/DB.php");
 
-        if ($password != $password2) {
-            echo "error passwords do not match!";
-            die;
-        }
-        $username = $firstname . "" . $lastname;
-        $password_hash = password_hash($password, PASSWORD_BCRYPT);
-        $sql="INSERT INTO clients(username,firstname,lastname,email,password,phone) VALUES('$username', '$firstname', '$lastname', '$email', '$password_hash', '$phone')";
-        
-        $result = mysqli_query($conn, $sql) or die(mysqli_errno());
+    $firstname = securityscan($_POST['firstName']);
+    $firstname = ucfirst($firstname);
 
-        if ($result) {
-            $_SESSION['userid'] = $username;
-            header("Location: ../ClientProfile/index");
-        } else {
-            echo "not working";
-        }
-        
+    $lastname = securityscan($_POST['lastName']);
+    $lastname = ucfirst($lastname);
 
+    $birthday = securityscan($_POST['birthday']);
+    $phone = securityscan($_POST['phone']);
+    $email = securityscan($_POST['email']);
+    $password = securityscan($_POST['password']);
+    $password2 = securityscan($_POST['password2']);
+
+    if ($password != $password2) {
+        echo "error passwords do not match!";
+        die;
     }
-?>
+    $username = $firstname . "" . $lastname;
+    $password_hash = password_hash($password, PASSWORD_BCRYPT);
+    $sql = "INSERT INTO clients(username,firstname,lastname,email,password,phone) VALUES('$username', '$firstname', '$lastname', '$email', '$password_hash', '$phone')";
+
+    $result = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
+
+    if ($result) {
+        $_SESSION['userid'] = $username;
+        header("Location: ../ClientProfile/index");
+    } else {
+        echo "not working";
+    }
+}

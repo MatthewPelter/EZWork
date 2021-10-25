@@ -259,21 +259,7 @@ if (mysqli_num_rows($result) > 0) {
         </div>
     </div>
 
-    <?php
-    if ($dataFound) {
-    ?>
-        <div class="user-profile-body portfolio-section">
-            <div class="user-postings user-info">
-                <div class="card title">
-                    <h3><?php echo $row['username']; ?>'s Portfolio</h3>
-                </div>
-                <div class="card result">
-
-
-                </div>
-            </div>
-        </div>
-    <?php } ?>
+    <!-- ENTER PORTFOLIO SECTION HERE -->
 
 
     <div class="profileFooter">

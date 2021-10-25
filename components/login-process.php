@@ -15,7 +15,7 @@
 			$password = securityscan($_POST['password']);
 			
 			$sql = "SELECT * FROM clients WHERE email='$email' LIMIT 1";
-			$result = mysqli_query($conn, $sql);
+			$result = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
 			$data = mysqli_fetch_assoc($result);
 				if (password_verify($password, $data['password'])) {
 					$_SESSION['userid'] = $data['username'];	
@@ -28,4 +28,3 @@
 		}
         
     }
-?>
