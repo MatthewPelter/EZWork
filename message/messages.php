@@ -30,7 +30,7 @@ $userID = $row['id'];
 
     <?php
     $sql = "SELECT messages.*, c.username FROM messages LEFT JOIN clients c ON messages.sender = c.id WHERE receiver='$userID' OR sender='$userID'";
-    $result = mysqli_query($conn, $sql);
+    $result = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
 
     while ($r = mysqli_fetch_assoc($result)) {
         echo $r['body'] . " from " . $r['username'] . '<hr />';
