@@ -4,7 +4,7 @@ include '../components/session-checker.php';
 require_once("../classes/DB.php");
 
 
-// Converting the username to a userid
+// Converting the username to a userid from the user that is logged in
 $username = $_SESSION['userid'];
 $getUserID = "SELECT id FROM clients WHERE username = '$username'";
 $getResult = mysqli_query($conn, $getUserID);
@@ -26,27 +26,51 @@ $userID = $row['id'];
 </head>
 
 <body>
+<?php 
+// Get messages between you and the user
+if (isset($_GET['mid'])) {
+	$id = htmlspecialchars($_GET['mid']);
+	$sql = "SELECT messages.id, messages.body, s.username AS Sender, r.username AS Receiver FROM messages LEFT JOIN clients s ON messages.sender = s.id LEFT JOIN clients r ON messages.receiver = r.id WHERE (r.id='$userID' AND s.id = '$id') OR r.id = $id AND s.id = '$userID'";
+	$result = mysqli_query($conn, $sql);
+	while($row = mysqli_fetch_assoc($result)) {
+		echo $row['id'] . ": " . $row['body'] . "<br />";
+	}
+	?>
+	
+	<form class="form" action="../components/send-message.php?user=<?php echo $id; ?>" method="post" name="message">
+						<label>Message</label><br />
+						<textarea name="msg" id="msg" required></textarea>
+                        <input type="submit" value="Reply" name="submit" class="btn-lrg submit-btn">
+                </form>
+	<?php
+	
+} else {
+?>
     <h1>Messages</h1>
     <h3>WORK IN PROGRESS</h3>
     <?php
 
-    $sql = "SELECT messages.*, c.username FROM messages LEFT JOIN clients c ON messages.sender = c.id WHERE receiver='$userID' OR sender='$userID'";
+    $sql = "SELECT DISTINCT s.username AS Sender, r.username AS Receiver, s.id AS SenderID, r.id as ReceiverID FROM messages LEFT JOIN clients s ON s.id = messages.sender LEFT JOIN clients r ON r.id = messages.receiver WHERE (s.id = '$userID' OR r.id = '$userID')";
     $result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 
+    $u = array();
     if (mysqli_num_rows($result) > 0) {
         while ($r = mysqli_fetch_assoc($result)) {
-            if (strlen($r['body']) > 10) {
-                $m = substr($r['body'], 0, 10) . " ...";
-            } else {
-                $m = $r['body'];
+            if (!in_array(array('username'=>$r['Receiver'], 'id'=>$r['ReceiverID']), $u) && $r['Receiver'] != $username) {
+                array_push($u, array('username'=>$r['Receiver'], 'id'=>$r['ReceiverID']));
             }
-            echo $m . " From " . $r['username'] . "<br />";
+            if (!in_array(array('username'=>$r['Sender'], 'id'=>$r['SenderID']), $u) && $r['Sender'] != $username) {
+                array_push($u, array('username'=>$r['Sender'], 'id'=>$r['SenderID']));
+            }
+        }
+        
+        foreach ($u as $user) {
+            echo "<a href='retrieve-messages.php?mid=" . $user['id'] . "'>" . $user['username'] . "</a><br />";
         }
     } else {
         echo "no messages";
     }
 
-    //"SELECT messages.id, messages.body, s.username AS Sender, r.username AS Receiver FROM messages LEFT JOIN clients s ON messages.sender = s.id LEFT JOIN clients r ON messages.receiver = r.id WHERE r.username='$username' AND s.username=''"
     ?>
 
 </body>
