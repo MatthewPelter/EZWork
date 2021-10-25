@@ -6403,6 +6403,14 @@ section .container .login .login-container button:hover {
   height: fit-content;
 }
 
+.profile .user-info {
+  grid-column: 1 !important;
+}
+
+profile-portfolio {
+  grid-column: 2 !important;
+}
+
 .profile .user-postings .title {
   width: 100%;
   display: -webkit-box;
@@ -7039,6 +7047,7 @@ section .container .login .login-container button:hover {
     height: -moz-fit-content;
     height: fit-content;
   }
+
   .profile .user-postings .title {
     width: 100%;
     display: -webkit-box;
