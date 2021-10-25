@@ -258,7 +258,7 @@ if (mysqli_num_rows($result) > 0) {
                 </div>
             </div>
 
-            <div class="profile-categories-container">
+            <div class="profile-portfolio">
                 <div class="categories-title">
                     <h3>Projects Portfolio</h3>
                 </div>
