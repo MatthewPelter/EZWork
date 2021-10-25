@@ -29,14 +29,17 @@ $userID = $row['id'];
     <h3>Messages</h3>
 
     <?php
-
-    $sql = "SELECT messages.*, c.username FROM messages LEFT JOIN clients c ON messages.sender = c.id WHERE receiver='$userID' OR sender='$userID'";
+    $sender = $_GET[''];
+    $sql = "SELECT messages.* clients.username FROM messages, clients WHERE receiver='$userID' OR sender='$userID' AND users.id = messages.sender";
     $result = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
 
     while ($r = mysqli_fetch_assoc($result)) {
         echo $r['body'] . " from " . $r['username'] . '<hr />';
     }
 
+
+
+    //"SELECT messages.id, messages.body, s.username AS Sender, r.username AS Receiver FROM messages LEFT JOIN clients s ON messages.sender = s.id LEFT JOIN clients r ON messages.receiver = r.id WHERE r.username='$username' AND s.username=''"
     ?>
 
 </body>
