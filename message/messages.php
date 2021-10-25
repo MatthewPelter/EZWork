@@ -28,7 +28,7 @@ require_once("../classes/DB.php");
 </head>
 
 <body>
-
+    <!-- START NAVBAR -->
     <div class="profile-header-container">
         <div class="profileHeader">
             <div class="burger" id="nav-burger" onclick='myFunction(this)'>
@@ -144,6 +144,60 @@ require_once("../classes/DB.php");
             <i class="fa fa-times" id="ExitmobileSearch"></i>
         </div>
     </div>
+    <!-- END NAVBAR -->
+
+    <!-- START MESSAGE CENTER -->
+    <div class="profile">
+        <div class="user-profile-header">
+            <h2 id="username">My Messages</h2>
+        </div>
+
+        <div class="user-profile-body">
+            <div class="user-postings user-info">
+                <div class="card title">
+                    <h3>Messages</h3>
+                </div>
+                <div class="card result">
+                    <?php
+                    $username = $_SESSION['userid'];
+                    $getUserID = "SELECT id FROM username = '$username'";
+                    $getResult = mysqli_query($conn, $getUserID);
+                    $row = mysqli_fetch_assoc($getResult);
+                    $userID = $row['id'];
+
+                    $sql = "SELECT s.username AS Sender, r.username AS Receiver, s.id AS SenderID, r.id AS ReceiverID FROM messages LEFT JOIN clients s ON s.id = messages.sender LEFT JOIN clients r ON r.id = messages.receiver WHERE (s.id = '$userID' OR r.id = '$userID')";
+                    $query = mysqli_query($conn, $sql);
+
+                    $userMessages = array();
+                    if (mysqli_num_rows($result) > 0) {
+                        while ($r = mysqli_fetch_assoc($result)) {
+                            if ($r['SenderID'] == $userID && !in_array($r['Receiver'], $userMessages)) {
+                                array_push($userMessages, $r['Receiver']);
+                            } else if ($r['ReceiverID'] == $userID && !in_array($r['Sender'], $userMessages)) {
+                                array_push($userMessages, $r['Sender']);
+                            }
+                        }
+
+                        foreach ($userMessages as $user) {
+                    ?>
+                            <span><?php echo $user; ?></span>
+
+                        <?php
+                        }
+                    } else {
+                        ?>
+                        <span>No messages.</span>
+
+                    <?php
+                    }
+                    ?>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END MESSAGE CENTER -->
 
 </body>
 
