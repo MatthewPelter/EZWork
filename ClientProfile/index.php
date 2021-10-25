@@ -562,6 +562,7 @@ require_once("../classes/DB.php");
 <script src="./app.js"></script>
 <script>
     var close = document.getElementsByClassName("closebtn");
+    const alert = document.querySelector('.alert');
     var i;
 
     close.onclick = function closePopup() {
@@ -572,7 +573,12 @@ require_once("../classes/DB.php");
         }, 600);
     }
 
-    setTimeout(closePopup(), 30000);
+    setTimeout(() => {
+        alert.style.opacity = "0";
+        setTimeout(function() {
+            alert.style.display = "none";
+        }, 600);
+    }, 30000);
 
 
     var job = document.querySelector('.jobCard');
