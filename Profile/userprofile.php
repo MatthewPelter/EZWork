@@ -219,7 +219,7 @@ require_once("../classes/DB.php");
                     $uname = $_GET['username'];
                     $cleanuname = mysqli_real_escape_string($conn, $uname);
                     $sql = "SELECT * FROM clients WHERE username='$cleanuname'";
-                    $result = mysqli_query($sql);
+                    $result = mysqli_query($conn, $sql);
                 
                     if (mysqli_num_rows($result) > 0) {
                         $row = mysqli_fetch_assoc($result);
