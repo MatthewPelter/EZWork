@@ -1,5 +1,5 @@
 <?php
-session_start();
+/*session_start();
 
 if (isset($_POST['submit'])) {
     if (!empty($_POST['msg'])) {
@@ -39,3 +39,4 @@ if (isset($_POST['submit'])) {
         echo "Please fill in the data";
     }
 }
+*/
