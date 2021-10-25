@@ -229,7 +229,7 @@ if (mysqli_num_rows($result) > 0) {
         <div class="user-profile-header">
             <h2 id="username"><?php echo $row['username']; ?></h2>
             <div class="quick-links">
-                <button id="quick-link-job" onclick="location.href='../message/sendmessage.php?user=<?php echo $row['username']; ?>'">Message User</button>
+                <button id="quick-link-job" onclick="location.href='../message/message.php?user=<?php echo $row['username']; ?>'">Message User</button>
             </div>
         </div>
 
