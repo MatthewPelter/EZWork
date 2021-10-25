@@ -26,11 +26,11 @@ $userID = $row['id'];
 </head>
 
 <body>
-    <h3>Messages</h3>
-
+    <h1>Messages</h1>
+    <h3>WORK IN PROGRESS</h3>
     <?php
-
-    $sql = "SELECT messages.* clients.username FROM messages, clients WHERE receiver='$userID' OR sender='$userID' AND clients.id = messages.sender";
+    /*
+    $sql = "SELECT messages.*, clients.username FROM messages, clients WHERE receiver='$userID' OR sender='$userID' AND clients.id = messages.sender";
     $result = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
 
     if (mysqli_num_rows($result) > 0) {
@@ -41,7 +41,7 @@ $userID = $row['id'];
         echo "no messages";
     }
 
-
+*/
     //"SELECT messages.id, messages.body, s.username AS Sender, r.username AS Receiver FROM messages LEFT JOIN clients s ON messages.sender = s.id LEFT JOIN clients r ON messages.receiver = r.id WHERE r.username='$username' AND s.username=''"
     ?>
 
