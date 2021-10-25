@@ -211,14 +211,24 @@ require_once("../classes/DB.php");
         <div class="user-profile-body">
             <div class="user-postings">
                 <div class="card title">
-                    <h3>My Postings</h3>
-                    <span>All Postings</span>
+                    <h3>User Information</h3>
+                    <span><a href="">Message User</a></span>
                 </div>
                 <div class="card result">
-                    <button id="quick-link-job2" onclick="location.href='../PostAJob/PostAJob.html'">Post A Job</button>
-                    <span>
-                        You currently have no job postings listed.
-                    </span>
+                    <?php
+                    $uname = $_GET['username'];
+                    $cleanuname = mysqli_real_escape_string($conn, $uname);
+                    $sql = "SELECT * FROM clients WHERE username='$cleanuname'";
+                    $result = mysqli_query($sql);
+                
+                    if (mysqli_num_rows($result) > 0) {
+                        $row = mysqli_fetch_assoc($result);
+                        echo "<span>". $row['firstname'] ."</span>";
+                        echo "<span>". $row['lastname'] ."</span>";
+                        echo "<span>". $row['email'] ."</span>";
+                        echo "<span>". $row['phone'] ."</span>";
+                    }
+                    ?>
                 </div>
                 <div class="postedJob">
                     <div class="jobTitle">
