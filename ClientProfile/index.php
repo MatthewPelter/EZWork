@@ -203,7 +203,8 @@ require_once("../classes/DB.php");
                         </div>
                     </div>
                 </div>
-                <li><a href="../message/messages">Messages</a></li>
+                <!-- Style tags are temporary -->
+                <li><a style="color: white; text-decoration: none;" href="../message/messages">Messages</a></li>
             </ul>
             <div class="guide">
                 <i class="fa fa-bell" title="Notification"></i>
