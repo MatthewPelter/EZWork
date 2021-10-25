@@ -13258,13 +13258,13 @@ li {
     background-color: #c7e3f3;
   }
   .message-container {
-    margin: 150px auto 0;
+    margin: 0;
     width: 100%;
     background: #444753;
     border-radius: 5px;
   }
   .people-list {
-    width: 260px;
+    width: 30%;
     float: left;
   }
   .people-list .search {
@@ -13280,7 +13280,7 @@ li {
     font-size: 14px;
   }
   .people-list .fa-search {
-    position: relative;
+    position: fixed;
     left: -25px;
   }
   .people-list ul {
@@ -13304,7 +13304,7 @@ li {
     color: #92959e;
   }
   .chat {
-    width: 490px;
+    width: 70%;
     float: left;
     background: #f2f5f8;
     border-top-right-radius: 5px;
