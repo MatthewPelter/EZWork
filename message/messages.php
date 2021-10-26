@@ -215,4 +215,9 @@ if (isset($_POST['submit'])) {
     </div>
 </body>
 
+<script type="text/javascript">
+    var elem = document.querySelector('.chat-history');
+    elem.scrollTop = elem.scrollHeight;
+</script>
+
 </html>
