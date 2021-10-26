@@ -79,6 +79,7 @@ require_once("../classes/DB.php");
         <div class="mobileNavCard" id="navProfile">
             <img src="../Users/user.svg" alt="">
             <span id="user"><?php echo $_SESSION['userid']; ?></span>
+            <i class="fa fa-sort-down" style="opacity: 0;"></i>
         </div>
         <div class="mobileNavCard" id="mobile-job-card" onclick="toggleJobCard(this)">
             <p>Jobs</p>
