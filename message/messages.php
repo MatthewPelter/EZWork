@@ -20,7 +20,10 @@ if (isset($_POST['submit'])) {
         $senderID = $userID;
 
         $receiverID = $cleanid;
+        // Clean up the input to prevent SQL injection
         $message_body = $_POST['msg'];
+        $message_body = htmlspecialchars($message_body);
+        $message_body = stripslashes($message_body);
         $cleanmessage = mysqli_real_escape_string($conn, $message_body);
 
         $insertSQL = "INSERT INTO messages(body, sender, receiver, isread) VALUES('$cleanmessage', '$senderID', '$receiverID', 0)";
