@@ -13321,6 +13321,10 @@ li {
     color: #434651;
   }
   .chat .chat-header {
+    width: 90%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     padding: 20px;
     border-bottom: 2px solid white;
   }
