@@ -54,7 +54,7 @@ if (mysqli_num_rows($result) > 0) {
             <h2 id="username"><?php echo $row['username']; ?></h2>
             <div class="quick-links">
                 <?php if ($dataFound) { ?>
-                    <button id="quick-link-job" onclick="location.href='../message/messages?user=<?php echo $row['id']; ?>'">Message User</button>
+                    <button id="quick-link-job" onclick="location.href='../message/messages?mid=<?php echo $row['id']; ?>'">Message User</button>
                 <?php } ?>
             </div>
         </div>
