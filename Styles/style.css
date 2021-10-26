@@ -13259,13 +13259,6 @@ li {
   }
   .message-container {
     margin: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
     width: 100%;
     background: #444753;
     border-radius: 0;
