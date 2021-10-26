@@ -6080,6 +6080,12 @@ section .container .login .login-container button:hover {
   border-bottom: 1px solid lightgrey;
 }
 
+.profile .profile-categories-container .categoryCard #current-user-img {
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+}
+
 .profile .profile-categories-container .categoryCard svg {
   width: 15%;
 }

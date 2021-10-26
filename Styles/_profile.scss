@@ -356,6 +356,11 @@
       align-items: center;
       justify-content: space-evenly;
       border-bottom: 1px solid lightgrey;
+      #current-user-img {
+        border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
+      }
       svg {
         width: 15%;
       }
