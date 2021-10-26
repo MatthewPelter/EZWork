@@ -262,6 +262,7 @@
     }
 
 </script>
+
 <!--Toggle the nav burger button-->
 <script>
     const navIcon = document.getElementById("nav-burger");
@@ -276,6 +277,43 @@
         else{
             profileMobileNav.style.display='none';
             searchIcon.style.opacity='1';
+        }
+    }
+    
+    const sortDownBtn = document.getElementById('jobArrow');
+    async function toggleJobCard(){
+    var mobileJobCard = document.querySelector(".mobileJobCard"); 
+        if (mobileJobCard.style.display === "none") {
+            sortDownBtn.style.transform = "rotate(180deg)";
+            mobileJobCard.style.display = "inline-block";
+        } else {
+            mobileJobCard.style.display = "none";
+            sortDownBtn.style.transform = "rotate(360deg)";
+        }
+    }
+
+    
+    const sortDownBtn2 = document.getElementById('freelanceArrow');
+    async function toggleFreelanceCard(){
+    var mobileFreelanceCard = document.querySelector(".mobileFreelanceCard"); 
+        if (mobileFreelanceCard.style.display === "none") {
+            sortDownBtn2.style.transform = "rotate(180deg)";
+            mobileFreelanceCard.style.display = "inline-block";
+        } else {
+            mobileFreelanceCard.style.display = "none";
+            sortDownBtn2.style.transform = "rotate(360deg)";
+        }
+    }
+
+    const sortDownBtn3 = document.getElementById('projectsArrow');
+    async function toggleProjectsCard(){
+    var mobileProjectsCard = document.querySelector(".mobileProjectsCard"); 
+        if (mobileProjectsCard.style.display === "none") {
+            sortDownBtn3.style.transform = "rotate(180deg)";
+            mobileProjectsCard.style.display = "inline-block";
+        } else {
+            mobileProjectsCard.style.display = "none";
+            sortDownBtn3.style.transform = "rotate(360deg)";
         }
     }
 </script>
