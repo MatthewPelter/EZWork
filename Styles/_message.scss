@@ -258,14 +258,15 @@ li {
     background-color: #c7e3f3;
   }
   .message-container {
-    margin: 150px auto 0;
+    margin: 0;
+
     width: 100%;
     background: #444753;
-    border-radius: 5px;
+    border-radius: 0;
   }
 
   .people-list {
-    width: 10%;
+    width: 260px;
     float: left;
   }
 
@@ -284,7 +285,7 @@ li {
   }
 
   .people-list .fa-search {
-    position: fixed;
+    position: relative;
     left: -25px;
   }
 
@@ -315,8 +316,8 @@ li {
   }
 
   .chat {
-    width: 70%;
-    float: none;
+    width: 490px;
+    float: left;
     background: #f2f5f8;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -333,7 +334,7 @@ li {
   }
 
   .chat .chat-header .chat-about {
-    float: none;
+    float: left;
     padding-left: 10px;
     margin-top: 6px;
   }
