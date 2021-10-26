@@ -26,9 +26,7 @@ if (isset($_POST['submit'])) {
         $insertSQL = "INSERT INTO messages(body, sender, receiver, isread) VALUES('$cleanmessage', '$senderID', '$receiverID', 0)";
         $insertresult = mysqli_query($conn, $insertSQL) or die(mysqli_error($conn));
 
-        if ($insertresult) {
-            echo "Sent!";
-        } else {
+        if (!$insertresult) {
             echo "Error Sending Message...";
         }
     } else {
