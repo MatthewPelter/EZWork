@@ -13314,7 +13314,7 @@ li {
   }
   .chat {
     width: 90%;
-    float: none;
+    float: 0;
     background: #f2f5f8;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
