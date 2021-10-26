@@ -182,7 +182,7 @@ if (isset($_POST['submit'])) {
                     <form class="form" action="messages.php?mid=<?php echo $id; ?>" method="post" name="message">
                         <div class="chat-message clearfix">
                             <textarea name="msg" id="message-to-send" placeholder="Type your message" rows="3" required></textarea>
-                            <input type="submit" value="Reply" name="submit" class="button"></input>
+                            <input type="submit" value="Send" name="submit" class="button"></input>
 
                         </div> <!-- end chat-message -->
                     </form>
