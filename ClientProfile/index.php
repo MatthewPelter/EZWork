@@ -87,7 +87,7 @@ require_once("../classes/DB.php");
         </div>
         <div class="mobileJobCard">
             <ul>
-                <a href="./index">
+                <a href="#/">
                     <li>My Jobs</li>
                 </a>
                 <a href="#/">
@@ -101,16 +101,46 @@ require_once("../classes/DB.php");
                 </a>
             </ul>
         </div>
-        <div class="mobileNavCard">
-            <p>Talent</p>
-            <i class="fa fa-sort-down"></i>
+        <div class="mobileNavCard" onclick="toggleFreelanceCard(this)">
+            <p>Freelancer</p>
+            <i class="fa fa-sort-down" id="freelanceArrow"></i>
         </div>
-        <div class="mobileNavCard">
+        <div class="mobileFreelanceCard">
+            <ul>
+                <a href="./index">
+                    <li>Discover</li>
+                </a>
+                <a href="#/">
+                    <li>Your Hires</li>
+                </a>
+                <a href="#/">
+                    <li>Freelance History</li>
+                </a>
+            </ul>
+        </div>
+
+        <div class="mobileNavCard" onclick="toggleProjectsCard(this)">
             <p>Projects</p>
-            <i class="fa fa-sort-down"></i>
+            <i class="fa fa-sort-down" id="projectsArrow"></i>
         </div>
-        <div class="mobileNavCard">
-            <p onclick="location.href='../message/messages'">Messages</p>
+
+        <div class="mobileProjectsCard">
+            <ul>
+                <a href="#/">
+                    <li>Current Projects</li>
+                </a>
+                <a href="#/">
+                    <li>Project History</li>
+                </a>
+                <a href="#/">
+                    <li>Browse by Projects</li>
+                </a>
+            </ul>
+        </div>
+
+
+        <div class="mobileNavCard" onclick="location.href='../message/messages'">
+            <p>Messages</p>
         </div>
         <div class="mobileNavCard">
             <p>Help</p>
@@ -660,13 +690,38 @@ require_once("../classes/DB.php");
     const sortDownBtn = document.getElementById('jobArrow');
     async function toggleJobCard(){
     var mobileJobCard = document.querySelector(".mobileJobCard"); 
-    if (mobileJobCard.style.display === "none") {
-        sortDownBtn.style.transform = "rotate(180deg)";
-        mobileJobCard.style.display = "inline-block";
-    } else {
-        mobileJobCard.style.display = "none";
-        sortDownBtn.style.transform = "rotate(360deg)";
+        if (mobileJobCard.style.display === "none") {
+            sortDownBtn.style.transform = "rotate(180deg)";
+            mobileJobCard.style.display = "inline-block";
+        } else {
+            mobileJobCard.style.display = "none";
+            sortDownBtn.style.transform = "rotate(360deg)";
+        }
     }
-}
+
+    
+    const sortDownBtn2 = document.getElementById('freelanceArrow');
+    async function toggleFreelanceCard(){
+    var mobileFreelanceCard = document.querySelector(".mobileFreelanceCard"); 
+        if (mobileFreelanceCard.style.display === "none") {
+            sortDownBtn2.style.transform = "rotate(180deg)";
+            mobileFreelanceCard.style.display = "inline-block";
+        } else {
+            mobileFreelanceCard.style.display = "none";
+            sortDownBtn2.style.transform = "rotate(360deg)";
+        }
+    }
+
+    const sortDownBtn3 = document.getElementById('projectsArrow');
+    async function toggleProjectsCard(){
+    var mobileProjectsCard = document.querySelector(".mobileProjectsCard"); 
+        if (mobileProjectsCard.style.display === "none") {
+            sortDownBtn3.style.transform = "rotate(180deg)";
+            mobileProjectsCard.style.display = "inline-block";
+        } else {
+            mobileProjectsCard.style.display = "none";
+            sortDownBtn3.style.transform = "rotate(360deg)";
+        }
+    }
 </script>
 </html>
