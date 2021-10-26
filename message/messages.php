@@ -220,9 +220,10 @@ if (isset($_POST['submit'])) {
     var elem = document.querySelector('.chat-history');
     elem.scrollTop = elem.scrollHeight;
 </script>
+
+
 <script src="../SkillsContainer/searchProfile.js"></script>
 
-<script src="./app.js"></script>
 <!--nav bar script -->
 <script>
     var job = document.querySelector('.jobCard');

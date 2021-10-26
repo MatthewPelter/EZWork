@@ -8,7 +8,7 @@
     <div class="mobileNavCard" id="navProfile">
         <img src="../Users/user.svg" alt="">
         <span id="user"><?php echo $_SESSION['userid']; ?></span>
-        <i class="fa fa-sort-down"></i>
+        <i class="fa fa-sort-down" style="opacity: 0;"></i>
     </div>
     <div class="mobileNavCard" id="mobile-job-card" onclick="toggleJobCard(this)">
         <p>Jobs</p>
@@ -16,7 +16,7 @@
     </div>
     <div class="mobileJobCard">
         <ul>
-            <a href="./index">
+            <a href="#/">
                 <li>My Jobs</li>
             </a>
             <a href="#/">
@@ -30,15 +30,45 @@
             </a>
         </ul>
     </div>
-    <div class="mobileNavCard">
-        <p>Talent</p>
-        <i class="fa fa-sort-down"></i>
+    <div class="mobileNavCard" onclick="toggleFreelanceCard(this)">
+        <p>Freelancer</p>
+        <i class="fa fa-sort-down" id="freelanceArrow"></i>
     </div>
-    <div class="mobileNavCard">
+    <div class="mobileFreelanceCard">
+        <ul>
+            <a href="./index">
+                <li>Discover</li>
+            </a>
+            <a href="#/">
+                <li>Your Hires</li>
+            </a>
+            <a href="#/">
+                <li>Freelance History</li>
+            </a>
+        </ul>
+    </div>
+
+    <div class="mobileNavCard" onclick="toggleProjectsCard(this)">
         <p>Projects</p>
-        <i class="fa fa-sort-down"></i>
+        <i class="fa fa-sort-down" id="projectsArrow"></i>
     </div>
-    <div class="mobileNavCard">
+
+    <div class="mobileProjectsCard">
+        <ul>
+            <a href="#/">
+                <li>Current Projects</li>
+            </a>
+            <a href="#/">
+                <li>Project History</li>
+            </a>
+            <a href="#/">
+                <li>Browse by Projects</li>
+            </a>
+        </ul>
+    </div>
+
+
+    <div class="mobileNavCard" onclick="location.href='../message/messages'">
         <p>Messages</p>
     </div>
     <div class="mobileNavCard">
@@ -68,7 +98,6 @@
         </form>
     </div>
 </div>
-
 <div class="profile-header-container">
     <div class="profileHeader">
         <div class="burger" id="nav-burger" onclick='myFunction(this)'>
@@ -78,7 +107,7 @@
         </div>
         <div class="logo">
             <a href="../ClientProfile/index">
-                <h2 style="font-family: 'Archivo Black', sans-serif;">E<span>z</span>Work</h2>
+                <h2>E<span>z</span>Work</h2>
             </a>
         </div>
         <div class="searchBar">
