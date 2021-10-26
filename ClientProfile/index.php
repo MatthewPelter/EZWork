@@ -399,6 +399,7 @@ require_once("../classes/DB.php");
 
                             <a style="color: black; text-decoration: none;" href="../Profile/userprofile.php?name=<?php echo $row['username']; ?>">
                                 <div class="categoryCard">
+                                    <img src="../Users/user.svg" id="profileImage1" alt="">
                                     <p><?php echo $row['username']; ?></p>
                                     <i class="fa fa-angle-right"></i>
                                 </div>
