@@ -13259,13 +13259,22 @@ li {
   }
   .message-container {
     margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     width: 100%;
     background: #444753;
     border-radius: 0;
   }
   .people-list {
-    width: 260px;
-    float: left;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    float: none;
   }
   .people-list .search {
     padding: 20px;
@@ -13304,8 +13313,8 @@ li {
     color: #92959e;
   }
   .chat {
-    width: 490px;
-    float: left;
+    width: 90%;
+    float: none;
     background: #f2f5f8;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
