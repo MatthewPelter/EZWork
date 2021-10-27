@@ -77,7 +77,7 @@ require_once("../classes/DB.php");
         <div class="user-profile-header">
             <h2 id="username"><?php echo $_SESSION['userid']; ?></h2>
             <div class="quick-links">
-                <button id="quick-link-job" onclick="location.href='../PostAJob/PostAJob.php'">Post A Job</button>
+                <button id="quick-link-job" onclick="location.href='../PostAJob/PostAJob.html'">Post A Job</button>
                 <button id="quick-link-market">Browse Marketplace</button>
             </div>
         </div>
@@ -88,7 +88,7 @@ require_once("../classes/DB.php");
                     <span>All Postings</span>
                 </div>
                 <div class="card result">
-                    <button id="quick-link-job2" onclick="location.href='../PostAJob/PostAJob.php'">Post A Job</button>
+                    <button id="quick-link-job2" onclick="location.href='../PostAJob/PostAJob.html'">Post A Job</button>
                     <span>
                         You currently have no job postings listed.
                     </span>
