@@ -31,441 +31,442 @@ require_once("../classes/DB.php");
         <?php include '../navbar.php'; ?>
         <!-- END NAVBAR -->
 
-    <form action="../components/postJob-process.php" method="post" name="postJob" class="form"></form>
-    <div class="reviewJobPost-container">
-        <div class="reviewJobPost_title">
-            <h3>Now just finish and review your job post.</h3>
-        </div>
-        <div class="review_jobTitle">
-            <h4>Title</h4>
-            <div class="confirmTitle">
-                <div class="title">
-                    <span id="currentTitleSpan" contenteditable="true"></span>
-                </div>
-                <i class="fa fa-check" id="confirmTitle"></i>
+    <form action="../components/postJob-process.php" method="post" name="postJob" class="form">
+        <div class="reviewJobPost-container">
+            <div class="reviewJobPost_title">
+                <h3>Now just finish and review your job post.</h3>
             </div>
-        </div>
-        <div class="jobDescription">
-            <h4>Job Description</h4>
-            <span>This is how freelancers figures out what you need and why you’re great to work with!</span>
-            <span>Include your expectations about the task or deliverable, what you’re looking for in a work relationship, and anything unique about your project.</span>
-            <textarea required minlength="15" maxlength="5000" id="jobDescription" placeholder="Already have a job description? Paste it here!"></textarea>
-            <p><span id="wordCount">0</span> total words.</p>
-            <span id="descriptionError"><i class="fa fa-exclamation-circle "></i>Please enter at least 15 words.</span>
-            <input type="file" id="file">
-            <span>Max file size: 100MB</span>
-        </div>
-        <div class="reviewJobDetails">
-            <h4>Category</h4>
-            <div class="reviewCategory">
-                <p id="selectedCategory"></p>
-                <i class="fa fa-pencil" onclick="openCard()"></i>
-            </div>
-            
-            <div id="settingsOverlay" class="settingsOverlay">
-                <div class="editCategoryContainer">
-                    <div class="editCategoryHeader">
-                        <h3>Edit Category</h3>
-                        <i class="fa fa-times" aria-hidden="true" onclick="closeCard()"></i>
+            <div class="review_jobTitle">
+                <h4>Title</h4>
+                <div class="confirmTitle">
+                    <div class="title">
+                        <span id="currentTitleSpan" contenteditable="true"></span>
                     </div>
-                    <div class="editCategoryBody">
-                        <h4>Category</h4>
-                        <select name="category" id="categoryID">
-                            <option selected value="AccountingConsulting">Accounting & Consulting</option>
-                            <option value="AdminSupport">Admin Support</option>
-                            <option value="CustomerService">Customer Service</option>
-                            <option value="DataScienceAnalytics">Data Science & Analytics</option>
-                            <option value="DesignCreative">Design & Creative</option>
-                            <option value="EngineeringArchitecture">Engineering & Architecture</option>
-                            <option value="ITNetworking">IT & Networking</option>
-                            <option value="Legal">Legal</option>
-                            <option value="SalesMarketing">Sales & Marketing</option>
-                            <option value="Translation">Translation</option>
-                            <option value="WebMobileSoftwareDev">Web, Mobile & Software Dev</option>
-                            <option value="Writing">Writing</option>
-                        </select>
-                        <h4>Specialty</h4>
-                        <div class="accoutingConsultingSpecialtyCard">
-                            <select name="accoutingConsultingSpecialty" id="allAccoutingConsultingSpecialty">
-                            </select>
-                        </div>
-                        <div class="adminSupportSpecialtyCard">
-                            <select name="adminSupportSpecialty" id="allAdminSupportSpecialty">
-                            </select>
-                        </div>
-                        <div class="customerServiceSpecialtyCard">
-                            <select name="customerServiceSpecialty" id="allCustomerServiceSpecialty">
-                            </select>
-                        </div>
-                        <div class="dataScienceAnalyticsSpecialtyCard">
-                            <select name="dataScienceAnalyticsSpecialty" id="allDataScienceAnalyticsSpecialty">
-                            </select>
-                        </div>
-                        <div class="designCreativeSpecialtyCard">
-                            <select name="designCreativeSpecialty" id="allDesignCreativeSpecialty">
-                            </select>
-                        </div>
-                        <div class="engineeringArchitectureSpecialtyCard">
-                            <select name="engineeringArchitectureSpecialty" id="allEngineeringArchitectureSpecialty">
-                            </select>
-                        </div>
-                        <div class="itNetworkSpecialtyCard">
-                            <select name="itNetworkSpecialty" id="allItNetworkSpecialty">
-                            </select>
-                        </div>
-                        <div class="legalSpecialtyCard">
-                            <select name="legalSpecialty" id="allLegalSpecialty">
-                            </select>
-                        </div>
-                        <div class="salesMarketingSpecialtyCard">
-                            <select name="salesMarketingSpecialty" id="allSalesMarketingSpecialty">
-                            </select>
-                        </div>
-                        <div class="translationSpecialtyCard">
-                            <select name="translationSpecialty" id="allTranslationSpecialty">
-                            </select>
-                        </div>
-                        <div class="webMobileDevSpecialtyCard">
-                            <select name="webMobileDevSpecialty" id="allWebMobileDevSpecialty">
-                            </select>
-                        </div>
-                        <div class="writingSpecialtyCard">
-                            <select name="writingSpecialty" id="allWritingSpecialty">
-                            </select>
-                        </div>
-                        <p>Category: <span id="currentCategory"></span></p>
-                    </div>
-
-                    <div class="editCategorySubmit">
-                        <button id="cancelEdit" onclick="closeCard()">Cancel</button>
-                        <button id="applyEdit">Apply</button>
-                    </div>
+                    <i class="fa fa-check" id="confirmTitle"></i>
                 </div>
             </div>
-
-            <h4>Skills</h4>
-            <div class="reviewSkill">
-                <p id="selectedSkills"></p>
-                <i class="fa fa-pencil" id="skillsBTN" onclick="openSkills()"></i>
+            <div class="jobDescription">
+                <h4>Job Description</h4>
+                <span>This is how freelancers figures out what you need and why you’re great to work with!</span>
+                <span>Include your expectations about the task or deliverable, what you’re looking for in a work relationship, and anything unique about your project.</span>
+                <textarea required minlength="15" maxlength="5000" id="jobDescription" placeholder="Already have a job description? Paste it here!"></textarea>
+                <p><span id="wordCount">0</span> total words.</p>
+                <span id="descriptionError"><i class="fa fa-exclamation-circle "></i>Please enter at least 15 words.</span>
+                <input type="file" id="file">
+                <span>Max file size: 100MB</span>
             </div>
-
-            <div id="skillsOverlay" class="skillsOverlay">
-                <div class="editSkillsContainer">
-                    <div class="editSkillsHeader">
-                        <h3>Edit Skills</h3>
-                        <i class="fa fa-times" aria-hidden="true" onclick="closeSkills()"></i>
-                    </div>
-                    <div class="editSkillsBody">
-                        <div class="detail-input-section">
-                            <div class="CategorySpecialtyContainer"></div>
-                            <h3>Search Skills or Add your Own</h3>
-                            <div class="skillSearch">
-                                <input type="text" name="skills" id="skills" list="allskills"  autocomplete="off" placeholder="Search Skills or Add Your Own">                  
-                                <button id="enterSkill">Add</button>
+            <div class="reviewJobDetails">
+                <h4>Category</h4>
+                <div class="reviewCategory">
+                    <p id="selectedCategory"></p>
+                    <i class="fa fa-pencil" onclick="openCard()"></i>
+                </div>
+                
+                <div id="settingsOverlay" class="settingsOverlay">
+                    <div class="editCategoryContainer">
+                        <div class="editCategoryHeader">
+                            <h3>Edit Category</h3>
+                            <i class="fa fa-times" aria-hidden="true" onclick="closeCard()"></i>
+                        </div>
+                        <div class="editCategoryBody">
+                            <h4>Category</h4>
+                            <select name="category" id="categoryID">
+                                <option selected value="AccountingConsulting">Accounting & Consulting</option>
+                                <option value="AdminSupport">Admin Support</option>
+                                <option value="CustomerService">Customer Service</option>
+                                <option value="DataScienceAnalytics">Data Science & Analytics</option>
+                                <option value="DesignCreative">Design & Creative</option>
+                                <option value="EngineeringArchitecture">Engineering & Architecture</option>
+                                <option value="ITNetworking">IT & Networking</option>
+                                <option value="Legal">Legal</option>
+                                <option value="SalesMarketing">Sales & Marketing</option>
+                                <option value="Translation">Translation</option>
+                                <option value="WebMobileSoftwareDev">Web, Mobile & Software Dev</option>
+                                <option value="Writing">Writing</option>
+                            </select>
+                            <h4>Specialty</h4>
+                            <div class="accoutingConsultingSpecialtyCard">
+                                <select name="accoutingConsultingSpecialty" id="allAccoutingConsultingSpecialty">
+                                </select>
                             </div>
-                            <span id="emptyError" style="color: red;font-size: 0.8rem;"></span>
-                            <p id="SelectedSkillTitle" style="margin-top: 0.5rem;margin-left: 0.5rem;width: 100%;">Selected Skill <span id="alertMsg" style="font-size: 0.8rem;"></span></p>
-                            <form id="selectedSkillsForm" onsubmit="return false">
-                            </form>
+                            <div class="adminSupportSpecialtyCard">
+                                <select name="adminSupportSpecialty" id="allAdminSupportSpecialty">
+                                </select>
+                            </div>
+                            <div class="customerServiceSpecialtyCard">
+                                <select name="customerServiceSpecialty" id="allCustomerServiceSpecialty">
+                                </select>
+                            </div>
+                            <div class="dataScienceAnalyticsSpecialtyCard">
+                                <select name="dataScienceAnalyticsSpecialty" id="allDataScienceAnalyticsSpecialty">
+                                </select>
+                            </div>
+                            <div class="designCreativeSpecialtyCard">
+                                <select name="designCreativeSpecialty" id="allDesignCreativeSpecialty">
+                                </select>
+                            </div>
+                            <div class="engineeringArchitectureSpecialtyCard">
+                                <select name="engineeringArchitectureSpecialty" id="allEngineeringArchitectureSpecialty">
+                                </select>
+                            </div>
+                            <div class="itNetworkSpecialtyCard">
+                                <select name="itNetworkSpecialty" id="allItNetworkSpecialty">
+                                </select>
+                            </div>
+                            <div class="legalSpecialtyCard">
+                                <select name="legalSpecialty" id="allLegalSpecialty">
+                                </select>
+                            </div>
+                            <div class="salesMarketingSpecialtyCard">
+                                <select name="salesMarketingSpecialty" id="allSalesMarketingSpecialty">
+                                </select>
+                            </div>
+                            <div class="translationSpecialtyCard">
+                                <select name="translationSpecialty" id="allTranslationSpecialty">
+                                </select>
+                            </div>
+                            <div class="webMobileDevSpecialtyCard">
+                                <select name="webMobileDevSpecialty" id="allWebMobileDevSpecialty">
+                                </select>
+                            </div>
+                            <div class="writingSpecialtyCard">
+                                <select name="writingSpecialty" id="allWritingSpecialty">
+                                </select>
+                            </div>
+                            <p>Category: <span id="currentCategory"></span></p>
+                        </div>
     
-                            <span id="EmptyArrayError" style="color: red;font-size: 1rem;padding: 0.5rem;"></span>
+                        <div class="editCategorySubmit">
+                            <button id="cancelEdit" onclick="closeCard()">Cancel</button>
+                            <button id="applyEdit">Apply</button>
                         </div>
                     </div>
-
-                    <div class="editSkillsSubmit">
-                        <button id="cancelEdit" onclick="closeSkills()">Cancel</button>
-                        <button id="applySkillEdit">Apply</button>
-                    </div>
                 </div>
-            </div>
-
-            <h4>Scope</h4>
-            <div class="reviewScope">
-                <p id="selectedScope"></p>
-                <i class="fa fa-pencil" onclick="openScope()"></i>
-            </div>
-
-            <div id="scopeOverlay" class="scopeOverlay">
-                <div class="editScopeContainer">
-                    <div class="editScopeHeader">
-                        <h3>Edit Scope</h3>
-                        <i class="fa fa-times" aria-hidden="true" onclick="closeScope()"></i>
-                    </div>
-                    <div class="editScopeBody">
-                        <div class="detail-input-section">
-                            <div class="project-size-container">
-                                <div class="project-size-option">
-                                    <div class="project-size-option-title">
-                                        <h3 id="currentSizeChoice">Small</h3>
-                                        <i class="fa fa-pencil" id="project-size-edit" title="Edit"></i>
-                                    </div>
-                                    <span id="SizeDescription">Quick and straightforward tasks (ex. update text and images on a webpage)</span>
+    
+                <h4>Skills</h4>
+                <div class="reviewSkill">
+                    <p id="selectedSkills"></p>
+                    <i class="fa fa-pencil" id="skillsBTN" onclick="openSkills()"></i>
+                </div>
+    
+                <div id="skillsOverlay" class="skillsOverlay">
+                    <div class="editSkillsContainer">
+                        <div class="editSkillsHeader">
+                            <h3>Edit Skills</h3>
+                            <i class="fa fa-times" aria-hidden="true" onclick="closeSkills()"></i>
+                        </div>
+                        <div class="editSkillsBody">
+                            <div class="detail-input-section">
+                                <div class="CategorySpecialtyContainer"></div>
+                                <h3>Search Skills or Add your Own</h3>
+                                <div class="skillSearch">
+                                    <input type="text" name="skills" id="skills" list="allskills"  autocomplete="off" placeholder="Search Skills or Add Your Own">                  
+                                    <button id="enterSkill">Add</button>
                                 </div>
-                            </div>
-                            <div class="project-size-options">
-                                <div class="large-option">
-                                    <div class="size-option-title">
-                                        <i class="fa fa-circle" id="largeSize-button"></i>
-                                        <h3>Large</h3>
-                                    </div>
-                                    <span>Longer term or complex initiatives (ex. design and build a full website)</span>
-                                </div>
-                                <div class="medium-option">
-                                    <div class="size-option-title">
-                                        <i class="fa fa-circle" id="mediumSize-button"></i>
-                                        <h3>Medium</h3>
-                                    </div>
-                                    <span>Well-defined projects (ex. a landing page)</span>
-                                </div>
-                                <div class="small-option">
-                                    <div class="size-option-title">
-                                        <i class="fa fa-circle" id="smallSize-button"></i>
-                                        <h3>Small</h3>
-                                    </div>
-                                    <span>Quick and straightforward tasks (ex. update text and images on a webpage)</span>
-                                </div>
-                            </div>
+                                <span id="emptyError" style="color: red;font-size: 0.8rem;"></span>
+                                <p id="SelectedSkillTitle" style="margin-top: 0.5rem;margin-left: 0.5rem;width: 100%;">Selected Skill <span id="alertMsg" style="font-size: 0.8rem;"></span></p>
+                                <form id="selectedSkillsForm" onsubmit="return false">
+                                </form>
         
-                            <div class="project-time">
-                                <h3 id="currentTimeChoice">Less than 1 month</h3>
-                                <i class="fa fa-pencil" id="project-time-edit" title="Edit"></i>
-                            </div>
-                            <div class="project-time-options">
-                                <h3>How long will your work take?</h3>
-                                <div class="threeToSixMonths">
-                                    <div class="time-title">
-                                        <i class="fa fa-circle" id="threeToSixMonths-button"></i>
-                                        <h3>3 to 6 months</h3>
-                                    </div>
-                                </div>
-                                <div class="oneToThreeMonths">
-                                    <div class="time-title">
-                                        <i class="fa fa-circle" id="oneToThreeMonths-button"></i>
-                                        <h3>1 to 3 months</h3>
-                                    </div>
-                                </div>
-                                <div class="lessThanOneMonth">
-                                    <div class="time-title">
-                                        <i class="fa fa-circle" id="lessThanOneMonth-button"></i>
-                                        <h3>Less than 1 month</h3>
-                                    </div>
-                                </div>
-                            </div>
-        
-                            <div class="freelance-experience">
-                                <h3 id="currentExperienceChoice">Entry Level</h3>
-                                <i class="fa fa-pencil" id="freelance-experience-edit" title="Edit"></i>
-                            </div>
-                            <div class="freelance-experience-options">
-                                <h3>What level of experience will you need?</h3>
-                                <span>This helps us match expertise to your needs.</span>
-                                <div class="entry-option">
-                                    <div class="option-title">
-                                        <i class="fa fa-circle" id="entry-button"></i>
-                                        <h3>Entry</h3>
-                                    </div>
-                                    <span>Looking for somone relatively, new to thsi field.</span>
-                                </div>
-                                <div class="intermediate-option">
-                                    <div class="option-title">
-                                        <i class="fa fa-circle" id="intermediate-button"></i>
-                                        <h3>Intermediate</h3>
-                                    </div>
-                                    <span>Looking for substantial experience in this field.</span>
-                                </div>
-                                <div class="expert-option">
-                                    <div class="option-title">
-                                        <i class="fa fa-circle" id="expert-button"></i>
-                                        <h3>Expert</h3>
-                                    </div>
-                                    <span>Looking for comprehensive and deep expertise in this field.</span>
-                                </div>
+                                <span id="EmptyArrayError" style="color: red;font-size: 1rem;padding: 0.5rem;"></span>
                             </div>
                         </div>
-                    </div>
-                    <div class="editScopeSubmit">
-                        <button id="cancelEdit" onclick="closeScope()">Cancel</button>
-                        <button id="applyScopeEdit">Apply</button>
-                    </div>
-                </div>
-            </div>
-
-            <h4>Location</h4>
-            <div class="reviewLocation">
-                <p id="selectedLocation"></p>
-                <i class="fa fa-pencil" onclick="openLocation()"></i>
-            </div>
-
-            <div id="locationOverlay" class="locationOverlay">
-                <div class="editLocationContainer">
-                    <div class="editLocationHeader">
-                        <h3>Edit Location</h3>
-                        <i class="fa fa-times" aria-hidden="true" onclick="closeLocation()"></i>
-                    </div>
-                    <div class="editLocationBody">
-                        <div class="detail-input-section">
-                            <div class="locationOptions">
-                                <div class="optionCard" id="usOnly">
-                                    <div class="choosen">
-                                        <i class="fa fa-circle" aria-hidden="true" id="usOnly-button"></i>
-                                    </div>
-                                    <div class="usOnly">
-                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                        <h4>U.S. only</h4>
-                                        <p>Only talent in the United States can submit proposals</p>
-                                    </div>
-                                </div>
-                                <div class="optionCard" id="worldwide">
-                                    <div class="choosen">
-                                        <i class="fa fa-circle" aria-hidden="true" id="worlwide-button"></i>
-                                    </div>
-                                    <div class="worldwide">
-                                        <i class="fa fa-globe" aria-hidden="true"></i>
-                                        <h4>Worldwide</h4>
-                                        <p>Freelancers in any location can submit proposals</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="locationsCards">
-                                <div class="usOnlyCard">
-                                    <h4>States or time zone preferences <span>(optional)</span></h4>
-                                    <div class="statesPulldown">
-                                        <input type="text" list="Timezones&States" id="TimeZones&StatesID" autocomplete="off" placeholder="Add states or timezones">                  
-                                        <button id="add1">Add</button>
-                                    </div>
-                                    <span>These location preferences will be displayed to freelancers, but anyone can submit proposals.</span>
-                                </div>
-                                <div class="worldwideCard">
-                                    <h4>Region or country preferences <span>(optional)</span></h4>
-                                    <div class="worldwidePulldown">
-                                        <input type="text" autocomplete="off" id="States&RegionsID" list="Region&Countries" placeholder="Add Region or States">                  
-                                        <button id="add2">Add</button>
-                                    </div>
-                                    <span>These location preferences will be displayed to all candidates, but anyone can submit proposals.</span>
-                                </div>
-                            </div>
-                            <span style="color: red;font-size: 0.9rem;margin-left: 1rem;" id="emptyError"></span>
-                            <div class="selectedLocationsUSCard">
-                                <h5>Selected Locations</h5>
-                                <span style="font-size: 0.7rem;color: red;padding: 1rem 0rem;">(Press on button to remove)</span>
-                                <div class="selectedLocationsUS">
-                                </div>
-                            </div>
-                            <div class="selectedLocationsWorldwideCard">
-                                <h5>Selected Locations</h5>
-                                <span style="font-size: 0.7rem;color:#0a345e;">(Press on button to remove)</span>
-                                <div class="selectedLocationsWorldwide">
-                                </div>
-                            </div>
-                            <span style="color: red;font-size: 0.9rem;margin-left: 1rem;" id="emptyArray"></span>
+    
+                        <div class="editSkillsSubmit">
+                            <button id="cancelEdit" onclick="closeSkills()">Cancel</button>
+                            <button id="applySkillEdit">Apply</button>
                         </div>
                     </div>
-
-                    <div class="editLocationSubmit">
-                        <button id="cancelEdit" onclick="closeLocation()">Cancel</button>
-                        <button id="applyLocationEdit">Apply</button>
-                    </div>
                 </div>
-            </div>
-
-            <h4>Budget</h4>
-            <div class="reviewBudget">
-                <p id="selectedBudget"></p>
-                <i class="fa fa-pencil" onclick="openBudget()"></i>
-            </div>
-
-            <div id="budgetOverlay" class="budgetOverlay">
-                <div class="editBudgetContainer">
-                    <div class="editBudgetHeader">
-                        <h3>Edit Budget</h3>
-                        <i class="fa fa-times" aria-hidden="true" onclick="closeBudget()"></i>
-                    </div>
-                    <div class="editBudgetBody">
-                        <div class="detail-input-section">
-                            <div class="budgetOptions">
-                                <div class="optionCard" id="hourlyCard">
-                                    <div class="choosen">
-                                        <i class="fa fa-circle" aria-hidden="true" id="hourlyCard-button"></i>
-                                    </div>
-                                    <div class="hourly">
-                                        <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                        <h4>Hourly Rate</h4>
-                                    </div>
-                                </div>
-                                <div class="optionCard" id="priceCard">
-                                    <div class="choosen">
-                                        <i class="fa fa-circle" aria-hidden="true" id="priceCard-button"></i>
-                                    </div>
-                                    <div class="budget">
-                                        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12.628 21.412l5.969-5.97 1.458 3.71-12.34 4.848-4.808-12.238 9.721 9.65zm-1.276-21.412h-9.352v9.453l10.625 10.547 9.375-9.375-10.648-10.625zm4.025 9.476c-.415-.415-.865-.617-1.378-.617-.578 0-1.227.241-2.171.804-.682.41-1.118.584-1.456.584-.361 0-1.083-.408-.961-1.218.052-.345.25-.697.572-1.02.652-.651 1.544-.848 2.276-.106l.744-.744c-.476-.476-1.096-.792-1.761-.792-.566 0-1.125.227-1.663.677l-.626-.627-.698.699.653.652c-.569.826-.842 2.021.076 2.938 1.011 1.011 2.188.541 3.413-.232.6-.379 1.083-.563 1.475-.563.589 0 1.18.498 1.078 1.258-.052.386-.26.763-.621 1.122-.451.451-.904.679-1.347.679-.418 0-.747-.192-1.049-.462l-.739.739c.463.458 1.082.753 1.735.753.544 0 1.087-.201 1.612-.597l.54.538.697-.697-.52-.521c.743-.896 1.157-2.209.119-3.247zm-9.678-7.476c.938 0 1.699.761 1.699 1.699 0 .938-.761 1.699-1.699 1.699-.938 0-1.699-.761-1.699-1.699 0-.938.761-1.699 1.699-1.699z"/></svg>
-                                        <h4>Project Budget</h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="hourlyContainer">
-                                <div class="setHourlyRate">
-                                    <div class="minimum">
-                                        <p>From</p>
-                                        <div class="addMinHourly">
-                                            <div class="inputContainer">
-                                                <span>$</span>
-                                                <input type="text"  onfocus="this.value=''" id="setMinHourly" required placeholder="0">
-                                                <button id="addMinHourly">Add</button>
-        
-                                            </div>
-                                            <span>/ hour</span>
+    
+                <h4>Scope</h4>
+                <div class="reviewScope">
+                    <p id="selectedScope"></p>
+                    <i class="fa fa-pencil" onclick="openScope()"></i>
+                </div>
+    
+                <div id="scopeOverlay" class="scopeOverlay">
+                    <div class="editScopeContainer">
+                        <div class="editScopeHeader">
+                            <h3>Edit Scope</h3>
+                            <i class="fa fa-times" aria-hidden="true" onclick="closeScope()"></i>
+                        </div>
+                        <div class="editScopeBody">
+                            <div class="detail-input-section">
+                                <div class="project-size-container">
+                                    <div class="project-size-option">
+                                        <div class="project-size-option-title">
+                                            <h3 id="currentSizeChoice">Small</h3>
+                                            <i class="fa fa-pencil" id="project-size-edit" title="Edit"></i>
                                         </div>
-                                        <span id="alertMinHourly"></span>
+                                        <span id="SizeDescription">Quick and straightforward tasks (ex. update text and images on a webpage)</span>
                                     </div>
-                                    <div class="maximum">
-                                        <p>To</p>
-                                        <div class="addMaxHourly">
-                                            <div class="inputContainer">
-                                                <span>$</span>
-                                                <input type="text"  onfocus="this.value=''" id="setMaxHourly" required placeholder="0">
-                                                <button id="addMaxHourly">Add</button>
-                                            </div>
-                                            <span>/ hour</span>
+                                </div>
+                                <div class="project-size-options">
+                                    <div class="large-option">
+                                        <div class="size-option-title">
+                                            <i class="fa fa-circle" id="largeSize-button"></i>
+                                            <h3>Large</h3>
                                         </div>
-                                        <span id="MaxError"></span>
+                                        <span>Longer term or complex initiatives (ex. design and build a full website)</span>
+                                    </div>
+                                    <div class="medium-option">
+                                        <div class="size-option-title">
+                                            <i class="fa fa-circle" id="mediumSize-button"></i>
+                                            <h3>Medium</h3>
+                                        </div>
+                                        <span>Well-defined projects (ex. a landing page)</span>
+                                    </div>
+                                    <div class="small-option">
+                                        <div class="size-option-title">
+                                            <i class="fa fa-circle" id="smallSize-button"></i>
+                                            <h3>Small</h3>
+                                        </div>
+                                        <span>Quick and straightforward tasks (ex. update text and images on a webpage)</span>
                                     </div>
                                 </div>
-                                <p id="OfficialRate">Hourly Rate: $<span id="officialMinRate">0</span>&nbsp; To &nbsp; $<span id="officialMaxRate">0</span>&nbsp; /hour</p>
-                            </div>
-                            <div class="budgetContainer">
-                                <h4>Maximum project budget (USD)</h4>
-                                <div class="addBudget">
-                                    <span>$</span>
-                                    <input  type="text" id="setMaxBudget" required placeholder="0">
-                                    <button id="addMaxBudget">Add</button>
-                                </div>
-                                <span id="alertBudget"></span>
-                                <p id="OfficalBudget">Max Budget: $ <span id="userBudget"></span></p>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="editBudgetSubmit">
-                        <button id="cancelEdit" onclick="closeBudget()">Cancel</button>
-                        <button id="applyBudgetEdit">Apply</button>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <div class="buttonCard">
-            <div class="back">
-                <button id="back">Back</button>
-            </div>
-            <div class="continue">
-                <button id="cancel">Cancel</button>
-                <input type="submit" value="Post Job" name="submit" id="postJob"></input>
-            </div>
             
+                                <div class="project-time">
+                                    <h3 id="currentTimeChoice">Less than 1 month</h3>
+                                    <i class="fa fa-pencil" id="project-time-edit" title="Edit"></i>
+                                </div>
+                                <div class="project-time-options">
+                                    <h3>How long will your work take?</h3>
+                                    <div class="threeToSixMonths">
+                                        <div class="time-title">
+                                            <i class="fa fa-circle" id="threeToSixMonths-button"></i>
+                                            <h3>3 to 6 months</h3>
+                                        </div>
+                                    </div>
+                                    <div class="oneToThreeMonths">
+                                        <div class="time-title">
+                                            <i class="fa fa-circle" id="oneToThreeMonths-button"></i>
+                                            <h3>1 to 3 months</h3>
+                                        </div>
+                                    </div>
+                                    <div class="lessThanOneMonth">
+                                        <div class="time-title">
+                                            <i class="fa fa-circle" id="lessThanOneMonth-button"></i>
+                                            <h3>Less than 1 month</h3>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="freelance-experience">
+                                    <h3 id="currentExperienceChoice">Entry Level</h3>
+                                    <i class="fa fa-pencil" id="freelance-experience-edit" title="Edit"></i>
+                                </div>
+                                <div class="freelance-experience-options">
+                                    <h3>What level of experience will you need?</h3>
+                                    <span>This helps us match expertise to your needs.</span>
+                                    <div class="entry-option">
+                                        <div class="option-title">
+                                            <i class="fa fa-circle" id="entry-button"></i>
+                                            <h3>Entry</h3>
+                                        </div>
+                                        <span>Looking for somone relatively, new to thsi field.</span>
+                                    </div>
+                                    <div class="intermediate-option">
+                                        <div class="option-title">
+                                            <i class="fa fa-circle" id="intermediate-button"></i>
+                                            <h3>Intermediate</h3>
+                                        </div>
+                                        <span>Looking for substantial experience in this field.</span>
+                                    </div>
+                                    <div class="expert-option">
+                                        <div class="option-title">
+                                            <i class="fa fa-circle" id="expert-button"></i>
+                                            <h3>Expert</h3>
+                                        </div>
+                                        <span>Looking for comprehensive and deep expertise in this field.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="editScopeSubmit">
+                            <button id="cancelEdit" onclick="closeScope()">Cancel</button>
+                            <button id="applyScopeEdit">Apply</button>
+                        </div>
+                    </div>
+                </div>
+    
+                <h4>Location</h4>
+                <div class="reviewLocation">
+                    <p id="selectedLocation"></p>
+                    <i class="fa fa-pencil" onclick="openLocation()"></i>
+                </div>
+    
+                <div id="locationOverlay" class="locationOverlay">
+                    <div class="editLocationContainer">
+                        <div class="editLocationHeader">
+                            <h3>Edit Location</h3>
+                            <i class="fa fa-times" aria-hidden="true" onclick="closeLocation()"></i>
+                        </div>
+                        <div class="editLocationBody">
+                            <div class="detail-input-section">
+                                <div class="locationOptions">
+                                    <div class="optionCard" id="usOnly">
+                                        <div class="choosen">
+                                            <i class="fa fa-circle" aria-hidden="true" id="usOnly-button"></i>
+                                        </div>
+                                        <div class="usOnly">
+                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                            <h4>U.S. only</h4>
+                                            <p>Only talent in the United States can submit proposals</p>
+                                        </div>
+                                    </div>
+                                    <div class="optionCard" id="worldwide">
+                                        <div class="choosen">
+                                            <i class="fa fa-circle" aria-hidden="true" id="worlwide-button"></i>
+                                        </div>
+                                        <div class="worldwide">
+                                            <i class="fa fa-globe" aria-hidden="true"></i>
+                                            <h4>Worldwide</h4>
+                                            <p>Freelancers in any location can submit proposals</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="locationsCards">
+                                    <div class="usOnlyCard">
+                                        <h4>States or time zone preferences <span>(optional)</span></h4>
+                                        <div class="statesPulldown">
+                                            <input type="text" list="Timezones&States" id="TimeZones&StatesID" autocomplete="off" placeholder="Add states or timezones">                  
+                                            <button id="add1">Add</button>
+                                        </div>
+                                        <span>These location preferences will be displayed to freelancers, but anyone can submit proposals.</span>
+                                    </div>
+                                    <div class="worldwideCard">
+                                        <h4>Region or country preferences <span>(optional)</span></h4>
+                                        <div class="worldwidePulldown">
+                                            <input type="text" autocomplete="off" id="States&RegionsID" list="Region&Countries" placeholder="Add Region or States">                  
+                                            <button id="add2">Add</button>
+                                        </div>
+                                        <span>These location preferences will be displayed to all candidates, but anyone can submit proposals.</span>
+                                    </div>
+                                </div>
+                                <span style="color: red;font-size: 0.9rem;margin-left: 1rem;" id="emptyError"></span>
+                                <div class="selectedLocationsUSCard">
+                                    <h5>Selected Locations</h5>
+                                    <span style="font-size: 0.7rem;color: red;padding: 1rem 0rem;">(Press on button to remove)</span>
+                                    <div class="selectedLocationsUS">
+                                    </div>
+                                </div>
+                                <div class="selectedLocationsWorldwideCard">
+                                    <h5>Selected Locations</h5>
+                                    <span style="font-size: 0.7rem;color:#0a345e;">(Press on button to remove)</span>
+                                    <div class="selectedLocationsWorldwide">
+                                    </div>
+                                </div>
+                                <span style="color: red;font-size: 0.9rem;margin-left: 1rem;" id="emptyArray"></span>
+                            </div>
+                        </div>
+    
+                        <div class="editLocationSubmit">
+                            <button id="cancelEdit" onclick="closeLocation()">Cancel</button>
+                            <button id="applyLocationEdit">Apply</button>
+                        </div>
+                    </div>
+                </div>
+    
+                <h4>Budget</h4>
+                <div class="reviewBudget">
+                    <p id="selectedBudget"></p>
+                    <i class="fa fa-pencil" onclick="openBudget()"></i>
+                </div>
+    
+                <div id="budgetOverlay" class="budgetOverlay">
+                    <div class="editBudgetContainer">
+                        <div class="editBudgetHeader">
+                            <h3>Edit Budget</h3>
+                            <i class="fa fa-times" aria-hidden="true" onclick="closeBudget()"></i>
+                        </div>
+                        <div class="editBudgetBody">
+                            <div class="detail-input-section">
+                                <div class="budgetOptions">
+                                    <div class="optionCard" id="hourlyCard">
+                                        <div class="choosen">
+                                            <i class="fa fa-circle" aria-hidden="true" id="hourlyCard-button"></i>
+                                        </div>
+                                        <div class="hourly">
+                                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                            <h4>Hourly Rate</h4>
+                                        </div>
+                                    </div>
+                                    <div class="optionCard" id="priceCard">
+                                        <div class="choosen">
+                                            <i class="fa fa-circle" aria-hidden="true" id="priceCard-button"></i>
+                                        </div>
+                                        <div class="budget">
+                                            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12.628 21.412l5.969-5.97 1.458 3.71-12.34 4.848-4.808-12.238 9.721 9.65zm-1.276-21.412h-9.352v9.453l10.625 10.547 9.375-9.375-10.648-10.625zm4.025 9.476c-.415-.415-.865-.617-1.378-.617-.578 0-1.227.241-2.171.804-.682.41-1.118.584-1.456.584-.361 0-1.083-.408-.961-1.218.052-.345.25-.697.572-1.02.652-.651 1.544-.848 2.276-.106l.744-.744c-.476-.476-1.096-.792-1.761-.792-.566 0-1.125.227-1.663.677l-.626-.627-.698.699.653.652c-.569.826-.842 2.021.076 2.938 1.011 1.011 2.188.541 3.413-.232.6-.379 1.083-.563 1.475-.563.589 0 1.18.498 1.078 1.258-.052.386-.26.763-.621 1.122-.451.451-.904.679-1.347.679-.418 0-.747-.192-1.049-.462l-.739.739c.463.458 1.082.753 1.735.753.544 0 1.087-.201 1.612-.597l.54.538.697-.697-.52-.521c.743-.896 1.157-2.209.119-3.247zm-9.678-7.476c.938 0 1.699.761 1.699 1.699 0 .938-.761 1.699-1.699 1.699-.938 0-1.699-.761-1.699-1.699 0-.938.761-1.699 1.699-1.699z"/></svg>
+                                            <h4>Project Budget</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hourlyContainer">
+                                    <div class="setHourlyRate">
+                                        <div class="minimum">
+                                            <p>From</p>
+                                            <div class="addMinHourly">
+                                                <div class="inputContainer">
+                                                    <span>$</span>
+                                                    <input type="text"  onfocus="this.value=''" id="setMinHourly" required placeholder="0">
+                                                    <button id="addMinHourly">Add</button>
+            
+                                                </div>
+                                                <span>/ hour</span>
+                                            </div>
+                                            <span id="alertMinHourly"></span>
+                                        </div>
+                                        <div class="maximum">
+                                            <p>To</p>
+                                            <div class="addMaxHourly">
+                                                <div class="inputContainer">
+                                                    <span>$</span>
+                                                    <input type="text"  onfocus="this.value=''" id="setMaxHourly" required placeholder="0">
+                                                    <button id="addMaxHourly">Add</button>
+                                                </div>
+                                                <span>/ hour</span>
+                                            </div>
+                                            <span id="MaxError"></span>
+                                        </div>
+                                    </div>
+                                    <p id="OfficialRate">Hourly Rate: $<span id="officialMinRate">0</span>&nbsp; To &nbsp; $<span id="officialMaxRate">0</span>&nbsp; /hour</p>
+                                </div>
+                                <div class="budgetContainer">
+                                    <h4>Maximum project budget (USD)</h4>
+                                    <div class="addBudget">
+                                        <span>$</span>
+                                        <input  type="text" id="setMaxBudget" required placeholder="0">
+                                        <button id="addMaxBudget">Add</button>
+                                    </div>
+                                    <span id="alertBudget"></span>
+                                    <p id="OfficalBudget">Max Budget: $ <span id="userBudget"></span></p>
+                                </div>
+    
+                            </div>
+                        </div>
+    
+                        <div class="editBudgetSubmit">
+                            <button id="cancelEdit" onclick="closeBudget()">Cancel</button>
+                            <button id="applyBudgetEdit">Apply</button>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+            <div class="buttonCard">
+                <div class="back">
+                    <button id="back">Back</button>
+                </div>
+                <div class="continue">
+                    <button id="cancel">Cancel</button>
+                    <input type="submit" value="Post Job" name="submit" id="postJob"></input>
+                </div>
+                
+            </div>
         </div>
-    </div>
-</form>
+    </form>
+
     <div class="profileFooter">
         <div class="profile-links">
             <div class="links">
