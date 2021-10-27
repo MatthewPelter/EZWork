@@ -2630,6 +2630,6 @@ postJob.addEventListener("click", () => {
       );
   } else {
     localStorage.setItem("jobDescription", jobDescription.value);
-    window.location.href = "../ClientProfile/index.html";
+    window.location.href = "../ClientProfile/index.php";
   }
 });
