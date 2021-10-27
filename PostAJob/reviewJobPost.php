@@ -165,8 +165,9 @@ require_once("../classes/DB.php");
                                 </div>
                                 <span id="emptyError" style="color: red;font-size: 0.8rem;"></span>
                                 <p id="SelectedSkillTitle" style="margin-top: 0.5rem;margin-left: 0.5rem;width: 100%;">Selected Skill <span id="alertMsg" style="font-size: 0.8rem;"></span></p>
-                                <form id="selectedSkillsForm" onsubmit="return false">
-                                </form>
+                                <div id="selectedSkillsForm">
+                                </div>
+
         
                                 <span id="EmptyArrayError" style="color: red;font-size: 1rem;padding: 0.5rem;"></span>
                             </div>
