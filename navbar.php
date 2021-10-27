@@ -134,7 +134,7 @@
                     </div>
                 </div>
             </div>
-            <li onclick="toggleTalent()" id="talents">Talents</li>
+            <li onclick="toggleTalent()" id="talents">Freelancer</li>
             <div class="talentCardContainer">
                 <div class="talentCard">
                     <div class="card card1">
@@ -144,7 +144,7 @@
                         <h4>Your Hires</h4>
                     </div>
                     <div class="card card4">
-                        <h4>Talent History</h4>
+                        <h4>Freelance History</h4>
                     </div>
                 </div>
             </div>

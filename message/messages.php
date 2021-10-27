@@ -299,7 +299,7 @@ if (isset($_POST['submit'])) {
     }
 
 </script>
-<!--Toggle the nav burger button-->
+<!--Toggle the nav burger button and mobile nav bar js-->
 <script>
     const navIcon = document.getElementById("nav-burger");
     const profileMobileNav = document.querySelector(".profile-mobile-nav");

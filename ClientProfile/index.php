@@ -380,9 +380,13 @@ require_once("../classes/DB.php");
 
     </datalist>
 </body>
+
+<!--Script for this page-->
+<script src="./app.js"></script>
+
+<!--Script for the search bar and datalist-->
 <script src="../SkillsContainer/searchProfile.js"></script>
 
-<script src="./app.js"></script>
 <!--nav bar script -->
 <script>
     var job = document.querySelector('.jobCard');
@@ -458,7 +462,7 @@ require_once("../classes/DB.php");
     }
 
 </script>
-<!--Toggle the nav burger button-->
+<!--Toggle the nav burger button and mobile nav bar js-->
 <script>
     const navIcon = document.getElementById("nav-burger");
     const profileMobileNav = document.querySelector(".profile-mobile-nav");
