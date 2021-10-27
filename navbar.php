@@ -25,7 +25,7 @@
             <a href="#/">
                 <li>All Contracts</li>
             </a>
-            <a href="../PostAJob/PostAJob.php">
+            <a href="../PostAJob/PostAJob.html">
                 <li>Post A Job</li>
             </a>
         </ul>
@@ -129,7 +129,7 @@
                     <div class="card card3">
                         <h4>All Contracts</h4>
                     </div>
-                    <div class="card card4" onclick="location.href='../PostAJob/PostAJob.php'">
+                    <div class="card card4" onclick="location.href='../PostAJob/PostAJob.html'">
                         <h4>Post A Job</h4>
                     </div>
                 </div>

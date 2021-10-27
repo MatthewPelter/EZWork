@@ -2,7 +2,7 @@
         <div class="profile-links">
             <div class="links">
                 <ul>
-                    <a href="./PostAJob.php">Post a Job</a>
+                    <a href="./PostAJob.html">Post a Job</a>
                     <a href="#/">Find Talent</a>
                     <a href="#/">Browse Projects</a>
                 </ul>
