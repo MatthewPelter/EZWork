@@ -21,7 +21,7 @@ if (isset($_POST['submit'])) {
         $title = stripslashes($title);
         $cleanTitle = mysqli_real_escape_string($conn, $title);
 
-        $insertSQL = "INSERT INTO job(title, user_id) VALUES('$cleanTitle', '$userID')";
+        $insertSQL = "INSERT INTO job (title, user_id) VALUES('$cleanTitle', '$userID')";
         $insertresult = mysqli_query($conn, $insertSQL) or die(mysqli_error($conn));
 
         if (!$insertresult) {
@@ -90,7 +90,7 @@ if (isset($_POST['submit'])) {
                 </ul>
 
                 <div class="CancelOrNext">
-                    <button id="cancel" onclick="location.href='./PostAJob.html'">Back</button>
+                    <button id="cancel" onclick="location.href='./PostAJob.php'">Back</button>
                     <input type="submit" value="Next: Skills" name="submit" id="nextSkills">
                 </div>
             </form>
