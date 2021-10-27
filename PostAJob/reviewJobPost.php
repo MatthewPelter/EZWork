@@ -31,7 +31,7 @@ require_once("../classes/DB.php");
         <?php include '../navbar.php'; ?>
         <!-- END NAVBAR -->
 
-    <form action="../components/postJob-process.php" method="post" name="postJob" class="form">
+    <form action="../components/postJob-process.php" method="post" name="postJob">
         <div class="reviewJobPost-container">
             <div class="reviewJobPost_title">
                 <h3>Now just finish and review your job post.</h3>
