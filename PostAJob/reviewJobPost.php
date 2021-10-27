@@ -468,9 +468,9 @@ require_once("../classes/DB.php");
         </div>
     </form>
     
-           <!-- NAV BAR -->
+           <!-- Footer -->
            <?php include '../footer.php'; ?>
-           <!-- END NAVBAR -->
+           <!-- END Footer -->
 
                 <!--DataList-->
                 <datalist id="allskills">

@@ -38,12 +38,12 @@ option2.addEventListener("click", () => {
 
 continueBtn.addEventListener("click", () => {
   if (choosen === 1) {
-    localStorage.setItem("TimePeriod", "Short Term");
-    window.location.href = "./postTitle.html";
+    //localStorage.setItem("TimePeriod", "Short Term");
+    window.location.href = "./postTitle.php";
   } else if (choosen === 2) {
-    localStorage.setItem("TimePeriod", "Long Term");
-    window.location.href = "./postTitle.html";
+    //localStorage.setItem("TimePeriod", "Long Term");
+    window.location.href = "./postTitle.php";
   } else {
-    localStorage.setItem("TimePeriod", null);
+    //localStorage.setItem("TimePeriod", null);
   }
 });

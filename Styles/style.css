@@ -8053,7 +8053,6 @@ ul {
 }
 
 .postJob-detail {
-  margin-top: 4.5rem;
   width: 100%;
   background: whitesmoke;
   padding: 2.5rem 10rem;
@@ -8391,7 +8390,6 @@ ul {
 }
 
 .postJob-detail-skills {
-  margin-top: 4.5rem;
   width: 100%;
   background: whitesmoke;
   padding: 2.5rem 10rem;
@@ -8772,7 +8770,6 @@ ul {
 }
 
 .postJob-detail-scope {
-  margin-top: 4.5rem;
   width: 100%;
   background: whitesmoke;
   padding: 2.5rem 10rem;
@@ -9346,7 +9343,6 @@ ul {
 }
 
 .postJob-detail-location {
-  margin-top: 4.5rem;
   width: 100%;
   background: whitesmoke;
   padding: 2.5rem 10rem;
@@ -9787,7 +9783,6 @@ ul {
 }
 
 .postJob-detail-budget {
-  margin-top: 4.5rem;
   width: 100%;
   background: whitesmoke;
   padding: 2.5rem 10rem;
@@ -10458,7 +10453,6 @@ ul {
 }
 
 form .reviewJobPost-container {
-  margin-top: 4.5rem;
   width: 100%;
   background: whitesmoke;
   padding: 2.5rem 10rem;
@@ -12617,7 +12611,6 @@ form .budgetOverlay .editBudgetContainer .editBudgetSubmit #applyBudgetEdit {
 
 @media screen and (max-width: 754px) {
   .postJob-detail {
-    margin-top: 3rem;
     width: 100%;
     background: whitesmoke;
     padding: 2.5rem 0rem;
@@ -12806,7 +12799,6 @@ form .budgetOverlay .editBudgetContainer .editBudgetSubmit #applyBudgetEdit {
     pointer-events: none;
   }
   .postJob-detail-skills {
-    margin-top: 3rem;
     width: 100%;
     background: whitesmoke;
     padding: 2.5rem 0rem;
@@ -13115,7 +13107,6 @@ form .budgetOverlay .editBudgetContainer .editBudgetSubmit #applyBudgetEdit {
     font-size: 0.5rem;
   }
   .postJob-detail-scope {
-    margin-top: 3.5rem;
     width: 100%;
     background: whitesmoke;
     padding: 1rem 0rem;
@@ -13627,7 +13618,6 @@ form .budgetOverlay .editBudgetContainer .editBudgetSubmit #applyBudgetEdit {
     padding: 0.2rem;
   }
   .postJob-detail-location {
-    margin-top: 3.5rem;
     width: 100%;
     background: whitesmoke;
     padding: 1rem 0rem;
@@ -14020,7 +14010,6 @@ form .budgetOverlay .editBudgetContainer .editBudgetSubmit #applyBudgetEdit {
     background: #0a345e;
   }
   .postJob-detail-budget {
-    margin-top: 3.5rem;
     width: 100%;
     background: whitesmoke;
     padding: 1rem 0rem;
@@ -14621,7 +14610,6 @@ form .budgetOverlay .editBudgetContainer .editBudgetSubmit #applyBudgetEdit {
     background: #0a345e;
   }
   .reviewJobPost-container {
-    margin-top: 3.5rem;
     width: 100%;
     background: whitesmoke;
     padding: 1rem 0rem;
