@@ -35,15 +35,3 @@ option2.addEventListener("click", () => {
   continueBtn.style.cursor = "pointer";
   choosen = 2;
 });
-
-continueBtn.addEventListener("click", () => {
-  if (choosen === 1) {
-    //localStorage.setItem("TimePeriod", "Short Term");
-    window.location.href = "./postTitle.php";
-  } else if (choosen === 2) {
-    //localStorage.setItem("TimePeriod", "Long Term");
-    window.location.href = "./postTitle.php";
-  } else {
-    //localStorage.setItem("TimePeriod", null);
-  }
-});

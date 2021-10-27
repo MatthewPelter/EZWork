@@ -27,9 +27,10 @@ if (isset($_POST['submit'])) {
         if (!$insertresult) {
             echo "Error Sending Message...";
         }
-    } else {
+        } else {
+            header("Location: ../PostAJob/postSkills.html");
         echo "Please fill in the data";
-    }
+        }
 }
 ?>
 
