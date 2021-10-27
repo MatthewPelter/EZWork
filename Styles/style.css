@@ -8053,6 +8053,7 @@ ul {
 }
 
 .postJob-detail {
+  margin-top: 4.5rem;
   width: 100%;
   background: whitesmoke;
   padding: 2.5rem 10rem;
@@ -8390,6 +8391,7 @@ ul {
 }
 
 .postJob-detail-skills {
+  margin-top: 4.5rem;
   width: 100%;
   background: whitesmoke;
   padding: 2.5rem 10rem;
@@ -8770,6 +8772,7 @@ ul {
 }
 
 .postJob-detail-scope {
+  margin-top: 4.5rem;
   width: 100%;
   background: whitesmoke;
   padding: 2.5rem 10rem;
@@ -9343,6 +9346,7 @@ ul {
 }
 
 .postJob-detail-location {
+  margin-top: 4.5rem;
   width: 100%;
   background: whitesmoke;
   padding: 2.5rem 10rem;
@@ -9783,6 +9787,7 @@ ul {
 }
 
 .postJob-detail-budget {
+  margin-top: 4.5rem;
   width: 100%;
   background: whitesmoke;
   padding: 2.5rem 10rem;
@@ -10453,6 +10458,7 @@ ul {
 }
 
 .reviewJobPost-container {
+  margin-top: 4.5rem;
   width: 100%;
   background: whitesmoke;
   padding: 2.5rem 10rem;
@@ -10759,6 +10765,1856 @@ ul {
   background: #0a345e;
 }
 
+.settingsOverlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.settingsOverlay .editCategoryContainer {
+  position: fixed;
+  top: 20%;
+  left: 25%;
+  background: white;
+  border-radius: 15px;
+  min-width: 50%;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.settingsOverlay .editCategoryContainer .editCategoryHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.5rem 0rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  border-bottom: 0.7px solid lightgrey;
+}
+
+.settingsOverlay .editCategoryContainer .editCategoryHeader h3 {
+  font-size: 1.3rem;
+}
+
+.settingsOverlay .editCategoryContainer .editCategoryHeader i {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #797979;
+}
+
+.settingsOverlay .editCategoryContainer .editCategoryBody {
+  width: 100%;
+}
+
+.settingsOverlay .editCategoryContainer .editCategoryBody h4 {
+  color: black;
+  font-size: 0.9rem;
+  padding: 0.5rem 0rem;
+}
+
+.settingsOverlay .editCategoryContainer .editCategoryBody .accoutingConsultingSpecialtyCard {
+  display: inline-block;
+  width: 100%;
+}
+
+.settingsOverlay .editCategoryContainer .editCategoryBody .adminSupportSpecialtyCard,
+.settingsOverlay .editCategoryContainer .editCategoryBody .customerServiceSpecialtyCard,
+.settingsOverlay .editCategoryContainer .editCategoryBody .dataScienceAnalyticsSpecialtyCard,
+.settingsOverlay .editCategoryContainer .editCategoryBody .designCreativeSpecialtyCard,
+.settingsOverlay .editCategoryContainer .editCategoryBody .engineeringArchitectureSpecialtyCard,
+.settingsOverlay .editCategoryContainer .editCategoryBody .itNetworkSpecialtyCard,
+.settingsOverlay .editCategoryContainer .editCategoryBody .legalSpecialtyCard,
+.settingsOverlay .editCategoryContainer .editCategoryBody .salesMarketingSpecialtyCard,
+.settingsOverlay .editCategoryContainer .editCategoryBody .translationSpecialtyCard,
+.settingsOverlay .editCategoryContainer .editCategoryBody .webMobileDevSpecialtyCard,
+.settingsOverlay .editCategoryContainer .editCategoryBody .writingSpecialtyCard {
+  display: none;
+  width: 100%;
+}
+
+.settingsOverlay .editCategoryContainer .editCategoryBody .adminSupportSpecialtyCard select,
+.settingsOverlay .editCategoryContainer .editCategoryBody .customerServiceSpecialtyCard select,
+.settingsOverlay .editCategoryContainer .editCategoryBody .dataScienceAnalyticsSpecialtyCard select,
+.settingsOverlay .editCategoryContainer .editCategoryBody .designCreativeSpecialtyCard select,
+.settingsOverlay .editCategoryContainer .editCategoryBody .engineeringArchitectureSpecialtyCard select,
+.settingsOverlay .editCategoryContainer .editCategoryBody .itNetworkSpecialtyCard select,
+.settingsOverlay .editCategoryContainer .editCategoryBody .legalSpecialtyCard select,
+.settingsOverlay .editCategoryContainer .editCategoryBody .salesMarketingSpecialtyCard select,
+.settingsOverlay .editCategoryContainer .editCategoryBody .translationSpecialtyCard select,
+.settingsOverlay .editCategoryContainer .editCategoryBody .webMobileDevSpecialtyCard select,
+.settingsOverlay .editCategoryContainer .editCategoryBody .writingSpecialtyCard select {
+  margin: 0.5rem 0rem;
+  width: 60%;
+  border-radius: 10px;
+  border: 0.6px solid lightgrey;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.settingsOverlay .editCategoryContainer .editCategoryBody .adminSupportSpecialtyCard select:hover,
+.settingsOverlay .editCategoryContainer .editCategoryBody .customerServiceSpecialtyCard select:hover,
+.settingsOverlay .editCategoryContainer .editCategoryBody .dataScienceAnalyticsSpecialtyCard select:hover,
+.settingsOverlay .editCategoryContainer .editCategoryBody .designCreativeSpecialtyCard select:hover,
+.settingsOverlay .editCategoryContainer .editCategoryBody .engineeringArchitectureSpecialtyCard select:hover,
+.settingsOverlay .editCategoryContainer .editCategoryBody .itNetworkSpecialtyCard select:hover,
+.settingsOverlay .editCategoryContainer .editCategoryBody .legalSpecialtyCard select:hover,
+.settingsOverlay .editCategoryContainer .editCategoryBody .salesMarketingSpecialtyCard select:hover,
+.settingsOverlay .editCategoryContainer .editCategoryBody .translationSpecialtyCard select:hover,
+.settingsOverlay .editCategoryContainer .editCategoryBody .webMobileDevSpecialtyCard select:hover,
+.settingsOverlay .editCategoryContainer .editCategoryBody .writingSpecialtyCard select:hover {
+  border: 0.6px solid #054e97;
+}
+
+.settingsOverlay .editCategoryContainer .editCategoryBody select {
+  margin: 0.5rem 0rem;
+  width: 60%;
+  border-radius: 10px;
+  border: 0.6px solid lightgrey;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.settingsOverlay .editCategoryContainer .editCategoryBody select:hover {
+  border: 0.6px solid #054e97;
+}
+
+.settingsOverlay .editCategoryContainer .editCategorySubmit {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 0.5rem 0rem;
+}
+
+.settingsOverlay .editCategoryContainer .editCategorySubmit #cancelEdit {
+  color: #0a345e;
+  font-size: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.settingsOverlay .editCategoryContainer .editCategorySubmit #cancelEdit:hover {
+  text-decoration: underline;
+}
+
+.settingsOverlay .editCategoryContainer .editCategorySubmit #applyEdit {
+  margin-left: 1rem;
+  color: white;
+  font-size: 1rem;
+  background: #054e97;
+  padding: 0.5rem 1.25rem;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.skillsOverlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.skillsOverlay .editSkillsContainer {
+  position: fixed;
+  top: 20%;
+  left: 25%;
+  background: white;
+  border-radius: 15px;
+  min-width: 50%;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.skillsOverlay .editSkillsContainer .editSkillsHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.5rem 0rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  border-bottom: 0.7px solid lightgrey;
+}
+
+.skillsOverlay .editSkillsContainer .editSkillsHeader h3 {
+  font-size: 1.3rem;
+}
+
+.skillsOverlay .editSkillsContainer .editSkillsHeader i {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #797979;
+}
+
+.skillsOverlay .editSkillsContainer .editSkillsBody {
+  width: 100%;
+}
+
+.skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section h3 {
+  font-size: 1.3rem;
+  padding: 1rem 0rem;
+}
+
+.skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section h4 {
+  padding: 1rem 0rem;
+  font-size: 1.1rem;
+}
+
+.skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section input {
+  width: 100%;
+  height: 2.5rem;
+  padding: 0.5rem 1rem;
+  outline: none;
+  outline: #0a345e;
+  border: lightgrey 0.7px solid;
+  border-radius: 2px;
+}
+
+.skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section ul {
+  margin-left: 0.5rem;
+  list-style: circle;
+}
+
+.skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section ul li {
+  padding: 0.4rem 0rem;
+  font-size: 0.87rem;
+  font-weight: lighter;
+}
+
+.skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section .skillSearch {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  outline: #0a345e;
+  border: lightgrey 0.7px solid;
+  border-radius: 8px;
+}
+
+.skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section .skillSearch i {
+  cursor: pointer;
+  margin-left: 1rem;
+  color: #797979;
+}
+
+.skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section .skillSearch input {
+  border: none;
+  border-radius: 15px;
+}
+
+.skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section .skillSearch #enterSkill {
+  border: none;
+  color: #054e97;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-right: 1rem;
+  background: transparent;
+}
+
+.skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section #selectedSkillsForm {
+  padding: 0.5rem;
+  border-radius: 15px;
+  border: 0.7px solid lightgrey;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section #selectedSkillsForm label {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 0.8rem;
+  background: #0a345e;
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 15px;
+  border: 0.6px solid gray;
+  cursor: pointer;
+  margin: 0.4rem;
+}
+
+.skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section .selectCategory {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section .selectCategory select {
+  padding: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+}
+
+.skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section select {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+  outline: #0a345e;
+  border: lightgrey 0.7px solid;
+  border-radius: 10px;
+}
+
+.skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section span {
+  margin-left: 0.5rem;
+  color: #054e97;
+}
+
+.skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section .CategorySpecialtyContainer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section .CategorySpecialtyContainer ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section .CategorySpecialtyContainer ul li {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 0.8rem;
+  background: #86dd86;
+  color: white;
+  margin: 0.4rem;
+  padding: 0.4rem 1rem;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section .CategorySpecialtyContainer ul li:hover {
+  background: #71c571;
+}
+
+.skillsOverlay .editSkillsContainer .editSkillsSubmit {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 0.5rem 0rem;
+}
+
+.skillsOverlay .editSkillsContainer .editSkillsSubmit #cancelEdit {
+  color: #0a345e;
+  font-size: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.skillsOverlay .editSkillsContainer .editSkillsSubmit #cancelEdit:hover {
+  text-decoration: underline;
+}
+
+.skillsOverlay .editSkillsContainer .editSkillsSubmit #applySkillEdit {
+  margin-left: 1rem;
+  color: white;
+  font-size: 1rem;
+  background: #054e97;
+  padding: 0.5rem 1.25rem;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.scopeOverlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.scopeOverlay .editScopeContainer {
+  position: fixed;
+  top: 6%;
+  left: 25%;
+  background: white;
+  border-radius: 15px;
+  min-width: 50%;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.scopeOverlay .editScopeContainer .editScopeHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.5rem 0rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  border-bottom: 0.7px solid lightgrey;
+}
+
+.scopeOverlay .editScopeContainer .editScopeHeader h3 {
+  font-size: 1.3rem;
+}
+
+.scopeOverlay .editScopeContainer .editScopeHeader i {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #797979;
+}
+
+.scopeOverlay .editScopeContainer .editScopeBody {
+  width: 100%;
+}
+
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-container {
+  width: 100%;
+  padding: 1rem;
+}
+
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-container .project-size-option {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-container .project-size-option .project-size-option-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-container .project-size-option .project-size-option-title h3 {
+  width: 100%;
+  text-align: start;
+  font-size: 1.1rem;
+}
+
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-container .project-size-option .project-size-option-title i {
+  text-align: end;
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: #797979;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background: transparent;
+  border: 0.7px solid lightgrey;
+}
+
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-container .project-size-option .project-size-option-title i:hover {
+  background: #e2e2e2;
+}
+
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-container .project-size-option span {
+  padding-right: 1.5rem;
+  color: #797979;
+  font-size: 0.8rem;
+}
+
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time {
+  width: 100%;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time h3 {
+  font-size: 1.1rem;
+}
+
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time i {
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: #797979;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background: transparent;
+  border: 0.7px solid lightgrey;
+}
+
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time i:hover {
+  background: #e2e2e2;
+}
+
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience {
+  width: 100%;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience h3 {
+  font-size: 1.1rem;
+}
+
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience i {
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: #797979;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background: transparent;
+  border: 0.7px solid lightgrey;
+}
+
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience i:hover {
+  background: #e2e2e2;
+}
+
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options {
+  display: none;
+  width: 100%;
+}
+
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options span {
+  font-size: 0.9rem;
+  color: #797979;
+}
+
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .entry-option,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .intermediate-option,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .expert-option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .entry-option .option-title,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .intermediate-option .option-title,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .expert-option .option-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .entry-option .option-title h3,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .intermediate-option .option-title h3,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .expert-option .option-title h3 {
+  font-size: 1rem;
+  font-weight: lighter;
+  padding-left: 0.5rem;
+}
+
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .entry-option .option-title i,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .intermediate-option .option-title i,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .expert-option .option-title i {
+  font-size: 0.7rem;
+  color: transparent;
+  padding: 0.1rem;
+  border-radius: 50%;
+  border: 0.5px solid lightgrey;
+}
+
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .entry-option .option-title #entry-button,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .intermediate-option .option-title #entry-button,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .expert-option .option-title #entry-button {
+  color: #054e97;
+}
+
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .entry-option span,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .intermediate-option span,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .expert-option span {
+  font-size: 0.8rem;
+  color: #797979;
+  padding-left: 1.5rem;
+}
+
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .entry-option:hover,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .intermediate-option:hover,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .expert-option:hover {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  background: #eeeeee;
+}
+
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .entry-option:hover i,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .intermediate-option:hover i,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .expert-option:hover i {
+  padding: 0.2rem;
+  font-size: 0.8rem;
+}
+
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options {
+  display: none;
+  width: 100%;
+}
+
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .threeToSixMonths,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .oneToThreeMonths,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .lessThanOneMonth {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .threeToSixMonths .time-title,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .oneToThreeMonths .time-title,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .lessThanOneMonth .time-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .threeToSixMonths .time-title h3,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .oneToThreeMonths .time-title h3,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .lessThanOneMonth .time-title h3 {
+  font-size: 0.9rem;
+  font-weight: lighter;
+  padding-left: 0.5rem;
+}
+
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .threeToSixMonths .time-title i,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .oneToThreeMonths .time-title i,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .lessThanOneMonth .time-title i {
+  font-size: 0.7rem;
+  color: transparent;
+  padding: 0.1rem;
+  border-radius: 50%;
+  border: 0.5px solid lightgrey;
+}
+
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .threeToSixMonths .time-title #lessThanOneMonth-button,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .oneToThreeMonths .time-title #lessThanOneMonth-button,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .lessThanOneMonth .time-title #lessThanOneMonth-button {
+  color: #054e97;
+}
+
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .threeToSixMonths:hover,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .oneToThreeMonths:hover,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .lessThanOneMonth:hover {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  background: #eeeeee;
+}
+
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .threeToSixMonths:hover i,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .oneToThreeMonths:hover i,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .lessThanOneMonth:hover i {
+  font-size: 0.8rem;
+  padding: 0.2rem;
+}
+
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options {
+  width: 100%;
+  display: none;
+}
+
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .large-option,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .medium-option,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .small-option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .large-option .size-option-title,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .medium-option .size-option-title,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .small-option .size-option-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .large-option .size-option-title h3,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .medium-option .size-option-title h3,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .small-option .size-option-title h3 {
+  font-size: 1rem;
+  font-weight: lighter;
+  padding-left: 0.5rem;
+}
+
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .large-option .size-option-title i,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .medium-option .size-option-title i,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .small-option .size-option-title i {
+  font-size: 0.7rem;
+  color: transparent;
+  padding: 0.1rem;
+  border-radius: 50%;
+  border: 0.5px solid lightgrey;
+}
+
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .large-option .size-option-title #small-button,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .medium-option .size-option-title #small-button,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .small-option .size-option-title #small-button {
+  color: #054e97;
+}
+
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .large-option span,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .medium-option span,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .small-option span {
+  font-size: 0.8rem;
+  color: #797979;
+  padding-left: 1.5rem;
+}
+
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .large-option:hover,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .medium-option:hover,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .small-option:hover {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  background: #eeeeee;
+}
+
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .large-option:hover i,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .medium-option:hover i,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .small-option:hover i {
+  font-size: 0.8rem;
+  padding: 0.2rem;
+}
+
+.scopeOverlay .editScopeContainer .editScopeSubmit {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 0.5rem 0rem;
+}
+
+.scopeOverlay .editScopeContainer .editScopeSubmit #cancelEdit {
+  color: #0a345e;
+  font-size: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.scopeOverlay .editScopeContainer .editScopeSubmit #cancelEdit:hover {
+  text-decoration: underline;
+}
+
+.scopeOverlay .editScopeContainer .editScopeSubmit #applyScopeEdit {
+  margin-left: 1rem;
+  color: white;
+  font-size: 1rem;
+  background: #054e97;
+  padding: 0.5rem 1.25rem;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.locationOverlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.locationOverlay .editLocationContainer {
+  position: fixed;
+  top: 2%;
+  left: 17%;
+  background: white;
+  border-radius: 15px;
+  min-width: 50%;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.locationOverlay .editLocationContainer .editLocationHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.5rem 0rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  border-bottom: 0.7px solid lightgrey;
+}
+
+.locationOverlay .editLocationContainer .editLocationHeader h3 {
+  font-size: 1.3rem;
+}
+
+.locationOverlay .editLocationContainer .editLocationHeader i {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #797979;
+}
+
+.locationOverlay .editLocationContainer .editLocationBody {
+  width: 100%;
+}
+
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions #usOnly {
+  border: 1.25px solid #054e97;
+}
+
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions .optionCard {
+  width: 100%;
+  height: 26.5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0.5rem 1rem;
+  border: 1.25px solid lightgrey;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions .optionCard .choosen {
+  padding: 0.5rem 0.5rem 0rem 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+}
+
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions .optionCard .choosen i {
+  font-size: 0.7rem;
+  color: white;
+  padding: 0.2rem;
+  border-radius: 50%;
+  background: white;
+  border: 0.7px solid lightgrey;
+}
+
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions .optionCard .choosen #usOnly-button {
+  color: #054e97;
+  border: 0.7px solid #054e97;
+}
+
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions .optionCard .usOnly,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions .optionCard .worldwide {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+}
+
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions .optionCard .usOnly h4,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions .optionCard .worldwide h4 {
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: lighter;
+  padding: 1rem 0rem;
+}
+
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions .optionCard .usOnly p,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions .optionCard .worldwide p {
+  width: 100%;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #797979;
+}
+
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions .optionCard:hover {
+  background: #f8f6f6;
+}
+
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards {
+  width: 100%;
+}
+
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard {
+  display: none;
+  width: 100%;
+  padding: 1rem;
+}
+
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard h4,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard h4 {
+  font-size: 0.8rem;
+}
+
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard h4 span,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard h4 span {
+  color: #797979;
+}
+
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard .statesPulldown,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard .worldwidePulldown,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard .statesPulldown,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard .worldwidePulldown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 7px;
+  border: none;
+  border: 0.7px solid lightgrey;
+  outline: none;
+  width: 100%;
+  margin: 0.5rem 0rem;
+}
+
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard .statesPulldown input,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard .worldwidePulldown input,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard .statesPulldown input,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard .worldwidePulldown input {
+  outline: none;
+  border: none;
+  width: 100%;
+  margin: 0.3rem 0rem;
+  padding: 0.3rem;
+}
+
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard .statesPulldown #add1,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard .statesPulldown #add2,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard .worldwidePulldown #add1,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard .worldwidePulldown #add2,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard .statesPulldown #add1,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard .statesPulldown #add2,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard .worldwidePulldown #add1,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard .worldwidePulldown #add2 {
+  font-size: 1rem;
+  border: none;
+  background: transparent;
+  color: #054e97;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard span,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard span {
+  color: #797979;
+  font-size: 0.8rem;
+}
+
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsUSCard,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsWorldwideCard {
+  display: none;
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border: lightgrey 0.7px solid;
+  border-radius: 10px;
+}
+
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsUSCard h5,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsWorldwideCard h5 {
+  width: 100%;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  font-weight: lighter;
+}
+
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsUSCard .selectedLocationsUS,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsUSCard .selectedLocationsWorldwide,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsWorldwideCard .selectedLocationsUS,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsWorldwideCard .selectedLocationsWorldwide {
+  margin: 0.5rem 0rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsUSCard .selectedLocationsUS label,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsUSCard .selectedLocationsWorldwide label,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsWorldwideCard .selectedLocationsUS label,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsWorldwideCard .selectedLocationsWorldwide label {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 0.8rem;
+  background: #0a345e;
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  margin: 0.5rem;
+}
+
+.locationOverlay .editLocationContainer .editLocationSubmit {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 0.5rem 0rem;
+}
+
+.locationOverlay .editLocationContainer .editLocationSubmit #cancelEdit {
+  color: #0a345e;
+  font-size: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.locationOverlay .editLocationContainer .editLocationSubmit #cancelEdit:hover {
+  text-decoration: underline;
+}
+
+.locationOverlay .editLocationContainer .editLocationSubmit #applyLocationEdit {
+  margin-left: 1rem;
+  color: white;
+  font-size: 1rem;
+  background: #054e97;
+  padding: 0.5rem 1.25rem;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.budgetOverlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.budgetOverlay .editBudgetContainer {
+  position: fixed;
+  top: 6%;
+  left: 25%;
+  background: white;
+  border-radius: 15px;
+  min-width: 50%;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.5rem 0rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  border-bottom: 0.7px solid lightgrey;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetHeader h3 {
+  font-size: 1.3rem;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetHeader i {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #797979;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetBody {
+  width: 100%;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions {
+  margin-top: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions #hourly {
+  border: 1.25px solid #054e97;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions .optionCard {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem;
+  border: 1.25px solid #797979;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions .optionCard .choosen {
+  padding: 0.5rem 0.5rem 0rem 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions .optionCard .choosen i {
+  font-size: 0.7rem;
+  color: white;
+  padding: 0.2rem;
+  border-radius: 50%;
+  background: white;
+  border: 0.7px solid lightgrey;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions .optionCard .choosen #usOnly-button {
+  color: #054e97;
+  border: 0.7px solid #054e97;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions .optionCard .hourly,
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions .optionCard .budget {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions .optionCard .hourly i,
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions .optionCard .budget i {
+  font-size: 1.5rem;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions .optionCard .hourly h4,
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions .optionCard .budget h4 {
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: lighter;
+  padding: 0.5rem 0rem;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions .optionCard:hover {
+  background: #f8f6f6;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetContainer {
+  width: 100%;
+  display: none;
+  padding: 1rem;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetContainer h4 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetContainer .addBudget {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0rem 0.5rem;
+  border-radius: 8px;
+  border: 1.5px solid lightgrey;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetContainer .addBudget span {
+  font-size: 1.2rem;
+  color: #797979;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetContainer .addBudget input {
+  padding: 0.5rem 0rem;
+  margin-left: 0.5rem;
+  outline: none;
+  border: none;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetContainer .addBudget button {
+  border: none;
+  color: #0a345e;
+  cursor: pointer;
+  background: transparent;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetContainer .addBudget:hover {
+  border-radius: 8px;
+  border: 1.5px solid #0a345e;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetContainer #alertBudget {
+  font-size: 0.9rem;
+  color: #cc0404;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetContainer #alertBudget i {
+  padding-right: 0.5rem;
+  font-size: 1rem;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetContainer #OfficalBudget {
+  display: none;
+  color: #0a345e;
+  margin-top: 1rem;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer {
+  display: none;
+  width: 100%;
+  padding: 1rem;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer #OfficialRate {
+  color: #0a345e;
+  margin: 1rem 0rem;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .minimum {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .minimum #alertMinHourly {
+  font-size: 0.9rem;
+  color: #cc0404;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .minimum #alertMinHourly i {
+  padding-right: 0.5rem;
+  font-size: 1rem;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .minimum p {
+  width: 100%;
+  text-align: left;
+  font-size: 1.2rem;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .minimum span {
+  padding-left: 0.5rem;
+  font-size: 1rem;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .minimum .addMinHourly {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .minimum .addMinHourly .inputContainer {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0rem 0.5rem;
+  border-radius: 8px;
+  border: 1.5px solid lightgrey;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .minimum .addMinHourly .inputContainer input {
+  padding: 0.3rem 0rem;
+  border: none;
+  outline: none;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .minimum .addMinHourly .inputContainer button {
+  border: none;
+  font-size: 1rem;
+  background: transparent;
+  cursor: pointer;
+  color: #054e97;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .minimum .addMinHourly .inputContainer span {
+  padding-right: 0.5rem;
+  font-size: 1.2rem;
+  color: #797979;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .maximum {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .maximum #MaxError {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  color: #cc0404;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .maximum #MaxError i {
+  padding-right: 0.5rem;
+  font-size: 1rem;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .maximum p {
+  width: 100%;
+  text-align: left;
+  font-size: 1.2rem;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .maximum span {
+  font-size: 1rem;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .maximum .addMaxHourly {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .maximum .addMaxHourly .inputContainer {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0rem 0.5rem;
+  border-radius: 8px;
+  border: 1.5px solid lightgrey;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .maximum .addMaxHourly .inputContainer input {
+  padding: 0.3rem 0rem;
+  border: none;
+  outline: none;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .maximum .addMaxHourly .inputContainer button {
+  border: none;
+  font-size: 1rem;
+  background: transparent;
+  cursor: pointer;
+  color: #054e97;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .maximum .addMaxHourly .inputContainer span {
+  padding-right: 0.5rem;
+  font-size: 1.2rem;
+  color: #797979;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetSubmit {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 0.5rem 0rem;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetSubmit #cancelEdit {
+  color: #0a345e;
+  font-size: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetSubmit #cancelEdit:hover {
+  text-decoration: underline;
+}
+
+.budgetOverlay .editBudgetContainer .editBudgetSubmit #applyBudgetEdit {
+  margin-left: 1rem;
+  color: white;
+  font-size: 1rem;
+  background: #054e97;
+  padding: 0.5rem 1.25rem;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 754px) {
   .postJob-detail {
     margin-top: 3rem;
@@ -10950,6 +12806,7 @@ ul {
     pointer-events: none;
   }
   .postJob-detail-skills {
+    margin-top: 3rem;
     width: 100%;
     background: whitesmoke;
     padding: 2.5rem 0rem;
@@ -11258,6 +13115,7 @@ ul {
     font-size: 0.5rem;
   }
   .postJob-detail-scope {
+    margin-top: 3.5rem;
     width: 100%;
     background: whitesmoke;
     padding: 1rem 0rem;
@@ -11769,6 +13627,7 @@ ul {
     padding: 0.2rem;
   }
   .postJob-detail-location {
+    margin-top: 3.5rem;
     width: 100%;
     background: whitesmoke;
     padding: 1rem 0rem;
@@ -12161,6 +14020,7 @@ ul {
     background: #0a345e;
   }
   .postJob-detail-budget {
+    margin-top: 3.5rem;
     width: 100%;
     background: whitesmoke;
     padding: 1rem 0rem;
@@ -12761,6 +14621,7 @@ ul {
     background: #0a345e;
   }
   .reviewJobPost-container {
+    margin-top: 3.5rem;
     width: 100%;
     background: whitesmoke;
     padding: 1rem 0rem;
@@ -13000,6 +14861,1668 @@ ul {
   }
   .reviewJobPost-container .buttonCard .continue #postJob:hover {
     background: #0a345e;
+  }
+  .settingsOverlay {
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: black;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  .settingsOverlay .editCategoryContainer {
+    position: fixed;
+    top: 20%;
+    left: 0;
+    background: white;
+    border-radius: 0;
+    min-width: 100%;
+    padding: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .settingsOverlay .editCategoryContainer .editCategoryHeader {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0.5rem 0rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    border-bottom: 0.7px solid lightgrey;
+  }
+  .settingsOverlay .editCategoryContainer .editCategoryHeader h3 {
+    font-size: 1.3rem;
+  }
+  .settingsOverlay .editCategoryContainer .editCategoryHeader i {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #797979;
+  }
+  .settingsOverlay .editCategoryContainer .editCategoryBody {
+    width: 100%;
+  }
+  .settingsOverlay .editCategoryContainer .editCategoryBody h4 {
+    color: black;
+    font-size: 0.9rem;
+    padding: 0.5rem 0rem;
+  }
+  .settingsOverlay .editCategoryContainer .editCategoryBody .accoutingConsultingSpecialtyCard {
+    display: inline-block;
+    width: 100%;
+  }
+  .settingsOverlay .editCategoryContainer .editCategoryBody .adminSupportSpecialtyCard,
+  .settingsOverlay .editCategoryContainer .editCategoryBody .customerServiceSpecialtyCard,
+  .settingsOverlay .editCategoryContainer .editCategoryBody .dataScienceAnalyticsSpecialtyCard,
+  .settingsOverlay .editCategoryContainer .editCategoryBody .designCreativeSpecialtyCard,
+  .settingsOverlay .editCategoryContainer .editCategoryBody .engineeringArchitectureSpecialtyCard,
+  .settingsOverlay .editCategoryContainer .editCategoryBody .itNetworkSpecialtyCard,
+  .settingsOverlay .editCategoryContainer .editCategoryBody .legalSpecialtyCard,
+  .settingsOverlay .editCategoryContainer .editCategoryBody .salesMarketingSpecialtyCard,
+  .settingsOverlay .editCategoryContainer .editCategoryBody .translationSpecialtyCard,
+  .settingsOverlay .editCategoryContainer .editCategoryBody .webMobileDevSpecialtyCard,
+  .settingsOverlay .editCategoryContainer .editCategoryBody .writingSpecialtyCard {
+    display: none;
+    width: 100%;
+  }
+  .settingsOverlay .editCategoryContainer .editCategoryBody .adminSupportSpecialtyCard select,
+  .settingsOverlay .editCategoryContainer .editCategoryBody .customerServiceSpecialtyCard select,
+  .settingsOverlay .editCategoryContainer .editCategoryBody .dataScienceAnalyticsSpecialtyCard select,
+  .settingsOverlay .editCategoryContainer .editCategoryBody .designCreativeSpecialtyCard select,
+  .settingsOverlay .editCategoryContainer .editCategoryBody .engineeringArchitectureSpecialtyCard select,
+  .settingsOverlay .editCategoryContainer .editCategoryBody .itNetworkSpecialtyCard select,
+  .settingsOverlay .editCategoryContainer .editCategoryBody .legalSpecialtyCard select,
+  .settingsOverlay .editCategoryContainer .editCategoryBody .salesMarketingSpecialtyCard select,
+  .settingsOverlay .editCategoryContainer .editCategoryBody .translationSpecialtyCard select,
+  .settingsOverlay .editCategoryContainer .editCategoryBody .webMobileDevSpecialtyCard select,
+  .settingsOverlay .editCategoryContainer .editCategoryBody .writingSpecialtyCard select {
+    margin: 0.5rem 0rem;
+    width: 60%;
+    border-radius: 10px;
+    border: 0.6px solid lightgrey;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+  .settingsOverlay .editCategoryContainer .editCategoryBody .adminSupportSpecialtyCard select:hover,
+  .settingsOverlay .editCategoryContainer .editCategoryBody .customerServiceSpecialtyCard select:hover,
+  .settingsOverlay .editCategoryContainer .editCategoryBody .dataScienceAnalyticsSpecialtyCard select:hover,
+  .settingsOverlay .editCategoryContainer .editCategoryBody .designCreativeSpecialtyCard select:hover,
+  .settingsOverlay .editCategoryContainer .editCategoryBody .engineeringArchitectureSpecialtyCard select:hover,
+  .settingsOverlay .editCategoryContainer .editCategoryBody .itNetworkSpecialtyCard select:hover,
+  .settingsOverlay .editCategoryContainer .editCategoryBody .legalSpecialtyCard select:hover,
+  .settingsOverlay .editCategoryContainer .editCategoryBody .salesMarketingSpecialtyCard select:hover,
+  .settingsOverlay .editCategoryContainer .editCategoryBody .translationSpecialtyCard select:hover,
+  .settingsOverlay .editCategoryContainer .editCategoryBody .webMobileDevSpecialtyCard select:hover,
+  .settingsOverlay .editCategoryContainer .editCategoryBody .writingSpecialtyCard select:hover {
+    border: 0.6px solid #054e97;
+  }
+  .settingsOverlay .editCategoryContainer .editCategoryBody select {
+    margin: 0.5rem 0rem;
+    width: 60%;
+    border-radius: 10px;
+    border: 0.6px solid lightgrey;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+  .settingsOverlay .editCategoryContainer .editCategoryBody select:hover {
+    border: 0.6px solid #054e97;
+  }
+  .settingsOverlay .editCategoryContainer .editCategorySubmit {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding: 0.5rem 0rem;
+  }
+  .settingsOverlay .editCategoryContainer .editCategorySubmit #cancelEdit {
+    color: #0a345e;
+    font-size: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  .settingsOverlay .editCategoryContainer .editCategorySubmit #cancelEdit:hover {
+    text-decoration: underline;
+  }
+  .settingsOverlay .editCategoryContainer .editCategorySubmit #applyEdit {
+    margin-left: 1rem;
+    color: white;
+    font-size: 1rem;
+    background: #054e97;
+    padding: 0.5rem 1.25rem;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+  }
+  .skillsOverlay {
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: black;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  .skillsOverlay .editSkillsContainer {
+    position: fixed;
+    top: 10%;
+    left: 0;
+    background: white;
+    border-radius: 0;
+    min-width: 100%;
+    padding: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .skillsOverlay .editSkillsContainer .editSkillsHeader {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0.5rem 0rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    border-bottom: 0.7px solid lightgrey;
+  }
+  .skillsOverlay .editSkillsContainer .editSkillsHeader h3 {
+    font-size: 1.3rem;
+  }
+  .skillsOverlay .editSkillsContainer .editSkillsHeader i {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #797979;
+  }
+  .skillsOverlay .editSkillsContainer .editSkillsBody {
+    width: 100%;
+  }
+  .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    background: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section h3 {
+    font-size: 1.3rem;
+    padding: 1rem 0rem;
+  }
+  .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section h4 {
+    padding: 1rem 0rem;
+    font-size: 1.1rem;
+  }
+  .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section input {
+    width: 100%;
+    height: 2.5rem;
+    padding: 0.5rem 1rem;
+    outline: none;
+    outline: #0a345e;
+    border: lightgrey 0.7px solid;
+    border-radius: 2px;
+  }
+  .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section ul {
+    margin-left: 0.5rem;
+    list-style: circle;
+  }
+  .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section ul li {
+    padding: 0.4rem 0rem;
+    font-size: 0.87rem;
+    font-weight: lighter;
+  }
+  .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section .skillSearch {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    outline: #0a345e;
+    border: lightgrey 0.7px solid;
+    border-radius: 8px;
+  }
+  .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section .skillSearch i {
+    cursor: pointer;
+    margin-left: 1rem;
+    color: #797979;
+  }
+  .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section .skillSearch input {
+    border: none;
+    border-radius: 15px;
+  }
+  .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section .skillSearch #enterSkill {
+    border: none;
+    color: #054e97;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-right: 1rem;
+    background: transparent;
+  }
+  .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section #selectedSkillsForm {
+    padding: 0.5rem;
+    border-radius: 15px;
+    border: 0.7px solid lightgrey;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section #selectedSkillsForm label {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 0.8rem;
+    background: #0a345e;
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 15px;
+    border: 0.6px solid gray;
+    cursor: pointer;
+    margin: 0.4rem;
+  }
+  .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section .selectCategory {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section .selectCategory select {
+    padding: 0;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    border: none;
+  }
+  .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section select {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background: transparent;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+    outline: #0a345e;
+    border: lightgrey 0.7px solid;
+    border-radius: 10px;
+  }
+  .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section span {
+    margin-left: 0.5rem;
+    color: #054e97;
+  }
+  .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section .CategorySpecialtyContainer {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section .CategorySpecialtyContainer ul {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section .CategorySpecialtyContainer ul li {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 0.8rem;
+    background: #86dd86;
+    color: white;
+    margin: 0.4rem;
+    padding: 0.4rem 1rem;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+  }
+  .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section .CategorySpecialtyContainer ul li:hover {
+    background: #71c571;
+  }
+  .skillsOverlay .editSkillsContainer .editSkillsSubmit {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding: 0.5rem 0rem;
+  }
+  .skillsOverlay .editSkillsContainer .editSkillsSubmit #cancelEdit {
+    color: #0a345e;
+    font-size: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  .skillsOverlay .editSkillsContainer .editSkillsSubmit #cancelEdit:hover {
+    text-decoration: underline;
+  }
+  .skillsOverlay .editSkillsContainer .editSkillsSubmit #applySkillEdit {
+    margin-left: 1rem;
+    color: white;
+    font-size: 1rem;
+    background: #054e97;
+    padding: 0.5rem 1.25rem;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+  }
+  .scopeOverlay {
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: black;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  .scopeOverlay .editScopeContainer {
+    position: fixed;
+    top: 6%;
+    left: 0;
+    background: white;
+    border-radius: 0;
+    min-width: 100%;
+    padding: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .scopeOverlay .editScopeContainer .editScopeHeader {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0.5rem 0rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    border-bottom: 0.7px solid lightgrey;
+  }
+  .scopeOverlay .editScopeContainer .editScopeHeader h3 {
+    font-size: 1.3rem;
+  }
+  .scopeOverlay .editScopeContainer .editScopeHeader i {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #797979;
+  }
+  .scopeOverlay .editScopeContainer .editScopeBody {
+    width: 100%;
+  }
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    background: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-container {
+    width: 100%;
+    padding: 1rem;
+  }
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-container .project-size-option {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-container .project-size-option .project-size-option-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-container .project-size-option .project-size-option-title h3 {
+    width: 100%;
+    text-align: start;
+    font-size: 1.1rem;
+  }
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-container .project-size-option .project-size-option-title i {
+    text-align: end;
+    cursor: pointer;
+    font-size: 0.8rem;
+    color: #797979;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background: transparent;
+    border: 0.7px solid lightgrey;
+  }
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-container .project-size-option .project-size-option-title i:hover {
+    background: #e2e2e2;
+  }
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-container .project-size-option span {
+    padding-right: 1.5rem;
+    color: #797979;
+    font-size: 0.8rem;
+  }
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time {
+    width: 100%;
+    padding: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time h3 {
+    font-size: 1.1rem;
+  }
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time i {
+    cursor: pointer;
+    font-size: 0.8rem;
+    color: #797979;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background: transparent;
+    border: 0.7px solid lightgrey;
+  }
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time i:hover {
+    background: #e2e2e2;
+  }
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience {
+    width: 100%;
+    padding: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience h3 {
+    font-size: 1.1rem;
+  }
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience i {
+    cursor: pointer;
+    font-size: 0.8rem;
+    color: #797979;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background: transparent;
+    border: 0.7px solid lightgrey;
+  }
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience i:hover {
+    background: #e2e2e2;
+  }
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options {
+    display: none;
+    width: 100%;
+  }
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options span {
+    font-size: 0.9rem;
+    color: #797979;
+  }
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .entry-option,
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .intermediate-option,
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .expert-option {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 5px;
+  }
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .entry-option .option-title,
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .intermediate-option .option-title,
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .expert-option .option-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .entry-option .option-title h3,
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .intermediate-option .option-title h3,
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .expert-option .option-title h3 {
+    font-size: 1rem;
+    font-weight: lighter;
+    padding-left: 0.5rem;
+  }
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .entry-option .option-title i,
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .intermediate-option .option-title i,
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .expert-option .option-title i {
+    font-size: 0.7rem;
+    color: transparent;
+    padding: 0.1rem;
+    border-radius: 50%;
+    border: 0.5px solid lightgrey;
+  }
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .entry-option .option-title #entry-button,
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .intermediate-option .option-title #entry-button,
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .expert-option .option-title #entry-button {
+    color: #054e97;
+  }
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .entry-option span,
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .intermediate-option span,
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .expert-option span {
+    font-size: 0.8rem;
+    color: #797979;
+    padding-left: 1.5rem;
+  }
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .entry-option:hover,
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .intermediate-option:hover,
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .expert-option:hover {
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+    background: #eeeeee;
+  }
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .entry-option:hover i,
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .intermediate-option:hover i,
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .expert-option:hover i {
+    padding: 0.2rem;
+    font-size: 0.8rem;
+  }
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options {
+    display: none;
+    width: 100%;
+  }
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .threeToSixMonths,
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .oneToThreeMonths,
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .lessThanOneMonth {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 5px;
+  }
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .threeToSixMonths .time-title,
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .oneToThreeMonths .time-title,
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .lessThanOneMonth .time-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .threeToSixMonths .time-title h3,
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .oneToThreeMonths .time-title h3,
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .lessThanOneMonth .time-title h3 {
+    font-size: 0.9rem;
+    font-weight: lighter;
+    padding-left: 0.5rem;
+  }
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .threeToSixMonths .time-title i,
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .oneToThreeMonths .time-title i,
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .lessThanOneMonth .time-title i {
+    font-size: 0.7rem;
+    color: transparent;
+    padding: 0.1rem;
+    border-radius: 50%;
+    border: 0.5px solid lightgrey;
+  }
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .threeToSixMonths .time-title #lessThanOneMonth-button,
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .oneToThreeMonths .time-title #lessThanOneMonth-button,
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .lessThanOneMonth .time-title #lessThanOneMonth-button {
+    color: #054e97;
+  }
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .threeToSixMonths:hover,
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .oneToThreeMonths:hover,
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .lessThanOneMonth:hover {
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+    background: #eeeeee;
+  }
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .threeToSixMonths:hover i,
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .oneToThreeMonths:hover i,
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .lessThanOneMonth:hover i {
+    font-size: 0.8rem;
+    padding: 0.2rem;
+  }
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options {
+    width: 100%;
+    display: none;
+  }
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .large-option,
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .medium-option,
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .small-option {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 5px;
+  }
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .large-option .size-option-title,
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .medium-option .size-option-title,
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .small-option .size-option-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .large-option .size-option-title h3,
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .medium-option .size-option-title h3,
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .small-option .size-option-title h3 {
+    font-size: 1rem;
+    font-weight: lighter;
+    padding-left: 0.5rem;
+  }
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .large-option .size-option-title i,
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .medium-option .size-option-title i,
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .small-option .size-option-title i {
+    font-size: 0.7rem;
+    color: transparent;
+    padding: 0.1rem;
+    border-radius: 50%;
+    border: 0.5px solid lightgrey;
+  }
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .large-option .size-option-title #small-button,
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .medium-option .size-option-title #small-button,
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .small-option .size-option-title #small-button {
+    color: #054e97;
+  }
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .large-option span,
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .medium-option span,
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .small-option span {
+    font-size: 0.8rem;
+    color: #797979;
+    padding-left: 1.5rem;
+  }
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .large-option:hover,
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .medium-option:hover,
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .small-option:hover {
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+    background: #eeeeee;
+  }
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .large-option:hover i,
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .medium-option:hover i,
+  .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .small-option:hover i {
+    font-size: 0.8rem;
+    padding: 0.2rem;
+  }
+  .scopeOverlay .editScopeContainer .editScopeSubmit {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding: 0.5rem 0rem;
+  }
+  .scopeOverlay .editScopeContainer .editScopeSubmit #cancelEdit {
+    color: #0a345e;
+    font-size: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  .scopeOverlay .editScopeContainer .editScopeSubmit #cancelEdit:hover {
+    text-decoration: underline;
+  }
+  .scopeOverlay .editScopeContainer .editScopeSubmit #applyScopeEdit {
+    margin-left: 1rem;
+    color: white;
+    font-size: 1rem;
+    background: #054e97;
+    padding: 0.5rem 1.25rem;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+  }
+  .locationOverlay {
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: black;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  .locationOverlay .editLocationContainer {
+    position: fixed;
+    top: 3%;
+    left: 0;
+    background: white;
+    border-radius: 0;
+    min-width: 100%;
+    padding: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .locationOverlay .editLocationContainer .editLocationHeader {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0.5rem 0rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    border-bottom: 0.7px solid lightgrey;
+  }
+  .locationOverlay .editLocationContainer .editLocationHeader h3 {
+    font-size: 1.3rem;
+  }
+  .locationOverlay .editLocationContainer .editLocationHeader i {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #797979;
+  }
+  .locationOverlay .editLocationContainer .editLocationBody {
+    width: 100%;
+  }
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    background: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions #usOnly {
+    border: 1.25px solid #054e97;
+  }
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions .optionCard {
+    width: 100%;
+    height: 26.5vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0.5rem 1rem;
+    border: 1.25px solid lightgrey;
+    border-radius: 9px;
+    cursor: pointer;
+  }
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions .optionCard .choosen {
+    padding: 0.5rem 0.5rem 0rem 0rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 100%;
+  }
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions .optionCard .choosen i {
+    font-size: 0.7rem;
+    color: white;
+    padding: 0.2rem;
+    border-radius: 50%;
+    background: white;
+    border: 0.7px solid lightgrey;
+  }
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions .optionCard .choosen #usOnly-button {
+    color: #054e97;
+    border: 0.7px solid #054e97;
+  }
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions .optionCard .usOnly,
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions .optionCard .worldwide {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 1rem;
+  }
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions .optionCard .usOnly h4,
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions .optionCard .worldwide h4 {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: lighter;
+    padding: 1rem 0rem;
+  }
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions .optionCard .usOnly p,
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions .optionCard .worldwide p {
+    width: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #797979;
+  }
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions .optionCard:hover {
+    background: #f8f6f6;
+  }
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards {
+    width: 100%;
+  }
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard,
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard {
+    display: none;
+    width: 100%;
+    padding: 1rem;
+  }
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard h4,
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard h4 {
+    font-size: 0.8rem;
+  }
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard h4 span,
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard h4 span {
+    color: #797979;
+  }
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard .statesPulldown,
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard .worldwidePulldown,
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard .statesPulldown,
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard .worldwidePulldown {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 7px;
+    border: none;
+    border: 0.7px solid lightgrey;
+    outline: none;
+    width: 100%;
+    margin: 0.5rem 0rem;
+  }
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard .statesPulldown input,
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard .worldwidePulldown input,
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard .statesPulldown input,
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard .worldwidePulldown input {
+    outline: none;
+    border: none;
+    width: 100%;
+    margin: 0.3rem 0rem;
+    padding: 0.3rem;
+  }
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard .statesPulldown #add1,
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard .statesPulldown #add2,
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard .worldwidePulldown #add1,
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard .worldwidePulldown #add2,
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard .statesPulldown #add1,
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard .statesPulldown #add2,
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard .worldwidePulldown #add1,
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard .worldwidePulldown #add2 {
+    font-size: 1rem;
+    border: none;
+    background: transparent;
+    color: #054e97;
+    cursor: pointer;
+    margin-right: 0.5rem;
+  }
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard span,
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard span {
+    color: #797979;
+    font-size: 0.8rem;
+  }
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsUSCard,
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsWorldwideCard {
+    display: none;
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border: lightgrey 0.7px solid;
+    border-radius: 10px;
+  }
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsUSCard h5,
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsWorldwideCard h5 {
+    width: 100%;
+    font-size: 0.9rem;
+    text-decoration: underline;
+    font-weight: lighter;
+  }
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsUSCard .selectedLocationsUS,
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsUSCard .selectedLocationsWorldwide,
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsWorldwideCard .selectedLocationsUS,
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsWorldwideCard .selectedLocationsWorldwide {
+    margin: 0.5rem 0rem;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsUSCard .selectedLocationsUS label,
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsUSCard .selectedLocationsWorldwide label,
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsWorldwideCard .selectedLocationsUS label,
+  .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsWorldwideCard .selectedLocationsWorldwide label {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 0.8rem;
+    background: #0a345e;
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    margin: 0.5rem;
+  }
+  .locationOverlay .editLocationContainer .editLocationSubmit {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding: 0.5rem 0rem;
+  }
+  .locationOverlay .editLocationContainer .editLocationSubmit #cancelEdit {
+    color: #0a345e;
+    font-size: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  .locationOverlay .editLocationContainer .editLocationSubmit #cancelEdit:hover {
+    text-decoration: underline;
+  }
+  .locationOverlay .editLocationContainer .editLocationSubmit #applyLocationEdit {
+    margin-left: 1rem;
+    color: white;
+    font-size: 1rem;
+    background: #054e97;
+    padding: 0.5rem 1.25rem;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+  }
+  .budgetOverlay {
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: black;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  .budgetOverlay .editBudgetContainer {
+    position: fixed;
+    top: 5%;
+    left: 0;
+    background: white;
+    border-radius: 0;
+    min-width: 100%;
+    padding: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetHeader {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0.5rem 0rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    border-bottom: 0.7px solid lightgrey;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetHeader h3 {
+    font-size: 1.3rem;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetHeader i {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #797979;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetBody {
+    width: 100%;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    background: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions {
+    margin-top: 3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions #hourly {
+    border: 1.25px solid #054e97;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions .optionCard {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 1rem;
+    border: 1.25px solid #797979;
+    border-radius: 9px;
+    cursor: pointer;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions .optionCard .choosen {
+    padding: 0.5rem 0.5rem 0rem 0rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 100%;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions .optionCard .choosen i {
+    font-size: 0.7rem;
+    color: white;
+    padding: 0.2rem;
+    border-radius: 50%;
+    background: white;
+    border: 0.7px solid lightgrey;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions .optionCard .choosen #usOnly-button {
+    color: #054e97;
+    border: 0.7px solid #054e97;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions .optionCard .hourly,
+  .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions .optionCard .budget {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0.5rem 1rem;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions .optionCard .hourly i,
+  .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions .optionCard .budget i {
+    font-size: 1.5rem;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions .optionCard .hourly h4,
+  .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions .optionCard .budget h4 {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: lighter;
+    padding: 0.5rem 0rem;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions .optionCard:hover {
+    background: #f8f6f6;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetContainer {
+    width: 100%;
+    display: none;
+    padding: 1rem;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetContainer h4 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetContainer .addBudget {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 0rem 0.5rem;
+    border-radius: 8px;
+    border: 1.5px solid lightgrey;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetContainer .addBudget span {
+    font-size: 1.2rem;
+    color: #797979;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetContainer .addBudget input {
+    padding: 0.5rem 0rem;
+    margin-left: 0.5rem;
+    outline: none;
+    border: none;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetContainer .addBudget button {
+    border: none;
+    color: #0a345e;
+    cursor: pointer;
+    background: transparent;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetContainer .addBudget:hover {
+    border-radius: 8px;
+    border: 1.5px solid #0a345e;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetContainer #alertBudget {
+    font-size: 0.9rem;
+    color: #cc0404;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetContainer #alertBudget i {
+    padding-right: 0.5rem;
+    font-size: 1rem;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetContainer #OfficalBudget {
+    display: none;
+    color: #0a345e;
+    margin-top: 1rem;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer {
+    display: none;
+    width: 100%;
+    padding: 1rem;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer #OfficialRate {
+    color: #0a345e;
+    margin: 1rem 0rem;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .minimum {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .minimum #alertMinHourly {
+    font-size: 0.9rem;
+    color: #cc0404;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .minimum #alertMinHourly i {
+    padding-right: 0.5rem;
+    font-size: 1rem;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .minimum p {
+    width: 100%;
+    text-align: left;
+    font-size: 1.2rem;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .minimum span {
+    padding-left: 0.5rem;
+    font-size: 1rem;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .minimum .addMinHourly {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .minimum .addMinHourly .inputContainer {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 0rem 0.5rem;
+    border-radius: 8px;
+    border: 1.5px solid lightgrey;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .minimum .addMinHourly .inputContainer input {
+    padding: 0.3rem 0rem;
+    border: none;
+    outline: none;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .minimum .addMinHourly .inputContainer button {
+    border: none;
+    font-size: 1rem;
+    background: transparent;
+    cursor: pointer;
+    color: #054e97;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .minimum .addMinHourly .inputContainer span {
+    padding-right: 0.5rem;
+    font-size: 1.2rem;
+    color: #797979;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .maximum {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .maximum #MaxError {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    color: #cc0404;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .maximum #MaxError i {
+    padding-right: 0.5rem;
+    font-size: 1rem;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .maximum p {
+    width: 100%;
+    text-align: left;
+    font-size: 1.2rem;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .maximum span {
+    font-size: 1rem;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .maximum .addMaxHourly {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .maximum .addMaxHourly .inputContainer {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 0rem 0.5rem;
+    border-radius: 8px;
+    border: 1.5px solid lightgrey;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .maximum .addMaxHourly .inputContainer input {
+    padding: 0.3rem 0rem;
+    border: none;
+    outline: none;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .maximum .addMaxHourly .inputContainer button {
+    border: none;
+    font-size: 1rem;
+    background: transparent;
+    cursor: pointer;
+    color: #054e97;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .maximum .addMaxHourly .inputContainer span {
+    padding-right: 0.5rem;
+    font-size: 1.2rem;
+    color: #797979;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetSubmit {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding: 0.5rem 0rem;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetSubmit #cancelEdit {
+    color: #0a345e;
+    font-size: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetSubmit #cancelEdit:hover {
+    text-decoration: underline;
+  }
+  .budgetOverlay .editBudgetContainer .editBudgetSubmit #applyBudgetEdit {
+    margin-left: 1rem;
+    color: white;
+    font-size: 1rem;
+    background: #054e97;
+    padding: 0.5rem 1.25rem;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
   }
 }
 
