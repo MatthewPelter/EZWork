@@ -31,7 +31,7 @@ require_once("../classes/DB.php");
         <?php include '../navbar.php'; ?>
         <!-- END NAVBAR -->
 
-    <form action="#/"  method="post" name="postJob">
+    <form method="post" name="postJob">
         <div class="reviewJobPost-container">
             <div class="reviewJobPost_title">
                 <h3>Now just finish and review your job post.</h3>
@@ -49,10 +49,10 @@ require_once("../classes/DB.php");
                 <h4>Job Description</h4>
                 <span>This is how freelancers figures out what you need and why you’re great to work with!</span>
                 <span>Include your expectations about the task or deliverable, what you’re looking for in a work relationship, and anything unique about your project.</span>
-                <textarea required minlength="15" maxlength="5000" id="jobDescription" placeholder="Already have a job description? Paste it here!"></textarea>
+                <textarea required name="description" minlength="15" maxlength="5000" id="jobDescription" placeholder="Already have a job description? Paste it here!"></textarea>
                 <p><span id="wordCount">0</span> total words.</p>
                 <span id="descriptionError"><i class="fa fa-exclamation-circle "></i>Please enter at least 15 words.</span>
-                <input type="file" id="file">
+                <input type="file" id="file" name="image">
                 <span>Max file size: 100MB</span>
             </div>
             <div class="reviewJobDetails">
@@ -467,55 +467,11 @@ require_once("../classes/DB.php");
             </div>
         </div>
     </form>
+    
+           <!-- NAV BAR -->
+           <?php include '../footer.php'; ?>
+           <!-- END NAVBAR -->
 
-    <
-    <div class="profileFooter">
-        <div class="profile-links">
-            <div class="links">
-                <ul>
-                    <a href="./PostAJob.html">Post a Job</a>
-                    <a href="#/">Find Talent</a>
-                    <a href="#/">Browse Projects</a>
-                </ul>
-            </div>
-            <div class="links">
-                <ul>
-                    <a href="#/">About Us</a>
-                    <a href="#/">Developers</a>
-                    <a href="#/">Contact Us</a>
-                </ul>
-            </div>
-            <div class="links">
-                <ul>
-                    <a href="#/">Help & Support</a>
-                    <a href="#/">EZWork Reviews</a>
-                    <a href="#/">Trust & Security</a>
-                </ul>
-            </div>
-            <div class="links">
-                <ul>
-                    <a href="#/">Terms of Service</a>
-                    <a href="#/">Privacy Policy</a>
-                    <a href="#/">Accessibility</a>
-                </ul>
-            </div>
-        </div>
-        <div class="profile-social-links">
-            <p>Follow Us</p>
-            <a href="https://github.com/leobarrientos02/" target="_blank" rel="noopener noreferrer"><i class="fa fa-github" aria-hidden="true"></i></a>
-            <a href="https://twitter.com/L3O_BARRI3nT0S" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-            <a href="https://www.linkedin.com/in/leonel-barrientos-519b5a152/" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-            <a href="https://www.youtube.com/channel/UCnLwo3-caCdv6eOjGzJ0eEg" target="_blank" rel="noopener noreferrer"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
-            <a href="https://www.instagram.com/leo_barrientos182/" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-        </div>
-        <div class="copyright">
-            <p>
-                &copy Copyright. 2021-
-                <script>document.write(new Date().getFullYear())</script>
-                EzWork&trade; Global Inc.
-            </p>
-        </div>
-    </div>
                 <!--DataList-->
                 <datalist id="allskills">
                 </datalist>
@@ -1002,5 +958,7 @@ async function toggleJobCard(){
 </script>
 
 <script src="./reviewJob.js"></script>
+
+
 
 </html>
