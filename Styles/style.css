@@ -10452,13 +10452,13 @@ ul {
   background: #0a345e;
 }
 
-form .reviewJobPost-container {
+.reviewJobPost-container {
   width: 100%;
   background: whitesmoke;
   padding: 2.5rem 10rem;
 }
 
-form .reviewJobPost-container .reviewJobPost_title {
+.reviewJobPost-container .reviewJobPost_title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10479,12 +10479,12 @@ form .reviewJobPost-container .reviewJobPost_title {
   padding: 2rem;
 }
 
-form .reviewJobPost-container .reviewJobPost_title h3 {
+.reviewJobPost-container .reviewJobPost_title h3 {
   font-size: 2rem;
   color: #0a345e;
 }
 
-form .reviewJobPost-container .reviewJobPost_title #postJobNow {
+.reviewJobPost-container .reviewJobPost_title #postJobNow {
   margin-left: 1rem;
   color: #0a345e;
   font-size: 1rem;
@@ -10497,11 +10497,11 @@ form .reviewJobPost-container .reviewJobPost_title #postJobNow {
   pointer-events: none;
 }
 
-form .reviewJobPost-container .reviewJobPost_title #postJobNow:hover {
+.reviewJobPost-container .reviewJobPost_title #postJobNow:hover {
   background: #0a345e;
 }
 
-form .reviewJobPost-container .review_jobTitle {
+.reviewJobPost-container .review_jobTitle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10514,12 +10514,12 @@ form .reviewJobPost-container .review_jobTitle {
   border-right: 1.25px solid #b9b3b3;
 }
 
-form .reviewJobPost-container .review_jobTitle h4 {
+.reviewJobPost-container .review_jobTitle h4 {
   font-size: 1.2rem;
   color: #0a345e;
 }
 
-form .reviewJobPost-container .review_jobTitle .confirmTitle {
+.reviewJobPost-container .review_jobTitle .confirmTitle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10532,7 +10532,7 @@ form .reviewJobPost-container .review_jobTitle .confirmTitle {
           align-items: center;
 }
 
-form .reviewJobPost-container .review_jobTitle .confirmTitle .title {
+.reviewJobPost-container .review_jobTitle .confirmTitle .title {
   width: 50%;
   margin: 0.6rem 0rem;
   padding: 0.7rem;
@@ -10543,27 +10543,27 @@ form .reviewJobPost-container .review_jobTitle .confirmTitle .title {
   cursor: pointer;
 }
 
-form .reviewJobPost-container .review_jobTitle .confirmTitle .title:hover {
+.reviewJobPost-container .review_jobTitle .confirmTitle .title:hover {
   border: 1.25px solid #0a345e;
 }
 
-form .reviewJobPost-container .review_jobTitle .confirmTitle .title span {
+.reviewJobPost-container .review_jobTitle .confirmTitle .title span {
   width: 100%;
   outline: none;
 }
 
-form .reviewJobPost-container .review_jobTitle .confirmTitle i {
+.reviewJobPost-container .review_jobTitle .confirmTitle i {
   color: #0a345e;
   font-size: 1.3rem;
   cursor: pointer;
   margin-left: 1rem;
 }
 
-form .reviewJobPost-container .review_jobTitle .confirmTitle i:hover {
+.reviewJobPost-container .review_jobTitle .confirmTitle i:hover {
   color: #054e97;
 }
 
-form .reviewJobPost-container .jobDescription {
+.reviewJobPost-container .jobDescription {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10577,18 +10577,18 @@ form .reviewJobPost-container .jobDescription {
   border-right: 1.25px solid #b9b3b3;
 }
 
-form .reviewJobPost-container .jobDescription h4 {
+.reviewJobPost-container .jobDescription h4 {
   font-size: 1.2rem;
   color: #0a345e;
 }
 
-form .reviewJobPost-container .jobDescription span {
+.reviewJobPost-container .jobDescription span {
   font-size: 0.9rem;
   color: #797979;
   margin: 0.5rem 0rem;
 }
 
-form .reviewJobPost-container .jobDescription textarea {
+.reviewJobPost-container .jobDescription textarea {
   margin: 1rem 0rem 0rem 0rem;
   width: 60%;
   font-size: 0.9rem;
@@ -10600,11 +10600,11 @@ form .reviewJobPost-container .jobDescription textarea {
   border: 1.25px solid #b9b3b3;
 }
 
-form .reviewJobPost-container .jobDescription textarea:hover {
+.reviewJobPost-container .jobDescription textarea:hover {
   border: 1.25px solid #0a345e;
 }
 
-form .reviewJobPost-container .jobDescription p {
+.reviewJobPost-container .jobDescription p {
   margin: 0;
   font-size: 0.8rem;
   padding: 0;
@@ -10613,18 +10613,18 @@ form .reviewJobPost-container .jobDescription p {
   color: #797979;
 }
 
-form .reviewJobPost-container .jobDescription #descriptionError {
+.reviewJobPost-container .jobDescription #descriptionError {
   display: none;
   margin-bottom: 0.5rem;
   color: red;
   font-size: 0.8rem;
 }
 
-form .reviewJobPost-container .jobDescription #descriptionError i {
+.reviewJobPost-container .jobDescription #descriptionError i {
   margin-right: 0.8rem;
 }
 
-form .reviewJobPost-container .reviewJobDetails {
+.reviewJobPost-container .reviewJobDetails {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10638,16 +10638,16 @@ form .reviewJobPost-container .reviewJobDetails {
   border-right: 1.25px solid #b9b3b3;
 }
 
-form .reviewJobPost-container .reviewJobDetails h4 {
+.reviewJobPost-container .reviewJobDetails h4 {
   font-size: 1.2rem;
   color: #0a345e;
 }
 
-form .reviewJobPost-container .reviewJobDetails .reviewCategory,
-form .reviewJobPost-container .reviewJobDetails .reviewSkill,
-form .reviewJobPost-container .reviewJobDetails .reviewScope,
-form .reviewJobPost-container .reviewJobDetails .reviewLocation,
-form .reviewJobPost-container .reviewJobDetails .reviewBudget {
+.reviewJobPost-container .reviewJobDetails .reviewCategory,
+.reviewJobPost-container .reviewJobDetails .reviewSkill,
+.reviewJobPost-container .reviewJobDetails .reviewScope,
+.reviewJobPost-container .reviewJobDetails .reviewLocation,
+.reviewJobPost-container .reviewJobDetails .reviewBudget {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10660,11 +10660,11 @@ form .reviewJobPost-container .reviewJobDetails .reviewBudget {
           align-items: center;
 }
 
-form .reviewJobPost-container .reviewJobDetails .reviewCategory i,
-form .reviewJobPost-container .reviewJobDetails .reviewSkill i,
-form .reviewJobPost-container .reviewJobDetails .reviewScope i,
-form .reviewJobPost-container .reviewJobDetails .reviewLocation i,
-form .reviewJobPost-container .reviewJobDetails .reviewBudget i {
+.reviewJobPost-container .reviewJobDetails .reviewCategory i,
+.reviewJobPost-container .reviewJobDetails .reviewSkill i,
+.reviewJobPost-container .reviewJobDetails .reviewScope i,
+.reviewJobPost-container .reviewJobDetails .reviewLocation i,
+.reviewJobPost-container .reviewJobDetails .reviewBudget i {
   cursor: pointer;
   font-size: 0.8rem;
   margin-left: 1rem;
@@ -10675,24 +10675,24 @@ form .reviewJobPost-container .reviewJobDetails .reviewBudget i {
   border: 0.7px solid lightgrey;
 }
 
-form .reviewJobPost-container .reviewJobDetails .reviewCategory i:hover,
-form .reviewJobPost-container .reviewJobDetails .reviewSkill i:hover,
-form .reviewJobPost-container .reviewJobDetails .reviewScope i:hover,
-form .reviewJobPost-container .reviewJobDetails .reviewLocation i:hover,
-form .reviewJobPost-container .reviewJobDetails .reviewBudget i:hover {
+.reviewJobPost-container .reviewJobDetails .reviewCategory i:hover,
+.reviewJobPost-container .reviewJobDetails .reviewSkill i:hover,
+.reviewJobPost-container .reviewJobDetails .reviewScope i:hover,
+.reviewJobPost-container .reviewJobDetails .reviewLocation i:hover,
+.reviewJobPost-container .reviewJobDetails .reviewBudget i:hover {
   background: #e2e2e2;
 }
 
-form .reviewJobPost-container .reviewJobDetails .reviewCategory p,
-form .reviewJobPost-container .reviewJobDetails .reviewSkill p,
-form .reviewJobPost-container .reviewJobDetails .reviewScope p,
-form .reviewJobPost-container .reviewJobDetails .reviewLocation p,
-form .reviewJobPost-container .reviewJobDetails .reviewBudget p {
+.reviewJobPost-container .reviewJobDetails .reviewCategory p,
+.reviewJobPost-container .reviewJobDetails .reviewSkill p,
+.reviewJobPost-container .reviewJobDetails .reviewScope p,
+.reviewJobPost-container .reviewJobDetails .reviewLocation p,
+.reviewJobPost-container .reviewJobDetails .reviewBudget p {
   padding: 0.5rem 0rem;
   color: #797979;
 }
 
-form .reviewJobPost-container .buttonCard {
+.reviewJobPost-container .buttonCard {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10712,7 +10712,7 @@ form .reviewJobPost-container .buttonCard {
   border-bottom-right-radius: 15px;
 }
 
-form .reviewJobPost-container .buttonCard .back #back {
+.reviewJobPost-container .buttonCard .back #back {
   color: #0a345e;
   font-size: 1rem;
   background: none;
@@ -10722,11 +10722,11 @@ form .reviewJobPost-container .buttonCard .back #back {
   cursor: pointer;
 }
 
-form .reviewJobPost-container .buttonCard .back #back:hover {
+.reviewJobPost-container .buttonCard .back #back:hover {
   background: #ebebeb;
 }
 
-form .reviewJobPost-container .buttonCard .continue #cancel {
+.reviewJobPost-container .buttonCard .continue #cancel {
   margin-right: 1rem;
   color: #0a345e;
   font-size: 1rem;
@@ -10738,11 +10738,11 @@ form .reviewJobPost-container .buttonCard .continue #cancel {
   cursor: pointer;
 }
 
-form .reviewJobPost-container .buttonCard .continue #cancel:hover {
+.reviewJobPost-container .buttonCard .continue #cancel:hover {
   text-decoration: underline;
 }
 
-form .reviewJobPost-container .buttonCard .continue #postJob {
+.reviewJobPost-container .buttonCard .continue #postJob {
   margin-left: 1rem;
   color: #0a345e;
   font-size: 1rem;
@@ -10755,7 +10755,7 @@ form .reviewJobPost-container .buttonCard .continue #postJob {
   pointer-events: none;
 }
 
-form .reviewJobPost-container .buttonCard .continue #postJob:hover {
+.reviewJobPost-container .buttonCard .continue #postJob:hover {
   background: #0a345e;
 }
 
