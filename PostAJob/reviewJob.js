@@ -1193,43 +1193,6 @@ function countWords(str) {
   return str.trim().split(/\s+/).length;
 }
 
-const postJob = document.getElementById("postJob");
-const wordCountDescription = document.getElementById("wordCount");
-jobDescription.addEventListener("input", () => {
-  var jobDescriptionLength = countWords(jobDescription.value);
-  wordCountDescription.innerHTML = jobDescriptionLength;
-  postJob.style.background = "#054e97";
-  postJob.style.color = "white";
-  postJob.style.cursor = "pointer";
-  postJob.style.pointerEvents = "visible";
-
-  if (jobDescriptionLength < 15) {
-    descriptionError.style.display = "block";
-  } else if (jobDescriptionLength > 5000) {
-    descriptionError.innerHTML =
-      `<i class="fa fa-exclamation-circle" aria-hidden="true"></i>`.concat(
-        "The maximum word count is 5000."
-      );
-  } else {
-    descriptionError.style.display = "none";
-  }
-});
-
-postJob.addEventListener("click", () => {
-  var jobDescriptionLength = countWords(jobDescription.value);
-  if (jobDescriptionLength < 15) {
-    descriptionError.style.display = "block";
-  } else if (jobDescriptionLength > 5000) {
-    descriptionError.innerHTML =
-      `<i class="fa fa-exclamation-circle" aria-hidden="true"></i>`.concat(
-        "The maximum word count is 5000."
-      );
-  } else {
-    localStorage.setItem("jobDescription", jobDescription.value);
-    window.location.href = "../ClientProfile/index.html";
-  }
-});
-
 //"Data Science & Analytics"
 const DataScienceAnalyticsSpecialty = [
   "Data Mining",
@@ -2632,4 +2595,41 @@ applyBudgetEdit.addEventListener("click", () => {
       .concat(" /hr");
   }
   budgetOverlay.style.display = "none";
+});
+
+const postJob = document.getElementById("postJob");
+const wordCountDescription = document.getElementById("wordCount");
+jobDescription.addEventListener("input", () => {
+  var jobDescriptionLength = countWords(jobDescription.value);
+  wordCountDescription.innerHTML = jobDescriptionLength;
+  postJob.style.background = "#054e97";
+  postJob.style.color = "white";
+  postJob.style.cursor = "pointer";
+  postJob.style.pointerEvents = "visible";
+
+  if (jobDescriptionLength < 15) {
+    descriptionError.style.display = "block";
+  } else if (jobDescriptionLength > 5000) {
+    descriptionError.innerHTML =
+      `<i class="fa fa-exclamation-circle" aria-hidden="true"></i>`.concat(
+        "The maximum word count is 5000."
+      );
+  } else {
+    descriptionError.style.display = "none";
+  }
+});
+
+postJob.addEventListener("click", () => {
+  var jobDescriptionLength = countWords(jobDescription.value);
+  if (jobDescriptionLength < 15) {
+    descriptionError.style.display = "block";
+  } else if (jobDescriptionLength > 5000) {
+    descriptionError.innerHTML =
+      `<i class="fa fa-exclamation-circle" aria-hidden="true"></i>`.concat(
+        "The maximum word count is 5000."
+      );
+  } else {
+    localStorage.setItem("jobDescription", jobDescription.value);
+    window.location.href = "../ClientProfile/index.html";
+  }
 });
