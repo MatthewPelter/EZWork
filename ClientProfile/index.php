@@ -203,42 +203,44 @@ require_once("../classes/DB.php");
                 </div>
             </div>
 
-            <div class="activeUsers profile-categories-container" style="overflow-y: scroll;max-height: 5vh;">
+            <div class="activeUsers profile-categories-container">
                 <div class="categories-title">
                     <h3><i class="fa fa-users" aria-hidden="true"></i> Current Users</h3>
                 </div>
-
-
-                <?php
-                $sql = "SELECT * FROM clients";
-                $result = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
-                if (mysqli_num_rows($result) > 0) {
-                    while ($row = mysqli_fetch_assoc($result)) {
-                        if ($row['username'] != $_SESSION['userid']) {
-                ?>
-
-                            <a style="color: black; text-decoration: none;" href="../Profile/userprofile.php?name=<?php echo $row['username']; ?>">
-                                <div class="categoryCard">
-                                    <img src="../Users/user.svg" style="border-radius: 50%; width: 2rem;height: 2rem;" id="current-user-img" alt=`<?php echo $row['username']; ?>`>
-                                    <p><?php echo $row['username']; ?></p>
-                                    <i class="fa fa-angle-right"></i>
-                                </div>
-                            </a>
+                <div class="activerUsersBody" style="overflow-y: scroll;max-height: 30vh;">
 
                     <?php
-                        }
-                    }
-                } else {
+                    $sql = "SELECT * FROM clients";
+                    $result = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
+                    if (mysqli_num_rows($result) > 0) {
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            if ($row['username'] != $_SESSION['userid']) {
                     ?>
-                    <div class="categoryCard">
-                        <p>That's sad.. There are no users on this site yet.</p>
+    
+                                <a style="color: black; text-decoration: none;" href="../Profile/userprofile.php?name=<?php echo $row['username']; ?>">
+                                    <div class="categoryCard">
+                                        <img src="../Users/user.svg" style="border-radius: 50%; width: 2rem;height: 2rem;" id="current-user-img" alt=`<?php echo $row['username']; ?>`>
+                                        <p><?php echo $row['username']; ?></p>
+                                        <i class="fa fa-angle-right"></i>
+                                    </div>
+                                </a>
+    
+                        <?php
+                            }
+                        }
+                    } else {
+                        ?>
+                        <div class="categoryCard">
+                            <p>That's sad.. There are no users on this site yet.</p>
+                        </div>
+                    <?php
+                    }
+                    ?>
+                    <div class="categoryCardEnd" style="border-bottom: none; padding: .5rem;">
+    
                     </div>
-                <?php
-                }
-                ?>
-                <div class="categoryCardEnd" style="border-bottom: none; padding: .5rem;">
-
                 </div>
+
             </div>
             <!--Categories Card
             <div class="profile-categories-container">
