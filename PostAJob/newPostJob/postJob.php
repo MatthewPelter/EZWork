@@ -54,7 +54,7 @@
                         <?php
                             header("Refresh:3; url=../../ClientProfile/index");
                         } else {
-                        ?><p><span>Form Submission Failed..!!</span></p>';
+                        ?><p><span>Form Submission Failed..!!</span></p>
             <?php
                         }
                         unset($_SESSION['post']); // Destroying session.
