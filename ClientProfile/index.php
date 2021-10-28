@@ -92,7 +92,7 @@ $userID = $userrow['id'];
             <div class="user-postings">
                 <div class="card title">
                     <h3>My Postings</h3>
-                    <span>All Postings</span>
+                    <span><a href="../PostAJob/newPostJob/jobs">All Postings</a></span>
                 </div>
                 <div class="card result">
                     <button id="quick-link-job2" onclick="location.href='../PostAJob/newPostJob/length.php'">Post A Job</button>
@@ -113,7 +113,7 @@ $userID = $userrow['id'];
                 ?>
                         <div class="postedJob">
                             <div class="jobTitle">
-                                <h4 id="jobTitle"><?php echo $r['title']; ?></h4>
+                                <h4 id="jobTitle"><a href="../PostAJob/newPostJob/job.php?id=<?php echo $r['id']; ?>"><?php echo $r['title']; ?></a></h4>
                                 <i class="fa fa-ellipsis-v" id="jobGodMode" aria-hidden="true"></i>
                                 <div class="jobEdit">
                                     <div class="exit">
@@ -128,7 +128,7 @@ $userID = $userrow['id'];
                                                             } else {
                                                                 echo "Open";
                                                             } ?></span></p>
-                            <p>Job Posted on <span id="date"></span> by <span id="postedBy">Me</span></p>
+                            <p>Job Posted on <span id="date"><?php $r['datePosted']; ?></span> by <span id="postedBy">Me</span></p>
                         </div>
 
                 <?php
