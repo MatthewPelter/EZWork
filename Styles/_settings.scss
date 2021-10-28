@@ -1,0 +1,897 @@
+//Global
+ul {
+  list-style: none;
+}
+
+.settings {
+  margin-top: 4.8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  background: whitesmoke;
+  padding: 2.5rem 10rem;
+
+  .settings-nav {
+    min-width: 25%;
+    margin-right: 1rem;
+
+    ul {
+      li {
+        cursor: pointer;
+        padding: 1rem 0rem;
+        a {
+          color: black;
+          i {
+            padding: 0rem 1rem;
+          }
+        }
+        &:hover {
+          background: lightgrey;
+        }
+      }
+    }
+  }
+
+  .settings-container {
+    width: 80%;
+
+    .settings-container-title {
+      width: 100%;
+      padding-bottom: 1rem;
+      h2 {
+        font-size: 2rem;
+      }
+    }
+
+    .settings-account-container {
+      background: white;
+      border-radius: 15px;
+      border: 1px solid lightgrey;
+      margin: 1rem 0rem;
+
+      .settings-account-card {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 1.6rem;
+        background: white;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom: 1px solid lightgrey;
+        h3 {
+          font-size: 1.25rem;
+        }
+        i {
+          cursor: pointer;
+          color: $darktext;
+          padding: 0.6rem;
+          border-radius: 50%;
+          background: transparent;
+          border: 0.7px solid lightgrey;
+          &:hover {
+            background: rgb(226, 226, 226);
+          }
+        }
+      }
+      .settings-account-profile-image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        border-bottom: 0.7px solid lightgrey;
+        padding: 1rem 0rem;
+        img {
+          width: 6rem;
+          height: 6rem;
+        }
+      }
+      .settings-account-profile-info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 1.6rem;
+        p {
+          font-weight: bolder;
+          font-size: 1rem;
+          padding: 0.3rem 0rem;
+          span {
+            margin-left: 0.6rem;
+            font-weight: normal;
+          }
+        }
+      }
+    }
+
+    .settings-account-godMode {
+      background: white;
+      border-radius: 15px;
+      border: 1px solid lightgrey;
+      margin: 2rem 0rem;
+      padding: 2rem;
+      p {
+        font-size: 1rem;
+        padding-bottom: 2rem;
+        span {
+          font-size: 1.1rem;
+        }
+      }
+      #becomeFreelancer {
+        color: white;
+        cursor: pointer;
+        background: $lightColor;
+        border-radius: 15px;
+        border: none;
+        font-size: 1.1rem;
+        padding: 0.4rem 1rem;
+        margin-right: 1rem;
+        &:hover {
+          background: $color1;
+        }
+      }
+      #deleteAccount {
+        background: transparent;
+        cursor: pointer;
+        color: $lightColor;
+        border-radius: 15px;
+        border: none;
+        font-size: 1.1rem;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .notification,
+  .connectedServices {
+    display: none;
+    width: 80%;
+
+    .settings-container-title {
+      width: 100%;
+      padding-bottom: 1rem;
+      h2 {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .settings-password {
+    display: none;
+    width: 80%;
+    .settings-password-container {
+      background: white;
+      border-radius: 15px;
+      border: 1px solid lightgrey;
+      margin: 1rem 0rem;
+      p {
+        font-size: 0.9rem;
+        color: $darktext;
+      }
+      .settings-password-card {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 1.6rem;
+        background: white;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom: 1px solid lightgrey;
+        h3 {
+          font-size: 1.25rem;
+        }
+        i {
+          cursor: pointer;
+          color: $darktext;
+          padding: 0.6rem;
+          border-radius: 50%;
+          background: transparent;
+          border: 0.7px solid lightgrey;
+          &:hover {
+            background: rgb(226, 226, 226);
+          }
+        }
+      }
+      .settings-password-card2 {
+        width: 100%;
+        padding: 1.6rem;
+      }
+    }
+
+    // Password CSS
+    .settings-password-twoStep {
+      background: white;
+      border-radius: 15px;
+      border: 1px solid lightgrey;
+      margin: 1rem 0rem;
+      p {
+        font-size: 0.9rem;
+        color: $darktext;
+      }
+      .settings-password-twoStep-card {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        padding: 1.6rem;
+        background: white;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom: 1px solid lightgrey;
+        h3 {
+          width: 100%;
+        }
+        p {
+          font-size: 0.9rem;
+          padding-top: 1rem;
+        }
+      }
+
+      .settings-password-twoStep-option {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1.6rem;
+        border-bottom: 1px solid lightgrey;
+        h3 {
+          width: 100%;
+          text-align: start;
+          font-size: 1.1rem;
+        }
+        p {
+          width: 100%;
+          text-align: start;
+          padding-top: 1rem;
+        }
+        button {
+          align-self: flex-end;
+          width: 17%;
+          color: white;
+          cursor: pointer;
+          background: $lightColor;
+          border-radius: 15px;
+          border: none;
+          font-size: 1.1rem;
+          padding: 0.4rem 1rem;
+          margin-right: 1rem;
+          &:hover {
+            background: $color1;
+          }
+        }
+      }
+    }
+  }
+
+  .settings-billing {
+    width: 80%;
+    display: none;
+    .settings-balance-container {
+      background: white;
+      border-radius: 15px;
+      border: 1px solid lightgrey;
+      margin: 1rem 0rem;
+      p {
+        font-size: 0.9rem;
+        color: $darktext;
+      }
+      .settings-balance-card {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 1.6rem;
+        background: white;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom: 1px solid lightgrey;
+        h3 {
+          font-size: 1.25rem;
+        }
+        i {
+          cursor: pointer;
+          color: $darktext;
+          padding: 0.6rem;
+          border-radius: 50%;
+          background: transparent;
+          border: 0.7px solid lightgrey;
+          &:hover {
+            background: rgb(226, 226, 226);
+          }
+        }
+      }
+      .settings-balance-card2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 1.6rem;
+        span {
+          color: black;
+          font-size: 1.2rem;
+        }
+        button {
+          color: white;
+          cursor: pointer;
+          background: $lightColor;
+          border-radius: 15px;
+          border: none;
+          font-size: 1.1rem;
+          padding: 0.4rem 1rem;
+          &:hover {
+            background: $color1;
+          }
+        }
+      }
+    }
+
+    .settings-billing-container {
+      background: white;
+      border-radius: 15px;
+      border: 1px solid lightgrey;
+      margin: 1rem 0rem;
+      p {
+        font-size: 0.9rem;
+        color: $darktext;
+      }
+      .settings-billing-card {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 1.6rem;
+        background: white;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom: 1px solid lightgrey;
+        h3 {
+          font-size: 1.2rem;
+        }
+        button {
+          cursor: pointer;
+          border-radius: 15px;
+          border: none;
+          background: transparent;
+          font-size: 1rem;
+          color: $color1;
+          padding: 0.6rem 1rem;
+          border: 1px solid lightgrey;
+          &:hover {
+            transition: all 0.2s ease;
+            background: rgb(233, 233, 233);
+          }
+        }
+      }
+
+      .settings-billing-option {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 1.6rem;
+        p {
+          color: black;
+          font-size: 1rem;
+          padding-bottom: 0.5rem;
+        }
+        span {
+          color: $darktext;
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}
+.overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  cursor: pointer;
+  color: white;
+}
+#editForm {
+  position: fixed;
+  top: 30%;
+  left: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  height: 35%;
+  padding: 2rem;
+  background: white;
+  border-radius: 15px;
+  label {
+    font-size: 1.5rem;
+    color: $color1;
+    text-decoration: underline;
+  }
+  input {
+    border: none;
+    border: solid 1px $color1;
+    border-radius: 15px;
+    width: 50%;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+  }
+  #continueBtn {
+    width: 40%;
+    color: white;
+    cursor: pointer;
+    background: $lightColor;
+    border-radius: 15px;
+    border: none;
+    font-size: 1.1rem;
+    padding: 0.4rem 1rem;
+    &:hover {
+      background: $color1;
+    }
+  }
+}
+.overlay .closebtn:hover {
+  color: #ccc;
+}
+
+@media screen and (max-width: 754px) {
+  .settings {
+    margin-top: 3.8rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: whitesmoke;
+    padding: 2.5rem 1rem;
+    .settings-nav {
+      min-width: 25%;
+      margin-right: 0;
+      ul {
+        li {
+          cursor: pointer;
+          padding: 1rem 0rem;
+          a {
+            color: black;
+            i {
+              padding: 0rem 1rem;
+            }
+          }
+          &:hover {
+            background: lightgrey;
+          }
+        }
+      }
+    }
+    .settings-container {
+      width: 100%;
+      .settings-container-title {
+        width: 100%;
+        padding: 0.5rem;
+        h2 {
+          font-size: 2rem;
+        }
+      }
+      .settings-account-container {
+        background: white;
+        border-radius: 15px;
+        border: 1px solid lightgrey;
+        margin: 1rem 0rem;
+        .settings-account-card {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          padding: 1.5rem;
+          background: white;
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px;
+          border-bottom: 1px solid lightgrey;
+          h3 {
+            font-size: 1.25rem;
+          }
+          i {
+            cursor: pointer;
+            color: $darktext;
+            padding: 0.5rem;
+            font-size: 1rem;
+            border-radius: 50%;
+            background: transparent;
+            border: 0.7px solid lightgrey;
+            &:hover {
+              background: rgb(226, 226, 226);
+            }
+          }
+        }
+        .settings-account-profile-image {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          border-bottom: 0.7px solid lightgrey;
+          padding: 1rem 0rem;
+          img {
+            width: 6rem;
+            height: 6rem;
+          }
+        }
+        .settings-account-profile-info {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          padding: 1.5rem;
+          p {
+            font-weight: bolder;
+            font-size: 0.85rem;
+            padding: 0.3rem 0rem;
+            span {
+              margin-left: 0.4rem;
+              font-weight: normal;
+            }
+          }
+        }
+      }
+      .settings-account-godMode {
+        background: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 15px;
+        border: 1px solid lightgrey;
+        margin: 1rem 0rem;
+        padding: 2rem;
+        p {
+          text-align: center;
+          font-size: 1rem;
+          padding-bottom: 2rem;
+          span {
+            font-size: 1.1rem;
+          }
+        }
+        #becomeFreelancer {
+          color: white;
+          cursor: pointer;
+          background: $lightColor;
+          border-radius: 15px;
+          border: none;
+          font-size: 1.1rem;
+          padding: 0.4rem 1rem;
+          margin-right: 0;
+          &:hover {
+            background: $color1;
+          }
+        }
+        #deleteAccount {
+          background: transparent;
+          cursor: pointer;
+          color: $lightColor;
+          border-radius: 15px;
+          border: none;
+          margin-top: 1rem;
+          font-size: 1.1rem;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .settings-password {
+      display: none;
+      width: 100%;
+      .settings-password-container {
+        background: white;
+        border-radius: 15px;
+        border: 1px solid lightgrey;
+        margin: 1rem 0rem;
+        p {
+          font-size: 0.9rem;
+          color: $darktext;
+        }
+        .settings-password-card {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          padding: 1rem;
+          background: white;
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px;
+          border-bottom: 1px solid lightgrey;
+          h3 {
+            font-size: 1.25rem;
+          }
+          i {
+            cursor: pointer;
+            color: $darktext;
+            padding: 0.6rem;
+            border-radius: 50%;
+            background: transparent;
+            border: 0.7px solid lightgrey;
+            &:hover {
+              background: rgb(226, 226, 226);
+            }
+          }
+        }
+        .settings-password-card2 {
+          width: 100%;
+          padding: 1.6rem;
+        }
+      }
+
+      // Password CSS
+      .settings-password-twoStep {
+        background: white;
+        border-radius: 15px;
+        border: 1px solid lightgrey;
+        margin: 1rem 0rem;
+        p {
+          font-size: 0.9rem;
+          color: $darktext;
+        }
+        .settings-password-twoStep-card {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          width: 100%;
+          padding: 1rem;
+          background: white;
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px;
+          border-bottom: 1px solid lightgrey;
+          h3 {
+            width: 100%;
+          }
+          p {
+            font-size: 0.9rem;
+            padding-top: 1rem;
+          }
+        }
+
+        .settings-password-twoStep-option {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding: 1rem;
+          border-bottom: 1px solid lightgrey;
+          h3 {
+            width: 100%;
+            text-align: start;
+            font-size: 1.1rem;
+          }
+          p {
+            width: 100%;
+            text-align: start;
+            padding-top: 1rem;
+          }
+          button {
+            align-self: flex-start;
+            width: 100%;
+            color: white;
+            cursor: pointer;
+            background: $lightColor;
+            border-radius: 15px;
+            border: none;
+            font-size: 1.1rem;
+            padding: 0.4rem 1rem;
+            margin-right: 0;
+            margin-top: 1rem;
+            &:hover {
+              background: $color1;
+            }
+          }
+        }
+      }
+    }
+
+    .settings-billing {
+      width: 100%;
+      display: none;
+      .settings-balance-container {
+        background: white;
+        border-radius: 15px;
+        border: 1px solid lightgrey;
+        margin: 1rem 0rem;
+        p {
+          font-size: 0.9rem;
+          color: $darktext;
+        }
+        .settings-balance-card {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          padding: 1rem;
+          background: white;
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px;
+          border-bottom: 1px solid lightgrey;
+          h3 {
+            font-size: 1.25rem;
+          }
+          i {
+            cursor: pointer;
+            color: $darktext;
+            padding: 0.6rem;
+            border-radius: 50%;
+            background: transparent;
+            border: 0.7px solid lightgrey;
+            &:hover {
+              background: rgb(226, 226, 226);
+            }
+          }
+        }
+        .settings-balance-card2 {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          width: 100%;
+          padding: 1rem;
+
+          span {
+            width: 100%;
+            text-align: start;
+            color: black;
+            font-size: 1.2rem;
+          }
+          button {
+            width: 100%;
+            margin-top: 1rem;
+            color: white;
+            cursor: pointer;
+            background: $lightColor;
+            border-radius: 15px;
+            border: none;
+            font-size: 1.1rem;
+            padding: 0.4rem 1rem;
+            &:hover {
+              background: $color1;
+            }
+          }
+        }
+      }
+
+      .settings-billing-container {
+        background: white;
+        border-radius: 15px;
+        border: 1px solid lightgrey;
+        margin: 1rem 0rem;
+        p {
+          font-size: 0.9rem;
+          color: $darktext;
+        }
+        .settings-billing-card {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          width: 100%;
+          padding: 1rem;
+          background: white;
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px;
+          border-bottom: 1px solid lightgrey;
+          h3 {
+            font-size: 1.2rem;
+          }
+          button {
+            margin-top: 1rem;
+            width: 100%;
+            cursor: pointer;
+            border-radius: 15px;
+            border: none;
+            background: transparent;
+            font-size: 1rem;
+            color: $color1;
+            padding: 0.6rem 1rem;
+            border: 1px solid lightgrey;
+            &:hover {
+              transition: all 0.2s ease;
+              background: rgb(233, 233, 233);
+            }
+          }
+        }
+
+        .settings-billing-option {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          padding: 1rem;
+          p {
+            color: black;
+            font-size: 1rem;
+            padding-bottom: 0.5rem;
+          }
+          span {
+            color: $darktext;
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+    .overlay {
+      height: 100%;
+      width: 100%;
+      display: none;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+    .overlay .closebtn {
+      position: absolute;
+      top: 20px;
+      right: 45px;
+      font-size: 60px;
+      cursor: pointer;
+      color: white;
+    }
+    #editForm {
+      position: fixed;
+      top: 25%;
+      left: 10%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 80%;
+      height: fit-content;
+      padding: 2rem;
+      background: white;
+      border-radius: 15px;
+      label {
+        font-size: 1.5rem;
+        color: $color1;
+        text-decoration: underline;
+      }
+      input {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: none;
+        border: solid 1px $color1;
+        border-radius: 15px;
+        width: 80%;
+        text-align: center;
+        padding: 0.5rem 1rem;
+        margin-top: 1rem;
+      }
+      #continueBtn {
+        width: 70%;
+        color: white;
+        cursor: pointer;
+        background: $lightColor;
+        border-radius: 15px;
+        border: none;
+        font-size: 1.1rem;
+        padding: 0.4rem 1rem;
+        &:hover {
+          background: $color1;
+        }
+      }
+    }
+    .overlay .closebtn:hover {
+      color: #ccc;
+    }
+  }
+}
