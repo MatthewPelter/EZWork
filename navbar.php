@@ -123,7 +123,7 @@
                     <div class="card card1">
                         <h4>My Jobs</h4>
                     </div>
-                    <div class="card card2">
+                    <div class="card card2"  onclick="location.href='../PostAJob/newPostJob/jobs'">
                         <h4>All Job Posts</h4>
                     </div>
                     <div class="card card3">
