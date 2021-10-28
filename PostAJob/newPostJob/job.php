@@ -65,11 +65,13 @@ if (mysqli_num_rows($jobResult) > 0) {
                     <span><a href="jobs">All Postings</a></span>
                 </div>
                 <div class="card result">
-                    <h1>Posted By: <?php if ($unameFetched['username'] != $_SESSION['userid']) {
-                                        print("<a href='../../ClientProfile/userprofile.php?name=" . $unameFetched['username'] . ">" . $unameFetched['username'] . "</a>");
-                                    } else {
+                    <h1>Posted By: <?php if ($unameFetched['username'] != $_SESSION['userid']) { ?>
+                            <a href="../../Profile/userprofile.php?name=<?php echo $unameFetched['username']; ?>"><?php echo $unameFetched['username']; ?></a>
+
+                        <?php } else {
                                         echo $unameFetched['username'];
-                                    }  ?></h1>
+                                    } ?>
+                    </h1>
                     <h1>Description: <?php echo $r['description']; ?></h1>
                     <h1>Job Type: <?php if ($r['length'] == 'l') {
                                         echo "Designated, longer term work";
