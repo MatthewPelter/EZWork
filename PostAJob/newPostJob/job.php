@@ -43,6 +43,12 @@ if (mysqli_num_rows($jobResult) > 0) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../Styles/style.css" />
 
+    <style type="text/css">
+        hr.solid {
+            border-top: 3px solid #bbb;
+        }
+    </style>
+
     <title>Document</title>
 </head>
 
@@ -52,46 +58,51 @@ if (mysqli_num_rows($jobResult) > 0) {
     include '../../navbar.php';
     ?>
     <?php if ($dataFound) { ?>
-        <div class="user-postings">
-            <div class="card title">
-                <h3><?php echo $r['title']; ?></h3>
-                <span><a href="jobs">All Postings</a></span>
-            </div>
-            <div class="card result">
-                <h1>Posted By: <?php echo $unameFetched['username']; ?></h1>
-                <h1>Description: <?php echo $r['description']; ?></h1>
-                <h1>Job Type: <?php if ($r['length'] == 'l') {
-                                    echo "Designated, longer term work";
+        <div class="profile">
+            <div class="user-postings">
+                <div class="card title">
+                    <h3><?php echo $r['title']; ?></h3>
+                    <span><a href="jobs">All Postings</a></span>
+                </div>
+                <div class="card result">
+                    <h1>Posted By: <?php echo $unameFetched['username']; ?></h1>
+                    <h1>Description: <?php echo $r['description']; ?></h1>
+                    <h1>Job Type: <?php if ($r['length'] == 'l') {
+                                        echo "Designated, longer term work";
+                                    } else {
+                                        echo "Short term or part time work";
+                                    } ?></h1>
+                    <h1>Scope of Job</h1>
+                    <hr class="solid">
+                    <h1>Size: <?php echo ucfirst($r['size']); ?></h1>
+                    <h1>Freelance Location: <?php if ($r['location'] == 'us') {
+                                                echo "United States ONLY";
+                                            } else {
+                                                echo "Worldwide";
+                                            } ?></h1>
+                    <h1><?php if ($r['budget'] > 0) {
+                            echo "Project Budget: " . $r['budget'];
+                        } else if ($r['rate'] > 0) {
+                            echo "Hourly Rate: " . $r['rate'];
+                        } else {
+                            echo "No budget or pay rate set yet...";
+                        } ?></h1>
+                    <h1>Status: <?php if ($r['status'] == 0) {
+                                    echo "Open";
                                 } else {
-                                    echo "Short term or part time work";
+                                    echo "Open";
                                 } ?></h1>
-                <h1>Scope of Job: </h1>
-                <h1>Size: <?php echo ucfirst($r['size']); ?></h1>
-                <h1>Freelance Location: <?php if ($r['location'] == 'us') {
-                                            echo "United States ONLY";
-                                        } else {
-                                            echo "Worldwide";
-                                        } ?></h1>
-                <h1><?php if ($r['budget'] > 0) {
-                        echo "Project Budget: " . $r['budget'];
-                    } else if ($r['rate'] > 0) {
-                        echo "Hourly Rate: " . $r['rate'];
-                    } else {
-                        echo "No budget or pay rate set yet...";
-                    } ?></h1>
-                <h1>Status: <?php if ($r['status'] == 0) {
-                                echo "Open";
-                            } else {
-                                echo "Open";
-                            } ?></h1>
-                <h1>Posted on <?php echo $r['datePosted']; ?></h1>
+                    <h1>Posted on <?php echo $r['datePosted']; ?></h1>
+                </div>
             </div>
         </div>
     <?php } else { ?>
-        <div class="user-postings">
-            <div class="card title">
-                <h3>We could not locate that job</h3>
-                <span><a href="jobs">All Postings</a></span>
+        <div class="profile">
+            <div class="user-postings">
+                <div class="card title">
+                    <h3>We could not locate that job</h3>
+                    <span><a href="jobs">All Postings</a></span>
+                </div>
             </div>
         </div>
     <?php

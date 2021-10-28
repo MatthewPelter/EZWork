@@ -128,7 +128,7 @@ $userID = $userrow['id'];
                                                             } else {
                                                                 echo "Open";
                                                             } ?></span></p>
-                            <p>Job Posted on <span id="date"><?php $r['datePosted']; ?></span> by <span id="postedBy">Me</span></p>
+                            <p>Job Posted on <span id="date"><?php echo $r['datePosted']; ?></span> by <span id="postedBy">Me</span></p>
                         </div>
 
                 <?php
