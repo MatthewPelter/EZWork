@@ -71,10 +71,20 @@ if (mysqli_num_rows($result) > 0) {
                     <img src="../Users/user.svg" alt="">
                 </div>
                 <div class="settings-account-profile-info">
+                    <?php
+                        if ($dataFound) {
+                    ?>
                     <p>UserName: <span id="settingsName"><?php echo $_SESSION['userid']; ?></span></p>
                     <p>Account Type: <span>Client</span></p>
                     <p>Phone Number: <span id="settingsPhone"><?php echo $row['phone']; ?></span></p>
                     <p>Email: <span id="settingsEmail"><?php echo $row['email']; ?></span></p>
+                    <?php
+                    } else {
+                    ?>
+                        <span>Error retrieving data</span>
+                    <?php
+                    }
+                    ?>
                 </div>
             </div>
             <div class="settings-account-godMode">
