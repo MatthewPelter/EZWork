@@ -106,7 +106,7 @@
             <div class="line3"></div>
         </div>
         <div class="logo">
-            <a href="../ClientProfile/index">
+            <a href="https://ez-work.herokuapp.com/">
                 <h2>E<span>z</span>Work</h2>
             </a>
         </div>
