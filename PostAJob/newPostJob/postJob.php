@@ -59,7 +59,7 @@ if (!isset($_SESSION['userid'])) {
                         }
 
                         //print_r($_SESSION['post']);
-                        $datePosted = date("m/d/y");
+                        $datePosted = date("Y-m-d");
                         $sql = "INSERT INTO jobs(length,title,skills,size,location,budget,rate,description,image,user_id,freelancer_id,status, datePosted) VALUES('$length','$title','None','$size','$location','$maxbudget','$hourrate', '$description', NULL, '$userID',0,0, '$datePosted')";
                         $query = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 
