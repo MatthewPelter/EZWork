@@ -3,13 +3,13 @@
 
 <head>
     <title>Post a Job</title>
-    <!-- <!--<link rel="stylesheet" href="style.css" /> -->
+    <link rel="stylesheet" href="../../Styles/style.css" />
 </head>
 
 <body>
     <?php include '../../navbar.php'; ?>
-    <div class="container">
-        <div class="main">
+    <div class="PostAJob">
+        <div class="PostAJobContainer">
             <h2>Post a Job</h2>
             <?php
             session_start();
