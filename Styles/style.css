@@ -16546,6 +16546,15 @@ li {
 */
 .body-container {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 0;
   margin: 0;
   background-color: #c7e3f3;
@@ -16558,7 +16567,6 @@ li {
 .message-container {
   margin: 1rem;
   width: 100%;
-  height: 80vh;
   background: #444753;
   border-radius: 5px;
 }
