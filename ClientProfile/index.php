@@ -203,7 +203,7 @@ require_once("../classes/DB.php");
                 </div>
             </div>
 
-            <div class="activeUsers profile-categories-container">
+            <div class="activeUsers profile-categories-container" style="overflow-y: scroll;max-height: 5vh;">
                 <div class="categories-title">
                     <h3><i class="fa fa-users" aria-hidden="true"></i> Current Users</h3>
                 </div>
