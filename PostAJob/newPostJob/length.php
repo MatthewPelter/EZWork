@@ -20,7 +20,7 @@ if (!isset($_SESSION['userid'])) {
 
 <head>
     <title>Post a Job</title>
-    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="stylesheet" href="../../Styles/style.css" />
 </head>
 
 <body>
