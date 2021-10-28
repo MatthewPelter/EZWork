@@ -51,7 +51,7 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                 ?>
                         <div class="postedJob">
                             <div class="jobTitle">
-                                <h4 id="jobTitle"><a href="../PostAJob/newPostJob/job.php?id=<?php echo $r['id']; ?>"><?php echo $r['title']; ?></a></h4>
+                                <h4 id="jobTitle"><a href="job.php?id=<?php echo $r['id']; ?>"><?php echo $r['title']; ?></a></h4>
                                 <i class="fa fa-ellipsis-v" id="jobGodMode" aria-hidden="true"></i>
                                 <div class="jobEdit">
                                     <div class="exit">
@@ -66,7 +66,7 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                                                             } else {
                                                                 echo "Open";
                                                             } ?></span></p>
-                            <p>Job Posted on <span id="date"><?php echo $r['datePosted']; ?></span> by <span id="postedBy"><?php echo $unameFetched['username']; ?></span></p>
+                            <p>Job Posted on <span id="date"><?php echo $r['datePosted']; ?></span> by <span id="postedBy"><a href="../../Profile/userprofile.php?name=<?php echo $unameFetched['username']; ?>"><?php echo $unameFetched['username']; ?></a></span></p>
                         </div>
 
                     <?php
