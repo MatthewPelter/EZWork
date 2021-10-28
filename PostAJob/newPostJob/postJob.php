@@ -67,7 +67,7 @@ if (!isset($_SESSION['userid'])) {
             ?>
                             <p><span id="success">Yay you just posted a job..!!</span></p>
                         <?php
-                            header("Refresh:5; url=../../ClientProfile/index");
+                            header("Refresh:5; url=https://ez-work.herokuapp.com/ClientProfile/index", true, 303);
                         } else {
                         ?><p><span>Form Submission Failed..!!</span></p>
             <?php
