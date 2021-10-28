@@ -6030,15 +6030,6 @@ section .container .login .login-container button:hover {
   text-decoration: underline;
 }
 
-.profile .activeUsers {
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 1;
-  grid-column: 3/4;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  grid-row: 1/3;
-}
-
 .profile .profile-categories-container {
   width: 100%;
   height: -webkit-fit-content;
@@ -6106,6 +6097,15 @@ section .container .login .login-container button:hover {
 
 .profile .profile-categories-container .categoryCard:hover {
   background: #e4e4e4;
+}
+
+.activeUsers {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
 }
 
 @media screen and (max-width: 754px) {
