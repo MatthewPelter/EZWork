@@ -129,7 +129,7 @@
                     <div class="card card3">
                         <h4>All Contracts</h4>
                     </div>
-                    <div class="card card4" onclick="location.href='../PostAJob/PostAJob.html'">
+                    <div class="card card4" onclick="location.href='../PostAJob/newPostJob/length'">
                         <h4>Post A Job</h4>
                     </div>
                 </div>
