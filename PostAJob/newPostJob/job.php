@@ -45,7 +45,8 @@ if (mysqli_num_rows($jobResult) > 0) {
 
     <style type="text/css">
         hr.solid {
-            border-top: 3px solid #bbb;
+            border-top: 3px solid #222;
+            width: 50%;
         }
     </style>
 
@@ -79,7 +80,9 @@ if (mysqli_num_rows($jobResult) > 0) {
                                         echo "Short term or part time work";
                                     } ?></h1>
                     <h1>Scope of Job</h1>
+
                     <hr class="solid">
+
                     <h1>Size: <?php echo ucfirst($r['size']); ?></h1>
                     <h1>Freelance Location: <?php if ($r['location'] == 'us') {
                                                 echo "United States ONLY";
@@ -93,6 +96,9 @@ if (mysqli_num_rows($jobResult) > 0) {
                         } else {
                             echo "No budget or pay rate set yet...";
                         } ?></h1>
+
+                    <hr class="solid">
+
                     <h1>Status: <?php if ($r['status'] == 0) {
                                     echo "Open";
                                 } else {
