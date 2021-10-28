@@ -209,14 +209,14 @@ if (isset($_POST['submit'])) {
     <?php
             }
     ?>
-    <!-- Footer -->
-    <?php include '../footer.php'; ?>
-    <!-- Footer -->
 
     <!--DataList-->
-    <datalist id="allskills">
-    </datalist>
+    <datalist id="allskills"></datalist>
     </div>
+
+    <!-- Footer -->
+        <?php include '../footer.php'; ?>
+    <!-- Footer -->
 </body>
 
 <script type="text/javascript">
