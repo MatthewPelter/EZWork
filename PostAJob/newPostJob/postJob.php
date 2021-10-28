@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once('../../classes/DB.php');
 if (!isset($_SESSION['userid'])) {
     header('Location: ../../login/index');
@@ -28,7 +29,6 @@ if (!isset($_SESSION['userid'])) {
         <div class="PostAJobContainer">
             <h2>Post a Job</h2>
             <?php
-            session_start();
             if (isset($_POST['budgetoption'])) {
                 if (!empty($_SESSION['post'])) {
                     if (empty($_POST['budgetoption'])) {
@@ -67,7 +67,7 @@ if (!isset($_SESSION['userid'])) {
             ?>
                             <p><span id="success">Yay you just posted a job..!!</span></p>
                         <?php
-                            header("Refresh:3; url=../../ClientProfile/index");
+                            header("Refresh:5; url=../../ClientProfile/index");
                         } else {
                         ?><p><span>Form Submission Failed..!!</span></p>
             <?php
