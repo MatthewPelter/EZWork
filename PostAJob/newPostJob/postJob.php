@@ -1,3 +1,19 @@
+<?php
+require_once('../../classes/DB.php');
+if (!isset($_SESSION['userid'])) {
+    header('Location: ../../login/index');
+    echo "NOT LOGGED IN";
+} else {
+    $username = $_SESSION['userid'];
+    $sql = "SELECT * FROM clients WHERE username = '$username' limit 1";
+    $result = mysqli_query($conn, $sql);
+    if (mysqli_num_rows($result) == 0) {
+        header('Location: ../../login/index');
+    }
+}
+
+?>
+
 <!DOCTYPE HTML>
 <html>
 
@@ -20,7 +36,6 @@
                         $_SESSION['error_page5'] = "Mandatory field(s) are missing, Please fill it again";
                         header("location: budget.php"); // Redirecting to fifth page.
                     } else {
-                        require_once('../../classes/DB.php');
                         $username = $_SESSION['userid'];
                         $getUserID = "SELECT id FROM clients WHERE username = '$username'";
                         $getResult = mysqli_query($conn, $getUserID);
