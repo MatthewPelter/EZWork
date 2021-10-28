@@ -68,5 +68,6 @@
     </div>
     <?php include '../../footer.php'; ?>
 </body>
+<script src="../../ClientProfile/app.js"></script>
 
 </html>

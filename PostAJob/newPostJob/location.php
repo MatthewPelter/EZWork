@@ -53,5 +53,6 @@ if (isset($_POST['size'])) {
     </div>
     <?php include '../../footer.php'; ?>
 </body>
+<script src="../../ClientProfile/app.js"></script>
 
 </html>

@@ -66,7 +66,7 @@ if (isset($_POST['location'])) {
     <?php include '../../footer.php'; ?>
 </body>
 
-
+<script src="../../ClientProfile/app.js"></script>
 <script type="text/javascript">
     var ratebtn = document.getElementById('rate');
     var budgetbtn = document.getElementById('budget');

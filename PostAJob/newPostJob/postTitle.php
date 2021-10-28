@@ -55,6 +55,7 @@ if (isset($_POST['length'])) {
 
     <?php include '../../footer.php'; ?>
 </body>
+<script src="../../ClientProfile/app.js"></script>
 
 </html>
 
