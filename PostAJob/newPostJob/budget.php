@@ -26,6 +26,7 @@ if (isset($_POST['location'])) {
 </head>
 
 <body>
+    <?php include '../../navbar.php'; ?>
     <div class="container">
         <div class="main">
             <h2>Post a Job</h2>
@@ -62,6 +63,7 @@ if (isset($_POST['location'])) {
             </form>
         </div>
     </div>
+    <?php include '../../footer.php'; ?>
 </body>
 
 

@@ -24,6 +24,8 @@ if (!isset($_SESSION['userid'])) {
 </head>
 
 <body>
+    <?php include '../../navbar.php'; ?>
+
     <div class="container">
         <div class="main">
             <h2>Post a Job</h2>
@@ -46,6 +48,8 @@ if (!isset($_SESSION['userid'])) {
             </form>
         </div>
     </div>
+
+    <?php include '../../footer.php'; ?>
 </body>
 
 </html>
