@@ -5708,7 +5708,6 @@ section .container .login .login-container button:hover {
 }
 
 .profile .user-postings .postedJob {
-  display: none;
   padding: 1.5rem;
   width: 100%;
 }
