@@ -28,17 +28,6 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../Styles/style.css" />
-
-    <style type="text/css">
-        green {
-            color: #2ecc71;
-        }
-
-        red {
-            color: #d63031;
-        }
-    </style>
-
     <title>All Postings</title>
 </head>
 
@@ -72,12 +61,11 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                                     <button style="color: red;" id="deleteJob">Delete</button>
                                 </div>
                             </div>
-                            <p>Status: <span id="status"><?php if ($r['status'] == 0) { ?>
-                                        <green><?php echo "Open"; ?></green>
-                                    <?php } else { ?>
-                                        <red><?php echo "Closed"; ?></red>
-                                    <?php } ?>
-                                </span></p>
+                            <p>Status: <span id="status"><?php if ($r['status'] == 0) {
+                                                                echo "Open";
+                                                            } else {
+                                                                echo "Open";
+                                                            } ?></span></p>
                             <p>Job Posted on <span id="date"><?php echo $r['datePosted']; ?></span> by <span id="postedBy">
                                     <?php if ($unameFetched['username'] != $_SESSION['userid']) {
                                         echo "<a href='../../Profile/userprofile.php?name=" . $unameFetched['username'] . "'>" . $unameFetched['username'] . "</a>";
