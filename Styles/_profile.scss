@@ -328,9 +328,9 @@
       }
     }
   }
-  .profile-categories-container {
+  .profile-categories-container,.activeUsers {
     grid-column: 3/4;
-    grid-row: 1/3;
+    grid-row: 2/3;
     width: 100%;
     display: flex;
     flex-direction: column;

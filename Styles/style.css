@@ -6026,13 +6026,13 @@ section .container .login .login-container button:hover {
   text-decoration: underline;
 }
 
-.profile .profile-categories-container {
+.profile .profile-categories-container, .profile .activeUsers {
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
   grid-column: 3/4;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  grid-row: 1/3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6047,17 +6047,17 @@ section .container .login .login-container button:hover {
   border: 1px solid lightgrey;
 }
 
-.profile .profile-categories-container .categories-title {
+.profile .profile-categories-container .categories-title, .profile .activeUsers .categories-title {
   width: 100%;
   padding: 1.5rem;
   border-bottom: 1px solid lightgrey;
 }
 
-.profile .profile-categories-container .categories-title h3 {
+.profile .profile-categories-container .categories-title h3, .profile .activeUsers .categories-title h3 {
   font-size: 1.5rem;
 }
 
-.profile .profile-categories-container .categoryCard {
+.profile .profile-categories-container .categoryCard, .profile .activeUsers .categoryCard {
   cursor: pointer;
   padding: 1.5rem 1rem;
   width: 100%;
@@ -6077,30 +6077,30 @@ section .container .login .login-container button:hover {
   border-bottom: 1px solid lightgrey;
 }
 
-.profile .profile-categories-container .categoryCard #current-user-img {
+.profile .profile-categories-container .categoryCard #current-user-img, .profile .activeUsers .categoryCard #current-user-img {
   border-radius: 50%;
   width: 2rem;
   height: 2rem;
 }
 
-.profile .profile-categories-container .categoryCard svg {
+.profile .profile-categories-container .categoryCard svg, .profile .activeUsers .categoryCard svg {
   width: 15%;
 }
 
-.profile .profile-categories-container .categoryCard p {
+.profile .profile-categories-container .categoryCard p, .profile .activeUsers .categoryCard p {
   margin-left: 1rem;
   width: 70%;
   text-align: start;
   font-size: 0.8rem;
 }
 
-.profile .profile-categories-container .categoryCard i {
+.profile .profile-categories-container .categoryCard i, .profile .activeUsers .categoryCard i {
   width: 15%;
   font-size: 1.4rem;
   color: #054e97;
 }
 
-.profile .profile-categories-container .categoryCard:hover {
+.profile .profile-categories-container .categoryCard:hover, .profile .activeUsers .categoryCard:hover {
   background: #e4e4e4;
 }
 
