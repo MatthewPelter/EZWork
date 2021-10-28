@@ -22,7 +22,7 @@ if (isset($_POST['size'])) {
 
 <head>
     <title>Post a Job</title>
-    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
 </head>
 
 <body>
