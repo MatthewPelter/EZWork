@@ -19,7 +19,7 @@
                         $_SESSION['error_page5'] = "Mandatory field(s) are missing, Please fill it again";
                         header("location: budget.php"); // Redirecting to fifth page.
                     } else {
-                        require_once('connect.php');
+                        require_once('../../classes/DB.php');
                         $username = $_SESSION['userid'];
                         $getUserID = "SELECT id FROM clients WHERE username = '$username'";
                         $getResult = mysqli_query($conn, $getUserID);
