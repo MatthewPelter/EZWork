@@ -137,6 +137,7 @@ $userID = $userrow['id'];
                 ?>
 
             </div>
+            <!--Profile skill container block
             <div class="profile-skills-container">
                 <div class="profile-skills">
                     <div class="profile-skills-images">
@@ -182,6 +183,7 @@ $userID = $userrow['id'];
                     </div>
                 </div>
             </div>
+            -->
             <div class="how-to-work">
                 <div class="htw-title">
                     <h3>How to work with Freelancers</h3>
