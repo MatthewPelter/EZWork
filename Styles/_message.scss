@@ -252,12 +252,13 @@ li {
 }
 
 .clearfix:after {
+  width: 75%;
   visibility: hidden;
   display: block;
   font-size: 0;
   content: " ";
   clear: both;
-  height: 0;
+
 }
 
 @media screen and (max-width: 754px) {
