@@ -49,7 +49,9 @@
 
                         if ($query) {
                             unset($_SESSION['post']);
-                            echo '<p><span id="success">Yay you just posted a job..!!</span></p>';
+            ?>
+                            <p><span id="success">Yay you just posted a job..!!</span></p>
+            <?php
                             header("Refresh:3; url=../../ClientProfile/index");
                         } else {
                             echo '<p><span>Form Submission Failed..!!</span></p>';
