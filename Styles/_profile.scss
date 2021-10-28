@@ -348,6 +348,8 @@
       }
     }
     .categoryCard {
+      overflow-y: scroll;
+      max-height: 10rem;
       cursor: pointer;
       padding: 1.5rem 1rem;
       width: 100%;

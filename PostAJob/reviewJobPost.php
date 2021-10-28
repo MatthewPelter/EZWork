@@ -1,9 +1,3 @@
-<?php
-session_start();
-include '../components/session-checker.php';
-require_once("../classes/DB.php");
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -31,7 +25,7 @@ require_once("../classes/DB.php");
         <?php include '../navbar.php'; ?>
         <!-- END NAVBAR -->
 
-    <form method="post" name="postJob">
+    <form method="post" action="/uploadJob.php" name="postJob">
         <div class="reviewJobPost-container">
             <div class="reviewJobPost_title">
                 <h3>Now just finish and review your job post.</h3>
@@ -468,9 +462,9 @@ require_once("../classes/DB.php");
         </div>
     </form>
     
-           <!-- Footer -->
+           <!-- NAV BAR -->
            <?php include '../footer.php'; ?>
-           <!-- END Footer -->
+           <!-- END NAVBAR -->
 
                 <!--DataList-->
                 <datalist id="allskills">
