@@ -98,7 +98,8 @@ if (isset($_POST['submit'])) {
         <div class="message-container clearfix">
             <div class="people-list" id="people-list">
                 <div class="search">
-                    <h2>Chats</h2>
+                    <input type="text" placeholder="search" />
+                    <i class="fa fa-search"></i>
                 </div>
                 <ul class="list">
 
@@ -208,15 +209,14 @@ if (isset($_POST['submit'])) {
     <?php
             }
     ?>
+    <!-- Footer -->
+    <?php include '../footer.php'; ?>
+    <!-- Footer -->
 
     <!--DataList-->
     <datalist id="allskills">
     </datalist>
     </div>
-
-        <!-- Footer -->
-        <?php include '../footer.php'; ?>
-    <!-- Footer -->
 </body>
 
 <script type="text/javascript">
