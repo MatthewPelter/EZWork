@@ -137,53 +137,48 @@ $userID = $userrow['id'];
                 ?>
 
             </div>
-            <!--Profile skill container block
-            <div class="profile-skills-container">
-                <div class="profile-skills">
-                    <div class="profile-skills-images">
-                        <img src="../Image/videoEditing.jpg" alt="">
-                    </div>
-                    <div class="profile-skills-content">
-                        <span>We think you might like help with</span>
-                        <div class="skill-title">
-                            <i class="fa fa-angle-left" onclick='plusSlides(-1,0)'></i>
-                            <h4 class="skill">Video Editing</h4>
-                            <i class="fa fa-angle-right" onclick='plusSlides(1,0)'></i>
+            
+            <div class="activeUsers profile-categories-container">
+                <div class="categories-title">
+                    <h3><i class="fa fa-users" aria-hidden="true"></i> Current Users</h3>
+                </div>
+
+                <div class="activerUsersBody" style="overflow-y: scroll;max-height: 60vh;">
+
+                    <?php
+                    $sql = "SELECT * FROM clients";
+                    $result = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
+                    if (mysqli_num_rows($result) > 0) {
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            if ($row['username'] != $_SESSION['userid']) {
+                    ?>
+
+                                <a style="color: black; text-decoration: none;" href="../Profile/userprofile.php?name=<?php echo $row['username']; ?>">
+                                    <div class="categoryCard">
+                                        <img src="../Users/user.svg" style="border-radius: 50%; width: 2rem;height: 2rem;" id="current-user-img" alt=`<?php echo $row['username']; ?>`>
+                                        <p><?php echo $row['username']; ?></p>
+                                        <i class="fa fa-angle-right"></i>
+                                    </div>
+                                </a>
+
+                        <?php
+                            }
+                        }
+                    } else {
+                        ?>
+                        <div class="categoryCard">
+                            <p>That's sad.. There are no users on this site yet.</p>
                         </div>
-                        <button>Learn More</button>
+                    <?php
+                    }
+                    ?>
+                    <div class="categoryCardEnd" style="border-bottom: none; padding: .5rem;">
+
                     </div>
                 </div>
 
-                <div class="profile-skills">
-                    <div class="profile-skills-images">
-                        <img src="../Image/websiteDesign.jpg" alt="">
-                    </div>
-                    <div class="profile-skills-content">
-                        <span>We think you might like help with</span>
-                        <div class="skill-title">
-                            <i class="fa fa-angle-left" onclick='plusSlides(-1,0)'></i>
-                            <h4 class="skill">Web Design</h4>
-                            <i class="fa fa-angle-right" onclick='plusSlides(1,0)'></i>
-                        </div>
-                        <button>Learn More</button>
-                    </div>
-                </div>
-                <div class="profile-skills">
-                    <div class="profile-skills-images">
-                        <img src="../Image/appDeveloper.jpg" alt="">
-                    </div>
-                    <div class="profile-skills-content">
-                        <span>We think you might like help with</span>
-                        <div class="skill-title">
-                            <i class="fa fa-angle-left" onclick='plusSlides(-1,0)'></i>
-                            <h4 class="skill">App Development</h4>
-                            <i class="fa fa-angle-right" onclick='plusSlides(1,0)'></i>
-                        </div>
-                        <button>Learn More</button>
-                    </div>
-                </div>
             </div>
-            -->
+
             <div class="how-to-work">
                 <div class="htw-title">
                     <h3>How to work with Freelancers</h3>
@@ -231,46 +226,52 @@ $userID = $userrow['id'];
                 </div>
             </div>
 
-            <div class="activeUsers profile-categories-container">
-                <div class="categories-title">
-                    <h3><i class="fa fa-users" aria-hidden="true"></i> Current Users</h3>
-                </div>
-
-                <div class="activerUsersBody" style="overflow-y: scroll;max-height: 70vh;">
-
-                    <?php
-                    $sql = "SELECT * FROM clients";
-                    $result = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
-                    if (mysqli_num_rows($result) > 0) {
-                        while ($row = mysqli_fetch_assoc($result)) {
-                            if ($row['username'] != $_SESSION['userid']) {
-                    ?>
-
-                                <a style="color: black; text-decoration: none;" href="../Profile/userprofile.php?name=<?php echo $row['username']; ?>">
-                                    <div class="categoryCard">
-                                        <img src="../Users/user.svg" style="border-radius: 50%; width: 2rem;height: 2rem;" id="current-user-img" alt=`<?php echo $row['username']; ?>`>
-                                        <p><?php echo $row['username']; ?></p>
-                                        <i class="fa fa-angle-right"></i>
-                                    </div>
-                                </a>
-
-                        <?php
-                            }
-                        }
-                    } else {
-                        ?>
-                        <div class="categoryCard">
-                            <p>That's sad.. There are no users on this site yet.</p>
+            <div class="profile-skills-container">
+                <div class="profile-skills">
+                    <div class="profile-skills-images">
+                        <img src="../Image/videoEditing.jpg" alt="">
+                    </div>
+                    <div class="profile-skills-content">
+                        <span>We think you might like help with</span>
+                        <div class="skill-title">
+                            <i class="fa fa-angle-left" onclick='plusSlides(-1,0)'></i>
+                            <h4 class="skill">Video Editing</h4>
+                            <i class="fa fa-angle-right" onclick='plusSlides(1,0)'></i>
                         </div>
-                    <?php
-                    }
-                    ?>
-                    <div class="categoryCardEnd" style="border-bottom: none; padding: .5rem;">
-
+                        <button>Learn More</button>
                     </div>
                 </div>
 
+                <div class="profile-skills">
+                    <div class="profile-skills-images">
+                        <img src="../Image/websiteDesign.jpg" alt="">
+                    </div>
+                    <div class="profile-skills-content">
+                        <span>We think you might like help with</span>
+                        <div class="skill-title">
+                            <i class="fa fa-angle-left" onclick='plusSlides(-1,0)'></i>
+                            <h4 class="skill">Web Design</h4>
+                            <i class="fa fa-angle-right" onclick='plusSlides(1,0)'></i>
+                        </div>
+                        <button>Learn More</button>
+                    </div>
+                </div>
+                <div class="profile-skills">
+                    <div class="profile-skills-images">
+                        <img src="../Image/appDeveloper.jpg" alt="">
+                    </div>
+                    <div class="profile-skills-content">
+                        <span>We think you might like help with</span>
+                        <div class="skill-title">
+                            <i class="fa fa-angle-left" onclick='plusSlides(-1,0)'></i>
+                            <h4 class="skill">App Development</h4>
+                            <i class="fa fa-angle-right" onclick='plusSlides(1,0)'></i>
+                        </div>
+                        <button>Learn More</button>
+                    </div>
+                </div>
             </div>
+
             <!--Categories Card
             <div class="profile-categories-container">
                 <div class="categories-title">
