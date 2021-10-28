@@ -20,11 +20,12 @@ if (!isset($_SESSION['userid'])) {
 
 <head>
     <title>Post a Job</title>
-    <link rel="stylesheet" href="../../Styles/style.css" />
+    <!-- <link rel="stylesheet" href="../../Styles/style.css" /> -->
 </head>
 
 <body>
-    <?php include '../../navbar.php'; ?>
+    <?php //include '../../navbar.php'; 
+    ?>
     <div class="PostAJob">
         <div class="PostAJobContainer">
             <h2>Post a Job</h2>
@@ -77,15 +78,18 @@ if (!isset($_SESSION['userid'])) {
 
                     }
                 } else {
+                    echo "Post not set";
                     header("location: length.php"); // Redirecting to first page.
                 }
             } else {
+                echo "Budget not set";
                 header("location: length.php"); // Redirecting to first page.
             }
             ?>
         </div>
     </div>
-    <?php include '../../footer.php'; ?>
+    <?php //include '../../footer.php'; 
+    ?>
 </body>
 <script src="../../ClientProfile/app.js"></script>
 
