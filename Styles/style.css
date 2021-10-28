@@ -6030,13 +6030,16 @@ section .container .login .login-container button:hover {
   text-decoration: underline;
 }
 
-.profile .profile-categories-container {
+.profile .activeUsers {
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
   grid-column: 3/4;
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
   grid-row: 1/3;
+}
+
+.profile .profile-categories-container {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
