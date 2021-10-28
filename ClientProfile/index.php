@@ -2,6 +2,13 @@
 session_start();
 include '../components/session-checker.php';
 require_once("../classes/DB.php");
+
+
+$username = $_SESSION['userid'];
+$getUserID = "SELECT id FROM clients WHERE username = '$username'";
+$getResult = mysqli_query($conn, $getUserID);
+$userrow = mysqli_fetch_assoc($getResult);
+$userID = $userrow['id'];
 ?>
 
 <!DOCTYPE html>
@@ -90,13 +97,17 @@ require_once("../classes/DB.php");
                 <div class="card result">
                     <button id="quick-link-job2" onclick="location.href='../PostAJob/newPostJob/length.php'">Post A Job</button>
                     <span>
-                        You currently have no job postings listed.
+                        <?php
+                        $jobSQL = "SELECT * FROM jobs WHERE user_id='$userID'";
+                        $jobResult = mysqli_query($conn, $jobSQL) or die(mysqli_errno($conn));
+                        if (mysqli_num_rows($jobResult) == 0) {
+                            echo "You currently have no job postings listed.";
+                        }
+                        ?>
                     </span>
                 </div>
 
                 <?php
-                $jobSQL = "SELECT * FROM clients";
-                $jobResult = mysqli_query($conn, $jobSQL) or die(mysqli_errno($conn));
                 if (mysqli_num_rows($jobResult) > 0) {
                     while ($r = mysqli_fetch_assoc($jobResult)) {
                 ?>
