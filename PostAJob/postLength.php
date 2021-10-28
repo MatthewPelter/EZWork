@@ -1,3 +1,20 @@
+<?php
+session_start(); // Session starts here.
+require_once('../../classes/DB.php');
+
+if (!isset($_SESSION['userid'])) {
+    header('Location: ../../login/index');
+    echo "NOT LOGGED IN";
+} else {
+    $username = $_SESSION['userid'];
+    $sql = "SELECT * FROM clients WHERE username = '$username' limit 1";
+    $result = mysqli_query($conn, $sql);
+    if (mysqli_num_rows($result) == 0) {
+        header('Location: ../../login/index');
+    }
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -59,7 +76,7 @@
                 <i class="fa fa-cog" aria-hidden="true"></i> Settings
             </p>
         </div>
-        <div class="mobileNavCard mobileNavLogOut" onclick="location.href='../login/index.php'">
+        <div class="mobileNavCard mobileNavLogOut" onclick="location.href='../login/index.html'">
             <p>
                 <i class="fa fa-sign-out-alt"></i> Sign Out
             </p>
@@ -81,7 +98,7 @@
                 <div class="line3"></div>
             </div>
             <div class="logo">
-                <a href="../ClientProfile/index.php"><h2>E<span>z</span>Work</h2></a>
+                <a href="../ClientProfile/index.html"><h2>E<span>z</span>Work</h2></a>
             </div>
             <div class="searchBar">
                 <form id="searchContainer">
@@ -173,7 +190,7 @@
                                 <i class="fa fa-cog" aria-hidden="true"></i> Settings
                             </p>
                         </div>
-                        <div class="card card3" onclick="location.href='../login/index.php'">
+                        <div class="card card3" onclick="location.href='../login/index.html'">
                             <p>
                                 <i class="fa fa-sign-out-alt"></i> Sign Out
                             </p>
@@ -185,43 +202,44 @@
             <i class="fa fa-times" id="ExitmobileSearch"></i>
         </div>
     </div>
-    <!--Post A Job Start-->
+
+    <!--Post A Job More Details-->
    
-    <div class="PostAJob">
-        <div class="PostAJobContainer">
-            <div class="PostAJobTitle">
-                <h3>Getting Started</h3>
-            </div>
-            <div class="PostAJobQuestion">
-                <h4>Choose an Option</h4>
-                <div class="options">
-                    <div class="optionCard" id="option1">
-                        <div class="choosen">
-                            <i class="fa fa-circle" aria-hidden="true" id="option1Circle"></i>
-                        </div>
-                        <div class="option1">
-                            <i class="fa fa-clock" aria-hidden="true"></i>
-                            <h4>Short term or part time work</h4>
-                            <p>Less than 30hrs/week</p>
-                            <p>Less than 3 months</p>
-                        </div>
-                    </div>
-                    <div class="optionCard" id="option2">
-                        <div class="choosen">
-                            <i class="fa fa-circle" aria-hidden="true" id="option2Circle"></i>
-                        </div>
-                        <div class="option2">
-                                <i class="fa fa-calendar" aria-hidden="true"></i>
-                                <h4>Designated, longer term work</h4>
-                                <p>More than 30hrs/week</p>
-                                <p>3+ months</p>
-                         </div>
-                    </div>
+    <div class="postJob-detail-skills">
+        <div class="detail-skills-container">
+            <div class="detail-progress-section">
+                <div class="progressBar">
+                    <progress id="jobPostProgress" value="0" max="100"></progress>
+                    <ul>
+                        <li id="current">Length</li>
+                        <li>Title</li>
+                        <li>Scope</li>
+                        <li>Location</li>
+                        <li>Budget</li>
+                    </ul>
+                </div>
+                <div class="title-card-intro">
+                    <h2>What is the length of your project?</h2>
                 </div>
             </div>
-            <div class="PostAJobCancel0rContinue">
-                <button id="cancel" onclick="location.href='../ClientProfile/index.php'">Cancel</button>
-                <button id="continue">Continue</button>
+            <div class="detail-input-section">
+                <span id="error">
+                    <!---- Initializing Session for errors --->
+                    <?php
+                    if (!empty($_SESSION['error'])) {
+                        echo $_SESSION['error'];
+                        unset($_SESSION['error']);
+                    }
+                    ?>
+                </span>
+                <form action="postTitle.php" method="post">
+                    <label>Chose an Option :<span>*</span></label><br />
+                    <input type="radio" id="short" name="length" value="s" required>
+                    <label for="short">Short term or part time work</label><br>
+                    <input type="radio" id="long" name="length" value="l">
+                    <label for="long">Designated, longer term work</label><br>
+                    <input type="submit" value="Next" />
+                </form>
             </div>
         </div>
     </div>
@@ -274,12 +292,11 @@
             </p>
         </div>
     </div>
-    <!--DataList-->
-    <datalist id="allskills">
-    </datalist>
+                <!--DataList-->
+                <datalist id="allskills">
+                </datalist>
 </body>
-<script src="../SkillsContainer/searchProfile.js"></script>
-<script src="./PostAJob.js"></script>
+<!--Nav bar script-->
 <script>
     var job = document.querySelector('.jobCard');
     var talent = document.querySelector('.talentCard');
@@ -370,5 +387,7 @@
             searchIcon.style.opacity='1';
         }
     }
+
 </script>
+
 </html>
