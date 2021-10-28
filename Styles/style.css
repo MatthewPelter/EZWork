@@ -6270,7 +6270,6 @@ section .container .login .login-container button:hover {
     margin-top: 1rem;
   }
   .profile .user-postings .postedJob {
-    display: inline-block;
     padding: 1rem;
     width: 100%;
   }
