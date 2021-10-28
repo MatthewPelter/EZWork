@@ -16633,6 +16633,7 @@ li {
 }
 
 .chat .chat-header {
+  width: 75%;
   padding: 20px;
   border-bottom: 2px solid white;
 }
@@ -16664,6 +16665,7 @@ li {
 }
 
 .chat .chat-history {
+  width: 75%;
   padding: 30px 30px 20px;
   border-bottom: 2px solid white;
   overflow-y: scroll;
@@ -16687,7 +16689,7 @@ li {
   border-radius: 7px;
   margin-bottom: 30px;
   width: 90%;
-  position: relative;
+  position: absolute;
 }
 
 .chat .chat-history .message:after {
