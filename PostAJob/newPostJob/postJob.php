@@ -80,21 +80,9 @@ if (!isset($_SESSION['userid'])) {
                     header("location: length.php"); // Redirecting to first page.
                 }
             } else {
-                if (empty($_SESSION['error_page6'])) {
-                    header("location: length.php"); // Redirecting to first page.
-                }
                 header("location: length.php"); // Redirecting to first page.
             }
             ?>
-
-            <span id="error">
-                <?php
-                if (!empty($_SESSION['error_page6'])) {
-                    echo $_SESSION['error_page6'];
-                    unset($_SESSION['error_page6']);
-                }
-                ?>
-            </span>
         </div>
     </div>
     <?php include '../../footer.php'; ?>
