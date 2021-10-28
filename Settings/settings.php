@@ -13,7 +13,7 @@ if ($cleanuname == $_SESSION['userid']) {
 
 $sql = "SELECT * FROM clients WHERE username='$cleanuname'";
 $result = mysqli_query($conn, $sql);
-$dataFound = true;
+$dataFound = false;
 
 if (mysqli_num_rows($result) > 0) {
     $dataFound = true;
@@ -81,7 +81,7 @@ if (mysqli_num_rows($result) > 0) {
                     <?php
                     } else {
                     ?>
-                        <span>Error retrieving data</span>
+                        <span>Error retrieving data.</span>
                     <?php
                     }
                     ?>
