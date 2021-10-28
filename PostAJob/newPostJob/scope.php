@@ -74,5 +74,6 @@ if (isset($_POST['title'])) {
     </div>
     <?php include '../../footer.php'; ?>
 </body>
+<script src="../../ClientProfile/app.js"></script>
 
 </html>
