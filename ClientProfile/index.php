@@ -94,21 +94,36 @@ require_once("../classes/DB.php");
                     </span>
                 </div>
 
-                <div class="postedJob">
-                    <div class="jobTitle">
-                        <h4 id="jobTitle"></h4>
-                        <i class="fa fa-ellipsis-v" id="jobGodMode" aria-hidden="true"></i>
-                        <div class="jobEdit">
-                            <div class="exit">
-                                <i class="fa fa-times" id="exitJobEdit"></i>
+                <?php
+                $jobSQL = "SELECT * FROM clients";
+                $jobResult = mysqli_query($conn, $jobSQL) or die(mysqli_errno($conn));
+                if (mysqli_num_rows($jobResult) > 0) {
+                    while ($r = mysqli_fetch_assoc($jobResult)) {
+                ?>
+                        <div class="postedJob">
+                            <div class="jobTitle">
+                                <h4 id="jobTitle"><?php echo $r['title']; ?></h4>
+                                <i class="fa fa-ellipsis-v" id="jobGodMode" aria-hidden="true"></i>
+                                <div class="jobEdit">
+                                    <div class="exit">
+                                        <i class="fa fa-times" id="exitJobEdit"></i>
+                                    </div>
+                                    <button onclick="location.href='../PostAJob/reviewJobPost.php'">Edit</button>
+                                    <button style="color: red;" id="deleteJob">Delete</button>
+                                </div>
                             </div>
-                            <button onclick="location.href='../PostAJob/reviewJobPost.php'">Edit</button>
-                            <button style="color: red;" id="deleteJob">Delete</button>
+                            <p>Status: <span id="status"><?php if ($r['status'] == 0) {
+                                                                echo "Open";
+                                                            } else {
+                                                                echo "Open";
+                                                            } ?></span></p>
+                            <p>Job Posted on <span id="date"></span> by <span id="postedBy">Me</span></p>
                         </div>
-                    </div>
-                    <p>Status: <span id="status">Open</span></p>
-                    <p>Job Posted on <span id="date"></span> by <span id="postedBy"></span></p>
-                </div>
+
+                <?php
+                    }
+                }
+                ?>
 
             </div>
             <div class="profile-skills-container">
@@ -207,7 +222,7 @@ require_once("../classes/DB.php");
                 <div class="categories-title">
                     <h3><i class="fa fa-users" aria-hidden="true"></i> Current Users</h3>
                 </div>
-                
+
                 <div class="activerUsersBody" style="overflow-y: scroll;max-height: 50vh;">
 
                     <?php
@@ -217,7 +232,7 @@ require_once("../classes/DB.php");
                         while ($row = mysqli_fetch_assoc($result)) {
                             if ($row['username'] != $_SESSION['userid']) {
                     ?>
-    
+
                                 <a style="color: black; text-decoration: none;" href="../Profile/userprofile.php?name=<?php echo $row['username']; ?>">
                                     <div class="categoryCard">
                                         <img src="../Users/user.svg" style="border-radius: 50%; width: 2rem;height: 2rem;" id="current-user-img" alt=`<?php echo $row['username']; ?>`>
@@ -225,7 +240,7 @@ require_once("../classes/DB.php");
                                         <i class="fa fa-angle-right"></i>
                                     </div>
                                 </a>
-    
+
                         <?php
                             }
                         }
@@ -238,7 +253,7 @@ require_once("../classes/DB.php");
                     }
                     ?>
                     <div class="categoryCardEnd" style="border-bottom: none; padding: .5rem;">
-    
+
                     </div>
                 </div>
 

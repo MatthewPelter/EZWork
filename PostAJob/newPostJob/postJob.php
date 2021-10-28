@@ -65,12 +65,9 @@ if (!isset($_SESSION['userid'])) {
 
                         if ($query) {
                             unset($_SESSION['post']);
-                            header("Refresh:5; url=https://ez-work.herokuapp.com/ClientProfile/index", true, 303);
-            ?>
-                            <p><span id="success">Yay you just posted a job..!!</span></p>
-                        <?php
+                            header("location: https://ez-work.herokuapp.com/ClientProfile/index");
                         } else {
-                        ?>
+            ?>
                             <p><span>Form Submission Failed..!!</span></p>
             <?php
                         }
@@ -78,11 +75,9 @@ if (!isset($_SESSION['userid'])) {
 
                     }
                 } else {
-                    echo "Post not set";
                     header("location: length.php"); // Redirecting to first page.
                 }
             } else {
-                echo "Budget not set";
                 header("location: length.php"); // Redirecting to first page.
             }
             ?>
