@@ -98,8 +98,7 @@ if (isset($_POST['submit'])) {
             <div class="message-container clearfix">
                 <div class="people-list" id="people-list">
                     <div class="search">
-                        <input type="text" placeholder="search" />
-                        <i class="fa fa-search"></i>
+                        <h3>Chats</h3>
                     </div>
                     <ul class="list">
     
