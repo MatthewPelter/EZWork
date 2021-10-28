@@ -64,12 +64,13 @@ if (!isset($_SESSION['userid'])) {
 
                         if ($query) {
                             unset($_SESSION['post']);
+                            header("Refresh:5; url=https://ez-work.herokuapp.com/ClientProfile/index", true, 303);
             ?>
                             <p><span id="success">Yay you just posted a job..!!</span></p>
                         <?php
-                            header("Refresh:5; url=https://ez-work.herokuapp.com/ClientProfile/index", true, 303);
                         } else {
-                        ?><p><span>Form Submission Failed..!!</span></p>
+                        ?>
+                            <p><span>Form Submission Failed..!!</span></p>
             <?php
                         }
                         unset($_SESSION['post']); // Destroying session.
