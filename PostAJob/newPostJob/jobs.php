@@ -2,6 +2,7 @@
 session_start(); // Session starts here.
 require_once('../../classes/DB.php');
 
+// Check if user is logged in. If not send them to the log in.
 if (!isset($_SESSION['userid'])) {
     header('Location: ../../login/index');
     echo "NOT LOGGED IN";
@@ -42,12 +43,11 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                 </div>
                 <?php
                 if (mysqli_num_rows($jobsQuery) > 0) {
-                    $uid = $r['user_id'];
-                    $unameSQL = "SELECT username FROM clients WHERE id='$uid'";
-                    $unameResult = mysqli_query($conn, $unameSQL);
-                    $unameFetched = mysqli_fetch_assoc($unameResult);
                     while ($r = mysqli_fetch_assoc($jobsQuery)) {
-
+                        $uid = $r['user_id'];
+                        $unameSQL = "SELECT username FROM clients WHERE id='$uid'";
+                        $unameResult = mysqli_query($conn, $unameSQL);
+                        $unameFetched = mysqli_fetch_assoc($unameResult);
                 ?>
                         <div class="postedJob">
                             <div class="jobTitle">
@@ -66,12 +66,19 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                                                             } else {
                                                                 echo "Open";
                                                             } ?></span></p>
-                            <p>Job Posted on <span id="date"><?php echo $r['datePosted']; ?></span> by <span id="postedBy"><?php echo $uid; ?></span></p>
+                            <p>Job Posted on <span id="date"><?php echo $r['datePosted']; ?></span> by <span id="postedBy"><?php echo $unameFetched; ?></span></p>
                         </div>
 
-                <?php
+                    <?php
                     }
-                }
+                } else { ?>
+                    <div class="postedJob">
+                        <div class="jobTitle">
+                            <h4 id="jobTitle">There are no jobs. :(</h4>
+                            <i class="fa fa-ellipsis-v" id="jobGodMode" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                <?php }
                 ?>
             </div>
         </div>
