@@ -225,7 +225,8 @@ $userID = $userrow['id'];
                     <p>Visit our <span>Help Center</span> for help.</p>
                 </div>
             </div>
-
+                
+            <!--profile-skill
             <div class="profile-skills-container">
                 <div class="profile-skills">
                     <div class="profile-skills-images">
@@ -271,6 +272,7 @@ $userID = $userrow['id'];
                     </div>
                 </div>
             </div>
+            -->
 
             <!--Categories Card
             <div class="profile-categories-container">
