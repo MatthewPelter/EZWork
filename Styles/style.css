@@ -16536,6 +16536,9 @@ li {
 */
 .body-container {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 0;
   margin: 0;
   background-color: #c7e3f3;
@@ -16771,6 +16774,7 @@ li {
 
 @media screen and (max-width: 754px) {
   .body-container {
+
     width: 100%;
     padding: 0;
     margin: 0;
