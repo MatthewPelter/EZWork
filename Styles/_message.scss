@@ -24,7 +24,7 @@ li {
   background-color: #c7e3f3;
 }
 .message-container {
-  margin: 3rem;
+  margin: 1rem;
   width: 750px;
   background: #444753;
   border-radius: 5px;
@@ -82,7 +82,6 @@ li {
 
 .chat {
   width: 490px;
-  height: 100%;
   float: left;
   background: #f2f5f8;
   border-top-right-radius: 5px;
@@ -259,8 +258,10 @@ li {
     background-color: #c7e3f3;
   }
   .message-container {
-    margin: 150px auto 0;
-    width: 750px;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
     background: #444753;
     border-radius: 0;
   }
@@ -317,7 +318,7 @@ li {
 
   .chat {
     width: 90%;
-    float: 0;
+    float: none;
     background: #f2f5f8;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;

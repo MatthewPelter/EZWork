@@ -1,4 +1,7 @@
 .profile-header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   background: #1d4354;
   .profileHeader {
@@ -479,7 +482,7 @@
       color: lightgreen;
     }
   }
-  .mobileJobCard,.mobileFreelanceCard,.mobileProjectsCard {
+  .mobileJobCard {
     width: 100%;
     padding: 0rem 1rem;
     display: none;
@@ -499,7 +502,6 @@
       }
     }
   }
-
   #navProfile {
     display: flex;
     width: 100%;
@@ -627,7 +629,7 @@
         .line1,
         .line2,
         .line3 {
-          width: 2rem;
+          width: 2.1rem;
           height: 0.25rem;
           margin: 0.4rem;
           border-radius: 5px;

@@ -2516,9 +2516,9 @@ header {
   .header-container .burger .line1,
   .header-container .burger .line2,
   .header-container .burger .line3 {
-    width: 1.7rem;
-    height: 0.3rem;
-    margin: 0.3rem;
+    width: 2.1rem;
+    height: 0.25rem;
+    margin: 0.4rem;
     border-radius: 5px;
     background: #054e97;
     pointer-events: none;
@@ -4568,6 +4568,9 @@ section .container .login .login-container button:hover {
 
 /*Profiles*/
 .profile-header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   background: #1d4354;
 }
@@ -5195,13 +5198,13 @@ section .container .login .login-container button:hover {
   color: lightgreen;
 }
 
-.profile-mobile-nav .mobileJobCard, .profile-mobile-nav .mobileFreelanceCard, .profile-mobile-nav .mobileProjectsCard {
+.profile-mobile-nav .mobileJobCard {
   width: 100%;
   padding: 0rem 1rem;
   display: none;
 }
 
-.profile-mobile-nav .mobileJobCard ul, .profile-mobile-nav .mobileFreelanceCard ul, .profile-mobile-nav .mobileProjectsCard ul {
+.profile-mobile-nav .mobileJobCard ul {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5212,7 +5215,7 @@ section .container .login .login-container button:hover {
           flex-direction: column;
 }
 
-.profile-mobile-nav .mobileJobCard ul a, .profile-mobile-nav .mobileFreelanceCard ul a, .profile-mobile-nav .mobileProjectsCard ul a {
+.profile-mobile-nav .mobileJobCard ul a {
   font-size: 0.8rem;
   margin: 0.5rem 0rem;
   width: 100%;
@@ -5220,7 +5223,7 @@ section .container .login .login-container button:hover {
   color: white;
 }
 
-.profile-mobile-nav .mobileJobCard ul a:hover, .profile-mobile-nav .mobileFreelanceCard ul a:hover, .profile-mobile-nav .mobileProjectsCard ul a:hover {
+.profile-mobile-nav .mobileJobCard ul a:hover {
   color: lightgreen;
 }
 
@@ -5385,7 +5388,7 @@ section .container .login .login-container button:hover {
   .profile-header-container .profileHeader .burger .line1,
   .profile-header-container .profileHeader .burger .line2,
   .profile-header-container .profileHeader .burger .line3 {
-    width: 2rem;
+    width: 2.1rem;
     height: 0.25rem;
     margin: 0.4rem;
     border-radius: 5px;
@@ -5535,6 +5538,7 @@ section .container .login .login-container button:hover {
 }
 
 .profile {
+  margin-top: 4.5rem;
   width: 100%;
   background: whitesmoke;
   padding: 2.5rem 10rem;
@@ -5699,9 +5703,8 @@ section .container .login .login-container button:hover {
 }
 
 .profile .user-postings .postedJob {
-  border-top: solid .7px lightgrey;
   display: none;
-  padding: 1rem;
+  padding: 1.5rem;
   width: 100%;
 }
 
@@ -5721,8 +5724,7 @@ section .container .login .login-container button:hover {
           justify-content: space-between;
 }
 
-.profile .user-postings .postedJob .jobTitle a {
-  text-decoration: none;
+.profile .user-postings .postedJob .jobTitle h4 {
   font-size: 1.2rem;
   color: #0a345e;
 }
@@ -6082,12 +6084,6 @@ section .container .login .login-container button:hover {
   border-bottom: 1px solid lightgrey;
 }
 
-.profile .profile-categories-container .categoryCard #current-user-img {
-  border-radius: 50%;
-  width: 2rem;
-  height: 2rem;
-}
-
 .profile .profile-categories-container .categoryCard svg {
   width: 15%;
 }
@@ -6236,7 +6232,7 @@ section .container .login .login-container button:hover {
   }
   .profile .user-postings .result {
     width: 100%;
-    padding: 2rem 1rem;
+    padding: 3rem 1rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -6614,6 +6610,7 @@ ul {
 }
 
 .settings {
+  margin-top: 4.8rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7742,6 +7739,7 @@ ul {
 }
 
 .PostAJob {
+  margin-top: 4.5rem;
   width: 100%;
   background: whitesmoke;
   padding: 2.5rem 10rem;
@@ -8054,6 +8052,7 @@ ul {
 }
 
 .postJob-detail {
+  margin-top: 4.5rem;
   width: 100%;
   background: whitesmoke;
   padding: 2.5rem 10rem;
@@ -8391,6 +8390,7 @@ ul {
 }
 
 .postJob-detail-skills {
+  margin-top: 4.5rem;
   width: 100%;
   background: whitesmoke;
   padding: 2.5rem 10rem;
@@ -8771,6 +8771,7 @@ ul {
 }
 
 .postJob-detail-scope {
+  margin-top: 4.5rem;
   width: 100%;
   background: whitesmoke;
   padding: 2.5rem 10rem;
@@ -9344,6 +9345,7 @@ ul {
 }
 
 .postJob-detail-location {
+  margin-top: 4.5rem;
   width: 100%;
   background: whitesmoke;
   padding: 2.5rem 10rem;
@@ -9784,6 +9786,7 @@ ul {
 }
 
 .postJob-detail-budget {
+  margin-top: 4.5rem;
   width: 100%;
   background: whitesmoke;
   padding: 2.5rem 10rem;
@@ -10453,13 +10456,14 @@ ul {
   background: #0a345e;
 }
 
-form .reviewJobPost-container {
+.reviewJobPost-container {
+  margin-top: 4.5rem;
   width: 100%;
   background: whitesmoke;
   padding: 2.5rem 10rem;
 }
 
-form .reviewJobPost-container .reviewJobPost_title {
+.reviewJobPost-container .reviewJobPost_title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10480,12 +10484,12 @@ form .reviewJobPost-container .reviewJobPost_title {
   padding: 2rem;
 }
 
-form .reviewJobPost-container .reviewJobPost_title h3 {
+.reviewJobPost-container .reviewJobPost_title h3 {
   font-size: 2rem;
   color: #0a345e;
 }
 
-form .reviewJobPost-container .reviewJobPost_title #postJobNow {
+.reviewJobPost-container .reviewJobPost_title #postJobNow {
   margin-left: 1rem;
   color: #0a345e;
   font-size: 1rem;
@@ -10498,11 +10502,11 @@ form .reviewJobPost-container .reviewJobPost_title #postJobNow {
   pointer-events: none;
 }
 
-form .reviewJobPost-container .reviewJobPost_title #postJobNow:hover {
+.reviewJobPost-container .reviewJobPost_title #postJobNow:hover {
   background: #0a345e;
 }
 
-form .reviewJobPost-container .review_jobTitle {
+.reviewJobPost-container .review_jobTitle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10515,12 +10519,12 @@ form .reviewJobPost-container .review_jobTitle {
   border-right: 1.25px solid #b9b3b3;
 }
 
-form .reviewJobPost-container .review_jobTitle h4 {
+.reviewJobPost-container .review_jobTitle h4 {
   font-size: 1.2rem;
   color: #0a345e;
 }
 
-form .reviewJobPost-container .review_jobTitle .confirmTitle {
+.reviewJobPost-container .review_jobTitle .confirmTitle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10533,7 +10537,7 @@ form .reviewJobPost-container .review_jobTitle .confirmTitle {
           align-items: center;
 }
 
-form .reviewJobPost-container .review_jobTitle .confirmTitle .title {
+.reviewJobPost-container .review_jobTitle .confirmTitle .title {
   width: 50%;
   margin: 0.6rem 0rem;
   padding: 0.7rem;
@@ -10544,27 +10548,27 @@ form .reviewJobPost-container .review_jobTitle .confirmTitle .title {
   cursor: pointer;
 }
 
-form .reviewJobPost-container .review_jobTitle .confirmTitle .title:hover {
+.reviewJobPost-container .review_jobTitle .confirmTitle .title:hover {
   border: 1.25px solid #0a345e;
 }
 
-form .reviewJobPost-container .review_jobTitle .confirmTitle .title span {
+.reviewJobPost-container .review_jobTitle .confirmTitle .title span {
   width: 100%;
   outline: none;
 }
 
-form .reviewJobPost-container .review_jobTitle .confirmTitle i {
+.reviewJobPost-container .review_jobTitle .confirmTitle i {
   color: #0a345e;
   font-size: 1.3rem;
   cursor: pointer;
   margin-left: 1rem;
 }
 
-form .reviewJobPost-container .review_jobTitle .confirmTitle i:hover {
+.reviewJobPost-container .review_jobTitle .confirmTitle i:hover {
   color: #054e97;
 }
 
-form .reviewJobPost-container .jobDescription {
+.reviewJobPost-container .jobDescription {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10578,18 +10582,18 @@ form .reviewJobPost-container .jobDescription {
   border-right: 1.25px solid #b9b3b3;
 }
 
-form .reviewJobPost-container .jobDescription h4 {
+.reviewJobPost-container .jobDescription h4 {
   font-size: 1.2rem;
   color: #0a345e;
 }
 
-form .reviewJobPost-container .jobDescription span {
+.reviewJobPost-container .jobDescription span {
   font-size: 0.9rem;
   color: #797979;
   margin: 0.5rem 0rem;
 }
 
-form .reviewJobPost-container .jobDescription textarea {
+.reviewJobPost-container .jobDescription textarea {
   margin: 1rem 0rem 0rem 0rem;
   width: 60%;
   font-size: 0.9rem;
@@ -10601,11 +10605,11 @@ form .reviewJobPost-container .jobDescription textarea {
   border: 1.25px solid #b9b3b3;
 }
 
-form .reviewJobPost-container .jobDescription textarea:hover {
+.reviewJobPost-container .jobDescription textarea:hover {
   border: 1.25px solid #0a345e;
 }
 
-form .reviewJobPost-container .jobDescription p {
+.reviewJobPost-container .jobDescription p {
   margin: 0;
   font-size: 0.8rem;
   padding: 0;
@@ -10614,18 +10618,18 @@ form .reviewJobPost-container .jobDescription p {
   color: #797979;
 }
 
-form .reviewJobPost-container .jobDescription #descriptionError {
+.reviewJobPost-container .jobDescription #descriptionError {
   display: none;
   margin-bottom: 0.5rem;
   color: red;
   font-size: 0.8rem;
 }
 
-form .reviewJobPost-container .jobDescription #descriptionError i {
+.reviewJobPost-container .jobDescription #descriptionError i {
   margin-right: 0.8rem;
 }
 
-form .reviewJobPost-container .reviewJobDetails {
+.reviewJobPost-container .reviewJobDetails {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10639,16 +10643,16 @@ form .reviewJobPost-container .reviewJobDetails {
   border-right: 1.25px solid #b9b3b3;
 }
 
-form .reviewJobPost-container .reviewJobDetails h4 {
+.reviewJobPost-container .reviewJobDetails h4 {
   font-size: 1.2rem;
   color: #0a345e;
 }
 
-form .reviewJobPost-container .reviewJobDetails .reviewCategory,
-form .reviewJobPost-container .reviewJobDetails .reviewSkill,
-form .reviewJobPost-container .reviewJobDetails .reviewScope,
-form .reviewJobPost-container .reviewJobDetails .reviewLocation,
-form .reviewJobPost-container .reviewJobDetails .reviewBudget {
+.reviewJobPost-container .reviewJobDetails .reviewCategory,
+.reviewJobPost-container .reviewJobDetails .reviewSkill,
+.reviewJobPost-container .reviewJobDetails .reviewScope,
+.reviewJobPost-container .reviewJobDetails .reviewLocation,
+.reviewJobPost-container .reviewJobDetails .reviewBudget {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10661,11 +10665,11 @@ form .reviewJobPost-container .reviewJobDetails .reviewBudget {
           align-items: center;
 }
 
-form .reviewJobPost-container .reviewJobDetails .reviewCategory i,
-form .reviewJobPost-container .reviewJobDetails .reviewSkill i,
-form .reviewJobPost-container .reviewJobDetails .reviewScope i,
-form .reviewJobPost-container .reviewJobDetails .reviewLocation i,
-form .reviewJobPost-container .reviewJobDetails .reviewBudget i {
+.reviewJobPost-container .reviewJobDetails .reviewCategory i,
+.reviewJobPost-container .reviewJobDetails .reviewSkill i,
+.reviewJobPost-container .reviewJobDetails .reviewScope i,
+.reviewJobPost-container .reviewJobDetails .reviewLocation i,
+.reviewJobPost-container .reviewJobDetails .reviewBudget i {
   cursor: pointer;
   font-size: 0.8rem;
   margin-left: 1rem;
@@ -10676,24 +10680,24 @@ form .reviewJobPost-container .reviewJobDetails .reviewBudget i {
   border: 0.7px solid lightgrey;
 }
 
-form .reviewJobPost-container .reviewJobDetails .reviewCategory i:hover,
-form .reviewJobPost-container .reviewJobDetails .reviewSkill i:hover,
-form .reviewJobPost-container .reviewJobDetails .reviewScope i:hover,
-form .reviewJobPost-container .reviewJobDetails .reviewLocation i:hover,
-form .reviewJobPost-container .reviewJobDetails .reviewBudget i:hover {
+.reviewJobPost-container .reviewJobDetails .reviewCategory i:hover,
+.reviewJobPost-container .reviewJobDetails .reviewSkill i:hover,
+.reviewJobPost-container .reviewJobDetails .reviewScope i:hover,
+.reviewJobPost-container .reviewJobDetails .reviewLocation i:hover,
+.reviewJobPost-container .reviewJobDetails .reviewBudget i:hover {
   background: #e2e2e2;
 }
 
-form .reviewJobPost-container .reviewJobDetails .reviewCategory p,
-form .reviewJobPost-container .reviewJobDetails .reviewSkill p,
-form .reviewJobPost-container .reviewJobDetails .reviewScope p,
-form .reviewJobPost-container .reviewJobDetails .reviewLocation p,
-form .reviewJobPost-container .reviewJobDetails .reviewBudget p {
+.reviewJobPost-container .reviewJobDetails .reviewCategory p,
+.reviewJobPost-container .reviewJobDetails .reviewSkill p,
+.reviewJobPost-container .reviewJobDetails .reviewScope p,
+.reviewJobPost-container .reviewJobDetails .reviewLocation p,
+.reviewJobPost-container .reviewJobDetails .reviewBudget p {
   padding: 0.5rem 0rem;
   color: #797979;
 }
 
-form .reviewJobPost-container .buttonCard {
+.reviewJobPost-container .buttonCard {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10713,7 +10717,7 @@ form .reviewJobPost-container .buttonCard {
   border-bottom-right-radius: 15px;
 }
 
-form .reviewJobPost-container .buttonCard .back #back {
+.reviewJobPost-container .buttonCard .back #back {
   color: #0a345e;
   font-size: 1rem;
   background: none;
@@ -10723,11 +10727,11 @@ form .reviewJobPost-container .buttonCard .back #back {
   cursor: pointer;
 }
 
-form .reviewJobPost-container .buttonCard .back #back:hover {
+.reviewJobPost-container .buttonCard .back #back:hover {
   background: #ebebeb;
 }
 
-form .reviewJobPost-container .buttonCard .continue #cancel {
+.reviewJobPost-container .buttonCard .continue #cancel {
   margin-right: 1rem;
   color: #0a345e;
   font-size: 1rem;
@@ -10739,11 +10743,11 @@ form .reviewJobPost-container .buttonCard .continue #cancel {
   cursor: pointer;
 }
 
-form .reviewJobPost-container .buttonCard .continue #cancel:hover {
+.reviewJobPost-container .buttonCard .continue #cancel:hover {
   text-decoration: underline;
 }
 
-form .reviewJobPost-container .buttonCard .continue #postJob {
+.reviewJobPost-container .buttonCard .continue #postJob {
   margin-left: 1rem;
   color: #0a345e;
   font-size: 1rem;
@@ -10756,11 +10760,11 @@ form .reviewJobPost-container .buttonCard .continue #postJob {
   pointer-events: none;
 }
 
-form .reviewJobPost-container .buttonCard .continue #postJob:hover {
+.reviewJobPost-container .buttonCard .continue #postJob:hover {
   background: #0a345e;
 }
 
-form .settingsOverlay {
+.settingsOverlay {
   height: 100%;
   width: 100%;
   display: none;
@@ -10772,7 +10776,7 @@ form .settingsOverlay {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-form .settingsOverlay .editCategoryContainer {
+.settingsOverlay .editCategoryContainer {
   position: fixed;
   top: 20%;
   left: 25%;
@@ -10792,7 +10796,7 @@ form .settingsOverlay .editCategoryContainer {
           justify-content: center;
 }
 
-form .settingsOverlay .editCategoryContainer .editCategoryHeader {
+.settingsOverlay .editCategoryContainer .editCategoryHeader {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10811,57 +10815,57 @@ form .settingsOverlay .editCategoryContainer .editCategoryHeader {
   border-bottom: 0.7px solid lightgrey;
 }
 
-form .settingsOverlay .editCategoryContainer .editCategoryHeader h3 {
+.settingsOverlay .editCategoryContainer .editCategoryHeader h3 {
   font-size: 1.3rem;
 }
 
-form .settingsOverlay .editCategoryContainer .editCategoryHeader i {
+.settingsOverlay .editCategoryContainer .editCategoryHeader i {
   cursor: pointer;
   font-size: 1.5rem;
   color: #797979;
 }
 
-form .settingsOverlay .editCategoryContainer .editCategoryBody {
+.settingsOverlay .editCategoryContainer .editCategoryBody {
   width: 100%;
 }
 
-form .settingsOverlay .editCategoryContainer .editCategoryBody h4 {
+.settingsOverlay .editCategoryContainer .editCategoryBody h4 {
   color: black;
   font-size: 0.9rem;
   padding: 0.5rem 0rem;
 }
 
-form .settingsOverlay .editCategoryContainer .editCategoryBody .accoutingConsultingSpecialtyCard {
+.settingsOverlay .editCategoryContainer .editCategoryBody .accoutingConsultingSpecialtyCard {
   display: inline-block;
   width: 100%;
 }
 
-form .settingsOverlay .editCategoryContainer .editCategoryBody .adminSupportSpecialtyCard,
-form .settingsOverlay .editCategoryContainer .editCategoryBody .customerServiceSpecialtyCard,
-form .settingsOverlay .editCategoryContainer .editCategoryBody .dataScienceAnalyticsSpecialtyCard,
-form .settingsOverlay .editCategoryContainer .editCategoryBody .designCreativeSpecialtyCard,
-form .settingsOverlay .editCategoryContainer .editCategoryBody .engineeringArchitectureSpecialtyCard,
-form .settingsOverlay .editCategoryContainer .editCategoryBody .itNetworkSpecialtyCard,
-form .settingsOverlay .editCategoryContainer .editCategoryBody .legalSpecialtyCard,
-form .settingsOverlay .editCategoryContainer .editCategoryBody .salesMarketingSpecialtyCard,
-form .settingsOverlay .editCategoryContainer .editCategoryBody .translationSpecialtyCard,
-form .settingsOverlay .editCategoryContainer .editCategoryBody .webMobileDevSpecialtyCard,
-form .settingsOverlay .editCategoryContainer .editCategoryBody .writingSpecialtyCard {
+.settingsOverlay .editCategoryContainer .editCategoryBody .adminSupportSpecialtyCard,
+.settingsOverlay .editCategoryContainer .editCategoryBody .customerServiceSpecialtyCard,
+.settingsOverlay .editCategoryContainer .editCategoryBody .dataScienceAnalyticsSpecialtyCard,
+.settingsOverlay .editCategoryContainer .editCategoryBody .designCreativeSpecialtyCard,
+.settingsOverlay .editCategoryContainer .editCategoryBody .engineeringArchitectureSpecialtyCard,
+.settingsOverlay .editCategoryContainer .editCategoryBody .itNetworkSpecialtyCard,
+.settingsOverlay .editCategoryContainer .editCategoryBody .legalSpecialtyCard,
+.settingsOverlay .editCategoryContainer .editCategoryBody .salesMarketingSpecialtyCard,
+.settingsOverlay .editCategoryContainer .editCategoryBody .translationSpecialtyCard,
+.settingsOverlay .editCategoryContainer .editCategoryBody .webMobileDevSpecialtyCard,
+.settingsOverlay .editCategoryContainer .editCategoryBody .writingSpecialtyCard {
   display: none;
   width: 100%;
 }
 
-form .settingsOverlay .editCategoryContainer .editCategoryBody .adminSupportSpecialtyCard select,
-form .settingsOverlay .editCategoryContainer .editCategoryBody .customerServiceSpecialtyCard select,
-form .settingsOverlay .editCategoryContainer .editCategoryBody .dataScienceAnalyticsSpecialtyCard select,
-form .settingsOverlay .editCategoryContainer .editCategoryBody .designCreativeSpecialtyCard select,
-form .settingsOverlay .editCategoryContainer .editCategoryBody .engineeringArchitectureSpecialtyCard select,
-form .settingsOverlay .editCategoryContainer .editCategoryBody .itNetworkSpecialtyCard select,
-form .settingsOverlay .editCategoryContainer .editCategoryBody .legalSpecialtyCard select,
-form .settingsOverlay .editCategoryContainer .editCategoryBody .salesMarketingSpecialtyCard select,
-form .settingsOverlay .editCategoryContainer .editCategoryBody .translationSpecialtyCard select,
-form .settingsOverlay .editCategoryContainer .editCategoryBody .webMobileDevSpecialtyCard select,
-form .settingsOverlay .editCategoryContainer .editCategoryBody .writingSpecialtyCard select {
+.settingsOverlay .editCategoryContainer .editCategoryBody .adminSupportSpecialtyCard select,
+.settingsOverlay .editCategoryContainer .editCategoryBody .customerServiceSpecialtyCard select,
+.settingsOverlay .editCategoryContainer .editCategoryBody .dataScienceAnalyticsSpecialtyCard select,
+.settingsOverlay .editCategoryContainer .editCategoryBody .designCreativeSpecialtyCard select,
+.settingsOverlay .editCategoryContainer .editCategoryBody .engineeringArchitectureSpecialtyCard select,
+.settingsOverlay .editCategoryContainer .editCategoryBody .itNetworkSpecialtyCard select,
+.settingsOverlay .editCategoryContainer .editCategoryBody .legalSpecialtyCard select,
+.settingsOverlay .editCategoryContainer .editCategoryBody .salesMarketingSpecialtyCard select,
+.settingsOverlay .editCategoryContainer .editCategoryBody .translationSpecialtyCard select,
+.settingsOverlay .editCategoryContainer .editCategoryBody .webMobileDevSpecialtyCard select,
+.settingsOverlay .editCategoryContainer .editCategoryBody .writingSpecialtyCard select {
   margin: 0.5rem 0rem;
   width: 60%;
   border-radius: 10px;
@@ -10870,21 +10874,21 @@ form .settingsOverlay .editCategoryContainer .editCategoryBody .writingSpecialty
   cursor: pointer;
 }
 
-form .settingsOverlay .editCategoryContainer .editCategoryBody .adminSupportSpecialtyCard select:hover,
-form .settingsOverlay .editCategoryContainer .editCategoryBody .customerServiceSpecialtyCard select:hover,
-form .settingsOverlay .editCategoryContainer .editCategoryBody .dataScienceAnalyticsSpecialtyCard select:hover,
-form .settingsOverlay .editCategoryContainer .editCategoryBody .designCreativeSpecialtyCard select:hover,
-form .settingsOverlay .editCategoryContainer .editCategoryBody .engineeringArchitectureSpecialtyCard select:hover,
-form .settingsOverlay .editCategoryContainer .editCategoryBody .itNetworkSpecialtyCard select:hover,
-form .settingsOverlay .editCategoryContainer .editCategoryBody .legalSpecialtyCard select:hover,
-form .settingsOverlay .editCategoryContainer .editCategoryBody .salesMarketingSpecialtyCard select:hover,
-form .settingsOverlay .editCategoryContainer .editCategoryBody .translationSpecialtyCard select:hover,
-form .settingsOverlay .editCategoryContainer .editCategoryBody .webMobileDevSpecialtyCard select:hover,
-form .settingsOverlay .editCategoryContainer .editCategoryBody .writingSpecialtyCard select:hover {
+.settingsOverlay .editCategoryContainer .editCategoryBody .adminSupportSpecialtyCard select:hover,
+.settingsOverlay .editCategoryContainer .editCategoryBody .customerServiceSpecialtyCard select:hover,
+.settingsOverlay .editCategoryContainer .editCategoryBody .dataScienceAnalyticsSpecialtyCard select:hover,
+.settingsOverlay .editCategoryContainer .editCategoryBody .designCreativeSpecialtyCard select:hover,
+.settingsOverlay .editCategoryContainer .editCategoryBody .engineeringArchitectureSpecialtyCard select:hover,
+.settingsOverlay .editCategoryContainer .editCategoryBody .itNetworkSpecialtyCard select:hover,
+.settingsOverlay .editCategoryContainer .editCategoryBody .legalSpecialtyCard select:hover,
+.settingsOverlay .editCategoryContainer .editCategoryBody .salesMarketingSpecialtyCard select:hover,
+.settingsOverlay .editCategoryContainer .editCategoryBody .translationSpecialtyCard select:hover,
+.settingsOverlay .editCategoryContainer .editCategoryBody .webMobileDevSpecialtyCard select:hover,
+.settingsOverlay .editCategoryContainer .editCategoryBody .writingSpecialtyCard select:hover {
   border: 0.6px solid #054e97;
 }
 
-form .settingsOverlay .editCategoryContainer .editCategoryBody select {
+.settingsOverlay .editCategoryContainer .editCategoryBody select {
   margin: 0.5rem 0rem;
   width: 60%;
   border-radius: 10px;
@@ -10893,11 +10897,11 @@ form .settingsOverlay .editCategoryContainer .editCategoryBody select {
   cursor: pointer;
 }
 
-form .settingsOverlay .editCategoryContainer .editCategoryBody select:hover {
+.settingsOverlay .editCategoryContainer .editCategoryBody select:hover {
   border: 0.6px solid #054e97;
 }
 
-form .settingsOverlay .editCategoryContainer .editCategorySubmit {
+.settingsOverlay .editCategoryContainer .editCategorySubmit {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -10912,7 +10916,7 @@ form .settingsOverlay .editCategoryContainer .editCategorySubmit {
   padding: 0.5rem 0rem;
 }
 
-form .settingsOverlay .editCategoryContainer .editCategorySubmit #cancelEdit {
+.settingsOverlay .editCategoryContainer .editCategorySubmit #cancelEdit {
   color: #0a345e;
   font-size: 1rem;
   background: none;
@@ -10920,11 +10924,11 @@ form .settingsOverlay .editCategoryContainer .editCategorySubmit #cancelEdit {
   cursor: pointer;
 }
 
-form .settingsOverlay .editCategoryContainer .editCategorySubmit #cancelEdit:hover {
+.settingsOverlay .editCategoryContainer .editCategorySubmit #cancelEdit:hover {
   text-decoration: underline;
 }
 
-form .settingsOverlay .editCategoryContainer .editCategorySubmit #applyEdit {
+.settingsOverlay .editCategoryContainer .editCategorySubmit #applyEdit {
   margin-left: 1rem;
   color: white;
   font-size: 1rem;
@@ -10935,7 +10939,7 @@ form .settingsOverlay .editCategoryContainer .editCategorySubmit #applyEdit {
   cursor: pointer;
 }
 
-form .skillsOverlay {
+.skillsOverlay {
   height: 100%;
   width: 100%;
   display: none;
@@ -10947,7 +10951,7 @@ form .skillsOverlay {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-form .skillsOverlay .editSkillsContainer {
+.skillsOverlay .editSkillsContainer {
   position: fixed;
   top: 20%;
   left: 25%;
@@ -10967,7 +10971,7 @@ form .skillsOverlay .editSkillsContainer {
           justify-content: center;
 }
 
-form .skillsOverlay .editSkillsContainer .editSkillsHeader {
+.skillsOverlay .editSkillsContainer .editSkillsHeader {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10986,21 +10990,21 @@ form .skillsOverlay .editSkillsContainer .editSkillsHeader {
   border-bottom: 0.7px solid lightgrey;
 }
 
-form .skillsOverlay .editSkillsContainer .editSkillsHeader h3 {
+.skillsOverlay .editSkillsContainer .editSkillsHeader h3 {
   font-size: 1.3rem;
 }
 
-form .skillsOverlay .editSkillsContainer .editSkillsHeader i {
+.skillsOverlay .editSkillsContainer .editSkillsHeader i {
   cursor: pointer;
   font-size: 1.5rem;
   color: #797979;
 }
 
-form .skillsOverlay .editSkillsContainer .editSkillsBody {
+.skillsOverlay .editSkillsContainer .editSkillsBody {
   width: 100%;
 }
 
-form .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section {
+.skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section {
   width: 100%;
   height: 100%;
   padding: 1rem;
@@ -11022,17 +11026,17 @@ form .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section {
           align-items: flex-start;
 }
 
-form .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section h3 {
+.skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section h3 {
   font-size: 1.3rem;
   padding: 1rem 0rem;
 }
 
-form .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section h4 {
+.skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section h4 {
   padding: 1rem 0rem;
   font-size: 1.1rem;
 }
 
-form .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section input {
+.skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section input {
   width: 100%;
   height: 2.5rem;
   padding: 0.5rem 1rem;
@@ -11042,18 +11046,18 @@ form .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section i
   border-radius: 2px;
 }
 
-form .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section ul {
+.skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section ul {
   margin-left: 0.5rem;
   list-style: circle;
 }
 
-form .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section ul li {
+.skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section ul li {
   padding: 0.4rem 0rem;
   font-size: 0.87rem;
   font-weight: lighter;
 }
 
-form .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section .skillSearch {
+.skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section .skillSearch {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11070,18 +11074,18 @@ form .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section .
   border-radius: 8px;
 }
 
-form .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section .skillSearch i {
+.skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section .skillSearch i {
   cursor: pointer;
   margin-left: 1rem;
   color: #797979;
 }
 
-form .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section .skillSearch input {
+.skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section .skillSearch input {
   border: none;
   border-radius: 15px;
 }
 
-form .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section .skillSearch #enterSkill {
+.skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section .skillSearch #enterSkill {
   border: none;
   color: #054e97;
   cursor: pointer;
@@ -11090,7 +11094,7 @@ form .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section .
   background: transparent;
 }
 
-form .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section #selectedSkillsForm {
+.skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section #selectedSkillsForm {
   padding: 0.5rem;
   border-radius: 15px;
   border: 0.7px solid lightgrey;
@@ -11106,7 +11110,7 @@ form .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section #
       flex-wrap: wrap;
 }
 
-form .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section #selectedSkillsForm label {
+.skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section #selectedSkillsForm label {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -11120,7 +11124,7 @@ form .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section #
   margin: 0.4rem;
 }
 
-form .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section .selectCategory {
+.skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section .selectCategory {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11137,7 +11141,7 @@ form .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section .
           justify-content: space-between;
 }
 
-form .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section .selectCategory select {
+.skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section .selectCategory select {
   padding: 0;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -11145,7 +11149,7 @@ form .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section .
   border: none;
 }
 
-form .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section select {
+.skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section select {
   width: 100%;
   padding: 0.5rem 1rem;
   background: transparent;
@@ -11157,12 +11161,12 @@ form .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section s
   border-radius: 10px;
 }
 
-form .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section span {
+.skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section span {
   margin-left: 0.5rem;
   color: #054e97;
 }
 
-form .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section .CategorySpecialtyContainer {
+.skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section .CategorySpecialtyContainer {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11175,7 +11179,7 @@ form .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section .
       flex-wrap: wrap;
 }
 
-form .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section .CategorySpecialtyContainer ul {
+.skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section .CategorySpecialtyContainer ul {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11188,7 +11192,7 @@ form .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section .
       flex-wrap: wrap;
 }
 
-form .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section .CategorySpecialtyContainer ul li {
+.skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section .CategorySpecialtyContainer ul li {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -11202,11 +11206,11 @@ form .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section .
   cursor: pointer;
 }
 
-form .skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section .CategorySpecialtyContainer ul li:hover {
+.skillsOverlay .editSkillsContainer .editSkillsBody .detail-input-section .CategorySpecialtyContainer ul li:hover {
   background: #71c571;
 }
 
-form .skillsOverlay .editSkillsContainer .editSkillsSubmit {
+.skillsOverlay .editSkillsContainer .editSkillsSubmit {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11221,7 +11225,7 @@ form .skillsOverlay .editSkillsContainer .editSkillsSubmit {
   padding: 0.5rem 0rem;
 }
 
-form .skillsOverlay .editSkillsContainer .editSkillsSubmit #cancelEdit {
+.skillsOverlay .editSkillsContainer .editSkillsSubmit #cancelEdit {
   color: #0a345e;
   font-size: 1rem;
   background: none;
@@ -11229,11 +11233,11 @@ form .skillsOverlay .editSkillsContainer .editSkillsSubmit #cancelEdit {
   cursor: pointer;
 }
 
-form .skillsOverlay .editSkillsContainer .editSkillsSubmit #cancelEdit:hover {
+.skillsOverlay .editSkillsContainer .editSkillsSubmit #cancelEdit:hover {
   text-decoration: underline;
 }
 
-form .skillsOverlay .editSkillsContainer .editSkillsSubmit #applySkillEdit {
+.skillsOverlay .editSkillsContainer .editSkillsSubmit #applySkillEdit {
   margin-left: 1rem;
   color: white;
   font-size: 1rem;
@@ -11244,7 +11248,7 @@ form .skillsOverlay .editSkillsContainer .editSkillsSubmit #applySkillEdit {
   cursor: pointer;
 }
 
-form .scopeOverlay {
+.scopeOverlay {
   height: 100%;
   width: 100%;
   display: none;
@@ -11256,7 +11260,7 @@ form .scopeOverlay {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-form .scopeOverlay .editScopeContainer {
+.scopeOverlay .editScopeContainer {
   position: fixed;
   top: 6%;
   left: 25%;
@@ -11276,7 +11280,7 @@ form .scopeOverlay .editScopeContainer {
           justify-content: center;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeHeader {
+.scopeOverlay .editScopeContainer .editScopeHeader {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11295,21 +11299,21 @@ form .scopeOverlay .editScopeContainer .editScopeHeader {
   border-bottom: 0.7px solid lightgrey;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeHeader h3 {
+.scopeOverlay .editScopeContainer .editScopeHeader h3 {
   font-size: 1.3rem;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeHeader i {
+.scopeOverlay .editScopeContainer .editScopeHeader i {
   cursor: pointer;
   font-size: 1.5rem;
   color: #797979;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeBody {
+.scopeOverlay .editScopeContainer .editScopeBody {
   width: 100%;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section {
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section {
   width: 100%;
   height: 100%;
   padding: 1rem;
@@ -11331,12 +11335,12 @@ form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section {
           align-items: flex-start;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-container {
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-container {
   width: 100%;
   padding: 1rem;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-container .project-size-option {
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-container .project-size-option {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11347,7 +11351,7 @@ form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .pro
           flex-direction: column;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-container .project-size-option .project-size-option-title {
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-container .project-size-option .project-size-option-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11360,13 +11364,13 @@ form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .pro
           align-items: center;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-container .project-size-option .project-size-option-title h3 {
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-container .project-size-option .project-size-option-title h3 {
   width: 100%;
   text-align: start;
   font-size: 1.1rem;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-container .project-size-option .project-size-option-title i {
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-container .project-size-option .project-size-option-title i {
   text-align: end;
   cursor: pointer;
   font-size: 0.8rem;
@@ -11377,17 +11381,17 @@ form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .pro
   border: 0.7px solid lightgrey;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-container .project-size-option .project-size-option-title i:hover {
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-container .project-size-option .project-size-option-title i:hover {
   background: #e2e2e2;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-container .project-size-option span {
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-container .project-size-option span {
   padding-right: 1.5rem;
   color: #797979;
   font-size: 0.8rem;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time {
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time {
   width: 100%;
   padding: 1rem;
   display: -webkit-box;
@@ -11405,11 +11409,11 @@ form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .pro
           justify-content: space-between;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time h3 {
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time h3 {
   font-size: 1.1rem;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time i {
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time i {
   cursor: pointer;
   font-size: 0.8rem;
   color: #797979;
@@ -11419,11 +11423,11 @@ form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .pro
   border: 0.7px solid lightgrey;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time i:hover {
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time i:hover {
   background: #e2e2e2;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience {
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience {
   width: 100%;
   padding: 1rem;
   display: -webkit-box;
@@ -11441,11 +11445,11 @@ form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .fre
           justify-content: space-between;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience h3 {
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience h3 {
   font-size: 1.1rem;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience i {
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience i {
   cursor: pointer;
   font-size: 0.8rem;
   color: #797979;
@@ -11455,23 +11459,23 @@ form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .fre
   border: 0.7px solid lightgrey;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience i:hover {
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience i:hover {
   background: #e2e2e2;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options {
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options {
   display: none;
   width: 100%;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options span {
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options span {
   font-size: 0.9rem;
   color: #797979;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .entry-option,
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .intermediate-option,
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .expert-option {
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .entry-option,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .intermediate-option,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .expert-option {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11484,9 +11488,9 @@ form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .fre
   border-radius: 5px;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .entry-option .option-title,
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .intermediate-option .option-title,
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .expert-option .option-title {
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .entry-option .option-title,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .intermediate-option .option-title,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .expert-option .option-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11500,17 +11504,17 @@ form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .fre
   width: 100%;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .entry-option .option-title h3,
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .intermediate-option .option-title h3,
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .expert-option .option-title h3 {
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .entry-option .option-title h3,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .intermediate-option .option-title h3,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .expert-option .option-title h3 {
   font-size: 1rem;
   font-weight: lighter;
   padding-left: 0.5rem;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .entry-option .option-title i,
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .intermediate-option .option-title i,
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .expert-option .option-title i {
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .entry-option .option-title i,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .intermediate-option .option-title i,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .expert-option .option-title i {
   font-size: 0.7rem;
   color: transparent;
   padding: 0.1rem;
@@ -11518,43 +11522,43 @@ form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .fre
   border: 0.5px solid lightgrey;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .entry-option .option-title #entry-button,
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .intermediate-option .option-title #entry-button,
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .expert-option .option-title #entry-button {
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .entry-option .option-title #entry-button,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .intermediate-option .option-title #entry-button,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .expert-option .option-title #entry-button {
   color: #054e97;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .entry-option span,
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .intermediate-option span,
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .expert-option span {
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .entry-option span,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .intermediate-option span,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .expert-option span {
   font-size: 0.8rem;
   color: #797979;
   padding-left: 1.5rem;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .entry-option:hover,
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .intermediate-option:hover,
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .expert-option:hover {
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .entry-option:hover,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .intermediate-option:hover,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .expert-option:hover {
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
   background: #eeeeee;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .entry-option:hover i,
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .intermediate-option:hover i,
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .expert-option:hover i {
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .entry-option:hover i,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .intermediate-option:hover i,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .freelance-experience-options .expert-option:hover i {
   padding: 0.2rem;
   font-size: 0.8rem;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options {
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options {
   display: none;
   width: 100%;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .threeToSixMonths,
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .oneToThreeMonths,
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .lessThanOneMonth {
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .threeToSixMonths,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .oneToThreeMonths,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .lessThanOneMonth {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11567,9 +11571,9 @@ form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .pro
   border-radius: 5px;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .threeToSixMonths .time-title,
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .oneToThreeMonths .time-title,
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .lessThanOneMonth .time-title {
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .threeToSixMonths .time-title,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .oneToThreeMonths .time-title,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .lessThanOneMonth .time-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11583,17 +11587,17 @@ form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .pro
   width: 100%;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .threeToSixMonths .time-title h3,
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .oneToThreeMonths .time-title h3,
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .lessThanOneMonth .time-title h3 {
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .threeToSixMonths .time-title h3,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .oneToThreeMonths .time-title h3,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .lessThanOneMonth .time-title h3 {
   font-size: 0.9rem;
   font-weight: lighter;
   padding-left: 0.5rem;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .threeToSixMonths .time-title i,
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .oneToThreeMonths .time-title i,
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .lessThanOneMonth .time-title i {
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .threeToSixMonths .time-title i,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .oneToThreeMonths .time-title i,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .lessThanOneMonth .time-title i {
   font-size: 0.7rem;
   color: transparent;
   padding: 0.1rem;
@@ -11601,35 +11605,35 @@ form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .pro
   border: 0.5px solid lightgrey;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .threeToSixMonths .time-title #lessThanOneMonth-button,
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .oneToThreeMonths .time-title #lessThanOneMonth-button,
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .lessThanOneMonth .time-title #lessThanOneMonth-button {
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .threeToSixMonths .time-title #lessThanOneMonth-button,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .oneToThreeMonths .time-title #lessThanOneMonth-button,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .lessThanOneMonth .time-title #lessThanOneMonth-button {
   color: #054e97;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .threeToSixMonths:hover,
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .oneToThreeMonths:hover,
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .lessThanOneMonth:hover {
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .threeToSixMonths:hover,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .oneToThreeMonths:hover,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .lessThanOneMonth:hover {
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
   background: #eeeeee;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .threeToSixMonths:hover i,
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .oneToThreeMonths:hover i,
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .lessThanOneMonth:hover i {
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .threeToSixMonths:hover i,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .oneToThreeMonths:hover i,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-time-options .lessThanOneMonth:hover i {
   font-size: 0.8rem;
   padding: 0.2rem;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options {
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options {
   width: 100%;
   display: none;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .large-option,
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .medium-option,
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .small-option {
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .large-option,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .medium-option,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .small-option {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11642,9 +11646,9 @@ form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .pro
   border-radius: 5px;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .large-option .size-option-title,
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .medium-option .size-option-title,
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .small-option .size-option-title {
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .large-option .size-option-title,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .medium-option .size-option-title,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .small-option .size-option-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11658,17 +11662,17 @@ form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .pro
   width: 100%;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .large-option .size-option-title h3,
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .medium-option .size-option-title h3,
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .small-option .size-option-title h3 {
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .large-option .size-option-title h3,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .medium-option .size-option-title h3,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .small-option .size-option-title h3 {
   font-size: 1rem;
   font-weight: lighter;
   padding-left: 0.5rem;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .large-option .size-option-title i,
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .medium-option .size-option-title i,
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .small-option .size-option-title i {
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .large-option .size-option-title i,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .medium-option .size-option-title i,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .small-option .size-option-title i {
   font-size: 0.7rem;
   color: transparent;
   padding: 0.1rem;
@@ -11676,36 +11680,36 @@ form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .pro
   border: 0.5px solid lightgrey;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .large-option .size-option-title #small-button,
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .medium-option .size-option-title #small-button,
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .small-option .size-option-title #small-button {
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .large-option .size-option-title #small-button,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .medium-option .size-option-title #small-button,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .small-option .size-option-title #small-button {
   color: #054e97;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .large-option span,
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .medium-option span,
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .small-option span {
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .large-option span,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .medium-option span,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .small-option span {
   font-size: 0.8rem;
   color: #797979;
   padding-left: 1.5rem;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .large-option:hover,
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .medium-option:hover,
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .small-option:hover {
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .large-option:hover,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .medium-option:hover,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .small-option:hover {
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
   background: #eeeeee;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .large-option:hover i,
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .medium-option:hover i,
-form .scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .small-option:hover i {
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .large-option:hover i,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .medium-option:hover i,
+.scopeOverlay .editScopeContainer .editScopeBody .detail-input-section .project-size-options .small-option:hover i {
   font-size: 0.8rem;
   padding: 0.2rem;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeSubmit {
+.scopeOverlay .editScopeContainer .editScopeSubmit {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11720,7 +11724,7 @@ form .scopeOverlay .editScopeContainer .editScopeSubmit {
   padding: 0.5rem 0rem;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeSubmit #cancelEdit {
+.scopeOverlay .editScopeContainer .editScopeSubmit #cancelEdit {
   color: #0a345e;
   font-size: 1rem;
   background: none;
@@ -11728,11 +11732,11 @@ form .scopeOverlay .editScopeContainer .editScopeSubmit #cancelEdit {
   cursor: pointer;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeSubmit #cancelEdit:hover {
+.scopeOverlay .editScopeContainer .editScopeSubmit #cancelEdit:hover {
   text-decoration: underline;
 }
 
-form .scopeOverlay .editScopeContainer .editScopeSubmit #applyScopeEdit {
+.scopeOverlay .editScopeContainer .editScopeSubmit #applyScopeEdit {
   margin-left: 1rem;
   color: white;
   font-size: 1rem;
@@ -11743,7 +11747,7 @@ form .scopeOverlay .editScopeContainer .editScopeSubmit #applyScopeEdit {
   cursor: pointer;
 }
 
-form .locationOverlay {
+.locationOverlay {
   height: 100%;
   width: 100%;
   display: none;
@@ -11755,7 +11759,7 @@ form .locationOverlay {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-form .locationOverlay .editLocationContainer {
+.locationOverlay .editLocationContainer {
   position: fixed;
   top: 2%;
   left: 17%;
@@ -11775,7 +11779,7 @@ form .locationOverlay .editLocationContainer {
           justify-content: center;
 }
 
-form .locationOverlay .editLocationContainer .editLocationHeader {
+.locationOverlay .editLocationContainer .editLocationHeader {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11794,21 +11798,21 @@ form .locationOverlay .editLocationContainer .editLocationHeader {
   border-bottom: 0.7px solid lightgrey;
 }
 
-form .locationOverlay .editLocationContainer .editLocationHeader h3 {
+.locationOverlay .editLocationContainer .editLocationHeader h3 {
   font-size: 1.3rem;
 }
 
-form .locationOverlay .editLocationContainer .editLocationHeader i {
+.locationOverlay .editLocationContainer .editLocationHeader i {
   cursor: pointer;
   font-size: 1.5rem;
   color: #797979;
 }
 
-form .locationOverlay .editLocationContainer .editLocationBody {
+.locationOverlay .editLocationContainer .editLocationBody {
   width: 100%;
 }
 
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section {
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section {
   width: 100%;
   height: 100%;
   padding: 1rem;
@@ -11830,7 +11834,7 @@ form .locationOverlay .editLocationContainer .editLocationBody .detail-input-sec
           align-items: flex-start;
 }
 
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions {
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11847,11 +11851,11 @@ form .locationOverlay .editLocationContainer .editLocationBody .detail-input-sec
   width: 100%;
 }
 
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions #usOnly {
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions #usOnly {
   border: 1.25px solid #054e97;
 }
 
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions .optionCard {
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions .optionCard {
   width: 100%;
   height: 26.5vh;
   display: -webkit-box;
@@ -11870,7 +11874,7 @@ form .locationOverlay .editLocationContainer .editLocationBody .detail-input-sec
   cursor: pointer;
 }
 
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions .optionCard .choosen {
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions .optionCard .choosen {
   padding: 0.5rem 0.5rem 0rem 0rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11884,7 +11888,7 @@ form .locationOverlay .editLocationContainer .editLocationBody .detail-input-sec
   width: 100%;
 }
 
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions .optionCard .choosen i {
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions .optionCard .choosen i {
   font-size: 0.7rem;
   color: white;
   padding: 0.2rem;
@@ -11893,13 +11897,13 @@ form .locationOverlay .editLocationContainer .editLocationBody .detail-input-sec
   border: 0.7px solid lightgrey;
 }
 
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions .optionCard .choosen #usOnly-button {
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions .optionCard .choosen #usOnly-button {
   color: #054e97;
   border: 0.7px solid #054e97;
 }
 
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions .optionCard .usOnly,
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions .optionCard .worldwide {
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions .optionCard .usOnly,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions .optionCard .worldwide {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11917,8 +11921,8 @@ form .locationOverlay .editLocationContainer .editLocationBody .detail-input-sec
   padding: 1rem;
 }
 
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions .optionCard .usOnly h4,
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions .optionCard .worldwide h4 {
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions .optionCard .usOnly h4,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions .optionCard .worldwide h4 {
   width: 100%;
   text-align: center;
   font-size: 1rem;
@@ -11926,43 +11930,43 @@ form .locationOverlay .editLocationContainer .editLocationBody .detail-input-sec
   padding: 1rem 0rem;
 }
 
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions .optionCard .usOnly p,
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions .optionCard .worldwide p {
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions .optionCard .usOnly p,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions .optionCard .worldwide p {
   width: 100%;
   text-align: center;
   font-size: 0.9rem;
   color: #797979;
 }
 
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions .optionCard:hover {
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationOptions .optionCard:hover {
   background: #f8f6f6;
 }
 
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards {
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards {
   width: 100%;
 }
 
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard,
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard {
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard {
   display: none;
   width: 100%;
   padding: 1rem;
 }
 
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard h4,
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard h4 {
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard h4,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard h4 {
   font-size: 0.8rem;
 }
 
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard h4 span,
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard h4 span {
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard h4 span,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard h4 span {
   color: #797979;
 }
 
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard .statesPulldown,
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard .worldwidePulldown,
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard .statesPulldown,
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard .worldwidePulldown {
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard .statesPulldown,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard .worldwidePulldown,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard .statesPulldown,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard .worldwidePulldown {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11984,10 +11988,10 @@ form .locationOverlay .editLocationContainer .editLocationBody .detail-input-sec
   margin: 0.5rem 0rem;
 }
 
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard .statesPulldown input,
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard .worldwidePulldown input,
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard .statesPulldown input,
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard .worldwidePulldown input {
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard .statesPulldown input,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard .worldwidePulldown input,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard .statesPulldown input,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard .worldwidePulldown input {
   outline: none;
   border: none;
   width: 100%;
@@ -11995,14 +11999,14 @@ form .locationOverlay .editLocationContainer .editLocationBody .detail-input-sec
   padding: 0.3rem;
 }
 
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard .statesPulldown #add1,
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard .statesPulldown #add2,
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard .worldwidePulldown #add1,
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard .worldwidePulldown #add2,
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard .statesPulldown #add1,
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard .statesPulldown #add2,
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard .worldwidePulldown #add1,
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard .worldwidePulldown #add2 {
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard .statesPulldown #add1,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard .statesPulldown #add2,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard .worldwidePulldown #add1,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard .worldwidePulldown #add2,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard .statesPulldown #add1,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard .statesPulldown #add2,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard .worldwidePulldown #add1,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard .worldwidePulldown #add2 {
   font-size: 1rem;
   border: none;
   background: transparent;
@@ -12011,14 +12015,14 @@ form .locationOverlay .editLocationContainer .editLocationBody .detail-input-sec
   margin-right: 0.5rem;
 }
 
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard span,
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard span {
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .usOnlyCard span,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .locationsCards .worldwideCard span {
   color: #797979;
   font-size: 0.8rem;
 }
 
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsUSCard,
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsWorldwideCard {
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsUSCard,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsWorldwideCard {
   display: none;
   width: 100%;
   padding: 0.5rem;
@@ -12027,18 +12031,18 @@ form .locationOverlay .editLocationContainer .editLocationBody .detail-input-sec
   border-radius: 10px;
 }
 
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsUSCard h5,
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsWorldwideCard h5 {
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsUSCard h5,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsWorldwideCard h5 {
   width: 100%;
   font-size: 0.9rem;
   text-decoration: underline;
   font-weight: lighter;
 }
 
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsUSCard .selectedLocationsUS,
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsUSCard .selectedLocationsWorldwide,
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsWorldwideCard .selectedLocationsUS,
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsWorldwideCard .selectedLocationsWorldwide {
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsUSCard .selectedLocationsUS,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsUSCard .selectedLocationsWorldwide,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsWorldwideCard .selectedLocationsUS,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsWorldwideCard .selectedLocationsWorldwide {
   margin: 0.5rem 0rem;
   width: 100%;
   display: -webkit-box;
@@ -12052,10 +12056,10 @@ form .locationOverlay .editLocationContainer .editLocationBody .detail-input-sec
       flex-wrap: wrap;
 }
 
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsUSCard .selectedLocationsUS label,
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsUSCard .selectedLocationsWorldwide label,
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsWorldwideCard .selectedLocationsUS label,
-form .locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsWorldwideCard .selectedLocationsWorldwide label {
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsUSCard .selectedLocationsUS label,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsUSCard .selectedLocationsWorldwide label,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsWorldwideCard .selectedLocationsUS label,
+.locationOverlay .editLocationContainer .editLocationBody .detail-input-section .selectedLocationsWorldwideCard .selectedLocationsWorldwide label {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -12069,7 +12073,7 @@ form .locationOverlay .editLocationContainer .editLocationBody .detail-input-sec
   margin: 0.5rem;
 }
 
-form .locationOverlay .editLocationContainer .editLocationSubmit {
+.locationOverlay .editLocationContainer .editLocationSubmit {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12084,7 +12088,7 @@ form .locationOverlay .editLocationContainer .editLocationSubmit {
   padding: 0.5rem 0rem;
 }
 
-form .locationOverlay .editLocationContainer .editLocationSubmit #cancelEdit {
+.locationOverlay .editLocationContainer .editLocationSubmit #cancelEdit {
   color: #0a345e;
   font-size: 1rem;
   background: none;
@@ -12092,11 +12096,11 @@ form .locationOverlay .editLocationContainer .editLocationSubmit #cancelEdit {
   cursor: pointer;
 }
 
-form .locationOverlay .editLocationContainer .editLocationSubmit #cancelEdit:hover {
+.locationOverlay .editLocationContainer .editLocationSubmit #cancelEdit:hover {
   text-decoration: underline;
 }
 
-form .locationOverlay .editLocationContainer .editLocationSubmit #applyLocationEdit {
+.locationOverlay .editLocationContainer .editLocationSubmit #applyLocationEdit {
   margin-left: 1rem;
   color: white;
   font-size: 1rem;
@@ -12107,7 +12111,7 @@ form .locationOverlay .editLocationContainer .editLocationSubmit #applyLocationE
   cursor: pointer;
 }
 
-form .budgetOverlay {
+.budgetOverlay {
   height: 100%;
   width: 100%;
   display: none;
@@ -12119,7 +12123,7 @@ form .budgetOverlay {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-form .budgetOverlay .editBudgetContainer {
+.budgetOverlay .editBudgetContainer {
   position: fixed;
   top: 6%;
   left: 25%;
@@ -12139,7 +12143,7 @@ form .budgetOverlay .editBudgetContainer {
           justify-content: center;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetHeader {
+.budgetOverlay .editBudgetContainer .editBudgetHeader {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12158,21 +12162,21 @@ form .budgetOverlay .editBudgetContainer .editBudgetHeader {
   border-bottom: 0.7px solid lightgrey;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetHeader h3 {
+.budgetOverlay .editBudgetContainer .editBudgetHeader h3 {
   font-size: 1.3rem;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetHeader i {
+.budgetOverlay .editBudgetContainer .editBudgetHeader i {
   cursor: pointer;
   font-size: 1.5rem;
   color: #797979;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetBody {
+.budgetOverlay .editBudgetContainer .editBudgetBody {
   width: 100%;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section {
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section {
   width: 100%;
   height: 100%;
   padding: 1rem;
@@ -12194,7 +12198,7 @@ form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section {
           align-items: flex-start;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions {
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions {
   margin-top: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12212,11 +12216,11 @@ form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .
   width: 100%;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions #hourly {
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions #hourly {
   border: 1.25px solid #054e97;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions .optionCard {
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions .optionCard {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12234,7 +12238,7 @@ form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .
   cursor: pointer;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions .optionCard .choosen {
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions .optionCard .choosen {
   padding: 0.5rem 0.5rem 0rem 0rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12248,7 +12252,7 @@ form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .
   width: 100%;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions .optionCard .choosen i {
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions .optionCard .choosen i {
   font-size: 0.7rem;
   color: white;
   padding: 0.2rem;
@@ -12257,13 +12261,13 @@ form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .
   border: 0.7px solid lightgrey;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions .optionCard .choosen #usOnly-button {
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions .optionCard .choosen #usOnly-button {
   color: #054e97;
   border: 0.7px solid #054e97;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions .optionCard .hourly,
-form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions .optionCard .budget {
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions .optionCard .hourly,
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions .optionCard .budget {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12281,13 +12285,13 @@ form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .
   padding: 0.5rem 1rem;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions .optionCard .hourly i,
-form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions .optionCard .budget i {
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions .optionCard .hourly i,
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions .optionCard .budget i {
   font-size: 1.5rem;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions .optionCard .hourly h4,
-form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions .optionCard .budget h4 {
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions .optionCard .hourly h4,
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions .optionCard .budget h4 {
   width: 100%;
   text-align: center;
   font-size: 1rem;
@@ -12295,22 +12299,22 @@ form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .
   padding: 0.5rem 0rem;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions .optionCard:hover {
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetOptions .optionCard:hover {
   background: #f8f6f6;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetContainer {
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetContainer {
   width: 100%;
   display: none;
   padding: 1rem;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetContainer h4 {
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetContainer h4 {
   font-size: 1rem;
   margin-bottom: 1rem;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetContainer .addBudget {
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetContainer .addBudget {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -12329,58 +12333,58 @@ form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .
           align-items: center;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetContainer .addBudget span {
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetContainer .addBudget span {
   font-size: 1.2rem;
   color: #797979;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetContainer .addBudget input {
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetContainer .addBudget input {
   padding: 0.5rem 0rem;
   margin-left: 0.5rem;
   outline: none;
   border: none;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetContainer .addBudget button {
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetContainer .addBudget button {
   border: none;
   color: #0a345e;
   cursor: pointer;
   background: transparent;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetContainer .addBudget:hover {
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetContainer .addBudget:hover {
   border-radius: 8px;
   border: 1.5px solid #0a345e;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetContainer #alertBudget {
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetContainer #alertBudget {
   font-size: 0.9rem;
   color: #cc0404;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetContainer #alertBudget i {
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetContainer #alertBudget i {
   padding-right: 0.5rem;
   font-size: 1rem;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetContainer #OfficalBudget {
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .budgetContainer #OfficalBudget {
   display: none;
   color: #0a345e;
   margin-top: 1rem;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer {
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer {
   display: none;
   width: 100%;
   padding: 1rem;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer #OfficialRate {
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer #OfficialRate {
   color: #0a345e;
   margin: 1rem 0rem;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate {
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12394,7 +12398,7 @@ form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .
           justify-content: space-between;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .minimum {
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .minimum {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12410,28 +12414,28 @@ form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .
           justify-content: flex-start;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .minimum #alertMinHourly {
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .minimum #alertMinHourly {
   font-size: 0.9rem;
   color: #cc0404;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .minimum #alertMinHourly i {
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .minimum #alertMinHourly i {
   padding-right: 0.5rem;
   font-size: 1rem;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .minimum p {
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .minimum p {
   width: 100%;
   text-align: left;
   font-size: 1.2rem;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .minimum span {
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .minimum span {
   padding-left: 0.5rem;
   font-size: 1rem;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .minimum .addMinHourly {
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .minimum .addMinHourly {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12444,7 +12448,7 @@ form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .
           align-items: center;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .minimum .addMinHourly .inputContainer {
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .minimum .addMinHourly .inputContainer {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -12463,13 +12467,13 @@ form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .
           align-items: center;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .minimum .addMinHourly .inputContainer input {
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .minimum .addMinHourly .inputContainer input {
   padding: 0.3rem 0rem;
   border: none;
   outline: none;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .minimum .addMinHourly .inputContainer button {
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .minimum .addMinHourly .inputContainer button {
   border: none;
   font-size: 1rem;
   background: transparent;
@@ -12477,13 +12481,13 @@ form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .
   color: #054e97;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .minimum .addMinHourly .inputContainer span {
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .minimum .addMinHourly .inputContainer span {
   padding-right: 0.5rem;
   font-size: 1.2rem;
   color: #797979;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .maximum {
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .maximum {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12499,28 +12503,28 @@ form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .
           justify-content: flex-start;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .maximum #MaxError {
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .maximum #MaxError {
   font-size: 0.9rem;
   margin-top: 0.5rem;
   color: #cc0404;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .maximum #MaxError i {
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .maximum #MaxError i {
   padding-right: 0.5rem;
   font-size: 1rem;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .maximum p {
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .maximum p {
   width: 100%;
   text-align: left;
   font-size: 1.2rem;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .maximum span {
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .maximum span {
   font-size: 1rem;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .maximum .addMaxHourly {
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .maximum .addMaxHourly {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12533,7 +12537,7 @@ form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .
           align-items: center;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .maximum .addMaxHourly .inputContainer {
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .maximum .addMaxHourly .inputContainer {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -12552,13 +12556,13 @@ form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .
           align-items: center;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .maximum .addMaxHourly .inputContainer input {
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .maximum .addMaxHourly .inputContainer input {
   padding: 0.3rem 0rem;
   border: none;
   outline: none;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .maximum .addMaxHourly .inputContainer button {
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .maximum .addMaxHourly .inputContainer button {
   border: none;
   font-size: 1rem;
   background: transparent;
@@ -12566,13 +12570,13 @@ form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .
   color: #054e97;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .maximum .addMaxHourly .inputContainer span {
+.budgetOverlay .editBudgetContainer .editBudgetBody .detail-input-section .hourlyContainer .setHourlyRate .maximum .addMaxHourly .inputContainer span {
   padding-right: 0.5rem;
   font-size: 1.2rem;
   color: #797979;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetSubmit {
+.budgetOverlay .editBudgetContainer .editBudgetSubmit {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12587,7 +12591,7 @@ form .budgetOverlay .editBudgetContainer .editBudgetSubmit {
   padding: 0.5rem 0rem;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetSubmit #cancelEdit {
+.budgetOverlay .editBudgetContainer .editBudgetSubmit #cancelEdit {
   color: #0a345e;
   font-size: 1rem;
   background: none;
@@ -12595,11 +12599,11 @@ form .budgetOverlay .editBudgetContainer .editBudgetSubmit #cancelEdit {
   cursor: pointer;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetSubmit #cancelEdit:hover {
+.budgetOverlay .editBudgetContainer .editBudgetSubmit #cancelEdit:hover {
   text-decoration: underline;
 }
 
-form .budgetOverlay .editBudgetContainer .editBudgetSubmit #applyBudgetEdit {
+.budgetOverlay .editBudgetContainer .editBudgetSubmit #applyBudgetEdit {
   margin-left: 1rem;
   color: white;
   font-size: 1rem;
@@ -12612,6 +12616,7 @@ form .budgetOverlay .editBudgetContainer .editBudgetSubmit #applyBudgetEdit {
 
 @media screen and (max-width: 754px) {
   .postJob-detail {
+    margin-top: 3rem;
     width: 100%;
     background: whitesmoke;
     padding: 2.5rem 0rem;
@@ -12800,6 +12805,7 @@ form .budgetOverlay .editBudgetContainer .editBudgetSubmit #applyBudgetEdit {
     pointer-events: none;
   }
   .postJob-detail-skills {
+    margin-top: 3rem;
     width: 100%;
     background: whitesmoke;
     padding: 2.5rem 0rem;
@@ -13108,6 +13114,7 @@ form .budgetOverlay .editBudgetContainer .editBudgetSubmit #applyBudgetEdit {
     font-size: 0.5rem;
   }
   .postJob-detail-scope {
+    margin-top: 3.5rem;
     width: 100%;
     background: whitesmoke;
     padding: 1rem 0rem;
@@ -13619,6 +13626,7 @@ form .budgetOverlay .editBudgetContainer .editBudgetSubmit #applyBudgetEdit {
     padding: 0.2rem;
   }
   .postJob-detail-location {
+    margin-top: 3.5rem;
     width: 100%;
     background: whitesmoke;
     padding: 1rem 0rem;
@@ -14011,6 +14019,7 @@ form .budgetOverlay .editBudgetContainer .editBudgetSubmit #applyBudgetEdit {
     background: #0a345e;
   }
   .postJob-detail-budget {
+    margin-top: 3.5rem;
     width: 100%;
     background: whitesmoke;
     padding: 1rem 0rem;
@@ -14611,6 +14620,7 @@ form .budgetOverlay .editBudgetContainer .editBudgetSubmit #applyBudgetEdit {
     background: #0a345e;
   }
   .reviewJobPost-container {
+    margin-top: 3.5rem;
     width: 100%;
     background: whitesmoke;
     padding: 1rem 0rem;
@@ -16536,16 +16546,13 @@ li {
 */
 .body-container {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 0;
   margin: 0;
   background-color: #c7e3f3;
 }
 
 .message-container {
-  margin: 3rem;
+  margin: 1rem;
   width: 750px;
   background: #444753;
   border-radius: 5px;
@@ -16603,7 +16610,6 @@ li {
 
 .chat {
   width: 490px;
-  height: 100%;
   float: left;
   background: #f2f5f8;
   border-top-right-radius: 5px;
@@ -16774,15 +16780,21 @@ li {
 
 @media screen and (max-width: 754px) {
   .body-container {
-
     width: 100%;
     padding: 0;
     margin: 0;
     background-color: #c7e3f3;
   }
   .message-container {
-    margin: 1rem;
-    width: 750px;
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
     background: #444753;
     border-radius: 0;
   }
@@ -16830,7 +16842,7 @@ li {
   }
   .chat {
     width: 90%;
-    float: 0;
+    float: none;
     background: #f2f5f8;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
