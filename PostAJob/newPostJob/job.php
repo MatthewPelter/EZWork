@@ -15,7 +15,7 @@ if (!isset($_SESSION['userid'])) {
 }
 
 $job_id = $_GET['id'];
-$job_id = mysqli_real_escape_string($conn, $uname);
+$job_id = mysqli_real_escape_string($conn, $job_id);
 $job_id = htmlspecialchars($job_id);
 
 $jobSQL = "SELECT * FROM jobs WHERE id='$job_id' LIMIT 1";
