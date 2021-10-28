@@ -79,7 +79,7 @@
         <p>Notifications</p>
         <i class="fa fa-bell" title="Notification"></i>
     </div>
-    <div class="mobileNavCard mobileNavSettings" onclick="location.href='../Settings/settings.html'">
+    <div class="mobileNavCard mobileNavSettings" onclick="location.href='../Settings/settings.php'">
         <p>
             <i class="fa fa-cog" aria-hidden="true"></i> Settings
         </p>
@@ -196,7 +196,7 @@
                             <span id="type">Client</span>
                         </div>
                     </div>
-                    <div class="card card2" onclick="location.href='../Settings/settings.html'">
+                    <div class="card card2" onclick="location.href='../Settings/settings.php'">
                         <p>
                             <i class="fa fa-cog" aria-hidden="true"></i> Settings
                         </p>
