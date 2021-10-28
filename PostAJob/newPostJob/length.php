@@ -26,8 +26,8 @@ if (!isset($_SESSION['userid'])) {
 <body>
     <?php include '../../navbar.php'; ?>
 
-    <div class="container">
-        <div class="main">
+    <div class="PostAJob">
+        <div class="PostAJobContainer">
             <h2>Post a Job</h2>
             <span id="error">
                 <!---- Initializing Session for errors --->
