@@ -16551,15 +16551,20 @@ li {
   background-color: #c7e3f3;
 }
 
+.body-container .message-card {
+  width: 80%;
+}
+
 .message-container {
   margin: 1rem;
-  width: 750px;
+  width: 100%;
+  height: 80vh;
   background: #444753;
   border-radius: 5px;
 }
 
 .people-list {
-  width: 260px;
+  width: 25%;
   float: left;
 }
 
@@ -16609,7 +16614,7 @@ li {
 }
 
 .chat {
-  width: 490px;
+  width: 75%;
   float: left;
   background: #f2f5f8;
   border-top-right-radius: 5px;

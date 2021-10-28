@@ -94,122 +94,123 @@ if (isset($_POST['submit'])) {
             echo "no messages";
         }
         ?>
-
-        <div class="message-container clearfix">
-            <div class="people-list" id="people-list">
-                <div class="search">
-                    <input type="text" placeholder="search" />
-                    <i class="fa fa-search"></i>
+        <div class="message-card">
+            <div class="message-container clearfix">
+                <div class="people-list" id="people-list">
+                    <div class="search">
+                        <input type="text" placeholder="search" />
+                        <i class="fa fa-search"></i>
+                    </div>
+                    <ul class="list">
+    
+                        <?php
+                        foreach ($u as $user) {
+                        ?>
+                            <a style="display: block; color: white; text-decoration: none;" href="messages?mid=<?php echo $user['id']; ?>">
+                                <li class="clearfix">
+                                    <div class="about">
+                                        <div class="name"><?php echo $user['username']; ?></div>
+                                    </div>
+                                </li>
+                            </a>
+                        <?php } ?>
+    
+                    </ul>
                 </div>
-                <ul class="list">
-
-                    <?php
-                    foreach ($u as $user) {
-                    ?>
-                        <a style="display: block; color: white; text-decoration: none;" href="messages?mid=<?php echo $user['id']; ?>">
-                            <li class="clearfix">
-                                <div class="about">
-                                    <div class="name"><?php echo $user['username']; ?></div>
-                                </div>
-                            </li>
-                        </a>
-                    <?php } ?>
-
-                </ul>
-            </div>
-
-            <?php
-            // Get messages between you and the user
-            if (isset($_GET['mid'])) {
-                $id = htmlspecialchars($_GET['mid']);
-                $sql = "SELECT messages.id, messages.body, s.username AS Sender, r.username AS Receiver FROM messages LEFT JOIN clients s ON messages.sender = s.id LEFT JOIN clients r ON messages.receiver = r.id WHERE (r.id='$userID' AND s.id = '$id') OR r.id = $id AND s.id = '$userID'";
-                $result = mysqli_query($conn, $sql);
-
-                $otherUsernameSQL = mysqli_query($conn, "SELECT username FROM clients WHERE id='$id'");
-                $otherResult = mysqli_fetch_assoc($otherUsernameSQL);
-                $otherUsername = $otherResult['username'];
-            ?>
-
-                <div class="chat">
-                    <div class="chat-header clearfix">
-
-                        <div class="chat-about">
-                            <div class="chat-with">Chat with <?php echo $otherUsername; ?></div>
-                            <div class="chat-num-messages">Do not share any confidential information</div>
-                        </div>
-                        <i class="fa fa-star"></i>
-                    </div> <!-- end chat-header -->
-
-                    <div class="chat-history">
-                        <ul>
-
-                            <?php
-                            while ($row = mysqli_fetch_assoc($result)) {
-                                //echo $row['id'] . ": " . $row['body'] . "<br />";
-                                if ($row['Sender'] == $username) {
-                            ?>
-                                    <li class="clearfix">
-                                        <div class="message-data align-right">
-                                            <span class="message-data-name">Me</span> <i class="fa fa-circle me"></i>
-
-                                        </div>
-                                        <div class="message other-message float-right">
-                                            <?php echo $row['body']; ?>
-                                        </div>
-                                    </li>
-
+    
+                <?php
+                // Get messages between you and the user
+                if (isset($_GET['mid'])) {
+                    $id = htmlspecialchars($_GET['mid']);
+                    $sql = "SELECT messages.id, messages.body, s.username AS Sender, r.username AS Receiver FROM messages LEFT JOIN clients s ON messages.sender = s.id LEFT JOIN clients r ON messages.receiver = r.id WHERE (r.id='$userID' AND s.id = '$id') OR r.id = $id AND s.id = '$userID'";
+                    $result = mysqli_query($conn, $sql);
+    
+                    $otherUsernameSQL = mysqli_query($conn, "SELECT username FROM clients WHERE id='$id'");
+                    $otherResult = mysqli_fetch_assoc($otherUsernameSQL);
+                    $otherUsername = $otherResult['username'];
+                ?>
+    
+                    <div class="chat">
+                        <div class="chat-header clearfix">
+    
+                            <div class="chat-about">
+                                <div class="chat-with">Chat with <?php echo $otherUsername; ?></div>
+                                <div class="chat-num-messages">Do not share any confidential information</div>
+                            </div>
+                            <i class="fa fa-star"></i>
+                        </div> <!-- end chat-header -->
+    
+                        <div class="chat-history">
+                            <ul>
+    
                                 <?php
-                                } else {
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    //echo $row['id'] . ": " . $row['body'] . "<br />";
+                                    if ($row['Sender'] == $username) {
                                 ?>
-                                    <li>
-                                        <div class="message-data">
-                                            <span class="message-data-name"><i class="fa fa-circle online"></i><?php echo $row['Sender']; ?></span>
-                                        </div>
-                                        <div class="message my-message">
-                                            <?php echo $row['body']; ?>
-                                        </div>
-                                    </li>
-
-                            <?php
+                                        <li class="clearfix">
+                                            <div class="message-data align-right">
+                                                <span class="message-data-name">Me</span> <i class="fa fa-circle me"></i>
+    
+                                            </div>
+                                            <div class="message other-message float-right">
+                                                <?php echo $row['body']; ?>
+                                            </div>
+                                        </li>
+    
+                                    <?php
+                                    } else {
+                                    ?>
+                                        <li>
+                                            <div class="message-data">
+                                                <span class="message-data-name"><i class="fa fa-circle online"></i><?php echo $row['Sender']; ?></span>
+                                            </div>
+                                            <div class="message my-message">
+                                                <?php echo $row['body']; ?>
+                                            </div>
+                                        </li>
+    
+                                <?php
+                                    }
                                 }
-                            }
-                            ?>
-
-                        </ul>
-
-                    </div> <!-- end chat-history -->
-
-                    <form class="form" action="messages.php?mid=<?php echo $id; ?>" method="post" name="message">
-                        <div class="chat-message clearfix">
-                            <textarea name="msg" id="message-to-send" placeholder="Type your message" rows="3" required></textarea>
-                            <input type="submit" value="Send" name="submit" class="button"></input>
-
-                        </div> <!-- end chat-message -->
-                    </form>
-
-                </div> <!-- end chat -->
-
-        </div> <!-- end container -->
-    <?php
-            } else {
-                // if the user does not select person to chat with, it will just show a blank page and tell them to click on a person.
-    ?>
-        <div class="chat">
-            <div class="chat-header clearfix">
-
-                <div class="chat-about">
-                    <div class="chat-with">Welcome to the chat! </div>
-                    <div class="chat-num-messages">Click a user on the left to start chatting</div>
-                </div>
-                <i class="fa fa-star"></i>
-            </div> <!-- end chat-header -->
-
-        </div> <!-- end chat -->
-
-    <?php
-            }
-    ?>
-
+                                ?>
+    
+                            </ul>
+    
+                        </div> <!-- end chat-history -->
+    
+                        <form class="form" action="messages.php?mid=<?php echo $id; ?>" method="post" name="message">
+                            <div class="chat-message clearfix">
+                                <textarea name="msg" id="message-to-send" placeholder="Type your message" rows="3" required></textarea>
+                                <input type="submit" value="Send" name="submit" class="button"></input>
+    
+                            </div> <!-- end chat-message -->
+                        </form>
+    
+                    </div> <!-- end chat -->
+    
+            </div> <!-- end container -->
+        <?php
+                } else {
+                    // if the user does not select person to chat with, it will just show a blank page and tell them to click on a person.
+        ?>
+            <div class="chat">
+                <div class="chat-header clearfix">
+    
+                    <div class="chat-about">
+                        <div class="chat-with">Welcome to the chat! </div>
+                        <div class="chat-num-messages">Click a user on the left to start chatting</div>
+                    </div>
+                    <i class="fa fa-star"></i>
+                </div> <!-- end chat-header -->
+    
+            </div> <!-- end chat -->
+    
+        <?php
+                }
+        ?>
+    
+        </div>
     <!--DataList-->
     <datalist id="allskills"></datalist>
     </div>
