@@ -41,11 +41,12 @@ if (isset($_POST['length'])) {
                 ?>
             </span>
             <form action="scope.php" method="post">
-                <label>Write a title for your job post :<span>*</span></label>
-                <input name="title" id="title" type="text" placeholder="I need my garage door installed..." value="">
+                <label>Write a title for your job post :<span>*</span></label><br />
+                <input name="title" id="title" type="text" placeholder="I need my garage door installed..." value=""><br />
+                <label>Description :<span>*</span></label><br />
                 <input name="description" id="description" type="text" placeholder="My son drove into my garage door and completely ruined my beautiful door..." value="">
 
-
+                <br />
                 <input type="reset" value="Reset" />
 
                 <input type="submit" value="Next" />

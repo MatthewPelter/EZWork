@@ -163,7 +163,7 @@
                 </div>
             </div>
             <!-- Style tags are temporary -->
-            <li><a style="color: white; text-decoration: none;" href="../message/messages">Messages</a></li>
+            <li><a style="color: white; text-decoration: none;" href="https://ez-work.herokuapp.com/message/messages">Messages</a></li>
         </ul>
         <div class="guide">
             <i class="fa fa-bell" title="Notification"></i>
