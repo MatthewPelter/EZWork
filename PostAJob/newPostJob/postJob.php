@@ -51,10 +51,11 @@
                             unset($_SESSION['post']);
             ?>
                             <p><span id="success">Yay you just posted a job..!!</span></p>
-            <?php
+                        <?php
                             header("Refresh:3; url=../../ClientProfile/index");
                         } else {
-                            echo '<p><span>Form Submission Failed..!!</span></p>';
+                        ?><p><span>Form Submission Failed..!!</span></p>';
+            <?php
                         }
                         unset($_SESSION['post']); // Destroying session.
 
