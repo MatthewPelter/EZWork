@@ -92,7 +92,7 @@ $userID = $userrow['id'];
             <div class="user-postings">
                 <div class="card title">
                     <h3>My Postings</h3>
-                    <span><a href="../PostAJob/newPostJob/jobs">All Postings</a></span>
+                    <span><a href="../PostAJob/newPostJob/jobs">All Jobs</a></span>
                 </div>
                 <div class="card result">
                     <button id="quick-link-job2" onclick="location.href='../PostAJob/newPostJob/length.php'">Post A Job</button>
