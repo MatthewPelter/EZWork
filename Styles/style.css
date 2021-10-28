@@ -5700,6 +5700,7 @@ section .container .login .login-container button:hover {
 
 .profile .user-postings .postedJob {
   border-top: solid .7px lightgrey;
+  display: none;
   padding: 1rem;
   width: 100%;
 }
@@ -6235,7 +6236,7 @@ section .container .login .login-container button:hover {
   }
   .profile .user-postings .result {
     width: 100%;
-    padding: 3rem 1rem;
+    padding: 2rem 1rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
