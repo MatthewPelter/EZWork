@@ -18,13 +18,13 @@ $job_id = $_GET['id'];
 $job_id = mysqli_real_escape_string($conn, $uname);
 $job_id = htmlspecialchars($job_id);
 
-$sql = "SELECT * FROM jobs WHERE id='$job_id'";
-$result = mysqli_query($conn, $sql);
+$jobSQL = "SELECT * FROM jobs WHERE id='$job_id' LIMIT 1";
+$jobResult = mysqli_query($conn, $jobSQL);
 $dataFound = false;
 
-if (mysqli_num_rows($result) > 0) {
+if (mysqli_num_rows($jobResult) > 0) {
     $dataFound = true;
-    $r = mysqli_fetch_assoc($result);
+    $r = mysqli_fetch_assoc($jobResult);
 
     $uid = $r['user_id'];
     $unameSQL = "SELECT username FROM clients WHERE id='$uid'";
