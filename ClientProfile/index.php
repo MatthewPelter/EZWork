@@ -207,8 +207,8 @@ require_once("../classes/DB.php");
                 <div class="categories-title">
                     <h3><i class="fa fa-users" aria-hidden="true"></i> Current Users</h3>
                 </div>
-
-                <div class="activerUsersBody">
+                
+                <div class="activerUsersBody" style="overflow-y: scroll;max-height: 40vh;">
 
                     <?php
                     $sql = "SELECT * FROM clients";
