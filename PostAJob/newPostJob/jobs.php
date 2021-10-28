@@ -66,7 +66,7 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                                                             } else {
                                                                 echo "Open";
                                                             } ?></span></p>
-                            <p>Job Posted on <span id="date"><?php echo $r['datePosted']; ?></span> by <span id="postedBy"><?php echo $unameFetched; ?></span></p>
+                            <p>Job Posted on <span id="date"><?php echo $r['datePosted']; ?></span> by <span id="postedBy"><?php echo $unameFetched['username']; ?></span></p>
                         </div>
 
                     <?php
