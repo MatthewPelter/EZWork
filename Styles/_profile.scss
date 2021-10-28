@@ -332,6 +332,7 @@
     grid-column: 3/4;
     grid-row: 2/3;
     width: 100%;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     background: white;
@@ -347,7 +348,7 @@
       }
     }
     .categoryCard {
-
+      overflow-y: scroll;
       cursor: pointer;
       padding: 1.5rem 1rem;
       width: 100%;
