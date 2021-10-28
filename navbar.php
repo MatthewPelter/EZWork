@@ -120,7 +120,7 @@
             <li onclick="toggleJob()" id="jobs">Jobs</li>
             <div class="jobCardContainer">
                 <div class="jobCard">
-                    <div class="card card1" onclick="location.href='../PostAJob/newPostJob/myjobs'">
+                    <div class="card card1" onclick="location.href='./myjobs.php'">
                         <h4>My Jobs</h4>
                     </div>
                     <div class="card card2"  onclick="location.href='../PostAJob/newPostJob/jobs'">
