@@ -1,6 +1,6 @@
 <?php
 session_start(); // Session starts here.
-include '../../components/session-checker.php';
+//include '../../components/session-checker.php';
 
 ?>
 <!DOCTYPE HTML>
