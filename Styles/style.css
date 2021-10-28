@@ -6034,7 +6034,7 @@ section .container .login .login-container button:hover {
   -ms-grid-row-span: 1;
   grid-row: 2/3;
   width: 100%;
-  overflow-y: scroll;
+  overflow-y: visible;
   max-height: 10rem;
   display: -webkit-box;
   display: -ms-flexbox;
