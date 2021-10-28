@@ -133,8 +133,6 @@ $userID = $userrow['id'];
 
                 <?php
                     }
-                } else {
-                    header("location: broke.php");
                 }
                 ?>
 

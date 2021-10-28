@@ -108,6 +108,8 @@ if (mysqli_num_rows($jobResult) > 0) {
     <?php
     } ?>
 
+    <?php include '../../footer.php'; ?>
+
 </body>
 <script src="../../ClientProfile/app.js"></script>
 
