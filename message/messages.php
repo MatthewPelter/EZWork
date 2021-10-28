@@ -209,6 +209,9 @@ if (isset($_POST['submit'])) {
     <?php
             }
     ?>
+    <!-- Footer -->
+    <?php include '../footer.php'; ?>
+    <!-- Footer -->
 
     <!--DataList-->
     <datalist id="allskills">
