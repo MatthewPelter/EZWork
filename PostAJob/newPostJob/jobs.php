@@ -15,7 +15,7 @@ if (!isset($_SESSION['userid'])) {
     }
 }
 
-$jobsSQL = "SELECT * FROM jobs";
+$jobsSQL = "SELECT * FROM jobs ORDER BY id DESC";
 $jobsQuery = mysqli_query($conn, $jobsSQL);
 
 ?>

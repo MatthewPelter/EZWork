@@ -98,7 +98,7 @@ $userID = $userrow['id'];
                     <button id="quick-link-job2" onclick="location.href='../PostAJob/newPostJob/length.php'">Post A Job</button>
                     <span>
                         <?php
-                        $jobSQL = "SELECT * FROM jobs WHERE user_id='$userID'";
+                        $jobSQL = "SELECT * FROM jobs WHERE user_id='$userID' ORDER BY id DESC";
                         $jobResult = mysqli_query($conn, $jobSQL) or die(mysqli_errno($conn));
                         if (mysqli_num_rows($jobResult) == 0) {
                             echo "You currently have no job postings listed.";
