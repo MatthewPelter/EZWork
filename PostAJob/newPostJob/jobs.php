@@ -66,11 +66,13 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                                                             } else {
                                                                 echo "Open";
                                                             } ?></span></p>
-                            <p>Job Posted on <span id="date"><?php echo $r['datePosted']; ?></span> by <span id="postedBy"><?php if ($unameFetched['username'] != $_SESSION['userid']) {
-                                                                                                                                print("<a href='../../ClientProfile/userprofile.php?name=" . $unameFetched['username'] . ">" . $unameFetched['username'] . "</a>");
-                                                                                                                            } else {
-                                                                                                                                echo $unameFetched['username'];
-                                                                                                                            }  ?></span></p>
+                            <p>Job Posted on <span id="date"><?php echo $r['datePosted']; ?></span> by <span id="postedBy">
+                                    <?php if ($unameFetched['username'] != $_SESSION['userid']) {
+                                        echo "<a href='../../Profile/userprofile.php?name=" . $unameFetched['username'] . "'>" . $unameFetched['username'] . "</a>";
+                                    } else {
+                                        echo $unameFetched['username'];
+                                    }  ?>
+                                </span></p>
                         </div>
 
                     <?php

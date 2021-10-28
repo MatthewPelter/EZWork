@@ -66,7 +66,7 @@ if (mysqli_num_rows($jobResult) > 0) {
                 </div>
                 <div class="card result">
                     <h1>Posted By: <?php if ($unameFetched['username'] != $_SESSION['userid']) {
-                                        print("<a href='../../ClientProfile/userprofile.php?name=" . $unameFetched['username'] . ">" . $unameFetched['username'] . "</a>");
+                                        print("<a href='../../Profile/userprofile.php?name=" . $unameFetched['username'] . ">" . $unameFetched['username'] . "</a>");
                                     } else {
                                         echo $unameFetched['username'];
                                     }  ?></h1>
