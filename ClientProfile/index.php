@@ -89,7 +89,7 @@ $userID = $userrow['id'];
             </div>
         </div>
         <div class="user-profile-body">
-            <div class="user-postings">
+            <div class="user-postings" style="overflow-y: scroll;">
                 <div class="card title">
                     <h3>My Postings</h3>
                     <span><a href="../PostAJob/newPostJob/jobs">All Jobs</a></span>
@@ -370,9 +370,6 @@ $userID = $userrow['id'];
 
     </datalist>
 </body>
-
-<!--Script for this page-->
-<script src="./app.js"></script>
 
 <!--Script for the search bar and datalist-->
 <script src="../SkillsContainer/searchProfile.js"></script>
