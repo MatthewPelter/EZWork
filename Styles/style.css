@@ -5535,7 +5535,6 @@ section .container .login .login-container button:hover {
 }
 
 .profile {
-  margin-top: 4.5rem;
   width: 100%;
   background: whitesmoke;
   padding: 2.5rem 10rem;
@@ -6086,7 +6085,8 @@ section .container .login .login-container button:hover {
   margin-left: 1rem;
   width: 70%;
   text-align: start;
-  font-size: 0.8rem;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .profile .profile-categories-container .categoryCard i {
