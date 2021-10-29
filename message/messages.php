@@ -209,6 +209,11 @@ if (isset($_POST['submit'])) {
     <?php
             }
     ?>
+
+    <!--Can't understand why cant i add a margin so just adding padding to a div for space-->
+    <div class="spacerDiv" style="padding: 1rem;width: 100%;background-color: #c7e3f3;">
+
+    </div>
     <!-- Footer -->
     <?php include '../footer.php'; ?>
     <!-- Footer -->
