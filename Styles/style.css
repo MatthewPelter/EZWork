@@ -5609,8 +5609,6 @@ section .container .login .login-container button:hover {
   display: grid;
   -ms-grid-columns: 2fr 1fr;
       grid-template-columns: 2fr 1fr;
-  -ms-grid-rows: (1fr)[2];
-      grid-template-rows: repeat(2, 1fr);
   grid-gap: 1rem;
 }
 
