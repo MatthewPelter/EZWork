@@ -35,24 +35,17 @@ li {
   float: left;
 }
 
-.people-list .search {
-  padding: 20px;
+.people-list .title {
+  h4{
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: underline;
+  }
 }
 
-.people-list input {
-  border-radius: 3px;
-  border: none;
-  padding: 14px;
-  color: white;
-  background: #6a6c75;
-  width: 90%;
-  font-size: 14px;
-}
 
-.people-list .fa-search {
-  position: relative;
-  left: -25px;
-}
 
 .people-list ul {
   padding: 20px;

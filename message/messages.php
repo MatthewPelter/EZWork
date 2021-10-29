@@ -97,9 +97,8 @@ if (isset($_POST['submit'])) {
 
         <div class="message-container clearfix">
             <div class="people-list" id="people-list">
-                <div class="search">
-                    <input type="text" placeholder="search" />
-                    <i class="fa fa-search"></i>
+                <div class="title">
+                    <h4>Direct Message</h4>
                 </div>
                 <ul class="list">
 
@@ -218,7 +217,7 @@ if (isset($_POST['submit'])) {
 
     
     <!--Can't understand why cant i add a margin so just adding padding to a div for space-->
-    <div class="spacerDiv" style="padding: 1rem;width: 100%;background-color: #c7e3f3;">
+    <div class="spacerDiv" style="padding: 2rem;width: 100%;background-color: #c7e3f3;">
 
     </div>
     <!-- Footer -->
