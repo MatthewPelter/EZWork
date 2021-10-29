@@ -50,7 +50,7 @@
   }
   .user-profile-body {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: 2fr 1fr;
     grid-template-rows: repeat(2,1fr);
     grid-gap: 1rem;
   }
@@ -337,7 +337,6 @@
     flex-direction: column;
     background: white;
     border-radius: 15px;
-    margin-top: 7rem;
     border: 1px solid lightgrey;
     .categories-title {
       width: 100%;
