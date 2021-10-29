@@ -16765,6 +16765,14 @@ li {
   height: 0;
 }
 
+#usernameCard {
+  border-top: .7px solid lightgrey;
+}
+
+#usernameCard:hover {
+  background-color: lightgrey;
+}
+
 @media screen and (max-width: 754px) {
   .body-container {
     width: 100%;

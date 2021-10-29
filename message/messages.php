@@ -105,7 +105,7 @@ if (isset($_POST['submit'])) {
                     <?php
                     foreach ($u as $user) {
                     ?>
-                        <a style="display: block; color: white; text-decoration: none;" href="messages?mid=<?php echo $user['id']; ?>">
+                        <a style="display: block; color: white; text-decoration: none;" id="usernameCard" href="messages?mid=<?php echo $user['id']; ?>">
                             <li class="clearfix">
                                 <div class="about">
                                     <div class="name"><?php echo $user['username']; ?></div>
