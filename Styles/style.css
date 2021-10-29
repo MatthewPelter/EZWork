@@ -5810,7 +5810,7 @@ section .container .login .login-container button:hover {
 }
 
 .profile .profile-skills-container {
-  margin-top: 8rem;
+  margin-top: 8.5rem;
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   -ms-grid-column: 2;
@@ -5835,7 +5835,7 @@ section .container .login .login-container button:hover {
 }
 
 .profile .profile-skills-container .profile-skills .profile-skills-images {
-  width: 19rem;
+  width: 19.5rem;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
