@@ -89,7 +89,7 @@ $userID = $userrow['id'];
             </div>
         </div>
         <div class="user-profile-body">
-            <div class="user-postings" style="overflow-y: scroll;">
+            <div class="user-postings">
                 <div class="card title">
                     <h3>My Postings</h3>
                     <span><a href="../PostAJob/newPostJob/jobs">All Jobs</a></span>
@@ -111,25 +111,27 @@ $userID = $userrow['id'];
                 if (mysqli_num_rows($jobResult) > 0) {
                     while ($r = mysqli_fetch_assoc($jobResult)) {
                 ?>
-                        <div class="postedJob">
-                            <div class="jobTitle">
-                                <h4 id="jobTitle"><a href="../PostAJob/newPostJob/job.php?id=<?php echo $r['id']; ?>"><?php echo $r['title']; ?></a></h4>
-                                <i class="fa fa-ellipsis-v" id="jobGodMode" aria-hidden="true"></i>
-                                <div class="jobEdit">
-                                    <div class="exit">
-                                        <i class="fa fa-times" id="exitJobEdit"></i>
-                                    </div>
-                                    <button onclick="location.href='../PostAJob/reviewJobPost.php'">Edit</button>
-                                    <button style="color: red;" id="deleteJob">Delete</button>
+                <div class="allJobsCard" style="overflow-y: scroll;">
+                    <div class="postedJob">
+                        <div class="jobTitle">
+                            <h4 id="jobTitle"><a href="../PostAJob/newPostJob/job.php?id=<?php echo $r['id']; ?>"><?php echo $r['title']; ?></a></h4>
+                            <i class="fa fa-ellipsis-v" id="jobGodMode" aria-hidden="true"></i>
+                            <div class="jobEdit">
+                                <div class="exit">
+                                    <i class="fa fa-times" id="exitJobEdit"></i>
                                 </div>
+                                <button onclick="location.href='../PostAJob/reviewJobPost.php'">Edit</button>
+                                <button style="color: red;" id="deleteJob">Delete</button>
                             </div>
-                            <p>Status: <span id="status"><?php if ($r['status'] == 0) {
-                                                                echo "Open";
-                                                            } else {
-                                                                echo "Open";
-                                                            } ?></span></p>
-                            <p>Job Posted on <span id="date"><?php echo $r['datePosted']; ?></span> by <span id="postedBy">Me</span></p>
                         </div>
+                        <p>Status: <span id="status"><?php if ($r['status'] == 0) {
+                                                            echo "Open";
+                                                        } else {
+                                                            echo "Open";
+                                                        } ?></span></p>
+                        <p>Job Posted on <span id="date"><?php echo $r['datePosted']; ?></span> by <span id="postedBy">Me</span></p>
+                    </div>
+                </div>
 
                 <?php
                     }
