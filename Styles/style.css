@@ -5809,14 +5809,6 @@ section .container .login .login-container button:hover {
   color: #054e97;
 }
 
-.profile .profile-skills-container {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-area: 2 /2 / 3 / 3;
-}
-
 .profile .profile-skills-container .profile-skills {
   min-width: -webkit-fit-content;
   min-width: -moz-fit-content;

@@ -143,7 +143,7 @@ $userID = $userrow['id'];
                     <h3 style="color: #0a345e;"><i class="fa fa-users" aria-hidden="true"></i> Current Users</h3>
                 </div>
 
-                <div class="activerUsersBody" style="overflow-y: scroll;max-height: 60vh;">
+                <div class="activerUsersBody" style="overflow-y: scroll;max-height: 65vh;">
 
                     <?php
                     $sql = "SELECT * FROM clients";
@@ -225,7 +225,8 @@ $userID = $userrow['id'];
                     <p>Visit our <span>Help Center</span> for help.</p>
                 </div>
             </div>
-                
+            
+            <!--
             <div class="profile-skills-container">
                 <div class="profile-skills">
                     <div class="profile-skills-images">
@@ -271,7 +272,7 @@ $userID = $userrow['id'];
                     </div>
                 </div>
             </div>
-
+            -->
             <!--Categories Card
             <div class="profile-categories-container">
                 <div class="categories-title">
@@ -343,6 +344,7 @@ $userID = $userrow['id'];
             </div>
             -->
         </div>
+
     </div>
 
     <!-- Footer -->
