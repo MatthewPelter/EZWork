@@ -210,6 +210,13 @@ if (isset($_POST['submit'])) {
             }
     ?>
 
+
+    <!--DataList-->
+    <datalist id="allskills">
+    </datalist>
+    </div>
+
+    
     <!--Can't understand why cant i add a margin so just adding padding to a div for space-->
     <div class="spacerDiv" style="padding: 1rem;width: 100%;background-color: #c7e3f3;">
 
@@ -217,11 +224,6 @@ if (isset($_POST['submit'])) {
     <!-- Footer -->
     <?php include '../footer.php'; ?>
     <!-- Footer -->
-
-    <!--DataList-->
-    <datalist id="allskills">
-    </datalist>
-    </div>
 </body>
 
 <script type="text/javascript">
