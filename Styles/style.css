@@ -16766,11 +16766,12 @@ li {
 }
 
 #usernameCard {
+  width: 100%;
   border-top: .7px solid lightgrey;
 }
 
 #usernameCard:hover {
-  background-color: lightgrey;
+  background-color: #585b69;
 }
 
 @media screen and (max-width: 754px) {

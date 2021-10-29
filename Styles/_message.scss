@@ -244,9 +244,10 @@ li {
   height: 0;
 }
 #usernameCard{
+  width: 100%;
   border-top: .7px solid lightgrey;
   &:hover{
-    background-color: lightgrey;
+    background-color: #585b69;
   }
 }
 
