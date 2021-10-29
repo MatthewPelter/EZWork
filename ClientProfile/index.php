@@ -138,12 +138,12 @@ $userID = $userrow['id'];
 
             </div>
             
-            <div class="activeUsers profile-categories-container">
+            <div class="activeUsers profile-categories-container" >
                 <div class="categories-title">
                     <h3><i class="fa fa-users" aria-hidden="true"></i> Current Users</h3>
                 </div>
 
-                <div class="activerUsersBody" style="overflow-y: scroll;">
+                <div class="activerUsersBody" style="overflow-y: scroll;max-height: 80vh;">
 
                     <?php
                     $sql = "SELECT * FROM clients";
