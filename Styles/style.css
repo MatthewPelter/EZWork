@@ -16557,6 +16557,10 @@ li {
   float: left;
 }
 
+.people-list .title {
+  padding: 20px;
+}
+
 .people-list .title h4 {
   width: 100%;
   text-align: center;
