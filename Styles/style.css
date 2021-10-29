@@ -4568,9 +4568,6 @@ section .container .login .login-container button:hover {
 
 /*Profiles*/
 .profile-header-container {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   background: #1d4354;
 }
@@ -5729,6 +5726,10 @@ section .container .login .login-container button:hover {
 .profile .user-postings .postedJob .jobTitle h4 a {
   font-size: 1.2rem;
   color: #0a345e;
+}
+
+.profile .user-postings .postedJob .jobTitle h4 a:hover {
+  text-decoration: underline;
 }
 
 .profile .user-postings .postedJob .jobTitle i {
