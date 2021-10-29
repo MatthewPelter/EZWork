@@ -181,8 +181,7 @@
     }
   }
   .profile-skills-container {
-    //grid-column: 3/4;
-    //grid-row: 2/3;
+    grid-area: 2 /2 / 3 / 3;
     .profile-skills {
       min-width: fit-content;
       height: fit-content;
