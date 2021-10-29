@@ -479,7 +479,47 @@
       color: lightgreen;
     }
   }
-  .mobileJobCard,.mobileFreelanceCard,.mobileProjectsCard {
+  .mobileJobCard {
+    width: 100%;
+    padding: 0rem 1rem;
+    display: none;
+    ul {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      a {
+        font-size: 0.8rem;
+        margin: 0.5rem 0rem;
+        width: 100%;
+        text-decoration: none;
+        color: white;
+        &:hover {
+          color: lightgreen;
+        }
+      }
+    }
+  }
+  .mobileFreelanceCard {
+    width: 100%;
+    padding: 0rem 1rem;
+    display: none;
+    ul {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      a {
+        font-size: 0.8rem;
+        margin: 0.5rem 0rem;
+        width: 100%;
+        text-decoration: none;
+        color: white;
+        &:hover {
+          color: lightgreen;
+        }
+      }
+    }
+  }
+  .mobileProjectsCard{
     width: 100%;
     padding: 0rem 1rem;
     display: none;

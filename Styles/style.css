@@ -5195,13 +5195,13 @@ section .container .login .login-container button:hover {
   color: lightgreen;
 }
 
-.profile-mobile-nav .mobileJobCard, .profile-mobile-nav .mobileFreelanceCard, .profile-mobile-nav .mobileProjectsCard {
+.profile-mobile-nav .mobileJobCard {
   width: 100%;
   padding: 0rem 1rem;
   display: none;
 }
 
-.profile-mobile-nav .mobileJobCard ul, .profile-mobile-nav .mobileFreelanceCard ul, .profile-mobile-nav .mobileProjectsCard ul {
+.profile-mobile-nav .mobileJobCard ul {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5212,7 +5212,7 @@ section .container .login .login-container button:hover {
           flex-direction: column;
 }
 
-.profile-mobile-nav .mobileJobCard ul a, .profile-mobile-nav .mobileFreelanceCard ul a, .profile-mobile-nav .mobileProjectsCard ul a {
+.profile-mobile-nav .mobileJobCard ul a {
   font-size: 0.8rem;
   margin: 0.5rem 0rem;
   width: 100%;
@@ -5220,7 +5220,65 @@ section .container .login .login-container button:hover {
   color: white;
 }
 
-.profile-mobile-nav .mobileJobCard ul a:hover, .profile-mobile-nav .mobileFreelanceCard ul a:hover, .profile-mobile-nav .mobileProjectsCard ul a:hover {
+.profile-mobile-nav .mobileJobCard ul a:hover {
+  color: lightgreen;
+}
+
+.profile-mobile-nav .mobileFreelanceCard {
+  width: 100%;
+  padding: 0rem 1rem;
+  display: none;
+}
+
+.profile-mobile-nav .mobileFreelanceCard ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.profile-mobile-nav .mobileFreelanceCard ul a {
+  font-size: 0.8rem;
+  margin: 0.5rem 0rem;
+  width: 100%;
+  text-decoration: none;
+  color: white;
+}
+
+.profile-mobile-nav .mobileFreelanceCard ul a:hover {
+  color: lightgreen;
+}
+
+.profile-mobile-nav .mobileProjectsCard {
+  width: 100%;
+  padding: 0rem 1rem;
+  display: none;
+}
+
+.profile-mobile-nav .mobileProjectsCard ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.profile-mobile-nav .mobileProjectsCard ul a {
+  font-size: 0.8rem;
+  margin: 0.5rem 0rem;
+  width: 100%;
+  text-decoration: none;
+  color: white;
+}
+
+.profile-mobile-nav .mobileProjectsCard ul a:hover {
   color: lightgreen;
 }
 
