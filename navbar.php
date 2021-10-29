@@ -19,13 +19,13 @@
             <a href="#/">
                 <li>My Jobs</li>
             </a>
-            <a href="#/">
+            <a href="./PostAJob/newPostJob/jobs.php">
                 <li>All Job Posts</li>
             </a>
             <a href="#/">
                 <li>All Contracts</li>
             </a>
-            <a href="../PostAJob/PostAJob.html">
+            <a href="./PostAJob/newPostJob/length.php">
                 <li>Post A Job</li>
             </a>
         </ul>
