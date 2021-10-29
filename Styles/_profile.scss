@@ -52,8 +52,6 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: repeat(2,1fr);
-    grid-column-gap: 1rem;
-    grid-row-gap: 1rem;
   }
   .user-postings {
     grid-area: 1/1/2/2;
