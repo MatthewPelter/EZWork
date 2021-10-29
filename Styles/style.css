@@ -5810,6 +5810,7 @@ section .container .login .login-container button:hover {
 }
 
 .profile .profile-skills-container {
+  margin-top: 5rem;
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   -ms-grid-column: 2;
