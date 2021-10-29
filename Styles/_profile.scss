@@ -118,8 +118,11 @@
         align-items: center;
         justify-content: space-between;
         h4 {
-          font-size: 1.2rem;
-          color: $color1;
+          a{
+            font-size: 1.2rem;
+            color: $color1;
+          }
+
         }
         i {
           font-size: 0.8rem;
@@ -181,7 +184,6 @@
     }
   }
   .profile-skills-container {
-    margin-top: 8.5rem;
     grid-area: 2 /2 / 3 / 3;
     .profile-skills {
       min-width: fit-content;

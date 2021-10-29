@@ -5726,7 +5726,7 @@ section .container .login .login-container button:hover {
           justify-content: space-between;
 }
 
-.profile .user-postings .postedJob .jobTitle h4 {
+.profile .user-postings .postedJob .jobTitle h4 a {
   font-size: 1.2rem;
   color: #0a345e;
 }
@@ -5810,7 +5810,6 @@ section .container .login .login-container button:hover {
 }
 
 .profile .profile-skills-container {
-  margin-top: 8.5rem;
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   -ms-grid-column: 2;
