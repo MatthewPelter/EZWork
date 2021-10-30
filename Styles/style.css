@@ -5411,6 +5411,9 @@ section .container .login .login-container button:hover {
 
 @media screen and (max-width: 754px) {
   .profile-header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
   }
   .profile-header-container .profileHeader {
@@ -16945,7 +16948,7 @@ li {
     border-radius: 7px;
     margin-bottom: 30px;
     width: 90%;
-    position: relative;
+    position: absolute;
   }
   .chat .chat-history .message:after {
     bottom: 100%;
