@@ -69,7 +69,7 @@ if (!isset($_SESSION['userid'])) {
                 }
                 ?>
             </span>
-            <form action="postTitle.php" method="post">
+            <form action="postTitle.php" method="post" style="width: 100%;">
                 <h3>Choose a Job Length:<span>*</span></h3>
                 <div class="lengthContainers">
                     <div class="short">
