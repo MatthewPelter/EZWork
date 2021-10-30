@@ -60,7 +60,7 @@ if (!isset($_SESSION['userid'])) {
                 </div>
             </div>
             <div class="detail-input-section">
-            <span id="error">
+            <span id="error" style="color: red;">
                 <!---- Initializing Session for errors --->
                 <?php
                 if (!empty($_SESSION['error'])) {
