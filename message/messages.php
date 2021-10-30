@@ -316,18 +316,18 @@ if (isset($_POST['submit'])) {
 <script>
     const navIcon = document.getElementById("nav-burger");
     const profileMobileNav = document.querySelector(".profile-mobile-nav");
-    const messageContainer = document.querySelector('.message-container');
+    const bodyContainer = document.querySelector('.body-container');
     function myFunction(x) {
         x.classList.toggle("change");
         if(x.classList.contains('change')){
             profileMobileNav.style.display = "inline-block";
-            messageContainer.style.display = 'block';
+            bodyContainer.style.display = 'block';
             searchIcon.style.opacity='0';
         }
         else{
             profileMobileNav.style.display = 'none';
             searchIcon.style.opacity='1';
-            messageContainer.style.display = "inline-block";
+            bodyContainer.style.display = "inline-block";
         }
     }
 
