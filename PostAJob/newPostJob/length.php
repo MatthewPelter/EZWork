@@ -70,12 +70,23 @@ if (!isset($_SESSION['userid'])) {
                 ?>
             </span>
             <form action="postTitle.php" method="post">
-                <h3>Choose an Option:<span>*</span></>
-                <input type="radio" id="short" name="length" value="s" required>
-                <label for="short">Short term or part time work</label><br>
-                <input type="radio" id="long" name="length" value="l">
-                <label for="long">Designated, longer term work</label><br>
-                <input type="submit" value="Next" />
+                <h3>Choose an Option:<span>*</span></h3>
+                <div class="lengthContainers">
+                    <div class="short">
+                        <input type="radio" id="short" name="length" value="s" required>
+                        <label for="short">Short term or part time work</label><br>
+                    </div>
+                    <div class="long">
+                        <input type="radio" id="long" name="length" value="l">
+                        <label for="long">Designated, longer term work</label><br>    
+                    </div>
+                </div>
+
+
+                <div class="CancelOrNext">
+                    <button id="cancel">Cancel</button>
+                    <input type="submit" value="Next: Title" />
+                </div>
             </form>
 
             </div>

@@ -8257,11 +8257,57 @@ ul {
 }
 
 .postJob-detail .detail-container .detail-input-section h3 {
-  font-size: 1.2rem;
-  color: #0a345e;
+  width: 100%;
+  text-align: start;
+  font-size: 1.3rem;
+  padding: 1rem 0rem;
 }
 
-.postJob-detail .detail-container .detail-input-section input {
+.postJob-detail .detail-container .detail-input-section .lengthContainers {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 0.8rem;
+}
+
+.postJob-detail .detail-container .detail-input-section .CancelOrNext {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.postJob-detail .detail-container .detail-input-section .CancelOrNext #cancel {
+  color: #0a345e;
+  font-size: 1rem;
+  background: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 15px;
+  border: 0.6px solid #0a345e;
+  cursor: pointer;
+}
+
+.postJob-detail .detail-container .detail-input-section .CancelOrNext #cancel:hover {
+  background: #ebebeb;
+}
+
+.postJob-detail .detail-container .detail-input-section .CancelOrNext input {
   color: white;
   font-size: 1rem;
   background: #054e97;
@@ -8269,6 +8315,10 @@ ul {
   border-radius: 15px;
   border: 0.6px solid gray;
   cursor: pointer;
+}
+
+.postJob-detail .detail-container .detail-input-section .CancelOrNext input:hover {
+  background: #0a345e;
 }
 
 .postJob-detail-skills {
