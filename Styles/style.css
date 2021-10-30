@@ -8257,10 +8257,11 @@ ul {
 }
 
 .postJob-detail .detail-container .detail-input-section h3 {
+  text-decoration: underline;
   width: 100%;
   text-align: start;
   font-size: 1.5rem;
-  padding: 1rem 0rem;
+  padding: 1rem .5rem 1rem 0rem;
 }
 
 .postJob-detail .detail-container .detail-input-section .lengthContainers {
