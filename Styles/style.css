@@ -8290,6 +8290,10 @@ ul {
           align-items: center;
 }
 
+.postJob-detail .detail-container .detail-input-section .lengthContainers .short input, .postJob-detail .detail-container .detail-input-section .lengthContainers .long input {
+  cursor: pointer;
+}
+
 .postJob-detail .detail-container .detail-input-section .lengthContainers .short label, .postJob-detail .detail-container .detail-input-section .lengthContainers .long label {
   padding-left: 1rem;
 }

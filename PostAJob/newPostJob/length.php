@@ -56,7 +56,7 @@ if (!isset($_SESSION['userid'])) {
                 </div>
                 <div class="title-card-intro">
                     <h2>Let's start with the job length.</h2>
-                    <p>This help us find the correct freelancer for your job.</p>
+                    <p>Deciding on the job length, helps us find the best freelancers for you job, whether the job being short or long.</p>
                 </div>
             </div>
             <div class="detail-input-section">
