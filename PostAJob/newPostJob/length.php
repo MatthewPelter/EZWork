@@ -70,7 +70,7 @@ if (!isset($_SESSION['userid'])) {
                 ?>
             </span>
             <form action="postTitle.php" method="post">
-                <label>Choose an Option:<span>*</span></label><br />
+                <h3>Choose an Option:<span>*</span></>
                 <input type="radio" id="short" name="length" value="s" required>
                 <label for="short">Short term or part time work</label><br>
                 <input type="radio" id="long" name="length" value="l">

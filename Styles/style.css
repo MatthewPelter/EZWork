@@ -8103,7 +8103,6 @@ ul {
 }
 
 .postJob-detail {
-  margin-top: 4.5rem;
   width: 100%;
   background: whitesmoke;
   padding: 2.5rem 10rem;
@@ -8250,6 +8249,26 @@ ul {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+
+.postJob-detail .detail-container .detail-input-section #error {
+  color: red;
+  font-size: 1rem;
+}
+
+.postJob-detail .detail-container .detail-input-section h3 {
+  font-size: 1.2rem;
+  color: #0a345e;
+}
+
+.postJob-detail .detail-container .detail-input-section input {
+  color: white;
+  font-size: 1rem;
+  background: #054e97;
+  padding: 0.5rem 1.5rem;
+  border-radius: 15px;
+  border: 0.6px solid gray;
+  cursor: pointer;
 }
 
 .postJob-detail-skills {

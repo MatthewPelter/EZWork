@@ -1,7 +1,6 @@
 
 // CSS for Posting a Title start
 .postJob-detail {
-  margin-top: 4.5rem;
   width: 100%;
   background: whitesmoke;
   padding: 2.5rem 10rem;
@@ -107,7 +106,24 @@
       border-top-right-radius: 15px;
       border-bottom-right-radius: 15px;
       justify-content: center;
-      align-items: flex-start;      
+      align-items: flex-start;
+      #error{
+        color: red;
+        font-size: 1rem;
+      }
+      h3{
+        font-size: 1.2rem;
+        color: $color1;
+      }
+      input{
+        color: white;
+        font-size: 1rem;
+        background: $lightColor;
+        padding: 0.5rem 1.5rem;
+        border-radius: 15px;
+        border: 0.6px solid gray;
+        cursor: pointer;
+      }
     }
   }
 }
