@@ -13,18 +13,6 @@ div.main {
   padding: 0px 50px 20px;
   font-family: "Raleway", sans-serif;
 }
-#error {
-  display: block;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-#success {
-  color: green;
-  font-weight: bold;
-}
-span {
-  color: red;
-}
 h2 {
   background-color: #feffed;
   padding: 32px;
