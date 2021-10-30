@@ -123,11 +123,14 @@
         flex-direction: column;
         margin-top: 0.8rem;
         .short,.long{
+          padding: 1rem 0rem;
           width: 100%;
           display: flex;
           flex-direction: row;
           align-items: center;
-          justify-content: space-evenly;
+          label{
+            padding-left: 1rem;
+          }
         }
       }
       .CancelOrNext {
@@ -150,6 +153,7 @@
           }
         }
         input{
+          margin-left: 1rem;
           color: white;
           font-size: 1rem;
           background: $lightColor;
