@@ -117,6 +117,11 @@
         text-align: start;
         font-size: 1.5rem;
         padding: 1rem .5rem 1rem 0rem;
+        span{
+          color:$lightColor;
+          font-size: .8rem;
+          text-decoration: none;
+        }
       }
       .lengthContainers{
         width: 100%;

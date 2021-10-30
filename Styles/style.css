@@ -8264,6 +8264,12 @@ ul {
   padding: 1rem .5rem 1rem 0rem;
 }
 
+.postJob-detail .detail-container .detail-input-section h3 span {
+  color: #054e97;
+  font-size: .8rem;
+  text-decoration: none;
+}
+
 .postJob-detail .detail-container .detail-input-section .lengthContainers {
   width: 100%;
   display: -webkit-box;
