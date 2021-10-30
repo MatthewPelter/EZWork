@@ -68,7 +68,6 @@ if (!isset($_SESSION['userid'])) {
                     unset($_SESSION['error']);
                 }
                 ?>
-                Please choose one.
             </span>
             <form action="postTitle.php" method="post">
                 <h3>Choose an Option:<span>*</span></h3>
