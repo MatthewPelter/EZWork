@@ -8275,6 +8275,23 @@ ul {
   margin-top: 0.8rem;
 }
 
+.postJob-detail .detail-container .detail-input-section .lengthContainers .short, .postJob-detail .detail-container .detail-input-section .lengthContainers .long {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
 .postJob-detail .detail-container .detail-input-section .CancelOrNext {
   margin-top: 2rem;
   display: -webkit-box;
