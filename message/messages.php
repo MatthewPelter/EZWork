@@ -94,6 +94,10 @@ if (isset($_POST['submit'])) {
             echo "no messages";
         }
         ?>
+        <!---->
+        <div class="mobileSpacer">
+
+        </div>
 
         <div class="message-container clearfix">
             <div class="people-list" id="people-list">
