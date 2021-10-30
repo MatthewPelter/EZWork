@@ -68,6 +68,7 @@ if (!isset($_SESSION['userid'])) {
                     unset($_SESSION['error']);
                 }
                 ?>
+                Please choose one.
             </span>
             <form action="postTitle.php" method="post">
                 <h3>Choose an Option:<span>*</span></h3>
@@ -82,9 +83,8 @@ if (!isset($_SESSION['userid'])) {
                     </div>
                 </div>
 
-
                 <div class="CancelOrNext">
-                    <button id="cancel">Cancel</button>
+                    <button id="cancel"  onclick="location.href='../../ClientProfile/index.php'">Cancel</button>
                     <input type="submit" value="Next: Title" />
                 </div>
             </form>
@@ -100,7 +100,6 @@ if (!isset($_SESSION['userid'])) {
     <datalist id="allskills"></datalist>
 
 </body>
-<script src="../../ClientProfile/app.js"></script>
 <!--Nav bar script-->
 <script>
     var job = document.querySelector('.jobCard');
