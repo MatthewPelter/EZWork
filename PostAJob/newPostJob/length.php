@@ -55,7 +55,8 @@ if (!isset($_SESSION['userid'])) {
                     </ul>
                 </div>
                 <div class="title-card-intro">
-                    <h2>Let's start with the job lenght.</h2>
+                    <h2>Let's start with the job length.</h2>
+                    <p>This help us find the correct freelancer for your job.</p>
                 </div>
             </div>
             <div class="detail-input-section">

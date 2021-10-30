@@ -8102,6 +8102,21 @@ ul {
   }
 }
 
+#error {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#success {
+  color: green;
+  font-weight: bold;
+}
+
+span {
+  color: red;
+}
+
 .postJob-detail {
   margin-top: 4.5rem;
   width: 100%;
