@@ -323,7 +323,7 @@ if (isset($_POST['submit'])) {
         x.classList.toggle("change");
         if(x.classList.contains('change')){
             profileMobileNav.style.display = "inline-block";
-            messageMainContainer.style.display = 'block';
+            messageMainContainer.style.display = 'none';
             searchIcon.style.opacity='0';
         }
         else{
