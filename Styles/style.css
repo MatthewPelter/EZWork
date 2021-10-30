@@ -8259,7 +8259,7 @@ ul {
 .postJob-detail .detail-container .detail-input-section h3 {
   width: 100%;
   text-align: start;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   padding: 1rem 0rem;
 }
 
@@ -8296,6 +8296,10 @@ ul {
 
 .postJob-detail .detail-container .detail-input-section .lengthContainers .short label, .postJob-detail .detail-container .detail-input-section .lengthContainers .long label {
   padding-left: 1rem;
+}
+
+.postJob-detail .detail-container .detail-input-section .lengthContainers .short {
+  padding: 0;
 }
 
 .postJob-detail .detail-container .detail-input-section .CancelOrNext {
