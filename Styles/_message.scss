@@ -256,8 +256,8 @@ li {
 
 @media screen and (max-width: 754px) {
   .mobileSpacer{
-    display: inline-block;
-    padding: 2rem;
+    display: flex;
+    padding: 5rem;
     width: 100%;
     background-color: #c7e3f3;
   }
