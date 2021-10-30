@@ -257,7 +257,7 @@ li {
 @media screen and (max-width: 754px) {
   .mobileSpacer{
     display: flex;
-    padding: 5rem;
+    padding: 2rem;
     width: 100%;
     background-color: #c7e3f3;
   }
@@ -281,27 +281,8 @@ li {
     float: none;
   }
 
-  .people-list .search {
-    padding: 20px;
-  }
-
-  .people-list input {
-    border-radius: 3px;
-    border: none;
-    padding: 14px;
-    color: white;
-    background: #6a6c75;
-    width: 90%;
-    font-size: 14px;
-  }
-
-  .people-list .fa-search {
-    position: relative;
-    left: -25px;
-  }
-
   .people-list ul {
-    padding: 20px;
+    padding: 10px;
     height: 770px;
   }
 
