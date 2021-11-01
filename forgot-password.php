@@ -10,7 +10,7 @@ function securityscan($data)
     $data = addslashes($data);
     return $data;
 }
-
+/*
 if (isset($_POST['resetpassword'])) {
     $cstrong = True;
     $token = bin2hex(openssl_random_pseudo_bytes(64, $cstrong));
@@ -21,7 +21,7 @@ if (isset($_POST['resetpassword'])) {
     $setToken = mysqli_query($conn, $sql);
     Mail::sendMail('Forgot Password!', "Click here to change your password. <a href='https://ez-work.herokuapp.com/change-password.php?token=$token'>https://ez-work.herokuapp.com/change-password.php?token=$token</a>", $email);
     header("Location: ./login/index");
-}
+}*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
