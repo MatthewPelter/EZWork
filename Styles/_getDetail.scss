@@ -581,7 +581,12 @@
           display: flex;
           flex-direction: row;
           align-items: center;
+          justify-content: space-between;
           margin: 1rem 0rem;
+          label{
+            color: $lightColor;
+            font-size: 1.2rem;
+          }
         }
       }
       .CancelOrNext {
