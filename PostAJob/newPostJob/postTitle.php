@@ -78,12 +78,12 @@ if (isset($_POST['length'])) {
                     <input name="title" id="title" type="text" placeholder="I need my garage door installed..." value=""><br />
                 </div>
                 <h4>Example titles</h4>
-                <ul>
+                <ul style="list-style: circle;">
                     <li>Build a website for my local coffee shop business</li>
                     <li>Logo Designer needed to design a modern company logo.</li>
                     <li>Computer Technician needed to build my custom gaming pc.</li>
                 </ul>
-                <h3>Enter a description of your job post</h3>
+                <h3>Enter a job description</h3>
                 <div class="descriptionContainer">
                     <input name="description" id="description" type="text" placeholder="My son drove into my garage door and completely ruined my beautiful door..." value="">
                 </div>
