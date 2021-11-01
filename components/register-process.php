@@ -19,8 +19,10 @@ if (isset($_POST['submit'])) {
     $lastname = ucfirst($lastname);
 
     $username = securityscan($_POST['username']);
-    // Very cluttered if statement cuz im lazy
-    if (mysqli_num_rows(mysqli_query($conn, "SELECT * FROM clients WHERE username='$username'")) > 0) {
+
+    $userSQL = "SELECT * FROM clients WHERE username='$username'";
+    $userQuery = mysqli_query($conn, $userSQL);
+    if (mysqli_num_rows($userQuery) > 0) {
         $_SESSION['regError'] = 'Username is already taken!';
         header("Location: ../register/index");
     }
