@@ -24,8 +24,7 @@ if (isset($_POST['submit'])) {
 
     $user_count = mysqli_num_rows($result);
     if ($user_count > 0) {
-        die;
-        $_SESSION['regError'] = 'Username is taken already...';
+        $_SESSION['regError'] = "Username is taken already...";
         header("Location: ../register/index");
     }
 
@@ -33,7 +32,7 @@ if (isset($_POST['submit'])) {
     $phone = securityscan($_POST['phone']);
     $email = securityscan($_POST['email']);
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $_SESSION['regError'] = 'Email is not valid, Try again';
+        $_SESSION['regError'] = "Email is not valid, Try again";
         header("Location: ../register/index");
     }
     $password = securityscan($_POST['password']);

@@ -97,7 +97,7 @@ if (isset($_SESSION["userid"])) {
                         <p>
                             <input type="password" name="password2" id="password2" title="Match Password" placeholder="Match Password" minlength="8" required>
                         </p>
-                        <span id="error"><?php if (isset($_SESSION['regError'])) {
+                        <span id="error"><?php if (!empty($_SESSION['regError'])) {
                                                 echo $_SESSION['regError'];
                                                 unset($_SESSION['regError']);
                                             } ?></span>
