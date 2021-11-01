@@ -63,7 +63,7 @@ if (isset($_POST['length'])) {
                 </div>
             </div>
             <div class="detail-input-section">
-                <span id="error">
+            <span id="error" style="color: red;padding: 0;">
                     <?php
                     // To show error of page 2.
                     if (!empty($_SESSION['error_page2'])) {
@@ -71,11 +71,11 @@ if (isset($_POST['length'])) {
                         unset($_SESSION['error_page2']);
                     }
                     ?>
-                </span>
+            </span>
             <form action="scope.php" method="post" style="width: 100%;">
                 <h3>Write a title for your job post</h3>
                 <div class="titleContainer">
-                    <input name="title" id="title" type="text" placeholder="I need my garage door installed..." value=""><br />
+                    <input name="title" id="title" type="text" required placeholder="I need my garage door installed..." value=""><br />
                 </div>
                 <h4>Example titles</h4>
                 <ul>
@@ -85,7 +85,7 @@ if (isset($_POST['length'])) {
                 </ul>
                 <h3>Enter a job description</h3>
                 <div class="descriptionContainer">
-                    <input name="description" id="description" type="text" placeholder="My son drove into my garage door and completely ruined my beautiful door..." value="">
+                    <input name="description" id="description" type="text" required placeholder="My son drove into my garage door and completely ruined my beautiful door..." value="">
                 </div>
                 <div class="CancelOrNext">
                     <input type="reset" value="Reset" id="reset" />
