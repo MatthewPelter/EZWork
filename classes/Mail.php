@@ -1,5 +1,5 @@
 <?php
-require_once('PHPMailer/PHPMailerAutoload.php');
+require_once('../PHPMailer/PHPMailerAutoload.php');
 class Mail
 {
         public static function sendMail($subject, $body, $address)
