@@ -136,12 +136,9 @@
           align-items: center;
           input{
             cursor: pointer;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
           }
           label{
-            padding-left: 1rem;
+            padding-left: .3rem;
           }
         }
         .short{

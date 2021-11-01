@@ -224,17 +224,3 @@ $_POST['email'] = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
  }
  */
 ?>
-
-<div class="PostAJob">
-    <div class="PostAJobContainer">
-        <h2>Post a Job</h2>
-        <hr />
-
-        <form action="scope.php" method="post">
-            <label>Write a title for your job post :<span>*</span></label><br />
-
-            <br />
-
-        </form>
-    </div>
-</div>
