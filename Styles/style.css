@@ -8322,6 +8322,7 @@ ul {
 }
 
 .postJob-detail .detail-container .detail-input-section .lengthContainers .short label, .postJob-detail .detail-container .detail-input-section .lengthContainers .long label {
+  cursor: pointer;
   padding-left: 0.5rem;
 }
 
