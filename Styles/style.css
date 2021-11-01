@@ -8899,12 +8899,17 @@ ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 1rem 0rem;
+  margin: 2.5rem 0rem;
 }
 
 .postJob-detail-scope .detail-scope-container .detail-input-section .scopeOptions .projectSize label, .postJob-detail-scope .detail-scope-container .detail-input-section .scopeOptions .projectLength label, .postJob-detail-scope .detail-scope-container .detail-input-section .scopeOptions .projectExperience label {
   color: #054e97;
   font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.postJob-detail-scope .detail-scope-container .detail-input-section .scopeOptions .projectSize select, .postJob-detail-scope .detail-scope-container .detail-input-section .scopeOptions .projectLength select, .postJob-detail-scope .detail-scope-container .detail-input-section .scopeOptions .projectExperience select {
+  width: 5rem;
 }
 
 .postJob-detail-scope .detail-scope-container .detail-input-section .CancelOrNext {
@@ -8925,7 +8930,7 @@ ul {
           align-items: center;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .CancelOrNext #cancel {
+.postJob-detail-scope .detail-scope-container .detail-input-section .CancelOrNext #reset {
   color: #0a345e;
   font-size: 1rem;
   background: none;
@@ -8935,7 +8940,7 @@ ul {
   cursor: pointer;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .CancelOrNext #cancel:hover {
+.postJob-detail-scope .detail-scope-container .detail-input-section .CancelOrNext #reset:hover {
   background: #ebebeb;
 }
 

@@ -123,7 +123,7 @@ if (!isset($_SESSION['userid'])) {
 
                 <div class="CancelOrNext">
                     <input type="reset" value="Reset" id="reset" />
-                    <input type="submit" value="Next"  id="nextLocation"/>
+                    <input type="submit" value="Next: Location"  id="nextLocation"/>
                 </div>
             </form>
 
