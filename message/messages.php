@@ -91,7 +91,7 @@ if (isset($_POST['submit'])) {
                     }
                 }
             } else {
-                echo "no messages";
+                //echo "no messages";
             }
             ?>
             <!---->

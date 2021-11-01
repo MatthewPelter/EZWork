@@ -22,6 +22,9 @@ if (isset($_POST['submit'])) {
     $birthday = securityscan($_POST['birthday']);
     $phone = securityscan($_POST['phone']);
     $email = securityscan($_POST['email']);
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $_SESSION['regError'] = 'Email is not valid, Try again';
+    }
     $password = securityscan($_POST['password']);
     $password2 = securityscan($_POST['password2']);
 

@@ -87,7 +87,9 @@ if (isset($_SESSION["userid"])) {
                         <p>
                             <input type="password" name="password2" id="password2" title="Match Password" placeholder="Match Password" required>
                         </p>
-                        <span id="error"></span>
+                        <span id="error"><?php if (isset($_SESSION['regError'])) {
+                                                echo $_SESSION['regError'];
+                                            } ?></span>
                     </div>
                     <input type="submit" value="Continue" name="submit" id="continue">
                 </form>
