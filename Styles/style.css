@@ -8726,15 +8726,14 @@ ul {
 
 .postJob-detail-scope {
   width: 100%;
+  height: 95vh;
   background: whitesmoke;
   padding: 2.5rem 10rem;
 }
 
 .postJob-detail-scope .detail-scope-container {
   width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 100%;
   background: #0a345e;
   display: -webkit-box;
   display: -ms-flexbox;
