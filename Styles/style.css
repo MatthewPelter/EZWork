@@ -9105,13 +9105,13 @@ ul {
   background: #71c571;
 }
 
-.postJob-detail-scope {
+.postJob-detail-Scope {
   width: 100%;
   background: whitesmoke;
   padding: 2.5rem 10rem;
 }
 
-.postJob-detail-scope .detail-scope-container {
+.postJob-detail-Scope .detail-scope-container {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -9128,7 +9128,7 @@ ul {
   border-radius: 15px;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-progress-section {
+.postJob-detail-Scope .detail-scope-container .detail-progress-section {
   width: 50%;
   height: 100%;
   padding: 1.5rem;
@@ -9144,15 +9144,15 @@ ul {
   border-bottom-left-radius: 15px;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-progress-section #current {
+.postJob-detail-Scope .detail-scope-container .detail-progress-section #current {
   color: lightgreen;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-progress-section .progressBar {
+.postJob-detail-Scope .detail-scope-container .detail-progress-section .progressBar {
   width: 100%;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-progress-section .progressBar progress {
+.postJob-detail-Scope .detail-scope-container .detail-progress-section .progressBar progress {
   border-radius: 10px;
   width: 100%;
   padding: 0;
@@ -9163,7 +9163,7 @@ ul {
   appearance: none;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-progress-section .progressBar progress::-webkit-progress-bar {
+.postJob-detail-Scope .detail-scope-container .detail-progress-section .progressBar progress::-webkit-progress-bar {
   border-radius: 10px;
   width: 100%;
   padding: 0;
@@ -9174,7 +9174,7 @@ ul {
   appearance: none;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-progress-section .progressBar progress::-moz-progress-bar {
+.postJob-detail-Scope .detail-scope-container .detail-progress-section .progressBar progress::-moz-progress-bar {
   border-radius: 10px;
   width: 100%;
   padding: 0;
@@ -9185,7 +9185,7 @@ ul {
   appearance: none;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-progress-section .progressBar progress::-webkit-progress-value {
+.postJob-detail-Scope .detail-scope-container .detail-progress-section .progressBar progress::-webkit-progress-value {
   background: lightgreen;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -9193,7 +9193,7 @@ ul {
   border: none;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-progress-section .progressBar progress::-moz-progress-bar {
+.postJob-detail-Scope .detail-scope-container .detail-progress-section .progressBar progress::-moz-progress-bar {
   background: lightgreen;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -9201,7 +9201,7 @@ ul {
   border: none;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-progress-section .progressBar ul {
+.postJob-detail-Scope .detail-scope-container .detail-progress-section .progressBar ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9218,23 +9218,23 @@ ul {
   padding-top: 0.3rem;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-progress-section .progressBar ul li {
+.postJob-detail-Scope .detail-scope-container .detail-progress-section .progressBar ul li {
   color: white;
   font-size: 0.9rem;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-progress-section .title-card-intro h2 {
+.postJob-detail-Scope .detail-scope-container .detail-progress-section .title-card-intro h2 {
   padding: 6rem 0rem 1rem 0rem;
   color: white;
   font-size: 2.3rem;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-progress-section .title-card-intro p {
+.postJob-detail-Scope .detail-scope-container .detail-progress-section .title-card-intro p {
   color: white;
   font-size: 0.95rem;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section {
+.postJob-detail-Scope .detail-scope-container .detail-input-section {
   width: 50%;
   height: 100%;
   padding: 2rem;
@@ -9256,12 +9256,12 @@ ul {
           align-items: flex-start;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-size-container {
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-size-container {
   width: 100%;
   padding: 1rem;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-size-container .project-size-option {
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-size-container .project-size-option {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9272,7 +9272,7 @@ ul {
           flex-direction: column;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-size-container .project-size-option .project-size-option-title {
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-size-container .project-size-option .project-size-option-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9285,13 +9285,13 @@ ul {
           align-items: center;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-size-container .project-size-option .project-size-option-title h3 {
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-size-container .project-size-option .project-size-option-title h3 {
   width: 100%;
   text-align: start;
   font-size: 1.1rem;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-size-container .project-size-option .project-size-option-title i {
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-size-container .project-size-option .project-size-option-title i {
   text-align: end;
   cursor: pointer;
   font-size: 0.8rem;
@@ -9302,17 +9302,17 @@ ul {
   border: 0.7px solid lightgrey;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-size-container .project-size-option .project-size-option-title i:hover {
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-size-container .project-size-option .project-size-option-title i:hover {
   background: #e2e2e2;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-size-container .project-size-option span {
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-size-container .project-size-option span {
   padding-right: 1.5rem;
   color: #797979;
   font-size: 0.8rem;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-time {
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-time {
   width: 100%;
   padding: 1rem;
   display: -webkit-box;
@@ -9330,11 +9330,11 @@ ul {
           justify-content: space-between;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-time h3 {
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-time h3 {
   font-size: 1.1rem;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-time i {
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-time i {
   cursor: pointer;
   font-size: 0.8rem;
   color: #797979;
@@ -9344,11 +9344,11 @@ ul {
   border: 0.7px solid lightgrey;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-time i:hover {
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-time i:hover {
   background: #e2e2e2;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .freelance-experience {
+.postJob-detail-Scope .detail-scope-container .detail-input-section .freelance-experience {
   width: 100%;
   padding: 1rem;
   display: -webkit-box;
@@ -9366,11 +9366,11 @@ ul {
           justify-content: space-between;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .freelance-experience h3 {
+.postJob-detail-Scope .detail-scope-container .detail-input-section .freelance-experience h3 {
   font-size: 1.1rem;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .freelance-experience i {
+.postJob-detail-Scope .detail-scope-container .detail-input-section .freelance-experience i {
   cursor: pointer;
   font-size: 0.8rem;
   color: #797979;
@@ -9380,11 +9380,11 @@ ul {
   border: 0.7px solid lightgrey;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .freelance-experience i:hover {
+.postJob-detail-Scope .detail-scope-container .detail-input-section .freelance-experience i:hover {
   background: #e2e2e2;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .CancelOrNext {
+.postJob-detail-Scope .detail-scope-container .detail-input-section .CancelOrNext {
   margin-top: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9402,7 +9402,7 @@ ul {
           align-items: center;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .CancelOrNext #cancel {
+.postJob-detail-Scope .detail-scope-container .detail-input-section .CancelOrNext #cancel {
   color: #0a345e;
   font-size: 1rem;
   background: none;
@@ -9412,11 +9412,11 @@ ul {
   cursor: pointer;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .CancelOrNext #cancel:hover {
+.postJob-detail-Scope .detail-scope-container .detail-input-section .CancelOrNext #cancel:hover {
   background: #ebebeb;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .CancelOrNext #nextLocation {
+.postJob-detail-Scope .detail-scope-container .detail-input-section .CancelOrNext #nextLocation {
   margin-left: 1rem;
   color: #0a345e;
   font-size: 1rem;
@@ -9428,23 +9428,23 @@ ul {
   cursor: pointer;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .CancelOrNext #nextLocation:hover {
+.postJob-detail-Scope .detail-scope-container .detail-input-section .CancelOrNext #nextLocation:hover {
   background: #0a345e;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .freelance-experience-options {
+.postJob-detail-Scope .detail-scope-container .detail-input-section .freelance-experience-options {
   display: none;
   width: 100%;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .freelance-experience-options span {
+.postJob-detail-Scope .detail-scope-container .detail-input-section .freelance-experience-options span {
   font-size: 0.9rem;
   color: #797979;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .freelance-experience-options .entry-option,
-.postJob-detail-scope .detail-scope-container .detail-input-section .freelance-experience-options .intermediate-option,
-.postJob-detail-scope .detail-scope-container .detail-input-section .freelance-experience-options .expert-option {
+.postJob-detail-Scope .detail-scope-container .detail-input-section .freelance-experience-options .entry-option,
+.postJob-detail-Scope .detail-scope-container .detail-input-section .freelance-experience-options .intermediate-option,
+.postJob-detail-Scope .detail-scope-container .detail-input-section .freelance-experience-options .expert-option {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9457,9 +9457,9 @@ ul {
   border-radius: 5px;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .freelance-experience-options .entry-option .option-title,
-.postJob-detail-scope .detail-scope-container .detail-input-section .freelance-experience-options .intermediate-option .option-title,
-.postJob-detail-scope .detail-scope-container .detail-input-section .freelance-experience-options .expert-option .option-title {
+.postJob-detail-Scope .detail-scope-container .detail-input-section .freelance-experience-options .entry-option .option-title,
+.postJob-detail-Scope .detail-scope-container .detail-input-section .freelance-experience-options .intermediate-option .option-title,
+.postJob-detail-Scope .detail-scope-container .detail-input-section .freelance-experience-options .expert-option .option-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9473,17 +9473,17 @@ ul {
   width: 100%;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .freelance-experience-options .entry-option .option-title h3,
-.postJob-detail-scope .detail-scope-container .detail-input-section .freelance-experience-options .intermediate-option .option-title h3,
-.postJob-detail-scope .detail-scope-container .detail-input-section .freelance-experience-options .expert-option .option-title h3 {
+.postJob-detail-Scope .detail-scope-container .detail-input-section .freelance-experience-options .entry-option .option-title h3,
+.postJob-detail-Scope .detail-scope-container .detail-input-section .freelance-experience-options .intermediate-option .option-title h3,
+.postJob-detail-Scope .detail-scope-container .detail-input-section .freelance-experience-options .expert-option .option-title h3 {
   font-size: 1rem;
   font-weight: lighter;
   padding-left: 0.5rem;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .freelance-experience-options .entry-option .option-title i,
-.postJob-detail-scope .detail-scope-container .detail-input-section .freelance-experience-options .intermediate-option .option-title i,
-.postJob-detail-scope .detail-scope-container .detail-input-section .freelance-experience-options .expert-option .option-title i {
+.postJob-detail-Scope .detail-scope-container .detail-input-section .freelance-experience-options .entry-option .option-title i,
+.postJob-detail-Scope .detail-scope-container .detail-input-section .freelance-experience-options .intermediate-option .option-title i,
+.postJob-detail-Scope .detail-scope-container .detail-input-section .freelance-experience-options .expert-option .option-title i {
   font-size: 0.7rem;
   color: transparent;
   padding: 0.1rem;
@@ -9491,43 +9491,43 @@ ul {
   border: 0.5px solid lightgrey;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .freelance-experience-options .entry-option .option-title #entry-button,
-.postJob-detail-scope .detail-scope-container .detail-input-section .freelance-experience-options .intermediate-option .option-title #entry-button,
-.postJob-detail-scope .detail-scope-container .detail-input-section .freelance-experience-options .expert-option .option-title #entry-button {
+.postJob-detail-Scope .detail-scope-container .detail-input-section .freelance-experience-options .entry-option .option-title #entry-button,
+.postJob-detail-Scope .detail-scope-container .detail-input-section .freelance-experience-options .intermediate-option .option-title #entry-button,
+.postJob-detail-Scope .detail-scope-container .detail-input-section .freelance-experience-options .expert-option .option-title #entry-button {
   color: #054e97;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .freelance-experience-options .entry-option span,
-.postJob-detail-scope .detail-scope-container .detail-input-section .freelance-experience-options .intermediate-option span,
-.postJob-detail-scope .detail-scope-container .detail-input-section .freelance-experience-options .expert-option span {
+.postJob-detail-Scope .detail-scope-container .detail-input-section .freelance-experience-options .entry-option span,
+.postJob-detail-Scope .detail-scope-container .detail-input-section .freelance-experience-options .intermediate-option span,
+.postJob-detail-Scope .detail-scope-container .detail-input-section .freelance-experience-options .expert-option span {
   font-size: 0.8rem;
   color: #797979;
   padding-left: 1.5rem;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .freelance-experience-options .entry-option:hover,
-.postJob-detail-scope .detail-scope-container .detail-input-section .freelance-experience-options .intermediate-option:hover,
-.postJob-detail-scope .detail-scope-container .detail-input-section .freelance-experience-options .expert-option:hover {
+.postJob-detail-Scope .detail-scope-container .detail-input-section .freelance-experience-options .entry-option:hover,
+.postJob-detail-Scope .detail-scope-container .detail-input-section .freelance-experience-options .intermediate-option:hover,
+.postJob-detail-Scope .detail-scope-container .detail-input-section .freelance-experience-options .expert-option:hover {
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
   background: #eeeeee;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .freelance-experience-options .entry-option:hover i,
-.postJob-detail-scope .detail-scope-container .detail-input-section .freelance-experience-options .intermediate-option:hover i,
-.postJob-detail-scope .detail-scope-container .detail-input-section .freelance-experience-options .expert-option:hover i {
+.postJob-detail-Scope .detail-scope-container .detail-input-section .freelance-experience-options .entry-option:hover i,
+.postJob-detail-Scope .detail-scope-container .detail-input-section .freelance-experience-options .intermediate-option:hover i,
+.postJob-detail-Scope .detail-scope-container .detail-input-section .freelance-experience-options .expert-option:hover i {
   padding: 0.2rem;
   font-size: 0.8rem;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-time-options {
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-time-options {
   display: none;
   width: 100%;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-time-options .threeToSixMonths,
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-time-options .oneToThreeMonths,
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-time-options .lessThanOneMonth {
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-time-options .threeToSixMonths,
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-time-options .oneToThreeMonths,
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-time-options .lessThanOneMonth {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9540,9 +9540,9 @@ ul {
   border-radius: 5px;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-time-options .threeToSixMonths .time-title,
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-time-options .oneToThreeMonths .time-title,
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-time-options .lessThanOneMonth .time-title {
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-time-options .threeToSixMonths .time-title,
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-time-options .oneToThreeMonths .time-title,
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-time-options .lessThanOneMonth .time-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9556,17 +9556,17 @@ ul {
   width: 100%;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-time-options .threeToSixMonths .time-title h3,
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-time-options .oneToThreeMonths .time-title h3,
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-time-options .lessThanOneMonth .time-title h3 {
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-time-options .threeToSixMonths .time-title h3,
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-time-options .oneToThreeMonths .time-title h3,
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-time-options .lessThanOneMonth .time-title h3 {
   font-size: 0.9rem;
   font-weight: lighter;
   padding-left: 0.5rem;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-time-options .threeToSixMonths .time-title i,
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-time-options .oneToThreeMonths .time-title i,
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-time-options .lessThanOneMonth .time-title i {
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-time-options .threeToSixMonths .time-title i,
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-time-options .oneToThreeMonths .time-title i,
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-time-options .lessThanOneMonth .time-title i {
   font-size: 0.7rem;
   color: transparent;
   padding: 0.1rem;
@@ -9574,35 +9574,35 @@ ul {
   border: 0.5px solid lightgrey;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-time-options .threeToSixMonths .time-title #lessThanOneMonth-button,
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-time-options .oneToThreeMonths .time-title #lessThanOneMonth-button,
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-time-options .lessThanOneMonth .time-title #lessThanOneMonth-button {
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-time-options .threeToSixMonths .time-title #lessThanOneMonth-button,
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-time-options .oneToThreeMonths .time-title #lessThanOneMonth-button,
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-time-options .lessThanOneMonth .time-title #lessThanOneMonth-button {
   color: #054e97;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-time-options .threeToSixMonths:hover,
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-time-options .oneToThreeMonths:hover,
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-time-options .lessThanOneMonth:hover {
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-time-options .threeToSixMonths:hover,
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-time-options .oneToThreeMonths:hover,
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-time-options .lessThanOneMonth:hover {
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
   background: #eeeeee;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-time-options .threeToSixMonths:hover i,
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-time-options .oneToThreeMonths:hover i,
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-time-options .lessThanOneMonth:hover i {
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-time-options .threeToSixMonths:hover i,
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-time-options .oneToThreeMonths:hover i,
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-time-options .lessThanOneMonth:hover i {
   font-size: 0.8rem;
   padding: 0.2rem;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-size-options {
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-size-options {
   width: 100%;
   display: none;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-size-options .large-option,
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-size-options .medium-option,
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-size-options .small-option {
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-size-options .large-option,
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-size-options .medium-option,
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-size-options .small-option {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9615,9 +9615,9 @@ ul {
   border-radius: 5px;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-size-options .large-option .size-option-title,
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-size-options .medium-option .size-option-title,
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-size-options .small-option .size-option-title {
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-size-options .large-option .size-option-title,
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-size-options .medium-option .size-option-title,
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-size-options .small-option .size-option-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9631,17 +9631,17 @@ ul {
   width: 100%;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-size-options .large-option .size-option-title h3,
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-size-options .medium-option .size-option-title h3,
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-size-options .small-option .size-option-title h3 {
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-size-options .large-option .size-option-title h3,
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-size-options .medium-option .size-option-title h3,
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-size-options .small-option .size-option-title h3 {
   font-size: 1rem;
   font-weight: lighter;
   padding-left: 0.5rem;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-size-options .large-option .size-option-title i,
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-size-options .medium-option .size-option-title i,
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-size-options .small-option .size-option-title i {
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-size-options .large-option .size-option-title i,
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-size-options .medium-option .size-option-title i,
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-size-options .small-option .size-option-title i {
   font-size: 0.7rem;
   color: transparent;
   padding: 0.1rem;
@@ -9649,31 +9649,31 @@ ul {
   border: 0.5px solid lightgrey;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-size-options .large-option .size-option-title #small-button,
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-size-options .medium-option .size-option-title #small-button,
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-size-options .small-option .size-option-title #small-button {
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-size-options .large-option .size-option-title #small-button,
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-size-options .medium-option .size-option-title #small-button,
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-size-options .small-option .size-option-title #small-button {
   color: #054e97;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-size-options .large-option span,
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-size-options .medium-option span,
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-size-options .small-option span {
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-size-options .large-option span,
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-size-options .medium-option span,
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-size-options .small-option span {
   font-size: 0.8rem;
   color: #797979;
   padding-left: 1.5rem;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-size-options .large-option:hover,
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-size-options .medium-option:hover,
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-size-options .small-option:hover {
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-size-options .large-option:hover,
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-size-options .medium-option:hover,
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-size-options .small-option:hover {
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
   background: #eeeeee;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-size-options .large-option:hover i,
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-size-options .medium-option:hover i,
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-size-options .small-option:hover i {
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-size-options .large-option:hover i,
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-size-options .medium-option:hover i,
+.postJob-detail-Scope .detail-scope-container .detail-input-section .project-size-options .small-option:hover i {
   font-size: 0.8rem;
   padding: 0.2rem;
 }
