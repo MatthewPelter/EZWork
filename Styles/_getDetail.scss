@@ -135,6 +135,7 @@
           flex-direction: row;
           align-items: center;
           justify-content: flex-start;
+          cursor: pointer;
           input{
             -moz-appearance: none;
             -webkit-appearance: none;
@@ -143,7 +144,11 @@
             width: 1rem;
             height: 1rem;
             border: .7px solid $darktext;
+            background-color: transparent;
             border-radius: 50%;
+            &:checked{
+              background-color: $lightColor;
+            }
             &:hover{
               border: .7px solid $lightColor;
             }
