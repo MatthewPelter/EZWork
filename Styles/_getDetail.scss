@@ -325,6 +325,17 @@
           font-weight: lighter;
         }
       }
+      .descriptionContainer{
+        input{
+          width: 100%;
+          height: 8rem;
+          padding: 0.5rem 1rem;
+          outline: none;
+          outline: $color1;
+          border: lightgrey 0.7px solid;
+          border-radius: 2px;
+        }
+      }
       .CancelOrNext {
         margin-top: 2rem;
         display: flex;
@@ -346,15 +357,14 @@
         }
         #nextScope {
           margin-left: 1rem;
-          color: $lightColor;
+          color: white;
           font-size: 1rem;
           background: $color1;
           color: gray;
           padding: 0.5rem 1.5rem;
           border-radius: 15px;
           border: 0.6px solid gray;
-          cursor: not-allowed;
-          pointer-events: none;
+          cursor: pointer;
         }
       }
 
