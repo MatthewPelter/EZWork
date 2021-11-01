@@ -88,7 +88,7 @@ if (isset($_POST['length'])) {
                     <input name="description" id="description" type="text" placeholder="My son drove into my garage door and completely ruined my beautiful door..." value="">
                 </div>
                 <div class="CancelOrNext">
-                    <input type="reset" value="Reset" />
+                    <input type="reset" value="Reset" id="reset" />
 
                     <input type="submit" value="Next" id="nextScope"/>
                 </div>
