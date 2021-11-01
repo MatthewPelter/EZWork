@@ -55,7 +55,7 @@ if (isset($_SESSION["userid"])) {
                             <input type="text" name="lastName" id="LastName" placeholder="Last Name" title="Enter your last name." required>
                         </p>
                     </div>
-                    <div class="username">
+                    <div class="name">
                         <h4>Username</h4>
                         <p>
                             <input type="text" name="username" id="username" placeholder="Username" title="Enter your username." required>
