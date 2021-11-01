@@ -332,7 +332,7 @@
         width: 100%;
         justify-content: flex-end;
         align-items: center;
-        #cancel {
+        #input {
           color: $color1;
           font-size: 1rem;
           background: none;
@@ -344,7 +344,7 @@
             background: rgb(235, 235, 235);
           }
         }
-        #nextSkills {
+        #nextScope {
           margin-left: 1rem;
           color: $color1;
           font-size: 1rem;

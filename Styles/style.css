@@ -8560,7 +8560,7 @@ ul {
           align-items: center;
 }
 
-.postJob-detail-title .detail-container .detail-input-section .CancelOrNext #cancel {
+.postJob-detail-title .detail-container .detail-input-section .CancelOrNext #input {
   color: #0a345e;
   font-size: 1rem;
   background: none;
@@ -8570,11 +8570,11 @@ ul {
   cursor: pointer;
 }
 
-.postJob-detail-title .detail-container .detail-input-section .CancelOrNext #cancel:hover {
+.postJob-detail-title .detail-container .detail-input-section .CancelOrNext #input:hover {
   background: #ebebeb;
 }
 
-.postJob-detail-title .detail-container .detail-input-section .CancelOrNext #nextSkills {
+.postJob-detail-title .detail-container .detail-input-section .CancelOrNext #nextScope {
   margin-left: 1rem;
   color: #0a345e;
   font-size: 1rem;

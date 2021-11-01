@@ -90,7 +90,7 @@ if (isset($_POST['length'])) {
                 <div class="CancelOrNext">
                     <input type="reset" value="Reset" />
 
-                    <input type="submit" value="Next" />
+                    <input type="submit" value="Next" id="nextScope"/>
                 </div>
             </form>
 
