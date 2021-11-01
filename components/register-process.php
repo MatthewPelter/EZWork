@@ -18,6 +18,7 @@ if (isset($_POST['submit'])) {
     $lastname = securityscan($_POST['lastName']);
     $lastname = ucfirst($lastname);
 
+    $username = securityscan($_POST['username']);
     $birthday = securityscan($_POST['birthday']);
     $phone = securityscan($_POST['phone']);
     $email = securityscan($_POST['email']);
@@ -28,7 +29,7 @@ if (isset($_POST['submit'])) {
         echo "error passwords do not match!";
         die;
     }
-    $username = $firstname . "" . $lastname;
+    //$username = $firstname . "" . $lastname;
     $password_hash = password_hash($password, PASSWORD_BCRYPT);
     $sql = "INSERT INTO clients(username,firstname,lastname,email,password,phone) VALUES('$username', '$firstname', '$lastname', '$email', '$password_hash', '$phone')";
 

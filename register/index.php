@@ -55,6 +55,12 @@ if (isset($_SESSION["userid"])) {
                             <input type="text" name="lastName" id="LastName" placeholder="Last Name" title="Enter your last name." required>
                         </p>
                     </div>
+                    <div class="username">
+                        <h4>Username</h4>
+                        <p>
+                            <input type="text" name="username" id="username" placeholder="Username" title="Enter your username." required>
+                        </p>
+                    </div>
                     <div class="dateofBirth">
                         <h4>Date of Birth</h4>
                         <p>
