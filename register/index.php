@@ -28,12 +28,13 @@ if (isset($_SESSION["userid"])) {
     <link rel="stylesheet" href="../Styles/style.css">
 
     <style type="text/css">
-    .status-not-available {
-        color: red;
-    }
-    .status-available {
-        color: green;
-    }
+        .status-not-available {
+            color: red;
+        }
+
+        .status-available {
+            color: green;
+        }
     </style>
 </head>
 
@@ -64,7 +65,7 @@ if (isset($_SESSION["userid"])) {
                     <div class="name">
                         <h4>Username</h4>
                         <p>
-                            <input type="text" name="username" id="username" maxlength=15 placeholder="Username" title="Enter your username." onBlur="checkAvailability()" required>
+                            <input type="text" name="username" id="username" maxlength=15 placeholder="Username" title="Enter your username." onBlur="checkUserAvailability()" required>
                         </p>
                         <span id="nameerror"></span>
                     </div>
@@ -85,8 +86,10 @@ if (isset($_SESSION["userid"])) {
                     <div class="account">
                         <h4>Account Information</h4>
                         <p>
-                            <input type="email" name="email" id="Email" placeholder="Email" required>
+                            <input type="email" name="email" id="Email" placeholder="Email" onBlur="checkEmailAvailability()" required>
                         </p>
+                        <span id="emailerror"></span>
+
                         <p>
                             <input type="password" name="password" id="password" title="Please enter a strong password." placeholder="Password" minlength="8" required>
                         </p>
@@ -128,13 +131,25 @@ if (isset($_SESSION["userid"])) {
 <script src="./register.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript">
-    function checkAvailability() {
+    function checkUserAvailability() {
         jQuery.ajax({
-            url: "../components/check_availability.php",
+            url: "../components/check_username.php",
             data: 'username=' + $("#username").val(),
             type: "POST",
             success: function(data) {
                 $("#nameerror").html(data);
+            },
+            error: function() {}
+        });
+    }
+
+    function checkEmailAvailability() {
+        jQuery.ajax({
+            url: "../components/check_email.php",
+            data: 'email=' + $("#Email").val(),
+            type: "POST",
+            success: function(data) {
+                $("#emailerror").html(data);
             },
             error: function() {}
         });
