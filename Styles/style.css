@@ -8283,8 +8283,9 @@ ul {
 }
 
 .postJob-detail .detail-container .detail-input-section .lengthContainers .short, .postJob-detail .detail-container .detail-input-section .lengthContainers .long {
-  padding: 1rem 0rem;
+  padding: 1rem;
   width: 100%;
+  margin-top: .5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8295,14 +8296,30 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.postJob-detail .detail-container .detail-input-section .lengthContainers .short input, .postJob-detail .detail-container .detail-input-section .lengthContainers .long input {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  border: .7rem solid lightgrey;
+  border-radius: 5px;
   cursor: pointer;
 }
 
+.postJob-detail .detail-container .detail-input-section .lengthContainers .short input, .postJob-detail .detail-container .detail-input-section .lengthContainers .long input {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  width: 1rem;
+  height: 1rem;
+  border: #0a345e;
+}
+
 .postJob-detail .detail-container .detail-input-section .lengthContainers .short label, .postJob-detail .detail-container .detail-input-section .lengthContainers .long label {
-  padding-left: .3rem;
+  padding-left: 0.5rem;
+}
+
+.postJob-detail .detail-container .detail-input-section .lengthContainers .short:hover, .postJob-detail .detail-container .detail-input-section .lengthContainers .long:hover {
+  background-color: whitesmoke;
+  color: #054e97;
 }
 
 .postJob-detail .detail-container .detail-input-section .lengthContainers .short {
@@ -13123,7 +13140,9 @@ ul {
   }
   .postJob-detail-title .detail-container {
     width: 100%;
-    height: 90vh;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
