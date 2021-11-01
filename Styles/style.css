@@ -8724,14 +8724,13 @@ ul {
   cursor: pointer;
 }
 
-.postJob-detail-skills {
-  margin-top: 4.5rem;
+.postJob-detail-scope {
   width: 100%;
   background: whitesmoke;
   padding: 2.5rem 10rem;
 }
 
-.postJob-detail-skills .detail-skills-container {
+.postJob-detail-scope .detail-skills-container {
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -8748,7 +8747,7 @@ ul {
   background: #0a345e;
 }
 
-.postJob-detail-skills .detail-skills-container .detail-progress-section {
+.postJob-detail-scope .detail-skills-container .detail-progress-section {
   width: 50%;
   height: 100%;
   padding: 1.5rem;
@@ -8764,15 +8763,15 @@ ul {
   border-bottom-left-radius: 15px;
 }
 
-.postJob-detail-skills .detail-skills-container .detail-progress-section #current {
+.postJob-detail-scope .detail-skills-container .detail-progress-section #current {
   color: lightgreen;
 }
 
-.postJob-detail-skills .detail-skills-container .detail-progress-section .progressBar {
+.postJob-detail-scope .detail-skills-container .detail-progress-section .progressBar {
   width: 100%;
 }
 
-.postJob-detail-skills .detail-skills-container .detail-progress-section .progressBar progress {
+.postJob-detail-scope .detail-skills-container .detail-progress-section .progressBar progress {
   border-radius: 10px;
   width: 100%;
   padding: 0;
@@ -8783,7 +8782,7 @@ ul {
   appearance: none;
 }
 
-.postJob-detail-skills .detail-skills-container .detail-progress-section .progressBar progress::-webkit-progress-bar {
+.postJob-detail-scope .detail-skills-container .detail-progress-section .progressBar progress::-webkit-progress-bar {
   border-radius: 10px;
   width: 100%;
   padding: 0;
@@ -8794,7 +8793,7 @@ ul {
   appearance: none;
 }
 
-.postJob-detail-skills .detail-skills-container .detail-progress-section .progressBar progress::-moz-progress-bar {
+.postJob-detail-scope .detail-skills-container .detail-progress-section .progressBar progress::-moz-progress-bar {
   border-radius: 10px;
   width: 100%;
   padding: 0;
@@ -8805,7 +8804,7 @@ ul {
   appearance: none;
 }
 
-.postJob-detail-skills .detail-skills-container .detail-progress-section .progressBar progress::-webkit-progress-value {
+.postJob-detail-scope .detail-skills-container .detail-progress-section .progressBar progress::-webkit-progress-value {
   background: lightgreen;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -8813,7 +8812,7 @@ ul {
   border: none;
 }
 
-.postJob-detail-skills .detail-skills-container .detail-progress-section .progressBar progress::-moz-progress-bar {
+.postJob-detail-scope .detail-skills-container .detail-progress-section .progressBar progress::-moz-progress-bar {
   background: lightgreen;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -8821,7 +8820,7 @@ ul {
   border: none;
 }
 
-.postJob-detail-skills .detail-skills-container .detail-progress-section .progressBar ul {
+.postJob-detail-scope .detail-skills-container .detail-progress-section .progressBar ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8838,23 +8837,23 @@ ul {
   padding-top: 0.3rem;
 }
 
-.postJob-detail-skills .detail-skills-container .detail-progress-section .progressBar ul li {
+.postJob-detail-scope .detail-skills-container .detail-progress-section .progressBar ul li {
   color: white;
   font-size: 0.9rem;
 }
 
-.postJob-detail-skills .detail-skills-container .detail-progress-section .title-card-intro h2 {
+.postJob-detail-scope .detail-skills-container .detail-progress-section .title-card-intro h2 {
   padding: 6rem 0rem 1rem 0rem;
   color: white;
   font-size: 2.3rem;
 }
 
-.postJob-detail-skills .detail-skills-container .detail-progress-section .title-card-intro p {
+.postJob-detail-scope .detail-skills-container .detail-progress-section .title-card-intro p {
   color: white;
   font-size: 0.95rem;
 }
 
-.postJob-detail-skills .detail-skills-container .detail-input-section {
+.postJob-detail-scope .detail-skills-container .detail-input-section {
   width: 50%;
   height: 100%;
   padding: 2rem;
@@ -8876,17 +8875,17 @@ ul {
           align-items: flex-start;
 }
 
-.postJob-detail-skills .detail-skills-container .detail-input-section h3 {
+.postJob-detail-scope .detail-skills-container .detail-input-section h3 {
   font-size: 1.3rem;
   padding: 1rem 0rem;
 }
 
-.postJob-detail-skills .detail-skills-container .detail-input-section h4 {
+.postJob-detail-scope .detail-skills-container .detail-input-section h4 {
   padding: 1rem 0rem;
   font-size: 1.1rem;
 }
 
-.postJob-detail-skills .detail-skills-container .detail-input-section input {
+.postJob-detail-scope .detail-skills-container .detail-input-section input {
   width: 100%;
   height: 2.5rem;
   padding: 0.5rem 1rem;
@@ -8896,18 +8895,18 @@ ul {
   border-radius: 2px;
 }
 
-.postJob-detail-skills .detail-skills-container .detail-input-section ul {
+.postJob-detail-scope .detail-skills-container .detail-input-section ul {
   margin-left: 0.5rem;
   list-style: circle;
 }
 
-.postJob-detail-skills .detail-skills-container .detail-input-section ul li {
+.postJob-detail-scope .detail-skills-container .detail-input-section ul li {
   padding: 0.4rem 0rem;
   font-size: 0.87rem;
   font-weight: lighter;
 }
 
-.postJob-detail-skills .detail-skills-container .detail-input-section .CancelOrNext {
+.postJob-detail-scope .detail-skills-container .detail-input-section .CancelOrNext {
   margin-top: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8925,7 +8924,7 @@ ul {
           align-items: center;
 }
 
-.postJob-detail-skills .detail-skills-container .detail-input-section .CancelOrNext #cancel {
+.postJob-detail-scope .detail-skills-container .detail-input-section .CancelOrNext #cancel {
   color: #0a345e;
   font-size: 1rem;
   background: none;
@@ -8935,11 +8934,11 @@ ul {
   cursor: pointer;
 }
 
-.postJob-detail-skills .detail-skills-container .detail-input-section .CancelOrNext #cancel:hover {
+.postJob-detail-scope .detail-skills-container .detail-input-section .CancelOrNext #cancel:hover {
   background: #ebebeb;
 }
 
-.postJob-detail-skills .detail-skills-container .detail-input-section .CancelOrNext #nextScope {
+.postJob-detail-scope .detail-skills-container .detail-input-section .CancelOrNext #nextScope {
   margin-left: 1rem;
   color: #0a345e;
   font-size: 1rem;
@@ -8952,7 +8951,7 @@ ul {
   pointer-events: none;
 }
 
-.postJob-detail-skills .detail-skills-container .detail-input-section .skillSearch {
+.postJob-detail-scope .detail-skills-container .detail-input-section .skillSearch {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8969,18 +8968,18 @@ ul {
   border-radius: 8px;
 }
 
-.postJob-detail-skills .detail-skills-container .detail-input-section .skillSearch i {
+.postJob-detail-scope .detail-skills-container .detail-input-section .skillSearch i {
   cursor: pointer;
   margin-left: 1rem;
   color: #797979;
 }
 
-.postJob-detail-skills .detail-skills-container .detail-input-section .skillSearch input {
+.postJob-detail-scope .detail-skills-container .detail-input-section .skillSearch input {
   border: none;
   border-radius: 15px;
 }
 
-.postJob-detail-skills .detail-skills-container .detail-input-section .skillSearch #enterSkill {
+.postJob-detail-scope .detail-skills-container .detail-input-section .skillSearch #enterSkill {
   border: none;
   color: #054e97;
   cursor: pointer;
@@ -8989,7 +8988,7 @@ ul {
   background: transparent;
 }
 
-.postJob-detail-skills .detail-skills-container .detail-input-section #selectedSkills {
+.postJob-detail-scope .detail-skills-container .detail-input-section #selectedSkills {
   padding: 0.5rem;
   border-radius: 15px;
   border: 0.7px solid lightgrey;
@@ -9005,7 +9004,7 @@ ul {
       flex-wrap: wrap;
 }
 
-.postJob-detail-skills .detail-skills-container .detail-input-section #selectedSkills label {
+.postJob-detail-scope .detail-skills-container .detail-input-section #selectedSkills label {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -9019,7 +9018,7 @@ ul {
   margin: 0.4rem;
 }
 
-.postJob-detail-skills .detail-skills-container .detail-input-section .selectCategory {
+.postJob-detail-scope .detail-skills-container .detail-input-section .selectCategory {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9036,7 +9035,7 @@ ul {
           justify-content: space-between;
 }
 
-.postJob-detail-skills .detail-skills-container .detail-input-section .selectCategory select {
+.postJob-detail-scope .detail-skills-container .detail-input-section .selectCategory select {
   padding: 0;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -9044,7 +9043,7 @@ ul {
   border: none;
 }
 
-.postJob-detail-skills .detail-skills-container .detail-input-section select {
+.postJob-detail-scope .detail-skills-container .detail-input-section select {
   width: 100%;
   padding: 0.5rem 1rem;
   background: transparent;
@@ -9056,12 +9055,12 @@ ul {
   border-radius: 10px;
 }
 
-.postJob-detail-skills .detail-skills-container .detail-input-section span {
+.postJob-detail-scope .detail-skills-container .detail-input-section span {
   margin-left: 0.5rem;
   color: #054e97;
 }
 
-.postJob-detail-skills .detail-skills-container .detail-input-section .CategorySpecialtyContainer {
+.postJob-detail-scope .detail-skills-container .detail-input-section .CategorySpecialtyContainer {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9074,7 +9073,7 @@ ul {
       flex-wrap: wrap;
 }
 
-.postJob-detail-skills .detail-skills-container .detail-input-section .CategorySpecialtyContainer ul {
+.postJob-detail-scope .detail-skills-container .detail-input-section .CategorySpecialtyContainer ul {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9087,7 +9086,7 @@ ul {
       flex-wrap: wrap;
 }
 
-.postJob-detail-skills .detail-skills-container .detail-input-section .CategorySpecialtyContainer ul li {
+.postJob-detail-scope .detail-skills-container .detail-input-section .CategorySpecialtyContainer ul li {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -9101,7 +9100,7 @@ ul {
   cursor: pointer;
 }
 
-.postJob-detail-skills .detail-skills-container .detail-input-section .CategorySpecialtyContainer ul li:hover {
+.postJob-detail-scope .detail-skills-container .detail-input-section .CategorySpecialtyContainer ul li:hover {
   background: #71c571;
 }
 
