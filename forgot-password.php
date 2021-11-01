@@ -44,7 +44,13 @@ if (isset($_POST['resetpassword'])) {
         //Content
 
         $subject = 'Forgot Password!';
-        $body = "Click here to change your password. <a href='https://ez-work.herokuapp.com/change-password.php?token=$token'>https://ez-work.herokuapp.com/change-password.php?token=$token</a>";
+        $body = "Hi [name],<br />
+
+        There was a request to change your password!<br />
+        
+        If you did not make this request then please ignore this email.<br />
+        
+        Otherwise, please click this link to change your password: <a href='https://ez-work.herokuapp.com/change-password.php?token=$token'>https://ez-work.herokuapp.com/change-password.php?token=$token</a>";
 
         $mail->isHTML(true);                                  //Set email format to HTML
         $mail->Subject = $subject;
