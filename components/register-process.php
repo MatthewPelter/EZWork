@@ -24,6 +24,7 @@ if (isset($_POST['submit'])) {
 
     $user_count = mysqli_num_rows($result);
     if ($user_count > 0) {
+        die;
         $_SESSION['regError'] = 'Username is taken already...';
         header("Location: ../register/index");
     }

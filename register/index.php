@@ -79,7 +79,7 @@ if (isset($_SESSION["userid"])) {
                     <div class="contact">
                         <h4>Contact</h4>
                         <p>
-                            <input type="number" name="phone" id="Phone" maxlength=10 placeholder="Phone Number" title="Enter valid phone number." required>
+                            <input type="tel" name="phone" id="Phone" maxlength=10 placeholder="Phone Number" title="Enter valid phone number." required>
                         </p>
                     </div>
 
