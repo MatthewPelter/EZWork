@@ -11,10 +11,11 @@ function securityscan($data)
 
 // Converting the username to a userid from the user that is logged in
 $username = $_SESSION['userid'];
-$getUserID = "SELECT id FROM clients WHERE username = '$username'";
-$getResult = mysqli_query($conn, $getUserID);
-$row = mysqli_fetch_assoc($getResult);
-$userID = $row['id'];
+//$getUserID = "SELECT id FROM clients WHERE username = '$username'";
+//$getResult = mysqli_query($conn, $getUserID);
+//$row = mysqli_fetch_assoc($getResult);
+//$userID = $row['id'];
+$userID = $_SESSION['user_id'];
 
 if (isset($_POST['submit'])) {
     require_once("../classes/DB.php");
@@ -34,9 +35,9 @@ if (isset($_POST['submit'])) {
     $user_id = $userID;
 
     $image = securityscan($_POST['image']);
-    
+
     $freelancer_id = "NONE";
-     
+
     $status = 0;
 
 

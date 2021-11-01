@@ -5,10 +5,10 @@ require_once("../classes/DB.php");
 
 
 $username = $_SESSION['userid'];
-$getUserID = "SELECT id FROM clients WHERE username = '$username'";
-$getResult = mysqli_query($conn, $getUserID);
-$userrow = mysqli_fetch_assoc($getResult);
-$userID = $userrow['id'];
+//$getUserID = "SELECT id FROM clients WHERE username = '$username'";
+// $getResult = mysqli_query($conn, $getUserID);
+// $userrow = mysqli_fetch_assoc($getResult);
+$userID = $_SESSION['user_id'];
 ?>
 
 <!DOCTYPE html>
@@ -85,7 +85,7 @@ $userID = $userrow['id'];
             <h2 id="username"><?php echo $_SESSION['userid']; ?></h2>
             <div class="quick-links">
                 <button id="quick-link-job" onclick="location.href='../PostAJob/newPostJob/length.php'">Post A Job</button>
-                <button id="quick-link-market"  onclick="location.href='../PostAJob/newPostJob/jobs.php'">Browse Marketplace</button>
+                <button id="quick-link-market" onclick="location.href='../PostAJob/newPostJob/jobs.php'">Browse Marketplace</button>
             </div>
         </div>
         <div class="user-profile-body">
@@ -111,27 +111,27 @@ $userID = $userrow['id'];
                 if (mysqli_num_rows($jobResult) > 0) {
                     while ($r = mysqli_fetch_assoc($jobResult)) {
                 ?>
-                <div class="allJobsCard" style="overflow-y: scroll;">
-                    <div class="postedJob">
-                        <div class="jobTitle">
-                            <h4 id="jobTitle"><a href="../PostAJob/newPostJob/job.php?id=<?php echo $r['id']; ?>"><?php echo $r['title']; ?></a></h4>
-                            <i class="fa fa-ellipsis-v" id="jobGodMode" aria-hidden="true"></i>
-                            <div class="jobEdit">
-                                <div class="exit">
-                                    <i class="fa fa-times" id="exitJobEdit"></i>
+                        <div class="allJobsCard" style="overflow-y: scroll;">
+                            <div class="postedJob">
+                                <div class="jobTitle">
+                                    <h4 id="jobTitle"><a href="../PostAJob/newPostJob/job.php?id=<?php echo $r['id']; ?>"><?php echo $r['title']; ?></a></h4>
+                                    <i class="fa fa-ellipsis-v" id="jobGodMode" aria-hidden="true"></i>
+                                    <div class="jobEdit">
+                                        <div class="exit">
+                                            <i class="fa fa-times" id="exitJobEdit"></i>
+                                        </div>
+                                        <button onclick="location.href='../PostAJob/reviewJobPost.php'">Edit</button>
+                                        <button style="color: red;" id="deleteJob">Delete</button>
+                                    </div>
                                 </div>
-                                <button onclick="location.href='../PostAJob/reviewJobPost.php'">Edit</button>
-                                <button style="color: red;" id="deleteJob">Delete</button>
+                                <p>Status: <span id="status"><?php if ($r['status'] == 0) {
+                                                                    echo "Open";
+                                                                } else {
+                                                                    echo "Open";
+                                                                } ?></span></p>
+                                <p>Job Posted on <span id="date"><?php echo $r['datePosted']; ?></span> by <span id="postedBy">Me</span></p>
                             </div>
                         </div>
-                        <p>Status: <span id="status"><?php if ($r['status'] == 0) {
-                                                            echo "Open";
-                                                        } else {
-                                                            echo "Open";
-                                                        } ?></span></p>
-                        <p>Job Posted on <span id="date"><?php echo $r['datePosted']; ?></span> by <span id="postedBy">Me</span></p>
-                    </div>
-                </div>
 
                 <?php
                     }
@@ -139,8 +139,8 @@ $userID = $userrow['id'];
                 ?>
 
             </div>
-            
-            <div class="activeUsers profile-categories-container" >
+
+            <div class="activeUsers profile-categories-container">
                 <div class="categories-title">
                     <h3 style="color: #0a345e;"><i class="fa fa-users" aria-hidden="true"></i> Current Users</h3>
                 </div>
@@ -227,7 +227,7 @@ $userID = $userrow['id'];
                     <p>Visit our <span>Help Center</span> for help.</p>
                 </div>
             </div>
-            
+
             <!--
             <div class="profile-skills-container">
                 <div class="profile-skills">
