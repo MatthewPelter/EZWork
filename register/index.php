@@ -122,18 +122,6 @@ if (isset($_SESSION["userid"])) {
 <script src="./register.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript">
-    var btn = document.getElementById('continue');
-    btn.disabled = true;
-
-    var pass = document.getElementById('password');
-    var pass2 = document.getElementById('password2');
-
-    pass2.addEventListener('change', (e) => {
-        if (pass.value.length > 8 && pass.value == pass2.value) {
-            btn.disabled = false;
-        }
-    });
-
     function checkAvailability() {
         jQuery.ajax({
             url: "../components/check_availability.php",
