@@ -13133,7 +13133,7 @@ ul {
         -ms-flex-direction: column;
             flex-direction: column;
     border: 1.25px solid lightgrey;
-    border-radius: 15px;
+    border-radius: 0;
     background: white;
   }
   .postJob-detail-title .detail-container .detail-progress-section {
@@ -13150,8 +13150,8 @@ ul {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
   }
   .postJob-detail-title .detail-container .detail-progress-section #current {
     color: lightgreen;
@@ -13244,8 +13244,8 @@ ul {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
