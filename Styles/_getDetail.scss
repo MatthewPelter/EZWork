@@ -147,7 +147,8 @@
             background-color: transparent;
             border-radius: 50%;
             &:checked{
-              background-color: $lightColor;
+              background-color: lightgrey;
+              border: .7px solid $lightColor;
             }
             &:hover{
               border: .7px solid $lightColor;
@@ -3297,8 +3298,8 @@
     margin-top: 3rem;
     width: 100%;
     background: whitesmoke;
-    padding: 2.5rem 0rem;
-
+    padding: 2.5rem 3rem;
+  
     .detail-container {
       width: 100%;
       height: fit-content;
@@ -3307,9 +3308,9 @@
       border: 1.25px solid lightgrey;
       border-radius: 15px;
       background: white;
-
+  
       .detail-progress-section {
-        width: fit-content;
+        width: 100%;
         height: 100%;
         padding: 1.5rem;
         background: $color1;
@@ -3318,11 +3319,31 @@
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
         #current {
-          color: rgb(144, 238, 144);
+          color: lightgreen;
         }
         .progressBar {
           width: 100%;
           progress {
+            border-radius: 10px;
+            width: 100%;
+            padding: 0;
+            border: none;
+            background: #104880;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+          }
+          progress::-webkit-progress-bar {
+            border-radius: 10px;
+            width: 100%;
+            padding: 0;
+            border: none;
+            background: #104880;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+          }
+          progress::-moz-progress-bar {
             border-radius: 10px;
             width: 100%;
             padding: 0;
@@ -3360,7 +3381,7 @@
         }
         .title-card-intro {
           h2 {
-            padding: 3rem 0rem 1rem 0rem;
+            padding: 6rem 0rem 1rem 0rem;
             color: white;
             font-size: 2.3rem;
           }
@@ -3377,45 +3398,68 @@
         background: white;
         display: flex;
         flex-direction: column;
-        border-top-right-radius: 15px;
-        border-bottom-right-radius: 15px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
         justify-content: center;
         align-items: flex-start;
-        h3 {
-          font-size: 1.3rem;
-          padding: 1rem 0rem;
-        }
-
-        h4 {
-          padding: 1rem 0rem;
-          font-size: 1.1rem;
-        }
-
-        input {
-          width: 100%;
-          height: 2.5rem;
-          padding: 0.5rem 1rem;
-          outline: none;
-          outline: $color1;
-          border: lightgrey 0.7px solid;
-          border-radius: 2px;
-        }
-        #titleError {
+        #error{
           color: red;
-          font-size: 0.7rem;
-          padding: 0.5rem 0rem;
+          font-size: 1rem;
         }
-
-        ul {
-          margin-left: 0.5rem;
-          list-style: circle;
-          li {
-            padding: 0.4rem 0rem;
-            font-size: 0.87rem;
-            font-weight: lighter;
+        h3{
+          width: 100%;
+          text-align: start;
+          font-size: 1.6rem;
+          padding: 1rem 0rem;
+          span{
+            padding-left: 1rem;
+            color:$lightColor;
+            font-size: 1rem;
+            text-decoration: none;
           }
         }
-
+        .lengthContainers{
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          margin-top: 0.8rem;
+          .short,.long{
+            padding: 1rem 0rem;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            cursor: pointer;
+            input{
+              -moz-appearance: none;
+              -webkit-appearance: none;
+              appearance: none;
+              cursor: pointer;
+              width: .7rem;
+              height: .7rem;
+              border: .7px solid $darktext;
+              background-color: transparent;
+              border-radius: 50%;
+              &:checked{
+                background-color: $lightColor;
+              }
+              &:hover{
+                border: .7px solid $lightColor;
+              }
+            }
+            label{
+              cursor: pointer;
+              padding-left: 0.5rem;
+            }
+            &:hover{
+              color: $lightColor;
+            }
+          }
+          .short{
+            padding: 0;
+          }
+        }
         .CancelOrNext {
           margin-top: 2rem;
           display: flex;
@@ -3435,19 +3479,24 @@
               background: rgb(235, 235, 235);
             }
           }
-          #nextSkills {
+          input{
             margin-left: 1rem;
-            color: $color1;
+            color: white;
             font-size: 1rem;
-            background: lightgrey;
-            color: gray;
+            background: $lightColor;
             padding: 0.5rem 1.5rem;
             border-radius: 15px;
             border: 0.6px solid gray;
-            cursor: not-allowed;
-            pointer-events: none;
+            cursor: pointer;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            &:hover{
+              background: $color1;
+            }
           }
         }
+  
       }
     }
   }

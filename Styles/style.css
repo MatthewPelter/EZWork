@@ -8314,7 +8314,8 @@ ul {
 }
 
 .postJob-detail .detail-container .detail-input-section .lengthContainers .short input:checked, .postJob-detail .detail-container .detail-input-section .lengthContainers .long input:checked {
-  background-color: #054e97;
+  background-color: lightgrey;
+  border: 0.7px solid #054e97;
 }
 
 .postJob-detail .detail-container .detail-input-section .lengthContainers .short input:hover, .postJob-detail .detail-container .detail-input-section .lengthContainers .long input:hover {
@@ -12953,7 +12954,7 @@ ul {
     margin-top: 3rem;
     width: 100%;
     background: whitesmoke;
-    padding: 2.5rem 0rem;
+    padding: 2.5rem 3rem;
   }
   .postJob-detail .detail-container {
     width: 100%;
@@ -12972,9 +12973,7 @@ ul {
     background: white;
   }
   .postJob-detail .detail-container .detail-progress-section {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
+    width: 100%;
     height: 100%;
     padding: 1.5rem;
     background: #0a345e;
@@ -12995,6 +12994,26 @@ ul {
     width: 100%;
   }
   .postJob-detail .detail-container .detail-progress-section .progressBar progress {
+    border-radius: 10px;
+    width: 100%;
+    padding: 0;
+    border: none;
+    background: #104880;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  .postJob-detail .detail-container .detail-progress-section .progressBar progress::-webkit-progress-bar {
+    border-radius: 10px;
+    width: 100%;
+    padding: 0;
+    border: none;
+    background: #104880;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  .postJob-detail .detail-container .detail-progress-section .progressBar progress::-moz-progress-bar {
     border-radius: 10px;
     width: 100%;
     padding: 0;
@@ -13039,7 +13058,7 @@ ul {
     font-size: 0.9rem;
   }
   .postJob-detail .detail-container .detail-progress-section .title-card-intro h2 {
-    padding: 3rem 0rem 1rem 0rem;
+    padding: 6rem 0rem 1rem 0rem;
     color: white;
     font-size: 2.3rem;
   }
@@ -13059,8 +13078,8 @@ ul {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -13068,36 +13087,77 @@ ul {
         -ms-flex-align: start;
             align-items: flex-start;
   }
-  .postJob-detail .detail-container .detail-input-section h3 {
-    font-size: 1.3rem;
-    padding: 1rem 0rem;
-  }
-  .postJob-detail .detail-container .detail-input-section h4 {
-    padding: 1rem 0rem;
-    font-size: 1.1rem;
-  }
-  .postJob-detail .detail-container .detail-input-section input {
-    width: 100%;
-    height: 2.5rem;
-    padding: 0.5rem 1rem;
-    outline: none;
-    outline: #0a345e;
-    border: lightgrey 0.7px solid;
-    border-radius: 2px;
-  }
-  .postJob-detail .detail-container .detail-input-section #titleError {
+  .postJob-detail .detail-container .detail-input-section #error {
     color: red;
-    font-size: 0.7rem;
-    padding: 0.5rem 0rem;
+    font-size: 1rem;
   }
-  .postJob-detail .detail-container .detail-input-section ul {
-    margin-left: 0.5rem;
-    list-style: circle;
+  .postJob-detail .detail-container .detail-input-section h3 {
+    width: 100%;
+    text-align: start;
+    font-size: 1.6rem;
+    padding: 1rem 0rem;
   }
-  .postJob-detail .detail-container .detail-input-section ul li {
-    padding: 0.4rem 0rem;
-    font-size: 0.87rem;
-    font-weight: lighter;
+  .postJob-detail .detail-container .detail-input-section h3 span {
+    padding-left: 1rem;
+    color: #054e97;
+    font-size: 1rem;
+    text-decoration: none;
+  }
+  .postJob-detail .detail-container .detail-input-section .lengthContainers {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 0.8rem;
+  }
+  .postJob-detail .detail-container .detail-input-section .lengthContainers .short, .postJob-detail .detail-container .detail-input-section .lengthContainers .long {
+    padding: 1rem 0rem;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    cursor: pointer;
+  }
+  .postJob-detail .detail-container .detail-input-section .lengthContainers .short input, .postJob-detail .detail-container .detail-input-section .lengthContainers .long input {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    width: .7rem;
+    height: .7rem;
+    border: 0.7px solid #797979;
+    background-color: transparent;
+    border-radius: 50%;
+  }
+  .postJob-detail .detail-container .detail-input-section .lengthContainers .short input:checked, .postJob-detail .detail-container .detail-input-section .lengthContainers .long input:checked {
+    background-color: #054e97;
+  }
+  .postJob-detail .detail-container .detail-input-section .lengthContainers .short input:hover, .postJob-detail .detail-container .detail-input-section .lengthContainers .long input:hover {
+    border: 0.7px solid #054e97;
+  }
+  .postJob-detail .detail-container .detail-input-section .lengthContainers .short label, .postJob-detail .detail-container .detail-input-section .lengthContainers .long label {
+    cursor: pointer;
+    padding-left: 0.5rem;
+  }
+  .postJob-detail .detail-container .detail-input-section .lengthContainers .short:hover, .postJob-detail .detail-container .detail-input-section .lengthContainers .long:hover {
+    color: #054e97;
+  }
+  .postJob-detail .detail-container .detail-input-section .lengthContainers .short {
+    padding: 0;
   }
   .postJob-detail .detail-container .detail-input-section .CancelOrNext {
     margin-top: 2rem;
@@ -13128,17 +13188,21 @@ ul {
   .postJob-detail .detail-container .detail-input-section .CancelOrNext #cancel:hover {
     background: #ebebeb;
   }
-  .postJob-detail .detail-container .detail-input-section .CancelOrNext #nextSkills {
+  .postJob-detail .detail-container .detail-input-section .CancelOrNext input {
     margin-left: 1rem;
-    color: #0a345e;
+    color: white;
     font-size: 1rem;
-    background: lightgrey;
-    color: gray;
+    background: #054e97;
     padding: 0.5rem 1.5rem;
     border-radius: 15px;
     border: 0.6px solid gray;
-    cursor: not-allowed;
-    pointer-events: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  .postJob-detail .detail-container .detail-input-section .CancelOrNext input:hover {
+    background: #0a345e;
   }
   .postJob-detail-title {
     margin-top: 3rem;
