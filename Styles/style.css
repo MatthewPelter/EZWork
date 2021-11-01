@@ -8874,12 +8874,7 @@ ul {
           align-items: flex-start;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-size-container {
-  width: 100%;
-  padding: 1rem;
-}
-
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-size-container .project-size-option {
+.postJob-detail-scope .detail-scope-container .detail-input-section .scopeOptions {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8890,7 +8885,7 @@ ul {
           flex-direction: column;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-size-container .project-size-option .project-size-option-title {
+.postJob-detail-scope .detail-scope-container .detail-input-section .scopeOptions .projectSize, .postJob-detail-scope .detail-scope-container .detail-input-section .scopeOptions .projectLength, .postJob-detail-scope .detail-scope-container .detail-input-section .scopeOptions .projectExperience {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8901,105 +8896,7 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-size-container .project-size-option .project-size-option-title h3 {
-  width: 100%;
-  text-align: start;
-  font-size: 1.1rem;
-}
-
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-size-container .project-size-option .project-size-option-title i {
-  text-align: end;
-  cursor: pointer;
-  font-size: 0.8rem;
-  color: #797979;
-  padding: 0.5rem;
-  border-radius: 50%;
-  background: transparent;
-  border: 0.7px solid lightgrey;
-}
-
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-size-container .project-size-option .project-size-option-title i:hover {
-  background: #e2e2e2;
-}
-
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-size-container .project-size-option span {
-  padding-right: 1.5rem;
-  color: #797979;
-  font-size: 0.8rem;
-}
-
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-time {
-  width: 100%;
-  padding: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-time h3 {
-  font-size: 1.1rem;
-}
-
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-time i {
-  cursor: pointer;
-  font-size: 0.8rem;
-  color: #797979;
-  padding: 0.5rem;
-  border-radius: 50%;
-  background: transparent;
-  border: 0.7px solid lightgrey;
-}
-
-.postJob-detail-scope .detail-scope-container .detail-input-section .project-time i:hover {
-  background: #e2e2e2;
-}
-
-.postJob-detail-scope .detail-scope-container .detail-input-section .freelance-experience {
-  width: 100%;
-  padding: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.postJob-detail-scope .detail-scope-container .detail-input-section .freelance-experience h3 {
-  font-size: 1.1rem;
-}
-
-.postJob-detail-scope .detail-scope-container .detail-input-section .freelance-experience i {
-  cursor: pointer;
-  font-size: 0.8rem;
-  color: #797979;
-  padding: 0.5rem;
-  border-radius: 50%;
-  background: transparent;
-  border: 0.7px solid lightgrey;
-}
-
-.postJob-detail-scope .detail-scope-container .detail-input-section .freelance-experience i:hover {
-  background: #e2e2e2;
+  margin: 1rem 0rem;
 }
 
 .postJob-detail-scope .detail-scope-container .detail-input-section .CancelOrNext {

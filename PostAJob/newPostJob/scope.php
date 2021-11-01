@@ -79,7 +79,7 @@ if (!isset($_SESSION['userid'])) {
                 </div>
             </div>
             <div class="detail-input-section">
-                <span id="error">
+                <span id="error" style="color: red;">
                     <?php
                     if (!empty($_SESSION['error_page3'])) {
                         echo $_SESSION['error_page3'];
@@ -88,32 +88,38 @@ if (!isset($_SESSION['userid'])) {
                     ?>
                 </span>
                 <form action="location.php" method="post" style="width: 100%;">
+                    <div class="scopeOptions">
+                        <div class="projectSize">
+                            <label>Project Size :<span>*</span></label>
+                            <select name="size">
+                                <option value="">----Select----</options>
+                                <option value="large" value="">Large </options>
+                                <option value="medium" value="">Medium </options>
+                                <option value="small" value="">Small </options>
+                            </select>
+                        </div>
+    
+                        <div class="projectLength">
+                            <label>How long will your work take? :<span>*</span></label>
+                            <select name="months">
+                                <option value="">----Select----</options>
+                                <option value="3to6" value="">3-6 Months </options>
+                                <option value="1to3" value="">1-3 Months </options>
+                                <option value="less1" value="">Less than 1 Month</options>
+                            </select>
+                        </div>
+        
+                        <div class="projectExperience">
+                            <label>What level of experience will you need? :<span>*</span></label>
+                            <select name="experience">
+                                <option value="">----Select----</options>
+                                <option value="entry" value="">Entry </options>
+                                <option value="intermediate" value="">Intermediate </options>
+                                <option value="expert" value="">Expert</options>
+                            </select>    
+                        </div>
+                    </div>
 
-                    <label>Project Size :<span>*</span></label>
-                    <select name="size">
-                        <option value="">----Select----</options>
-                        <option value="large" value="">Large </options>
-                        <option value="medium" value="">Medium </options>
-                        <option value="small" value="">Small </options>
-                    </select>
-    
-    
-                    <label>How long will your work take? :<span>*</span></label>
-                    <select name="months">
-                        <option value="">----Select----</options>
-                        <option value="3to6" value="">3-6 Months </options>
-                        <option value="1to3" value="">1-3 Months </options>
-                        <option value="less1" value="">Less than 1 Month</options>
-                    </select>
-    
-                    <label>What level of experience will you need? :<span>*</span></label>
-                    <select name="experience">
-                        <option value="">----Select----</options>
-                        <option value="entry" value="">Entry </options>
-                        <option value="intermediate" value="">Intermediate </options>
-                        <option value="expert" value="">Expert</options>
-                    </select>
-    
 
                 <div class="CancelOrNext">
                     <input type="reset" value="Reset" id="reset" />

@@ -573,89 +573,15 @@
       border-bottom-right-radius: 15px;
       justify-content: center;
       align-items: flex-start;
-
-      .project-size-container {
+      .scopeOptions{
         width: 100%;
-        padding: 1rem;
-        .project-size-option {
-          width: 100%;
+        display: flex;
+        flex-direction: column;
+        .projectSize,.projectLength,.projectExperience{
           display: flex;
-          flex-direction: column;
-          .project-size-option-title {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            h3 {
-              width: 100%;
-              text-align: start;
-              font-size: 1.1rem;
-            }
-            i {
-              text-align: end;
-              cursor: pointer;
-              font-size: 0.8rem;
-              color: $darktext;
-              padding: 0.5rem;
-              border-radius: 50%;
-              background: transparent;
-              border: 0.7px solid lightgrey;
-              &:hover {
-                background: rgb(226, 226, 226);
-              }
-            }
-          }
-          span {
-            padding-right: 1.5rem;
-            color: $darktext;
-            font-size: 0.8rem;
-          }
-        }
-      }
-      .project-time {
-        width: 100%;
-        padding: 1rem;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        h3 {
-          font-size: 1.1rem;
-        }
-        i {
-          cursor: pointer;
-          font-size: 0.8rem;
-          color: $darktext;
-          padding: 0.5rem;
-          border-radius: 50%;
-          background: transparent;
-          border: 0.7px solid lightgrey;
-          &:hover {
-            background: rgb(226, 226, 226);
-          }
-        }
-      }
-
-      .freelance-experience {
-        width: 100%;
-        padding: 1rem;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        h3 {
-          font-size: 1.1rem;
-        }
-        i {
-          cursor: pointer;
-          font-size: 0.8rem;
-          color: $darktext;
-          padding: 0.5rem;
-          border-radius: 50%;
-          background: transparent;
-          border: 0.7px solid lightgrey;
-          &:hover {
-            background: rgb(226, 226, 226);
-          }
+          flex-direction: row;
+          align-items: center;
+          margin: 1rem 0rem;
         }
       }
       .CancelOrNext {
