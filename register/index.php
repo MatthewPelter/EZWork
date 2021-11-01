@@ -58,7 +58,7 @@ if (isset($_SESSION["userid"])) {
                     <div class="name">
                         <h4>Username</h4>
                         <p>
-                            <input type="text" name="username" id="username" placeholder="Username" title="Enter your username." required>
+                            <input type="text" name="username" id="username" maxlength=15 placeholder="Username" title="Enter your username." required>
                         </p>
                     </div>
                     <div class="dateofBirth">
@@ -71,7 +71,7 @@ if (isset($_SESSION["userid"])) {
                     <div class="contact">
                         <h4>Contact</h4>
                         <p>
-                            <input type="tel" name="phone" id="Phone" placeholder="Phone Number" title="Enter valid phone number." required>
+                            <input type="tel" name="phone" id="Phone" maxlength=10 placeholder="Phone Number" title="Enter valid phone number." required>
                         </p>
                     </div>
 
@@ -81,14 +81,15 @@ if (isset($_SESSION["userid"])) {
                             <input type="email" name="email" id="Email" placeholder="Email" required>
                         </p>
                         <p>
-                            <input type="password" name="password" id="password" title="Please enter a strong password." placeholder="Password" required>
+                            <input type="password" name="password" id="password" title="Please enter a strong password." placeholder="Password" minlength="8" required>
                         </p>
                         <span id="show">Show Password</span>
                         <p>
-                            <input type="password" name="password2" id="password2" title="Match Password" placeholder="Match Password" required>
+                            <input type="password" name="password2" id="password2" title="Match Password" placeholder="Match Password" minlength="8" required>
                         </p>
                         <span id="error"><?php if (isset($_SESSION['regError'])) {
                                                 echo $_SESSION['regError'];
+                                                unset($_SESSION['regError']);
                                             } ?></span>
                     </div>
                     <input type="submit" value="Continue" name="submit" id="continue">
@@ -118,5 +119,14 @@ if (isset($_SESSION["userid"])) {
 
 </body>
 <script src="./register.js"></script>
+<script type="text/javascript"> 
+var btn = document.getElementById('continue');
+btn.disabled = true;
 
+var pass = document.getElementById('password');
+var pass2 = document.getElementById('password2');
+if (pass.value.length > 8 && pass.value == pass2.value) {
+    btn.disabled = false;
+}
+</script>
 </html>
