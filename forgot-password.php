@@ -25,8 +25,6 @@ if (isset($_POST['resetpassword'])) {
     $user_id = mysqli_fetch_assoc($result);
     $sql = "INSERT INTO password_tokens(token, user_id) VALUES ('" . sha1($token) . "', '" . $user_id['id'] . "')";
     $setToken = mysqli_query($conn, $sql);
-    Mail::sendMail('Forgot Password!', "Click here to change your password. <a href='https://ez-work.herokuapp.com/change-password.php?token=$token'>https://ez-work.herokuapp.com/change-password.php?token=$token</a>", $email);
-
     //Create an instance; passing `true` enables exceptions
     $mail = new PHPMailer(true);
 
