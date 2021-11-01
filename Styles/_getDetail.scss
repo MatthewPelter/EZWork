@@ -573,6 +573,7 @@
       border-bottom-right-radius: 15px;
       justify-content: center;
       align-items: flex-start;
+
       .scopeOptions{
         width: 100%;
         display: flex;
@@ -584,6 +585,7 @@
           justify-content: space-between;
           margin: 2.5rem 0rem;
           label{
+            width: 50%;
             color: $lightColor;
             font-size: 1.2rem;
             font-weight: bold;

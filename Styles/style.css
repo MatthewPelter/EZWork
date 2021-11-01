@@ -8903,6 +8903,7 @@ ul {
 }
 
 .postJob-detail-scope .detail-scope-container .detail-input-section .scopeOptions .projectSize label, .postJob-detail-scope .detail-scope-container .detail-input-section .scopeOptions .projectLength label, .postJob-detail-scope .detail-scope-container .detail-input-section .scopeOptions .projectExperience label {
+  width: 50%;
   color: #054e97;
   font-size: 1.2rem;
   font-weight: bold;
