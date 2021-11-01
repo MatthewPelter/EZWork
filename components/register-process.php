@@ -17,7 +17,7 @@ if (isset($_POST['submit'])) {
     $lastname = securityscan($_POST['lastName']);
     $lastname = ucfirst($lastname);
 
-    $username = securityscan($_POST['username']);
+    $username = $_POST['username'];
 
     $query = "SELECT * FROM clients WHERE username='$username'";
     $result = mysqli_query($conn, $query);

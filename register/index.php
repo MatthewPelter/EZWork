@@ -4,7 +4,7 @@
 session_start();
 require_once("../classes/DB.php");
 if (isset($_SESSION["userid"])) {
-    header("Location: ./index");
+    header("Location: ../ClientProfile/index");
 }
 ?>
 
