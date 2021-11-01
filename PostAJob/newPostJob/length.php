@@ -73,8 +73,8 @@ if (!isset($_SESSION['userid'])) {
                 <h3>Choose a Job Length<span>*Mandatory</span></h3>
                 <div class="lengthContainers">
                     <div class="short">
-                        
                         <input type="radio" id="short" name="length" value="s" required>
+                        <span class="checkmark"></span>
                         <label for="short">Short term or part time work</label><br>
                     </div>
                     <div class="long">

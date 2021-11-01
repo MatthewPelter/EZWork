@@ -8319,6 +8319,10 @@ ul {
   padding-left: 0.5rem;
 }
 
+.postJob-detail .detail-container .detail-input-section .lengthContainers .short:hover, .postJob-detail .detail-container .detail-input-section .lengthContainers .long:hover {
+  color: #054e97;
+}
+
 .postJob-detail .detail-container .detail-input-section .lengthContainers .short {
   padding: 0;
 }
