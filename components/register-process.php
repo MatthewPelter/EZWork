@@ -65,7 +65,9 @@ if (isset($_POST['submit'])) {
     $result = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
 
     if ($result) {
+        $user_id = mysqli_fetch_assoc(mysqli_query($conn, "SELECT id FROM clients WHERE username = '$username'"));
         $_SESSION['userid'] = $username;
+        $_SESSION['user_id'] = $user_id['id'];
         header("Location: ../ClientProfile/index");
     } else {
         echo "not working";

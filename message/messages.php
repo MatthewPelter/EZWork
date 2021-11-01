@@ -6,10 +6,10 @@ require_once("../classes/DB.php");
 
 // Converting the username to a userid from the user that is logged in
 $username = $_SESSION['userid'];
-$getUserID = "SELECT id FROM clients WHERE username = '$username'";
-$getResult = mysqli_query($conn, $getUserID);
-$row = mysqli_fetch_assoc($getResult);
-$userID = $row['id'];
+//$getUserID = "SELECT id FROM clients WHERE username = '$username'";
+//$getResult = mysqli_query($conn, $getUserID);
+//$row = mysqli_fetch_assoc($getResult);
+$userID = $_SESSION['user_id'];
 
 // Check if reply button was pressed
 if (isset($_POST['submit'])) {
@@ -79,7 +79,7 @@ if (isset($_POST['submit'])) {
             // Selecting all the users you currently have a chat with.
             $sql = "SELECT DISTINCT s.username AS Sender, r.username AS Receiver, s.id AS SenderID, r.id as ReceiverID FROM messages LEFT JOIN clients s ON s.id = messages.sender LEFT JOIN clients r ON r.id = messages.receiver WHERE (s.id = '$userID' OR r.id = '$userID')";
             $result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
-    
+
             $u = array();
             if (mysqli_num_rows($result) > 0) {
                 while ($r = mysqli_fetch_assoc($result)) {
@@ -96,16 +96,16 @@ if (isset($_POST['submit'])) {
             ?>
             <!---->
             <div class="mobileSpacer">
-    
+
             </div>
-    
+
             <div class="message-container clearfix">
                 <div class="people-list" id="people-list">
                     <div class="title">
                         <h4>Direct Message</h4>
                     </div>
                     <ul class="list">
-    
+
                         <?php
                         foreach ($u as $user) {
                         ?>
@@ -117,35 +117,35 @@ if (isset($_POST['submit'])) {
                                 </li>
                             </a>
                         <?php } ?>
-    
+
                     </ul>
                 </div>
-    
+
                 <?php
                 // Get messages between you and the user
                 if (isset($_GET['mid'])) {
                     $id = htmlspecialchars($_GET['mid']);
                     $sql = "SELECT messages.id, messages.body, s.username AS Sender, r.username AS Receiver FROM messages LEFT JOIN clients s ON messages.sender = s.id LEFT JOIN clients r ON messages.receiver = r.id WHERE (r.id='$userID' AND s.id = '$id') OR r.id = $id AND s.id = '$userID'";
                     $result = mysqli_query($conn, $sql);
-    
+
                     $otherUsernameSQL = mysqli_query($conn, "SELECT username FROM clients WHERE id='$id'");
                     $otherResult = mysqli_fetch_assoc($otherUsernameSQL);
                     $otherUsername = $otherResult['username'];
                 ?>
-    
+
                     <div class="chat">
                         <div class="chat-header clearfix">
-    
+
                             <div class="chat-about">
                                 <div class="chat-with">Chat with <?php echo $otherUsername; ?></div>
                                 <div class="chat-num-messages">Do not share any confidential information</div>
                             </div>
                             <i class="fa fa-star"></i>
                         </div> <!-- end chat-header -->
-    
+
                         <div class="chat-history">
                             <ul>
-    
+
                                 <?php
                                 while ($row = mysqli_fetch_assoc($result)) {
                                     //echo $row['id'] . ": " . $row['body'] . "<br />";
@@ -154,13 +154,13 @@ if (isset($_POST['submit'])) {
                                         <li class="clearfix">
                                             <div class="message-data align-right">
                                                 <span class="message-data-name">Me</span> <i class="fa fa-circle me"></i>
-    
+
                                             </div>
                                             <div class="message other-message float-right">
                                                 <?php echo $row['body']; ?>
                                             </div>
                                         </li>
-    
+
                                     <?php
                                     } else {
                                     ?>
@@ -172,26 +172,26 @@ if (isset($_POST['submit'])) {
                                                 <?php echo $row['body']; ?>
                                             </div>
                                         </li>
-    
+
                                 <?php
                                     }
                                 }
                                 ?>
-    
+
                             </ul>
-    
+
                         </div> <!-- end chat-history -->
-    
+
                         <form class="form" action="messages.php?mid=<?php echo $id; ?>" method="post" name="message">
                             <div class="chat-message clearfix">
                                 <textarea name="msg" id="message-to-send" placeholder="Type your message" rows="3" required></textarea>
                                 <input type="submit" value="Send" name="submit" class="button"></input>
-    
+
                             </div> <!-- end chat-message -->
                         </form>
-    
+
                     </div> <!-- end chat -->
-    
+
             </div> <!-- end container -->
         <?php
                 } else {
@@ -199,36 +199,36 @@ if (isset($_POST['submit'])) {
         ?>
             <div class="chat">
                 <div class="chat-header clearfix">
-    
+
                     <div class="chat-about">
                         <div class="chat-with">Welcome to the chat! </div>
                         <div class="chat-num-messages">Click a user on the left to start chatting</div>
                     </div>
                     <i class="fa fa-star"></i>
                 </div> <!-- end chat-header -->
-    
+
             </div> <!-- end chat -->
-    
+
         <?php
                 }
         ?>
-    
-    
+
+
         <!--DataList-->
         <datalist id="allskills">
         </datalist>
         </div>
-    
-        
+
+
         <!--Can't understand why cant i add a margin so just adding padding to a div for space-->
         <div class="spacerDiv" style="padding: 2rem;width: 100%;background-color: #c7e3f3;">
-    
+
         </div>
         <!-- Footer -->
         <?php include '../footer.php'; ?>
         <!-- Footer -->
-        </div>
-   
+    </div>
+
 </body>
 
 <script type="text/javascript">
@@ -246,96 +246,95 @@ if (isset($_POST['submit'])) {
     var project = document.querySelector('.projectCard');
     var help = document.querySelector('.helpCard');
     var session = document.querySelector('.sessionCard');
-    function toggleJob(){
+
+    function toggleJob() {
         var job = document.querySelector('.jobCard');
-        if(job.style.display === 'none'){
+        if (job.style.display === 'none') {
             job.style.display = 'inline-block';
             talent.style.display = 'none';
             project.style.display = 'none';
             help.style.display = 'none';
             session.style.display = 'none';
-        }
-        else{
-            job.style.display='none';
-            
+        } else {
+            job.style.display = 'none';
+
         }
     }
-    function toggleTalent(){
+
+    function toggleTalent() {
         var talent = document.querySelector('.talentCard');
-        if(talent.style.display==='none'){
+        if (talent.style.display === 'none') {
             talent.style.display = 'inline-block';
             job.style.display = 'none';
             project.style.display = 'none';
             help.style.display = 'none';
             session.style.display = 'none';
-        }
-        else{
+        } else {
             talent.style.display = 'none';
         }
     }
-    function toggleProject(){
+
+    function toggleProject() {
         var project = document.querySelector('.projectCard');
-        if(project.style.display==='none'){
+        if (project.style.display === 'none') {
             project.style.display = 'inline-block';
             talent.style.display = 'none';
             job.style.display = 'none';
             help.style.display = 'none';
             session.style.display = 'none';
-        }
-        else{
+        } else {
             project.style.display = 'none';
         }
     }
-    function toggleHelp(){
+
+    function toggleHelp() {
         var help = document.querySelector('.helpCard');
-        if(help.style.display==='none'){
+        if (help.style.display === 'none') {
             help.style.display = 'inline-block';
             talent.style.display = 'none';
             project.style.display = 'none';
             job.style.display = 'none';
             session.style.display = 'none';
-        }
-        else{
+        } else {
             help.style.display = 'none';
         }
     }
-    function toggleSession(){
-       
-        if(session.style.display==='none'){
+
+    function toggleSession() {
+
+        if (session.style.display === 'none') {
             session.style.display = 'inline-block';
             talent.style.display = 'none';
             project.style.display = 'none';
             help.style.display = 'none';
             job.style.display = 'none';
-        }
-        else{
+        } else {
             session.style.display = 'none';
         }
     }
-
 </script>
 <!--Toggle the nav burger button and mobile nav bar js-->
 <script>
     const navIcon = document.getElementById("nav-burger");
     const profileMobileNav = document.querySelector(".profile-mobile-nav");
     const messageMainContainer = document.querySelector('.messageMainContainer');
+
     function myFunction(x) {
         x.classList.toggle("change");
-        if(x.classList.contains('change')){
+        if (x.classList.contains('change')) {
             profileMobileNav.style.display = "inline-block";
             messageMainContainer.style.display = 'none';
-            searchIcon.style.opacity='0';
-        }
-        else{
+            searchIcon.style.opacity = '0';
+        } else {
             profileMobileNav.style.display = 'none';
-            searchIcon.style.opacity='1';
+            searchIcon.style.opacity = '1';
             messageMainContainer.style.display = "inline-block";
         }
     }
 
     const sortDownBtn = document.getElementById('jobArrow');
-    async function toggleJobCard(){
-    var mobileJobCard = document.querySelector(".mobileJobCard"); 
+    async function toggleJobCard() {
+        var mobileJobCard = document.querySelector(".mobileJobCard");
         if (mobileJobCard.style.display === "none") {
             sortDownBtn.style.transform = "rotate(180deg)";
             mobileJobCard.style.display = "inline-block";
@@ -345,10 +344,10 @@ if (isset($_POST['submit'])) {
         }
     }
 
-    
+
     const sortDownBtn2 = document.getElementById('freelanceArrow');
-    async function toggleFreelanceCard(){
-    var mobileFreelanceCard = document.querySelector(".mobileFreelanceCard"); 
+    async function toggleFreelanceCard() {
+        var mobileFreelanceCard = document.querySelector(".mobileFreelanceCard");
         if (mobileFreelanceCard.style.display === "none") {
             sortDownBtn2.style.transform = "rotate(180deg)";
             mobileFreelanceCard.style.display = "inline-block";
@@ -359,8 +358,8 @@ if (isset($_POST['submit'])) {
     }
 
     const sortDownBtn3 = document.getElementById('projectsArrow');
-    async function toggleProjectsCard(){
-    var mobileProjectsCard = document.querySelector(".mobileProjectsCard"); 
+    async function toggleProjectsCard() {
+        var mobileProjectsCard = document.querySelector(".mobileProjectsCard");
         if (mobileProjectsCard.style.display === "none") {
             sortDownBtn3.style.transform = "rotate(180deg)";
             mobileProjectsCard.style.display = "inline-block";

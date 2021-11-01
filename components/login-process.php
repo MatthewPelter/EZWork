@@ -20,6 +20,7 @@ if (isset($_POST['submit'])) {
 		$data = mysqli_fetch_assoc($result);
 		if (password_verify($password, $data['password'])) {
 			$_SESSION['userid'] = $data['username'];
+			$_SESSION['user_id'] = $data['id'];
 			header("Location: ../ClientProfile/index");
 		} else {
 			header("Location: ../login/index?error=1");
