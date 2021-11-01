@@ -19,12 +19,9 @@ if (isset($_POST['submit'])) {
     $lastname = ucfirst($lastname);
 
     $username = securityscan($_POST['username']);
-
-    $userSQL = "SELECT * FROM clients WHERE username='$username'";
-    $userQuery = mysqli_query($conn, $userSQL);
-    $countUser = mysqli_num_rows($userQuery);
-    if ($countUser > 0) {
-        //$_SESSION['regError'] = 'Username is already taken!';
+    include 'check_availability.php';
+    if (!usernameAvailable($username)) {
+        $_SESSION['regError'] = 'Username is taken already...';
         header("Location: ../register/index");
     }
 
