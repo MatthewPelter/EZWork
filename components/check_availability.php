@@ -16,17 +16,9 @@ if (!empty($_POST['username'])) {
 }
 
 
-function usernameAvailable($username)
-{
-  require_once("../classes/DB.php");
-  $query = "SELECT * FROM clients WHERE username='$username'";
-  $result = mysqli_query($conn, $query);
 
-  $user_count = mysqli_num_rows($result);
-  if ($user_count > 0) {
-    return false;
-  } else {
-    return true;
-  }
-}
+
+
+
+
 ?>
