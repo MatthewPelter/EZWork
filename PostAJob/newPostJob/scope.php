@@ -61,7 +61,7 @@ if (!isset($_SESSION['userid'])) {
 
     <!--Post A Job More Details-->
     <div class="postJob-detail-scope">
-        <div class="detail-container">
+        <div class="detail-scope-container">
             <div class="detail-progress-section">
                 <div class="progressBar">
                     <progress id="jobPostProgress" value="50" max="100"></progress>
