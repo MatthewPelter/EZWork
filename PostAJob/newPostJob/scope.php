@@ -59,8 +59,8 @@ if (!isset($_SESSION['userid'])) {
     <?php include '../../navbar.php'; ?>
 
 
-        <!--Post A Job More Details-->
-        <div class="postJob-detail-scope">
+    <!--Post A Job More Details-->
+    <div class="postJob-detail-scope">
         <div class="detail-container">
             <div class="detail-progress-section">
                 <div class="progressBar">
