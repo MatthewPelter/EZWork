@@ -23,7 +23,7 @@ if (isset($_POST['resetpassword'])) {
     $email = securityscan($_POST['email']);
     $result = mysqli_query($conn, "SELECT id FROM clients WHERE email='$email'");
     $user_id = mysqli_fetch_assoc($result);
-    $sql = "INSERT INTO password_tokens(token, user_id) VALUES ('" . sha1($token) . "', '" . $user_id . "')";
+    $sql = "INSERT INTO password_tokens(token, user_id) VALUES ('" . sha1($token) . "', '" . $user_id['id'] . "')";
     $setToken = mysqli_query($conn, $sql);
     Mail::sendMail('Forgot Password!', "Click here to change your password. <a href='https://ez-work.herokuapp.com/change-password.php?token=$token'>https://ez-work.herokuapp.com/change-password.php?token=$token</a>", $email);
 
@@ -60,7 +60,7 @@ if (isset($_POST['resetpassword'])) {
     }
 
 
-    header("Location: ./login/index");
+    //header("Location: ./login/index");
 }
 ?>
 <!DOCTYPE html>
