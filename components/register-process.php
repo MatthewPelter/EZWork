@@ -22,8 +22,9 @@ if (isset($_POST['submit'])) {
 
     $userSQL = "SELECT * FROM clients WHERE username='$username'";
     $userQuery = mysqli_query($conn, $userSQL);
-    if (mysqli_num_rows($userQuery) > 0) {
-        $_SESSION['regError'] = 'Username is already taken!';
+    $countUser = mysqli_num_rows($userQuery);
+    if ($countUser > 0) {
+        //$_SESSION['regError'] = 'Username is already taken!';
         header("Location: ../register/index");
     }
 
