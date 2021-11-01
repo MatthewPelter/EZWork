@@ -58,8 +58,9 @@ if (isset($_SESSION["userid"])) {
                     <div class="name">
                         <h4>Username</h4>
                         <p>
-                            <input type="text" name="username" id="username" maxlength=15 placeholder="Username" title="Enter your username." required>
+                            <input type="text" name="username" id="username" maxlength=15 placeholder="Username" title="Enter your username." onBlur="checkAvailability()" required>
                         </p>
+                        <span id="nameerror"></span>
                     </div>
                     <div class="dateofBirth">
                         <h4>Date of Birth</h4>
@@ -119,14 +120,31 @@ if (isset($_SESSION["userid"])) {
 
 </body>
 <script src="./register.js"></script>
-<script type="text/javascript"> 
-var btn = document.getElementById('continue');
-btn.disabled = true;
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+    var btn = document.getElementById('continue');
+    btn.disabled = true;
 
-var pass = document.getElementById('password');
-var pass2 = document.getElementById('password2');
-if (pass.value.length > 8 && pass.value == pass2.value) {
-    btn.disabled = false;
-}
+    var pass = document.getElementById('password');
+    var pass2 = document.getElementById('password2');
+
+    pass2.addEventListener('change', (e) => {
+        if (pass.value.length > 8 && pass.value == pass2.value) {
+            btn.disabled = false;
+        }
+    });
+
+    function checkAvailability() {
+        jQuery.ajax({
+            url: "../components/check_availability.php",
+            data: 'username=' + $("#username").val(),
+            type: "POST",
+            success: function(data) {
+                $("#nameerror").html(data);
+            },
+            error: function() {}
+        });
+    }
 </script>
+
 </html>
