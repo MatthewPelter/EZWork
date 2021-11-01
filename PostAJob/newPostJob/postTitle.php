@@ -44,7 +44,7 @@ if (isset($_POST['length'])) {
 
 
         <!--Post A Job More Details-->
-        <div class="postJob-detail">
+        <div class="postJob-detail-title">
         <div class="detail-container">
             <div class="detail-progress-section">
                 <div class="progressBar">
@@ -78,7 +78,7 @@ if (isset($_POST['length'])) {
                     <input name="title" id="title" type="text" placeholder="I need my garage door installed..." value=""><br />
                 </div>
                 <h4>Example titles</h4>
-                <ul style="list-style: circle;">
+                <ul>
                     <li>Build a website for my local coffee shop business</li>
                     <li>Logo Designer needed to design a modern company logo.</li>
                     <li>Computer Technician needed to build my custom gaming pc.</li>
