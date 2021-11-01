@@ -3434,6 +3434,265 @@
       }
     }
   }
+  // CSS for Posting a Title start
+.postJob-detail-title {
+  margin-top: 3rem;
+  width: 100%;
+  background: whitesmoke;
+  padding: 2.5rem 0rem;
+
+  .detail-container {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    border: 1.25px solid lightgrey;
+    border-radius: 15px;
+    background: white;
+
+    .detail-progress-section {
+      width: 100%;
+      height: fit-content;
+      padding: 1.5rem;
+      background: $color1;
+      display: flex;
+      flex-direction: column;
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+      #current {
+        color: lightgreen;
+      }
+      .progressBar {
+        width: 100%;
+        progress {
+          border-radius: 10px;
+          width: 100%;
+          padding: 0;
+          border: none;
+          background: #104880;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+        }
+        progress::-webkit-progress-bar {
+          border-radius: 10px;
+          width: 100%;
+          padding: 0;
+          border: none;
+          background: #104880;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+        }
+        progress::-moz-progress-bar {
+          border-radius: 10px;
+          width: 100%;
+          padding: 0;
+          border: none;
+          background: #104880;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+        }
+        progress::-webkit-progress-value {
+          background: lightgreen;
+          border-top-left-radius: 10px;
+          border-bottom-left-radius: 10px;
+          height: 100%;
+          border: none;
+        }
+        progress::-moz-progress-bar {
+          background: lightgreen;
+          border-top-left-radius: 10px;
+          border-bottom-left-radius: 10px;
+          height: 100%;
+          border: none;
+        }
+        ul {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          padding-top: 0.3rem;
+          li {
+            color: white;
+            font-size: 0.9rem;
+          }
+        }
+      }
+      .title-card-intro {
+        h2 {
+          padding: 6rem 0rem 1rem 0rem;
+          color: white;
+          font-size: 2.3rem;
+        }
+        p {
+          color: white;
+          font-size: 0.95rem;
+        }
+      }
+    }
+
+    .detail-input-section {
+      width: 100%;
+      height: 100%;
+      padding: 2rem;
+      background: white;
+      display: flex;
+      flex-direction: column;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+      justify-content: center;
+      align-items: flex-start;
+      h3 {
+        font-size: 1.3rem;
+        padding: 1rem 0rem;
+      }
+
+      h4 {
+        padding: 1rem 0rem;
+        font-size: 1.1rem;
+      }
+
+      input {
+        width: 100%;
+        height: 2.5rem;
+        padding: 0.5rem 1rem;
+        outline: none;
+        outline: $color1;
+        border: lightgrey 0.7px solid;
+        border-radius: 2px;
+      }
+      ul {
+        margin-left: 0.5rem;
+        list-style: circle;
+        li {
+          padding: 0.4rem 0rem;
+          font-size: 0.87rem;
+          font-weight: lighter;
+        }
+      }
+      .descriptionContainer{
+        input{
+          width: 100%;
+          height: 3.2rem;
+          padding: 0.5rem 1rem;
+          outline: none;
+          outline: $color1;
+          border: lightgrey 0.7px solid;
+          border-radius: 2px;
+        }
+      }
+      .CancelOrNext {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: flex-end;
+        align-items: center;
+        #reset {
+          color: $color1;
+          font-size: 1rem;
+          background: none;
+          padding: 0.5rem 1.5rem;
+          border-radius: 15px;
+          border: 0.6px solid $color1;
+          cursor: pointer;
+          &:hover {
+            background: rgb(235, 235, 235);
+          }
+        }
+        #nextScope {
+          margin-left: 1rem;
+          color: white;
+          font-size: 1rem;
+          background: $color1;
+          padding: 0.5rem 1.5rem;
+          border-radius: 15px;
+          border: 0.6px solid gray;
+          cursor: pointer;
+        }
+      }
+
+      // Post Skills CSS
+      .skillSearch {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        outline: $color1;
+        border: lightgrey 0.7px solid;
+        border-radius: 8px;
+        i {
+          cursor: pointer;
+          margin-left: 1rem;
+          color: $darktext;
+        }
+        input {
+          border: none;
+        }
+      }
+
+      // Selected Skills
+      .selectedSkills {
+        padding: 1rem 0rem;
+        width: 100%;
+        ul {
+          display: flex;
+          flex-direction: row;
+          width: 100%;
+          list-style: none;
+          li {
+            width: fit-content;
+            font-size: 0.8rem;
+            background: $color1;
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 15px;
+            border: 0.6px solid gray;
+            cursor: pointer;
+          }
+          i {
+            margin-left: 0.5rem;
+            font-size: 0.5rem;
+          }
+        }
+      }
+      select {
+        width: 100%;
+        padding: 0.5rem 1rem;
+        background: transparent;
+        border: none;
+        font-size: 1rem;
+        outline: none;
+        outline: $color1;
+        border: lightgrey 0.7px solid;
+        border-radius: 10px;
+      }
+      span {
+        margin-left: 0.5rem;
+        color: $lightColor;
+      }
+      #SkillsUnderCategory {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        li {
+          margin-bottom: 1rem;
+          width: fit-content;
+          font-size: 0.8rem;
+          background: rgb(127, 214, 127);
+          color: white;
+          padding: 0.5rem;
+          border-radius: 10px;
+          border: none;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
   .postJob-detail-skills {
     margin-top: 3rem;
     width: 100%;
