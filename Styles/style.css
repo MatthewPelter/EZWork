@@ -8299,6 +8299,9 @@ ul {
 
 .postJob-detail .detail-container .detail-input-section .lengthContainers .short input, .postJob-detail .detail-container .detail-input-section .lengthContainers .long input {
   cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .postJob-detail .detail-container .detail-input-section .lengthContainers .short label, .postJob-detail .detail-container .detail-input-section .lengthContainers .long label {
@@ -8350,6 +8353,9 @@ ul {
   border-radius: 15px;
   border: 0.6px solid gray;
   cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .postJob-detail .detail-container .detail-input-section .CancelOrNext input:hover {

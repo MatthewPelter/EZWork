@@ -136,6 +136,9 @@
           align-items: center;
           input{
             cursor: pointer;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
           }
           label{
             padding-left: 1rem;
@@ -173,6 +176,9 @@
           border-radius: 15px;
           border: 0.6px solid gray;
           cursor: pointer;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
           &:hover{
             background: $color1;
           }
