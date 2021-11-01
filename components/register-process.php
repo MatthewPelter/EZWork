@@ -17,8 +17,8 @@ if (isset($_POST['submit'])) {
     $lastname = securityscan($_POST['lastName']);
     $lastname = ucfirst($lastname);
 
-    $username = $_POST['username'];
-
+    // Username validation
+    $username = securityscan($_POST['username']);
     $query = "SELECT * FROM clients WHERE username='$username'";
     $result = mysqli_query($conn, $query);
 
@@ -31,11 +31,26 @@ if (isset($_POST['submit'])) {
 
     $birthday = securityscan($_POST['birthday']);
     $phone = securityscan($_POST['phone']);
+
+    // Email validation
     $email = securityscan($_POST['email']);
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $_SESSION['regError'] = "Email is not valid, Try again";
         header("Location: ../register/index");
+        exit();
     }
+
+    $emailSQL = "SELECT * FROM clients WHERE email='$email'";
+    $emailResult = mysqli_query($conn, $emailSQL);
+
+    $email_count = mysqli_num_rows($emailResult);
+    if ($email_count > 0) {
+        $_SESSION['regError'] = "An account with this email already exists... Try to log in...";
+        header("Location: ../register/index");
+        exit();
+    }
+
+
     $password = securityscan($_POST['password']);
     $password2 = securityscan($_POST['password2']);
 

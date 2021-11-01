@@ -86,7 +86,7 @@ if (isset($_SESSION["userid"])) {
                     <div class="account">
                         <h4>Account Information</h4>
                         <p>
-                            <input type="email" name="email" id="Email" placeholder="Email" onBlur="checkEmailAvailability()" required>
+                            <input type="email" name="email" id="Email" placeholder="Email" required>
                         </p>
                         <span id="emailerror"></span>
 
@@ -138,18 +138,6 @@ if (isset($_SESSION["userid"])) {
             type: "POST",
             success: function(data) {
                 $("#nameerror").html(data);
-            },
-            error: function() {}
-        });
-    }
-
-    function checkEmailAvailability() {
-        jQuery.ajax({
-            url: "../components/check_email.php",
-            data: 'email=' + $("#Email").val(),
-            type: "POST",
-            success: function(data) {
-                $("#emailerror").html(data);
             },
             error: function() {}
         });
