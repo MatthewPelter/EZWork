@@ -200,7 +200,7 @@ $row = mysqli_fetch_assoc($result);
 
     $("#changePassBTN").click(function() {
         alert("Click event works");
-        jQuery.ajax({
+        $.ajax({
             url: "../components/settings-change-password.php",
             data: {
                 currentPassword: currentP,

@@ -132,7 +132,7 @@ if (isset($_SESSION["userid"])) {
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript">
     function checkUserAvailability() {
-        jQuery.ajax({
+        $.ajax({
             url: "../components/check_username.php",
             data: 'username=' + $("#username").val(),
             type: "POST",
