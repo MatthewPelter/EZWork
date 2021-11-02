@@ -2,9 +2,7 @@
 session_start();
 require_once("../classes/DB.php");
 
-echo "IT IS WORKING";
-
-if (!empty($_POST['currentPassword']) && !empty($_POST['password']) && !empty($_POST['password2'])) {
+if (isset($_POST['currentPassword']) && isset($_POST['password']) && isset($_POST['password2'])) {
     $username = $_SESSION['userid'];
     $password = $_POST['currentPassword'];
     $passwordNew = $_POST['password'];
@@ -24,5 +22,5 @@ if (!empty($_POST['currentPassword']) && !empty($_POST['password']) && !empty($_
         echo "Password is incorrect!";
     }
 } else {
-    echo "Error";
+    echo "Error: Post variables not set...";
 }
