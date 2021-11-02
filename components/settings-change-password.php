@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once("../classes/DB.php");
-include('./classes/Mail.php');
+include('../classes/Mail.php');
 
 
 function securityscan($data)
@@ -36,6 +36,7 @@ if (isset($_POST['currentPassword']) && isset($_POST['password']) && isset($_POS
                 include '../changedPassEmail.phtml';
                 $body = ob_get_clean();
                 Mail::sendMail($subject, $body, $row['email']);
+                echo "Successfully Changed Password!";
             } else {
                 echo "Passwords do not match! Try again";
             }

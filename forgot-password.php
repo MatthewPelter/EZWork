@@ -27,6 +27,7 @@ if (isset($_POST['resetpassword'])) {
         $body = ob_get_clean();
 
         Mail::sendMail($subject, $body, $email);
+        echo 'If email is registered, you will receive a reset password email! (Might be in spam folder!!!!)';
     } else {
         echo 'If email is registered, you will receive a reset password email! (Might be in spam folder!!!!)';
     }
