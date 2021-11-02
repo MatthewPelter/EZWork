@@ -233,6 +233,10 @@ if (isset($_GET['token'])) {
                 font-size: 24px;
             }
         }
+
+        #form {
+            margin-bottom: 30px;
+        }
     </style>
 </head>
 
@@ -242,15 +246,17 @@ if (isset($_GET['token'])) {
         <div class="inner-header flex">
             <div class="textBox">
                 <h1>Change Your Password</h1>
-                <form action="change-password.php?token=<?php echo $token; ?>" method="post">
-                    <input type="password" id="password" name="password" minlength="8" value="" placeholder="Password" required>
-                    <input type="password" id="password2" name="password2" value="" minlength="8" placeholder="Match Password" required>
-                    <span id="error"><?php if (isset($_SESSION['changeError'])) {
-                                            echo $_SESSION['changeError'];
-                                            unset($_SESSION['changeError']);
-                                        } ?></span>
-                    <input type="submit" name="changepassword" value="Change Password">
-                </form>
+                <div id="form">
+                    <form action="change-password.php?token=<?php echo $token; ?>" method="post">
+                        <input type="password" id="password" name="password" minlength="8" value="" placeholder="Password" required>
+                        <input type="password" id="password2" name="password2" value="" minlength="8" placeholder="Match Password" required>
+                        <span id="error"><?php if (isset($_SESSION['changeError'])) {
+                                                echo $_SESSION['changeError'];
+                                                unset($_SESSION['changeError']);
+                                            } ?></span>
+                        <input type="submit" name="changepassword" value="Change Password">
+                    </form>
+                </div>
 
                 <a class="btn" href="https://ez-work.herokuapp.com/login/index">Go Back</a>
             </div>
