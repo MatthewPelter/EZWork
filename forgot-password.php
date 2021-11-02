@@ -1,6 +1,6 @@
 <?php
 require_once("./classes/DB.php");
-include('./classes/Mail.php');
+//include('./classes/Mail.php');
 
 function securityscan($data)
 {
