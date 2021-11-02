@@ -199,7 +199,6 @@ $row = mysqli_fetch_assoc($result);
     var newP2 = $("#password2").val();
 
     $("#changePassBTN").click(function() {
-        alert("Click event works");
         $.ajax({
             url: "../components/settings-change-password.php",
             data: {
