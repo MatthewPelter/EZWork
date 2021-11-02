@@ -29,14 +29,14 @@ if (isset($_POST['currentPassword']) && isset($_POST['password']) && isset($_POS
                 $passwordNew = password_hash($passwordNew, PASSWORD_BCRYPT);
                 $userid = $row['id'];
                 mysqli_query($conn, "UPDATE clients SET password = '$passwordNew' WHERE id='$userid'");
-                echo "Password has been reset successfully!";
 
                 $subject = 'Password was Reset!';
                 ob_start();
                 include '../changedPassEmail.phtml';
                 $body = ob_get_clean();
-                Mail::sendMail($subject, $body, $row['email']);
-                echo "Successfully Changed Password!";
+                $email = $row['email'];
+                Mail::sendMail($subject, $body, $email);
+                echo "Password has been reset successfully!";
             } else {
                 echo "Passwords do not match! Try again";
             }
