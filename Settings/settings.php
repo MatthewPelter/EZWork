@@ -81,7 +81,7 @@ $row = mysqli_fetch_assoc($result);
                 <?php if ($row['freelancer_id'] == NULL) {
                 ?>
                     <p>This is a <span id="accountType">Client</span> account.</p>
-                    <button id="becomeFreelancer">Become Freelancer</button>
+                    <button id="becomeFreelancer" onclick="location.href='../become-a-freelancer.php'">Become Freelancer</button>
                 <?php
                 } ?>
                 <button id="deleteAccount" onclick="openCard()">Delete Account</button>
