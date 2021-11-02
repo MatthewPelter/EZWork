@@ -32,7 +32,7 @@ if (isset($_POST['currentPassword']) && isset($_POST['password']) && isset($_POS
 
                 $subject = 'Password was Reset!';
                 ob_start();
-                include 'changedPassEmail.phtml';
+                include '../changedPassEmail.phtml';
                 $body = ob_get_clean();
                 Mail::sendMail($subject, $body, $row['email']);
             } else {
