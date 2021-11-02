@@ -67,7 +67,7 @@ $row = mysqli_fetch_assoc($result);
                 </div>
                 <div class="settings-account-profile-info">
                     <p>UserName: <span id="settingsName"><?php echo $_row['username']; ?></span></p>
-                    <p>Account Type: <span><?php if ($row['freelancer_id'] != NULL) {
+                    <p>Account Type: <span><?php if ($row['freelancer_id'] == NULL) {
                                                 echo "Client";
                                             } else {
                                                 echo "Freelancer";
@@ -77,7 +77,7 @@ $row = mysqli_fetch_assoc($result);
                 </div>
             </div>
             <div class="settings-account-godMode">
-                <?php if ($row['freelancer_id'] != NULL) {
+                <?php if ($row['freelancer_id'] == NULL) {
                 ?>
                     <p>This is a <span id="accountType">Client</span> account.</p>
                     <button id="becomeFreelancer">Become Freelancer</button>
@@ -95,10 +95,21 @@ $row = mysqli_fetch_assoc($result);
             <div class="settings-password-container">
                 <div class="settings-password-card">
                     <h3>Password</h3>
-                    <i class="fa fa-pencil" onclick="openCard()" id="changePasswordIcon" aria-hidden="true"></i>
+                    <!-- <i class="fa fa-pencil" onclick="openCard()" id="changePasswordIcon" aria-hidden="true"></i> -->
                 </div>
                 <div class="settings-password-card2">
                     <p>Use this section to view and edit your current password.</p>
+                    <h4>Change your password:</h4>
+                    <form action="settings.php" method="post">
+                        <input type="password" id="currentPassword" name="currentPassword" minlength="8" value="" placeholder="Current Password">
+                        <input type="password" id="password" name="password" minlength="8" value="" placeholder="New Password">
+                        <input type="password" id="password2" name="password2" value="" minlength="8" placeholder="Match New Password">
+                        <span id="error"><?php if (isset($_SESSION['changePassError'])) {
+                                                echo $_SESSION['changePassError'];
+                                                unset($_SESSION['changePassError']);
+                                            } ?></span>
+                        <input type="submit" name="changepassword" value="Change Password">
+                    </form>
                 </div>
             </div>
             <div class="settings-password-twoStep">
