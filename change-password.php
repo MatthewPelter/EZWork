@@ -22,7 +22,7 @@ if (isset($_GET['token'])) {
     // Check if token exists
     $tokenHash = sha1($token);
     $result = mysqli_query($conn, "SELECT user_id FROM password_tokens WHERE token='$tokenHash'");
-    if ($result) {
+    if (mysqli_num_rows($result) > 0) {
         $r = mysqli_fetch_assoc($result);
         $user_id = $r['user_id'];
         $tokenIsValid = true;
