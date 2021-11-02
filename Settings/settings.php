@@ -3,44 +3,37 @@ session_start();
 include '../components/session-checker.php';
 require_once("../classes/DB.php");
 
-
-$uname = $_GET['name'];
-$cleanuname = mysqli_real_escape_string($conn, $uname);
-
-if ($cleanuname == $_SESSION['userid']) {
-    header('Location: ../ClientProfile/index');
-}
-
-$sql = "SELECT * FROM clients WHERE username='$cleanuname'";
+$user_id = $_SESSION['user_id'];
+$sql = "SELECT * FROM clients WHERE id='$user_id'";
 $result = mysqli_query($conn, $sql);
-$dataFound = false;
+$row = mysqli_fetch_assoc($result);
 
-if (mysqli_num_rows($result) > 0) {
-    $dataFound = true;
-    $row = mysqli_fetch_assoc($result);
-}
+
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
+<head>
+
     <head>
-        <head>
-            <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="description" content="A platform for skilled workers or talented people to freelance, find projects to work on, extra ways to earn income.">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <script src="https://kit.fontawesome.com/e9089fea9d.js" crossorigin="anonymous"></script>
-            <title>EZWork | Find Jobs or Freelancers</title>
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet"> 
-            <link rel="icon" href="../logo/logo.svg">
-            <link rel="stylesheet" href="../Styles/style.css">
-        </head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="A platform for skilled workers or talented people to freelance, find projects to work on, extra ways to earn income.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/e9089fea9d.js" crossorigin="anonymous"></script>
+        <title>EZWork | Find Jobs or Freelancers</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+        <link rel="icon" href="../logo/logo.svg">
+        <link rel="stylesheet" href="../Styles/style.css">
     </head>
+</head>
+
 <body>
 
     <!-- NAV BAR -->
@@ -51,11 +44,13 @@ if (mysqli_num_rows($result) > 0) {
     <div class="settings">
         <div class="settings-nav">
             <ul>
-                <li style="background: lightgrey;" id="myInfo"><div class="tab"></div><a href="#/"><i class="fa fa-user"></i> My Info</a></li>
-                <li  id="passwordSecurity"><a href="#/"><i class="fa fa-lock"></i> Password & Security</a></li>
-                <li  id="billingMethods"><a href="#/"><i class="fa fa-credit-card-alt"></i> Billing Methods</a></li>
-                <li  id="notification"><a href="#/"><i class="fa fa-envelope"></i> Notification Settings</a></li>
-                <li  id="connectedServices"><a href="#/"><i class="fa fa-link"></i> Connected Services</a></li>
+                <li style="background: lightgrey;" id="myInfo">
+                    <div class="tab"></div><a href="#/"><i class="fa fa-user"></i> My Info</a>
+                </li>
+                <li id="passwordSecurity"><a href="#/"><i class="fa fa-lock"></i> Password & Security</a></li>
+                <li id="billingMethods"><a href="#/"><i class="fa fa-credit-card-alt"></i> Billing Methods</a></li>
+                <li id="notification"><a href="#/"><i class="fa fa-envelope"></i> Notification Settings</a></li>
+                <li id="connectedServices"><a href="#/"><i class="fa fa-link"></i> Connected Services</a></li>
             </ul>
         </div>
         <div class="settings-container">
@@ -71,25 +66,23 @@ if (mysqli_num_rows($result) > 0) {
                     <img src="../Users/user.svg" alt="">
                 </div>
                 <div class="settings-account-profile-info">
-                    <?php
-                        if ($dataFound) {
-                    ?>
-                    <p>UserName: <span id="settingsName"><?php echo $_SESSION['userid']; ?></span></p>
-                    <p>Account Type: <span>Client</span></p>
+                    <p>UserName: <span id="settingsName"><?php echo $_row['username']; ?></span></p>
+                    <p>Account Type: <span><?php if ($row['freelancer_id'] != NULL) {
+                                                echo "Client";
+                                            } else {
+                                                echo "Freelancer";
+                                            } ?></span></p>
                     <p>Phone Number: <span id="settingsPhone"><?php echo $row['phone']; ?></span></p>
                     <p>Email: <span id="settingsEmail"><?php echo $row['email']; ?></span></p>
-                    <?php
-                    } else {
-                    ?>
-                        <span>Error retrieving data.</span>
-                    <?php
-                    }
-                    ?>
                 </div>
             </div>
             <div class="settings-account-godMode">
-                <p>This is a <span id="accountType">Client</span> account.</p>
-                <button id="becomeFreelancer">Become Freelancer</button>
+                <?php if ($row['freelancer_id'] != NULL) {
+                ?>
+                    <p>This is a <span id="accountType">Client</span> account.</p>
+                    <button id="becomeFreelancer">Become Freelancer</button>
+                <?php
+                } ?>
                 <button id="deleteAccount" onclick="openCard()">Delete Account</button>
             </div>
         </div>
@@ -172,7 +165,7 @@ if (mysqli_num_rows($result) > 0) {
         </div>
         <div id="myOverlay" class="overlay">
             <span class="closebtn" onclick="closeCard()" title="Close Overlay">×</span>
-            <form id="editForm" >
+            <form id="editForm">
                 <label for="password">Confirm Password</label>
                 <input type="password" name="password" id="password" required placeholder="Confirm your password">
                 <input type="button" id="continueBtn" value="Continue">
@@ -184,7 +177,7 @@ if (mysqli_num_rows($result) > 0) {
     <?php include '../footer.php'; ?>
     <!-- END NAVBAR -->
 
-                   
+
     <!--DataList-->
     <datalist id="allskills"></datalist>
 </body>
@@ -196,73 +189,72 @@ if (mysqli_num_rows($result) > 0) {
     var project = document.querySelector('.projectCard');
     var help = document.querySelector('.helpCard');
     var session = document.querySelector('.sessionCard');
-    function toggleJob(){
+
+    function toggleJob() {
         var job = document.querySelector('.jobCard');
-        if(job.style.display === 'none'){
+        if (job.style.display === 'none') {
             job.style.display = 'inline-block';
             talent.style.display = 'none';
             project.style.display = 'none';
             help.style.display = 'none';
             session.style.display = 'none';
-        }
-        else{
-            job.style.display='none';
-            
+        } else {
+            job.style.display = 'none';
+
         }
     }
-    function toggleTalent(){
+
+    function toggleTalent() {
         var talent = document.querySelector('.talentCard');
-        if(talent.style.display==='none'){
+        if (talent.style.display === 'none') {
             talent.style.display = 'inline-block';
             job.style.display = 'none';
             project.style.display = 'none';
             help.style.display = 'none';
             session.style.display = 'none';
-        }
-        else{
+        } else {
             talent.style.display = 'none';
         }
     }
-    function toggleProject(){
+
+    function toggleProject() {
         var project = document.querySelector('.projectCard');
-        if(project.style.display==='none'){
+        if (project.style.display === 'none') {
             project.style.display = 'inline-block';
             talent.style.display = 'none';
             job.style.display = 'none';
             help.style.display = 'none';
             session.style.display = 'none';
-        }
-        else{
+        } else {
             project.style.display = 'none';
         }
     }
-    function toggleHelp(){
+
+    function toggleHelp() {
         var help = document.querySelector('.helpCard');
-        if(help.style.display==='none'){
+        if (help.style.display === 'none') {
             help.style.display = 'inline-block';
             talent.style.display = 'none';
             project.style.display = 'none';
             job.style.display = 'none';
             session.style.display = 'none';
-        }
-        else{
+        } else {
             help.style.display = 'none';
         }
     }
-    function toggleSession(){
-       
-        if(session.style.display==='none'){
+
+    function toggleSession() {
+
+        if (session.style.display === 'none') {
             session.style.display = 'inline-block';
             talent.style.display = 'none';
             project.style.display = 'none';
             help.style.display = 'none';
             job.style.display = 'none';
-        }
-        else{
+        } else {
             session.style.display = 'none';
         }
     }
-
 </script>
 <!--Toggle the nav burger button-->
 <script>
@@ -271,31 +263,31 @@ if (mysqli_num_rows($result) > 0) {
 
     function myFunction(x) {
         x.classList.toggle("change");
-        if(x.classList.contains('change')){
+        if (x.classList.contains('change')) {
             profileMobileNav.style.display = "inline-block";
-            searchIcon.style.opacity='0';
-        }
-        else{
-            profileMobileNav.style.display='none';
-            searchIcon.style.opacity='1';
+            searchIcon.style.opacity = '0';
+        } else {
+            profileMobileNav.style.display = 'none';
+            searchIcon.style.opacity = '1';
         }
     }
 </script>
 <script>
     function openCard() {
-      document.getElementById("myOverlay").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
     }
-    
+
     function closeCard() {
-      document.getElementById("myOverlay").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
     }
 </script>
 <script>
     function guidGenerator() {
-    var S4 = function() {
-       return (((1+Math.random())*0x10000)|0).toString(16).substring(1);
-    };
-    console.log((S4()+S4()+"-"+S4()+S4()));
-}
+        var S4 = function() {
+            return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
+        };
+        console.log((S4() + S4() + "-" + S4() + S4()));
+    }
 </script>
+
 </html>

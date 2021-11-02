@@ -66,7 +66,7 @@ if (isset($_SESSION["userid"])) {
             </div>
             <div class="help-container">
                 <h3><span>______________</span> Forgot Password? <span>______________</span></h3>
-                <a href="../forgot-password"><button>*NEW* Reset Password</button></a>
+                <a href="../forgot-password"><button><span style="color: green;">*NEW*</span> Reset Password</button></a>
             </div>
             <div class="register">
                 <div class="register-container">
