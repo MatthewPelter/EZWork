@@ -55,9 +55,9 @@ if (isset($_GET['token'])) {
                         //Content
 
                         $subject = 'Password was Reset!';
-                        $body = "
-                        
-                        ";
+                        ob_start();
+                        include 'changedPassEmail.phtml';
+                        $body = ob_get_clean();
 
                         $mail->isHTML(true);                                  //Set email format to HTML
                         $mail->Subject = $subject;
