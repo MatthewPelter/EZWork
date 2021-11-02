@@ -3,6 +3,7 @@ session_start();
 require_once("../classes/DB.php");
 //include('../classes/Mail.php');
 
+echo "Call received";
 
 function securityscan($data)
 {
