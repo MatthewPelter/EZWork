@@ -194,21 +194,19 @@ $row = mysqli_fetch_assoc($result);
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
     // Change password handler
-    var currentP = document.getElementById('currentPassword').val();
-    var newP = document.getElementById('password').val();
-    var newP2 = document.getElementById('password2').val();
-    var submitBtn = document.getElementById('changePassBTN');
+    var currentP = $("#currentPassword").val();
+    var newP = $("#password").val();
+    var newP2 = $("#password2").val();
 
-
-    $(submitBtn).click(function() {
+    $("#changePassBTN").click(function() {
         $.post("../components/settings-change-password.php", {
                 username: <?php echo $_SESSION['userid']; ?>,
                 currentPassword: currentP,
                 password: newP,
                 password2: newP2
             },
-            function(res) {
-                alert("Data: " + res);
+            function(data) {
+                alert("Data: " + data);
             });
     });
 
