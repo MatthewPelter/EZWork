@@ -2,6 +2,13 @@
 session_start();
 require_once("./classes/DB.php");
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+//Load Composer's autoloader
+require 'vendor/autoload.php';
+
 function securityscan($data)
 {
     $data = trim($data);
@@ -28,6 +35,41 @@ if (isset($_GET['token'])) {
                 $changePassQuery = mysqli_query($conn, "UPDATE clients SET password='$passwordHash' WHERE id=$user_id");
                 if ($changePassQuery) {
                     $_SESSION['success'] = "Password Changed Successfully, You can now log in!";
+
+                    //Create an instance; passing `true` enables exceptions
+                    $mail = new PHPMailer(true);
+
+                    try {
+                        //Server settings
+                        $mail->isSMTP();                                            //Send using SMTP
+                        $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+                        $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+                        $mail->Username   = 'ezworkcompany@gmail.com';                     //SMTP username
+                        $mail->Password   = 'NgQqKS4LQb&y';                               //SMTP password
+                        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+                        $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+
+                        //Recipients
+                        $mail->setFrom('ezworkcompany@gmail.com', 'EZ-Work');
+                        $mail->addAddress($email);     //Add a recipient
+                        //Content
+
+                        $subject = 'Password was Reset!';
+                        $body = "
+                        
+                        ";
+
+                        $mail->isHTML(true);                                  //Set email format to HTML
+                        $mail->Subject = $subject;
+                        $mail->Body = $body;
+
+                        $mail->send();
+                        echo 'Message has been sent';
+                    } catch (Exception $e) {
+                        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+                    }
+
+
                     header("Location: ./login/index");
                     exit();
                 } else {
