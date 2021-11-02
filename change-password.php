@@ -34,8 +34,6 @@ if (isset($_GET['token'])) {
                 $passwordHash = password_hash($pass, PASSWORD_BCRYPT);
                 $changePassQuery = mysqli_query($conn, "UPDATE clients SET password='$passwordHash' WHERE id=$user_id");
                 if ($changePassQuery) {
-                    $_SESSION['success'] = "Password Changed Successfully, You can now log in!";
-
                     //Create an instance; passing `true` enables exceptions
                     $mail = new PHPMailer(true);
 
@@ -69,7 +67,7 @@ if (isset($_GET['token'])) {
                         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
                     }
 
-
+                    $_SESSION['success'] = "Password Changed Successfully, You can now log in!";
                     header("Location: ./login/index");
                     exit();
                 } else {

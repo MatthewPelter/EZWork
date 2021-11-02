@@ -51,11 +51,13 @@ if (isset($_SESSION["userid"])) {
                     <input type="email" name="email" id="email" placeholder="Email" required>
                     <span style="color: red;font-size: 0.9rem;" id="emailError"></span>
                     <input type="password" name="password" id="password" placeholder="Password" required>
-                    <span style="color: red;font-size: 0.9rem;" id="passwordError"> <?php if (isset($_GET['error'])) {
-                                                                                        echo "Username or Password is incorrect! Try again...";
+                    <span style="color: red;font-size: 0.9rem;" id="passwordError"> <?php if (isset($_SESSION['error'])) {
+                                                                                        echo $_SESSION['error'];
+                                                                                        unset($_SESSION['error']);
                                                                                     }  ?></span>
-                    <span style="color: green;font-size: 0.9rem;" id="passwordError"> <?php if (isset($_GET['success'])) {
+                    <span style="color: green;font-size: 0.9rem;" id="passwordError"> <?php if (isset($_SESSION['success'])) {
                                                                                             echo $_SESSION['success'];
+                                                                                            unset($_SESSION['success']);
                                                                                         }  ?></span>
                     <p id="show">Show Password</p>
                     <input type="submit" value="Log In" name="submit" id="submit">

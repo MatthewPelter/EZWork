@@ -23,7 +23,9 @@ if (isset($_POST['submit'])) {
 			$_SESSION['user_id'] = $data['id'];
 			header("Location: ../ClientProfile/index");
 		} else {
-			header("Location: ../login/index?error=1");
+			$_SESSION['error'] = "Username or Password is incorrect! Try again...";
+			header("Location: ../login/index");
+			exit();
 		}
 	} else {
 		echo "Please fill in the data";
