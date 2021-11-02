@@ -1,6 +1,6 @@
 <?php
 require_once("./classes/DB.php");
-include './classes/Mail.php';
+include('./classes/Mail.php');
 
 function securityscan($data)
 {
@@ -12,7 +12,7 @@ function securityscan($data)
 }
 
 if (isset($_POST['resetpassword'])) {
-    $cstrong = True;
+    $cstrong = true;
     $token = bin2hex(openssl_random_pseudo_bytes(64, $cstrong));
     $email = securityscan($_POST['email']);
     $result = mysqli_query($conn, "SELECT id FROM clients WHERE email='$email'");
@@ -30,11 +30,6 @@ if (isset($_POST['resetpassword'])) {
     } else {
         echo 'If email is registered, you will receive a reset password email! (Might be in spam folder!!!!)';
     }
-
-
-
-
-    //header("Location: ./login/index");
 }
 ?>
 <!DOCTYPE html>
