@@ -3,8 +3,6 @@ session_start();
 require_once("../classes/DB.php");
 include '../classes/Mail.php';
 
-echo "Call received";
-
 function securityscan($data)
 {
     $data = trim($data);
@@ -36,7 +34,7 @@ if (isset($_POST['currentPassword']) && isset($_POST['password']) && isset($_POS
                     include '../changedPassEmail.phtml';
                     $body = ob_get_clean();
                     $email = $row['email'];
-                    //Mail::sendMail($subject, $body, $email);
+                    Mail::sendMail($subject, $body, $email);
                     echo "Password has been reset successfully!";
                 } else {
                     echo "Query Broke...";

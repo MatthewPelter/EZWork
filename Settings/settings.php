@@ -105,7 +105,7 @@ $row = mysqli_fetch_assoc($result);
                         <input type="password" id="currentPassword" name="currentPassword" minlength="8" placeholder="Current Password" required><br />
                         <input type="password" id="password" name="password" minlength="8" placeholder="New Password" required><br />
                         <input type="password" id="password2" name="password2" minlength="8" placeholder="Match New Password" required><br />
-                        <span id="result"></span>
+                        <span id="result"></span><br />
                         <input id="changePassBTN" type="submit" name="changepassword" value="Change Password">
                     </form>
                 </div>
@@ -197,7 +197,6 @@ $row = mysqli_fetch_assoc($result);
     // Change password handler
     $("#changePassBTN").click(function() {
         $.ajax({
-
             url: "../components/settings-change-password.php",
             data: {
                 currentPassword: $("#currentPassword").val(),
