@@ -273,8 +273,8 @@ if (isset($_GET['token'])) {
             <div class="textBox">
                 <h1>Change Your Password</h1>
                 <form action="change-password.php?token=<?php echo $token; ?>" method="post">
-                    <input type="password" id="password" name="password" minlength="8" value="" placeholder="Password">
-                    <input type="password" id="password2" name="password2" value="" minlength="8" placeholder="Match Password">
+                    <input type="password" id="password" name="password" minlength="8" value="" placeholder="Password" required>
+                    <input type="password" id="password2" name="password2" value="" minlength="8" placeholder="Match Password" required>
                     <span id="error"><?php if (isset($_SESSION['changeError'])) {
                                             echo $_SESSION['changeError'];
                                             unset($_SESSION['changeError']);

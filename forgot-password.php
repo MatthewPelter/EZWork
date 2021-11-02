@@ -259,7 +259,7 @@ if (isset($_POST['resetpassword'])) {
                 <h1>forgot your password?</h1>
                 <h2>just enter your email..</h2>
                 <form action="forgot-password.php" method="post">
-                    <input type="text" name="email" value="" placeholder="Email ...">
+                    <input type="text" name="email" value="" placeholder="Email ..." required>
                     <input type="submit" name="resetpassword" value="Reset Password">
                 </form>
 

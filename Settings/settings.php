@@ -101,9 +101,9 @@ $row = mysqli_fetch_assoc($result);
                     <p>Use this section to view and edit your current password.</p>
                     <h4>Change your password:</h4>
                     <form action="javascript:void(0);" method="post">
-                        <input type="password" id="currentPassword" name="currentPassword" minlength="8" value="" placeholder="Current Password"><br />
-                        <input type="password" id="password" name="password" minlength="8" value="" placeholder="New Password"><br />
-                        <input type="password" id="password2" name="password2" value="" minlength="8" placeholder="Match New Password"><br />
+                        <input type="password" id="currentPassword" name="currentPassword" minlength="8" value="" placeholder="Current Password" required><br />
+                        <input type="password" id="password" name="password" minlength="8" value="" placeholder="New Password" required><br />
+                        <input type="password" id="password2" name="password2" value="" minlength="8" placeholder="Match New Password" required><br />
                         <span id="result"></span>
                         <input id="changePassBTN" type="submit" name="changepassword" value="Change Password">
                     </form>
