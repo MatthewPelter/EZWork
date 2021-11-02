@@ -186,10 +186,9 @@
             </g>
         </svg>
         <h1>page under construction</h1>
-        <p>I'm working on this now.</p>
+        <p>We're working on this now.</p>
         <p id="both">Help me to color it ! :)</p>
         <button class="button">Help!</button>
-
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
