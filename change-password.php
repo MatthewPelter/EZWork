@@ -47,6 +47,11 @@ if (isset($_GET['token'])) {
                         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
                         $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
+                        $getEmailSQL = "SELECT email FROM clients WHERE id='$user_id'";
+                        $getEmailResult = mysqli_query($conn, $getEmailSQL);
+                        $fetchRow = mysqli_fetch_assoc($getEmailResult);
+                        $email = $fetchRow['email'];
+
                         //Recipients
                         $mail->setFrom('ezworkcompany@gmail.com', 'EZ-Work');
                         $mail->addAddress($email);     //Add a recipient
