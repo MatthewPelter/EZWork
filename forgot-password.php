@@ -1,12 +1,6 @@
 <?php
 require_once("./classes/DB.php");
-
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
-
-//Load Composer's autoloader
-require 'vendor/autoload.php';
+include './classes/Mail.php';
 
 function securityscan($data)
 {
@@ -26,48 +20,13 @@ if (isset($_POST['resetpassword'])) {
         $user_id = mysqli_fetch_assoc($result);
         $sql = "INSERT INTO password_tokens(token, user_id) VALUES ('" . sha1($token) . "', '" . $user_id['id'] . "')";
         $setToken = mysqli_query($conn, $sql);
-        //Create an instance; passing `true` enables exceptions
-        $mail = new PHPMailer(true);
 
-        try {
-            //Server settings
-            $mail->isSMTP();                                            //Send using SMTP
-            $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
-            $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-            $mail->Username   = 'ezworkcompany@gmail.com';                     //SMTP username
-            $mail->Password   = 'NgQqKS4LQb&y';                               //SMTP password
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-            $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+        $subject = 'Forgot Password!';
+        ob_start();
+        include 'forgotEmail.phtml';
+        $body = ob_get_clean();
 
-            //Recipients
-            $mail->setFrom('ezworkcompany@gmail.com', 'EZ-Work');
-            $mail->addAddress($email);     //Add a recipient
-            //Content
-
-            $subject = 'Forgot Password!';
-
-            ob_start();
-            include 'forgotEmail.phtml';
-            $body = ob_get_clean();
-
-            /*$body = "Hi [name],<br />
-
-        There was a request to change your password!<br />
-        
-        If you did not make this request then please ignore this email.<br />
-        
-        Otherwise, please click this link to change your password: <a href='https://ez-work.herokuapp.com/change-password.php?token=$token'>https://ez-work.herokuapp.com/change-password.php?token=$token</a>";*/
-
-
-            $mail->isHTML(true);                                  //Set email format to HTML
-            $mail->Subject = $subject;
-            $mail->Body = $body;
-
-            $mail->send();
-            echo 'If email is registered, you will receive a reset password email! (Might be in spam folder!!!!)';
-        } catch (Exception $e) {
-            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-        }
+        Mail::sendMail($subject, $body, $email);
     } else {
         echo 'If email is registered, you will receive a reset password email! (Might be in spam folder!!!!)';
     }

@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once("../classes/DB.php");
+include './classes/Mail.php';
 
 if (isset($_POST['currentPassword']) && isset($_POST['password']) && isset($_POST['password2'])) {
     $username = $_SESSION['userid'];
@@ -19,6 +20,12 @@ if (isset($_POST['currentPassword']) && isset($_POST['password']) && isset($_POS
                 $passwordNew = password_hash($passwordNew, PASSWORD_BCRYPT);
                 mysqli_query($conn, "UPDATE clients SET password = '$passwordNew'");
                 echo "Password has been reset successfully!";
+
+                $subject = 'Password was Reset!';
+                ob_start();
+                include 'changedPassEmail.phtml';
+                $body = ob_get_clean();
+                Mail::sendMail($subject, $body, $row['email']);
             } else {
                 echo "Passwords do not match! Try again";
             }
