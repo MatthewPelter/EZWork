@@ -203,7 +203,6 @@ $row = mysqli_fetch_assoc($result);
         jQuery.ajax({
             url: "../components/settings-change-password.php",
             data: {
-                username: <?php echo $_SESSION['userid']; ?>,
                 currentPassword: currentP,
                 password: newP,
                 password2: newP2
@@ -212,7 +211,9 @@ $row = mysqli_fetch_assoc($result);
             success: function(data) {
                 $("#result").html(data);
             },
-            error: function() {}
+            error: function(data) {
+                $("#result").html(data);
+            }
         });
     });
 

@@ -1,10 +1,11 @@
 <?php
+session_start();
 require_once("../classes/DB.php");
 
 echo "IT IS WORKING";
 
-if (!empty($_POST['username']) && !empty($_POST['currentPassword']) && !empty($_POST['password']) && !empty($_POST['password2'])) {
-    $username = $_POST['username'];
+if (!empty($_POST['currentPassword']) && !empty($_POST['password']) && !empty($_POST['password2'])) {
+    $username = $_SESSION['userid'];
     $password = $_POST['currentPassword'];
     $passwordNew = $_POST['password'];
     $passwordNew2 = $_POST['password2'];
