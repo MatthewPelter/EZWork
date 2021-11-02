@@ -66,7 +66,7 @@ $row = mysqli_fetch_assoc($result);
                     <img src="../Users/user.svg" alt="">
                 </div>
                 <div class="settings-account-profile-info">
-                    <p>UserName: <span id="settingsName"><?php echo $_row['username']; ?></span></p>
+                    <p>UserName: <span id="settingsName"><?php echo $row['username']; ?></span></p>
                     <p>Account Type: <span><?php if ($row['freelancer_id'] == NULL) {
                                                 echo "Client";
                                             } else {
@@ -199,15 +199,20 @@ $row = mysqli_fetch_assoc($result);
     var newP2 = $("#password2").val();
 
     $("#changePassBTN").click(function() {
-        $.post("../components/settings-change-password.php", {
+        jQuery.ajax({
+            url: "../components/settings-change-password.php",
+            data: {
                 username: <?php echo $_SESSION['userid']; ?>,
                 currentPassword: currentP,
                 password: newP,
                 password2: newP2
             },
-            function(data) {
-                alert("Data: " + data);
-            });
+            type: "POST",
+            success: function(data) {
+                $("#result").html(data);
+            },
+            error: function() {}
+        });
     });
 
 
