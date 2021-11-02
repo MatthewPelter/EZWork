@@ -101,14 +101,11 @@ $row = mysqli_fetch_assoc($result);
                     <p>Use this section to view and edit your current password.</p>
                     <h4>Change your password:</h4>
                     <form action="settings.php" method="post">
-                        <input type="password" id="currentPassword" name="currentPassword" minlength="8" value="" placeholder="Current Password">
-                        <input type="password" id="password" name="password" minlength="8" value="" placeholder="New Password">
-                        <input type="password" id="password2" name="password2" value="" minlength="8" placeholder="Match New Password">
-                        <span id="error"><?php if (isset($_SESSION['changePassError'])) {
-                                                echo $_SESSION['changePassError'];
-                                                unset($_SESSION['changePassError']);
-                                            } ?></span>
-                        <input type="submit" name="changepassword" value="Change Password">
+                        <input type="password" id="currentPassword" name="currentPassword" minlength="8" value="" placeholder="Current Password"><br />
+                        <input type="password" id="password" name="password" minlength="8" value="" placeholder="New Password"><br />
+                        <input type="password" id="password2" name="password2" value="" minlength="8" placeholder="Match New Password"><br />
+                        <span id="result"></span>
+                        <input id="changePassBTN" type="submit" name="changepassword" value="Change Password">
                     </form>
                 </div>
             </div>
@@ -194,7 +191,33 @@ $row = mysqli_fetch_assoc($result);
 </body>
 <script src="./settings.js"></script>
 <script src="../SkillsContainer/searchProfile.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
+    // Change password handler
+    var currentP = document.getElementById('currentPassword').val();
+    var newP = document.getElementById('password').val();
+    var newP2 = document.getElementById('password2').val();
+    var submitBtn = document.getElementById('changePassBTN');
+
+
+    $(submitBtn).click(function() {
+        $.post("../components/settings-change-password.php", {
+                username: <?php echo $_SESSION['userid']; ?>,
+                currentPassword: currentP,
+                password: newP,
+                password2: newP2
+            },
+            function(res) {
+                alert("Data: " + res);
+            });
+    });
+
+
+
+
+
+
+
     var job = document.querySelector('.jobCard');
     var talent = document.querySelector('.talentCard');
     var project = document.querySelector('.projectCard');
