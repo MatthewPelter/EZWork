@@ -13,7 +13,7 @@ function securityscan($data)
 }
 
 if (isset($_POST['currentPassword']) && isset($_POST['password']) && isset($_POST['password2'])) {
-    $username = $_SESSION['userid'];
+    $user_id = $_SESSION['user_id'];
     $password = securityscan($_POST['currentPassword']);
     $passwordNew = securityscan($_POST['password']);
     $passwordNew2 = securityscan($_POST['password2']);
@@ -21,7 +21,7 @@ if (isset($_POST['currentPassword']) && isset($_POST['password']) && isset($_POS
     if (empty($password) || empty($passwordNew) || empty($passwordNew2)) {
         echo "Required Fields are Empty...";
     } else {
-        $query = "SELECT * FROM clients WHERE username='$username'";
+        $query = "SELECT * FROM clients WHERE id='$user_id'";
         $result = mysqli_query($conn, $query);
         $row = mysqli_fetch_assoc($result);
         if (password_verify($password, $row['password'])) {
