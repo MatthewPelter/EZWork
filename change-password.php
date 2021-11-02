@@ -67,13 +67,14 @@ if (isset($_GET['token'])) {
                         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
                     }
 
+                    mysqli_query($conn, "DELETE FROM password_tokens WHERE user_id='$user_id'");
+
                     $_SESSION['success'] = "Password Changed Successfully, You can now log in!";
                     header("Location: ./login/index");
                     exit();
                 } else {
                     echo "Error: " . mysqli_errno($conn);
                 }
-                mysqli_query($conn, "DELETE FROM password_tokens WHERE user_id='$user_id'");
             } else {
                 $_SESSION['changeError'] = "Passwords do not match";
                 header("Location: change-password?token=$token");
