@@ -54,6 +54,9 @@ if (isset($_SESSION["userid"])) {
                     <span style="color: red;font-size: 0.9rem;" id="passwordError"> <?php if (isset($_GET['error'])) {
                                                                                         echo "Username or Password is incorrect! Try again...";
                                                                                     }  ?></span>
+                    <span style="color: green;font-size: 0.9rem;" id="passwordError"> <?php if (isset($_GET['success'])) {
+                                                                                            echo $_SESSION['success'];
+                                                                                        }  ?></span>
                     <p id="show">Show Password</p>
                     <input type="submit" value="Log In" name="submit" id="submit">
                 </form>
