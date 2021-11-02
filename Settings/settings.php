@@ -101,9 +101,9 @@ $row = mysqli_fetch_assoc($result);
                     <p>Use this section to view and edit your current password.</p>
                     <h4>Change your password:</h4>
                     <form action="javascript:void(0);" method="post">
-                        <input type="password" id="currentPassword" name="currentPassword" minlength="8" value="" placeholder="Current Password" required><br />
-                        <input type="password" id="password" name="password" minlength="8" value="" placeholder="New Password" required><br />
-                        <input type="password" id="password2" name="password2" value="" minlength="8" placeholder="Match New Password" required><br />
+                        <input type="password" id="currentPassword" name="currentPassword" minlength="8" placeholder="Current Password" required><br />
+                        <input type="password" id="password" name="password" minlength="8" placeholder="New Password" required><br />
+                        <input type="password" id="password2" name="password2" minlength="8" placeholder="Match New Password" required><br />
                         <span id="result"></span>
                         <input id="changePassBTN" type="submit" name="changepassword" value="Change Password">
                     </form>
@@ -194,17 +194,13 @@ $row = mysqli_fetch_assoc($result);
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
     // Change password handler
-    var currentP = $("#currentPassword").val();
-    var newP = $("#password").val();
-    var newP2 = $("#password2").val();
-
     $("#changePassBTN").click(function() {
         $.ajax({
             url: "../components/settings-change-password.php",
             data: {
-                currentPassword: currentP,
-                password: newP,
-                password2: newP2
+                currentPassword: $("#currentPassword").val(),
+                password: $("#password").val(),
+                password2: $("#password2").val()
             },
             type: "POST",
             success: function(data) {

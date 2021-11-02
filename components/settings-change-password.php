@@ -17,7 +17,7 @@ if (isset($_POST['currentPassword']) && isset($_POST['password']) && isset($_POS
     $passwordNew = securityscan($_POST['password']);
     $passwordNew2 = securityscan($_POST['password2']);
 
-    if ($_POST['currentPassword'] == "" || $_POST['currentPassword'] == "" || $_POST['password2'] == "") {
+    if (empty($password) || empty($passwordNew) || empty($passwordNew2)) {
         echo "Required Fields are Empty...";
     } else {
         $query = "SELECT * FROM clients WHERE username='$username'";
