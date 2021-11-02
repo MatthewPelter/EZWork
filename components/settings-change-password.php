@@ -1,6 +1,7 @@
 <?php
 require_once("../classes/DB.php");
 
+echo "IT IS WORKING";
 
 if (!empty($_POST['username']) && !empty($_POST['currentPassword']) && !empty($_POST['password']) && !empty($_POST['password2'])) {
     $username = $_POST['username'];
@@ -21,4 +22,6 @@ if (!empty($_POST['username']) && !empty($_POST['currentPassword']) && !empty($_
     } else {
         echo "Password is incorrect!";
     }
+} else {
+    echo "Error";
 }

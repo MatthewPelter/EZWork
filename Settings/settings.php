@@ -213,9 +213,6 @@ $row = mysqli_fetch_assoc($result);
 
 
 
-
-
-
     var job = document.querySelector('.jobCard');
     var talent = document.querySelector('.talentCard');
     var project = document.querySelector('.projectCard');
