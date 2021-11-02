@@ -26,7 +26,8 @@ if (isset($_POST['currentPassword']) && isset($_POST['password']) && isset($_POS
         if (password_verify($password, $row['password'])) {
             if ($passwordNew == $passwordNew2) {
                 $passwordNew = password_hash($passwordNew, PASSWORD_BCRYPT);
-                mysqli_query($conn, "UPDATE clients SET password = '$passwordNew'");
+                $userid = $row['id'];
+                mysqli_query($conn, "UPDATE clients SET password = '$passwordNew' WHERE id='$userid'");
                 echo "Password has been reset successfully!";
 
                 $subject = 'Password was Reset!';
