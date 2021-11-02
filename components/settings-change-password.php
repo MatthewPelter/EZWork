@@ -20,7 +20,7 @@ if (isset($_POST['currentPassword']) && isset($_POST['password']) && isset($_POS
     if (empty($password) || empty($passwordNew) || empty($passwordNew2)) {
         echo "Required Fields are Empty...";
     } else {
-        $query = "SELECT password FROM clients WHERE id='$user_id'";
+        $query = "SELECT email, password FROM clients WHERE id='$user_id'";
         $result = mysqli_query($conn, $query);
         $row = mysqli_fetch_assoc($result);
         if (password_verify($password, $row['password'])) {
