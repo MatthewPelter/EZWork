@@ -144,10 +144,6 @@
 </head>
 
 <body>
-    <div class="absolute">
-        <p><a href="https://codepen.io/tommypolly/full/qOmVNg/">FULL SCREEN</a> or <a href="#both">SCROLL</a></p>
-        <p>for best view</p>
-    </div>
 
     <div class="warning-content">
 
@@ -189,8 +185,8 @@
                 </g>
             </g>
         </svg>
-        <h1>site under construction</h1>
-        <p>I'm working to put online asap my new site.</p>
+        <h1>page under construction</h1>
+        <p>I'm working on this now.</p>
         <p id="both">Help me to color it ! :)</p>
         <button class="button">Help!</button>
 
