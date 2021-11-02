@@ -196,7 +196,6 @@ $row = mysqli_fetch_assoc($result);
 <script>
     // Change password handler
     $("#changePassBTN").click(function() {
-        $("#result").html("it works");
         $.ajax({
 
             url: "../components/settings-change-password.php",
