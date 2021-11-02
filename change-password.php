@@ -57,6 +57,8 @@ if (isset($_GET['token'])) {
     } else {
         die("Token has expired...");
     }
+} else {
+    die("Missing Token...");
 }
 
 ?>

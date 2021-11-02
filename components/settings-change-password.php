@@ -35,7 +35,7 @@ if (isset($_POST['currentPassword']) && isset($_POST['password']) && isset($_POS
                 ob_start();
                 include '../changedPassEmail.phtml';
                 $body = ob_get_clean();
-                //Mail::sendMail($subject, $body, $row['email']);
+                Mail::sendMail($subject, $body, $row['email']);
             } else {
                 echo "Passwords do not match! Try again";
             }
