@@ -21,22 +21,25 @@ if (isset($_POST['currentPassword']) && isset($_POST['password']) && isset($_POS
     if (empty($password) || empty($passwordNew) || empty($passwordNew2)) {
         echo "Required Fields are Empty...";
     } else {
-        $query = "SELECT * FROM clients WHERE id='$user_id'";
+        $query = "SELECT password FROM clients WHERE id='$user_id'";
         $result = mysqli_query($conn, $query);
         $row = mysqli_fetch_assoc($result);
         if (password_verify($password, $row['password'])) {
             if ($passwordNew == $passwordNew2) {
-                $passwordNew = password_hash($passwordNew, PASSWORD_BCRYPT);
-                $userid = $row['id'];
-                mysqli_query($conn, "UPDATE clients SET password = '$passwordNew' WHERE id='$userid'");
+                $passwordNewHash = password_hash($passwordNew, PASSWORD_BCRYPT);
 
-                $subject = 'Password was Reset!';
-                ob_start();
-                include '../changedPassEmail.phtml';
-                $body = ob_get_clean();
-                $email = $row['email'];
-                //Mail::sendMail($subject, $body, $email);
-                echo "Password has been reset successfully!";
+                $changePass = mysqli_query($conn, "UPDATE clients SET password='$passwordNewHash' WHERE id='$user_id'") or die(mysqli_errno($conn));
+                if ($changePass) {
+                    $subject = 'Password was Reset!';
+                    ob_start();
+                    include '../changedPassEmail.phtml';
+                    $body = ob_get_clean();
+                    $email = $row['email'];
+                    Mail::sendMail($subject, $body, $email);
+                    echo "Password has been reset successfully!";
+                } else {
+                    echo "Query Broke...";
+                }
             } else {
                 echo "Passwords do not match! Try again";
             }
