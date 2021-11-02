@@ -123,7 +123,7 @@
                     <div class="card card1" onclick="location.href='../myjobs.php'">
                         <h4>My Jobs</h4>
                     </div>
-                    <div class="card card2"  onclick="location.href='../PostAJob/newPostJob/jobs'">
+                    <div class="card card2" onclick="location.href='../PostAJob/newPostJob/jobs'">
                         <h4>All Job Posts</h4>
                     </div>
                     <div class="card card3">
@@ -196,7 +196,7 @@
                             <span id="type">Client</span>
                         </div>
                     </div>
-                    <div class="card card2" onclick="location.href='../Settings/settings.php'">
+                    <div class="card card2" onclick="location.href='../Settings/settings'">
                         <p>
                             <i class="fa fa-cog" aria-hidden="true"></i> Settings
                         </p>
