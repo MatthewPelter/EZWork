@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '606258caa53ad25570fab5d121bcd041a1ee3577',
+        'reference' => '0b410a1a8f00525bae922bc8fc38772f6e0d332e',
         'name' => 'composer/composer',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '606258caa53ad25570fab5d121bcd041a1ee3577',
+            'reference' => '0b410a1a8f00525bae922bc8fc38772f6e0d332e',
             'dev_requirement' => false,
         ),
         'phpmailer/phpmailer' => array(
