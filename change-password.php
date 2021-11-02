@@ -87,7 +87,7 @@ if (isset($_GET['token'])) {
             }
         }
     } else {
-        die("Token does not exists...");
+        die("Token has expired...");
     }
 }
 

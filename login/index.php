@@ -39,6 +39,7 @@ if (isset($_SESSION["userid"])) {
             <div class="logo">
                 <a href="../index">
                     <h3><span>E</span>z<span>Work</span></h3>
+                    <span>Check out the now working Reset Password page!</span>
                 </a>
             </div>
         </div>

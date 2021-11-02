@@ -64,12 +64,12 @@ if (isset($_POST['resetpassword'])) {
             $mail->Body = $body;
 
             $mail->send();
-            echo 'If email is registered, you will receive a reset password email!';
+            echo 'If email is registered, you will receive a reset password email! (Might be in spam folder!!!!)';
         } catch (Exception $e) {
             echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
         }
     } else {
-        echo 'If email is registered, you will receive a reset password email!';
+        echo 'If email is registered, you will receive a reset password email! (Might be in spam folder!!!!)';
     }
 
 
