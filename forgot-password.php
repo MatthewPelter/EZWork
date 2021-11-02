@@ -22,34 +22,35 @@ if (isset($_POST['resetpassword'])) {
     $token = bin2hex(openssl_random_pseudo_bytes(64, $cstrong));
     $email = securityscan($_POST['email']);
     $result = mysqli_query($conn, "SELECT id FROM clients WHERE email='$email'");
-    $user_id = mysqli_fetch_assoc($result);
-    $sql = "INSERT INTO password_tokens(token, user_id) VALUES ('" . sha1($token) . "', '" . $user_id['id'] . "')";
-    $setToken = mysqli_query($conn, $sql);
-    //Create an instance; passing `true` enables exceptions
-    $mail = new PHPMailer(true);
+    if (mysqli_num_rows($result) > 0) {
+        $user_id = mysqli_fetch_assoc($result);
+        $sql = "INSERT INTO password_tokens(token, user_id) VALUES ('" . sha1($token) . "', '" . $user_id['id'] . "')";
+        $setToken = mysqli_query($conn, $sql);
+        //Create an instance; passing `true` enables exceptions
+        $mail = new PHPMailer(true);
 
-    try {
-        //Server settings
-        $mail->isSMTP();                                            //Send using SMTP
-        $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
-        $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-        $mail->Username   = 'ezworkcompany@gmail.com';                     //SMTP username
-        $mail->Password   = 'NgQqKS4LQb&y';                               //SMTP password
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-        $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+        try {
+            //Server settings
+            $mail->isSMTP();                                            //Send using SMTP
+            $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+            $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+            $mail->Username   = 'ezworkcompany@gmail.com';                     //SMTP username
+            $mail->Password   = 'NgQqKS4LQb&y';                               //SMTP password
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+            $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
-        //Recipients
-        $mail->setFrom('ezworkcompany@gmail.com', 'EZ-Work');
-        $mail->addAddress($email);     //Add a recipient
-        //Content
+            //Recipients
+            $mail->setFrom('ezworkcompany@gmail.com', 'EZ-Work');
+            $mail->addAddress($email);     //Add a recipient
+            //Content
 
-        $subject = 'Forgot Password!';
+            $subject = 'Forgot Password!';
 
-        ob_start();
-        include 'htmlemail.php';
-        $body = ob_get_clean();
+            ob_start();
+            include 'forgotEmail.phtml';
+            $body = ob_get_clean();
 
-        /*$body = "Hi [name],<br />
+            /*$body = "Hi [name],<br />
 
         There was a request to change your password!<br />
         
@@ -58,15 +59,20 @@ if (isset($_POST['resetpassword'])) {
         Otherwise, please click this link to change your password: <a href='https://ez-work.herokuapp.com/change-password.php?token=$token'>https://ez-work.herokuapp.com/change-password.php?token=$token</a>";*/
 
 
-        $mail->isHTML(true);                                  //Set email format to HTML
-        $mail->Subject = $subject;
-        $mail->Body = $body;
+            $mail->isHTML(true);                                  //Set email format to HTML
+            $mail->Subject = $subject;
+            $mail->Body = $body;
 
-        $mail->send();
-        echo 'Message has been sent';
-    } catch (Exception $e) {
-        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+            $mail->send();
+            echo 'If email is registered, you will receive a reset password email!';
+        } catch (Exception $e) {
+            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+        }
+    } else {
+        echo 'If email is registered, you will receive a reset password email!';
     }
+
+
 
 
     //header("Location: ./login/index");
