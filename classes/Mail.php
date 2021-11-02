@@ -3,7 +3,8 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'vendor/autoload.php';
+$root = $_SERVER['DOCUMENT_ROOT'];
+require $root . '/vendor/autoload.php';
 
 class Mail
 {
