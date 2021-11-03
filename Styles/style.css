@@ -8910,7 +8910,7 @@ ul {
 }
 
 .postJob-detail-scope .detail-scope-container .detail-input-section .scopeOptions .projectSize select, .postJob-detail-scope .detail-scope-container .detail-input-section .scopeOptions .projectLength select, .postJob-detail-scope .detail-scope-container .detail-input-section .scopeOptions .projectExperience select {
-  width: 5rem;
+  width: 8rem;
 }
 
 .postJob-detail-scope .detail-scope-container .detail-input-section .CancelOrNext {
