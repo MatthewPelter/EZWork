@@ -17223,7 +17223,6 @@ li {
 }
 
 .registerFreelancer {
-  margin-top: 4.8rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -18459,6 +18458,7 @@ li {
 }
 
 .registerFreelancer #registerForm .locationCard .location-container .location-card .city-state-zip .state {
+  display: none;
   margin-left: 1rem;
   width: 30%;
 }
