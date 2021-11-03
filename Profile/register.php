@@ -260,7 +260,9 @@ $userID = $_SESSION['user_id'];
                     </div>
                     <div class="profilePhoto-card">
                         <div class="profilePic">
-                            <input type="file" name="" id="">
+                            <img src="../Users/user.svg" alt="">
+                            <span>Click to Edit</span>
+                            <input type="file" name="" id="" placeholder="Click to Edit">
                         </div>
 
                         <div class="tips">
