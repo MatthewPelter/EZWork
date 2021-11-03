@@ -742,13 +742,10 @@ $darktext: rgb(121, 121, 121);
                     background: whitesmoke;
                     border-radius: 5px;
                     img{
-                        height: 30%;
-                        width: 30%;
+                        width: 40%;
+                        object-fit: cover;
+                        object-position: center;
                         border-radius: 50%;
-                        z-index: 1;
-                    }
-                    span{
-                        font-size: 1.1rem;
                     }
                     input{
                         opacity: 0;

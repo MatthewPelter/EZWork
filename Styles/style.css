@@ -18286,14 +18286,12 @@ li {
 }
 
 .registerFreelancer #registerForm .profilePhoto .profilePhoto-container .profilePhoto-card .profilePic img {
-  height: 30%;
-  width: 30%;
+  width: 40%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   border-radius: 50%;
-  z-index: 1;
-}
-
-.registerFreelancer #registerForm .profilePhoto .profilePhoto-container .profilePhoto-card .profilePic span {
-  font-size: 1.1rem;
 }
 
 .registerFreelancer #registerForm .profilePhoto .profilePhoto-container .profilePhoto-card .profilePic input {

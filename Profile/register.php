@@ -260,9 +260,9 @@ $userID = $_SESSION['user_id'];
                     </div>
                     <div class="profilePhoto-card">
                         <div class="profilePic">
-                            <img src="../Users/user.svg" alt="">
-                            <span>Click to Edit</span>
-                            <input type="file" name="" id="" placeholder="Click to Edit">
+                            <img id="output" alt="">
+                            <input type="file" onchange="loadFile(event)"  accept="image/gif, image/jpeg, image/png" name="" id="file">
+                            <p><label for="file" style="cursor: pointer;">Upload Image</label></p>
                         </div>
 
                         <div class="tips">
@@ -744,6 +744,14 @@ $userID = $_SESSION['user_id'];
     function closeCard() {
       document.getElementById("myOverlay").style.display = "none";
     }
+</script>
+
+<!-- FOr displaying profile pic-->
+<script>
+    var loadFile = function(event) {
+        var image = document.getElementById('output');
+        image.src = URL.createObjectURL(event.target.files[0]);
+    };
 </script>
 
 <script src="./register.js"></script>
