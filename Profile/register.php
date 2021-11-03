@@ -1,3 +1,17 @@
+<?php
+session_start();
+include '../components/session-checker.php';
+require_once("../classes/DB.php");
+
+
+// Converting the username to a userid from the user that is logged in
+$username = $_SESSION['userid'];
+//$getUserID = "SELECT id FROM clients WHERE username = '$username'";
+//$getResult = mysqli_query($conn, $getUserID);
+//$row = mysqli_fetch_assoc($getResult);
+$userID = $_SESSION['user_id'];
+
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
