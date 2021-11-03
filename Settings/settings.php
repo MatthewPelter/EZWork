@@ -82,7 +82,7 @@ $row = mysqli_fetch_assoc($result);
                 ?>
                     <p>This is a <span id="accountType">Client</span> account.</p>
 
-                    <button id="becomeFreelancer" onclick="location.href='../Profile/register.html'">Become Freelancer</button>
+                    <button id="becomeFreelancer" onclick="location.href='../Profile/register.php'">Become Freelancer</button>
                 <?php
                 } ?>
                 <button id="deleteAccount" onclick="openCard()">Delete Account</button>
