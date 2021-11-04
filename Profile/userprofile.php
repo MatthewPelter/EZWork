@@ -674,7 +674,8 @@ if (mysqli_num_rows($result) > 0) {
                 contentType: "application/json",
                 data: '{ "body": "' + $("#messagecontent").val() + '", "receiver": "<?php echo $receiver; ?>" }',
                 success: function(data) {
-                    $('#status').html(data);
+                    //$('#status').html(data);
+                    console.log(data);
                 },
                 error: function(r) {
                     console.log(r);
