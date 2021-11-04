@@ -678,22 +678,18 @@ if (mysqli_num_rows($result) > 0) {
                     var obj = JSON.parse(data);
                     //console.log(obj.success);
                     $("#messagecontent").val('');
-                    $('#status').html(obj.Success);
+                    if (data.Success.length > 0) {
+                        $('#status').html(obj.Success);
+                    } else if (data.Error.length > 0) {
+                        $('#status').html(obj.Error);
+                    }
+
                 },
                 error: function(r) {
-                    var obj = JSON.parse(data);
-                    //console.log(obj.success);
-                    $('#status').html(obj.Error);
+                    console.log(r);
                 }
             });
         });
-
-
-
-
-
-
-
 
         var job = document.querySelector('.jobCard');
         var talent = document.querySelector('.talentCard');
