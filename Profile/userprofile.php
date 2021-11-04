@@ -564,6 +564,7 @@ if (mysqli_num_rows($result) > 0) {
 
                         <div class="profile-card-ctr">
                             <button class="profile-card__button button--blue js-message-btn">Message</button>
+                            <span id="status"></span>
                         </div>
                     </div>
 
@@ -672,8 +673,8 @@ if (mysqli_num_rows($result) > 0) {
                 processData: false,
                 contentType: "application/json",
                 data: '{ "body": "' + $("#messagecontent").val() + '", "receiver": "<?php echo $receiver; ?>" }',
-                success: function(r) {
-                    alert("Message sent!");
+                success: function(data) {
+                    $('#status').html(data);
                 },
                 error: function(r) {
                     console.log(r);
