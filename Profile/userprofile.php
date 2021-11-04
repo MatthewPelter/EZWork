@@ -80,6 +80,10 @@ if (mysqli_num_rows($result) > 0) {
                 }
             }
 
+            .wrapper {
+                margin-top: 100px;
+            }
+
             .profile-card {
                 width: 100%;
                 min-height: 460px;
@@ -497,7 +501,11 @@ if (mysqli_num_rows($result) > 0) {
 
                     <div class="profile-card__cnt js-profile-cnt">
                         <div class="profile-card__name"><?php echo $row['firstname'] . " " . $row['lastname']; ?></div>
-                        <div class="profile-card__txt">Front-end Developer from <strong>Mesopotamia</strong></div>
+                        <div class="profile-card__txt"><strong><?php if ($row['freelancer_id'] != NULL) {
+                                                                    echo "Client";
+                                                                } else {
+                                                                    echo "Freelancer";
+                                                                } ?></strong></div>
                         <div class="profile-card-loc">
                             <span class="profile-card-loc__icon">
                                 <svg class="icon">
@@ -621,9 +629,10 @@ if (mysqli_num_rows($result) > 0) {
         <!-- ENTER PORTFOLIO SECTION HERE -->
 
 
-        <?php include '../footer.php'; ?>
+
 
 </body>
+<?php include '../footer.php'; ?>
 <script src="../SkillsContainer/searchProfile.js"></script>
 <script src="./app.js"></script>
 <script>
