@@ -262,7 +262,7 @@ $row = mysqli_fetch_assoc($result);
                     method: "post",
                     body: post
                 }).then(function(response) {
-                    url.innerText = response;
+                    console.log(response);
                 });
             });
         } else {
