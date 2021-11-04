@@ -118,9 +118,9 @@ $row = mysqli_fetch_assoc($result);
                     <form action="javascript:void(0);" method="post">
                         <input type="password" id="currentPassword" name="currentPassword" minlength="8" placeholder="Current Password" required><br />
             
-                        <input type="password" id="password" name="password" minlength="8" placeholder="New Password" required><br />
+                        <input type="password" id="password" name="password" minlength="8" autocomplete="off" placeholder="New Password" required><br />
             
-                        <input type="password" id="password2" name="password2" minlength="8" placeholder="Match New Password" required><br />
+                        <input type="password" id="password2" name="password2" minlength="8" autocomplete="off" placeholder="Match New Password" required><br />
             
                         <span id="result"></span><br />
             
