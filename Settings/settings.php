@@ -258,11 +258,18 @@ $row = mysqli_fetch_assoc($result);
             }).then(data => data.json()).then(data => {
                 post = data.data.link;
                 img.src = data.data.link
-                return fetch("../components/update-avatar.php", {
-                    method: "post",
-                    body: post
-                }).then(function(response) {
-                    console.log(response);
+                $.ajax({
+                    url: "../components/update-avatar.php",
+                    data: {
+                        avatar_link: post
+                    },
+                    type: "POST",
+                    success: function(data) {
+                        $("#url").html(data);
+                    },
+                    error: function(data) {
+                        $("#url").html(data);
+                    }
                 });
             });
         } else {
