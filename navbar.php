@@ -189,12 +189,12 @@ $avatarFetch = mysqli_fetch_assoc($avatarResult);
         </div>
         <div class="divider"></div>
         <div class="profileImage" onclick="toggleSession()">
-            <img src="../Users/user.svg" id="profileImage1" alt="">
+            <img src="<?php echo $avatarFetch['avatar']; ?>" id="profileImage1" alt="">
             <div class="sessionCardContainer">
                 <div class="sessionCard">
                     <div class="card card1">
                         <div class="image">
-                            <img src="../Users/user.svg" id="profileImage3" alt="">
+                            <img src="<?php echo $avatarFetch['avatar']; ?>" id="profileImage3" alt="">
                         </div>
                         <div class="name">
                             <span id="name"><?php echo $_SESSION['userid']; ?></span>
