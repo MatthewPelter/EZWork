@@ -11,7 +11,7 @@ function securityscan($data)
 }
 
 if (!isset($_SESSION['user_id'])) {
-    die("Error: Invalid Authorization");
+    die("{ 'Error': 'Message too long!' }");
 }
 
 $sender = $_SESSION['user_id'];
@@ -43,6 +43,4 @@ if ($userid == null) {
 }
 
 $query = mysqli_query($conn, "INSERT INTO messages(body, sender, receiver, isread) VALUES('$body', '$sender', '$getID', 0)") or die(mysqli_errno($conn));
-if ($query) {
-    echo '{ "Success": "Message Sent!" }';
-}
+echo '{ "Success": "Message Sent!" }';
