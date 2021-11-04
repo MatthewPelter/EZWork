@@ -6777,13 +6777,19 @@ ul {
   padding: 1rem 0rem;
 }
 
-.settings .settings-container .settings-account-container .settings-account-profile-image img {
+.settings .settings-container .settings-account-container .settings-account-profile-image .image-card {
+  width: 40%;
+  padding: 1rem;
+}
+
+.settings .settings-container .settings-account-container .settings-account-profile-image .image-card img {
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
 }
 
 .settings .settings-container .settings-account-container .settings-account-profile-image form {
+  padding: 1rem;
   width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6792,6 +6798,31 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.settings .settings-container .settings-account-container .settings-account-profile-image form label {
+  font-size: 1.2rem;
+  color: #054e97;
+}
+
+.settings .settings-container .settings-account-container .settings-account-profile-image form #changeAvatar {
+  width: 20%;
+  color: white;
+  cursor: pointer;
+  background: #054e97;
+  border-radius: 15px;
+  border: none;
+  font-size: 1.1rem;
+  padding: 0.4rem 1rem;
+}
+
+.settings .settings-container .settings-account-container .settings-account-profile-image form #changeAvatar:hover {
+  background: #0a345e;
+}
+
+.settings .settings-container .settings-account-container .settings-account-profile-image form p {
+  font-size: .9rem;
+  color: #797979;
 }
 
 .settings .settings-container .settings-account-container .settings-account-profile-info {

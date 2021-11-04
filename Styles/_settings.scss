@@ -83,15 +83,42 @@ ul {
         justify-content: flex-start;
         border-bottom: 0.7px solid lightgrey;
         padding: 1rem 0rem;
-        img {
-          width: 6rem;
-          height: 6rem;
-          border-radius: 50%;
+        .image-card{
+          width: 40%;
+          padding: 1rem;
+          img {
+            width: 6rem;
+            height: 6rem;
+            border-radius: 50%;
+          }
         }
         form{
+          padding: 1rem;
           width:50%;
           display: flex;
           flex-direction: column;
+
+          label{
+            font-size: 1.2rem;
+            color: $lightColor;
+          }
+          #changeAvatar{
+            width: 20%;
+            color: white;
+            cursor: pointer;
+            background: $lightColor;
+            border-radius: 15px;
+            border: none;
+            font-size: 1.1rem;
+            padding: 0.4rem 1rem;
+            &:hover {
+              background: $color1;
+            }
+          }
+          p{
+            font-size: .9rem;
+            color: $darktext;
+          }
         }
       }
       .settings-account-profile-info {
