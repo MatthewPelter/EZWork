@@ -24,7 +24,9 @@ $receiver = $postBody->receiver;
 $body = securityscan($body);
 $receiver = securityscan($receiver);
 
-
+$id = mysqli_query($conn, "SELECT id FROM clients WHERE username='$receiver'");
+$getID = mysqli_fetch_assoc($id);
+$getID = $getID['id'];
 
 if (strlen($body) > 100) {
     echo "{ 'Error': 'Message too long!' }";
@@ -40,7 +42,7 @@ if ($userid == null) {
     die();
 }
 
-$query = mysqli_query($conn, "INSERT INTO messages(body, sender, receiver, isread) VALUES('$body', '$sender', '$receiver', 0)") or die(mysqli_errno($conn));
+$query = mysqli_query($conn, "INSERT INTO messages(body, sender, receiver, isread) VALUES('$body', '$sender', '$getID', 0)") or die(mysqli_errno($conn));
 if ($query) {
     echo '{ "Success": "Message Sent!" }';
 }

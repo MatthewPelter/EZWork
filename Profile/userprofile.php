@@ -671,7 +671,7 @@ if (mysqli_num_rows($result) > 0) {
                 url: "../api/message.php",
                 processData: false,
                 contentType: "application/json",
-                data: '{ "body": "' + $("#messagecontent").val() + '", "receiver": "' + <?php echo $receiver; ?> + '" }',
+                data: '{ "body": "' + $("#messagecontent").val() + '", "receiver": "<?php echo $receiver; ?>" }',
                 success: function(r) {
                     alert("Message sent!");
                 },
