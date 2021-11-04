@@ -74,7 +74,7 @@ $row = mysqli_fetch_assoc($result);
                         
                         <input type="file" onchange="loadFile(event)" name="file" id="file" accept="image/gif, image/jpeg, image/png">
                         
-                        <input type="submit" name="changeAvatar" id="changeAvatar">
+                        <input type="submit" name="changeAvatar" id="changeAvatar" value="Upload Photo">
                         
                         <p id="url"></p>
                     </form>
@@ -122,7 +122,7 @@ $row = mysqli_fetch_assoc($result);
             
                         <input type="password" id="password2" name="password2" minlength="8" autocomplete="off" placeholder="Match New Password" required><br />
             
-                        <span id="result"></span><br />
+                        <span id="result"></span>
             
                         <input id="changePassBTN" type="submit" name="changepassword" class="changePasswordBtn" value="Change Password">
                     </form>

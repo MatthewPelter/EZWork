@@ -5179,8 +5179,8 @@ section .container .login .login-container button:hover {
 }
 
 .profile-mobile-nav .mobileNavCard img {
-  width: 2.1rem;
-  height: 2.1rem;
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
 }
 
@@ -7464,9 +7464,12 @@ ul {
     padding: 1rem;
   }
   .settings .settings-container .settings-account-container .settings-account-profile-image .image-card img {
-    width: 6rem;
-    height: 6rem;
+    width: 7rem;
+    height: 7rem;
+    border: .7px solid lightgrey;
     border-radius: 50%;
+    -webkit-box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+            box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   }
   .settings .settings-container .settings-account-container .settings-account-profile-image form {
     width: 100%;
@@ -7485,7 +7488,7 @@ ul {
     color: #054e97;
   }
   .settings .settings-container .settings-account-container .settings-account-profile-image form #changeAvatar {
-    margin: .5rem 0rem;
+    margin: 1rem 0rem;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
