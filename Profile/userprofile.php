@@ -564,8 +564,9 @@ if (mysqli_num_rows($result) > 0) {
 
                         <div class="profile-card-ctr">
                             <button class="profile-card__button button--blue js-message-btn">Message</button>
-                            <span id="status"></span>
+
                         </div>
+                        <span id="status"></span>
                     </div>
 
                     <div class="profile-card-message js-message">
@@ -676,7 +677,7 @@ if (mysqli_num_rows($result) > 0) {
                 success: function(data) {
                     var obj = JSON.parse(data);
                     //console.log(obj.success);
-                    $('#status').html(obj.success);
+                    $('#status').html(obj.Success);
                 },
                 error: function(r) {
                     console.log(r);
