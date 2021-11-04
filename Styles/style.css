@@ -6778,7 +6778,6 @@ ul {
 }
 
 .settings .settings-container .settings-account-container .settings-account-profile-image .image-card {
-  width: 40%;
   padding: 1rem;
 }
 
@@ -6790,7 +6789,6 @@ ul {
 
 .settings .settings-container .settings-account-container .settings-account-profile-image form {
   padding: 1rem;
-  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6801,12 +6799,16 @@ ul {
 }
 
 .settings .settings-container .settings-account-container .settings-account-profile-image form label {
+  padding: .5rem 0rem;
   font-size: 1.2rem;
   color: #054e97;
 }
 
 .settings .settings-container .settings-account-container .settings-account-profile-image form #changeAvatar {
-  width: 20%;
+  margin: .5rem 0rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   color: white;
   cursor: pointer;
   background: #054e97;
@@ -6991,10 +6993,13 @@ ul {
   border: .7px solid lightgrey;
   font-size: 1.1rem;
   margin: .7rem 0rem;
+  border-radius: 3px;
 }
 
-.settings .settings-password .settings-password-container .settings-password-card2 form #changePasswordBtn {
-  width: 20%;
+.settings .settings-password .settings-password-container .settings-password-card2 form #changePassBTN {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   color: white;
   cursor: pointer;
   background: #054e97;
@@ -7004,7 +7009,7 @@ ul {
   padding: 0.4rem 1rem;
 }
 
-.settings .settings-password .settings-password-container .settings-password-card2 form #changePasswordBtn:hover {
+.settings .settings-password .settings-password-container .settings-password-card2 form #changePassBTN:hover {
   background: #0a345e;
 }
 
