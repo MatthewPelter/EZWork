@@ -105,6 +105,21 @@ if (mysqli_num_rows($jobResult) > 0) {
                                     echo "Open";
                                 } ?></h1>
                     <h1>Posted on <?php echo $r['datePosted']; ?></h1>
+
+                    <?php if ($unameFetched['username'] == $_SESSION['userid']) {
+                    ?>
+                        <input type="button" onclick="deleteMenu()" id="deleteBtn" value="Delete Post">
+
+
+                        <div id="deleteMenu">
+                            <span>Are you sure you want to delete this post?</span>
+                            <input type="button" id="yesBtn" value="Yes">
+                            <input type="button" id="noBtn" value="No">
+                        </div>
+
+                    <?php } ?>
+
+                    <span id="result"></span>
                 </div>
             </div>
         </div>
@@ -124,5 +139,31 @@ if (mysqli_num_rows($jobResult) > 0) {
 
 </body>
 <script src="../../ClientProfile/app.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+    function deleteMenu() {
+        $('#deleteMenu').css('display', 'block');
+    }
+    $('#yesBtn').click(function() {
+        $.ajax({
+            url: "../api/delete-post.php",
+            data: {
+                postID: <?php echo $job_id; ?>
+            },
+            type: "POST",
+            success: function(data) {
+                $("#result").html(data);
+                $('#deleteMenu').css('display', 'none');
+            },
+            error: function(data) {
+                $("#result").html(data);
+            }
+        });
+    });
+
+    $('#noBtn').click(function() {
+        $('#deleteMenu').css('display', 'none');
+    });
+</script>
 
 </html>
