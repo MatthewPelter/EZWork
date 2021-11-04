@@ -32,8 +32,8 @@ if (strlen($body) > 100) {
     echo "{ 'Error': 'Message too long!' }";
 }
 
-if ($body == null) {
-    $body = "";
+if ($body == null || $body == "") {
+    die("{ 'Error': 'Message body cannot be empty!' }");
 }
 if ($receiver == null) {
     die("{ 'Error': 'Missing receiver!' }");
