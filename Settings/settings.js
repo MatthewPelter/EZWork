@@ -107,13 +107,6 @@ connectedServices.addEventListener("click", () => {
 //Edit account
 const editAccountIcon = document.getElementById("editAccountIcon");
 
-// Password section
-const changePasswordIcon = document.getElementById("changePasswordIcon");
-
-changePasswordIcon.addEventListener("click", () => {
-  console.log("hello");
-});
-
 //Blocks Pay Now BUtton from being pressed
 const balance = document.getElementById("balance");
 const payBalance = document.getElementById("payBalance");

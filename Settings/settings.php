@@ -65,7 +65,7 @@ $row = mysqli_fetch_assoc($result);
                 </div>
                 <div class="settings-account-profile-image">
                     <img id="img" src="<?php echo $row['avatar']; ?>" alt="Avatar">
-                    <form action="javascript:void(0);">
+                    <form action="javascript:void(0);" class="avatar">
                         <label for="file">Select New Avatar:</label>
                         <input type="file" onchange="loadFile(event)" name="file" id="file" accept="image/gif, image/jpeg, image/png">
                         <br />
