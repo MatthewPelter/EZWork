@@ -502,9 +502,9 @@ if (mysqli_num_rows($result) > 0) {
                     <div class="profile-card__cnt js-profile-cnt">
                         <div class="profile-card__name"><?php echo $row['firstname'] . " " . $row['lastname']; ?></div>
                         <div class="profile-card__txt"><strong><?php if ($row['freelancer_id'] != NULL) {
-                                                                    echo "Client";
-                                                                } else {
                                                                     echo "Freelancer";
+                                                                } else {
+                                                                    echo "Client";
                                                                 } ?></strong></div>
                         <div class="profile-card-loc">
                             <span class="profile-card-loc__icon">
