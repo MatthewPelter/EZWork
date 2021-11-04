@@ -572,7 +572,7 @@ if (mysqli_num_rows($result) > 0) {
                     <div class="profile-card-message js-message">
                         <form class="profile-card-form">
                             <div class="profile-card-form__container">
-                                <textarea id="messagecontent" placeholder="Say something..."></textarea>
+                                <textarea id="messagecontent" placeholder="Say something..." required></textarea>
                             </div>
 
                             <div class="profile-card-form__bottom">
@@ -677,10 +677,13 @@ if (mysqli_num_rows($result) > 0) {
                 success: function(data) {
                     var obj = JSON.parse(data);
                     //console.log(obj.success);
+                    $("#messagecontent").val('');
                     $('#status').html(obj.Success);
                 },
                 error: function(r) {
-                    console.log(r);
+                    var obj = JSON.parse(data);
+                    //console.log(obj.success);
+                    $('#status').html(obj.Error);
                 }
             });
         });
