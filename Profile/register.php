@@ -261,7 +261,7 @@ $userID = $_SESSION['user_id'];
                     <div class="profilePhoto-card">
                         <div class="profilePic">
                             <img id="output" alt="">
-                            <input type="file" onchange="loadFile(event)"  accept="image/gif, image/jpeg, image/png" name="" capture="camera" id="file">
+                            <input type="file" onchange="loadFile(event)"  accept="image/gif, image/jpeg, image/png" name=""  id="file">
                             <p><label for="file" style="cursor: pointer;">Upload Image</label></p>
                         </div>
 
