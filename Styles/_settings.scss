@@ -590,6 +590,9 @@ ul {
           border-bottom: 0.7px solid lightgrey;
           padding: 1rem 0rem;
           .image-card{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
             width: 100%;
             padding: 1rem;
             img {
@@ -600,7 +603,7 @@ ul {
           }
           form{
             width: 100%;
-            padding: 1rem;
+            padding: 1rem 2rem;
             display: flex;
             flex-direction: column;
             label{

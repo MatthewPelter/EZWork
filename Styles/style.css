@@ -5179,8 +5179,9 @@ section .container .login .login-container button:hover {
 }
 
 .profile-mobile-nav .mobileNavCard img {
-  width: 2rem;
-  height: 2rem;
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 50%;
 }
 
 .profile-mobile-nav .mobileNavCard .profile-nav-search {
@@ -7449,6 +7450,16 @@ ul {
     padding: 1rem 0rem;
   }
   .settings .settings-container .settings-account-container .settings-account-profile-image .image-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 100%;
     padding: 1rem;
   }
@@ -7459,7 +7470,7 @@ ul {
   }
   .settings .settings-container .settings-account-container .settings-account-profile-image form {
     width: 100%;
-    padding: 1rem;
+    padding: 1rem 2rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
