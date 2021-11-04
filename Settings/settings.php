@@ -114,7 +114,7 @@ $row = mysqli_fetch_assoc($result);
                         <input type="password" id="password" name="password" minlength="8" placeholder="New Password" required><br />
                         <input type="password" id="password2" name="password2" minlength="8" placeholder="Match New Password" required><br />
                         <span id="result"></span><br />
-                        <input id="changePassBTN" type="submit" name="changepassword" value="Change Password">
+                        <input id="changePassBTN" type="submit" name="changepassword" class="changePasswordBtn" value="Change Password">
                     </form>
                 </div>
             </div>
