@@ -107,13 +107,6 @@ connectedServices.addEventListener("click", () => {
 //Edit account
 const editAccountIcon = document.getElementById("editAccountIcon");
 
-// Password section
-const changePasswordIcon = document.getElementById("changePasswordIcon");
-
-changePasswordIcon.addEventListener("click", () => {
-  console.log("hello");
-});
-
 //Blocks Pay Now BUtton from being pressed
 const balance = document.getElementById("balance");
 const payBalance = document.getElementById("payBalance");
@@ -125,25 +118,3 @@ if (balance.innerText === "0.00") {
 } else {
   payBalance.style.cursor = "pointer";
 }
-
-const settingsName = document.getElementById("settingsName");
-var firstName = localStorage.getItem("FirstName");
-var lastName = localStorage.getItem("LastName");
-settingsName.innerText = firstName.concat(" ").concat(lastName);
-
-var email = localStorage.getItem("Email");
-const settingsEmail = document.getElementById("settingsEmail");
-settingsEmail.innerText = email;
-
-var phone = localStorage.getItem("Phone");
-const settingsPhone = document.getElementById("settingsPhone");
-settingsPhone.innerText = phone;
-
-var firstName = localStorage.getItem("FirstName");
-var lastName = localStorage.getItem("LastName");
-
-const user = document.getElementById("user");
-user.innerText = firstName.concat(" ").concat(lastName);
-
-const name = document.getElementById("name");
-name.innerText = firstName.concat(" ").concat(lastName);

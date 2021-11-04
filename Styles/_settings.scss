@@ -78,12 +78,47 @@ ul {
       .settings-account-profile-image {
         width: 100%;
         display: flex;
-        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
         border-bottom: 0.7px solid lightgrey;
         padding: 1rem 0rem;
-        img {
-          width: 6rem;
-          height: 6rem;
+        .image-card{
+          padding: 1rem;
+          img {
+            width: 6rem;
+            height: 6rem;
+            border-radius: 50%;
+          }
+        }
+        form{
+          padding: 1rem;
+          display: flex;
+          flex-direction: column;
+
+          label{
+            padding: .5rem 0rem;
+            font-size: 1.2rem;
+            color: $lightColor;
+          }
+          #changeAvatar{
+            margin: .5rem 0rem;
+            width:fit-content;
+            color: white;
+            cursor: pointer;
+            background: $lightColor;
+            border-radius: 15px;
+            border: none;
+            font-size: 1.1rem;
+            padding: 0.4rem 1rem;
+            &:hover {
+              background: $color1;
+            }
+          }
+          p{
+            font-size: .9rem;
+            color: $darktext;
+          }
         }
       }
       .settings-account-profile-info {
@@ -199,6 +234,32 @@ ul {
       .settings-password-card2 {
         width: 100%;
         padding: 1.6rem;
+        form{
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          input{
+            width: 40%;
+            padding: 0.25rem;
+            border: .7px solid lightgrey;
+            font-size: 1.1rem;
+            margin: .7rem 0rem;
+            border-radius: 3px;
+          }
+          #changePassBTN{
+            width: fit-content;
+            color: white;
+            cursor: pointer;
+            background: $lightColor;
+            border-radius: 15px;
+            border: none;
+            font-size: 1.1rem;
+            padding: 0.4rem 1rem;
+            &:hover {
+              background: $color1;
+            }
+          }
+        }
       }
     }
 

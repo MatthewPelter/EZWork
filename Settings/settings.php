@@ -64,12 +64,18 @@ $row = mysqli_fetch_assoc($result);
                     <i class="fa fa-pencil" onclick="openCard()" id="editAccountIcon" aria-hidden="true"></i>
                 </div>
                 <div class="settings-account-profile-image">
-                    <img id="img" src="<?php echo $row['avatar']; ?>" alt="Avatar">
-                    <form action="javascript:void(0);">
+                    <div class="image-card">
+                        <img id="img" src="<?php echo $row['avatar']; ?>" alt="Avatar">
+                    </div>
+                   
+                    <form action="javascript:void(0);" class="avatar">
+                        
                         <label for="file">Select New Avatar:</label>
+                        
                         <input type="file" onchange="loadFile(event)" name="file" id="file" accept="image/gif, image/jpeg, image/png">
-                        <br />
+                        
                         <input type="submit" name="changeAvatar" id="changeAvatar">
+                        
                         <p id="url"></p>
                     </form>
                 </div>
@@ -111,10 +117,14 @@ $row = mysqli_fetch_assoc($result);
                     <h4>Change your password:</h4>
                     <form action="javascript:void(0);" method="post">
                         <input type="password" id="currentPassword" name="currentPassword" minlength="8" placeholder="Current Password" required><br />
+            
                         <input type="password" id="password" name="password" minlength="8" placeholder="New Password" required><br />
+            
                         <input type="password" id="password2" name="password2" minlength="8" placeholder="Match New Password" required><br />
+            
                         <span id="result"></span><br />
-                        <input id="changePassBTN" type="submit" name="changepassword" value="Change Password">
+            
+                        <input id="changePassBTN" type="submit" name="changepassword" class="changePasswordBtn" value="Change Password">
                     </form>
                 </div>
             </div>
