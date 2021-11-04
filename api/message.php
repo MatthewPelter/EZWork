@@ -36,10 +36,10 @@ if ($body == null) {
     $body = "";
 }
 if ($receiver == null) {
-    die();
+    die("{ 'Error': 'Missing receiver!' }");
 }
-if ($userid == null) {
-    die();
+if ($sender == null) {
+    die("{ 'Error': 'Missing Sender!' }");
 }
 
 $query = mysqli_query($conn, "INSERT INTO messages(body, sender, receiver, isread) VALUES('$body', '$sender', '$getID', 0)") or die(mysqli_errno($conn));
