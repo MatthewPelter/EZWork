@@ -2,7 +2,6 @@ $color1: #0a345e;
 $lightColor: #054e97;
 $darktext: rgb(121, 121, 121);
 .registerFreelancer {
-    margin-top: 4.8rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -949,7 +948,6 @@ $darktext: rgb(121, 121, 121);
 
   @media screen and (max-width: 754px) {
     .registerFreelancer {
-        margin-top: 3.8rem;
         display: flex;
         flex-direction: column;
         justify-content: space-between;

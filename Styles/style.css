@@ -17223,7 +17223,6 @@ li {
 }
 
 .registerFreelancer {
-  margin-top: 4.8rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -18567,7 +18566,6 @@ li {
 
 @media screen and (max-width: 754px) {
   .registerFreelancer {
-    margin-top: 3.8rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
