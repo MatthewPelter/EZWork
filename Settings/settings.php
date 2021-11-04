@@ -67,7 +67,7 @@ $row = mysqli_fetch_assoc($result);
                     <img id="img" src="<?php echo $row['avatar']; ?>" alt="Avatar">
                     <form action="javascript:void(0);">
                         <label for="file">Select New Avatar:</label>
-                        <input type="file" name="file" id="file" accept="image/*">
+                        <input type="file" name="file" id="file" accept="image/gif, image/jpeg, image/png">
                         <br />
                         <input type="submit" name="changeAvatar" id="changeAvatar">
                         <p id="url"></p>
