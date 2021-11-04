@@ -675,7 +675,7 @@ if (mysqli_num_rows($result) > 0) {
                 data: '{ "body": "' + $("#messagecontent").val() + '", "receiver": "<?php echo $receiver; ?>" }',
                 success: function(data) {
                     //$('#status').html(data);
-                    console.log(data);
+                    console.log(JSON.stringify(data));
                 },
                 error: function(r) {
                     console.log(r);
