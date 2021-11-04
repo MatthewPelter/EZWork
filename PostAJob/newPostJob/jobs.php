@@ -78,7 +78,7 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                                         <red><?php echo "Closed"; ?></red>
                                     <?php } ?>
                                 </span></p>
-                            <p>Job Posted on <span id="date"><?php echo $r['datePosted']; ?></span> by <img style="width: 16px;" src="<?php echo $unameFetched['avatar']; ?>" alt="Avatar"><span id="postedBy">
+                            <p>Job Posted on <span id="date"><?php echo $r['datePosted']; ?></span> by <img style="width: 16px; border-radius:50%;" src="<?php echo $unameFetched['avatar']; ?>" alt="Avatar"><span id="postedBy">
                                     <?php if ($unameFetched['username'] != $_SESSION['userid']) {
                                         echo "<a href='../../Profile/userprofile.php?name=" . $unameFetched['username'] . "'>" . $unameFetched['username'] . "</a>";
                                     } else {
