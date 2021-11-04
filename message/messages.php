@@ -84,10 +84,12 @@ if (isset($_POST['submit'])) {
             if (mysqli_num_rows($result) > 0) {
                 while ($r = mysqli_fetch_assoc($result)) {
                     if (!in_array(array('username' => $r['Receiver'], 'id' => $r['ReceiverID']), $u) && $r['Receiver'] != $username) {
-                        array_push($u, array('username' => $r['Receiver'], 'id' => $r['ReceiverID']));
+                        // instead of array_push
+                        array_unshift($u, array('username' => $r['Receiver'], 'id' => $r['ReceiverID']));
                     }
                     if (!in_array(array('username' => $r['Sender'], 'id' => $r['SenderID']), $u) && $r['Sender'] != $username) {
-                        array_push($u, array('username' => $r['Sender'], 'id' => $r['SenderID']));
+                        // instead of array_push
+                        array_unshift($u, array('username' => $r['Sender'], 'id' => $r['SenderID']));
                     }
                 }
             } else {
