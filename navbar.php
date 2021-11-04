@@ -1,5 +1,4 @@
 <?php
-require_once('./classes/DB.php');
 $user_id = $_SESSION['user_id'];
 $avatarResult = mysqli_query($conn, "SELECT avatar FROM clients WHERE id = '$user_id'");
 $avatarFetch = mysqli_fetch_assoc($avatarResult);
