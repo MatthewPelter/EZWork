@@ -678,9 +678,9 @@ if (mysqli_num_rows($result) > 0) {
                     var obj = JSON.parse(data);
                     console.log(obj);
                     $("#messagecontent").val('');
-                    if (data.Success.length > 0) {
+                    if (obj.Success.length > 0) {
                         $('#status').html(obj.Success);
-                    } else if (data.Error.length > 0) {
+                    } else if (obj.Error.length > 0) {
                         $('#status').html(obj.Error);
                     }
 
