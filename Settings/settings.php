@@ -261,9 +261,9 @@ $row = mysqli_fetch_assoc($result);
                 return fetch("../components/update-avatar.php", {
                     method: "post",
                     body: post
+                }).then(function(response) {
+                    url.innerText = response;
                 });
-            }).then(function(response) {
-                url.innerText = response;
             });
         } else {
             url.innerText = "No File Selected";
