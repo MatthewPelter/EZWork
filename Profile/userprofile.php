@@ -121,7 +121,8 @@ if (mysqli_num_rows($result) > 0) {
                 overflow: hidden;
                 position: relative;
                 z-index: 4;
-                box-shadow: 0px 5px 50px 0px #6c44fc, 0px 0px 0px 7px rgba(107, 74, 255, 0.5);
+                box-shadow: 0px 5px 50px 0px #1d4354, 0px 0px 0px 7px rgb(29, 67, 84, 0.5);
+                ;
             }
 
             @media screen and (max-width: 576px) {
@@ -150,7 +151,7 @@ if (mysqli_num_rows($result) > 0) {
             .profile-card__name {
                 font-weight: 700;
                 font-size: 24px;
-                color: #6944ff;
+                color: #1d4354;
                 margin-bottom: 15px;
             }
 
