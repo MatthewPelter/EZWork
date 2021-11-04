@@ -64,11 +64,13 @@ $row = mysqli_fetch_assoc($result);
                     <i class="fa fa-pencil" onclick="openCard()" id="editAccountIcon" aria-hidden="true"></i>
                 </div>
                 <div class="settings-account-profile-image">
-                    <img src="<?php echo $row['avatar']; ?>" alt="Avatar">
+                    <img id="img" src="<?php echo $row['avatar']; ?>" alt="Avatar">
                     <form action="javascript:void(0);">
-                        <label for="img">Select New Avatar:</label>
-                        <input type="file" id="img" name="img" accept="image/*">
+                        <label for="file">Select New Avatar:</label>
+                        <input type="file" name="file" id="file" accept="image/*">
+                        <br />
                         <input type="submit" name="changeAvatar" id="changeAvatar">
+                        <p id="url"></p>
                     </form>
                 </div>
                 <div class="settings-account-profile-info">
@@ -235,6 +237,37 @@ $row = mysqli_fetch_assoc($result);
                 $("#result").html(data);
             }
         });
+    });
+
+    const file = document.getElementById("file");
+    const img = document.getElementById("img");
+    const btn = document.getElementById("changeAvatar");
+    const url = document.getElementById("url");
+    var post;
+    btn.addEventListener("click", function() {
+
+        if (file.files.length != 0) {
+            const formdata = new FormData()
+            formdata.append("image", file.files[0])
+            fetch("https://api.imgur.com/3/image/", {
+                method: "post",
+                headers: {
+                    Authorization: "Client-ID 9f482e3edae002b"
+                },
+                body: formdata
+            }).then(data => data.json()).then(data => {
+                post = data.data.link;
+                img.src = data.data.link
+                return fetch("../components/update-avatar.php", {
+                    method: "post",
+                    body: post
+                });
+            }).then(function(response) {
+                url.innerText = response;
+            });
+        } else {
+            url.innerText = "No File Selected";
+        }
     });
 
 
