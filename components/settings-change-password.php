@@ -11,7 +11,7 @@ function securityscan($data)
     return $data;
 }
 
-if (isset($_POST['currentPassword']) && isset($_POST['password']) && isset($_POST['password2'])) {
+if (isset($_POST['currentPassword']) && isset($_POST['password']) && isset($_POST['password2']) && isset($_SESSION['user_id'])) {
     $user_id = $_SESSION['user_id'];
     $password = securityscan($_POST['currentPassword']);
     $passwordNew = securityscan($_POST['password']);

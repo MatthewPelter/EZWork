@@ -64,7 +64,12 @@ $row = mysqli_fetch_assoc($result);
                     <i class="fa fa-pencil" onclick="openCard()" id="editAccountIcon" aria-hidden="true"></i>
                 </div>
                 <div class="settings-account-profile-image">
-                    <img src="../Users/user.svg" alt="">
+                    <img src="<?php echo $row['avatar']; ?>" alt="Avatar">
+                    <form action="javascript:void(0);">
+                        <label for="img">Select New Avatar:</label>
+                        <input type="file" id="img" name="img" accept="image/*">
+                        <input type="submit" name="changeAvatar" id="changeAvatar">
+                    </form>
                 </div>
                 <div class="settings-account-profile-info">
                     <p>UserName: <span id="settingsName"><?php echo $row['username']; ?></span></p>
@@ -214,6 +219,24 @@ $row = mysqli_fetch_assoc($result);
         });
     });
 
+    $("#changeAvatar").click(function() {
+        $.ajax({
+            url: "../components/settings-change-password.php",
+            data: {
+                currentPassword: $("#currentPassword").val(),
+                password: $("#password").val(),
+                password2: $("#password2").val()
+            },
+            type: "POST",
+            success: function(data) {
+                $("#result").html(data);
+            },
+            error: function(data) {
+                $("#result").html(data);
+            }
+        });
+    });
+
 
 
 
@@ -288,9 +311,7 @@ $row = mysqli_fetch_assoc($result);
             session.style.display = 'none';
         }
     }
-</script>
-<!--Toggle the nav burger button-->
-<script>
+
     const navIcon = document.getElementById("nav-burger");
     const profileMobileNav = document.querySelector(".profile-mobile-nav");
 
@@ -304,8 +325,7 @@ $row = mysqli_fetch_assoc($result);
             searchIcon.style.opacity = '1';
         }
     }
-</script>
-<script>
+
     function openCard() {
         document.getElementById("myOverlay").style.display = "block";
     }
@@ -313,8 +333,7 @@ $row = mysqli_fetch_assoc($result);
     function closeCard() {
         document.getElementById("myOverlay").style.display = "none";
     }
-</script>
-<script>
+
     function guidGenerator() {
         var S4 = function() {
             return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
