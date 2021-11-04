@@ -157,7 +157,7 @@ $userID = $_SESSION['user_id'];
 
                                 <a style="color: black; text-decoration: none;" href="../Profile/userprofile.php?name=<?php echo $row['username']; ?>">
                                     <div class="categoryCard">
-                                        <img src="../Users/user.svg" style="border-radius: 50%; width: 2rem;height: 2rem;" id="current-user-img" alt=`<?php echo $row['username']; ?>`>
+                                        <img src="<?php $row['avatar'] ?>" style="border-radius: 50%; width: 2rem;height: 2rem;" id="current-user-img" alt=`<?php echo $row['username']; ?>`>
                                         <p><?php echo $row['username']; ?></p>
                                         <i class="fa fa-angle-right"></i>
                                     </div>

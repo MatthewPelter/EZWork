@@ -1,3 +1,9 @@
+<?php
+require_once('./classes/DB.php');
+$user_id = $_SESSION['user_id'];
+$avatarResult = mysqli_query($conn, "SELECT avatar FROM clients WHERE id = '$user_id'");
+$avatarFetch = mysqli_fetch_assoc($avatarResult);
+?>
 <div class="profile-mobile-nav">
     <div class="profile-nav-search">
         <form id="searchContainer">
@@ -6,7 +12,7 @@
         </form>
     </div>
     <div class="mobileNavCard" id="navProfile">
-        <img src="../Users/user.svg" alt="">
+        <img src="<?php echo $avatarFetch['avatar']; ?>" alt="Avatar">
         <span id="user"><?php echo $_SESSION['userid']; ?></span>
         <i class="fa fa-sort-down" style="opacity: 0;"></i>
     </div>

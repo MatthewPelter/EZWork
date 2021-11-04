@@ -56,7 +56,7 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                 if (mysqli_num_rows($jobsQuery) > 0) {
                     while ($r = mysqli_fetch_assoc($jobsQuery)) {
                         $uid = $r['user_id'];
-                        $unameSQL = "SELECT username FROM clients WHERE id='$uid'";
+                        $unameSQL = "SELECT username, avatar FROM clients WHERE id='$uid'";
                         $unameResult = mysqli_query($conn, $unameSQL);
                         $unameFetched = mysqli_fetch_assoc($unameResult);
                 ?>
@@ -78,7 +78,7 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                                         <red><?php echo "Closed"; ?></red>
                                     <?php } ?>
                                 </span></p>
-                            <p>Job Posted on <span id="date"><?php echo $r['datePosted']; ?></span> by <span id="postedBy">
+                            <p>Job Posted on <span id="date"><?php echo $r['datePosted']; ?></span> by <img style="width: 16px;" src="<?php echo $unameFetched['avatar']; ?>" alt="Avatar"><span id="postedBy">
                                     <?php if ($unameFetched['username'] != $_SESSION['userid']) {
                                         echo "<a href='../../Profile/userprofile.php?name=" . $unameFetched['username'] . "'>" . $unameFetched['username'] . "</a>";
                                     } else {
