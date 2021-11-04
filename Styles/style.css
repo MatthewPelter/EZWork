@@ -6763,9 +6763,16 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   border-bottom: 0.7px solid lightgrey;
   padding: 1rem 0rem;
 }
@@ -6773,6 +6780,18 @@ ul {
 .settings .settings-container .settings-account-container .settings-account-profile-image img {
   width: 6rem;
   height: 6rem;
+  border-radius: 50%;
+}
+
+.settings .settings-container .settings-account-container .settings-account-profile-image form {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .settings .settings-container .settings-account-container .settings-account-profile-info {
