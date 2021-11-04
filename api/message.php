@@ -1,0 +1,46 @@
+<?php
+session_start();
+require_once("../classes/DB.php");
+
+function securityscan($data)
+{
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+
+if (!isset($_SESSION['user_id'])) {
+    die("Error: Invalid Authorization");
+}
+
+$sender = $_SESSION['user_id'];
+$postBody = file_get_contents("php://input");
+$postBody = json_decode($postBody);
+
+$body = $postBody->body;
+$receiver = $postBody->receiver;
+
+$body = securityscan($body);
+$receiver = securityscan($receiver);
+
+
+
+if (strlen($body) > 100) {
+    echo "{ 'Error': 'Message too long!' }";
+}
+
+if ($body == null) {
+    $body = "";
+}
+if ($receiver == null) {
+    die();
+}
+if ($userid == null) {
+    die();
+}
+
+$query = mysqli_query($conn, "INSERT INTO messages(body, sender, receiver, isread) VALUES('$body', '$sender', '$receiver', 0)") or die(mysqli_errno($conn));
+if ($query) {
+    echo '{ "Success": "Message Sent!" }';
+}

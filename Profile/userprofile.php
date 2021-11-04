@@ -570,11 +570,11 @@ if (mysqli_num_rows($result) > 0) {
                     <div class="profile-card-message js-message">
                         <form class="profile-card-form">
                             <div class="profile-card-form__container">
-                                <textarea placeholder="Say something..."></textarea>
+                                <textarea id="messagecontent" placeholder="Say something..."></textarea>
                             </div>
 
                             <div class="profile-card-form__bottom">
-                                <button class="profile-card__button button--blue js-message-close">
+                                <button name="send-message" id="sendmessage" class="profile-card__button button--blue js-message-close">
                                     Send
                                 </button>
 
@@ -634,123 +634,158 @@ if (mysqli_num_rows($result) > 0) {
 
 </body>
 <?php include '../footer.php'; ?>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="../SkillsContainer/searchProfile.js"></script>
 <script src="./app.js"></script>
 <script>
-    var messageBox = document.querySelector('.js-message');
-    var btn = document.querySelector('.js-message-btn');
-    var card = document.querySelector('.js-profile-card');
-    var closeBtn = document.querySelectorAll('.js-message-close');
+    $(document).ready(function() {
 
-    btn.addEventListener('click', function(e) {
-        e.preventDefault();
-        card.classList.add('active');
-    });
+        var messageBox = document.querySelector('.js-message');
+        var btn = document.querySelector('.js-message-btn');
+        var card = document.querySelector('.js-profile-card');
+        var closeBtn = document.querySelectorAll('.js-message-close');
 
-    closeBtn.forEach(function(element, index) {
-        console.log(element);
-        element.addEventListener('click', function(e) {
+        btn.addEventListener('click', function(e) {
             e.preventDefault();
-            card.classList.remove('active');
+            card.classList.add('active');
         });
-    });
-    var job = document.querySelector('.jobCard');
-    var talent = document.querySelector('.talentCard');
-    var project = document.querySelector('.projectCard');
-    var help = document.querySelector('.helpCard');
-    var session = document.querySelector('.sessionCard');
 
-    function toggleJob() {
+        closeBtn.forEach(function(element, index) {
+            console.log(element);
+            element.addEventListener('click', function(e) {
+                e.preventDefault();
+                card.classList.remove('active');
+            });
+        });
+
+        <?php
+        if (isset($_GET['name'])) {
+            $receiver = $_GET['name'];
+        }
+
+        ?>
+
+        $('#sendmessage').click(function() {
+            $.ajax({
+                type: "POST",
+                url: "../api/message.php",
+                processData: false,
+                contentType: "application/json",
+                data: '{ "body": "' + $("#messagecontent").val() + '", "receiver": "' + $receiver + '" }',
+                success: function(r) {
+                    alert("Message sent!");
+                },
+                error: function(r) {
+                    console.log(r);
+                }
+            });
+        });
+
+
+
+
+
+
+
+
         var job = document.querySelector('.jobCard');
-        if (job.style.display === 'none') {
-            job.style.display = 'inline-block';
-            talent.style.display = 'none';
-            project.style.display = 'none';
-            help.style.display = 'none';
-            session.style.display = 'none';
-        } else {
-            job.style.display = 'none';
-
-        }
-    }
-
-    function toggleTalent() {
         var talent = document.querySelector('.talentCard');
-        if (talent.style.display === 'none') {
-            talent.style.display = 'inline-block';
-            job.style.display = 'none';
-            project.style.display = 'none';
-            help.style.display = 'none';
-            session.style.display = 'none';
-        } else {
-            talent.style.display = 'none';
-        }
-    }
-
-    function toggleProject() {
         var project = document.querySelector('.projectCard');
-        if (project.style.display === 'none') {
-            project.style.display = 'inline-block';
-            talent.style.display = 'none';
-            job.style.display = 'none';
-            help.style.display = 'none';
-            session.style.display = 'none';
-        } else {
-            project.style.display = 'none';
-        }
-    }
-
-    function toggleHelp() {
         var help = document.querySelector('.helpCard');
-        if (help.style.display === 'none') {
-            help.style.display = 'inline-block';
-            talent.style.display = 'none';
-            project.style.display = 'none';
-            job.style.display = 'none';
-            session.style.display = 'none';
-        } else {
-            help.style.display = 'none';
+        var session = document.querySelector('.sessionCard');
+
+        function toggleJob() {
+            var job = document.querySelector('.jobCard');
+            if (job.style.display === 'none') {
+                job.style.display = 'inline-block';
+                talent.style.display = 'none';
+                project.style.display = 'none';
+                help.style.display = 'none';
+                session.style.display = 'none';
+            } else {
+                job.style.display = 'none';
+
+            }
         }
-    }
 
-    function toggleSession() {
-
-        if (session.style.display === 'none') {
-            session.style.display = 'inline-block';
-            talent.style.display = 'none';
-            project.style.display = 'none';
-            help.style.display = 'none';
-            job.style.display = 'none';
-        } else {
-            session.style.display = 'none';
+        function toggleTalent() {
+            var talent = document.querySelector('.talentCard');
+            if (talent.style.display === 'none') {
+                talent.style.display = 'inline-block';
+                job.style.display = 'none';
+                project.style.display = 'none';
+                help.style.display = 'none';
+                session.style.display = 'none';
+            } else {
+                talent.style.display = 'none';
+            }
         }
-    }
 
-    const navIcon = document.getElementById("nav-burger");
-    const profileMobileNav = document.querySelector(".profile-mobile-nav");
-
-    function myFunction(x) {
-        x.classList.toggle("change");
-        if (x.classList.contains('change')) {
-            profileMobileNav.style.display = "inline-block";
-            searchIcon.style.opacity = '0';
-        } else {
-            profileMobileNav.style.display = 'none';
-            searchIcon.style.opacity = '1';
+        function toggleProject() {
+            var project = document.querySelector('.projectCard');
+            if (project.style.display === 'none') {
+                project.style.display = 'inline-block';
+                talent.style.display = 'none';
+                job.style.display = 'none';
+                help.style.display = 'none';
+                session.style.display = 'none';
+            } else {
+                project.style.display = 'none';
+            }
         }
-    }
 
-    const sortDownBtn = document.getElementById('jobArrow');
-    async function toggleJobCard() {
-        var mobileJobCard = document.querySelector(".mobileJobCard");
-        if (mobileJobCard.style.display === "none") {
-            sortDownBtn.style.transform = "rotate(180deg)";
-            mobileJobCard.style.display = "inline-block";
-        } else {
-            mobileJobCard.style.display = "none";
-            sortDownBtn.style.transform = "rotate(360deg)";
+        function toggleHelp() {
+            var help = document.querySelector('.helpCard');
+            if (help.style.display === 'none') {
+                help.style.display = 'inline-block';
+                talent.style.display = 'none';
+                project.style.display = 'none';
+                job.style.display = 'none';
+                session.style.display = 'none';
+            } else {
+                help.style.display = 'none';
+            }
         }
-    }
+
+        function toggleSession() {
+
+            if (session.style.display === 'none') {
+                session.style.display = 'inline-block';
+                talent.style.display = 'none';
+                project.style.display = 'none';
+                help.style.display = 'none';
+                job.style.display = 'none';
+            } else {
+                session.style.display = 'none';
+            }
+        }
+
+        const navIcon = document.getElementById("nav-burger");
+        const profileMobileNav = document.querySelector(".profile-mobile-nav");
+
+        function myFunction(x) {
+            x.classList.toggle("change");
+            if (x.classList.contains('change')) {
+                profileMobileNav.style.display = "inline-block";
+                searchIcon.style.opacity = '0';
+            } else {
+                profileMobileNav.style.display = 'none';
+                searchIcon.style.opacity = '1';
+            }
+        }
+
+        const sortDownBtn = document.getElementById('jobArrow');
+        async function toggleJobCard() {
+            var mobileJobCard = document.querySelector(".mobileJobCard");
+            if (mobileJobCard.style.display === "none") {
+                sortDownBtn.style.transform = "rotate(180deg)";
+                mobileJobCard.style.display = "inline-block";
+            } else {
+                mobileJobCard.style.display = "none";
+                sortDownBtn.style.transform = "rotate(360deg)";
+            }
+        }
+    });
 </script>
 
 </html>
