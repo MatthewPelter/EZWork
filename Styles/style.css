@@ -6924,6 +6924,41 @@ ul {
   padding: 1.6rem;
 }
 
+.settings .settings-password .settings-password-container .settings-password-card2 form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.settings .settings-password .settings-password-container .settings-password-card2 form input {
+  width: 40%;
+  padding: 0.25rem;
+  border: .7px solid lightgrey;
+  font-size: 1.1rem;
+  margin: .7rem 0rem;
+}
+
+.settings .settings-password .settings-password-container .settings-password-card2 form #changePasswordBtn {
+  width: 20%;
+  color: white;
+  cursor: pointer;
+  background: #054e97;
+  border-radius: 15px;
+  border: none;
+  font-size: 1.1rem;
+  padding: 0.4rem 1rem;
+  margin-right: 1rem;
+}
+
+.settings .settings-password .settings-password-container .settings-password-card2 form #changePasswordBtn:hover {
+  background: #0a345e;
+}
+
 .settings .settings-password .settings-password-twoStep {
   background: white;
   border-radius: 15px;
