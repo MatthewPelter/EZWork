@@ -13129,7 +13129,6 @@ ul {
     font-size: 0.5rem;
   }
   .postJob-detail-scope {
-    margin-top: 3.5rem;
     width: 100%;
     background: whitesmoke;
     padding: 1rem 0rem;
@@ -13148,7 +13147,7 @@ ul {
         -ms-flex-direction: column;
             flex-direction: column;
     border: none;
-    border-radius: 15px;
+    border-radius: 0;
   }
   .postJob-detail-scope .detail-scope-container .detail-progress-section {
     width: 100%;
@@ -13752,7 +13751,7 @@ ul {
     font-size: 0.9rem;
   }
   .postJob-detail-location .detail-location-container .detail-progress-section .title-card-intro h2 {
-    padding: 6rem 0rem 1rem 0rem;
+    padding: 3rem 0rem 1rem 0rem;
     color: white;
     font-size: 2.3rem;
   }
