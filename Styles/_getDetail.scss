@@ -646,6 +646,7 @@ $darktext: rgb(121, 121, 121);
     }
   }
 }
+
 // Css for posting location start here
 .postJob-detail-location {
   width: 100%;
@@ -829,7 +830,6 @@ $darktext: rgb(121, 121, 121);
 }
 // Css for posting budget start here
 .postJob-detail-budget {
-  margin-top: 4.5rem;
   width: 100%;
   background: whitesmoke;
   padding: 2.5rem 10rem;
@@ -936,332 +936,23 @@ $darktext: rgb(121, 121, 121);
       border-bottom-right-radius: 15px;
       justify-content: center;
       align-items: flex-start;
-      .budgetOptions {
-        margin-top: 3rem;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        #hourly {
-          border: 1.25px solid $lightColor;
-        }
-        .optionCard {
-          width: 100%;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          margin: 1rem;
-          border: 1.25px solid $darktext;
-          border-radius: 9px;
-          cursor: pointer;
 
-          .choosen {
-            padding: 0.5rem 0.5rem 0rem 0rem;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            width: 100%;
-            i {
-              font-size: 0.7rem;
-              color: white;
-              padding: 0.2rem;
-              border-radius: 50%;
-              background: white;
-              border: 0.7px solid lightgrey;
-            }
-            #usOnly-button {
-              color: $lightColor;
-              border: 0.7px solid $lightColor;
-            }
-          }
+      form{
+        width: 100%;
+        height: 100%;
+      }
 
-          .hourly,
-          .budget {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 0.5rem 1rem;
-            i {
-              font-size: 1.5rem;
-            }
-            h4 {
-              width: 100%;
-              text-align: center;
-              font-size: 1rem;
-              font-weight: lighter;
-              padding: 0.5rem 0rem;
-            }
-          }
-          &:hover {
-            background: rgb(248, 246, 246);
-          }
-        }
-      }
-      .budgetContainer {
-        width: 100%;
-        display: none;
-        padding: 1rem;
-        h4 {
-          font-size: 1rem;
-          margin-bottom: 1rem;
-        }
-        .addBudget {
-          width: fit-content;
-          padding: 0rem 0.5rem;
-          border-radius: 8px;
-          border: 1.5px solid lightgrey;
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          span {
-            font-size: 1.2rem;
-            color: $darktext;
-          }
-          input {
-            padding: 0.5rem 0rem;
-            margin-left: 0.5rem;
-            outline: none;
-            border: none;
-          }
-          button {
-            border: none;
-            color: $color1;
-            cursor: pointer;
-            background: transparent;
-          }
-          &:hover {
-            border-radius: 8px;
-            border: 1.5px solid $color1;
-          }
-        }
-        #alertBudget {
-          font-size: 0.9rem;
-          margin-top: 0.5rem;
-          color: rgb(204, 4, 4);
-          i {
-            padding-right: 0.5rem;
-            font-size: 1rem;
-          }
-        }
-        #OfficalBudget {
-          display: none;
-          color: $color1;
-          margin-top: 1rem;
-        }
-      }
-      .hourlyContainer {
-        display: none;
-        width: 100%;
-        padding: 1rem;
-        #OfficialRate {
-          color: $color1;
-          margin: 1rem 0rem;
-        }
-        .setHourlyRate {
-          width: 100%;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          .minimum {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: flex-start;
-            #alertMinHourly {
-              font-size: 0.9rem;
-              margin-top: 0.5rem;
-              color: rgb(204, 4, 4);
-              i {
-                padding-right: 0.5rem;
-                font-size: 1rem;
-              }
-            }
-            p {
-              margin-bottom: 0.5rem;
-              width: 100%;
-              text-align: left;
-              font-size: 1.2rem;
-            }
-            span {
-              padding-left: 0.5rem;
-              font-size: 1rem;
-            }
-            .addMinHourly {
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              .inputContainer {
-                width: fit-content;
-                padding: 0rem 0.5rem;
-                border-radius: 8px;
-                border: 1.5px solid lightgrey;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                input {
-                  padding: 0.3rem 0rem;
-                  border: none;
-                  outline: none;
-                }
-                button {
-                  border: none;
-                  font-size: 1rem;
-                  background: transparent;
-                  cursor: pointer;
-                  color: $lightColor;
-                }
-                span {
-                  padding-right: 0.5rem;
-                  font-size: 1.2rem;
-                  color: $darktext;
-                }
-              }
-            }
-          }
-          .maximum {
-            margin-top: 1rem;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: flex-start;
-            #MaxError {
-              font-size: 0.9rem;
-              margin-top: 0.5rem;
-              color: rgb(204, 4, 4);
-              i {
-                padding-right: 0.5rem;
-                font-size: 1rem;
-              }
-            }
-            p {
-              margin-bottom: 0.5rem;
-              width: 100%;
-              text-align: left;
-              font-size: 1.2rem;
-            }
-            span {
-              padding-left: 0.5rem;
-              font-size: 1rem;
-            }
-            .addMaxHourly {
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              .inputContainer {
-                width: fit-content;
-                padding: 0rem 0.5rem;
-                border-radius: 8px;
-                border: 1.5px solid lightgrey;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                input {
-                  padding: 0.3rem 0rem;
-                  border: none;
-                  outline: none;
-                }
-                button {
-                  border: none;
-                  font-size: 1rem;
-                  background: transparent;
-                  cursor: pointer;
-                  color: $lightColor;
-                }
-                span {
-                  padding-right: 0.5rem;
-                  font-size: 1.2rem;
-                  color: $darktext;
-                }
-              }
-            }
-          }
-        }
-      }
-      //Pop up
-      .noBudgetPopup {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 70%;
-        background: #054e97;
-        border-radius: 10px;
-        height: fit-content;
-        padding: 1rem;
-        .closePopup {
-          width: 100%;
-          display: flex;
-          flex-direction: row;
-          justify-content: flex-end;
-          span {
-            color: white;
-            font-size: 1.2rem;
-            cursor: pointer;
-            &:hover {
-              color: lightgrey;
-            }
-          }
-        }
-        p {
-          width: 100%;
-          font-size: 0.9rem;
-          text-align: center;
-          margin-bottom: 1rem;
-          color: white;
-        }
-        #addBudgetBtn {
-          width: 90%;
-          border: none;
-          padding: 0.3rem 0rem;
-          background: rgb(95, 223, 95);
-          font-size: 1rem;
-          border-radius: 10px;
-          color: white;
-          cursor: pointer;
-          margin-bottom: 0.5rem;
-        }
-        #noBudgetBtn {
-          width: 90%;
-          border: none;
-          cursor: pointer;
-          background: transparent;
-          padding: 0.3rem 0rem;
-          font-size: 1rem;
-          color: rgb(95, 223, 95);
-        }
-      }
-      #noBudget {
-        font-size: 1rem;
-        color: #054e97;
-        padding: 0.2rem 1rem;
-        cursor: pointer;
-        &:hover {
-          text-decoration: underline;
-        }
-      }
       .CancelOrNext {
-        margin-top: 1rem;
+        margin-top: 2rem;
         display: flex;
         flex-direction: row;
         width: 100%;
         justify-content: flex-end;
         align-items: center;
-        #cancel {
-          color: $color1;
-          font-size: 1rem;
-          background: none;
-          padding: 0.5rem 1.5rem;
-          border-radius: 15px;
-          border: 0.6px solid $color1;
-          cursor: pointer;
-          &:hover {
-            background: rgb(235, 235, 235);
-          }
-        }
-        #reviewJobPost {
+        #JobPost {
+          -moz-appearance: none;
+          -webkit-appearance: none;
+          appearance: none;
           margin-left: 1rem;
           color: $color1;
           font-size: 1rem;
