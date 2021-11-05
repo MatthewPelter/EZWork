@@ -753,7 +753,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  padding: 2rem 0rem;
+  padding: 2.5rem 0rem;
 }
 .postJob-detail-location .detail-location-container .detail-input-section form .unitedStates label, .postJob-detail-location .detail-location-container .detail-input-section form .worldwide label {
   cursor: pointer;
@@ -781,7 +781,7 @@
   border: 0.7px solid #054e97;
 }
 .postJob-detail-location .detail-location-container .detail-input-section .CancelOrNext {
-  margin-top: 3rem;
+  margin-top: 4rem;
   display: flex;
   flex-direction: row;
   width: 100%;

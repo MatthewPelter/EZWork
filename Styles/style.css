@@ -9352,7 +9352,7 @@ ul {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  padding: 2rem 0rem;
+  padding: 2.5rem 0rem;
 }
 
 .postJob-detail-location .detail-location-container .detail-input-section form .unitedStates label, .postJob-detail-location .detail-location-container .detail-input-section form .worldwide label {
@@ -9385,7 +9385,7 @@ ul {
 }
 
 .postJob-detail-location .detail-location-container .detail-input-section .CancelOrNext {
-  margin-top: 3rem;
+  margin-top: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
