@@ -7488,6 +7488,9 @@ ul {
     color: #054e97;
   }
   .settings .settings-container .settings-account-container .settings-account-profile-image form #changeAvatar {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     margin: 1rem 0rem;
     width: -webkit-fit-content;
     width: -moz-fit-content;
@@ -7655,6 +7658,9 @@ ul {
     border-radius: 3px;
   }
   .settings .settings-password .settings-password-container .settings-password-card2 form #changePassBTN {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;

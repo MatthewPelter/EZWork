@@ -1,3 +1,6 @@
+$color1: #0a345e;
+$lightColor: #054e97;
+$darktext: rgb(121, 121, 121);
 //Global
 ul {
   list-style: none;
@@ -614,6 +617,9 @@ ul {
               color: $lightColor;
             }
             #changeAvatar{
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              appearance: none;
               margin: 1rem 0rem;
               width:fit-content;
               color: white;
@@ -741,6 +747,7 @@ ul {
             display: flex;
             flex-direction: column;
             input{
+
               width: 60%;
               padding: 0.25rem;
               border: .7px solid lightgrey;
@@ -749,6 +756,9 @@ ul {
               border-radius: 3px;
             }
             #changePassBTN{
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              appearance: none;
               width: fit-content;
               color: white;
               cursor: pointer;
