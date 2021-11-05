@@ -8922,9 +8922,7 @@ ul {
 
 .postJob-detail-scope {
   width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 96vh;
   background: whitesmoke;
   padding: 2.5rem 10rem;
 }
@@ -9099,7 +9097,7 @@ ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 2rem 0rem;
+  margin: 1.5rem 0rem;
 }
 
 .postJob-detail-scope .detail-scope-container .detail-input-section .scopeOptions .projectSize label,
@@ -9124,7 +9122,7 @@ ul {
 }
 
 .postJob-detail-scope .detail-scope-container .detail-input-section .CancelOrNext {
-  margin: 4rem 0rem 2rem 0rem;
+  margin: 2rem 0rem 2rem 0rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -453,7 +453,7 @@
 
 .postJob-detail-scope {
   width: 100%;
-  height: fit-content;
+  height: 96vh;
   background: whitesmoke;
   padding: 2.5rem 10rem;
 }
@@ -570,7 +570,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin: 2rem 0rem;
+  margin: 1.5rem 0rem;
 }
 .postJob-detail-scope .detail-scope-container .detail-input-section .scopeOptions .projectSize label,
 .postJob-detail-scope .detail-scope-container .detail-input-section .scopeOptions .projectLength label,
@@ -592,7 +592,7 @@
   color: #797979;
 }
 .postJob-detail-scope .detail-scope-container .detail-input-section .CancelOrNext {
-  margin: 4rem 0rem 2rem 0rem;
+  margin: 2rem 0rem 2rem 0rem;
   display: flex;
   flex-direction: row;
   width: 100%;

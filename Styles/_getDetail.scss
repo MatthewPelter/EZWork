@@ -470,7 +470,7 @@ $darktext: rgb(121, 121, 121);
 // Css for posting scope start here
 .postJob-detail-scope {
   width: 100%;
-  height: fit-content;
+  height: 96vh;
   background: whitesmoke;
   padding: 2.5rem 10rem;
 
@@ -587,7 +587,7 @@ $darktext: rgb(121, 121, 121);
           flex-direction: row;
           align-items: center;
           justify-content: space-between;
-          margin: 2rem 0rem;
+          margin: 1.5rem 0rem;
           label {
             width: 50%;
             color: $lightColor;
@@ -606,7 +606,7 @@ $darktext: rgb(121, 121, 121);
         }
       }
       .CancelOrNext {
-        margin: 4rem 0rem 2rem 0rem;
+        margin: 2rem 0rem 2rem 0rem;
         display: flex;
         flex-direction: row;
         width: 100%;
