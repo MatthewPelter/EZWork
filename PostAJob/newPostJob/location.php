@@ -74,11 +74,17 @@ if (isset($_POST['size'])) {
                 ?>
             </span>
             <form action="budget.php" method="post">
-                <input type="radio" id="us" name="location" value="us" required>
-                <label for="us">U.S. only</label>
-                <input type="radio" id="world" name="location" value="world">
-                <label for="world">Worldwide</label>
 
+                <div class="unitedStates">
+                    <label for="us">U.S. only</label>
+                    <input type="radio" id="us" name="location" value="us" required>
+                </div>
+                <p>Only talent in the United States can submit proposals</p>
+                <div class="worldwide">
+                    <label for="world">Worldwide</label>
+                    <input type="radio" id="world" name="location" value="world">
+                </div>
+                <p>Freelancers in any location can submit proposals</p>
                 <div class="CancelOrNext">
                     <input type="submit" value="Next: Budget" id="nextBudget"/>
                 </div>
