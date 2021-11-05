@@ -1026,13 +1026,12 @@ $darktext: rgb(121, 121, 121);
           margin-left: 1rem;
           color: $color1;
           font-size: 1rem;
-          background: lightgrey;
-          color: gray;
+          background:$lightColor;
+          color: white;
           padding: 0.5rem 1.5rem;
           border-radius: 15px;
           border: none;
           cursor: pointer;
-          pointer-events: none;
           &:hover {
             background: $color1;
           }

@@ -9696,13 +9696,12 @@ ul {
   margin-left: 1rem;
   color: #0a345e;
   font-size: 1rem;
-  background: lightgrey;
-  color: gray;
+  background: #054e97;
+  color: white;
   padding: 0.5rem 1.5rem;
   border-radius: 15px;
   border: none;
   cursor: pointer;
-  pointer-events: none;
 }
 
 .postJob-detail-budget .detail-budget-container .detail-input-section .CancelOrNext #JobPost:hover {
