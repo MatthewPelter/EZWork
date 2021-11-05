@@ -3801,301 +3801,187 @@ $darktext: rgb(121, 121, 121);
     }
   }
   // Css for posting location start here
-  .postJob-detail-location {
-    margin-top: 3.5rem;
-    width: 100%;
-    background: whitesmoke;
-    padding: 1rem 0rem;
+.postJob-detail-location {
+  width: 100%;
+  height: fit-content;
+  background: whitesmoke;
+  padding: 2.5rem 0rem;
 
-    .detail-location-container {
+  .detail-location-container {
+    width: 100%;
+    height: fit-content;
+    background: $color1;
+    display: flex;
+    flex-direction: column;
+    border: 1.25px solid rgb(153, 130, 130);
+    border-radius: 0;
+    .detail-progress-section {
       width: 100%;
       height: fit-content;
+      padding: 1.5rem;
       background: $color1;
       display: flex;
       flex-direction: column;
-      border: none;
-      border-radius: 15px;
-      .detail-progress-section {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      #current {
+        color: lightgreen;
+      }
+      .progressBar {
         width: 100%;
-        height: 100%;
-        padding: 1.5rem;
-        background: $color1;
-        display: flex;
-        flex-direction: column;
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-        #current {
-          color: lightgreen;
-        }
-        .progressBar {
+        progress {
+          border-radius: 10px;
           width: 100%;
-          progress {
-            border-radius: 10px;
-            width: 100%;
-            padding: 0;
-            border: none;
-            background: #104880;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-          }
-          progress::-webkit-progress-bar {
-            border-radius: 10px;
-            width: 100%;
-            padding: 0;
-            border: none;
-            background: #104880;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-          }
-          progress::-moz-progress-bar {
-            border-radius: 10px;
-            width: 100%;
-            padding: 0;
-            border: none;
-            background: #104880;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-          }
-          progress::-webkit-progress-value {
-            background: lightgreen;
-            border-top-left-radius: 10px;
-            border-bottom-left-radius: 10px;
-            height: 100%;
-            border: none;
-          }
-          progress::-moz-progress-bar {
-            background: lightgreen;
-            border-top-left-radius: 10px;
-            border-bottom-left-radius: 10px;
-            height: 100%;
-            border: none;
-          }
-          ul {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            padding-top: 0.3rem;
-            li {
-              color: white;
-              font-size: 0.9rem;
-            }
-          }
+          padding: 0;
+          border: none;
+          background: #104880;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
         }
-        .title-card-intro {
-          h2 {
-            padding: 3rem 0rem 1rem 0rem;
+        progress::-webkit-progress-bar {
+          border-radius: 10px;
+          width: 100%;
+          padding: 0;
+          border: none;
+          background: #104880;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+        }
+        progress::-moz-progress-bar {
+          border-radius: 10px;
+          width: 100%;
+          padding: 0;
+          border: none;
+          background: #104880;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+        }
+        progress::-webkit-progress-value {
+          background: lightgreen;
+          border-top-left-radius: 10px;
+          border-bottom-left-radius: 10px;
+          height: 100%;
+          border: none;
+        }
+        progress::-moz-progress-bar {
+          background: lightgreen;
+          border-top-left-radius: 10px;
+          border-bottom-left-radius: 10px;
+          height: 100%;
+          border: none;
+        }
+        ul {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          padding-top: 0.3rem;
+          li {
             color: white;
-            font-size: 2.3rem;
-          }
-          p {
-            color: white;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
           }
         }
       }
-      .detail-input-section {
+      .title-card-intro {
+        h2 {
+          padding: 6rem 0rem 1rem 0rem;
+          color: white;
+          font-size: 2.3rem;
+        }
+        p {
+          color: white;
+          font-size: 0.95rem;
+        }
+      }
+    }
+    .detail-input-section {
+      width: 100%;
+      height: fit-content;
+      padding: 2rem;
+      background: white;
+      display: flex;
+      flex-direction: column;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      justify-content: center;
+      align-items: flex-start;
+      form{
         width: 100%;
-        height: 100%;
-        padding: 1rem;
-        background: white;
+        height: fit-content;
         display: flex;
         flex-direction: column;
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
-        justify-content: center;
-        align-items: center;
-        .locationOptions {
-          margin-top: 1rem;
+
+        p{
+          color: $darktext;
+          font-size: 1.1rem;
+          width: 95%;
+        }
+
+        .unitedStates,.worldwide{
           display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          align-items: center;
           width: 100%;
-          #usOnly {
-            border: 1.25px solid $lightColor;
-          }
-          .optionCard {
-            width: 100%;
-            height: 20vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 1rem;
-            border: 1.25px solid lightgrey;
-            border-radius: 9px;
-            cursor: pointer;
-
-            .choosen {
-              padding: 0.5rem 0.5rem 0rem 0rem;
-              display: flex;
-              align-items: center;
-              justify-content: flex-end;
-              width: 100%;
-              i {
-                font-size: 0.7rem;
-                color: white;
-                padding: 0.2rem;
-                border-radius: 50%;
-                background: white;
-                border: 0.7px solid lightgrey;
-              }
-              #usOnly-button {
-                color: $lightColor;
-                border: 0.7px solid $lightColor;
-              }
-            }
-
-            .usOnly,
-            .worldwide {
-              width: 100%;
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              align-items: center;
-              padding: 1rem;
-              h4 {
-                width: 100%;
-                text-align: center;
-                font-size: 1.2rem;
-                font-weight: lighter;
-                padding: 1rem 0rem;
-              }
-              p {
-                width: 100%;
-                text-align: center;
-                font-size: 0.9rem;
-                color: $darktext;
-              }
-              i {
-                font-size: 1.5rem;
-              }
-            }
-            &:hover {
-              background: rgb(248, 246, 246);
-            }
-          }
-        }
-        .locationsCards {
-          width: 100%;
-          .usOnlyCard,
-          .worldwideCard {
-            display: none;
-            width: 100%;
-            padding: 1rem;
-            h4 {
-              font-size: 0.9rem;
-              span {
-                color: $darktext;
-              }
-            }
-            .statesPulldown,
-            .worldwidePulldown {
-              display: flex;
-              flex-direction: row;
-              justify-content: space-between;
-              align-items: center;
-              border-radius: 7px;
-              border: none;
-              border: 0.7px solid lightgrey;
-              outline: none;
-              width: 100%;
-              margin: 1rem 0rem;
-              input {
-                outline: none;
-                border: none;
-                width: 100%;
-                margin: 0.3rem 0rem;
-                padding: 0.4rem;
-              }
-              #add1,
-              #add2 {
-                font-size: 1rem;
-                border: none;
-                background: transparent;
-                color: $lightColor;
-                cursor: pointer;
-                margin-right: 0.5rem;
-              }
-            }
-            span {
-              color: $darktext;
-              font-size: 0.8rem;
-            }
-          }
-        }
-
-        .selectedLocationsCard {
-          display: none;
-          width: 100%;
-          padding: 1rem;
-          margin: 1rem;
-          border: lightgrey 0.7px solid;
-          border-radius: 10px;
-          h5 {
-            width: 100%;
-            font-size: 0.9rem;
-            text-decoration: underline;
-            font-weight: lighter;
-          }
-          .selectedLocations {
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            label {
-              width: fit-content;
-              font-size: 0.8rem;
-              background: $color1;
-              color: white;
-              padding: 0.4rem 1rem;
-              border-radius: 15px;
-              border: none;
-              cursor: pointer;
-              margin: 0.4rem;
-            }
-          }
-        }
-        .CancelOrNext {
-          margin: 2rem 0rem;
-          display: flex;
           flex-direction: row;
-          width: 100%;
-          justify-content: flex-end;
           align-items: center;
-          #cancel {
-            color: $color1;
-            font-size: 1rem;
-            background: none;
-            padding: 0.5rem 1.5rem;
-            border-radius: 15px;
-            border: 0.6px solid $color1;
+          justify-content: flex-start;
+          padding: 2rem 0rem;
+          label{
             cursor: pointer;
+            font-size: 1.2rem;
+            color: $lightColor;
+            font-weight: bolder;
+            padding-right: 1rem;
+          }
+          input {
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            appearance: none;
+            cursor: pointer;
+            width: 1rem;
+            height: 1rem;
+            border: 0.7px solid $darktext;
+            background-color: transparent;
+            border-radius: 50%;
+            &:checked {
+              background-color:lightgreen;
+              border: 0.8px solid $lightColor;
+            }
             &:hover {
-              background: rgb(235, 235, 235);
+              border: 0.7px solid $lightColor;
             }
           }
-          #nextBudget {
-            margin-left: 1rem;
-            color: $color1;
-            font-size: 1rem;
-            background: $lightColor;
-            color: white;
-            padding: 0.5rem 1.5rem;
-            border-radius: 15px;
-            border: none;
-            cursor: pointer;
-            &:hover {
-              background: $color1;
-            }
+        }
+      }
+      .CancelOrNext {
+        margin-top: 4rem;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: flex-end;
+        align-items: center;
+        #nextBudget {
+          -moz-appearance: none;
+          -webkit-appearance: none;
+          appearance:none;
+          margin-left: 1rem;
+          color: $color1;
+          font-size: 1rem;
+          background: $lightColor;
+          color: white;
+          padding: 0.5rem 1.5rem;
+          border-radius: 15px;
+          border: none;
+          cursor: pointer;
+          &:hover {
+            background: $color1;
           }
         }
       }
     }
   }
+}
   // Css for posting budget start here
   .postJob-detail-budget {
     margin-top: 3.5rem;
