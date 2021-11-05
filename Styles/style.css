@@ -9113,7 +9113,7 @@ ul {
 .postJob-detail-scope .detail-scope-container .detail-input-section .scopeOptions .projectLength select,
 .postJob-detail-scope .detail-scope-container .detail-input-section .scopeOptions .projectExperience select {
   text-align: center;
-  width: 30%;
+  width: 40%;
   cursor: pointer;
   background-color: transparent;
   border-radius: 5px;
