@@ -198,6 +198,7 @@ if (isset($_POST['length'])) {
     }
 
 </script>
+</html>
 <?php
 /* We can use this for the registration to improve input validation
 
