@@ -19,8 +19,7 @@ if (isset($_POST['length'])) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <head>
+    <>
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="description" content="A platform for skilled workers or talented people to freelance, find projects to work on, extra ways to earn income.">
@@ -35,7 +34,6 @@ if (isset($_POST['length'])) {
             <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet"> 
             <link rel="icon" href="../logo/logo.svg">
             <link rel="stylesheet" href="../../Styles/style.css">
-        </head>
     </head>
 <body>
 
@@ -105,6 +103,7 @@ if (isset($_POST['length'])) {
 
     </datalist>
 </body>
+
 <script src="../SkillsContainer/searchProfile.js"></script>
 <script>
     var job = document.querySelector('.jobCard');
