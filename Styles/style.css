@@ -9429,9 +9429,7 @@ ul {
 
 .postJob-detail-budget .detail-budget-container {
   width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 100%;
   background: #0a345e;
   display: -webkit-box;
   display: -ms-flexbox;
