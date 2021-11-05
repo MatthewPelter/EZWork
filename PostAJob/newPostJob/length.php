@@ -31,7 +31,7 @@ if (!isset($_SESSION['userid'])) {
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet"> 
-            <link rel="icon" href="../logo/logo.svg">
+            <link rel="icon" href="../../logo/logo.svg">
             <link rel="stylesheet" href="../../Styles/style.css">
         </head>
     </head>
