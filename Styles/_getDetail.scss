@@ -595,7 +595,8 @@ $darktext: rgb(121, 121, 121);
             font-weight: bold;
           }
           select {
-            width: 10rem;
+            text-align: center;
+            width: 30%;
             cursor: pointer;
             background-color: transparent;
             border-radius: 5px;
@@ -625,6 +626,9 @@ $darktext: rgb(121, 121, 121);
           }
         }
         #nextLocation {
+          -moz-appearance: none;
+          -webkit-appearance: none;
+          appearance: none;
           margin-left: 1rem;
           color: $color1;
           font-size: 1rem;
@@ -636,146 +640,6 @@ $darktext: rgb(121, 121, 121);
           cursor: pointer;
           &:hover {
             background: $color1;
-          }
-        }
-      }
-      .freelance-experience-options {
-        display: none;
-        width: 100%;
-        span {
-          font-size: 0.9rem;
-          color: $darktext;
-        }
-        .entry-option,
-        .intermediate-option,
-        .expert-option {
-          display: flex;
-          flex-direction: column;
-          cursor: pointer;
-          padding: 0.5rem;
-          border-radius: 5px;
-          .option-title {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            width: 100%;
-            h3 {
-              font-size: 1rem;
-              font-weight: lighter;
-              padding-left: 0.5rem;
-            }
-            i {
-              font-size: 0.7rem;
-              color: transparent;
-              padding: 0.1rem;
-              border-radius: 50%;
-              border: 0.5px solid lightgrey;
-            }
-            #entry-button {
-              color: $lightColor;
-            }
-          }
-          span {
-            font-size: 0.8rem;
-            color: $darktext;
-            padding-left: 1.5rem;
-          }
-          &:hover {
-            transition: all 1s ease;
-            background: rgb(238, 238, 238);
-            i {
-              padding: 0.2rem;
-              font-size: 0.8rem;
-            }
-          }
-        }
-      }
-      .project-time-options {
-        display: none;
-        width: 100%;
-        .threeToSixMonths,
-        .oneToThreeMonths,
-        .lessThanOneMonth {
-          display: flex;
-          flex-direction: column;
-          cursor: pointer;
-          padding: 0.5rem;
-          border-radius: 5px;
-          .time-title {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            width: 100%;
-            h3 {
-              font-size: 0.9rem;
-              font-weight: lighter;
-              padding-left: 0.5rem;
-            }
-            i {
-              font-size: 0.7rem;
-              color: transparent;
-              padding: 0.1rem;
-              border-radius: 50%;
-              border: 0.5px solid lightgrey;
-            }
-            #lessThanOneMonth-button {
-              color: $lightColor;
-            }
-          }
-          &:hover {
-            transition: all 1s ease;
-            background: rgb(238, 238, 238);
-            i {
-              font-size: 0.8rem;
-              padding: 0.2rem;
-            }
-          }
-        }
-      }
-      .project-size-options {
-        width: 100%;
-        display: none;
-        .large-option,
-        .medium-option,
-        .small-option {
-          display: flex;
-          flex-direction: column;
-          cursor: pointer;
-          padding: 0.5rem;
-          border-radius: 5px;
-          .size-option-title {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            width: 100%;
-            h3 {
-              font-size: 1rem;
-              font-weight: lighter;
-              padding-left: 0.5rem;
-            }
-            i {
-              font-size: 0.7rem;
-              color: transparent;
-              padding: 0.1rem;
-              border-radius: 50%;
-              border: 0.5px solid lightgrey;
-            }
-            #small-button {
-              color: $lightColor;
-            }
-          }
-          span {
-            font-size: 0.8rem;
-            color: $darktext;
-            padding-left: 1.5rem;
-          }
-          &:hover {
-            transition: all 1s ease;
-            background: rgb(238, 238, 238);
-            i {
-              font-size: 0.8rem;
-              padding: 0.2rem;
-            }
           }
         }
       }
