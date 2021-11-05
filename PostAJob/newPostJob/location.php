@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once('../../classes/DB.php');
 // Checking second page values for empty, If it finds any blank field then redirected to second page.
 if (isset($_POST['size'])) {
     if (empty($_POST['size']) || empty($_POST['months']) || empty($_POST['experience'])) {

@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once('../../classes/DB.php');
 // Checking first page values for empty,If it finds any blank field then redirected to first page.
 if (isset($_POST['length'])) {
     if (empty($_POST['length'])) {
@@ -19,57 +20,59 @@ if (isset($_POST['length'])) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-        <head>
-            <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="description" content="A platform for skilled workers or talented people to freelance, find projects to work on, extra ways to earn income.">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <script src="https://kit.fontawesome.com/e9089fea9d.js" crossorigin="anonymous"></script>
-            <title>EZWork | Find Jobs or Freelancers</title>
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet"> 
-            <link rel="icon" href="../logo/logo.svg">
-            <link rel="stylesheet" href="../../Styles/style.css">
-        </head>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="A platform for skilled workers or talented people to freelance, find projects to work on, extra ways to earn income.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/e9089fea9d.js" crossorigin="anonymous"></script>
+        <title>EZWork | Find Jobs or Freelancers</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+        <link rel="icon" href="../logo/logo.svg">
+        <link rel="stylesheet" href="../../Styles/style.css">
     </head>
+</head>
 
 <body>
 
     <?php include '../../navbar.php'; ?>
 
-           <!--Post A Job More Details-->
-           <div class="postJob-detail-title">
-            <div class="detail-container">
-                <div class="detail-progress-section">
-                    <div class="progressBar">
-                        <progress id="jobPostProgress" value="25" max="100"></progress>
-                        <ul>
-                            <li id="current">Length</li>
-                            <li id="current">Title</li>
-                            <li>Scope</li>
-                            <li>Location</li>
-                            <li>Budget</li>
-                        </ul>
-                    </div>
-                    <div class="title-card-intro">
-                        <h2>Let's add a strong title and description.</h2>
-                        <p>A strong, detailed title would stand out to the right freelancers. It's the first thing they would see. Be very descriptive</p>
-                    </div>
+    <!--Post A Job More Details-->
+    <div class="postJob-detail-title">
+        <div class="detail-container">
+            <div class="detail-progress-section">
+                <div class="progressBar">
+                    <progress id="jobPostProgress" value="25" max="100"></progress>
+                    <ul>
+                        <li id="current">Length</li>
+                        <li id="current">Title</li>
+                        <li>Scope</li>
+                        <li>Location</li>
+                        <li>Budget</li>
+                    </ul>
                 </div>
-                <div class="detail-input-section">
+                <div class="title-card-intro">
+                    <h2>Let's add a strong title and description.</h2>
+                    <p>A strong, detailed title would stand out to the right freelancers. It's the first thing they would see. Be very descriptive</p>
+                </div>
+            </div>
+            <div class="detail-input-section">
                 <span id="error" style="color: red;padding: 0;">
-                        <?php
-                        // To show error of page 2.
-                        if (!empty($_SESSION['error_page2'])) {
-                            echo $_SESSION['error_page2'];
-                            unset($_SESSION['error_page2']);
-                        }
-                        ?>
+                    <?php
+                    // To show error of page 2.
+                    if (!empty($_SESSION['error_page2'])) {
+                        echo $_SESSION['error_page2'];
+                        unset($_SESSION['error_page2']);
+                    }
+                    ?>
                 </span>
                 <form action="scope.php" method="post" style="width: 100%;">
                     <h3>Write a title for your job post</h3>
@@ -88,21 +91,21 @@ if (isset($_POST['length'])) {
                     </div>
                     <div class="CancelOrNext">
                         <input type="reset" value="Reset" id="reset" />
-    
-                        <input type="submit" value="Next" id="nextScope"/>
+
+                        <input type="submit" value="Next" id="nextScope" />
                     </div>
                 </form>
-    
-                </div>
-            </div>
-            </div>
-            <!--Post A Job End-->
 
-            <?php include '../../footer.php'; ?>
+            </div>
+        </div>
+    </div>
+    <!--Post A Job End-->
 
-            <!--DataList-->
-            <datalist id="allskills"></datalist>
-    
+    <?php include '../../footer.php'; ?>
+
+    <!--DataList-->
+    <datalist id="allskills"></datalist>
+
 </body>
 
 <!--Nav bar script-->
@@ -112,73 +115,72 @@ if (isset($_POST['length'])) {
     var project = document.querySelector('.projectCard');
     var help = document.querySelector('.helpCard');
     var session = document.querySelector('.sessionCard');
-    function toggleJob(){
+
+    function toggleJob() {
         var job = document.querySelector('.jobCard');
-        if(job.style.display === 'none'){
+        if (job.style.display === 'none') {
             job.style.display = 'inline-block';
             talent.style.display = 'none';
             project.style.display = 'none';
             help.style.display = 'none';
             session.style.display = 'none';
-        }
-        else{
-            job.style.display='none';
-            
+        } else {
+            job.style.display = 'none';
+
         }
     }
-    function toggleTalent(){
+
+    function toggleTalent() {
         var talent = document.querySelector('.talentCard');
-        if(talent.style.display==='none'){
+        if (talent.style.display === 'none') {
             talent.style.display = 'inline-block';
             job.style.display = 'none';
             project.style.display = 'none';
             help.style.display = 'none';
             session.style.display = 'none';
-        }
-        else{
+        } else {
             talent.style.display = 'none';
         }
     }
-    function toggleProject(){
+
+    function toggleProject() {
         var project = document.querySelector('.projectCard');
-        if(project.style.display==='none'){
+        if (project.style.display === 'none') {
             project.style.display = 'inline-block';
             talent.style.display = 'none';
             job.style.display = 'none';
             help.style.display = 'none';
             session.style.display = 'none';
-        }
-        else{
+        } else {
             project.style.display = 'none';
         }
     }
-    function toggleHelp(){
+
+    function toggleHelp() {
         var help = document.querySelector('.helpCard');
-        if(help.style.display==='none'){
+        if (help.style.display === 'none') {
             help.style.display = 'inline-block';
             talent.style.display = 'none';
             project.style.display = 'none';
             job.style.display = 'none';
             session.style.display = 'none';
-        }
-        else{
+        } else {
             help.style.display = 'none';
         }
     }
-    function toggleSession(){
-       
-        if(session.style.display==='none'){
+
+    function toggleSession() {
+
+        if (session.style.display === 'none') {
             session.style.display = 'inline-block';
             talent.style.display = 'none';
             project.style.display = 'none';
             help.style.display = 'none';
             job.style.display = 'none';
-        }
-        else{
+        } else {
             session.style.display = 'none';
         }
     }
-
 </script>
 <!--Toggle the nav burger button-->
 <script>
@@ -187,17 +189,16 @@ if (isset($_POST['length'])) {
 
     function myFunction(x) {
         x.classList.toggle("change");
-        if(x.classList.contains('change')){
+        if (x.classList.contains('change')) {
             profileMobileNav.style.display = "inline-block";
-            searchIcon.style.opacity='0';
-        }
-        else{
-            profileMobileNav.style.display='none';
-            searchIcon.style.opacity='1';
+            searchIcon.style.opacity = '0';
+        } else {
+            profileMobileNav.style.display = 'none';
+            searchIcon.style.opacity = '1';
         }
     }
-
 </script>
+
 </html>
 <?php
 /* We can use this for the registration to improve input validation
