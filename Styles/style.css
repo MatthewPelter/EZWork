@@ -8466,7 +8466,8 @@ ul {
   margin-top: 0.8rem;
 }
 
-.postJob-detail .detail-container .detail-input-section .lengthContainers .short, .postJob-detail .detail-container .detail-input-section .lengthContainers .long {
+.postJob-detail .detail-container .detail-input-section .lengthContainers .short,
+.postJob-detail .detail-container .detail-input-section .lengthContainers .long {
   padding: 1rem 0rem;
   width: 100%;
   display: -webkit-box;
@@ -8485,7 +8486,8 @@ ul {
   cursor: pointer;
 }
 
-.postJob-detail .detail-container .detail-input-section .lengthContainers .short input, .postJob-detail .detail-container .detail-input-section .lengthContainers .long input {
+.postJob-detail .detail-container .detail-input-section .lengthContainers .short input,
+.postJob-detail .detail-container .detail-input-section .lengthContainers .long input {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
@@ -8497,21 +8499,25 @@ ul {
   border-radius: 50%;
 }
 
-.postJob-detail .detail-container .detail-input-section .lengthContainers .short input:checked, .postJob-detail .detail-container .detail-input-section .lengthContainers .long input:checked {
+.postJob-detail .detail-container .detail-input-section .lengthContainers .short input:checked,
+.postJob-detail .detail-container .detail-input-section .lengthContainers .long input:checked {
   background-color: lightgrey;
   border: 0.7px solid #054e97;
 }
 
-.postJob-detail .detail-container .detail-input-section .lengthContainers .short input:hover, .postJob-detail .detail-container .detail-input-section .lengthContainers .long input:hover {
+.postJob-detail .detail-container .detail-input-section .lengthContainers .short input:hover,
+.postJob-detail .detail-container .detail-input-section .lengthContainers .long input:hover {
   border: 0.7px solid #054e97;
 }
 
-.postJob-detail .detail-container .detail-input-section .lengthContainers .short label, .postJob-detail .detail-container .detail-input-section .lengthContainers .long label {
+.postJob-detail .detail-container .detail-input-section .lengthContainers .short label,
+.postJob-detail .detail-container .detail-input-section .lengthContainers .long label {
   cursor: pointer;
   padding-left: 0.5rem;
 }
 
-.postJob-detail .detail-container .detail-input-section .lengthContainers .short:hover, .postJob-detail .detail-container .detail-input-section .lengthContainers .long:hover {
+.postJob-detail .detail-container .detail-input-section .lengthContainers .short:hover,
+.postJob-detail .detail-container .detail-input-section .lengthContainers .long:hover {
   color: #054e97;
 }
 
@@ -9069,7 +9075,9 @@ ul {
           flex-direction: column;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .scopeOptions .projectSize, .postJob-detail-scope .detail-scope-container .detail-input-section .scopeOptions .projectLength, .postJob-detail-scope .detail-scope-container .detail-input-section .scopeOptions .projectExperience {
+.postJob-detail-scope .detail-scope-container .detail-input-section .scopeOptions .projectSize,
+.postJob-detail-scope .detail-scope-container .detail-input-section .scopeOptions .projectLength,
+.postJob-detail-scope .detail-scope-container .detail-input-section .scopeOptions .projectExperience {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9086,14 +9094,18 @@ ul {
   margin: 2.5rem 0rem;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .scopeOptions .projectSize label, .postJob-detail-scope .detail-scope-container .detail-input-section .scopeOptions .projectLength label, .postJob-detail-scope .detail-scope-container .detail-input-section .scopeOptions .projectExperience label {
+.postJob-detail-scope .detail-scope-container .detail-input-section .scopeOptions .projectSize label,
+.postJob-detail-scope .detail-scope-container .detail-input-section .scopeOptions .projectLength label,
+.postJob-detail-scope .detail-scope-container .detail-input-section .scopeOptions .projectExperience label {
   width: 50%;
   color: #054e97;
   font-size: 1.2rem;
   font-weight: bold;
 }
 
-.postJob-detail-scope .detail-scope-container .detail-input-section .scopeOptions .projectSize select, .postJob-detail-scope .detail-scope-container .detail-input-section .scopeOptions .projectLength select, .postJob-detail-scope .detail-scope-container .detail-input-section .scopeOptions .projectExperience select {
+.postJob-detail-scope .detail-scope-container .detail-input-section .scopeOptions .projectSize select,
+.postJob-detail-scope .detail-scope-container .detail-input-section .scopeOptions .projectLength select,
+.postJob-detail-scope .detail-scope-container .detail-input-section .scopeOptions .projectExperience select {
   width: 8rem;
 }
 
@@ -12826,7 +12838,8 @@ ul {
             flex-direction: column;
     margin-top: 0.8rem;
   }
-  .postJob-detail .detail-container .detail-input-section .lengthContainers .short, .postJob-detail .detail-container .detail-input-section .lengthContainers .long {
+  .postJob-detail .detail-container .detail-input-section .lengthContainers .short,
+  .postJob-detail .detail-container .detail-input-section .lengthContainers .long {
     padding: 1rem 0rem;
     width: 100%;
     display: -webkit-box;
@@ -12844,28 +12857,33 @@ ul {
             justify-content: flex-start;
     cursor: pointer;
   }
-  .postJob-detail .detail-container .detail-input-section .lengthContainers .short input, .postJob-detail .detail-container .detail-input-section .lengthContainers .long input {
+  .postJob-detail .detail-container .detail-input-section .lengthContainers .short input,
+  .postJob-detail .detail-container .detail-input-section .lengthContainers .long input {
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
     cursor: pointer;
-    width: .7rem;
-    height: .7rem;
+    width: 0.7rem;
+    height: 0.7rem;
     border: 0.7px solid #797979;
     background-color: transparent;
     border-radius: 50%;
   }
-  .postJob-detail .detail-container .detail-input-section .lengthContainers .short input:checked, .postJob-detail .detail-container .detail-input-section .lengthContainers .long input:checked {
+  .postJob-detail .detail-container .detail-input-section .lengthContainers .short input:checked,
+  .postJob-detail .detail-container .detail-input-section .lengthContainers .long input:checked {
     background-color: #054e97;
   }
-  .postJob-detail .detail-container .detail-input-section .lengthContainers .short input:hover, .postJob-detail .detail-container .detail-input-section .lengthContainers .long input:hover {
+  .postJob-detail .detail-container .detail-input-section .lengthContainers .short input:hover,
+  .postJob-detail .detail-container .detail-input-section .lengthContainers .long input:hover {
     border: 0.7px solid #054e97;
   }
-  .postJob-detail .detail-container .detail-input-section .lengthContainers .short label, .postJob-detail .detail-container .detail-input-section .lengthContainers .long label {
+  .postJob-detail .detail-container .detail-input-section .lengthContainers .short label,
+  .postJob-detail .detail-container .detail-input-section .lengthContainers .long label {
     cursor: pointer;
     padding-left: 0.5rem;
   }
-  .postJob-detail .detail-container .detail-input-section .lengthContainers .short:hover, .postJob-detail .detail-container .detail-input-section .lengthContainers .long:hover {
+  .postJob-detail .detail-container .detail-input-section .lengthContainers .short:hover,
+  .postJob-detail .detail-container .detail-input-section .lengthContainers .long:hover {
     color: #054e97;
   }
   .postJob-detail .detail-container .detail-input-section .lengthContainers .short {
