@@ -80,13 +80,13 @@ if (isset($_POST['location'])) {
                 <label for="budget">Project Budget</label><br>
 
                 <div id="rateChecked" style="display: none;">
-                    <label>Optional </label><br />
+                    <label>Optional </label>
                     <label>Hourly Rate ($ / hour): </label>
                     <input name="hourrate" id="hourrate" type="number" placeholder="Enter $ Amount" value="">
                 </div>
 
                 <div id="budgetChecked" style="display: none;">
-                    <label>Optional </label><br />
+                    <label>Optional </label>
                     <label>Maximum Budget ($): </label>
                     <input name="maxbudget" id="maxbudget" type="number" placeholder="Enter $ Amount" value="">
                 </div>

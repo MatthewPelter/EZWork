@@ -915,6 +915,8 @@
 .postJob-detail-budget .detail-budget-container .detail-input-section form {
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .postJob-detail-budget .detail-budget-container .detail-input-section .CancelOrNext {
   margin-top: 2rem;
