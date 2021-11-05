@@ -563,7 +563,7 @@
     }
     .detail-input-section {
       width: 50%;
-      height: 100%;
+      height: fit-content;
       padding: 2rem;
       background: white;
       display: flex;
@@ -584,7 +584,7 @@
           flex-direction: row;
           align-items: center;
           justify-content: space-between;
-          margin: 2.5rem 0rem;
+          margin: 2rem 0rem;
           label {
             width: 50%;
             color: $lightColor;
@@ -592,7 +592,12 @@
             font-weight: bold;
           }
           select {
-            width: 8rem;
+            width: 10rem;
+            background-color: transparent;
+            border-radius: 5px;
+            padding: 0.25rem;
+            border: .7px solid $darktext;
+            color: $darktext;
           }
         }
       }

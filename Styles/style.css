@@ -9044,7 +9044,9 @@ ul {
 
 .postJob-detail-scope .detail-scope-container .detail-input-section {
   width: 50%;
-  height: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   padding: 2rem;
   background: white;
   display: -webkit-box;
@@ -9091,7 +9093,7 @@ ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 2.5rem 0rem;
+  margin: 2rem 0rem;
 }
 
 .postJob-detail-scope .detail-scope-container .detail-input-section .scopeOptions .projectSize label,
@@ -9106,7 +9108,12 @@ ul {
 .postJob-detail-scope .detail-scope-container .detail-input-section .scopeOptions .projectSize select,
 .postJob-detail-scope .detail-scope-container .detail-input-section .scopeOptions .projectLength select,
 .postJob-detail-scope .detail-scope-container .detail-input-section .scopeOptions .projectExperience select {
-  width: 8rem;
+  width: 10rem;
+  background-color: transparent;
+  border-radius: 5px;
+  padding: 0.25rem;
+  border: 0.7px solid #797979;
+  color: #797979;
 }
 
 .postJob-detail-scope .detail-scope-container .detail-input-section .CancelOrNext {
