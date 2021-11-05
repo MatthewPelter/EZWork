@@ -1,3 +1,22 @@
+<?php
+session_start();
+// Checking first page values for empty,If it finds any blank field then redirected to first page.
+if (isset($_POST['length'])) {
+    if (empty($_POST['length'])) {
+        // Setting error message
+        $_SESSION['error'] = "Mandatory field(s) are missing, Please fill it again";
+        header("location: length.php"); // Redirecting to first page 
+    } else {
+        foreach ($_POST as $key => $value) {
+            $_SESSION['post'][$key] = $value;
+        }
+    }
+} else {
+    if (empty($_SESSION['error_page2'])) {
+        header("location: length.php"); //redirecting to first page
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -212,9 +231,6 @@
         }
     });
     
-    function countWords(str) {
-        return str.trim().split(/\s+/).length;
-    }
     
 </script>
 
