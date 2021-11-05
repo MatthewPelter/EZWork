@@ -65,37 +65,37 @@ if (isset($_POST['location'])) {
                 </div>
             </div>
             <div class="detail-input-section">
-            <span id="error">
-                <?php
-                if (!empty($_SESSION['error_page5'])) {
-                    echo $_SESSION['error_page5'];
-                    unset($_SESSION['error_page5']);
-                }
-                ?>
-            </span>
-            <form action="postJob.php" method="post">
-                <input type="radio" id="rate" name="budgetoption" value="rate" required>
-                <label for="rate">Hourly Rate</label>
-                <input type="radio" id="budget" name="budgetoption" value="budget">
-                <label for="budget">Project Budget</label><br>
-
-                <div id="rateChecked" style="display: none;">
-                    <label>Optional </label>
-                    <label>Hourly Rate ($ / hour): </label>
-                    <input name="hourrate" id="hourrate" type="number" placeholder="Enter $ Amount" value="">
-                </div>
-
-                <div id="budgetChecked" style="display: none;">
-                    <label>Optional </label>
-                    <label>Maximum Budget ($): </label>
-                    <input name="maxbudget" id="maxbudget" type="number" placeholder="Enter $ Amount" value="">
-                </div>
-
-                <div class="CancelOrNext">
-                    <input type="submit" value="Post Job" id="JobPost" />
-                </div>
-
-            </form>
+                <span id="error">
+                    <?php
+                    if (!empty($_SESSION['error_page5'])) {
+                        echo $_SESSION['error_page5'];
+                        unset($_SESSION['error_page5']);
+                    }
+                    ?>
+                </span>
+                <form action="postJob.php" method="post">
+                    <input type="radio" id="rate" name="budgetoption" value="rate" required>
+                    <label for="rate">Hourly Rate</label>
+                    <input type="radio" id="budget" name="budgetoption" value="budget">
+                    <label for="budget">Project Budget</label><br>
+    
+                    <div id="rateChecked" style="display: none;">
+                        <label>Optional </label>
+                        <label>Hourly Rate ($ / hour): </label>
+                        <input name="hourrate" id="hourrate" type="number" placeholder="Enter $ Amount" value="">
+                    </div>
+    
+                    <div id="budgetChecked" style="display: none;">
+                        <label>Optional </label>
+                        <label>Maximum Budget ($): </label>
+                        <input name="maxbudget" id="maxbudget" type="number" placeholder="Enter $ Amount" value="">
+                    </div>
+    
+                    <div class="CancelOrNext">
+                        <input type="submit" value="Post Job" id="JobPost" />
+                    </div>
+    
+                </form>
             </div>
         </div>
     </div>
