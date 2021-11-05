@@ -8504,8 +8504,8 @@ ul {
 
 .postJob-detail .detail-container .detail-input-section .lengthContainers .short input:checked,
 .postJob-detail .detail-container .detail-input-section .lengthContainers .long input:checked {
-  background-color: #054e97;
-  border: 0.7px solid #054e97;
+  background-color: lightgreen;
+  border: 0.8px solid #054e97;
 }
 
 .postJob-detail .detail-container .detail-input-section .lengthContainers .short input:hover,
@@ -9335,7 +9335,7 @@ ul {
 .postJob-detail-location .detail-location-container .detail-input-section form p {
   color: #797979;
   font-size: 1.1rem;
-  width: 80%;
+  width: 95%;
 }
 
 .postJob-detail-location .detail-location-container .detail-input-section form .unitedStates, .postJob-detail-location .detail-location-container .detail-input-section form .worldwide {
@@ -9356,10 +9356,11 @@ ul {
 }
 
 .postJob-detail-location .detail-location-container .detail-input-section form .unitedStates label, .postJob-detail-location .detail-location-container .detail-input-section form .worldwide label {
+  cursor: pointer;
   font-size: 1.2rem;
   color: #054e97;
   font-weight: bolder;
-  padding-right: 2rem;
+  padding-right: 1rem;
 }
 
 .postJob-detail-location .detail-location-container .detail-input-section form .unitedStates input, .postJob-detail-location .detail-location-container .detail-input-section form .worldwide input {
@@ -9375,8 +9376,8 @@ ul {
 }
 
 .postJob-detail-location .detail-location-container .detail-input-section form .unitedStates input:checked, .postJob-detail-location .detail-location-container .detail-input-section form .worldwide input:checked {
-  background-color: #054e97;
-  border: 0.7px solid #054e97;
+  background-color: lightgreen;
+  border: 0.8px solid #054e97;
 }
 
 .postJob-detail-location .detail-location-container .detail-input-section form .unitedStates input:hover, .postJob-detail-location .detail-location-container .detail-input-section form .worldwide input:hover {
@@ -9384,7 +9385,7 @@ ul {
 }
 
 .postJob-detail-location .detail-location-container .detail-input-section .CancelOrNext {
-  margin: 2rem 0rem;
+  margin-top: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
