@@ -74,21 +74,28 @@ if (isset($_POST['location'])) {
                     ?>
                 </span>
                 <form action="postJob.php" method="post">
-                    <input type="radio" id="rate" name="budgetoption" value="rate" required>
-                    <label for="rate">Hourly Rate</label>
-                    <input type="radio" id="budget" name="budgetoption" value="budget">
-                    <label for="budget">Project Budget</label><br>
-    
-                    <div id="rateChecked" style="display: none;">
-                        <label>Optional </label>
-                        <label>Hourly Rate ($ / hour): </label>
-                        <input name="hourrate" id="hourrate" type="number" placeholder="Enter $ Amount" value="">
+                    <div class="hourly">
+                        <label for="rate">Hourly Rate</label>
+                        <input type="radio" id="rate" name="budgetoption" value="rate" required>
                     </div>
-    
-                    <div id="budgetChecked" style="display: none;">
+                    <div id="rateChecked">
                         <label>Optional </label>
-                        <label>Maximum Budget ($): </label>
-                        <input name="maxbudget" id="maxbudget" type="number" placeholder="Enter $ Amount" value="">
+                        <div class="rateChecked-container">
+                            <label>Hourly Rate ($ / hour): </label>
+                            <input name="hourrate" id="hourrate" type="number" placeholder="Enter $ Amount" value="">
+                        </div>
+                     
+                    </div>
+                    <div class="budget">
+                        <label for="budget">Project Budget</label>
+                        <input type="radio" id="budget" name="budgetoption" value="budget">
+                    </div>    
+                    <div id="budgetChecked">
+                        <label>Optional</label>
+                        <div class="budgetChecked-container">
+                            <label>Maximum Budget ($):</label>
+                            <input name="maxbudget" id="maxbudget" type="number" placeholder="Enter $ Amount" value="">
+                        </div>
                     </div>
     
                     <div class="CancelOrNext">
