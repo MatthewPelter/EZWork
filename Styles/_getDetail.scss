@@ -563,7 +563,7 @@
     }
     .detail-input-section {
       width: 50%;
-      height: fit-content;
+      height: 100%;
       padding: 2rem;
       background: white;
       display: flex;
@@ -593,6 +593,7 @@
           }
           select {
             width: 10rem;
+            cursor: pointer;
             background-color: transparent;
             border-radius: 5px;
             padding: 0.25rem;
@@ -602,7 +603,7 @@
         }
       }
       .CancelOrNext {
-        margin-top: 4rem;
+        margin: 4rem 0rem 2rem 0rem;
         display: flex;
         flex-direction: row;
         width: 100%;
