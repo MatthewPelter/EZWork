@@ -1,17 +1,17 @@
 <?php
 session_start(); // Session starts here.
-require_once('../../classes/DB.php');
+require_once('../classes/DB.php');
 
 // Check if user is logged in. If not send them to the log in.
 if (!isset($_SESSION['user_id'])) {
-    header('Location: ../../login/index');
+    header('Location: ../login/index');
     echo "NOT LOGGED IN";
 } else {
     $user_id = $_SESSION['user_id'];
     $sql = "SELECT * FROM clients WHERE id = '$user_id' limit 1";
     $result = mysqli_query($conn, $sql);
     if (mysqli_num_rows($result) == 0) {
-        header('Location: ../../login/index');
+        header('Location: ../login/index');
     }
 }
 
@@ -27,7 +27,7 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../Styles/style.css" />
+    <link rel="stylesheet" href="../Styles/style.css" />
 
     <style type="text/css">
         green {
@@ -44,7 +44,7 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
 
 <body>
 
-    <?php include '../../navbar.php'; ?>
+    <?php include '../navbar.php'; ?>
 
     <div class="profile">
         <div class="user-profile-body">
@@ -80,7 +80,7 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                                 </span></p>
                             <p>Job Posted on <span id="date"><?php echo $r['datePosted']; ?></span> by <img style="width: 16px; border-radius:50%;" src="<?php echo $unameFetched['avatar']; ?>" alt="Avatar"><span id="postedBy">
                                     <?php if ($unameFetched['username'] != $_SESSION['userid']) {
-                                        echo "<a href='../../Profile/userprofile.php?name=" . $unameFetched['username'] . "'>" . $unameFetched['username'] . "</a>";
+                                        echo "<a href='../Profile/userprofile.php?name=" . $unameFetched['username'] . "'>" . $unameFetched['username'] . "</a>";
                                     } else {
                                         echo $unameFetched['username'];
                                     }  ?>
@@ -103,7 +103,7 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
     </div>
 
 
-    <?php include '../../footer.php'; ?>
+    <?php include '../footer.php'; ?>
 </body>
 
 </html>

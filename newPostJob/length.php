@@ -1,16 +1,16 @@
 <?php
 session_start(); // Session starts here.
-require_once('../../classes/DB.php');
+require_once('../classes/DB.php');
 
 if (!isset($_SESSION['userid'])) {
-    header('Location: ../../login/index');
+    header('Location: ../login/index');
     echo "NOT LOGGED IN";
 } else {
     $username = $_SESSION['userid'];
     $sql = "SELECT * FROM clients WHERE username = '$username' limit 1";
     $result = mysqli_query($conn, $sql);
     if (mysqli_num_rows($result) == 0) {
-        header('Location: ../../login/index');
+        header('Location: ../login/index');
     }
 }
 
@@ -31,13 +31,13 @@ if (!isset($_SESSION['userid'])) {
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet"> 
-            <link rel="icon" href="../../logo/logo.svg">
-            <link rel="stylesheet" href="../../Styles/style.css">
+            <link rel="icon" href="../logo/logo.svg">
+            <link rel="stylesheet" href="../Styles/style.css">
         </head>
     </head>
 
 <body>
-    <?php include '../../navbar.php'; ?>
+    <?php include '../navbar.php'; ?>
 
 
         <!--Post A Job More Details-->
@@ -84,7 +84,7 @@ if (!isset($_SESSION['userid'])) {
                 </div>
 
                 <div class="CancelOrNext">
-                    <button id="cancel"  onclick="location.href='../../ClientProfile/index.php'">Cancel</button>
+                    <button id="cancel"  onclick="location.href='../ClientProfile/index.php'">Cancel</button>
                     <input type="submit" value="Next: Title" />
                 </div>
             </form>
@@ -94,7 +94,7 @@ if (!isset($_SESSION['userid'])) {
     </div>
     <!--Post A Job End-->
 
-    <?php include '../../footer.php'; ?>
+    <?php include '../footer.php'; ?>
 
     <!--DataList-->
     <datalist id="allskills"></datalist>

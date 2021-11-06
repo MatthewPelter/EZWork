@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once('../../classes/DB.php');
+require_once('../classes/DB.php');
 // Checking second page values for empty, If it finds any blank field then redirected to second page.
 if (isset($_POST['size'])) {
     if (empty($_POST['size']) || empty($_POST['months']) || empty($_POST['experience'])) {
@@ -36,14 +36,14 @@ if (isset($_POST['size'])) {
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
-        <link rel="icon" href="../../logo/logo.svg">
-        <link rel="stylesheet" href="../../Styles/style.css">
+        <link rel="icon" href="../logo/logo.svg">
+        <link rel="stylesheet" href="../Styles/style.css">
     </head>
 </head>
 
 <body>
 
-    <?php include '../../navbar.php'; ?>
+    <?php include '../navbar.php'; ?>
 
     <!--Post A Job More Details-->
     <div class="postJob-detail-location">
@@ -94,7 +94,7 @@ if (isset($_POST['size'])) {
     </div>
     <!--Post A Job End-->
 
-    <?php include '../../footer.php'; ?>
+    <?php include '../footer.php'; ?>
 
     <!--DataList-->
     <datalist id="allskills"></datalist>

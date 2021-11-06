@@ -1,11 +1,11 @@
 <?php
 session_start();
-require_once('../../classes/DB.php');
+require_once('../classes/DB.php');
 // Checking second page values for empty, If it finds any blank field then redirected to second page.
-if (isset($_POST['title'])) {
-    if (empty($_POST['title']) || empty($_POST['description'])) {
-        $_SESSION['error_page2'] = "Mandatory field(s) are missing, Please fill it again"; // Setting error message.
-        header("location: postTitle.php"); // Redirecting to second page. 
+if (isset($_POST['location'])) {
+    if (empty($_POST['location'])) {
+        $_SESSION['error_page4'] = "Mandatory field(s) are missing, Please fill it again"; // Setting error message.
+        header("location: location.php"); // Redirecting to second page. 
     } else {
         // Fetching all values posted from second page and storing it in variable.
         foreach ($_POST as $key => $value) {
@@ -13,27 +13,10 @@ if (isset($_POST['title'])) {
         }
     }
 } else {
-    if (empty($_SESSION['error_page3'])) {
+    if (empty($_SESSION['error_page5'])) {
         header("location: length.php"); // Redirecting to first page.
     }
 }
-?>
-<?php
-session_start(); // Session starts here.
-require_once('../../classes/DB.php');
-
-if (!isset($_SESSION['userid'])) {
-    header('Location: ../../login/index');
-    echo "NOT LOGGED IN";
-} else {
-    $username = $_SESSION['userid'];
-    $sql = "SELECT * FROM clients WHERE username = '$username' limit 1";
-    $result = mysqli_query($conn, $sql);
-    if (mysqli_num_rows($result) == 0) {
-        header('Location: ../../login/index');
-    }
-}
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -54,93 +37,84 @@ if (!isset($_SESSION['userid'])) {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
         <link rel="icon" href="../logo/logo.svg">
-        <link rel="stylesheet" href="../../Styles/style.css">
+        <link rel="stylesheet" href="../Styles/style.css">
     </head>
 </head>
 
 <body>
-    <?php include '../../navbar.php'; ?>
 
+    <?php include '../navbar.php'; ?>
 
     <!--Post A Job More Details-->
-    <div class="postJob-detail-scope">
-        <div class="detail-scope-container">
+    <div class="postJob-detail-budget">
+        <div class="detail-budget-container">
             <div class="detail-progress-section">
                 <div class="progressBar">
-                    <progress id="jobPostProgress" value="50" max="100"></progress>
+                    <progress id="jobPostProgress" value="100" max="100"></progress>
                     <ul>
                         <li id="current">Length</li>
                         <li id="current">Title</li>
                         <li id="current">Scope</li>
-                        <li>Location</li>
-                        <li>Budget</li>
+                        <li id="current">Location</li>
+                        <li id="current">Budget</li>
                     </ul>
                 </div>
                 <div class="title-card-intro">
-                    <h2>Next, estimate the scope of your work.</h2>
-                    <p>These aren’t final answers, but this information helps us recommend the right talent for what you need.</p>
+                    <h2>Tell us about your budget.</h2>
+                    <p>This will help us match you to talent within your range.</p>
                 </div>
             </div>
             <div class="detail-input-section">
-                <span id="error" style="color: red;">
+                <span id="error">
                     <?php
-                    if (!empty($_SESSION['error_page3'])) {
-                        echo $_SESSION['error_page3'];
-                        unset($_SESSION['error_page3']);
+                    if (!empty($_SESSION['error_page5'])) {
+                        echo $_SESSION['error_page5'];
+                        unset($_SESSION['error_page5']);
                     }
                     ?>
                 </span>
-                <form action="location.php" method="post" style="width: 100%;">
-                    <div class="scopeOptions">
-                        <div class="projectSize">
-                            <label>Project Size :<span>*</span></label>
-                            <select name="size">
-                                <option value="">----Select----</options>
-                                <option value="large" value="">Large </options>
-                                <option value="medium" value="">Medium </options>
-                                <option value="small" value="">Small </options>
-                            </select>
+                <form action="postJob.php" method="post">
+                    <div class="hourly">
+                        <label for="rate">Hourly Rate</label>
+                        <input type="radio" id="rate" name="budgetoption" value="rate" required>
+                    </div>
+                    <div id="rateChecked">
+                        <span>Optional*</span>
+                        <div class="rateChecked-container">
+                            <label>Hourly Rate ($ / hour): </label>
+                            <input name="hourrate" id="hourrate" type="number" placeholder="Enter $ Amount" value="">
                         </div>
-
-                        <div class="projectLength">
-                            <label>How long will your work take? :<span>*</span></label>
-                            <select name="months">
-                                <option value="">----Select----</options>
-                                <option value="3to6" value="">3-6 Months </options>
-                                <option value="1to3" value="">1-3 Months </options>
-                                <option value="less1" value="">Less than 1 Month</options>
-                            </select>
-                        </div>
-
-                        <div class="projectExperience">
-                            <label>What level of experience will you need? :<span>*</span></label>
-                            <select name="experience">
-                                <option value="">----Select----</options>
-                                <option value="entry" value="">Entry </options>
-                                <option value="intermediate" value="">Intermediate </options>
-                                <option value="expert" value="">Expert</options>
-                            </select>
+                     
+                    </div>
+                    <div class="budget">
+                        <label for="budget">Project Budget</label>
+                        <input type="radio" id="budget" name="budgetoption" value="budget">
+                    </div>    
+                    <div id="budgetChecked">
+                        <span>Optional*</span>
+                        <div class="budgetChecked-container">
+                            <label>Maximum Budget ($):</label>
+                            <input name="maxbudget" id="maxbudget" type="number" placeholder="Enter $ Amount" value="">
                         </div>
                     </div>
-
-
+    
                     <div class="CancelOrNext">
-                        <input type="reset" value="Reset" id="reset" />
-                        <input type="submit" value="Next: Location" id="nextLocation" />
+                        <input type="submit" value="Post Job" id="JobPost" />
                     </div>
+    
                 </form>
-
             </div>
         </div>
     </div>
     <!--Post A Job End-->
 
-    <?php include '../../footer.php'; ?>
+    <?php include '../footer.php'; ?>
 
     <!--DataList-->
     <datalist id="allskills"></datalist>
 
 </body>
+
 <!--Nav bar script-->
 <script>
     var job = document.querySelector('.jobCard');
@@ -230,6 +204,20 @@ if (!isset($_SESSION['userid'])) {
             searchIcon.style.opacity = '1';
         }
     }
+</script>
+
+<script type="text/javascript">
+    var ratebtn = document.getElementById('rate');
+    var budgetbtn = document.getElementById('budget');
+
+    ratebtn.addEventListener("click", function() {
+        document.getElementById('budgetChecked').style.display = "none";
+        document.getElementById('rateChecked').style.display = "block";
+    });
+    budgetbtn.addEventListener("click", function() {
+        document.getElementById('rateChecked').style.display = "none";
+        document.getElementById('budgetChecked').style.display = "block";
+    });
 </script>
 
 </html>

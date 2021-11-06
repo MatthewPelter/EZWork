@@ -1,15 +1,15 @@
 <?php
 session_start();
-require_once('../../classes/DB.php');
+require_once('../classes/DB.php');
 if (!isset($_SESSION['userid'])) {
-    header('Location: ../../login/index');
+    header('Location: ../login/index');
     echo "NOT LOGGED IN";
 } else {
     $user_id = $_SESSION['user_id'];
     $sql = "SELECT * FROM clients WHERE id = '$user_id' limit 1";
     $result = mysqli_query($conn, $sql);
     if (mysqli_num_rows($result) == 0) {
-        header('Location: ../../login/index');
+        header('Location: ../login/index');
     }
 }
 
@@ -20,11 +20,11 @@ if (!isset($_SESSION['userid'])) {
 
 <head>
     <title>Post a Job</title>
-    <!-- <link rel="stylesheet" href="../../Styles/style.css" /> -->
+    <!-- <link rel="stylesheet" href="../Styles/style.css" /> -->
 </head>
 
 <body>
-    <?php //include '../../navbar.php'; 
+    <?php //include '../navbar.php'; 
     ?>
     <div class="PostAJob">
         <div class="PostAJobContainer">
@@ -83,9 +83,9 @@ if (!isset($_SESSION['userid'])) {
             ?>
         </div>
     </div>
-    <?php //include '../../footer.php'; 
+    <?php //include '../footer.php'; 
     ?>
 </body>
-<script src="../../ClientProfile/app.js"></script>
+<script src="../ClientProfile/app.js"></script>
 
 </html>

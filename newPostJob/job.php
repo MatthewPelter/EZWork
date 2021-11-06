@@ -1,16 +1,16 @@
 <?php
 session_start(); // Session starts here.
-require_once('../../classes/DB.php');
+require_once('../classes/DB.php');
 
 if (!isset($_SESSION['user_id'])) {
-    header('Location: ../../login/index');
+    header('Location: ../login/index');
     echo "NOT LOGGED IN";
 } else {
     $user_id = $_SESSION['user_id'];
     $sql = "SELECT * FROM clients WHERE id = '$user_id' limit 1";
     $result = mysqli_query($conn, $sql);
     if (mysqli_num_rows($result) == 0) {
-        header('Location: ../../login/index');
+        header('Location: ../login/index');
     }
 }
 
@@ -41,7 +41,7 @@ if (mysqli_num_rows($jobResult) > 0) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../Styles/style.css" />
+    <link rel="stylesheet" href="../Styles/style.css" />
 
     <style type="text/css">
         hr.solid {
@@ -56,7 +56,7 @@ if (mysqli_num_rows($jobResult) > 0) {
 <body>
 
     <?php
-    include '../../navbar.php';
+    include '../navbar.php';
     ?>
     <?php if ($dataFound) { ?>
         <div class="profile">
@@ -67,7 +67,7 @@ if (mysqli_num_rows($jobResult) > 0) {
                 </div>
                 <div class="card result">
                     <h1>Posted By: <?php if ($unameFetched['username'] != $_SESSION['userid']) { ?>
-                            <a href="../../Profile/userprofile.php?name=<?php echo $unameFetched['username']; ?>"><?php echo $unameFetched['username']; ?></a>
+                            <a href="../Profile/userprofile.php?name=<?php echo $unameFetched['username']; ?>"><?php echo $unameFetched['username']; ?></a>
 
                         <?php } else {
                                         echo $unameFetched['username'];
@@ -135,10 +135,10 @@ if (mysqli_num_rows($jobResult) > 0) {
     <?php
     } ?>
 
-    <?php include '../../footer.php'; ?>
+    <?php include '../footer.php'; ?>
 
 </body>
-<script src="../../ClientProfile/app.js"></script>
+<script src="../ClientProfile/app.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript">
     function deleteMenu() {

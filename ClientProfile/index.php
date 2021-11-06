@@ -84,8 +84,8 @@ $userID = $_SESSION['user_id'];
         <div class="user-profile-header">
             <h2 id="username"><?php echo $_SESSION['userid']; ?></h2>
             <div class="quick-links">
-                <button id="quick-link-job" onclick="location.href='../PostAJob/newPostJob/length.php'">Post A Job</button>
-                <button id="quick-link-market" onclick="location.href='../PostAJob/newPostJob/jobs.php'">Browse Marketplace</button>
+                <button id="quick-link-job" onclick="location.href='../newPostJob/length.php'">Post A Job</button>
+                <button id="quick-link-market" onclick="location.href='../newPostJob/jobs.php'">Browse Marketplace</button>
             </div>
         </div>
         <div class="user-profile-body">
@@ -95,7 +95,7 @@ $userID = $_SESSION['user_id'];
                     <span><a href="../PostAJob/newPostJob/jobs">All Jobs</a></span>
                 </div>
                 <div class="card result" style="padding: 1rem;">
-                    <button id="quick-link-job2" onclick="location.href='../PostAJob/newPostJob/length.php'">Post A Job</button>
+                    <button id="quick-link-job2" onclick="location.href='../newPostJob/length.php'">Post A Job</button>
                     <span>
                         <?php
                         $jobSQL = "SELECT * FROM jobs WHERE user_id='$userID' ORDER BY id DESC";
