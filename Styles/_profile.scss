@@ -1,3 +1,6 @@
+$color1: #0a345e;
+$lightColor: #054e97;
+$darktext: rgb(121, 121, 121);
 .profile {
   width: 100%;
   background: whitesmoke;
@@ -524,7 +527,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background: white;
+            background: $lightColor;
             width: 40%;
             padding: 0.5rem;
             border: $darktext solid 1px;

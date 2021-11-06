@@ -1,0 +1,745 @@
+.profile {
+  width: 100%;
+  background: whitesmoke;
+  padding: 2.5rem 10rem;
+}
+.profile .user-profile-header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.5rem 0rem;
+}
+.profile .user-profile-header h2 {
+  justify-self: flex-start;
+  font-size: 2.5rem;
+}
+.profile .user-profile-header .quick-links #quick-link-job {
+  cursor: pointer;
+  border-radius: 15px;
+  border: none;
+  background: #e9e9e9;
+  font-size: 1.1rem;
+  color: #0a345e;
+  font-weight: bolder;
+  padding: 0.6rem 1.5rem;
+  margin-right: 0.25rem;
+  border: 1px solid lightgrey;
+}
+.profile .user-profile-header .quick-links #quick-link-job:hover {
+  transition: all 0.2s ease;
+  background: #dbdbdb;
+}
+.profile .user-profile-header .quick-links #quick-link-market {
+  cursor: pointer;
+  border-radius: 15px;
+  border: none;
+  background: #054e97;
+  font-size: 1.1rem;
+  color: white;
+  font-weight: bolder;
+  padding: 0.6rem 1.5rem;
+  margin-left: 0.25rem;
+}
+.profile .user-profile-header .quick-links #quick-link-market:hover {
+  transition: all 0.5s ease;
+  background: #0a345e;
+}
+.profile .user-profile-body {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 1rem;
+}
+.profile .user-postings {
+  grid-area: 1/1/2/2;
+  border: 1px solid lightgrey;
+  background: white;
+  border-radius: 15px;
+  height: fit-content;
+}
+.profile .user-postings .title {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom: 1px solid lightgrey;
+  padding: 2rem 1.5rem;
+}
+.profile .user-postings .title h3 {
+  font-size: 1.5rem;
+}
+.profile .user-postings .title span {
+  color: #054e97;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.profile .user-postings .title span:hover {
+  text-decoration: underline;
+}
+.profile .user-postings .result {
+  width: 100%;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.profile .user-postings .result #quick-link-job2 {
+  cursor: pointer;
+  border-radius: 15px;
+  border: none;
+  background: #054e97;
+  font-size: 1.1rem;
+  color: white;
+  max-width: fit-content;
+  font-weight: bolder;
+  padding: 0.6rem 1.5rem;
+  margin-left: 0.25rem;
+}
+.profile .user-postings .result #quick-link-job2:hover {
+  transition: all 0.5s ease;
+  background: #0a345e;
+}
+.profile .user-postings .result span {
+  margin-top: 1rem;
+}
+.profile .user-postings .postedJob {
+  padding: 1.5rem;
+  width: 100%;
+  border-top: 0.7px solid lightgrey;
+}
+.profile .user-postings .postedJob .jobTitle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.profile .user-postings .postedJob .jobTitle h4 a {
+  font-size: 1.2rem;
+  color: #0a345e;
+}
+.profile .user-postings .postedJob .jobTitle h4 a:hover {
+  text-decoration: underline;
+}
+.profile .user-postings .postedJob .jobTitle i {
+  font-size: 0.8rem;
+  color: #797979;
+  border-radius: 50%;
+  border: 0.8px solid #797979;
+  padding: 0.4rem 0.6rem;
+  cursor: pointer;
+}
+.profile .user-postings .postedJob .jobTitle i:hover {
+  background: lightgray;
+}
+.profile .user-postings .postedJob .jobTitle .jobEdit {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 58%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  width: 20%;
+  padding: 0.5rem;
+  border: #797979 solid 1px;
+  border-radius: 8px;
+}
+.profile .user-postings .postedJob .jobTitle .jobEdit button {
+  width: 40%;
+  cursor: pointer;
+  background: none;
+  color: #797979;
+  font-size: 1rem;
+  border: none;
+  padding: 0.5rem;
+}
+.profile .user-postings .postedJob .jobTitle .jobEdit .exit {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.profile .user-postings .postedJob .jobTitle .jobEdit .exit i {
+  font-size: 1.1rem;
+  color: black;
+  border: none;
+  padding: 0;
+  background: none;
+}
+.profile .user-postings .postedJob p {
+  color: #797979;
+  font-size: 1rem;
+}
+.profile .user-postings .postedJob #status,
+.profile .user-postings .postedJob #date,
+.profile .user-postings .postedJob #postedBy {
+  color: #054e97;
+}
+.profile .profile-skills-container .profile-skills {
+  min-width: fit-content;
+  height: fit-content;
+  display: none;
+  flex-direction: column;
+  background: white;
+  border-radius: 15px;
+}
+.profile .profile-skills-container .profile-skills .profile-skills-images {
+  width: 19.5rem;
+  height: fit-content;
+  border-right: lightgrey 0.7px solid;
+  border-left: lightgrey 0.7px solid;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.profile .profile-skills-container .profile-skills .profile-skills-images img {
+  width: 100%;
+  object-fit: contain;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.profile .profile-skills-container .profile-skills .profile-skills-content {
+  border: lightgrey 0.7px solid;
+  border-top: none;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.profile .profile-skills-container .profile-skills .profile-skills-content span {
+  padding-top: 0.7rem;
+  font-size: 0.9rem;
+  color: #797979;
+}
+.profile .profile-skills-container .profile-skills .profile-skills-content .skill-title {
+  width: 105%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.profile .profile-skills-container .profile-skills .profile-skills-content .skill-title h4 {
+  font-size: 1.5rem;
+  padding: 1rem 0rem;
+}
+.profile .profile-skills-container .profile-skills .profile-skills-content .skill-title i {
+  font-size: 1.5rem;
+  color: #054e97;
+  cursor: pointer;
+  padding: 0.2rem 0.4rem;
+  border-radius: 50%;
+  background: lightgray;
+}
+.profile .profile-skills-container .profile-skills .profile-skills-content .skill-title i:hover {
+  background: #c7c7c7;
+}
+.profile .profile-skills-container .profile-skills .profile-skills-content button {
+  margin-bottom: 1rem;
+  cursor: pointer;
+  border-radius: 15px;
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  color: #0a345e;
+  font-weight: bolder;
+  min-width: fit-content;
+  padding: 0.6rem 1rem;
+  border: 1px solid lightgrey;
+}
+.profile .profile-skills-container .profile-skills .profile-skills-content button:hover {
+  transition: all 0.2s ease;
+  background: #e9e9e9;
+}
+.profile .how-to-work {
+  grid-area: 2/1/3/2;
+  background: white;
+  border-radius: 15px;
+  border: 1px solid lightgrey;
+  height: fit-content;
+}
+.profile .how-to-work .htw-title {
+  width: 100%;
+  padding: 1.5rem;
+  border-bottom: 1px solid lightgrey;
+}
+.profile .how-to-work .htw-title h3 {
+  width: 100%;
+  font-size: 1.3rem;
+}
+.profile .how-to-work .htw-title span {
+  color: #797979;
+  font-size: 0.9rem;
+  width: 100%;
+}
+.profile .how-to-work .step {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.5rem;
+  border-bottom: 1px solid lightgrey;
+}
+.profile .how-to-work .step .step-image {
+  width: 15%;
+}
+.profile .how-to-work .step .step-image i {
+  font-size: 4rem;
+  color: #054e97;
+}
+.profile .how-to-work .step .step-content {
+  width: 85%;
+}
+.profile .how-to-work .step .step-content h4 {
+  font-size: 1.25rem;
+  padding: 0.5rem 0rem;
+}
+.profile .how-to-work .step .step-content span {
+  font-size: 0.85rem;
+  color: #222222;
+}
+.profile .how-to-work .htw-questions {
+  width: 100%;
+  padding: 1.25rem;
+}
+.profile .how-to-work .htw-questions h3 {
+  font-size: 1rem;
+  padding: 0.5rem 0rem;
+}
+.profile .how-to-work .htw-questions p {
+  font-size: 1rem;
+  color: #797979;
+}
+.profile .how-to-work .htw-questions p span {
+  cursor: pointer;
+  color: #054e97;
+}
+.profile .how-to-work .htw-questions p span:hover {
+  text-decoration: underline;
+}
+.profile .profile-categories-container {
+  grid-area: 1/2/3/3;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 15px;
+  border: 1px solid lightgrey;
+}
+.profile .profile-categories-container .categories-title {
+  width: 100%;
+  padding: 1.5rem;
+  border-bottom: 1px solid lightgrey;
+}
+.profile .profile-categories-container .categories-title h3 {
+  font-size: 1.5rem;
+}
+.profile .profile-categories-container .categoryCard {
+  cursor: pointer;
+  padding: 1.5rem 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  border-bottom: 1px solid lightgrey;
+}
+.profile .profile-categories-container .categoryCard svg {
+  width: 15%;
+}
+.profile .profile-categories-container .categoryCard p {
+  margin-left: 1rem;
+  width: 70%;
+  text-align: start;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.profile .profile-categories-container .categoryCard i {
+  width: 15%;
+  font-size: 1.4rem;
+  color: #054e97;
+}
+.profile .profile-categories-container .categoryCard:hover {
+  background: #e4e4e4;
+}
+
+@media screen and (max-width: 754px) {
+  .profile {
+    margin-top: 3.8rem;
+    width: 100%;
+    background: whitesmoke;
+    padding: 1rem;
+  }
+  .profile .user-profile-header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0rem;
+  }
+  .profile .user-profile-header h2 {
+    width: 100%;
+    margin-bottom: 1rem;
+    justify-self: flex-start;
+    font-size: 2.5rem;
+  }
+  .profile .user-profile-header .quick-links {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .profile .user-profile-header .quick-links #quick-link-job {
+    cursor: pointer;
+    border-radius: 15px;
+    border: none;
+    background: #dbdbdb;
+    font-size: 1.1rem;
+    color: #0a345e;
+    font-weight: bolder;
+    padding: 0.6rem 1.5rem;
+    margin: 0;
+    margin-bottom: 1rem;
+    border: 1px solid lightgrey;
+  }
+  .profile .user-profile-header .quick-links #quick-link-job:hover {
+    transition: all 0.2s ease;
+    background: #e9e9e9;
+  }
+  .profile .user-profile-header .quick-links #quick-link-market {
+    cursor: pointer;
+    border-radius: 15px;
+    border: none;
+    background: #054e97;
+    font-size: 1.1rem;
+    color: white;
+    font-weight: bolder;
+    padding: 0.6rem 1.5rem;
+    margin: 0;
+  }
+  .profile .user-profile-header .quick-links #quick-link-market:hover {
+    transition: all 0.5s ease;
+    background: #0a345e;
+  }
+  .profile .user-profile-body {
+    display: flex;
+    flex-direction: column;
+  }
+  .profile .user-postings {
+    border: 1px solid lightgrey;
+    background: white;
+    border-radius: 15px;
+    height: fit-content;
+  }
+  .profile .user-postings .title {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom: 1px solid lightgrey;
+    padding: 2rem 1.5rem;
+  }
+  .profile .user-postings .title h3 {
+    font-size: 1.5rem;
+  }
+  .profile .user-postings .title span {
+    color: #054e97;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  .profile .user-postings .title span:hover {
+    text-decoration: underline;
+  }
+  .profile .user-postings .result {
+    width: 100%;
+    padding: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .profile .user-postings .result #quick-link-job2 {
+    cursor: pointer;
+    border-radius: 15px;
+    border: none;
+    background: #054e97;
+    font-size: 1.1rem;
+    color: white;
+    max-width: fit-content;
+    font-weight: bolder;
+    padding: 0.6rem 1.5rem;
+    margin-left: 0.25rem;
+  }
+  .profile .user-postings .result #quick-link-job2:hover {
+    transition: all 0.5s ease;
+    background: #0a345e;
+  }
+  .profile .user-postings .result span {
+    margin-top: 1rem;
+  }
+  .profile .user-postings .postedJob {
+    padding: 1rem;
+    width: 100%;
+  }
+  .profile .user-postings .postedJob .jobTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .profile .user-postings .postedJob .jobTitle h4 {
+    font-size: 1.2rem;
+    color: #0a345e;
+  }
+  .profile .user-postings .postedJob .jobTitle i {
+    font-size: 0.8rem;
+    color: #797979;
+    border-radius: 50%;
+    border: 0.8px solid #797979;
+    padding: 0.4rem 0.6rem;
+    cursor: pointer;
+  }
+  .profile .user-postings .postedJob .jobTitle i:hover {
+    background: lightgray;
+  }
+  .profile .user-postings .postedJob .jobTitle .jobEdit {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #054e97;
+    width: 40%;
+    padding: 0.5rem;
+    border: #797979 solid 1px;
+    border-radius: 8px;
+  }
+  .profile .user-postings .postedJob .jobTitle .jobEdit button {
+    width: 40%;
+    cursor: pointer;
+    background: none;
+    color: #797979;
+    font-size: 1rem;
+    border: none;
+    padding: 0.5rem;
+  }
+  .profile .user-postings .postedJob .jobTitle .jobEdit .exit {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .profile .user-postings .postedJob .jobTitle .jobEdit .exit i {
+    font-size: 1.1rem;
+    color: black;
+    border: none;
+    padding: 0;
+    background: none;
+  }
+  .profile .user-postings .postedJob p {
+    color: #797979;
+    font-size: 1rem;
+  }
+  .profile .user-postings .postedJob #status,
+.profile .user-postings .postedJob #date,
+.profile .user-postings .postedJob #postedBy {
+    color: #054e97;
+  }
+  .profile .profile-skills-container .profile-skills {
+    width: 100%;
+    height: fit-content;
+    display: none;
+    flex-direction: column;
+    background: white;
+    border-radius: 15px;
+  }
+  .profile .profile-skills-container .profile-skills .profile-skills-images {
+    width: 100%;
+    height: fit-content;
+    border-right: lightgrey 0.7px solid;
+    border-left: lightgrey 0.7px solid;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  .profile .profile-skills-container .profile-skills .profile-skills-images img {
+    width: 100%;
+    object-fit: contain;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  .profile .profile-skills-container .profile-skills .profile-skills-content {
+    border: lightgrey 0.7px solid;
+    border-top: none;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .profile .profile-skills-container .profile-skills .profile-skills-content span {
+    padding-top: 0.7rem;
+    font-size: 0.9rem;
+    color: #797979;
+  }
+  .profile .profile-skills-container .profile-skills .profile-skills-content .skill-title {
+    width: 105%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .profile .profile-skills-container .profile-skills .profile-skills-content .skill-title h4 {
+    font-size: 1.5rem;
+    padding: 1rem 0rem;
+  }
+  .profile .profile-skills-container .profile-skills .profile-skills-content .skill-title i {
+    font-size: 1.5rem;
+    color: #054e97;
+    cursor: pointer;
+    padding: 0.1rem 0.3rem;
+    border-radius: 50%;
+    background: lightgray;
+  }
+  .profile .profile-skills-container .profile-skills .profile-skills-content button {
+    margin-bottom: 1rem;
+    cursor: pointer;
+    border-radius: 15px;
+    border: none;
+    background: transparent;
+    font-size: 1rem;
+    color: #0a345e;
+    font-weight: bolder;
+    min-width: fit-content;
+    padding: 0.6rem 1rem;
+    border: 1px solid lightgrey;
+  }
+  .profile .profile-skills-container .profile-skills .profile-skills-content button:hover {
+    transition: all 0.2s ease;
+    background: #e9e9e9;
+  }
+  .profile .how-to-work {
+    background: white;
+    border-radius: 15px;
+    border: 1px solid lightgrey;
+    height: fit-content;
+  }
+  .profile .how-to-work .htw-title {
+    width: 100%;
+    padding: 1.5rem;
+    border-bottom: 1px solid lightgrey;
+  }
+  .profile .how-to-work .htw-title h3 {
+    width: 100%;
+    font-size: 1.3rem;
+  }
+  .profile .how-to-work .htw-title span {
+    color: #797979;
+    font-size: 0.85rem;
+    width: 100%;
+  }
+  .profile .how-to-work .step {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1.5rem;
+    border-bottom: 1px solid lightgrey;
+  }
+  .profile .how-to-work .step .step-image {
+    width: 25%;
+  }
+  .profile .how-to-work .step .step-image i {
+    font-size: 3rem;
+    color: #054e97;
+  }
+  .profile .how-to-work .step .step-content {
+    width: 75%;
+  }
+  .profile .how-to-work .step .step-content h4 {
+    font-size: 1.2rem;
+    padding: 0.5rem 0rem;
+  }
+  .profile .how-to-work .step .step-content span {
+    font-size: 0.8rem;
+    color: #222222;
+  }
+  .profile .how-to-work .htw-questions {
+    width: 100%;
+    padding: 1.25rem;
+  }
+  .profile .how-to-work .htw-questions h3 {
+    font-size: 1rem;
+    padding: 0.5rem 0rem;
+  }
+  .profile .how-to-work .htw-questions p {
+    font-size: 1rem;
+    color: #797979;
+  }
+  .profile .how-to-work .htw-questions p span {
+    cursor: pointer;
+    color: #054e97;
+  }
+  .profile .how-to-work .htw-questions p span:hover {
+    text-decoration: underline;
+  }
+  .profile .profile-categories-container {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 15px;
+    margin-top: 0;
+    border: 1px solid lightgrey;
+  }
+  .profile .profile-categories-container .categories-title {
+    width: 100%;
+    padding: 1.5rem;
+    border-bottom: 1px solid lightgrey;
+  }
+  .profile .profile-categories-container .categories-title h3 {
+    font-size: 1.5rem;
+  }
+  .profile .profile-categories-container .categoryCard {
+    cursor: pointer;
+    padding: 1.5rem 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    border-bottom: 1px solid lightgrey;
+  }
+  .profile .profile-categories-container .categoryCard svg {
+    width: 15%;
+  }
+  .profile .profile-categories-container .categoryCard p {
+    margin-left: 1rem;
+    width: 70%;
+    text-align: start;
+    font-size: 0.8rem;
+  }
+  .profile .profile-categories-container .categoryCard i {
+    width: 15%;
+    font-size: 1.4rem;
+    color: #054e97;
+  }
+  .profile .profile-categories-container .categoryCard:hover {
+    background: #e4e4e4;
+  }
+}

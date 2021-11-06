@@ -6365,7 +6365,7 @@ section .container .login .login-container button:hover {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    background: white;
+    background: #054e97;
     width: 40%;
     padding: 0.5rem;
     border: #797979 solid 1px;
