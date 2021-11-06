@@ -152,12 +152,13 @@ if (mysqli_num_rows($jobResult) > 0) {
             },
             type: "POST",
             success: function(data) {
+                console.log("It works");
                 console.log(data);
-                $("#result").html(data);
+                //$("#result").html(data);
                 $('#deleteMenu').css('display', 'none');
             },
             error: function(r) {
-                $("#result").html(r);
+                console.log("It broke");
                 console.log(r);
             }
         });

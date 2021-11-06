@@ -23,5 +23,5 @@ if (isset($_POST['postID']) && isset($_SESSION['user_id'])) {
         echo "This is not your post...";
     }
 } else {
-    die("Error: Somthing went wrong :(");
+    echo "Error: Somthing went wrong :(";
 }
