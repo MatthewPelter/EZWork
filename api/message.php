@@ -11,7 +11,7 @@ function securityscan($data)
 }
 
 if (!isset($_SESSION['user_id'])) {
-    die("{ 'Error': 'Message too long!' }");
+    die("{ 'Error': 'Invalid Authorization' }");
 }
 
 $sender = $_SESSION['user_id'];
