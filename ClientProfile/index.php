@@ -127,7 +127,7 @@ $userID = $_SESSION['user_id'];
                                 <p>Status: <span id="status"><?php if ($r['status'] == 0) {
                                                                     echo "Open";
                                                                 } else {
-                                                                    echo "Open";
+                                                                    echo "Closed";
                                                                 } ?></span></p>
                                 <p>Job Posted on <span id="date"><?php echo $r['datePosted']; ?></span> by <span id="postedBy">Me</span></p>
                             </div>

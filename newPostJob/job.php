@@ -60,7 +60,7 @@ if (mysqli_num_rows($jobResult) > 0) {
     ?>
     <?php if ($dataFound) { ?>
         <div class="profile">
-            <div class="user-postings">
+            <div class="user-postings" data-postid="<?php echo $job_id; ?>">
                 <div class="card title">
                     <h3><?php echo $r['title']; ?></h3>
                     <span><a href="jobs">All Postings</a></span>
@@ -144,11 +144,13 @@ if (mysqli_num_rows($jobResult) > 0) {
     function deleteMenu() {
         $('#deleteMenu').css('display', 'block');
     }
+
+    var jobid = $('.user-postings').data('postid');
     $('#yesBtn').click(function() {
         $.ajax({
             url: "../api/delete-post.php",
             data: {
-                postID: <?php echo $job_id; ?>
+                postID: jobid
             },
             type: "POST",
             success: function(data) {
