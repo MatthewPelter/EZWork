@@ -524,7 +524,7 @@ $userID = $_SESSION['user_id'];
     var jobEdit = document.querySelector(".jobEdit");
     function toggleJobOption(){
         if (jobEdit.style.display === 'none') {
-            jobEdit.style.display = 'inline-block';
+            jobEdit.style.display = 'flex';
         } else {
             jobEdit.style.display = 'none';
         }
