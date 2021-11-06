@@ -15,22 +15,23 @@ if (!isset($_SESSION['user_id'])) {
     die('{ "Error": "Invalid Authorization" }');
 }
 
-$jobJSON = file_get_contents("php://input");
-$jobJSON = json_decode($jobJSON);
-$jobid = $jobJSON->jobID;
+if (isset($_POST['postID'])) {
+    $jobid = securityscan($_POST['postID']);
+    $jobCheck = mysqli_query($conn, "SELECT user_id FROM jobs WHERE id='$jobid'");
+    $userid = mysqli_fetch_assoc($jobCheck);
+    $user_id = $userid['user_id'];
 
-$jobid = securityscan($jobid);
-$jobCheck = mysqli_query($conn, "SELECT user_id FROM jobs WHERE id='$jobid");
-$userid = mysqli_fetch_assoc($jobCheck);
-$user_id = $userid['user_id'];
+    if (mysqli_num_rows($jobCheck) > 0) {
+        if ($_SESSION['user_id'] == $user_id) {
 
-if (mysqli_num_rows($jobCheck) > 0) {
-    if ($_SESSION['user_id'] == $user_id) {
-        mysqli_query($conn, "DELETE FROM jobs WHERE id='$jobid") or die(mysqli_errno($conn));
-        echo '{ "Success": "Post has been deleted!" }';
+            mysqli_query($conn, "DELETE FROM jobs WHERE id='$jobid'") or die(mysqli_errno($conn));
+            echo "Post has been deleted!";
+        } else {
+            echo "This is not your post...";
+        }
     } else {
-        die('{ "Error": "This is not your post..." }');
+        echo "Job does not exist!";
     }
 } else {
-    die('{ "Error": "Job does not exist!" }');
+    echo 'id not set';
 }
