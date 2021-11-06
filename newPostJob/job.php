@@ -20,16 +20,16 @@ $job_id = htmlspecialchars($job_id);
 
 $jobSQL = "SELECT * FROM jobs WHERE id='$job_id' LIMIT 1";
 $jobResult = mysqli_query($conn, $jobSQL);
-$dataFound = false;
 
 if (mysqli_num_rows($jobResult) > 0) {
-    $dataFound = true;
     $r = mysqli_fetch_assoc($jobResult);
 
     $uid = $r['user_id'];
     $unameSQL = "SELECT username FROM clients WHERE id='$uid'";
     $unameResult = mysqli_query($conn, $unameSQL);
     $unameFetched = mysqli_fetch_assoc($unameResult);
+} else {
+    header("location: ./jobs.php");
 }
 
 ?>
@@ -50,7 +50,7 @@ if (mysqli_num_rows($jobResult) > 0) {
         }
     </style>
 
-    <title>Document</title>
+    <title><?php echo $r['title']; ?></title>
 </head>
 
 <body>
@@ -58,82 +58,70 @@ if (mysqli_num_rows($jobResult) > 0) {
     <?php
     include '../navbar.php';
     ?>
-    <?php if ($dataFound) { ?>
-        <div class="profile">
-            <div class="user-postings" data-postid="<?php echo $job_id; ?>">
-                <div class="card title">
-                    <h3><?php echo $r['title']; ?></h3>
-                    <span><a href="jobs">All Postings</a></span>
-                </div>
-                <div class="card result">
-                    <h1>Posted By: <?php if ($unameFetched['username'] != $_SESSION['userid']) { ?>
-                            <a href="../Profile/userprofile.php?name=<?php echo $unameFetched['username']; ?>"><?php echo $unameFetched['username']; ?></a>
+    <div class="profile">
+        <div class="user-postings">
+            <div class="card title">
+                <h3><?php echo $r['title']; ?></h3>
+                <span><a href="jobs">All Postings</a></span>
+            </div>
+            <div class="card result">
+                <h1>Posted By: <?php if ($unameFetched['username'] != $_SESSION['userid']) { ?>
+                        <a href="../Profile/userprofile.php?name=<?php echo $unameFetched['username']; ?>"><?php echo $unameFetched['username']; ?></a>
 
-                        <?php } else {
-                                        echo $unameFetched['username'];
-                                    } ?>
-                    </h1>
-                    <h1>Description: <?php echo $r['description']; ?></h1>
-                    <h1>Job Type: <?php if ($r['length'] == 'l') {
-                                        echo "Designated, longer term work";
-                                    } else {
-                                        echo "Short term or part time work";
-                                    } ?></h1>
-                    <h1>Scope of Job</h1>
-
-                    <hr class="solid">
-
-                    <h1>Size: <?php echo ucfirst($r['size']); ?></h1>
-                    <h1>Freelance Location: <?php if ($r['location'] == 'us') {
-                                                echo "United States ONLY";
-                                            } else {
-                                                echo "Worldwide";
-                                            } ?></h1>
-                    <h1><?php if ($r['budget'] > 0) {
-                            echo "Project Budget: " . $r['budget'];
-                        } else if ($r['rate'] > 0) {
-                            echo "Hourly Rate: " . $r['rate'];
-                        } else {
-                            echo "No budget or pay rate set yet...";
-                        } ?></h1>
-
-                    <hr class="solid">
-
-                    <h1>Status: <?php if ($r['status'] == 0) {
-                                    echo "Open";
+                    <?php } else {
+                                    echo $unameFetched['username'];
+                                } ?>
+                </h1>
+                <h1>Description: <?php echo $r['description']; ?></h1>
+                <h1>Job Type: <?php if ($r['length'] == 'l') {
+                                    echo "Designated, longer term work";
                                 } else {
-                                    echo "Open";
+                                    echo "Short term or part time work";
                                 } ?></h1>
-                    <h1>Posted on <?php echo $r['datePosted']; ?></h1>
+                <h1>Scope of Job</h1>
 
-                    <?php if ($unameFetched['username'] == $_SESSION['userid']) {
-                    ?>
-                        <input type="button" onclick="deleteMenu()" id="deleteBtn" value="Delete Post">
+                <hr class="solid">
+
+                <h1>Size: <?php echo ucfirst($r['size']); ?></h1>
+                <h1>Freelance Location: <?php if ($r['location'] == 'us') {
+                                            echo "United States ONLY";
+                                        } else {
+                                            echo "Worldwide";
+                                        } ?></h1>
+                <h1><?php if ($r['budget'] > 0) {
+                        echo "Project Budget: " . $r['budget'];
+                    } else if ($r['rate'] > 0) {
+                        echo "Hourly Rate: " . $r['rate'];
+                    } else {
+                        echo "No budget or pay rate set yet...";
+                    } ?></h1>
+
+                <hr class="solid">
+
+                <h1>Status: <?php if ($r['status'] == 0) {
+                                echo "Open";
+                            } else {
+                                echo "Open";
+                            } ?></h1>
+                <h1>Posted on <?php echo $r['datePosted']; ?></h1>
+
+                <?php if ($unameFetched['username'] == $_SESSION['userid']) {
+                ?>
+                    <input type="button" onclick="deleteMenu()" id="deleteBtn" value="Delete Post">
 
 
-                        <div id="deleteMenu" style="display: none;">
-                            <span>Are you sure you want to delete this post?</span>
-                            <input type="button" id="yesBtn" value="Yes">
-                            <input type="button" id="noBtn" value="No">
-                        </div>
+                    <div id="deleteMenu" style="display: none;">
+                        <span>Are you sure you want to delete this post?</span>
+                        <input type="button" id="yesBtn" value="Yes">
+                        <input type="button" id="noBtn" value="No">
+                    </div>
 
-                    <?php } ?>
+                <?php } ?>
 
-                    <span id="result"></span>
-                </div>
+                <span id="result"></span>
             </div>
         </div>
-    <?php } else { ?>
-        <div class="profile">
-            <div class="user-postings">
-                <div class="card title">
-                    <h3>We could not locate that job</h3>
-                    <span><a href="jobs">All Postings</a></span>
-                </div>
-            </div>
-        </div>
-    <?php
-    } ?>
+    </div>
 
     <?php include '../footer.php'; ?>
 
