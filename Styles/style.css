@@ -9422,7 +9422,7 @@ ul {
 
 .postJob-detail-budget {
   width: 100%;
-  height: 95vh;
+  height: 93vh;
   background: whitesmoke;
   padding: 2.5rem 10rem;
 }
@@ -9580,6 +9580,9 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .postJob-detail-budget .detail-budget-container .detail-input-section form .hourly, .postJob-detail-budget .detail-budget-container .detail-input-section form .budget {

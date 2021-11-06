@@ -830,7 +830,7 @@ $darktext: rgb(121, 121, 121);
 // Css for posting budget start here
 .postJob-detail-budget {
   width: 100%;
-  height: 95vh;
+  height: 93vh;
   background: whitesmoke;
   padding: 2.5rem 10rem;
 
@@ -942,7 +942,7 @@ $darktext: rgb(121, 121, 121);
         height: 100%;
         display: flex;
         flex-direction: column;
-
+        justify-content: center;
         .hourly,.budget{
           width: 100%;
           padding: 2rem 0rem;
