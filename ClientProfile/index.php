@@ -118,7 +118,7 @@ $userID = $_SESSION['user_id'];
                                     <i class="fa fa-ellipsis-v" id="jobGodMode" onclick="toggleJobOption()" aria-hidden="true"></i>
                                     <div class="jobEdit">
                                         <div class="exit">
-                                            <i class="fa fa-times" id="exitJobEdit"></i>
+                                            <i class="fa fa-times" onclick="toggleJobOption()" id="exitJobEdit"></i>
                                         </div>
                                         <button onclick="location.href='../newPostJob/reviewJobPost.php'">Edit</button>
                                         <button style="color: red;" id="deleteJob">Delete</button>
