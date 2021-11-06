@@ -145,14 +145,13 @@ if (mysqli_num_rows($jobResult) > 0) {
         $('#deleteMenu').css('display', 'block');
     }
 
-    var jobid = $('.user-postings').data('postid');
     $('#yesBtn').click(function() {
         $.ajax({
             type: "POST",
             url: "../api/delete-post.php",
             processData: false,
             contentType: "application/json",
-            data: '{ "jobID": "' + jobid + '" }',
+            data: '{ "jobID": "<?php echo $job_id; ?>" }',
             success: function(data) {
                 var obj = JSON.parse(data);
                 console.log(obj);
