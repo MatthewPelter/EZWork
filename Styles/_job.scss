@@ -2,7 +2,6 @@ $color1: #0a345e;
 $lightColor: #054e97;
 $darktext: rgb(121, 121, 121);
 .job{
-    margin-top: 4.5rem;
     width: 100%;
     background: whitesmoke;
     padding: 2.5rem 8rem;
@@ -49,7 +48,7 @@ $darktext: rgb(121, 121, 121);
                 justify-content: space-between;
                 
                 h3{
-                    font-size: 1.1rem;
+                    font-size: 1.2rem;
                     color: $lightColor;
                     width: 100%;
                     font-weight: bolder;
@@ -108,7 +107,7 @@ $darktext: rgb(121, 121, 121);
                 .experience{
                     width: 50%;
                     h4{
-                        font-size: 1.1rem;
+                        font-size: 1.2rem;
                         color: $lightColor;
                     }
                 }
@@ -135,7 +134,7 @@ $darktext: rgb(121, 121, 121);
                         text-decoration: underline;
                     }
                     p{
-                        font-size: 1.1rem;
+                        font-size: 1.2rem;
                         padding-left: .5rem;
                     }
                 }
@@ -153,7 +152,8 @@ $darktext: rgb(121, 121, 121);
                     text-decoration: underline;
                 }
                 span{
-                    font-size: .9rem;
+                    margin: 0.5rem 0rem;
+                    font-size: 1rem;
                     color: $darktext;
                 }
 
@@ -188,16 +188,64 @@ $darktext: rgb(121, 121, 121);
             .flag{
                 margin: 1rem 0rem;
                 i{
-                    font-size: 1.1rem;
+                    font-size: 1.2rem;
                     color: $lightColor;
                 }
                 span{
-                    font-size: 1.1rem;
+                    font-size: 1.2rem;
                     color: $lightColor;
                     margin-left: .5rem;
                     cursor: pointer;
                     &:hover{
                         text-decoration: underline;
+                    }
+                }
+            }
+
+            #deleteBtn{
+                -moz-appearance: none;
+                -webkit-appearance: none;
+                appearance: none;
+                width: 90%;
+                background: transparent;
+                color: $darktext;
+                text-align: center;
+                border: none;
+                font-size: 1rem;
+                padding: .5rem 0rem;
+                border: .7px solid $darktext;
+                border-radius: 12px;
+                cursor: pointer;
+            }
+            #deleteMenu{
+                width: 100%;
+                .deleteMenuContainer{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+
+                    span{
+                        width: 100%;
+                        text-align: center;
+                        font-size: 1rem;
+                        color: $darktext;
+                    }
+                    input{
+                        -moz-appearance: none;
+                        -webkit-appearance: none;
+                        appearance: none;
+                        width: 50%;
+                        background: transparent;
+                        color: $darktext;
+                        text-align: center;
+                        border: none;
+                        font-size: 1rem;
+                        padding: .5rem 0rem;
+                        border: .7px solid $darktext;
+                        border-radius: 12px;
+                        cursor: pointer;
                     }
                 }
             }
@@ -223,7 +271,7 @@ $darktext: rgb(121, 121, 121);
                 display: flex;
                 flex-direction: row;
                 p{
-                    font-size: 1.1rem;
+                    font-size: 1.2rem;
                     color: $color1;
                     padding-right:.5rem ;
                 }
@@ -254,7 +302,7 @@ $darktext: rgb(121, 121, 121);
             padding: 1.5rem;
             width: 100%;
             h4{
-                font-size: 1.1rem;
+                font-size: 1.2rem;
                 color: $color1;
                 text-decoration: underline;
                 padding: 1rem 0rem;

@@ -101,11 +101,11 @@ $avatarFetch = mysqli_fetch_assoc($avatarResult);
                 <div class="budgetAndExperience">
                     <div class="budget">
                     <?php if ($r['rate'] > 0) { ?>
-                        <p><?php echo $r['rate']; ?></p>
+                        <p>$<?php echo $r['rate']; ?> / hr</p>
                         <span><?php echo "Hourly Rate" ?></span>
                     <?php } else if ($r['budget'] > 0) { ?>
                         <p><?php echo $r['budget']; ?></p>
-                        <span><?php echo "Project Budget" ?></span>
+                        <span>$ <?php echo "Project Budget" ?></span>
                     <?php } else { ?>
                         <p></p>
                         <span> <?php echo "No budget or pay rate set yet..."; ?></span>
@@ -154,9 +154,11 @@ $avatarFetch = mysqli_fetch_assoc($avatarResult);
 
 
                     <div id="deleteMenu" style="display: none;">
-                        <span>Are you sure you want to delete this post?</span>
-                        <input type="button" id="yesBtn" value="Yes">
-                        <input type="button" id="noBtn" value="No">
+                        <div class="deleteMenuContainer">
+                            <span>Are you sure you want to delete this post?</span>
+                            <input type="button" id="yesBtn" value="Yes">
+                            <input type="button" id="noBtn" value="No">
+                        </div>
                     </div>
 
                 <?php } ?>
@@ -173,13 +175,13 @@ $avatarFetch = mysqli_fetch_assoc($avatarResult);
                                 } ?>
                 </div>
                 <div class="img-card">
-                    <img src="<?php echo $avatarFetch['avatar']; ?>" alt="">
+                    <img src="<?php echo $row['avatar']; ?>" alt="">
                 </div>
             </div>
             <div class="joblink">
                 <h4>Job Link</h4>
                 <div class="link">
-                    <span id="link">https://ez-work.herokuapp.com/newPostJob/job.php?<?php echo $r['id']; ?>"><?php echo $r['title']; ?></span>        
+                    <span id="link">https://ez-work.herokuapp.com/newPostJob/job.php?<?php echo $r['id']; ?>"></span>        
                 </div>
             
                 <p id="copyLink">Copy Link</p>

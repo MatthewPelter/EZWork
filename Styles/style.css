@@ -18665,7 +18665,6 @@ li {
 }
 
 .job {
-  margin-top: 4.5rem;
   width: 100%;
   background: whitesmoke;
   padding: 2.5rem 8rem;
@@ -18728,7 +18727,7 @@ li {
 }
 
 .job .job-container .jobCard .scope h3 {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #054e97;
   width: 100%;
   font-weight: bolder;
@@ -18801,7 +18800,7 @@ li {
 }
 
 .job .job-container .jobCard .budgetAndExperience .experience h4 {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #054e97;
 }
 
@@ -18843,7 +18842,7 @@ li {
 }
 
 .job .job-container .jobCard .jobType .type p, .job .job-container .jobCard .jobType .size p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   padding-left: .5rem;
 }
 
@@ -18869,7 +18868,8 @@ li {
 }
 
 .job .job-container .jobCard .skills span {
-  font-size: .9rem;
+  margin: 0.5rem 0rem;
+  font-size: 1rem;
   color: #797979;
 }
 
@@ -18918,12 +18918,12 @@ li {
 }
 
 .job .job-container .options .flag i {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #054e97;
 }
 
 .job .job-container .options .flag span {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #054e97;
   margin-left: .5rem;
   cursor: pointer;
@@ -18931,6 +18931,66 @@ li {
 
 .job .job-container .options .flag span:hover {
   text-decoration: underline;
+}
+
+.job .job-container .options #deleteBtn {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 90%;
+  background: transparent;
+  color: #797979;
+  text-align: center;
+  border: none;
+  font-size: 1rem;
+  padding: .5rem 0rem;
+  border: 0.7px solid #797979;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.job .job-container .options #deleteMenu {
+  width: 100%;
+}
+
+.job .job-container .options #deleteMenu .deleteMenuContainer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.job .job-container .options #deleteMenu .deleteMenuContainer span {
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  color: #797979;
+}
+
+.job .job-container .options #deleteMenu .deleteMenuContainer input {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 50%;
+  background: transparent;
+  color: #797979;
+  text-align: center;
+  border: none;
+  font-size: 1rem;
+  padding: .5rem 0rem;
+  border: 0.7px solid #797979;
+  border-radius: 12px;
+  cursor: pointer;
 }
 
 .job .job-container .clientInfo {
@@ -18971,7 +19031,7 @@ li {
 }
 
 .job .job-container .clientInfo .username p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #0a345e;
   padding-right: .5rem;
 }
@@ -19018,7 +19078,7 @@ li {
 }
 
 .job .job-container .joblink h4 {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #0a345e;
   text-decoration: underline;
   padding: 1rem 0rem;
