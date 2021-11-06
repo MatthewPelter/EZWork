@@ -521,9 +521,7 @@
           }
           .jobEdit {
             display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
+            position: absolute;
             flex-direction: column;
             align-items: center;
             justify-content: center;
