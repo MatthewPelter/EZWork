@@ -9,6 +9,10 @@ function securityscan($data)
     return $data;
 }
 
+if (!isset($_SESSION['userid']) && !isset($_SESSION['user_id'])) {
+    die("Error");
+}
+
 // Converting the username to a userid from the user that is logged in
 $username = $_SESSION['userid'];
 //$getUserID = "SELECT id FROM clients WHERE username = '$username'";
