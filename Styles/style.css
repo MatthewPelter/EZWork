@@ -9172,9 +9172,7 @@ ul {
 
 .postJob-detail-location {
   width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 90vh;
   background: whitesmoke;
   padding: 2.5rem 10rem;
 }
@@ -9354,7 +9352,7 @@ ul {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  padding: 2.5rem 0rem;
+  padding: 3rem 0rem;
 }
 
 .postJob-detail-location .detail-location-container .detail-input-section form .unitedStates label, .postJob-detail-location .detail-location-container .detail-input-section form .worldwide label {

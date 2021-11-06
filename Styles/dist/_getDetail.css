@@ -632,7 +632,7 @@
 
 .postJob-detail-location {
   width: 100%;
-  height: fit-content;
+  height: 90vh;
   background: whitesmoke;
   padding: 2.5rem 10rem;
 }
@@ -753,7 +753,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  padding: 2.5rem 0rem;
+  padding: 3rem 0rem;
 }
 .postJob-detail-location .detail-location-container .detail-input-section form .unitedStates label, .postJob-detail-location .detail-location-container .detail-input-section form .worldwide label {
   cursor: pointer;
