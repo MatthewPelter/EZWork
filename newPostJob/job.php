@@ -41,6 +41,7 @@ if (mysqli_num_rows($jobResult) > 0) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../logo/logo.svg">
     <link rel="stylesheet" href="../Styles/style.css" />
 
     <style type="text/css">
@@ -139,7 +140,7 @@ if (mysqli_num_rows($jobResult) > 0) {
             url: "../api/delete-post.php",
             processData: false,
             contentType: "application/json",
-            data: '{ "jobID": "<?php echo $job_id; ?>" }',
+            data: '{ "jobID": "' + <?php echo $job_id; ?> + '" }',
             success: function(data) {
                 var obj = JSON.parse(data);
                 console.log(obj);
