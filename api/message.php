@@ -11,7 +11,7 @@ function securityscan($data)
 }
 
 if (!isset($_SESSION['user_id'])) {
-    die("{ 'Error': 'Invalid Authorization' }");
+    die('{ "Error": "Invalid Authorization" }');
 }
 
 $sender = $_SESSION['user_id'];
@@ -29,17 +29,17 @@ $getID = mysqli_fetch_assoc($id);
 $getID = $getID['id'];
 
 if (strlen($body) > 100) {
-    echo "{ 'Error': 'Message too long!' }";
+    echo '{ "Error": "Message too long!"}';
 }
 
 if ($body == null || $body == "") {
-    die("{ 'Error': 'Message body cannot be empty!' }");
+    die('{ "Error": "Message body cannot be empty!" }');
 }
 if ($receiver == null) {
-    die("{ 'Error': 'Missing receiver!' }");
+    die('{ "Error": "Missing receiver!" }');
 }
 if ($sender == null) {
-    die("{ 'Error': 'Missing Sender!' }");
+    die('{ "Error": "Missing Sender!" }');
 }
 
 $query = mysqli_query($conn, "INSERT INTO messages(body, sender, receiver, isread) VALUES('$body', '$sender', '$getID', 0)") or die(mysqli_errno($conn));
