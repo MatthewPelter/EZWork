@@ -6355,7 +6355,6 @@ section .container .login .login-container button:hover {
   }
   .profile .user-postings .postedJob .jobTitle .jobEdit {
     display: none;
-    position: absolute;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
