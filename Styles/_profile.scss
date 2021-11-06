@@ -136,7 +136,7 @@ $darktext: rgb(121, 121, 121);
           border-radius: 50%;
           border: 0.8px solid $darktext;
           padding: 0.4rem 0.6rem;
-          cursor: pointer;
+          pointer-events: none;
           &:hover {
             background: lightgray;
           }
