@@ -5788,6 +5788,7 @@ section .container .login .login-container button:hover {
 }
 
 .profile .user-postings .postedJob .jobTitle i {
+  opacity: 0;
   font-size: 0.8rem;
   color: #797979;
   border-radius: 50%;

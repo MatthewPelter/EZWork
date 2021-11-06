@@ -115,10 +115,10 @@ $userID = $_SESSION['user_id'];
                             <div class="postedJob" data-postid="<?php echo $r['id']; ?>">
                                 <div class="jobTitle">
                                     <h4 id="jobTitle"><a href="../newPostJob/job.php?id=<?php echo $r['id']; ?>"><?php echo $r['title']; ?></a></h4>
-                                    <i class="fa fa-ellipsis-v" id="jobGodMode" onclick="toggleJobOption()" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v" id="jobGodMode" aria-hidden="true"></i>
                                     <div class="jobEdit">
                                         <div class="exit">
-                                            <i class="fa fa-times" onclick="toggleJobOption()" id="exitJobEdit"></i>
+                                            <i class="fa fa-times" id="exitJobEdit"></i>
                                         </div>
                                         <button onclick="location.href='../newPostJob/reviewJobPost.php'">Edit</button>
                                         <button style="color: red;" id="deleteJob">Delete</button>
@@ -520,6 +520,7 @@ $userID = $_SESSION['user_id'];
     }
 </script>
 
+<!--
 <script>
     var jobEdit = document.querySelector(".jobEdit");
     function toggleJobOption(){
@@ -530,5 +531,5 @@ $userID = $_SESSION['user_id'];
         }
     }
 </script>
-
+-->
 </html>
