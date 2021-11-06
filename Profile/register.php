@@ -2,13 +2,16 @@
 session_start();
 include '../components/session-checker.php';
 require_once("../classes/DB.php");
+include('./classes/Mail.php');
 
+$user_id = $_SESSION['user_id'];
+$sql = "SELECT * FROM clients WHERE id='$user_id'";
+$result = mysqli_query($conn, $sql);
+$row = mysqli_fetch_assoc($result);
 
-// Pulling username and user id from session
-$username = $_SESSION['userid'];
-$userID = $_SESSION['user_id'];
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
