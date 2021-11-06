@@ -111,7 +111,7 @@ if (mysqli_num_rows($jobResult) > 0) {
                         <input type="button" onclick="deleteMenu()" id="deleteBtn" value="Delete Post">
 
 
-                        <div id="deleteMenu">
+                        <div id="deleteMenu" style="display: none;">
                             <span>Are you sure you want to delete this post?</span>
                             <input type="button" id="yesBtn" value="Yes">
                             <input type="button" id="noBtn" value="No">
