@@ -121,7 +121,19 @@ $userID = $_SESSION['user_id'];
                                             <i class="fa fa-times" onclick="toggleJobOption()" id="exitJobEdit"></i>
                                         </div>
                                         <button onclick="location.href='../newPostJob/reviewJobPost.php'">Edit</button>
-                                        <button style="color: red;" id="deleteJob">Delete</button>
+                                        <?php if ($unameFetched['username'] == $_SESSION['userid']) {
+                                        ?>
+                                        <input type="button" onclick="deleteMenu()" id="deleteBtn" value="Delete Post">
+
+
+                                            <div id="deleteMenu" style="display: none;">
+                                            <span>Are you sure you want to delete this post?</span>
+                                            <input type="button" id="yesBtn" value="Yes">
+                                            <input type="button" id="noBtn" value="No">
+                                            </div>
+
+                                        <?php } ?>
+                            
                                     </div>
                                 </div>
                                 <p>Status: <span id="status"><?php if ($r['status'] == 0) {
@@ -518,6 +530,30 @@ $userID = $_SESSION['user_id'];
             sortDownBtn3.style.transform = "rotate(360deg)";
         }
     }
+</script>
+
+<script type="text/javascript">
+    function deleteMenu() {
+        $('#deleteMenu').css('display', 'block');
+    }
+    $('#yesBtn').click(function() {
+        $.ajax({
+            type: "POST",
+            url: "../api/delete-post.php",
+            data: 'postID=' + <?php echo $job_id; ?>,
+            success: function(data) {
+                $('#deleteMenu').css('display', 'none');
+                $('#result').html(data);
+            },
+            error: function(r) {
+                console.log(r);
+            }
+        });
+    });
+
+    $('#noBtn').click(function() {
+        $('#deleteMenu').css('display', 'none');
+    });
 </script>
 
 <script>
