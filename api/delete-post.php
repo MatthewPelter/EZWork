@@ -12,7 +12,7 @@ function securityscan($data)
 }
 
 if (!isset($_SESSION['user_id'])) {
-    die('{ "Error": "Invalid Authorization" }');
+    die("Error: Invalid Authorization");
 }
 
 if (isset($_POST['postID'])) {
@@ -27,11 +27,11 @@ if (isset($_POST['postID'])) {
             mysqli_query($conn, "DELETE FROM jobs WHERE id='$jobid'") or die(mysqli_errno($conn));
             echo "Post has been deleted!";
         } else {
-            echo "This is not your post...";
+            die("This is not your post...");
         }
     } else {
-        echo "Job does not exist!";
+        die("Job does not exist!");
     }
 } else {
-    echo 'id not set';
+    die("Error: Something went wrong!");
 }

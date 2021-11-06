@@ -112,7 +112,7 @@ $userID = $_SESSION['user_id'];
                     while ($r = mysqli_fetch_assoc($jobResult)) {
                 ?>
                         <div class="allJobsCard" style="overflow-y: scroll;">
-                            <div class="postedJob">
+                            <div class="postedJob" data-postid="<?php echo $r['id']; ?>">
                                 <div class="jobTitle">
                                     <h4 id="jobTitle"><a href="../newPostJob/job.php?id=<?php echo $r['id']; ?>"><?php echo $r['title']; ?></a></h4>
                                     <i class="fa fa-ellipsis-v" id="jobGodMode" aria-hidden="true"></i>
@@ -375,9 +375,25 @@ $userID = $_SESSION['user_id'];
 
 <!--Script for the search bar and datalist-->
 <script src="../SkillsContainer/searchProfile.js"></script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <!--nav bar script -->
-<script>
+<script type="text/javascript">
+    /* Delete job button
+    $.ajax({
+        type: "POST",
+        url: "../api/delete-post.php",
+        data: 'postID=' + <?php //echo $job_id; 
+                            ?>,
+        success: function(data) {
+            $('#deleteMenu').css('display', 'none');
+            $('#result').html(data);
+        },
+        error: function(r) {
+            console.log(r);
+        }
+    });
+    */
+
     var job = document.querySelector('.jobCard');
     var talent = document.querySelector('.talentCard');
     var project = document.querySelector('.projectCard');
@@ -449,9 +465,9 @@ $userID = $_SESSION['user_id'];
             session.style.display = 'none';
         }
     }
-</script>
-<!--Toggle the nav burger button and mobile nav bar js-->
-<script>
+
+    //Toggle the nav burger button and mobile nav bar js
+
     const navIcon = document.getElementById("nav-burger");
     const profileMobileNav = document.querySelector(".profile-mobile-nav");
 
