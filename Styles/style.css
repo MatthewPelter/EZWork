@@ -9172,7 +9172,6 @@ ul {
 
 .postJob-detail-location {
   width: 100%;
-  height: 90vh;
   background: whitesmoke;
   padding: 2.5rem 10rem;
 }
@@ -9352,7 +9351,7 @@ ul {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  padding: 3rem 0rem;
+  padding: 2rem 0rem;
 }
 
 .postJob-detail-location .detail-location-container .detail-input-section form .unitedStates label, .postJob-detail-location .detail-location-container .detail-input-section form .worldwide label {
@@ -9385,7 +9384,7 @@ ul {
 }
 
 .postJob-detail-location .detail-location-container .detail-input-section .CancelOrNext {
-  margin-top: 4rem;
+  margin-top: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9599,7 +9598,7 @@ ul {
 }
 
 .postJob-detail-budget .detail-budget-container .detail-input-section form .hourly label, .postJob-detail-budget .detail-budget-container .detail-input-section form .budget label {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: bolder;
   color: #054e97;
   cursor: pointer;
@@ -9672,7 +9671,7 @@ ul {
 }
 
 .postJob-detail-budget .detail-budget-container .detail-input-section .CancelOrNext {
-  margin-top: 3rem;
+  margin-top: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
