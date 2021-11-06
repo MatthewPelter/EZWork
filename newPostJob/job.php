@@ -60,7 +60,7 @@ if (mysqli_num_rows($jobResult) > 0) {
     include '../navbar.php';
     ?>
     <div class="profile">
-        <div class="user-postings">
+        <div class="user-postings" data-postid="<?php echo $r['id']; ?>">
             <div class="card title">
                 <h3><?php echo $r['title']; ?></h3>
                 <span><a href="jobs">All Postings</a></span>
@@ -133,14 +133,13 @@ if (mysqli_num_rows($jobResult) > 0) {
     function deleteMenu() {
         $('#deleteMenu').css('display', 'block');
     }
-
     $('#yesBtn').click(function() {
         $.ajax({
             type: "POST",
             url: "../api/delete-post.php",
             processData: false,
             contentType: "application/json",
-            data: '{ "jobID": "' + <?php echo $job_id; ?> + '" }',
+            data: '{ "jobID": "' + $('.user-postings').data('postid') + '" }',
             success: function(data) {
                 var obj = JSON.parse(data);
                 console.log(obj);
