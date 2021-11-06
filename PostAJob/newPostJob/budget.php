@@ -79,7 +79,7 @@ if (isset($_POST['location'])) {
                         <input type="radio" id="rate" name="budgetoption" value="rate" required>
                     </div>
                     <div id="rateChecked">
-                        <label>Optional </label>
+                        <span>Optional*</span>
                         <div class="rateChecked-container">
                             <label>Hourly Rate ($ / hour): </label>
                             <input name="hourrate" id="hourrate" type="number" placeholder="Enter $ Amount" value="">
@@ -91,7 +91,7 @@ if (isset($_POST['location'])) {
                         <input type="radio" id="budget" name="budgetoption" value="budget">
                     </div>    
                     <div id="budgetChecked">
-                        <label>Optional</label>
+                        <span>Optional*</span>
                         <div class="budgetChecked-container">
                             <label>Maximum Budget ($):</label>
                             <input name="maxbudget" id="maxbudget" type="number" placeholder="Enter $ Amount" value="">

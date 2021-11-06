@@ -632,7 +632,7 @@
 
 .postJob-detail-location {
   width: 100%;
-  height: 95vh;
+  height: 92vh;
   background: whitesmoke;
   padding: 2.5rem 10rem;
 }
@@ -956,7 +956,7 @@
   width: 100%;
 }
 .postJob-detail-budget .detail-budget-container .detail-input-section form #rateChecked span, .postJob-detail-budget .detail-budget-container .detail-input-section form #budgetChecked span {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #797979;
   width: 100%;
   text-align: start;
@@ -969,7 +969,7 @@
 }
 .postJob-detail-budget .detail-budget-container .detail-input-section form #rateChecked .rateChecked-container label, .postJob-detail-budget .detail-budget-container .detail-input-section form #rateChecked .budgetChecked-container label, .postJob-detail-budget .detail-budget-container .detail-input-section form #budgetChecked .rateChecked-container label, .postJob-detail-budget .detail-budget-container .detail-input-section form #budgetChecked .budgetChecked-container label {
   width: 50%;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #0a345e;
   font-weight: bolder;
   padding-right: 1rem;

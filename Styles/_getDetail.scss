@@ -650,7 +650,7 @@ $darktext: rgb(121, 121, 121);
 // Css for posting location start here
 .postJob-detail-location {
   width: 100%;
-  height: 95vh;
+  height: 92vh;
   background: whitesmoke;
   padding: 2.5rem 10rem;
 
@@ -982,7 +982,7 @@ $darktext: rgb(121, 121, 121);
           display: none;
           width: 100%;
           span{
-            font-size: 1rem;
+            font-size: 1.2rem;
             color: $darktext;
             width: 100%;
             text-align:start;
@@ -994,7 +994,7 @@ $darktext: rgb(121, 121, 121);
             justify-content: flex-start;
             label{
               width: 50%;
-              font-size: 1rem;
+              font-size: 1.1rem;
               color: $color1;
               font-weight: bolder;
               padding-right:1rem ;
