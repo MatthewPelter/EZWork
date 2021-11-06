@@ -129,13 +129,13 @@ $avatarFetch = mysqli_fetch_assoc($avatarResult);
                     <div class="card card1">
                         <h4>My Jobs</h4>
                     </div>
-                    <div class="card card2" onclick="location.href='./newPostJob/jobs.php'">
+                    <div class="card card2" onclick="location.href='../newPostJob/jobs.php'">
                         <h4>All Job Posts</h4>
                     </div>
                     <div class="card card3">
                         <h4>All Contracts</h4>
                     </div>
-                    <div class="card card4" onclick="location.href='./newPostJob/length.php'">
+                    <div class="card card4" onclick="location.href='../newPostJob/length.php'">
                         <h4>Post A Job</h4>
                     </div>
                 </div>
