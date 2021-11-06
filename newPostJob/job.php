@@ -157,7 +157,11 @@ if (mysqli_num_rows($jobResult) > 0) {
                 var obj = JSON.parse(data);
                 console.log(obj);
                 $('#deleteMenu').css('display', 'none');
-                $('#result').html('Post Deleted!');
+                if (obj.Success.length > 0) {
+                    $('#result').html(obj.Success);
+                } else if (obj.Error.length > 0) {
+                    $('#result').html(obj.Error);
+                }
             },
             error: function(r) {
                 console.log(r);
