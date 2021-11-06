@@ -115,7 +115,7 @@ $userID = $_SESSION['user_id'];
                             <div class="postedJob" data-postid="<?php echo $r['id']; ?>">
                                 <div class="jobTitle">
                                     <h4 id="jobTitle"><a href="../newPostJob/job.php?id=<?php echo $r['id']; ?>"><?php echo $r['title']; ?></a></h4>
-                                    <i class="fa fa-ellipsis-v" id="jobGodMode" aria-hidden="true"></i>
+                                    <i class="fa fa-ellipsis-v" id="jobGodMode" onclick="toggleJobOption()" aria-hidden="true"></i>
                                     <div class="jobEdit">
                                         <div class="exit">
                                             <i class="fa fa-times" id="exitJobEdit"></i>
@@ -373,8 +373,6 @@ $userID = $_SESSION['user_id'];
     </datalist>
 </body>
 
-<script src="./app.js"></script>
-
 <!--Script for the search bar and datalist-->
 <script src="../SkillsContainer/searchProfile.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -518,6 +516,17 @@ $userID = $_SESSION['user_id'];
         } else {
             mobileProjectsCard.style.display = "none";
             sortDownBtn3.style.transform = "rotate(360deg)";
+        }
+    }
+</script>
+
+<script>
+    var jobEdit = document.querySelector(".jobEdit");
+    function toggleJobOption(){
+        if (jobEdit.style.display === 'none') {
+            jobEdit.style.display = 'inline-block';
+        } else {
+            jobEdit.style.display = 'none';
         }
     }
 </script>
