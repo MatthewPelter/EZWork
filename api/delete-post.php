@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-//require_once("../classes/DB.php");
+require_once("../classes/DB.php");
 
 function securityscan($data)
 {
@@ -11,8 +11,8 @@ function securityscan($data)
     return $data;
 }
 
-if (isset($_POST['postID']) && isset($_SESSION['user_id'])) {
-    $jobid = securityscan($_POST['postID']);
+if (isset($_POST['jobID']) && isset($_SESSION['user_id'])) {
+    $jobid = securityscan($_POST['jobID']);
     $jobCheck = mysqli_query($conn, "SELECT user_id FROM jobs WHERE id='$jobid");
     $userid = mysqli_fetch_assoc($jobCheck);
     $user_id = $userid['user_id'];

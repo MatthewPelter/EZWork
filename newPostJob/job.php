@@ -148,19 +148,18 @@ if (mysqli_num_rows($jobResult) > 0) {
     var jobid = $('.user-postings').data('postid');
     $('#yesBtn').click(function() {
         $.ajax({
-            url: "../api/delete-post.php",
-            data: {
-                postID: jobid
-            },
             type: "POST",
+            url: "../api/delete-post.php",
+            processData: false,
+            contentType: "application/json",
+            data: '{ "jobID": "' + jobid + '" }',
             success: function(data) {
-                console.log("It works");
-                console.log(data);
-                //$("#result").html(data);
+                var obj = JSON.parse(data);
+                console.log(obj);
                 $('#deleteMenu').css('display', 'none');
+                $('#result').html('Post Deleted!');
             },
             error: function(r) {
-                console.log("It broke");
                 console.log(r);
             }
         });
