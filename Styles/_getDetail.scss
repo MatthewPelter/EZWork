@@ -801,7 +801,7 @@ $darktext: rgb(121, 121, 121);
         }
       }
       .CancelOrNext {
-        margin-top: 4rem;
+        margin-top: 2rem;
         display: flex;
         flex-direction: row;
         width: 100%;
@@ -952,7 +952,7 @@ $darktext: rgb(121, 121, 121);
           align-items: center;
 
           label{
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             font-weight: bolder;
             color: $lightColor;
             cursor: pointer;
@@ -1013,7 +1013,7 @@ $darktext: rgb(121, 121, 121);
       }
 
       .CancelOrNext {
-        margin-top: 3rem;
+        margin-top: 4rem;
         display: flex;
         flex-direction: row;
         width: 100%;

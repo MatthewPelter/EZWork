@@ -781,7 +781,7 @@
   border: 0.7px solid #054e97;
 }
 .postJob-detail-location .detail-location-container .detail-input-section .CancelOrNext {
-  margin-top: 4rem;
+  margin-top: 2rem;
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -927,7 +927,7 @@
   align-items: center;
 }
 .postJob-detail-budget .detail-budget-container .detail-input-section form .hourly label, .postJob-detail-budget .detail-budget-container .detail-input-section form .budget label {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: bolder;
   color: #054e97;
   cursor: pointer;
@@ -982,7 +982,7 @@
   color: #797979;
 }
 .postJob-detail-budget .detail-budget-container .detail-input-section .CancelOrNext {
-  margin-top: 3rem;
+  margin-top: 4rem;
   display: flex;
   flex-direction: row;
   width: 100%;
