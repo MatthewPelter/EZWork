@@ -84,18 +84,18 @@ $userID = $_SESSION['user_id'];
         <div class="user-profile-header">
             <h2 id="username"><?php echo $_SESSION['userid']; ?></h2>
             <div class="quick-links">
-                <button id="quick-link-job" onclick="location.href='../newPostJob/length.php'">Post A Job</button>
-                <button id="quick-link-market" onclick="location.href='../newPostJob/jobs.php'">Browse Marketplace</button>
+                <button id="quick-link-job" onclick="location.href='../PostAJob/length.php'">Post A Job</button>
+                <button id="quick-link-market" onclick="location.href='../PostAJob/jobs.php'">Browse Marketplace</button>
             </div>
         </div>
         <div class="user-profile-body">
             <div class="user-postings">
                 <div class="card title">
                     <h3>My Postings</h3>
-                    <span><a href="../PostAJob/newPostJob/jobs">All Jobs</a></span>
+                    <span><a href="../PostAJob/jobs">All Jobs</a></span>
                 </div>
                 <div class="card result" style="padding: 1rem;">
-                    <button id="quick-link-job2" onclick="location.href='../newPostJob/length.php'">Post A Job</button>
+                    <button id="quick-link-job2" onclick="location.href='../PostAJob/length.php'">Post A Job</button>
                     <span>
                         <?php
                         $jobSQL = "SELECT * FROM jobs WHERE user_id='$userID' ORDER BY id DESC";
@@ -114,7 +114,7 @@ $userID = $_SESSION['user_id'];
                         <div class="allJobsCard" style="overflow-y: scroll;">
                             <div class="postedJob">
                                 <div class="jobTitle">
-                                    <h4 id="jobTitle"><a href="../PostAJob/newPostJob/job.php?id=<?php echo $r['id']; ?>"><?php echo $r['title']; ?></a></h4>
+                                    <h4 id="jobTitle"><a href="../PostAJob/job.php?id=<?php echo $r['id']; ?>"><?php echo $r['title']; ?></a></h4>
                                     <i class="fa fa-ellipsis-v" id="jobGodMode" aria-hidden="true"></i>
                                     <div class="jobEdit">
                                         <div class="exit">
