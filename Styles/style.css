@@ -9172,7 +9172,9 @@ ul {
 
 .postJob-detail-location {
   width: 100%;
-  height: 92vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   background: whitesmoke;
   padding: 2.5rem 10rem;
 }

@@ -632,7 +632,7 @@
 
 .postJob-detail-location {
   width: 100%;
-  height: 92vh;
+  height: fit-content;
   background: whitesmoke;
   padding: 2.5rem 10rem;
 }
