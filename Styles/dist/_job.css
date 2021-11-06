@@ -41,13 +41,13 @@
   justify-content: space-between;
 }
 .job .job-container .jobCard .scope h3 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: #054e97;
   width: 100%;
   font-weight: bolder;
 }
 .job .job-container .jobCard .scope p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #054e97;
   padding: 0.5rem 0rem;
 }
@@ -136,7 +136,7 @@
 }
 .job .job-container .jobCard .skills span {
   margin: 0.5rem 0rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #797979;
 }
 .job .job-container .options {
@@ -183,7 +183,7 @@
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-  width: 90%;
+  width: 50%;
   background: transparent;
   color: #797979;
   text-align: center;

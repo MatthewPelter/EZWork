@@ -31,8 +31,6 @@ if (mysqli_num_rows($jobResult) > 0) {
 } else {
     header("location: ./jobs.php");
 }
-$avatarResult = mysqli_query($conn, "SELECT avatar FROM clients WHERE id = '$user_id'");
-$avatarFetch = mysqli_fetch_assoc($avatarResult);
 ?>
 
 <!DOCTYPE html>
@@ -181,7 +179,7 @@ $avatarFetch = mysqli_fetch_assoc($avatarResult);
             <div class="joblink">
                 <h4>Job Link</h4>
                 <div class="link">
-                    <span id="link">https://ez-work.herokuapp.com/newPostJob/job.php?<?php echo $r['id']; ?>"></span>        
+                    <span id="link">https://ez-work.herokuapp.com/newPostJob/job.php?<?php echo $r['id']; ?></span>        
                 </div>
             
                 <p id="copyLink">Copy Link</p>
