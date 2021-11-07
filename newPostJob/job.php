@@ -18,7 +18,7 @@ $job_id = $_GET['id'];
 $job_id = mysqli_real_escape_string($conn, $job_id);
 $job_id = htmlspecialchars($job_id);
 
-$jobSQL = "SELECT *, clients.avatar FROM jobs INNER JOIN clients ON jobs.user_id = clients.id WHERE id='$job_id' LIMIT 1";
+$jobSQL = "SELECT jobs.*, clients.avatar FROM jobs INNER JOIN clients ON jobs.user_id = clients.id WHERE jobs.id='$job_id' LIMIT 1";
 $jobResult = mysqli_query($conn, $jobSQL);
 
 if (mysqli_num_rows($jobResult) > 0) {
