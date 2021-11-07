@@ -303,3 +303,310 @@
 .job .job-container .joblink p:hover {
   text-decoration: underline;
 }
+
+@media screen and (max-width: 754px) {
+  .job {
+    width: 100%;
+    background: whitesmoke;
+    padding: 2.5rem 0rem;
+  }
+  .job h2 {
+    font-size: 2rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+  }
+  .job .job-container {
+    margin: 0;
+    background: white;
+    width: 100%;
+    border-radius: 0;
+    border: solid lightgrey 0.7px;
+    display: flex;
+    flex-direction: column;
+  }
+  .job .job-container .jobCard {
+    width: 100%;
+    grid-area: 1/1/4/2;
+    border-right: solid lightgrey 0.7px;
+  }
+  .job .job-container .jobCard .jobTitle {
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.4rem;
+    color: black;
+    font-weight: bold;
+    border-bottom: solid lightgrey 0.7px;
+  }
+  .job .job-container .jobCard .scope {
+    width: 100%;
+    padding: 1.5rem 2rem;
+    border-bottom: solid lightgrey 0.7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .job .job-container .jobCard .scope h3 {
+    font-size: 1.4rem;
+    color: #054e97;
+    width: 100%;
+    font-weight: bolder;
+  }
+  .job .job-container .jobCard .scope p {
+    font-size: 1.2rem;
+    color: #054e97;
+    padding: 0.5rem 0rem;
+  }
+  .job .job-container .jobCard .scope p span {
+    color: black;
+  }
+  .job .job-container .jobCard .scope p #status {
+    color: lightgreen;
+  }
+  .job .job-container .jobCard .scope p i {
+    padding-right: 0.5rem;
+  }
+  .job .job-container .jobCard .jobDescription {
+    width: 100%;
+    padding: 2rem;
+    border-bottom: solid lightgrey 0.7px;
+  }
+  .job .job-container .jobCard .jobDescription h3 {
+    font-size: 1.3rem;
+    color: #054e97;
+    text-decoration: underline;
+  }
+  .job .job-container .jobCard .jobDescription p {
+    padding: 0.5rem 0rem;
+    font-size: 1rem;
+    width: 95%;
+    line-height: 1.5rem;
+  }
+  .job .job-container .jobCard .budgetAndExperience {
+    width: 100%;
+    padding: 1.5rem 2rem;
+    border-bottom: solid lightgrey 0.7px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .job .job-container .jobCard .budgetAndExperience .budget {
+    width: 50%;
+  }
+  .job .job-container .jobCard .budgetAndExperience .budget p {
+    font-size: 1.3rem;
+  }
+  .job .job-container .jobCard .budgetAndExperience .budget span {
+    font-size: 1rem;
+    color: #797979;
+  }
+  .job .job-container .jobCard .budgetAndExperience .experience {
+    width: 50%;
+  }
+  .job .job-container .jobCard .budgetAndExperience .experience h4 {
+    font-size: 1.2rem;
+    color: #054e97;
+  }
+  .job .job-container .jobCard .jobType {
+    width: 100%;
+    padding: 1.5rem 2rem;
+    border-bottom: solid lightgrey 0.7px;
+    display: flex;
+    flex-direction: column;
+  }
+  .job .job-container .jobCard .jobType .type, .job .job-container .jobCard .jobType .size {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0.5rem 0rem;
+  }
+  .job .job-container .jobCard .jobType .type h4, .job .job-container .jobCard .jobType .size h4 {
+    font-size: 1.2rem;
+    color: #054e97;
+    text-decoration: underline;
+  }
+  .job .job-container .jobCard .jobType .type p, .job .job-container .jobCard .jobType .size p {
+    font-size: 1.2rem;
+    padding-left: 0.5rem;
+  }
+  .job .job-container .jobCard .skills {
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-bottom: 0.7px solid lightgrey;
+  }
+  .job .job-container .jobCard .skills h4 {
+    font-size: 1.2rem;
+    color: #054e97;
+    text-decoration: underline;
+  }
+  .job .job-container .jobCard .skills span {
+    margin: 0.5rem 0rem;
+    font-size: 1.2rem;
+    color: #797979;
+  }
+  .job .job-container .options {
+    width: 100%;
+    padding: 2rem;
+    grid-area: 1/2/2/3;
+    border-bottom: solid lightgrey 0.7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .job .job-container .options button {
+    width: 90%;
+    background: #054e97;
+    color: white;
+    text-align: center;
+    border: none;
+    font-size: 1rem;
+    padding: 0.5rem 0rem;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+  .job .job-container .options button:hover {
+    background-color: #0a345e;
+  }
+  .job .job-container .options .flag {
+    margin: 1rem 0rem;
+  }
+  .job .job-container .options .flag i {
+    font-size: 1.2rem;
+    color: #054e97;
+  }
+  .job .job-container .options .flag span {
+    font-size: 1.2rem;
+    color: #054e97;
+    margin-left: 0.5rem;
+    cursor: pointer;
+  }
+  .job .job-container .options .flag span:hover {
+    text-decoration: underline;
+  }
+  .job .job-container .options #deleteBtn {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 50%;
+    background: transparent;
+    color: #797979;
+    text-align: center;
+    border: none;
+    font-size: 1rem;
+    padding: 0.5rem 0rem;
+    border: 0.7px solid #797979;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+  .job .job-container .options #deleteMenu {
+    width: 100%;
+  }
+  .job .job-container .options #deleteMenu .deleteMenuContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .job .job-container .options #deleteMenu .deleteMenuContainer span {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    color: #797979;
+  }
+  .job .job-container .options #deleteMenu .deleteMenuContainer input {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    margin-bottom: 0.5rem;
+    width: 50%;
+    background: transparent;
+    color: #797979;
+    text-align: center;
+    border: none;
+    font-size: 0.9rem;
+    padding: 0.25rem 0rem;
+    border: 0.7px solid #797979;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+  .job .job-container .clientInfo {
+    grid-area: 2/2/3/3;
+    width: 100%;
+    border-bottom: solid lightgrey 0.7px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .job .job-container .clientInfo h3 {
+    font-size: 1.3rem;
+    color: #054e97;
+    width: 100%;
+    text-decoration: underline;
+    padding-bottom: 1rem;
+  }
+  .job .job-container .clientInfo .username {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .job .job-container .clientInfo .username p {
+    font-size: 1.2rem;
+    color: #0a345e;
+    padding-right: 0.5rem;
+  }
+  .job .job-container .clientInfo .username a {
+    font-size: 1.2rem;
+    color: #054e97;
+  }
+  .job .job-container .clientInfo .username a:hover {
+    text-decoration: underline;
+  }
+  .job .job-container .clientInfo .img-card {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 1rem 0rem;
+  }
+  .job .job-container .clientInfo .img-card img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .job .job-container .joblink {
+    grid-area: 3/2/4/3;
+    padding: 1.5rem;
+    width: 100%;
+  }
+  .job .job-container .joblink h4 {
+    font-size: 1.2rem;
+    color: #0a345e;
+    text-decoration: underline;
+    padding: 1rem 0rem;
+  }
+  .job .job-container .joblink .link {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: solid lightgrey 0.7px;
+    background: whitesmoke;
+    pointer-events: none;
+  }
+  .job .job-container .joblink p {
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.5rem 0rem;
+    color: #054e97;
+  }
+  .job .job-container .joblink p:hover {
+    text-decoration: underline;
+  }
+}
