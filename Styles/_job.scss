@@ -438,18 +438,24 @@ $darktext: rgb(121, 121, 121);
                     .budget{
                         width: 100%;
                         p{
+                            width: 100%;
+                            text-align: center;
                             font-size: 1.3rem;
                         }
                         span{
+                            width: 100%;
+                            text-align: center;
                             font-size: 1rem;
                             color: $darktext;
                         }
                     }
     
                     .experience{
-                        padding: 1rem 0rem;
-                        width: 50%;
+                        padding: 0rem 0rem;
+                        width: 100%;
                         h4{
+                            width: 100%;
+                            text-align: center;
                             font-size: 1.2rem;
                             color: $lightColor;
                         }

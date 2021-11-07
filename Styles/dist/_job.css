@@ -394,17 +394,23 @@
     width: 100%;
   }
   .job .job-container .jobCard .budgetAndExperience .budget p {
+    width: 100%;
+    text-align: center;
     font-size: 1.3rem;
   }
   .job .job-container .jobCard .budgetAndExperience .budget span {
+    width: 100%;
+    text-align: center;
     font-size: 1rem;
     color: #797979;
   }
   .job .job-container .jobCard .budgetAndExperience .experience {
-    padding: 1rem 0rem;
-    width: 50%;
+    padding: 0rem 0rem;
+    width: 100%;
   }
   .job .job-container .jobCard .budgetAndExperience .experience h4 {
+    width: 100%;
+    text-align: center;
     font-size: 1.2rem;
     color: #054e97;
   }
