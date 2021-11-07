@@ -175,7 +175,24 @@ if (mysqli_num_rows($jobResult) > 0) {
                                 } ?>
                 </div>
                 <div class="img-card">
+                <?php
+                if (mysqli_num_rows($jobsQuery) > 0) {
+                    while ($r = mysqli_fetch_assoc($jobsQuery)) {
+                        $uid = $r['user_id'];
+                        $unameSQL = "SELECT avatar FROM clients WHERE id='$uid'";
+                        $unameResult = mysqli_query($conn, $unameSQL);
+                        $unameFetched = mysqli_fetch_assoc($unameResult);
+                ?>
                     <img src="<?php echo $unameFetched['avatar']; ?>" alt="">
+                
+                <?php
+                    }
+                } else { 
+                ?>
+                    <img src="../Users/user.svg" alt="">
+                <?php
+                }
+                ?>
                 </div>
             </div>
             <div class="joblink">
