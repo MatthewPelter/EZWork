@@ -92,6 +92,7 @@ if (isset($_POST['resetpassword'])) {
             text-decoration: none;
             border-radius: 10%;
             box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 14px;
+            margin-top: 2rem;
         }
 
         .header {
