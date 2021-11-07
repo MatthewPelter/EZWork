@@ -38,13 +38,6 @@ if ($cleanuname == $_SESSION['userid']) {
     header('Location: ../ClientProfile/index');
 }
 
-$uname = $_GET['name'];
-$cleanuname = mysqli_real_escape_string($conn, $uname);
-
-if ($cleanuname == $_SESSION['userid']) {
-    header('Location: ../ClientProfile/index');
-}
-
 $sql = "SELECT * FROM clients WHERE username='$cleanuname'";
 $result = mysqli_query($conn, $sql);
 $dataFound = false;
@@ -197,13 +190,7 @@ if (mysqli_num_rows($result) > 0) {
                                 } ?>
                 </div>
                 <div class="img-card">
-                <?php
-                    if ($dataFound) {
-                ?>
-                    <img src="<?php echo $row['avatar']; ?>" alt="">
-                <?php
-                    }
-                ?>    
+                    <img src="<?php echo $unameFetched['avatar']; ?>" alt="">
                 </div>
             </div>
             <div class="joblink">
