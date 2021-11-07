@@ -624,6 +624,8 @@
     pointer-events: none;
   }
   .job .job-container .joblink p {
+    width: 100%;
+    text-align: center;
     cursor: pointer;
     font-size: 1rem;
     padding: 0.5rem 0rem;
