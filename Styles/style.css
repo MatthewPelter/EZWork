@@ -19526,6 +19526,8 @@ li {
     width: 100%;
   }
   .job .job-container .joblink h4 {
+    width: 100%;
+    text-align: center;
     font-size: 1.4rem;
     color: #0a345e;
     text-decoration: underline;
