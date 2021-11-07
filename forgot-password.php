@@ -92,7 +92,6 @@ if (isset($_POST['resetpassword'])) {
             text-decoration: none;
             border-radius: 10%;
             box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 14px;
-            margin-top: 2rem;
         }
 
         .header {
@@ -219,7 +218,7 @@ if (isset($_POST['resetpassword'])) {
                     <input type="submit" name="resetpassword" value="Reset Password">
                 </form>
 
-                <a class="btn" href="https://ez-work.herokuapp.com/login/index">Go Back</a>
+                <a class="btn" style="margin-top: 3rem;" href="https://ez-work.herokuapp.com/login/index">Go Back</a>
             </div>
         </div>
         <!--Waves Container-->
