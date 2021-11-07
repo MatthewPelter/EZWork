@@ -19225,7 +19225,7 @@ li {
             justify-content: center;
   }
   .job .job-container .jobCard .budgetAndExperience .budget {
-    width: 50%;
+    width: 0;
   }
   .job .job-container .jobCard .budgetAndExperience .budget p {
     font-size: 1.3rem;
@@ -19259,16 +19259,16 @@ li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     margin: .5rem 0rem;
   }
   .job .job-container .jobCard .jobType .type h4, .job .job-container .jobCard .jobType .size h4 {
@@ -19277,8 +19277,8 @@ li {
     text-decoration: underline;
   }
   .job .job-container .jobCard .jobType .type p, .job .job-container .jobCard .jobType .size p {
-    font-size: 1.2rem;
-    padding-left: .5rem;
+    font-size: 1.1rem;
+    padding-left: 0;
   }
   .job .job-container .jobCard .skills {
     width: 100%;
@@ -19436,6 +19436,7 @@ li {
             flex-direction: column;
   }
   .job .job-container .clientInfo h3 {
+    text-align: center;
     font-size: 1.3rem;
     color: #054e97;
     width: 100%;
@@ -19460,7 +19461,7 @@ li {
     text-align: center;
     font-size: 1.2rem;
     color: #0a345e;
-    padding-right: .5rem;
+    padding-right: 0;
   }
   .job .job-container .clientInfo .username a {
     width: 100%;
