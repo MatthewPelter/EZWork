@@ -19467,13 +19467,16 @@ li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .job .job-container .clientInfo .username p {
     width: 100%;
@@ -19481,6 +19484,7 @@ li {
     font-size: 1.2rem;
     color: #0a345e;
     padding-right: 0rem;
+    text-decoration: underline;
   }
   .job .job-container .clientInfo .username a {
     width: 100%;

@@ -629,14 +629,16 @@ $darktext: rgb(121, 121, 121);
                 .username{
                     width: 100%;
                     display: flex;
-                    flex-direction: row;
+                    flex-direction: column;
                     align-items: center;
+                    justify-content: center;
                     p{
                         width: 100%;
                         text-align: center;
                         font-size: 1.2rem;
                         color: $color1;
                         padding-right:0rem;
+                        text-decoration: underline;
                     }
                     a{
                         width: 100%;
