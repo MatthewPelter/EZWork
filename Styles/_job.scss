@@ -421,7 +421,7 @@ $darktext: rgb(121, 121, 121);
                     p{
                         padding: .5rem 0rem;
                         font-size: 1rem;
-                        width: 95%;
+                        width: 100%;
                         line-height: 1.5rem;
                     }
                 }
@@ -432,7 +432,8 @@ $darktext: rgb(121, 121, 121);
                     border-bottom: solid lightgrey .7px;
                     display: flex;
                     flex-direction: column;
-                    align-items: flex-start;
+                    align-items: center;
+                    justify-content: center;
     
                     .budget{
                         width: 50%;
@@ -446,6 +447,7 @@ $darktext: rgb(121, 121, 121);
                     }
     
                     .experience{
+                        padding: 1rem 0rem;
                         width: 50%;
                         h4{
                             font-size: 1.2rem;
@@ -489,11 +491,15 @@ $darktext: rgb(121, 121, 121);
                     align-items: flex-start;
                     border-bottom: .7px solid lightgrey;
                     h4{
+                        width: 100%;
+                        text-align: center;
                         font-size: 1.2rem;
                         color: $lightColor;
                         text-decoration: underline;
                     }
                     span{
+                        width: 100%;
+                        text-align: center;
                         margin: 0.5rem 0rem;
                         font-size: 1.2rem;
                         color: $darktext;
@@ -615,11 +621,15 @@ $darktext: rgb(121, 121, 121);
                     flex-direction: row;
                     align-items: center;
                     p{
+                        width: 100%;
+                        text-align: center;
                         font-size: 1.2rem;
                         color: $color1;
                         padding-right:.5rem ;
                     }
                     a{
+                        width: 100%;
+                        text-align: center;
                         font-size: 1.2rem;
                         color: $lightColor;
                         &:hover{
@@ -632,7 +642,7 @@ $darktext: rgb(121, 121, 121);
                     width: 100%;
                     display: flex;
                     flex-direction: row;
-                    justify-content: flex-start;
+                    justify-content: center;
                     padding: 1rem 0rem;
                     img{
                         width: 5rem;
@@ -647,7 +657,7 @@ $darktext: rgb(121, 121, 121);
                 padding: 1.5rem;
                 width: 100%;
                 h4{
-                    font-size: 1.2rem;
+                    font-size: 1.4rem;
                     color: $color1;
                     text-decoration: underline;
                     padding: 1rem 0rem;

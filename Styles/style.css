@@ -19203,7 +19203,7 @@ li {
   .job .job-container .jobCard .jobDescription p {
     padding: .5rem 0rem;
     font-size: 1rem;
-    width: 95%;
+    width: 100%;
     line-height: 1.5rem;
   }
   .job .job-container .jobCard .budgetAndExperience {
@@ -19217,9 +19217,12 @@ li {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .job .job-container .jobCard .budgetAndExperience .budget {
     width: 50%;
@@ -19232,6 +19235,7 @@ li {
     color: #797979;
   }
   .job .job-container .jobCard .budgetAndExperience .experience {
+    padding: 1rem 0rem;
     width: 50%;
   }
   .job .job-container .jobCard .budgetAndExperience .experience h4 {
@@ -19292,11 +19296,15 @@ li {
     border-bottom: .7px solid lightgrey;
   }
   .job .job-container .jobCard .skills h4 {
+    width: 100%;
+    text-align: center;
     font-size: 1.2rem;
     color: #054e97;
     text-decoration: underline;
   }
   .job .job-container .jobCard .skills span {
+    width: 100%;
+    text-align: center;
     margin: 0.5rem 0rem;
     font-size: 1.2rem;
     color: #797979;
@@ -19448,11 +19456,15 @@ li {
             align-items: center;
   }
   .job .job-container .clientInfo .username p {
+    width: 100%;
+    text-align: center;
     font-size: 1.2rem;
     color: #0a345e;
     padding-right: .5rem;
   }
   .job .job-container .clientInfo .username a {
+    width: 100%;
+    text-align: center;
     font-size: 1.2rem;
     color: #054e97;
   }
@@ -19468,9 +19480,9 @@ li {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding: 1rem 0rem;
   }
   .job .job-container .clientInfo .img-card img {
@@ -19490,7 +19502,7 @@ li {
     width: 100%;
   }
   .job .job-container .joblink h4 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: #0a345e;
     text-decoration: underline;
     padding: 1rem 0rem;
