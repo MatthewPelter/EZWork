@@ -391,7 +391,7 @@
     justify-content: center;
   }
   .job .job-container .jobCard .budgetAndExperience .budget {
-    width: 0;
+    width: 100%;
   }
   .job .job-container .jobCard .budgetAndExperience .budget p {
     font-size: 1.3rem;
