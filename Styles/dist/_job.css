@@ -399,10 +399,10 @@
     font-size: 1.3rem;
   }
   .job .job-container .jobCard .budgetAndExperience .budget span {
-    width: 100%;
-    text-align: center;
     font-size: 1rem;
     color: #797979;
+    width: 100%;
+    text-align: center;
   }
   .job .job-container .jobCard .budgetAndExperience .experience {
     padding: 0rem 0rem;
