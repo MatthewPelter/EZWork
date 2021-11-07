@@ -197,7 +197,13 @@ if (mysqli_num_rows($result) > 0) {
                                 } ?>
                 </div>
                 <div class="img-card">
+                <?php
+                    if ($dataFound) {
+                ?>
                     <img src="<?php echo $row['avatar']; ?>" alt="">
+                <?php
+                    }
+                ?>    
                 </div>
             </div>
             <div class="joblink">
