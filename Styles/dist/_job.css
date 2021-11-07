@@ -54,6 +54,9 @@
 .job .job-container .jobCard .scope p span {
   color: black;
 }
+.job .job-container .jobCard .scope p #status {
+  color: lightgreen;
+}
 .job .job-container .jobCard .scope p i {
   padding-right: 0.5rem;
 }
@@ -214,13 +217,14 @@
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
+  margin-bottom: 0.5rem;
   width: 50%;
   background: transparent;
   color: #797979;
   text-align: center;
   border: none;
-  font-size: 1rem;
-  padding: 0.5rem 0rem;
+  font-size: 0.9rem;
+  padding: 0.25rem 0rem;
   border: 0.7px solid #797979;
   border-radius: 12px;
   cursor: pointer;
@@ -244,6 +248,7 @@
   width: 100%;
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 .job .job-container .clientInfo .username p {
   font-size: 1.2rem;
@@ -251,7 +256,8 @@
   padding-right: 0.5rem;
 }
 .job .job-container .clientInfo .username a {
-  font-size: 1rem;
+  font-size: 1.2rem;
+  color: #054e97;
 }
 .job .job-container .clientInfo .username a:hover {
   text-decoration: underline;

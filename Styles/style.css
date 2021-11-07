@@ -18743,6 +18743,10 @@ li {
   color: black;
 }
 
+.job .job-container .jobCard .scope p #status {
+  color: lightgreen;
+}
+
 .job .job-container .jobCard .scope p i {
   padding-right: .5rem;
 }
@@ -18981,13 +18985,14 @@ li {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
+  margin-bottom: .5rem;
   width: 50%;
   background: transparent;
   color: #797979;
   text-align: center;
   border: none;
-  font-size: 1rem;
-  padding: .5rem 0rem;
+  font-size: .9rem;
+  padding: .25rem 0rem;
   border: 0.7px solid #797979;
   border-radius: 12px;
   cursor: pointer;
@@ -19028,6 +19033,9 @@ li {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .job .job-container .clientInfo .username p {
@@ -19037,7 +19045,8 @@ li {
 }
 
 .job .job-container .clientInfo .username a {
-  font-size: 1rem;
+  font-size: 1.2rem;
+  color: #054e97;
 }
 
 .job .job-container .clientInfo .username a:hover {

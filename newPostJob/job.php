@@ -31,6 +31,21 @@ if (mysqli_num_rows($jobResult) > 0) {
 } else {
     header("location: ./jobs.php");
 }
+$uname = $_GET['name'];
+$cleanuname = mysqli_real_escape_string($conn, $uname);
+
+if ($cleanuname == $_SESSION['userid']) {
+    header('Location: ../ClientProfile/index');
+}
+
+$sql = "SELECT * FROM clients WHERE username='$cleanuname'";
+$result = mysqli_query($conn, $sql);
+$dataFound = false;
+
+if (mysqli_num_rows($result) > 0) {
+    $dataFound = true;
+    $row = mysqli_fetch_assoc($result);
+}
 ?>
 
 <!DOCTYPE html>
@@ -81,11 +96,11 @@ if (mysqli_num_rows($jobResult) > 0) {
                         </span>
                     </p>
                     <p>Status: 
-                        <span>
+                        <span id="status">
                         <?php if ($r['status'] == 0) {
                                 echo "Open";
                             } else {
-                                echo "Open";
+                                echo "Close";
                             } ?>
                         </span>
                     </p>
@@ -102,8 +117,8 @@ if (mysqli_num_rows($jobResult) > 0) {
                         <p>$<?php echo $r['rate']; ?> / hr</p>
                         <span><?php echo "Hourly Rate" ?></span>
                     <?php } else if ($r['budget'] > 0) { ?>
-                        <p><?php echo $r['budget']; ?></p>
-                        <span>$ <?php echo "Project Budget" ?></span>
+                        <p>$ <?php echo $r['budget']; ?></p>
+                        <span><?php echo "Project Budget" ?></span>
                     <?php } else { ?>
                         <p></p>
                         <span> <?php echo "No budget or pay rate set yet..."; ?></span>
@@ -179,7 +194,7 @@ if (mysqli_num_rows($jobResult) > 0) {
             <div class="joblink">
                 <h4>Job Link</h4>
                 <div class="link">
-                    <span id="link">https://ez-work.herokuapp.com/newPostJob/job.php?<?php echo $r['id']; ?></span>        
+                    <span id="link">https://ez-work.herokuapp.com/newPostJob/job.php?id=<?php echo $r['id']; ?></span>        
                 </div>
             
                 <p id="copyLink">Copy Link</p>
@@ -345,6 +360,18 @@ function toggleJobCard(){
         var link = document.getElementById('link');
         copyToClipboard(link);
     })
+
+    // Status color
+    const status = document.getElementById('status');
+
+    var statusText = status.innerText;
+
+    if(statusText == "Open"){
+        status.style.color = "lightgreen";
+    }
+    else{
+        status.style.color = "red";
+    }
 </script>
 
 </html>
