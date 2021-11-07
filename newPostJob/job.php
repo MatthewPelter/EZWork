@@ -31,21 +31,6 @@ if (mysqli_num_rows($jobResult) > 0) {
 } else {
     header("location: ./jobs.php");
 }
-$uname = $_GET['name'];
-$cleanuname = mysqli_real_escape_string($conn, $uname);
-
-if ($cleanuname == $_SESSION['userid']) {
-    header('Location: ../ClientProfile/index');
-}
-
-$sql = "SELECT * FROM clients WHERE username='$cleanuname'";
-$result = mysqli_query($conn, $sql);
-$dataFound = false;
-
-if (mysqli_num_rows($result) > 0) {
-    $dataFound = true;
-    $row = mysqli_fetch_assoc($result);
-}
 
 
 ?>
