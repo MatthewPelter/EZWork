@@ -18,7 +18,7 @@ $job_id = $_GET['id'];
 $job_id = mysqli_real_escape_string($conn, $job_id);
 $job_id = htmlspecialchars($job_id);
 
-$jobSQL = "SELECT * FROM jobs WHERE id='$job_id' LIMIT 1";
+$jobSQL = "SELECT *, clients.avatar FROM jobs INNER JOIN clients ON jobs.user_id = clients.id WHERE id='$job_id' LIMIT 1";
 $jobResult = mysqli_query($conn, $jobSQL);
 
 if (mysqli_num_rows($jobResult) > 0) {
@@ -28,14 +28,9 @@ if (mysqli_num_rows($jobResult) > 0) {
     $unameSQL = "SELECT username FROM clients WHERE id='$uid'";
     $unameResult = mysqli_query($conn, $unameSQL);
     $unameFetched = mysqli_fetch_assoc($unameResult);
-
-    $avatarResult = mysqli_query($conn, "SELECT avatar FROM clients WHERE id = '$uid'");
-    $avatarFetch = mysqli_fetch_assoc($avatarResult);
 } else {
     header("location: ./jobs.php");
 }
-
-
 ?>
 
 <!DOCTYPE html>
@@ -181,7 +176,7 @@ if (mysqli_num_rows($jobResult) > 0) {
                     } ?>
                 </div>
                 <div class="img-card">
-                    <img src="<?php echo $avatarFetch['avatar']; ?>" alt="">
+                    <img src="<?php echo $r['avatar']; ?>" alt="">
                 </div>
             </div>
             <div class="joblink">
