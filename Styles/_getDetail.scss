@@ -763,6 +763,11 @@ $darktext: rgb(121, 121, 121);
           color: white;
           font-size: 2.3rem;
         }
+        h3{
+          color: white;
+          font-size: 2rem;
+          padding-bottom: 1rem;
+        }
         p {
           color: white;
           font-size: 0.95rem;
@@ -792,7 +797,8 @@ $darktext: rgb(121, 121, 121);
           h4{
             width: 100%;
             color: $color1;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
+            margin: 1rem 0rem;
           }
           input{
             width: 90%;
@@ -813,8 +819,8 @@ $darktext: rgb(121, 121, 121);
           h4{
             width: 100%;
             color: $color1;
-            font-size: 1.2rem;
-
+            font-size: 1.5rem;
+            padding: 1rem 0rem;
             span{
               color: black;
               font-weight: lighter;
@@ -828,6 +834,12 @@ $darktext: rgb(121, 121, 121);
             cursor: pointer;
             font-size: 1rem;
             color: $darktext;
+          }
+
+          img{
+            width: 90%;
+            height: 10rem;
+            object-fit: contain;
           }
 
         }

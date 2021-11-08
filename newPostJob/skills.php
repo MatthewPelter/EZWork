@@ -56,7 +56,7 @@ if (!isset($_SESSION['userid'])) {
                 </div>
                 <div class="title-card-intro">
                     <h2>What skills does your work require?</h2>
-                    <h2>Upload An Image</h2>
+                    <h3>Upload An Image</h3>
                     <p>Uploading an Image can help our freelancers better understand the job, &quot;A picture speaks 1000 words &quot;.</p>
                 </div>
             </div>
@@ -69,8 +69,9 @@ if (!isset($_SESSION['userid'])) {
                 </div>
                 <div class="image">
                     <h4>Upload An Image <span>(Optional)</span></h4>
+                    <img id="output" alt="">
                     <input type="file" onchange="loadFile(event)" name="file" id="file" accept="image/gif, image/jpeg, image/png">
-                        
+                    <p><label for="file" style="cursor: pointer;">Upload Image</label></p>
                 </div>
                 <div class="CancelOrNext">
                     <input type="submit" value="Next: Scope" id="nextScope"/>

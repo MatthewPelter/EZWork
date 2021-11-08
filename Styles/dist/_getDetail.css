@@ -736,6 +736,11 @@
   color: white;
   font-size: 2.3rem;
 }
+.postJob-detail-skills .detail-skills-container .detail-progress-section .title-card-intro h3 {
+  color: white;
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
 .postJob-detail-skills .detail-skills-container .detail-progress-section .title-card-intro p {
   color: white;
   font-size: 0.95rem;
@@ -765,7 +770,8 @@
 .postJob-detail-skills .detail-skills-container .detail-input-section form .skill h4 {
   width: 100%;
   color: #0a345e;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  margin: 1rem 0rem;
 }
 .postJob-detail-skills .detail-skills-container .detail-input-section form .skill input {
   width: 90%;
@@ -784,7 +790,8 @@
 .postJob-detail-skills .detail-skills-container .detail-input-section form .image h4 {
   width: 100%;
   color: #0a345e;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  padding: 1rem 0rem;
 }
 .postJob-detail-skills .detail-skills-container .detail-input-section form .image h4 span {
   color: black;
@@ -797,6 +804,11 @@
   cursor: pointer;
   font-size: 1rem;
   color: #797979;
+}
+.postJob-detail-skills .detail-skills-container .detail-input-section form .image img {
+  width: 90%;
+  height: 10rem;
+  object-fit: contain;
 }
 .postJob-detail-skills .detail-skills-container .detail-input-section form .CancelOrNext {
   margin-top: 2rem;
