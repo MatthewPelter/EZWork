@@ -56,8 +56,7 @@ if (!isset($_SESSION['userid'])) {
                 </div>
                 <div class="title-card-intro">
                     <h2>What skills does your work require?</h2>
-                    <p>Uploading an Image can help our freelancers better understand the job.</p>
-                    <p>&quot;A picture speaks 1000 words &quot;.</p>
+                    <p>Uploading an Image can help our freelancers better understand the job, &quot;A picture speaks 1000 words &quot;.</p>
                 </div>
             </div>
             <div class="detail-input-section">
@@ -76,8 +75,7 @@ if (!isset($_SESSION['userid'])) {
                 </div>
 
                 <div class="CancelOrNext">
-                    <button id="cancel"  onclick="location.href='../ClientProfile/index.php'">Cancel</button>
-                    <input type="submit" value="Next: Title" />
+                    <input type="submit" value="Next: Scope" />
                 </div>
             </form>
 

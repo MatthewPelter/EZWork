@@ -672,8 +672,9 @@ $darktext: rgb(121, 121, 121);
 
 // Css for posting skills start here
 .postJob-detail-skills {
-  margin-top: 4.5rem;
+  margin: 0;
   width: 100%;
+  height: 90vh;
   background: whitesmoke;
   padding: 2.5rem 10rem;
 
@@ -769,181 +770,53 @@ $darktext: rgb(121, 121, 121);
       }
     }
     .detail-input-section {
-      width: 50%;
-      height: 100%;
-      padding: 2rem;
-      background: white;
-      display: flex;
-      flex-direction: column;
-      border-top-right-radius: 15px;
-      border-bottom-right-radius: 15px;
-      justify-content: center;
-      align-items: flex-start;
-      h3 {
-        font-size: 1.3rem;
-        padding: 1rem 0rem;
-      }
-
-      h4 {
-        padding: 1rem 0rem;
-        font-size: 1.1rem;
-      }
-
-      input {
-        width: 100%;
-        height: 2.5rem;
-        padding: 0.5rem 1rem;
-        outline: none;
-        outline: $color1;
-        border: lightgrey 0.7px solid;
-        border-radius: 2px;
-      }
-      ul {
-        margin-left: 0.5rem;
-        list-style: circle;
-        li {
-          padding: 0.4rem 0rem;
-          font-size: 0.87rem;
-          font-weight: lighter;
-        }
-      }
-      .CancelOrNext {
-        margin-top: 2rem;
+      form{
+        width: 50%;
+        height: 100%;
+        padding: 2rem;
+        background: white;
         display: flex;
-        flex-direction: row;
-        width: 100%;
-        justify-content: flex-end;
-        align-items: center;
-        #cancel {
-          color: $color1;
-          font-size: 1rem;
-          background: none;
-          padding: 0.5rem 1.5rem;
-          border-radius: 15px;
-          border: 0.6px solid $color1;
-          cursor: pointer;
-          &:hover {
-            background: rgb(235, 235, 235);
-          }
-        }
-        #nextScope {
-          margin-left: 1rem;
-          color: $color1;
-          font-size: 1rem;
-          background: lightgrey;
-          color: gray;
-          padding: 0.5rem 1.5rem;
-          border-radius: 15px;
-          border: 0.6px solid gray;
-          cursor: not-allowed;
-          pointer-events: none;
-        }
-      }
+        flex-direction: column;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        justify-content: center;
+        align-items: flex-start;
 
-      // Post Skills CSS
-      .skillSearch {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        outline: $color1;
-        border: lightgrey 0.7px solid;
-        border-radius: 8px;
-        i {
-          cursor: pointer;
-          margin-left: 1rem;
-          color: $darktext;
-        }
-        input {
-          border: none;
-          border-radius: 15px;
-        }
-
-        #enterSkill {
-          border: none;
-          color: $lightColor;
-          cursor: pointer;
-          font-size: 1rem;
-          margin-right: 1rem;
-          background: transparent;
-        }
-      }
-
-      // Selected Skills
-      #selectedSkills {
-        padding: 0.5rem;
-        border-radius: 15px;
-        border: 0.7px solid lightgrey;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        label {
-          width: fit-content;
-          font-size: 0.8rem;
-          background: $color1;
-          color: white;
-          padding: 0.4rem 1rem;
-          border-radius: 15px;
-          border: 0.6px solid gray;
-          cursor: pointer;
-          margin: 0.4rem;
-        }
-      }
-      .selectCategory {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        select {
-          padding: 0;
-          width: fit-content;
-          border: none;
-        }
-      }
-      select {
-        width: 100%;
-        padding: 0.5rem 1rem;
-        background: transparent;
-        border: none;
-        font-size: 1rem;
-        outline: none;
-        outline: $color1;
-        border: lightgrey 0.7px solid;
-        border-radius: 10px;
-      }
-      span {
-        margin-left: 0.5rem;
-        color: $lightColor;
-      }
-      // under input
-      .CategorySpecialtyContainer {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        ul {
-          width: 100%;
+        .CancelOrNext {
+          margin-top: 2rem;
           display: flex;
           flex-direction: row;
-          flex-wrap: wrap;
-          li {
-            width: fit-content;
-            font-size: 0.8rem;
-            background: rgb(134, 221, 134);
-            color: white;
-            margin: 0.4rem;
-            padding: 0.4rem 1rem;
+          width: 100%;
+          justify-content: flex-end;
+          align-items: center;
+          #cancel {
+            color: $color1;
+            font-size: 1rem;
+            background: none;
+            padding: 0.5rem 1.5rem;
             border-radius: 15px;
-            border: none;
+            border: 0.6px solid $color1;
             cursor: pointer;
             &:hover {
-              background: rgb(113, 197, 113);
+              background: rgb(235, 235, 235);
             }
+          }
+          #nextScope {
+            margin-left: 1rem;
+            color: $color1;
+            font-size: 1rem;
+            background: lightgrey;
+            color: gray;
+            padding: 0.5rem 1.5rem;
+            border-radius: 15px;
+            border: 0.6px solid gray;
+            cursor: not-allowed;
+            pointer-events: none;
           }
         }
       }
+
+
     }
   }
 }
