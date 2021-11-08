@@ -23,7 +23,15 @@
 }
 .PostAJob .PostAJobContainer .PostAJobQuestion h4 {
   width: 100%;
-  font-size: 1.1rem;
+  font-size: 1.6rem;
+  color: #0a345e;
+  padding: 1rem 0rem;
+}
+.PostAJob .PostAJobContainer .PostAJobQuestion h4 span {
+  padding-left: 1rem;
+  color: #054e97;
+  font-size: 1rem;
+  text-decoration: none;
 }
 .PostAJob .PostAJobContainer .PostAJobQuestion .options {
   display: flex;
@@ -33,18 +41,6 @@
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form #error {
   color: red;
   font-size: 1rem;
-}
-.PostAJob .PostAJobContainer .PostAJobQuestion .options form h3 {
-  width: 100%;
-  text-align: start;
-  font-size: 1.6rem;
-  padding: 1rem 0rem;
-}
-.PostAJob .PostAJobContainer .PostAJobQuestion .options form h3 span {
-  padding-left: 1rem;
-  color: #054e97;
-  font-size: 1rem;
-  text-decoration: none;
 }
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers {
   width: 100%;
@@ -57,8 +53,9 @@
   padding: 1rem 0rem;
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   cursor: pointer;
+  align-items: center;
 }
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .short input,
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .long input {
@@ -83,6 +80,8 @@
 }
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .short label,
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .long label {
+  font-size: 1.2rem;
+  color: black;
   cursor: pointer;
   padding-left: 0.5rem;
 }
@@ -90,10 +89,8 @@
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .long:hover {
   color: #054e97;
 }
-.PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .short {
-  padding: 0;
-}
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .PostAJobCancel0rContinue {
+  border-top: 0.7px solid lightgrey;
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -107,7 +104,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  margin: 0rem 1rem;
+  margin: 0rem 2rem;
 }
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .PostAJobCancel0rContinue #cancel:hover {
   text-decoration: underline;

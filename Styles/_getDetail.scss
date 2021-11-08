@@ -26,7 +26,15 @@ $darktext: rgb(121, 121, 121);
       padding: 1.5rem 2rem;
       h4 {
         width: 100%;
-        font-size: 1.1rem;
+        font-size: 1.6rem;
+        color: $color1;
+        padding: 1rem 0rem;
+        span {
+          padding-left: 1rem;
+          color: $lightColor;
+          font-size: 1rem;
+          text-decoration: none;
+        }
       }
 
       .options {
@@ -40,18 +48,6 @@ $darktext: rgb(121, 121, 121);
             color: red;
             font-size: 1rem;
           }
-          h3 {
-            width: 100%;
-            text-align: start;
-            font-size: 1.6rem;
-            padding: 1rem 0rem;
-            span {
-              padding-left: 1rem;
-              color: $lightColor;
-              font-size: 1rem;
-              text-decoration: none;
-            }
-          }
           .lengthContainers {
             width: 100%;
             display: flex;
@@ -62,8 +58,9 @@ $darktext: rgb(121, 121, 121);
               padding: 1rem 0rem;
               width: 100%;
               display: flex;
-              flex-direction: column;
+              flex-direction: row;
               cursor: pointer;
+              align-items: center;
               input {
                 -moz-appearance: none;
                 -webkit-appearance: none;
@@ -83,6 +80,8 @@ $darktext: rgb(121, 121, 121);
                 }
               }
               label {
+                font-size: 1.2rem;
+                color: black;
                 cursor: pointer;
                 padding-left: 0.5rem;
               }
@@ -90,12 +89,10 @@ $darktext: rgb(121, 121, 121);
                 color: $lightColor;
               }
             }
-            .short {
-              padding: 0;
-            }
           }
 
           .PostAJobCancel0rContinue {
+            border-top: .7px solid lightgrey;
             display: flex;
             align-items: center;
             flex-direction: row;
@@ -109,7 +106,7 @@ $darktext: rgb(121, 121, 121);
               background: none;
               border: none;
               cursor: pointer;
-              margin: 0rem 1rem;
+              margin: 0rem 2rem;
               &:hover {
                 text-decoration: underline;
               }

@@ -8314,7 +8314,16 @@ ul {
 
 .PostAJob .PostAJobContainer .PostAJobQuestion h4 {
   width: 100%;
-  font-size: 1.1rem;
+  font-size: 1.6rem;
+  color: #0a345e;
+  padding: 1rem 0rem;
+}
+
+.PostAJob .PostAJobContainer .PostAJobQuestion h4 span {
+  padding-left: 1rem;
+  color: #054e97;
+  font-size: 1rem;
+  text-decoration: none;
 }
 
 .PostAJob .PostAJobContainer .PostAJobQuestion .options {
@@ -8331,20 +8340,6 @@ ul {
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form #error {
   color: red;
   font-size: 1rem;
-}
-
-.PostAJob .PostAJobContainer .PostAJobQuestion .options form h3 {
-  width: 100%;
-  text-align: start;
-  font-size: 1.6rem;
-  padding: 1rem 0rem;
-}
-
-.PostAJob .PostAJobContainer .PostAJobQuestion .options form h3 span {
-  padding-left: 1rem;
-  color: #054e97;
-  font-size: 1rem;
-  text-decoration: none;
 }
 
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers {
@@ -8368,11 +8363,14 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   cursor: pointer;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .short input,
@@ -8401,6 +8399,8 @@ ul {
 
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .short label,
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .long label {
+  font-size: 1.2rem;
+  color: black;
   cursor: pointer;
   padding-left: 0.5rem;
 }
@@ -8410,11 +8410,8 @@ ul {
   color: #054e97;
 }
 
-.PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .short {
-  padding: 0;
-}
-
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .PostAJobCancel0rContinue {
+  border-top: .7px solid lightgrey;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8438,7 +8435,7 @@ ul {
   background: none;
   border: none;
   cursor: pointer;
-  margin: 0rem 1rem;
+  margin: 0rem 2rem;
 }
 
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .PostAJobCancel0rContinue #cancel:hover {
