@@ -12159,7 +12159,7 @@ ul {
 
 @media screen and (max-width: 754px) {
   .PostAJob {
-    margin: 3rem 0rem 0rem 0rem;
+    margin: 0;
     width: 100%;
     background: whitesmoke;
     padding: 2.5rem 0rem;
@@ -12186,7 +12186,7 @@ ul {
     width: 100%;
     font-size: 1.5rem;
     color: #0a345e;
-    padding: 1rem 0rem;
+    padding: 1rem 0rem 1rem 1rem;
   }
   .PostAJob .PostAJobContainer .PostAJobQuestion h4 span {
     padding-left: 1rem;
@@ -12411,6 +12411,7 @@ ul {
         -ms-flex-pack: end;
             justify-content: flex-end;
     width: 100%;
+    padding: 0rem 1rem;
   }
   .PostAJob .PostAJobContainer .PostAJobQuestion .options form .PostAJobCancel0rContinue input {
     color: white;

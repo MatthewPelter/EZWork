@@ -2675,7 +2675,7 @@ $darktext: rgb(121, 121, 121);
 
 @media screen and (max-width: 754px) {
   .PostAJob {
-    margin: 3rem 0rem 0rem 0rem;
+    margin: 0;
     width: 100%;
     background: whitesmoke;
     padding: 2.5rem 0rem;
@@ -2702,7 +2702,7 @@ $darktext: rgb(121, 121, 121);
           width: 100%;
           font-size: 1.5rem;
           color: $color1;
-          padding: 1rem 0rem;
+          padding: 1rem 0rem 1rem 1rem;
           span {
             padding-left: 1rem;
             color: $lightColor;
@@ -2860,6 +2860,7 @@ $darktext: rgb(121, 121, 121);
               flex-direction: row;
               justify-content: flex-end;
               width: 100%;
+              padding: 0rem 1rem;
               input {
                 color: white;
                 font-size: 1rem;
