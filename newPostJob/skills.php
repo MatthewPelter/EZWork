@@ -40,9 +40,9 @@ if (!isset($_SESSION['userid'])) {
     <?php include '../navbar.php'; ?>
 
 
-        <!--Post A Job More Details-->
-        <div class="postJob-detail">
-        <div class="detail-container">
+    <!--Post A Job More Details-->
+    <div class="postJob-detail-skills">
+        <div class="detail-skills-container">
             <div class="detail-progress-section">
                 <div class="progressBar">
                     <progress id="jobPostProgress" value="25" max="100"></progress>
@@ -56,18 +56,11 @@ if (!isset($_SESSION['userid'])) {
                 </div>
                 <div class="title-card-intro">
                     <h2>What skills does your work require?</h2>
+                    <p>Uploading an Image can help our freelancers better understand the job.</p>
+                    <p>&quot; A picture speaks 1000 words &quot;.</p>
                 </div>
             </div>
             <div class="detail-input-section">
-            <span id="error" style="color: red;">
-                <!---- Initializing Session for errors --->
-                <?php
-                if (!empty($_SESSION['error'])) {
-                    echo $_SESSION['error'];
-                    unset($_SESSION['error']);
-                }
-                ?>
-            </span>
             <form action="scope.php" method="post" style="width: 100%;">
                 <h3>Choose a Job Length<span>*Mandatory</span></h3>
                 <div class="lengthContainers">

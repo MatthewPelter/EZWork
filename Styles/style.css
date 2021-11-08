@@ -12427,7 +12427,7 @@ ul {
     background: #0a345e;
   }
   .postJob-detail {
-    margin-top: 3rem;
+    margin: 0;
     width: 100%;
     background: whitesmoke;
     padding: 2.5rem 0rem;
@@ -12687,7 +12687,7 @@ ul {
     background: #0a345e;
   }
   .postJob-detail-title {
-    margin-top: 3rem;
+    margin: 0;
     width: 100%;
     background: whitesmoke;
     padding: 2.5rem 0rem;
@@ -12995,7 +12995,7 @@ ul {
     cursor: pointer;
   }
   .postJob-detail-skills {
-    margin-top: 3rem;
+    margin: 0;
     width: 100%;
     background: whitesmoke;
     padding: 2.5rem 0rem;

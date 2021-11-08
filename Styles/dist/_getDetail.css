@@ -2888,7 +2888,7 @@
   }
 
   .postJob-detail {
-    margin-top: 3rem;
+    margin: 0;
     width: 100%;
     background: whitesmoke;
     padding: 2.5rem 0rem;
@@ -3096,7 +3096,7 @@
   }
 
   .postJob-detail-title {
-    margin-top: 3rem;
+    margin: 0;
     width: 100%;
     background: whitesmoke;
     padding: 2.5rem 0rem;
@@ -3342,7 +3342,7 @@
   }
 
   .postJob-detail-skills {
-    margin-top: 3rem;
+    margin: 0;
     width: 100%;
     background: whitesmoke;
     padding: 2.5rem 0rem;
