@@ -90,12 +90,12 @@ if (!isset($_SESSION['userid'])) {
                 
                 <div class="skill">
                     <h4>Enter needed skill or expertise</h4>
-                    <input type="text" list="allskills" autocomplete="off" name="skills" required placeholder="Skills or Expertise">
+                    <input type="text" list="allskills" autocomplete="off" name="skills" placeholder="Skills or Expertise">
                 </div>
                 <div class="image">
-                    <h4>Upload An Image <span>(Optional)</span></h4>
+                    <h4>Upload An Image <span></span></h4>
                     <img id="output" alt="">
-                    <input type="file" onchange="loadFile(event)" name="file" id="file" accept="image/gif, image/jpeg, image/png">
+                    <input type="file" onchange="loadFile(event)" name="image" id="file" accept="image/gif, image/jpeg, image/png">
                 </div>
                 <div class="CancelOrNext">
                     <input type="submit" value="Next: Scope" id="nextScope"/>

@@ -74,7 +74,7 @@ if (isset($_POST['length'])) {
                     }
                     ?>
                 </span>
-                <form action="skills.php" method="post" style="width: 100%;">
+                <form action="postSkill.php" method="post" style="width: 100%;">
                     <h3>Write a title for your job post</h3>
                     <div class="titleContainer">
                         <input name="title" id="title" type="text" placeholder="I need my garage door installed..." value=""><br />

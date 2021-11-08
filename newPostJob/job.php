@@ -140,15 +140,6 @@ if (mysqli_num_rows($jobResult) > 0) {
                     <h3><i class="fa fa-paperclip" aria-hidden="true"></i>Attached Image</h3>
                     <div class="image">
                         <img src="<?php echo $r['image']; ?>" alt="">
-                        <a href="<?php echo $r['image']; ?>" download="output.png">Download</a>
-                        <script>
-                            var a = document.createElement('a');
-                            a.href = "/output.png";
-                            a.download = "output.png";
-                            document.body.appendChild(a);
-                            a.click();
-                            document.body.removeChild(a);
-                        </script>
                     </div>
                     
                 </div>
