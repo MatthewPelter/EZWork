@@ -9209,8 +9209,8 @@ ul {
 
 .postJob-detail-skills {
   margin: 0;
+  margin-bottom: 3rem;
   width: 100%;
-  height: 95vh;
   background: whitesmoke;
   padding: 2.5rem 10rem;
 }
@@ -9442,6 +9442,8 @@ ul {
   height: 10rem;
   -o-object-fit: contain;
      object-fit: contain;
+  margin: 1rem 0rem;
+  border: none;
 }
 
 .postJob-detail-skills .detail-skills-container .detail-input-section form .CancelOrNext {
