@@ -57,7 +57,7 @@ if (!isset($_SESSION['userid'])) {
                 <div class="title-card-intro">
                     <h2>What skills does your work require?</h2>
                     <p>Uploading an Image can help our freelancers better understand the job.</p>
-                    <p>&quot; A picture speaks 1000 words &quot;.</p>
+                    <p>&quot;A picture speaks 1000 words &quot;.</p>
                 </div>
             </div>
             <div class="detail-input-section">

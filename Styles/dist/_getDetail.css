@@ -644,6 +644,271 @@
   cursor: pointer;
 }
 
+.postJob-detail-skills {
+  margin-top: 4.5rem;
+  width: 100%;
+  background: whitesmoke;
+  padding: 2.5rem 10rem;
+}
+.postJob-detail-skills .detail-skills-container {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  border: 1.25px solid lightgrey;
+  border-radius: 15px;
+  background: #0a345e;
+}
+.postJob-detail-skills .detail-skills-container .detail-progress-section {
+  width: 50%;
+  height: 100%;
+  padding: 1.5rem;
+  background: #0a345e;
+  display: flex;
+  flex-direction: column;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+.postJob-detail-skills .detail-skills-container .detail-progress-section #current {
+  color: lightgreen;
+}
+.postJob-detail-skills .detail-skills-container .detail-progress-section .progressBar {
+  width: 100%;
+}
+.postJob-detail-skills .detail-skills-container .detail-progress-section .progressBar progress {
+  border-radius: 10px;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: #104880;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.postJob-detail-skills .detail-skills-container .detail-progress-section .progressBar progress::-webkit-progress-bar {
+  border-radius: 10px;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: #104880;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.postJob-detail-skills .detail-skills-container .detail-progress-section .progressBar progress::-moz-progress-bar {
+  border-radius: 10px;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: #104880;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.postJob-detail-skills .detail-skills-container .detail-progress-section .progressBar progress::-webkit-progress-value {
+  background: lightgreen;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  height: 100%;
+  border: none;
+}
+.postJob-detail-skills .detail-skills-container .detail-progress-section .progressBar progress::-moz-progress-bar {
+  background: lightgreen;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  height: 100%;
+  border: none;
+}
+.postJob-detail-skills .detail-skills-container .detail-progress-section .progressBar ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.3rem;
+}
+.postJob-detail-skills .detail-skills-container .detail-progress-section .progressBar ul li {
+  color: white;
+  font-size: 0.9rem;
+}
+.postJob-detail-skills .detail-skills-container .detail-progress-section .title-card-intro h2 {
+  padding: 6rem 0rem 1rem 0rem;
+  color: white;
+  font-size: 2.3rem;
+}
+.postJob-detail-skills .detail-skills-container .detail-progress-section .title-card-intro p {
+  color: white;
+  font-size: 0.95rem;
+}
+.postJob-detail-skills .detail-skills-container .detail-input-section {
+  width: 50%;
+  height: 100%;
+  padding: 2rem;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  justify-content: center;
+  align-items: flex-start;
+}
+.postJob-detail-skills .detail-skills-container .detail-input-section h3 {
+  font-size: 1.3rem;
+  padding: 1rem 0rem;
+}
+.postJob-detail-skills .detail-skills-container .detail-input-section h4 {
+  padding: 1rem 0rem;
+  font-size: 1.1rem;
+}
+.postJob-detail-skills .detail-skills-container .detail-input-section input {
+  width: 100%;
+  height: 2.5rem;
+  padding: 0.5rem 1rem;
+  outline: none;
+  outline: #0a345e;
+  border: lightgrey 0.7px solid;
+  border-radius: 2px;
+}
+.postJob-detail-skills .detail-skills-container .detail-input-section ul {
+  margin-left: 0.5rem;
+  list-style: circle;
+}
+.postJob-detail-skills .detail-skills-container .detail-input-section ul li {
+  padding: 0.4rem 0rem;
+  font-size: 0.87rem;
+  font-weight: lighter;
+}
+.postJob-detail-skills .detail-skills-container .detail-input-section .CancelOrNext {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+}
+.postJob-detail-skills .detail-skills-container .detail-input-section .CancelOrNext #cancel {
+  color: #0a345e;
+  font-size: 1rem;
+  background: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 15px;
+  border: 0.6px solid #0a345e;
+  cursor: pointer;
+}
+.postJob-detail-skills .detail-skills-container .detail-input-section .CancelOrNext #cancel:hover {
+  background: #ebebeb;
+}
+.postJob-detail-skills .detail-skills-container .detail-input-section .CancelOrNext #nextScope {
+  margin-left: 1rem;
+  color: #0a345e;
+  font-size: 1rem;
+  background: lightgrey;
+  color: gray;
+  padding: 0.5rem 1.5rem;
+  border-radius: 15px;
+  border: 0.6px solid gray;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.postJob-detail-skills .detail-skills-container .detail-input-section .skillSearch {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  outline: #0a345e;
+  border: lightgrey 0.7px solid;
+  border-radius: 8px;
+}
+.postJob-detail-skills .detail-skills-container .detail-input-section .skillSearch i {
+  cursor: pointer;
+  margin-left: 1rem;
+  color: #797979;
+}
+.postJob-detail-skills .detail-skills-container .detail-input-section .skillSearch input {
+  border: none;
+  border-radius: 15px;
+}
+.postJob-detail-skills .detail-skills-container .detail-input-section .skillSearch #enterSkill {
+  border: none;
+  color: #054e97;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-right: 1rem;
+  background: transparent;
+}
+.postJob-detail-skills .detail-skills-container .detail-input-section #selectedSkills {
+  padding: 0.5rem;
+  border-radius: 15px;
+  border: 0.7px solid lightgrey;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.postJob-detail-skills .detail-skills-container .detail-input-section #selectedSkills label {
+  width: fit-content;
+  font-size: 0.8rem;
+  background: #0a345e;
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 15px;
+  border: 0.6px solid gray;
+  cursor: pointer;
+  margin: 0.4rem;
+}
+.postJob-detail-skills .detail-skills-container .detail-input-section .selectCategory {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.postJob-detail-skills .detail-skills-container .detail-input-section .selectCategory select {
+  padding: 0;
+  width: fit-content;
+  border: none;
+}
+.postJob-detail-skills .detail-skills-container .detail-input-section select {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+  outline: #0a345e;
+  border: lightgrey 0.7px solid;
+  border-radius: 10px;
+}
+.postJob-detail-skills .detail-skills-container .detail-input-section span {
+  margin-left: 0.5rem;
+  color: #054e97;
+}
+.postJob-detail-skills .detail-skills-container .detail-input-section .CategorySpecialtyContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.postJob-detail-skills .detail-skills-container .detail-input-section .CategorySpecialtyContainer ul {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.postJob-detail-skills .detail-skills-container .detail-input-section .CategorySpecialtyContainer ul li {
+  width: fit-content;
+  font-size: 0.8rem;
+  background: #86dd86;
+  color: white;
+  margin: 0.4rem;
+  padding: 0.4rem 1rem;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+}
+.postJob-detail-skills .detail-skills-container .detail-input-section .CategorySpecialtyContainer ul li:hover {
+  background: #71c571;
+}
+
 .postJob-detail-scope {
   width: 100%;
   height: 96vh;
