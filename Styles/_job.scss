@@ -144,7 +144,7 @@ $darktext: rgb(121, 121, 121);
                 }
             }
 
-            .skills{
+            .imageCard{
                 width: 100%;
                 padding: 2rem;
                 display: flex;
@@ -154,6 +154,11 @@ $darktext: rgb(121, 121, 121);
                     font-size: 1.2rem;
                     color: $lightColor;
                     text-decoration: underline;
+
+                    i{
+                        text-decoration: none;
+                        margin-right: .5rem;
+                    }
                 }
                 span{
                     margin: 0.5rem 0rem;
@@ -290,17 +295,23 @@ $darktext: rgb(121, 121, 121);
                 }
             }
 
-            .img-card{
+            .imagecard{
                 width: 100%;
                 display: flex;
                 flex-direction: row;
                 justify-content: flex-start;
                 padding: 1rem 0rem;
-                img{
-                    width: 5rem;
-                    height: 5rem;
-                    border-radius: 50%;
-                    object-fit: cover;
+
+                .image{
+                    width: 70%;
+                    height: 15rem;
+                    margin: 1rem 0rem;
+                    img{
+                        border-radius: 5px;
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
                 }
             }
         }
@@ -495,7 +506,7 @@ $darktext: rgb(121, 121, 121);
                     }
                 }
     
-                .skills{
+                .imageCard{
                     width: 100%;
                     padding: 2rem;
                     display: flex;

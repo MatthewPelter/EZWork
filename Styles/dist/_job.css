@@ -125,19 +125,23 @@
   font-size: 1.2rem;
   padding-left: 0.5rem;
 }
-.job .job-container .jobCard .skills {
+.job .job-container .jobCard .imageCard {
   width: 100%;
   padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-.job .job-container .jobCard .skills h4 {
+.job .job-container .jobCard .imageCard h4 {
   font-size: 1.2rem;
   color: #054e97;
   text-decoration: underline;
 }
-.job .job-container .jobCard .skills span {
+.job .job-container .jobCard .imageCard h4 i {
+  text-decoration: none;
+  margin-right: 0.5rem;
+}
+.job .job-container .jobCard .imageCard span {
   margin: 0.5rem 0rem;
   font-size: 1.2rem;
   color: #797979;
@@ -262,17 +266,22 @@
 .job .job-container .clientInfo .username a:hover {
   text-decoration: underline;
 }
-.job .job-container .clientInfo .img-card {
+.job .job-container .clientInfo .imagecard {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   padding: 1rem 0rem;
 }
-.job .job-container .clientInfo .img-card img {
-  width: 5rem;
-  height: 5rem;
-  border-radius: 50%;
+.job .job-container .clientInfo .imagecard .image {
+  width: 70%;
+  height: 15rem;
+  margin: 1rem 0rem;
+}
+.job .job-container .clientInfo .imagecard .image img {
+  border-radius: 5px;
+  height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 .job .job-container .joblink {
@@ -444,7 +453,7 @@
     font-size: 1.1rem;
     padding-left: 0;
   }
-  .job .job-container .jobCard .skills {
+  .job .job-container .jobCard .imageCard {
     width: 100%;
     padding: 2rem;
     display: flex;
@@ -452,14 +461,14 @@
     align-items: flex-start;
     border-bottom: 0.7px solid lightgrey;
   }
-  .job .job-container .jobCard .skills h4 {
+  .job .job-container .jobCard .imageCard h4 {
     width: 100%;
     text-align: center;
     font-size: 1.2rem;
     color: #054e97;
     text-decoration: underline;
   }
-  .job .job-container .jobCard .skills span {
+  .job .job-container .jobCard .imageCard span {
     width: 100%;
     text-align: center;
     margin: 0.5rem 0rem;
