@@ -9434,6 +9434,7 @@ ul {
   cursor: pointer;
   font-size: 1rem;
   color: #797979;
+  border: none;
 }
 
 .postJob-detail-skills .detail-skills-container .detail-input-section form .image img {

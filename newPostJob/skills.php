@@ -65,13 +65,12 @@ if (!isset($_SESSION['userid'])) {
                 
                 <div class="skill">
                     <h4>Enter needed skill or expertise</h4>
-                    <input name="skills" type="text" list="allskills" autocomplete="off" placeholder="Skills or Expertise" id="searchMain">
+                    <input type="text" list="allskills" autocomplete="off" name="skills" placeholder="Skills or Expertise">
                 </div>
                 <div class="image">
                     <h4>Upload An Image <span>(Optional)</span></h4>
                     <img id="output" alt="">
                     <input type="file" onchange="loadFile(event)" name="file" id="file" accept="image/gif, image/jpeg, image/png">
-                    <p><label for="file" style="cursor: pointer;">Upload Image</label></p>
                 </div>
                 <div class="CancelOrNext">
                     <input type="submit" value="Next: Scope" id="nextScope"/>
