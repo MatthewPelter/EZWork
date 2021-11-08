@@ -8390,13 +8390,23 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .long .header .card1, .PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .long .header .card2 {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-}
-
-.PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .long .header i {
-  margin-right: 3rem;
 }
 
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .long .header input {
@@ -8485,13 +8495,23 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .short .header .card1, .PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .short .header .card2 {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-}
-
-.PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .short .header i {
-  margin-right: 3rem;
 }
 
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .short .header input {
@@ -8532,6 +8552,9 @@ ul {
           align-items: center;
   font-size: 1.1rem;
   color: #797979;
+  text-align: center;
+  padding-top: .5rem;
+  pointer-events: none;
 }
 
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .short label {
@@ -8547,7 +8570,6 @@ ul {
 }
 
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .PostAJobCancel0rContinue {
-  border-top: .7px solid lightgrey;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

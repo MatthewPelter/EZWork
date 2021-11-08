@@ -61,8 +61,13 @@ if (!isset($_SESSION['userid'])) {
                         <div class="lengthContainers">
                             <div class="short">
                                 <div class="header">
-                                    <i class="fa fa-clock" aria-hidden="true"></i>
-                                    <input type="radio" id="short" name="length" value="s" required>
+                                    <div class="card1">
+                                        <i class="fa fa-clock" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="card2">
+                                        <input type="radio" id="short" name="length" value="s" required>
+                                    </div>
+                                    
                                 </div>
                                 <span class="checkmark"></span>
                                 <label for="short">Short term or part time work</label>
@@ -73,10 +78,14 @@ if (!isset($_SESSION['userid'])) {
                             </div>
                             <div class="long">
                                 <div class="header">
-                                    <i class="fa fa-calendar" aria-hidden="true"></i>
-                                    <input type="radio" id="long" name="length" value="l">
+                                    <div class="card1">
+                                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="card2">
+                                        <input type="radio" id="long" name="length" value="l">
+                                    </div>
                                 </div>
-                                <label for="long">Designated, longer term work</label><br>    
+                                <label for="long">Designated, longer term work</label>   
                                 <div class="description">
                                     <p>More than 30hrs/week</p>
                                     <p>3+ months</p>
