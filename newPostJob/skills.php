@@ -56,24 +56,22 @@ if (!isset($_SESSION['userid'])) {
                 </div>
                 <div class="title-card-intro">
                     <h2>What skills does your work require?</h2>
+                    <h2>Upload An Image</h2>
                     <p>Uploading an Image can help our freelancers better understand the job, &quot;A picture speaks 1000 words &quot;.</p>
                 </div>
             </div>
             <div class="detail-input-section">
             <form action="scope.php" method="post" style="width: 100%;">
-                <h3>Choose a Job Length<span>*Mandatory</span></h3>
-                <div class="lengthContainers">
-                    <div class="short">
-                        <input type="radio" id="short" name="length" value="s" required>
-                        <span class="checkmark"></span>
-                        <label for="short">Short term or part time work</label><br>
-                    </div>
-                    <div class="long">
-                        <input type="radio" id="long" name="length" value="l">
-                        <label for="long">Designated, longer term work</label><br>    
-                    </div>
+                
+                <div class="skill">
+                    <h4>Enter needed skill or expertise</h4>
+                    <input name="skills" type="text" list="allskills" autocomplete="off" placeholder="Skills or Expertise" id="searchMain">
                 </div>
-
+                <div class="image">
+                    <h4>Upload An Image <span>(Optional)</span></h4>
+                    <input type="file" onchange="loadFile(event)" name="file" id="file" accept="image/gif, image/jpeg, image/png">
+                        
+                </div>
                 <div class="CancelOrNext">
                     <input type="submit" value="Next: Scope" id="nextScope"/>
                 </div>
@@ -183,4 +181,13 @@ if (!isset($_SESSION['userid'])) {
     }
 
 </script>
+
+<!--Script to load file-->
+<script>
+    var loadFile = function(event) {
+        var image = document.getElementById('output');
+        image.src = URL.createObjectURL(event.target.files[0]);
+    };
+</script>
+
 </html>
