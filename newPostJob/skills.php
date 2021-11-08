@@ -85,9 +85,14 @@ if (!isset($_SESSION['userid'])) {
     <?php include '../footer.php'; ?>
 
     <!--DataList-->
-    <datalist id="allskills"></datalist>
+    <datalist id="allskills">
+
+    </datalist>
 
 </body>
+
+<!--Script for the search bar and datalist-->
+<script src="../SkillsContainer/searchProfile.js"></script>
 <!--Nav bar script-->
 <script>
     var job = document.querySelector('.jobCard');
