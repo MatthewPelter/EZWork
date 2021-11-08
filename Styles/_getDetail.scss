@@ -55,12 +55,16 @@ $darktext: rgb(121, 121, 121);
             align-items: center;
             .short,
             .long {
-              padding: 1rem 0rem;
-              width: 100%;
+              border-radius: 10px;
+              border: .7px solid lightgrey;
+              padding: 2rem;
+              width: 50%;
               display: flex;
-              flex-direction: row;
+              flex-direction: column;
               cursor: pointer;
               align-items: center;
+              justify-content: center;
+              margin: 2rem;
               input {
                 -moz-appearance: none;
                 -webkit-appearance: none;
@@ -84,9 +88,10 @@ $darktext: rgb(121, 121, 121);
                 color: black;
                 cursor: pointer;
                 padding-left: 0.5rem;
-              }
-              &:hover {
-                color: $lightColor;
+                &:hover {
+                  color: $lightColor;
+                  text-decoration: underline;
+                }
               }
             }
           }
@@ -98,20 +103,6 @@ $darktext: rgb(121, 121, 121);
             flex-direction: row;
             justify-content: flex-end;
             width: 100%;
-            padding: 2rem;
-      
-            #cancel {
-              color: $color1;
-              font-size: 1rem;
-              background: none;
-              border: none;
-              cursor: pointer;
-              margin: 0rem 2rem;
-              &:hover {
-                text-decoration: underline;
-              }
-            }
-      
             input {
               color: white;
               font-size: 1rem;

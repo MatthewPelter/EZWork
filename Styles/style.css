@@ -8358,19 +8358,25 @@ ul {
 
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .short,
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .long {
-  padding: 1rem 0rem;
-  width: 100%;
+  border-radius: 10px;
+  border: .7px solid lightgrey;
+  padding: 2rem;
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   cursor: pointer;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 2rem;
 }
 
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .short input,
@@ -8405,9 +8411,10 @@ ul {
   padding-left: 0.5rem;
 }
 
-.PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .short:hover,
-.PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .long:hover {
+.PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .short label:hover,
+.PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .long label:hover {
   color: #054e97;
+  text-decoration: underline;
 }
 
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .PostAJobCancel0rContinue {
@@ -8426,20 +8433,6 @@ ul {
       -ms-flex-pack: end;
           justify-content: flex-end;
   width: 100%;
-  padding: 2rem;
-}
-
-.PostAJob .PostAJobContainer .PostAJobQuestion .options form .PostAJobCancel0rContinue #cancel {
-  color: #0a345e;
-  font-size: 1rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  margin: 0rem 2rem;
-}
-
-.PostAJob .PostAJobContainer .PostAJobQuestion .options form .PostAJobCancel0rContinue #cancel:hover {
-  text-decoration: underline;
 }
 
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .PostAJobCancel0rContinue input {

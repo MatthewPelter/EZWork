@@ -50,12 +50,16 @@
 }
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .short,
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .long {
-  padding: 1rem 0rem;
-  width: 100%;
+  border-radius: 10px;
+  border: 0.7px solid lightgrey;
+  padding: 2rem;
+  width: 50%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   cursor: pointer;
   align-items: center;
+  justify-content: center;
+  margin: 2rem;
 }
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .short input,
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .long input {
@@ -85,9 +89,10 @@
   cursor: pointer;
   padding-left: 0.5rem;
 }
-.PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .short:hover,
-.PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .long:hover {
+.PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .short label:hover,
+.PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .long label:hover {
   color: #054e97;
+  text-decoration: underline;
 }
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .PostAJobCancel0rContinue {
   border-top: 0.7px solid lightgrey;
@@ -96,18 +101,6 @@
   flex-direction: row;
   justify-content: flex-end;
   width: 100%;
-  padding: 2rem;
-}
-.PostAJob .PostAJobContainer .PostAJobQuestion .options form .PostAJobCancel0rContinue #cancel {
-  color: #0a345e;
-  font-size: 1rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  margin: 0rem 2rem;
-}
-.PostAJob .PostAJobContainer .PostAJobQuestion .options form .PostAJobCancel0rContinue #cancel:hover {
-  text-decoration: underline;
 }
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .PostAJobCancel0rContinue input {
   color: white;

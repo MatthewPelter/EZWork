@@ -71,7 +71,7 @@ if (!isset($_SESSION['userid'])) {
                         </div>
         
                         <div class="PostAJobCancel0rContinue">
-                            <button id="cancel"  onclick="location.href='../ClientProfile/index.php'">Cancel</button>
+                
                             <input type="submit" value="Next: Title" />
                         </div>
                     </form>
