@@ -146,6 +146,17 @@
   font-size: 1.2rem;
   color: #797979;
 }
+.job .job-container .jobCard .imageCard .image {
+  width: 70%;
+  height: 15rem;
+  margin: 1rem 0rem;
+}
+.job .job-container .jobCard .imageCard .image img {
+  border-radius: 5px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
 .job .job-container .options {
   width: 100%;
   padding: 2rem;
@@ -273,15 +284,10 @@
   justify-content: flex-start;
   padding: 1rem 0rem;
 }
-.job .job-container .clientInfo .img-card .image {
-  width: 70%;
-  height: 15rem;
-  margin: 1rem 0rem;
-}
-.job .job-container .clientInfo .img-card .image img {
-  border-radius: 5px;
-  height: 100%;
-  width: 100%;
+.job .job-container .clientInfo .img-card img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
   object-fit: cover;
 }
 .job .job-container .joblink {
