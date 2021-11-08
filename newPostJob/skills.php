@@ -1,6 +1,22 @@
 <?php
 session_start(); // Session starts here.
 require_once('../classes/DB.php');
+// Checking second page values for empty, If it finds any blank field then redirected to second page.
+if (isset($_POST['title'])) {
+    if (empty($_POST['title']) || empty($_POST['description'])) {
+        $_SESSION['error_page2'] = "Mandatory field(s) are missing, Please fill it again"; // Setting error message.
+        header("location: postTitle.php"); // Redirecting to second page. 
+    } else {
+        // Fetching all values posted from second page and storing it in variable.
+        foreach ($_POST as $key => $value) {
+            $_SESSION['post'][$key] = $value;
+        }
+    }
+} else {
+    if (empty($_SESSION['error_page3'])) {
+        header("location: length.php"); // Redirecting to first page.
+    }
+}
 
 if (!isset($_SESSION['userid'])) {
     header('Location: ../login/index');
@@ -62,10 +78,19 @@ if (!isset($_SESSION['userid'])) {
             </div>
             <div class="detail-input-section">
             <form action="scope.php" method="post" style="width: 100%;">
+                <span id="error" style="color: red;padding: 0;">
+                    <?php
+                    // To show error of page 2.
+                    if (!empty($_SESSION['error_pageSkill'])) {
+                        echo $_SESSION['error_pageSkill'];
+                        unset($_SESSION['error_pageSkill']);
+                    }
+                    ?>
+                </span>
                 
                 <div class="skill">
                     <h4>Enter needed skill or expertise</h4>
-                    <input type="text" list="allskills" autocomplete="off" name="skills" placeholder="Skills or Expertise">
+                    <input type="text" list="allskills" autocomplete="off" name="skills" required placeholder="Skills or Expertise">
                 </div>
                 <div class="image">
                     <h4>Upload An Image <span>(Optional)</span></h4>

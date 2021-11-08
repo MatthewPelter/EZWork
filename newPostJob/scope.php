@@ -2,10 +2,10 @@
 session_start();
 require_once('../classes/DB.php');
 // Checking second page values for empty, If it finds any blank field then redirected to second page.
-if (isset($_POST['title'])) {
-    if (empty($_POST['title']) || empty($_POST['description'])) {
-        $_SESSION['error_page2'] = "Mandatory field(s) are missing, Please fill it again"; // Setting error message.
-        header("location: postTitle.php"); // Redirecting to second page. 
+if (isset($_POST['skills'])) {
+    if (empty($_POST['skills'])) {
+        $_SESSION['error_pageSkill'] = "Mandatory field(s) are missing, Please fill it again"; // Setting error message.
+        header("location: skills.php"); // Redirecting to second page. 
     } else {
         // Fetching all values posted from second page and storing it in variable.
         foreach ($_POST as $key => $value) {
