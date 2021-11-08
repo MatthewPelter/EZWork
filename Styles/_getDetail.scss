@@ -2674,6 +2674,210 @@ $darktext: rgb(121, 121, 121);
 }
 
 @media screen and (max-width: 754px) {
+  .PostAJob {
+    margin: 3rem 0rem 0rem 0rem;
+    width: 100%;
+    background: whitesmoke;
+    padding: 2.5rem 0rem;
+  
+    .PostAJobContainer {
+      border: 1.25px solid lightgrey;
+      border-radius: 15px;
+      background: white;
+  
+      .PostAJobTitle {
+        width: 100%;
+        border-bottom: 1.25px solid lightgrey;
+        h3 {
+          font-size: 1.5rem;
+          padding: 2rem;
+        }
+      }
+  
+      .PostAJobQuestion {
+        width: 100%;
+        border-bottom: 1.25px solid lightgrey;
+        padding: 1.5rem 0rem;
+        h4 {
+          width: 100%;
+          font-size: 1.5rem;
+          color: $color1;
+          padding: 1rem 0rem;
+          span {
+            padding-left: 1rem;
+            color: $lightColor;
+            font-size: 1rem;
+            text-decoration: none;
+          }
+        }
+  
+        .options {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+  
+          form{
+  
+            #error {
+              color: red;
+              font-size: 1rem;
+            }
+            .lengthContainers {
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              .long {
+                border-radius: 10px;
+                border: .7px solid lightgrey;
+                padding: 1rem;
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin: 2rem 0rem;
+                .header{
+                  padding: .5rem 0rem;
+                  width: 100%;
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  .card1,.card2{
+                    width: 50%;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: flex-end;
+                  }
+                  input {
+                    -moz-appearance: none;
+                    -webkit-appearance: none;
+                    appearance: none;
+                    cursor: pointer;
+                    width: 1rem;
+                    height: 1rem;
+                    border: 0.7px solid $darktext;
+                    background-color: transparent;
+                    border-radius: 50%;
+                    &:checked {
+                      background-color:lightgreen;
+                      border: 0.8px solid $lightColor;
+                    }
+                    &:hover {
+                      border: 0.7px solid $lightColor;
+                    }
+                  }
+                }
+  
+                label {
+                  font-size: 1.2rem;
+                  color: black;
+                  cursor: pointer;
+                  padding-left: 0.5rem;
+                  &:hover {
+                    color: $lightColor;
+                    text-decoration: underline;
+                  }
+                }
+                .description{
+                  pointer-events: none;
+                  width: 100%;
+                  font-size: 1rem;
+                  color: $darktext;
+                  text-align: center;
+                  padding: .5rem 0rem;
+                }
+              }
+              .short {
+                border-radius: 10px;
+                border: .7px solid lightgrey;
+                padding: 1.5rem;
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin: 2rem 0rem;
+                .header{
+                  padding: .5rem 0rem;
+                  width: 100%;
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  .card1,.card2{
+                    width: 50%;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: flex-end;
+                  }
+                  input {
+                    -moz-appearance: none;
+                    -webkit-appearance: none;
+                    appearance: none;
+                    cursor: pointer;
+                    width: 1rem;
+                    height: 1rem;
+                    border: 0.7px solid $darktext;
+                    background-color: transparent;
+                    border-radius: 50%;
+                    &:checked {
+                      background-color:lightgreen;
+                      border: 0.8px solid $lightColor;
+                    }
+                    &:hover {
+                      border: 0.7px solid $lightColor;
+                    }
+                  }
+                }
+  
+                label {
+                  font-size: 1.2rem;
+                  color: black;
+                  cursor: pointer;
+                  padding-left: 0.5rem;
+                  &:hover {
+                    color: $lightColor;
+                    text-decoration: underline;
+                  }
+                }
+                .description{
+                  pointer-events: none;
+                  width: 100%;
+                  font-size: 1rem;
+                  color: $darktext;
+                  text-align: center;
+                  padding: .5rem 0rem;
+                }
+              }
+            }
+  
+            .PostAJobCancel0rContinue {
+              display: flex;
+              align-items: center;
+              flex-direction: row;
+              justify-content: flex-end;
+              width: 100%;
+              input {
+                color: white;
+                font-size: 1rem;
+                background: $lightColor;
+                border: none;
+                cursor: pointer;
+                padding: 0.5rem 2rem;
+                border-radius: 20px;
+                &:hover{
+                  background: $color1;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
   .postJob-detail {
     margin-top: 3rem;
     width: 100%;
