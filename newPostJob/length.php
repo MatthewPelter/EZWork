@@ -60,13 +60,27 @@ if (!isset($_SESSION['userid'])) {
                     <form action="postTitle.php" method="post" style="width: 100%;">
                         <div class="lengthContainers">
                             <div class="short">
-                                <input type="radio" id="short" name="length" value="s" required>
+                                <div class="header">
+                                    <i class="fa fa-clock" aria-hidden="true"></i>
+                                    <input type="radio" id="short" name="length" value="s" required>
+                                </div>
                                 <span class="checkmark"></span>
-                                <label for="short">Short term or part time work</label><br>
+                                <label for="short">Short term or part time work</label>
+                                <div class="description">
+                                    <p>Less than 30hrs/week</p>
+                                    <p>Less than 3 months</p>
+                                </div>
                             </div>
                             <div class="long">
-                                <input type="radio" id="long" name="length" value="l">
+                                <div class="header">
+                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                    <input type="radio" id="long" name="length" value="l">
+                                </div>
                                 <label for="long">Designated, longer term work</label><br>    
+                                <div class="description">
+                                    <p>More than 30hrs/week</p>
+                                    <p>3+ months</p>
+                                </div>
                             </div>
                         </div>
         
