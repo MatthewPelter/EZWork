@@ -8287,7 +8287,7 @@ ul {
 .PostAJob {
   width: 100%;
   background: whitesmoke;
-  padding: 2.5rem 10rem;
+  padding: 0rem 10rem;
 }
 
 .PostAJob .PostAJobContainer {
@@ -8368,7 +8368,6 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  cursor: pointer;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -8379,6 +8378,7 @@ ul {
 }
 
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .long .header {
+  padding: 1rem 0rem;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8430,25 +8430,6 @@ ul {
   border: 0.7px solid #054e97;
 }
 
-.PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .long .header .description {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 1.1rem;
-  color: #797979;
-}
-
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .long label {
   font-size: 1.2rem;
   color: black;
@@ -8459,6 +8440,14 @@ ul {
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .long label:hover {
   color: #054e97;
   text-decoration: underline;
+}
+
+.PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .long .description {
+  width: 100%;
+  font-size: 1rem;
+  color: #797979;
+  text-align: center;
+  padding: 1rem 0rem;
 }
 
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .short {
@@ -8484,6 +8473,7 @@ ul {
 }
 
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .short .header {
+  padding: 1rem 0rem;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8535,28 +8525,6 @@ ul {
   border: 0.7px solid #054e97;
 }
 
-.PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .short .header .description {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 1.1rem;
-  color: #797979;
-  text-align: center;
-  padding-top: .5rem;
-  pointer-events: none;
-}
-
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .short label {
   font-size: 1.2rem;
   color: black;
@@ -8567,6 +8535,14 @@ ul {
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .short label:hover {
   color: #054e97;
   text-decoration: underline;
+}
+
+.PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .short .description {
+  width: 100%;
+  font-size: 1rem;
+  color: #797979;
+  text-align: center;
+  padding: 1rem 0rem;
 }
 
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .PostAJobCancel0rContinue {
