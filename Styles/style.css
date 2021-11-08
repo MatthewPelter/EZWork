@@ -19893,7 +19893,7 @@ li {
   text-decoration: underline;
 }
 
-.job .job-container .clientInfo .imagecard {
+.job .job-container .clientInfo .img-card {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -19908,13 +19908,13 @@ li {
   padding: 1rem 0rem;
 }
 
-.job .job-container .clientInfo .imagecard .image {
+.job .job-container .clientInfo .img-card .image {
   width: 70%;
   height: 15rem;
   margin: 1rem 0rem;
 }
 
-.job .job-container .clientInfo .imagecard .image img {
+.job .job-container .clientInfo .img-card .image img {
   border-radius: 5px;
   height: 100%;
   width: 100%;
