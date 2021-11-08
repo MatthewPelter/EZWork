@@ -45,36 +45,36 @@ if (!isset($_SESSION['userid'])) {
                 <h3>Getting Started</h3>
             </div>
             <div class="PostAJobQuestion">
-                <h4>Choose an Option</h4>
-                <div class="options">
-                <span id="error" style="color: red;">
-                <!---- Initializing Session for errors --->
-                <?php
-                if (!empty($_SESSION['error'])) {
-                    echo $_SESSION['error'];
-                    unset($_SESSION['error']);
-                }
-                ?>
-</span>
-<form action="postTitle.php" method="post" style="width: 100%;">
-                <h3>Choose a Job Length<span>*Mandatory</span></h3>
-                <div class="lengthContainers">
-                    <div class="short">
-                        <input type="radio" id="short" name="length" value="s" required>
-                        <span class="checkmark"></span>
-                        <label for="short">Short term or part time work</label><br>
-                    </div>
-                    <div class="long">
-                        <input type="radio" id="long" name="length" value="l">
-                        <label for="long">Designated, longer term work</label><br>    
-                    </div>
-                </div>
+                <h4>Choose a Job Length<span>*Mandatory</span></h4>
 
-                <div class="CancelOrNext">
-                    <button id="cancel"  onclick="location.href='../ClientProfile/index.php'">Cancel</button>
-                    <input type="submit" value="Next: Title" />
-                </div>
-</form>
+                <div class="options">
+                    <span id="error" style="color: red;">
+                        <!---- Initializing Session for errors --->
+                        <?php
+                        if (!empty($_SESSION['error'])) {
+                            echo $_SESSION['error'];
+                            unset($_SESSION['error']);
+                        }
+                        ?>
+                    </span>
+                    <form action="postTitle.php" method="post" style="width: 100%;">
+                        <div class="lengthContainers">
+                            <div class="short">
+                                <input type="radio" id="short" name="length" value="s" required>
+                                <span class="checkmark"></span>
+                                <label for="short">Short term or part time work</label><br>
+                            </div>
+                            <div class="long">
+                                <input type="radio" id="long" name="length" value="l">
+                                <label for="long">Designated, longer term work</label><br>    
+                            </div>
+                        </div>
+        
+                        <div class="PostAJobCancel0rContinue">
+                            <button id="cancel"  onclick="location.href='../ClientProfile/index.php'">Cancel</button>
+                            <input type="submit" value="Next: Title" />
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
