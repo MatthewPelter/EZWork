@@ -740,8 +740,11 @@
   color: white;
   font-size: 0.95rem;
 }
-.postJob-detail-skills .detail-skills-container .detail-input-section form {
+.postJob-detail-skills .detail-skills-container .detail-input-section {
   width: 50%;
+}
+.postJob-detail-skills .detail-skills-container .detail-input-section form {
+  width: 100%;
   height: 100%;
   padding: 2rem;
   background: white;
@@ -759,18 +762,6 @@
   width: 100%;
   justify-content: flex-end;
   align-items: center;
-}
-.postJob-detail-skills .detail-skills-container .detail-input-section form .CancelOrNext #cancel {
-  color: #0a345e;
-  font-size: 1rem;
-  background: none;
-  padding: 0.5rem 1.5rem;
-  border-radius: 15px;
-  border: 0.6px solid #0a345e;
-  cursor: pointer;
-}
-.postJob-detail-skills .detail-skills-container .detail-input-section form .CancelOrNext #cancel:hover {
-  background: #ebebeb;
 }
 .postJob-detail-skills .detail-skills-container .detail-input-section form .CancelOrNext #nextScope {
   margin-left: 1rem;

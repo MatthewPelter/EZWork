@@ -75,7 +75,7 @@ if (!isset($_SESSION['userid'])) {
                 </div>
 
                 <div class="CancelOrNext">
-                    <input type="submit" value="Next: Scope" />
+                    <input type="submit" value="Next: Scope" id="nextScope"/>
                 </div>
             </form>
 
