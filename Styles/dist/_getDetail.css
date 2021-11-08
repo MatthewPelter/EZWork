@@ -1,7 +1,7 @@
 .PostAJob {
   width: 100%;
   background: whitesmoke;
-  padding: 0rem 10rem;
+  padding: 2.5rem 10rem;
 }
 .PostAJob .PostAJobContainer {
   border: 1.25px solid lightgrey;
@@ -51,7 +51,7 @@
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .long {
   border-radius: 10px;
   border: 0.7px solid lightgrey;
-  padding: 2rem;
+  padding: 1.5rem;
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -60,7 +60,7 @@
   margin: 2rem 0rem 2rem 2rem;
 }
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .long .header {
-  padding: 1rem 0rem;
+  padding: 0.5rem 0rem;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -102,26 +102,26 @@
   text-decoration: underline;
 }
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .long .description {
+  pointer-events: none;
   width: 100%;
   font-size: 1rem;
   color: #797979;
   text-align: center;
-  padding: 1rem 0rem;
+  padding: 0.5rem 0rem;
 }
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .short {
   border-radius: 10px;
   border: 0.7px solid lightgrey;
-  padding: 2rem;
+  padding: 1.5rem;
   width: 50%;
   display: flex;
   flex-direction: column;
-  cursor: pointer;
   align-items: center;
   justify-content: center;
   margin: 2rem 0rem 2rem 0rem;
 }
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .short .header {
-  padding: 1rem 0rem;
+  padding: 0.5rem 0rem;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -163,11 +163,12 @@
   text-decoration: underline;
 }
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .short .description {
+  pointer-events: none;
   width: 100%;
   font-size: 1rem;
   color: #797979;
   text-align: center;
-  padding: 1rem 0rem;
+  padding: 0.5rem 0rem;
 }
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .PostAJobCancel0rContinue {
   display: flex;

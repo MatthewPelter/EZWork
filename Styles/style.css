@@ -8287,7 +8287,7 @@ ul {
 .PostAJob {
   width: 100%;
   background: whitesmoke;
-  padding: 0rem 10rem;
+  padding: 2.5rem 10rem;
 }
 
 .PostAJob .PostAJobContainer {
@@ -8359,7 +8359,7 @@ ul {
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .long {
   border-radius: 10px;
   border: .7px solid lightgrey;
-  padding: 2rem;
+  padding: 1.5rem;
   width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8378,7 +8378,7 @@ ul {
 }
 
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .long .header {
-  padding: 1rem 0rem;
+  padding: .5rem 0rem;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8443,17 +8443,18 @@ ul {
 }
 
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .long .description {
+  pointer-events: none;
   width: 100%;
   font-size: 1rem;
   color: #797979;
   text-align: center;
-  padding: 1rem 0rem;
+  padding: .5rem 0rem;
 }
 
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .short {
   border-radius: 10px;
   border: .7px solid lightgrey;
-  padding: 2rem;
+  padding: 1.5rem;
   width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8462,7 +8463,6 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  cursor: pointer;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -8473,7 +8473,7 @@ ul {
 }
 
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .short .header {
-  padding: 1rem 0rem;
+  padding: .5rem 0rem;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8538,11 +8538,12 @@ ul {
 }
 
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .lengthContainers .short .description {
+  pointer-events: none;
   width: 100%;
   font-size: 1rem;
   color: #797979;
   text-align: center;
-  padding: 1rem 0rem;
+  padding: .5rem 0rem;
 }
 
 .PostAJob .PostAJobContainer .PostAJobQuestion .options form .PostAJobCancel0rContinue {
