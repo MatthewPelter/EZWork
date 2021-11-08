@@ -39,15 +39,27 @@ if (!isset($_SESSION['userid'])) {
 <body>
     <?php include '../navbar.php'; ?>
 
-    <div class="PostAJob">
-        <div class="PostAJobContainer">
-            <div class="PostAJobTitle">
-                <h3>Getting Started</h3>
+
+        <!--Post A Job More Details-->
+        <div class="postJob-detail">
+        <div class="detail-container">
+            <div class="detail-progress-section">
+                <div class="progressBar">
+                    <progress id="jobPostProgress" value="25" max="100"></progress>
+                    <ul>
+                        <li id="current">Title</li>
+                        <li id="current">Skills</li>
+                        <li>Scope</li>
+                        <li>Location</li>
+                        <li>Budget</li>
+                    </ul>
+                </div>
+                <div class="title-card-intro">
+                    <h2>What skills does your work require?</h2>
+                </div>
             </div>
-            <div class="PostAJobQuestion">
-                <h4>Choose an Option</h4>
-                <div class="options">
-                <span id="error" style="color: red;">
+            <div class="detail-input-section">
+            <span id="error" style="color: red;">
                 <!---- Initializing Session for errors --->
                 <?php
                 if (!empty($_SESSION['error'])) {
@@ -55,8 +67,8 @@ if (!isset($_SESSION['userid'])) {
                     unset($_SESSION['error']);
                 }
                 ?>
-</span>
-<form action="postTitle.php" method="post" style="width: 100%;">
+            </span>
+            <form action="scope.php" method="post" style="width: 100%;">
                 <h3>Choose a Job Length<span>*Mandatory</span></h3>
                 <div class="lengthContainers">
                     <div class="short">
@@ -74,11 +86,12 @@ if (!isset($_SESSION['userid'])) {
                     <button id="cancel"  onclick="location.href='../ClientProfile/index.php'">Cancel</button>
                     <input type="submit" value="Next: Title" />
                 </div>
-</form>
-                </div>
+            </form>
+
             </div>
         </div>
     </div>
+    <!--Post A Job End-->
 
     <?php include '../footer.php'; ?>
 

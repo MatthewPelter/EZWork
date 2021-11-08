@@ -8284,6 +8284,162 @@ ul {
   }
 }
 
+.PostAJob {
+  width: 100%;
+  background: whitesmoke;
+  padding: 2.5rem 10rem;
+}
+
+.PostAJob .PostAJobContainer {
+  border: 1.25px solid lightgrey;
+  border-radius: 15px;
+  background: white;
+}
+
+.PostAJob .PostAJobContainer .PostAJobTitle {
+  width: 100%;
+  border-bottom: 1.25px solid lightgrey;
+}
+
+.PostAJob .PostAJobContainer .PostAJobTitle h3 {
+  font-size: 1.5rem;
+  padding: 2rem;
+}
+
+.PostAJob .PostAJobContainer .PostAJobQuestion {
+  width: 100%;
+  border-bottom: 1.25px solid lightgrey;
+  padding: 1.5rem 2rem;
+}
+
+.PostAJob .PostAJobContainer .PostAJobQuestion h4 {
+  width: 100%;
+  font-size: 1.1rem;
+}
+
+.PostAJob .PostAJobContainer .PostAJobQuestion .options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+}
+
+.PostAJob .PostAJobContainer .PostAJobQuestion .options .optionCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1.5rem 1.5rem 1.5rem 0rem;
+  border: 1.25px solid lightgrey;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+.PostAJob .PostAJobContainer .PostAJobQuestion .options .optionCard .choosen {
+  padding: 0.5rem 0.5rem 0rem 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+}
+
+.PostAJob .PostAJobContainer .PostAJobQuestion .options .optionCard .choosen i {
+  font-size: 0.75rem;
+  color: white;
+  padding: 0.2rem;
+  border-radius: 50%;
+  background: white;
+  border: 0.7px solid lightgrey;
+}
+
+.PostAJob .PostAJobContainer .PostAJobQuestion .options .optionCard .option1,
+.PostAJob .PostAJobContainer .PostAJobQuestion .options .optionCard .option2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem 2.5rem;
+}
+
+.PostAJob .PostAJobContainer .PostAJobQuestion .options .optionCard .option1 h4,
+.PostAJob .PostAJobContainer .PostAJobQuestion .options .optionCard .option2 h4 {
+  font-size: 1rem;
+  padding: 1rem 0rem;
+}
+
+.PostAJob .PostAJobContainer .PostAJobQuestion .options .optionCard .option1 p,
+.PostAJob .PostAJobContainer .PostAJobQuestion .options .optionCard .option2 p {
+  font-size: 0.9rem;
+  color: #797979;
+}
+
+.PostAJob .PostAJobContainer .PostAJobQuestion .options .optionCard:hover {
+  background: #f8f6f6;
+}
+
+.PostAJob .PostAJobContainer .PostAJobCancel0rContinue {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+  padding: 2rem;
+}
+
+.PostAJob .PostAJobContainer .PostAJobCancel0rContinue #cancel {
+  color: #0a345e;
+  font-size: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 0rem 1rem;
+}
+
+.PostAJob .PostAJobContainer .PostAJobCancel0rContinue #cancel:hover {
+  text-decoration: underline;
+}
+
+.PostAJob .PostAJobContainer .PostAJobCancel0rContinue #continue {
+  color: gray;
+  font-size: 1rem;
+  background: lightgrey;
+  border: none;
+  cursor: not-allowed;
+  padding: 0.5rem 2rem;
+  border-radius: 20px;
+}
+
 .postJob-detail {
   width: 100%;
   background: whitesmoke;

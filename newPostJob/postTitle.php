@@ -52,8 +52,8 @@ if (isset($_POST['length'])) {
                 <div class="progressBar">
                     <progress id="jobPostProgress" value="25" max="100"></progress>
                     <ul>
-                        <li id="current">Length</li>
                         <li id="current">Title</li>
+                        <li>Skills</li>
                         <li>Scope</li>
                         <li>Location</li>
                         <li>Budget</li>
@@ -74,7 +74,7 @@ if (isset($_POST['length'])) {
                     }
                     ?>
                 </span>
-                <form action="scope.php" method="post" style="width: 100%;">
+                <form action="skills.php" method="post" style="width: 100%;">
                     <h3>Write a title for your job post</h3>
                     <div class="titleContainer">
                         <input name="title" id="title" type="text" placeholder="I need my garage door installed..." value=""><br />

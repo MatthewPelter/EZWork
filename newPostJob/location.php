@@ -52,8 +52,8 @@ if (isset($_POST['size'])) {
                 <div class="progressBar">
                     <progress id="jobPostProgress" value="75" max="100"></progress>
                     <ul>
-                        <li id="current">Length</li>
                         <li id="current">Title</li>
+                        <li id="current">Skills</li>
                         <li id="current">Scope</li>
                         <li id="current">Location</li>
                         <li>Budget</li>
