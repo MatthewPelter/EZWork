@@ -50,7 +50,7 @@ if (isset($_POST['length'])) {
         <div class="detail-container">
             <div class="detail-progress-section">
                 <div class="progressBar">
-                    <progress id="jobPostProgress" value="25" max="100"></progress>
+                    <progress id="jobPostProgress" value="0" max="100"></progress>
                     <ul>
                         <li id="current">Title</li>
                         <li>Skills</li>
