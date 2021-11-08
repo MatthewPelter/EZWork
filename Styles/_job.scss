@@ -150,14 +150,13 @@ $darktext: rgb(121, 121, 121);
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
-                h4{
+                h3{
                     font-size: 1.2rem;
                     color: $lightColor;
                     text-decoration: underline;
-
                     i{
-                        text-decoration: none;
                         margin-right: .5rem;
+                        text-decoration: none;
                     }
                 }
                 span{

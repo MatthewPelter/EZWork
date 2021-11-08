@@ -132,14 +132,14 @@
   flex-direction: column;
   align-items: flex-start;
 }
-.job .job-container .jobCard .imageCard h4 {
+.job .job-container .jobCard .imageCard h3 {
   font-size: 1.2rem;
   color: #054e97;
   text-decoration: underline;
 }
-.job .job-container .jobCard .imageCard h4 i {
-  text-decoration: none;
+.job .job-container .jobCard .imageCard h3 i {
   margin-right: 0.5rem;
+  text-decoration: none;
 }
 .job .job-container .jobCard .imageCard span {
   margin: 0.5rem 0rem;
