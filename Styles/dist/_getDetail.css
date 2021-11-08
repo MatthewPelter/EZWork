@@ -2700,7 +2700,7 @@
   }
   .PostAJob .PostAJobContainer {
     border: 1.25px solid lightgrey;
-    border-radius: 15px;
+    border-radius: 0;
     background: white;
   }
   .PostAJob .PostAJobContainer .PostAJobTitle {
