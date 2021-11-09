@@ -9,16 +9,13 @@ if (!isset($_SESSION['userid'])) {
 
 // Checking second page values for empty, If it finds any blank field then redirected to second page.
 if (isset($_POST['skills'])) {
-    if (empty($_POST['skills']) || empty($_POST['image'])) {
+    if (empty($_POST['skills']) || empty($_POST['imgUpload'])) {
         $_SESSION['error_page3'] = "Mandatory field(s) are missing, Please fill it again"; // Setting error message.
         header("location: postSkill.php"); // Redirecting to second page. 
     } else {
         // Fetching all values posted from second page and storing it in variable.
-
-        $img = $_FILES['image'];
-        $filename = $img['tmp_name'];
         $client_id = "9f482e3edae002b";
-        $file = file_get_contents($filename);
+        $file = file_get_contents($_FILES['imgUpload']['tmp_name']);
         $url = 'https://api.imgur.com/3/image.json';
         $headers = array("Authorization: Client-ID $client_id");
         $pvars  = array('image' => base64_encode($file));
@@ -34,7 +31,7 @@ if (isset($_POST['skills'])) {
         ));
 
         $json_returned = curl_exec($curl); // blank response
-        $_POST['image'] = $json_returned;
+        $_POST['imgUpload'] = $json_returned;
         curl_close($curl);
 
         foreach ($_POST as $key => $value) {
