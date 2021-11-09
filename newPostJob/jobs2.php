@@ -44,8 +44,8 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
 
     <?php include '../navbar.php'; ?>
     
-    <div class="jobs2">
-        <div class="jobs-header">
+    <div class="all-jobs-container">
+        <div class="all-jobs-container-header">
             <h4>Find Work</h4>
             <div class="searchBar">
                 <form id="searchContainer">
