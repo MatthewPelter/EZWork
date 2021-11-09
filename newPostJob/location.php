@@ -2,6 +2,13 @@
 session_start();
 require_once('../classes/DB.php');
 // Checking second page values for empty, If it finds any blank field then redirected to second page.
+
+if (!isset($_SESSION['userid'])) {
+    header('Location: ../login/index');
+    echo "NOT LOGGED IN";
+}
+
+
 if (isset($_POST['size'])) {
     if (empty($_POST['size']) || empty($_POST['months']) || empty($_POST['experience'])) {
         $_SESSION['error_page3'] = "Mandatory field(s) are missing, Please fill it again"; // Setting error message.
@@ -65,30 +72,30 @@ if (isset($_POST['size'])) {
                 </div>
             </div>
             <div class="detail-input-section">
-            <span id="error">
-                <?php
-                if (!empty($_SESSION['error_page4'])) {
-                    echo $_SESSION['error_page4'];
-                    unset($_SESSION['error_page4']);
-                }
-                ?>
-            </span>
-            <form action="budget.php" method="post">
+                <span id="error">
+                    <?php
+                    if (!empty($_SESSION['error_page4'])) {
+                        echo $_SESSION['error_page4'];
+                        unset($_SESSION['error_page4']);
+                    }
+                    ?>
+                </span>
+                <form action="budget.php" method="post">
 
-                <div class="unitedStates">
-                    <label for="us">U.S. only</label>
-                    <input type="radio" id="us" name="location" value="us" required>
-                </div>
-                <p>Only talent in the United States can submit proposals</p>
-                <div class="worldwide">
-                    <label for="world">Worldwide</label>
-                    <input type="radio" id="world" name="location" value="world">
-                </div>
-                <p>Freelancers in any location can submit proposals</p>
-                <div class="CancelOrNext">
-                    <input type="submit" value="Next: Budget" id="nextBudget"/>
-                </div>
-            </form>
+                    <div class="unitedStates">
+                        <label for="us">U.S. only</label>
+                        <input type="radio" id="us" name="location" value="us" required>
+                    </div>
+                    <p>Only talent in the United States can submit proposals</p>
+                    <div class="worldwide">
+                        <label for="world">Worldwide</label>
+                        <input type="radio" id="world" name="location" value="world">
+                    </div>
+                    <p>Freelancers in any location can submit proposals</p>
+                    <div class="CancelOrNext">
+                        <input type="submit" value="Next: Budget" id="nextBudget" />
+                    </div>
+                </form>
             </div>
         </div>
     </div>

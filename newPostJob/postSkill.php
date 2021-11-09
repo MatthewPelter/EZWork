@@ -1,6 +1,12 @@
 <?php
 session_start(); // Session starts here.
 require_once('../classes/DB.php');
+
+if (!isset($_SESSION['userid'])) {
+    header('Location: ../login/index');
+    echo "NOT LOGGED IN";
+}
+
 // Checking second page values for empty, If it finds any blank field then redirected to second page.
 if (isset($_POST['title'])) {
     if (empty($_POST['title']) || empty($_POST['description'])) {
@@ -18,39 +24,29 @@ if (isset($_POST['title'])) {
     }
 }
 
-if (!isset($_SESSION['userid'])) {
-    header('Location: ../login/index');
-    echo "NOT LOGGED IN";
-} else {
-    $username = $_SESSION['userid'];
-    $sql = "SELECT * FROM clients WHERE username = '$username' limit 1";
-    $result = mysqli_query($conn, $sql);
-    if (mysqli_num_rows($result) == 0) {
-        header('Location: ../login/index');
-    }
-}
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
+<head>
+
     <head>
-        <head>
-            <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="description" content="A platform for skilled workers or talented people to freelance, find projects to work on, extra ways to earn income.">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <script src="https://kit.fontawesome.com/e9089fea9d.js" crossorigin="anonymous"></script>
-            <title>EZWork | Find Jobs or Freelancers</title>
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet"> 
-            <link rel="icon" href="../logo/logo.svg">
-            <link rel="stylesheet" href="../Styles/style.css">
-        </head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="A platform for skilled workers or talented people to freelance, find projects to work on, extra ways to earn income.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/e9089fea9d.js" crossorigin="anonymous"></script>
+        <title>EZWork | Find Jobs or Freelancers</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+        <link rel="icon" href="../logo/logo.svg">
+        <link rel="stylesheet" href="../Styles/style.css">
     </head>
+</head>
 
 <body>
     <?php include '../navbar.php'; ?>
@@ -77,30 +73,30 @@ if (!isset($_SESSION['userid'])) {
                 </div>
             </div>
             <div class="detail-input-section">
-            <form action="scope.php" method="post" style="width: 100%;">
-                <span id="error" style="color: red;padding: 0;">
-                    <?php
-                    // To show error of page 2.
-                    if (!empty($_SESSION['error_pageSkill'])) {
-                        echo $_SESSION['error_pageSkill'];
-                        unset($_SESSION['error_pageSkill']);
-                    }
-                    ?>
-                </span>
-                
-                <div class="skill">
-                    <h4>Enter needed skill or expertise</h4>
-                    <input type="text" list="allskills" autocomplete="off" name="skills" placeholder="Skills or Expertise">
-                </div>
-                <div class="image">
-                    <h4>Upload An Image <span></span></h4>
-                    <img id="output" alt="">
-                    <input type="file" onchange="loadFile(event)" name="image" id="file" accept="image/gif, image/jpeg, image/png">
-                </div>
-                <div class="CancelOrNext">
-                    <input type="submit" value="Next: Scope" id="nextScope"/>
-                </div>
-            </form>
+                <form action="scope.php" method="post" style="width: 100%;">
+                    <span id="error" style="color: red;padding: 0;">
+                        <?php
+                        // To show error of page 2.
+                        if (!empty($_SESSION['error_page3'])) {
+                            echo $_SESSION['error_page3'];
+                            unset($_SESSION['error_page3']);
+                        }
+                        ?>
+                    </span>
+
+                    <div class="skill">
+                        <h4>Enter needed skill or expertise</h4>
+                        <input type="text" list="allskills" autocomplete="off" name="skills" placeholder="Skills or Expertise">
+                    </div>
+                    <div class="image">
+                        <h4>Upload An Image <span></span></h4>
+                        <img id="output" alt="">
+                        <input type="file" onchange="loadFile(event)" name="image" id="file" accept="image/gif, image/jpeg, image/png">
+                    </div>
+                    <div class="CancelOrNext">
+                        <input type="submit" value="Next: Scope" id="nextScope" />
+                    </div>
+                </form>
 
             </div>
         </div>
@@ -125,73 +121,72 @@ if (!isset($_SESSION['userid'])) {
     var project = document.querySelector('.projectCard');
     var help = document.querySelector('.helpCard');
     var session = document.querySelector('.sessionCard');
-    function toggleJob(){
+
+    function toggleJob() {
         var job = document.querySelector('.jobCard');
-        if(job.style.display === 'none'){
+        if (job.style.display === 'none') {
             job.style.display = 'inline-block';
             talent.style.display = 'none';
             project.style.display = 'none';
             help.style.display = 'none';
             session.style.display = 'none';
-        }
-        else{
-            job.style.display='none';
-            
+        } else {
+            job.style.display = 'none';
+
         }
     }
-    function toggleTalent(){
+
+    function toggleTalent() {
         var talent = document.querySelector('.talentCard');
-        if(talent.style.display==='none'){
+        if (talent.style.display === 'none') {
             talent.style.display = 'inline-block';
             job.style.display = 'none';
             project.style.display = 'none';
             help.style.display = 'none';
             session.style.display = 'none';
-        }
-        else{
+        } else {
             talent.style.display = 'none';
         }
     }
-    function toggleProject(){
+
+    function toggleProject() {
         var project = document.querySelector('.projectCard');
-        if(project.style.display==='none'){
+        if (project.style.display === 'none') {
             project.style.display = 'inline-block';
             talent.style.display = 'none';
             job.style.display = 'none';
             help.style.display = 'none';
             session.style.display = 'none';
-        }
-        else{
+        } else {
             project.style.display = 'none';
         }
     }
-    function toggleHelp(){
+
+    function toggleHelp() {
         var help = document.querySelector('.helpCard');
-        if(help.style.display==='none'){
+        if (help.style.display === 'none') {
             help.style.display = 'inline-block';
             talent.style.display = 'none';
             project.style.display = 'none';
             job.style.display = 'none';
             session.style.display = 'none';
-        }
-        else{
+        } else {
             help.style.display = 'none';
         }
     }
-    function toggleSession(){
-       
-        if(session.style.display==='none'){
+
+    function toggleSession() {
+
+        if (session.style.display === 'none') {
             session.style.display = 'inline-block';
             talent.style.display = 'none';
             project.style.display = 'none';
             help.style.display = 'none';
             job.style.display = 'none';
-        }
-        else{
+        } else {
             session.style.display = 'none';
         }
     }
-
 </script>
 <!--Toggle the nav burger button-->
 <script>
@@ -200,16 +195,14 @@ if (!isset($_SESSION['userid'])) {
 
     function myFunction(x) {
         x.classList.toggle("change");
-        if(x.classList.contains('change')){
+        if (x.classList.contains('change')) {
             profileMobileNav.style.display = "inline-block";
-            searchIcon.style.opacity='0';
-        }
-        else{
-            profileMobileNav.style.display='none';
-            searchIcon.style.opacity='1';
+            searchIcon.style.opacity = '0';
+        } else {
+            profileMobileNav.style.display = 'none';
+            searchIcon.style.opacity = '1';
         }
     }
-
 </script>
 
 <!--Script to load file-->

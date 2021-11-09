@@ -1,6 +1,14 @@
 <?php
 session_start();
 require_once('../classes/DB.php');
+
+
+if (!isset($_SESSION['userid'])) {
+    header('Location: ../login/index');
+    echo "NOT LOGGED IN";
+}
+
+
 // Checking first page values for empty,If it finds any blank field then redirected to first page.
 if (isset($_POST['length'])) {
     if (empty($_POST['length'])) {
