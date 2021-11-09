@@ -109,7 +109,7 @@ if (mysqli_num_rows($jobResult) > 0) {
                             <span><?php echo "Project Budget" ?></span>
                         <?php } else { ?>
                             <p></p>
-                            <span> <?php echo "No budget or pay rate set yet..."; ?></span>
+                            <span> <?php echo "No budget or pay rate set yet... Contact client for pricing."; ?></span>
                         <?php } ?>
 
                     </div>
