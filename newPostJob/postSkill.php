@@ -115,7 +115,7 @@ if (isset($_POST['title'])) {
 <!--Script for the search bar and datalist-->
 <script src="../SkillsContainer/searchProfile.js"></script>
 <!--Nav bar script-->
-<script>
+<script type="text/javascript">
     var job = document.querySelector('.jobCard');
     var talent = document.querySelector('.talentCard');
     var project = document.querySelector('.projectCard');
@@ -187,9 +187,8 @@ if (isset($_POST['title'])) {
             session.style.display = 'none';
         }
     }
-</script>
-<!--Toggle the nav burger button-->
-<script>
+    //Toggle the nav burger button-->
+
     const navIcon = document.getElementById("nav-burger");
     const profileMobileNav = document.querySelector(".profile-mobile-nav");
 
@@ -203,10 +202,8 @@ if (isset($_POST['title'])) {
             searchIcon.style.opacity = '1';
         }
     }
-</script>
 
-<!--Script to load file-->
-<script>
+    //    !--Script to load file-- >
     var loadFile = function(event) {
         var image = document.getElementById('output');
         image.src = URL.createObjectURL(event.target.files[0]);

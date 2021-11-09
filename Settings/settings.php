@@ -67,15 +67,15 @@ $row = mysqli_fetch_assoc($result);
                     <div class="image-card">
                         <img id="img" src="<?php echo $row['avatar']; ?>" alt="Avatar">
                     </div>
-                   
+
                     <form action="javascript:void(0);" class="avatar">
-                        
+
                         <label for="file">Select New Avatar:</label>
-                        
+
                         <input type="file" onchange="loadFile(event)" name="file" id="file" accept="image/gif, image/jpeg, image/png">
-                        
+
                         <input type="submit" name="changeAvatar" id="changeAvatar" value="Upload Photo">
-                        
+
                         <p id="url"></p>
                     </form>
                 </div>
@@ -117,13 +117,13 @@ $row = mysqli_fetch_assoc($result);
                     <h4>Change your password:</h4>
                     <form action="javascript:void(0);" method="post">
                         <input type="password" id="currentPassword" name="currentPassword" minlength="8" placeholder="Current Password" required><br />
-            
+
                         <input type="password" id="password" name="password" minlength="8" autocomplete="off" placeholder="New Password" required><br />
-            
+
                         <input type="password" id="password2" name="password2" minlength="8" autocomplete="off" placeholder="Match New Password" required><br />
-            
+
                         <span id="result"></span>
-            
+
                         <input id="changePassBTN" type="submit" name="changepassword" class="changePasswordBtn" value="Change Password">
                     </form>
                 </div>
@@ -214,24 +214,6 @@ $row = mysqli_fetch_assoc($result);
 <script>
     // Change password handler
     $("#changePassBTN").click(function() {
-        $.ajax({
-            url: "../components/settings-change-password.php",
-            data: {
-                currentPassword: $("#currentPassword").val(),
-                password: $("#password").val(),
-                password2: $("#password2").val()
-            },
-            type: "POST",
-            success: function(data) {
-                $("#result").html(data);
-            },
-            error: function(data) {
-                $("#result").html(data);
-            }
-        });
-    });
-
-    $("#changeAvatar").click(function() {
         $.ajax({
             url: "../components/settings-change-password.php",
             data: {
