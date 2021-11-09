@@ -114,7 +114,7 @@ if (mysqli_num_rows($jobResult) > 0) {
 
                     </div>
                     <div class="experience">
-                        <h4>Entry Level</h4>
+                        <h4><?php echo $r['experience']; ?></h4>
                     </div>
                 </div>
 
