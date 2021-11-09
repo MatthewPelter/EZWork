@@ -4,7 +4,7 @@ require_once('../classes/DB.php');
 // Checking second page values for empty, If it finds any blank field then redirected to second page.
 if (isset($_POST['location'])) {
     if (empty($_POST['location'])) {
-        $_SESSION['error_page4'] = "Mandatory field(s) are missing, Please fill it again"; // Setting error message.
+        $_SESSION['error_page5'] = "Mandatory field(s) are missing, Please fill it again"; // Setting error message.
         header("location: location.php"); // Redirecting to second page. 
     } else {
         // Fetching all values posted from second page and storing it in variable.
@@ -13,7 +13,7 @@ if (isset($_POST['location'])) {
         }
     }
 } else {
-    if (empty($_SESSION['error_page5'])) {
+    if (empty($_SESSION['error_page6'])) {
         header("location: length.php"); // Redirecting to first page.
     }
 }
@@ -67,9 +67,9 @@ if (isset($_POST['location'])) {
             <div class="detail-input-section">
                 <span id="error">
                     <?php
-                    if (!empty($_SESSION['error_page5'])) {
-                        echo $_SESSION['error_page5'];
-                        unset($_SESSION['error_page5']);
+                    if (!empty($_SESSION['error_page6'])) {
+                        echo $_SESSION['error_page6'];
+                        unset($_SESSION['error_page6']);
                     }
                     ?>
                 </span>
@@ -84,12 +84,12 @@ if (isset($_POST['location'])) {
                             <label>Hourly Rate ($ / hour): </label>
                             <input name="hourrate" id="hourrate" type="number" placeholder="Enter $ Amount" value="">
                         </div>
-                     
+
                     </div>
                     <div class="budget">
                         <label for="budget">Project Budget</label>
                         <input type="radio" id="budget" name="budgetoption" value="budget">
-                    </div>    
+                    </div>
                     <div id="budgetChecked">
                         <span>Optional*</span>
                         <div class="budgetChecked-container">
@@ -97,11 +97,11 @@ if (isset($_POST['location'])) {
                             <input name="maxbudget" id="maxbudget" type="number" placeholder="Enter $ Amount" value="">
                         </div>
                     </div>
-    
+
                     <div class="CancelOrNext">
                         <input type="submit" value="Post Job" id="JobPost" />
                     </div>
-    
+
                 </form>
             </div>
         </div>

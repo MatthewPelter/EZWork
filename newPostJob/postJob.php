@@ -34,8 +34,8 @@ if (!isset($_SESSION['userid'])) {
                 if (!empty($_SESSION['post'])) {
                     if (empty($_POST['budgetoption'])) {
                         // Setting error for page 5.
-                        $_SESSION['error_page5'] = "Mandatory field(s) are missing, Please fill it again";
-                        header("location: budget.php"); // Redirecting to fifth page.
+                        $_SESSION['error_page6'] = "Mandatory field(s) are missing, Please fill it again";
+                        header("location: budget.php"); // Redirecting to sixth page.
                     } else {
                         $username = $_SESSION['userid'];
                         $getUserID = "SELECT id FROM clients WHERE username = '$username'";
@@ -60,7 +60,7 @@ if (!isset($_SESSION['userid'])) {
 
                         //print_r($_SESSION['post']);
                         $datePosted = date("Y-m-d");
-                        $sql = "INSERT INTO jobs(length,title,skills,size,location,budget,rate,description,image,user_id,freelancer_id,status, datePosted) VALUES('$length','$title','None','$size','$location','$maxbudget','$hourrate', '$description', NULL, '$userID',0,0, '$datePosted')";
+                        $sql = "INSERT INTO jobs(length,title,skills,size,location,budget,rate,description,image,user_id,freelancer_id,status, datePosted, skills) VALUES('$length','$title','None','$size','$location','$maxbudget','$hourrate', '$description', '$image', '$userID',0,0, '$datePosted', '$skills')";
                         $query = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 
                         if ($query) {

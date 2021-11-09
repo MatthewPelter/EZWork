@@ -11,7 +11,7 @@ if (!isset($_SESSION['userid'])) {
 
 if (isset($_POST['size'])) {
     if (empty($_POST['size']) || empty($_POST['months']) || empty($_POST['experience'])) {
-        $_SESSION['error_page3'] = "Mandatory field(s) are missing, Please fill it again"; // Setting error message.
+        $_SESSION['error_page4'] = "Mandatory field(s) are missing, Please fill it again"; // Setting error message.
         header("location: scope.php"); // Redirecting to second page. 
     } else {
         // Fetching all values posted from second page and storing it in variable.
@@ -20,7 +20,7 @@ if (isset($_POST['size'])) {
         }
     }
 } else {
-    if (empty($_SESSION['error_page4'])) {
+    if (empty($_SESSION['error_page5'])) {
         header("location: length.php"); // Redirecting to first page.
     }
 }
@@ -74,9 +74,9 @@ if (isset($_POST['size'])) {
             <div class="detail-input-section">
                 <span id="error">
                     <?php
-                    if (!empty($_SESSION['error_page4'])) {
-                        echo $_SESSION['error_page4'];
-                        unset($_SESSION['error_page4']);
+                    if (!empty($_SESSION['error_page5'])) {
+                        echo $_SESSION['error_page5'];
+                        unset($_SESSION['error_page5']);
                     }
                     ?>
                 </span>
