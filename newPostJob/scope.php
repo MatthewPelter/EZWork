@@ -17,7 +17,7 @@ if (isset($_POST['skills'])) {
         $pvars   = array('image' => base64_encode($data));
         $timeout = 30;
         $curl = curl_init();
-        curl_setopt($curl, CURLOPT_URL, 'https://api.imgur.com/3/image.json');
+        curl_setopt($curl, CURLOPT_URL, 'https://api.imgur.com/3/image/');
         curl_setopt($curl, CURLOPT_TIMEOUT, $timeout);
         curl_setopt($curl, CURLOPT_HTTPHEADER, array('Authorization: Client-ID ' . $client_id));
         curl_setopt($curl, CURLOPT_POST, 1);
@@ -34,7 +34,6 @@ if (isset($_POST['skills'])) {
         } else {
             echo "<h2>There's a Problem</h2>";
             echo $pms['data']['error'];
-            die();
         }
 
         foreach ($_POST as $key => $value) {
