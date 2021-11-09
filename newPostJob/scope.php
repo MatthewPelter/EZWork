@@ -9,7 +9,7 @@ if (!isset($_SESSION['userid'])) {
 
 // Checking second page values for empty, If it finds any blank field then redirected to second page.
 if (isset($_POST['skills'])) {
-    if (empty($_POST['skills']) || empty($_POST['image'])) {
+    if (empty($_POST['skills'])) {
         $_SESSION['error_page3'] = "Mandatory field(s) are missing, Please fill it again"; // Setting error message.
         header("location: postSkill.php"); // Redirecting to second page. 
     } else {
