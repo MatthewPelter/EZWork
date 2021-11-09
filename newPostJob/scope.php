@@ -1,6 +1,12 @@
 <?php
 session_start();
 require_once('../classes/DB.php');
+
+if (!isset($_SESSION['userid'])) {
+    header('Location: ../login/index');
+    echo "NOT LOGGED IN";
+}
+
 // Checking second page values for empty, If it finds any blank field then redirected to second page.
 if (isset($_POST['skills'])) {
     if (empty($_POST['skills']) || empty($_POST['image'])) {
