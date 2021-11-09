@@ -1,13 +1,14 @@
 $color1: #0a345e;
 $lightColor: #054e97;
 $darktext: rgb(121, 121, 121);
-.all-jobs-container{
+.jobs{
+    margin-top: 4.5rem;
     width: 100%;
     background: whitesmoke;
     padding: 2.5rem 6rem;
 
     // Jobs Page Top Header CSS
-    .all-jobs-container-header{
+    .jobs-header{
         width: 100%;
         padding: 1rem 0rem;
         display: flex;
