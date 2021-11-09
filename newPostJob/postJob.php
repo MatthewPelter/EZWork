@@ -20,12 +20,9 @@ if (!isset($_SESSION['userid'])) {
 
 <head>
     <title>Post a Job</title>
-    <!-- <link rel="stylesheet" href="../Styles/style.css" /> -->
 </head>
 
 <body>
-    <?php //include '../navbar.php'; 
-    ?>
     <div class="PostAJob">
         <div class="PostAJobContainer">
             <h2>Post a Job</h2>
@@ -43,8 +40,6 @@ if (!isset($_SESSION['userid'])) {
                         $row = mysqli_fetch_assoc($getResult);
                         $userID = $row['id'];
 
-
-
                         foreach ($_POST as $key => $value) {
                             $_SESSION['post'][$key] = $value;
                         }
@@ -60,7 +55,7 @@ if (!isset($_SESSION['userid'])) {
 
                         //print_r($_SESSION['post']);
                         $datePosted = date("Y-m-d");
-                        $sql = "INSERT INTO jobs(length,title,skills,size,location,budget,rate,description,image,user_id,freelancer_id,status, datePosted) VALUES('$length','$title','$skills','$size','$location','$maxbudget','$hourrate', '$description', '$image', '$userID',0,0, '$datePosted')";
+                        $sql = "INSERT INTO jobs(length,title,skills,size,location,budget,rate,description,image,user_id,freelancer_id,status, datePosted, experience) VALUES('$length','$title','$skills','$size','$location','$maxbudget','$hourrate', '$description', '$image', '$userID',0,0, '$datePosted', '$experience')";
                         $query = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 
                         if ($query) {
