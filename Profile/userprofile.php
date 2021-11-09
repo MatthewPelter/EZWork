@@ -522,7 +522,7 @@ if (mysqli_num_rows($result) > 0) {
                             ?>
                             <div class="profile-card-inf__item">
                                 <div class="profile-card-inf__title"><?php echo $fetchJobCount['jobCount']; ?></div>
-                                <div class="profile-card-inf__txt">Jobs Requested</div>
+                                <div class="profile-card-inf__txt">Job(s) Requested</div>
                             </div>
 
                             <div class="profile-card-inf__item">
