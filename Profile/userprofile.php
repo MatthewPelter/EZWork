@@ -476,21 +476,6 @@ if (mysqli_num_rows($result) > 0) {
 
 
     <div class="profile">
-        <!-- <div class="user-profile-header">
-            <h2 id="username"><?php echo $row['username']; ?></h2>
-            <div class="quick-links">
-                <?php if ($dataFound) { ?>
-                    <button id="quick-link-job" onclick="location.href='../message/messages?mid=<?php echo $row['id']; ?>'">Message User</button>
-                <?php } ?>
-            </div>
-        </div> -->
-
-        <!-- <div class="user-profile-body">
-            <div class="user-postings user-info">
-                <div class="card title">
-                    <h3>User Information</h3>
-                </div>
-                <div class="card result"> -->
         <?php
         if ($dataFound) {
         ?>
