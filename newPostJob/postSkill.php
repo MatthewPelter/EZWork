@@ -73,7 +73,7 @@ if (isset($_POST['title'])) {
                 </div>
             </div>
             <div class="detail-input-section">
-                <form action="scope.php" method="post" style="width: 100%;">
+                <form action="scope.php" enctype="multipart/form-data" method="post" style="width: 100%;">
                     <span id="error" style="color: red;padding: 0;">
                         <?php
                         // To show error of page 2.

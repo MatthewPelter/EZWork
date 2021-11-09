@@ -15,7 +15,8 @@ if (isset($_POST['skills'])) {
     } else {
         // Fetching all values posted from second page and storing it in variable.
         $client_id = "9f482e3edae002b";
-        $file = file_get_contents($_FILES['image']['tmp_name']);
+        $image = $_FILES['image']['tmp_name'];
+        $file = file_get_contents($image);
         $url = 'https://api.imgur.com/3/image.json';
         $headers = array("Authorization: Client-ID $client_id");
         $pvars  = array('image' => base64_encode($file));
@@ -31,8 +32,11 @@ if (isset($_POST['skills'])) {
         ));
 
         $json_returned = curl_exec($curl); // blank response
-        //$_POST['image'] = $json_returned;
+        $pms = json_decode($json_returned, true);
+        $url = $pms['data']['link'];
         curl_close($curl);
+
+        $_POST['image'] = $url;
 
         foreach ($_POST as $key => $value) {
             $_SESSION['post'][$key] = $value;
