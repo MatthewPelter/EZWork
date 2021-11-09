@@ -123,12 +123,12 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                                     </div>
 
                                     <div class="price">
-                                        <p>Pay: $</p>
+                                        <p>Pay: </p>
                                         <?php if ($r['rate'] > 0) { ?>
-                                            <span>$<?php echo $r['rate']; ?> / hr</span>
-                                            <span> - <?php echo "Hourly Rate" ?></span>
+                                            <span>$<?php echo $r['rate']; ?> / hr - </span>
+                                            <span><?php echo "Hourly Rate" ?></span>
                                         <?php } else if ($r['budget'] > 0) { ?>
-                                            <span>$ <?php echo $r['budget']; ?></span>
+                                            <span>$ <?php echo $r['budget']; ?> - </span>
                                             <span> - <?php echo "Project Budget" ?></span>
                                         <?php } else { ?>
                                             <p></p>

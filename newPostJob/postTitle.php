@@ -116,8 +116,11 @@ if (isset($_POST['length'])) {
 
 </body>
 
-<!--Nav bar script-->
-<script>
+<!--Script for the search bar and datalist-->
+<script src="../SkillsContainer/searchProfile.js"></script>
+<!--nav bar script -->
+<script type="text/javascript">
+
     var job = document.querySelector('.jobCard');
     var talent = document.querySelector('.talentCard');
     var project = document.querySelector('.projectCard');
@@ -189,9 +192,9 @@ if (isset($_POST['length'])) {
             session.style.display = 'none';
         }
     }
-</script>
-<!--Toggle the nav burger button-->
-<script>
+
+    //Toggle the nav burger button and mobile nav bar js
+
     const navIcon = document.getElementById("nav-burger");
     const profileMobileNav = document.querySelector(".profile-mobile-nav");
 
@@ -203,6 +206,43 @@ if (isset($_POST['length'])) {
         } else {
             profileMobileNav.style.display = 'none';
             searchIcon.style.opacity = '1';
+        }
+    }
+
+    const sortDownBtn = document.getElementById('jobArrow');
+    async function toggleJobCard() {
+        var mobileJobCard = document.querySelector(".mobileJobCard");
+        if (mobileJobCard.style.display === "none") {
+            sortDownBtn.style.transform = "rotate(180deg)";
+            mobileJobCard.style.display = "inline-block";
+        } else {
+            mobileJobCard.style.display = "none";
+            sortDownBtn.style.transform = "rotate(360deg)";
+        }
+    }
+
+
+    const sortDownBtn2 = document.getElementById('freelanceArrow');
+    async function toggleFreelanceCard() {
+        var mobileFreelanceCard = document.querySelector(".mobileFreelanceCard");
+        if (mobileFreelanceCard.style.display === "none") {
+            sortDownBtn2.style.transform = "rotate(180deg)";
+            mobileFreelanceCard.style.display = "inline-block";
+        } else {
+            mobileFreelanceCard.style.display = "none";
+            sortDownBtn2.style.transform = "rotate(360deg)";
+        }
+    }
+
+    const sortDownBtn3 = document.getElementById('projectsArrow');
+    async function toggleProjectsCard() {
+        var mobileProjectsCard = document.querySelector(".mobileProjectsCard");
+        if (mobileProjectsCard.style.display === "none") {
+            sortDownBtn3.style.transform = "rotate(180deg)";
+            mobileProjectsCard.style.display = "inline-block";
+        } else {
+            mobileProjectsCard.style.display = "none";
+            sortDownBtn3.style.transform = "rotate(360deg)";
         }
     }
 </script>
