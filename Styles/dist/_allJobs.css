@@ -381,7 +381,7 @@
     align-items: center;
   }
   .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .card1 .postedOn {
-    width: 40%;
+    width: 45%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -395,7 +395,7 @@
     font-size: 0.9rem;
   }
   .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .card1 .postedBy {
-    width: 60%;
+    width: 55%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -418,7 +418,7 @@
     align-items: center;
   }
   .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .card2 .location {
-    width: 30%;
+    width: 40%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -432,7 +432,7 @@
     font-size: 0.9rem;
   }
   .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .card2 .price {
-    width: 70%;
+    width: 60%;
     display: flex;
     flex-direction: row;
     align-items: center;
