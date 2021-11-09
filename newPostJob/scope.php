@@ -14,29 +14,33 @@ if (isset($_POST['skills'])) {
         header("location: postSkill.php"); // Redirecting to second page. 
     } else {
         // Fetching all values posted from second page and storing it in variable.
-        $client_id = "9f482e3edae002b";
-        $image = $_FILES['image']['tmp_name'];
-        $file = file_get_contents($image);
-        $url = 'https://api.imgur.com/3/image.json';
-        $headers = array("Authorization: Client-ID $client_id");
-        $pvars  = array('image' => base64_encode($file));
+        if (!empty($_POST['image'])) {
+            $client_id = "9f482e3edae002b";
+            $image = $_FILES['image']['tmp_name'];
+            $file = file_get_contents($image);
+            $url = 'https://api.imgur.com/3/image.json';
+            $headers = array("Authorization: Client-ID $client_id");
+            $pvars  = array('image' => base64_encode($file));
 
-        $curl = curl_init();
-        curl_setopt_array($curl, array(
-            CURLOPT_URL => $url,
-            CURLOPT_TIMEOUT => 30,
-            CURLOPT_POST => 1,
-            CURLOPT_RETURNTRANSFER => 1,
-            CURLOPT_HTTPHEADER => $headers,
-            CURLOPT_POSTFIELDS => $pvars
-        ));
+            $curl = curl_init();
+            curl_setopt_array($curl, array(
+                CURLOPT_URL => $url,
+                CURLOPT_TIMEOUT => 30,
+                CURLOPT_POST => 1,
+                CURLOPT_RETURNTRANSFER => 1,
+                CURLOPT_HTTPHEADER => $headers,
+                CURLOPT_POSTFIELDS => $pvars
+            ));
 
-        $json_returned = curl_exec($curl); // blank response
-        $pms = json_decode($json_returned, true);
-        $url = $pms['data']['link'];
-        curl_close($curl);
+            $json_returned = curl_exec($curl); // blank response
+            $pms = json_decode($json_returned, true);
+            $url = $pms['data']['link'];
+            curl_close($curl);
 
-        $_POST['image'] = $url;
+            $_POST['image'] = $url;
+        } else {
+            $_POST['image'] = NULL;
+        }
 
         foreach ($_POST as $key => $value) {
             $_SESSION['post'][$key] = $value;
