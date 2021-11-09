@@ -41,6 +41,7 @@ $avatarFetch = mysqli_fetch_assoc($avatarResult);
     </div>
     <div class="mobileFreelanceCard">
         <ul>
+            <a href="./newPostJob/jobs.php"></a>
             <a href="./index">
                 <li>Discover</li>
             </a>
@@ -49,6 +50,9 @@ $avatarFetch = mysqli_fetch_assoc($avatarResult);
             </a>
             <a href="#/">
                 <li>Freelance History</li>
+            </a>
+            <a href="./Profile/register.php">
+                <li>Become Freelancer</li>
             </a>
         </ul>
     </div>
@@ -151,6 +155,9 @@ $avatarFetch = mysqli_fetch_assoc($avatarResult);
                     </div>
                     <div class="card card4">
                         <h4>Freelance History</h4>
+                    </div>
+                    <div class="card card4" onclick="location.href='./Profile/register.php'">
+                        <h4>Become Freelancer</h4>
                     </div>
                 </div>
             </div>
