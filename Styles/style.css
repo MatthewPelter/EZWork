@@ -21018,8 +21018,8 @@ li {
         -ms-flex-align: center;
             align-items: center;
   }
-  .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .card1 .postedOn, .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .card1 .postedBy {
-    width: 50%;
+  .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .card1 .postedOn {
+    width: 40%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -21031,13 +21031,37 @@ li {
         -ms-flex-align: center;
             align-items: center;
   }
-  .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .card1 .postedOn p, .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .card1 .postedBy p {
+  .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .card1 .postedOn p {
     color: #797979;
-    font-size: 1rem;
-    margin-right: .5rem;
+    font-size: .9rem;
+    margin-right: .2rem;
   }
-  .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .card1 .postedOn span, .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .card1 .postedBy span {
-    font-size: .95rem;
+  .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .card1 .postedOn span {
+    font-size: .9rem;
+  }
+  .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .card1 .postedBy {
+    width: 60%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .card1 .postedBy p {
+    color: #797979;
+    font-size: .9rem;
+    margin-right: .2rem;
+  }
+  .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .card1 .postedBy span {
+    font-size: .9rem;
+  }
+  .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .card1 .postedBy a {
+    margin-right: 0;
   }
   .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .card2 {
     width: 100%;
@@ -21052,8 +21076,8 @@ li {
         -ms-flex-align: center;
             align-items: center;
   }
-  .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .card2 .location, .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .card2 .price {
-    width: 50%;
+  .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .card2 .location {
+    width: 30%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -21065,13 +21089,34 @@ li {
         -ms-flex-align: center;
             align-items: center;
   }
-  .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .card2 .location p, .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .card2 .price p {
+  .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .card2 .location p {
     color: #797979;
-    font-size: 1rem;
+    font-size: .9rem;
     margin-right: .25rem;
   }
-  .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .card2 .location span, .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .card2 .price span {
-    font-size: .95rem;
+  .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .card2 .location span {
+    font-size: .9rem;
+  }
+  .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .card2 .price {
+    width: 70%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .card2 .price p {
+    color: #797979;
+    font-size: .9rem;
+    margin-right: .25rem;
+  }
+  .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .card2 .price span {
+    font-size: .9rem;
   }
   .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost:hover {
     background: whitesmoke;

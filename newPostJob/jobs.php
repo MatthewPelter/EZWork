@@ -105,7 +105,7 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                                     </div>
                                     <div class="postedBy">
                                         <p>Posted By:</p>
-                                        <img style="width: 16px; border-radius:50%;" src="<?php echo $unameFetched['avatar']; ?>" alt="Avatar">
+                                        <img style="width: 16px; border-radius:50%; margin-right: 0.5rem;" src="<?php echo $unameFetched['avatar']; ?>" alt="Avatar">
                                         <span>
                                             <?php if ($unameFetched['username'] != $_SESSION['userid']) {
                                                 echo "<a href='../Profile/userprofile.php?name=" . $unameFetched['username'] . "'>" . $unameFetched['username'] . "</a>";
@@ -129,7 +129,7 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                                             <span><?php echo "Hourly Rate" ?></span>
                                         <?php } else if ($r['budget'] > 0) { ?>
                                             <span>$ <?php echo $r['budget']; ?> - </span>
-                                            <span> - <?php echo "Project Budget" ?></span>
+                                            <span><?php echo "Project Budget" ?></span>
                                         <?php } else { ?>
                                             <p></p>
                                             <span> <?php echo "No budget or pay rate set yet..."; ?></span>
