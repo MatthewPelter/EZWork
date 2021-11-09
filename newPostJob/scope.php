@@ -39,7 +39,7 @@ if (isset($_POST['skills'])) {
             $_POST['image'] = $url;
         } else {
             echo "<h2>There's a Problem</h2>";
-            echo $pms['data']['error'];
+            die($pms['data']['error']);
         }
 
         foreach ($_POST as $key => $value) {
