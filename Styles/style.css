@@ -4930,7 +4930,7 @@ section .container .login .login-container button:hover {
 .talentCardContainer .talentCard::after {
   content: "";
   position: absolute;
-  top: -26%;
+  top: -20%;
   left: 6%;
   border-width: 0.8rem;
   border-style: solid;
