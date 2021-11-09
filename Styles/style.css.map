@@ -15,7 +15,7 @@
         "_message.scss",
         "_registerFreelancer.scss",
         "_job.scss",
-        "_jobs.scss"
+        "_allJobs.scss"
     ],
     "names": [],
     "file": "style.css"
