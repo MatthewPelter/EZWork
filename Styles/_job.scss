@@ -166,6 +166,10 @@ $darktext: rgb(121, 121, 121);
                     color: $darktext;
                 }
                 .image{
+                    display: flex;
+                    flex-direction: row;
+                    align-items:center;
+                    justify-content: flex-start;
                     width: 70%;
                     height: 15rem;
                     margin: 1rem 0rem;
