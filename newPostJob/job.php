@@ -139,9 +139,13 @@ if (mysqli_num_rows($jobResult) > 0) {
                 <div class="imageCard">
                     <h3><i class="fa fa-paperclip" aria-hidden="true"></i>Attached Image</h3>
                     <div class="image">
-                        <img src="<?php echo $r['image']; ?>" alt="">
+                        <?php if ($r['image'] != NULL) { ?>
+                            <img src="<?php echo $r['image']; ?>" alt="">
+                        <?php } else { ?>
+                            <span>None Uploaded</span>
+                        <?php } ?>
                     </div>
-                    
+
                 </div>
             </div>
 
