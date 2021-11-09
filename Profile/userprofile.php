@@ -517,11 +517,11 @@ if (mysqli_num_rows($result) > 0) {
 
                             <?php
                             $userid = $row['id'];
-                            $getJobs = mysqli_query($conn, "SELECT COUNT(*) FROM jobs WHERE user_id = '$userid'");
-                            $fetchJobCount = mysqli_fetch_row($getJobs);
+                            $getJobs = mysqli_query($conn, "SELECT COUNT(*) AS jobCount FROM jobs WHERE user_id = '$userid'");
+                            $fetchJobCount = mysqli_fetch_assoc($getJobs);
                             ?>
                             <div class="profile-card-inf__item">
-                                <div class="profile-card-inf__title"><?php echo $fetchJobCount; ?></div>
+                                <div class="profile-card-inf__title"><?php echo $fetchJobCount['jobCount']; ?></div>
                                 <div class="profile-card-inf__txt">Jobs Requested</div>
                             </div>
 
