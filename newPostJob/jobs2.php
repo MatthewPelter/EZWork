@@ -66,39 +66,82 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                     <div class="JobsHeader">
                         <h3>All Jobs</h3>
                     </div>
+                    <?php
+                    if (mysqli_num_rows($jobsQuery) > 0) {
+                        while ($r = mysqli_fetch_assoc($jobsQuery)) {
+                            $uid = $r['user_id'];
+                            $unameSQL = "SELECT username, avatar FROM clients WHERE id='$uid'";
+                            $unameResult = mysqli_query($conn, $unameSQL);
+                            $unameFetched = mysqli_fetch_assoc($unameResult);
+                    ?>
 
                     <div class="jobPost">
                         <div class="job-title">
-                            <a href="#/">Ezwork</a>
+                            <a href="job.php?id=<?php echo $r['id']; ?>"><?php echo $r['title']; ?></a>
                         </div>
                         <div class="status">
                             <p>Status:</p>
-                            <span>Open</span>
+                            <span>
+                                <?php if ($r['status'] == 0) { ?>
+                                    <green><?php echo "Open"; ?></green>
+                                <?php } else { ?>
+                                    <red><?php echo "Closed"; ?></red>
+                                <?php } ?>
+                            </span>
                         </div>
                         <div class="card1">
                             <div class="postedOn">
                                 <p>Posted on:</p>
-                                <span>12/18/2021</span>
+                                <span>
+                                    <?php echo $r['datePosted']; ?>
+                                </span>
                             </div>
                             <div class="postedBy">
                                 <p>Posted By:</p>
-                                <span>Leo</span>
+                                <img style="width: 16px; border-radius:50%;" src="<?php echo $unameFetched['avatar']; ?>" alt="Avatar">
+                                <span>
+                                    <?php if ($unameFetched['username'] != $_SESSION['userid']) {
+                                        echo "<a href='../Profile/userprofile.php?name=" . $unameFetched['username'] . "'>" . $unameFetched['username'] . "</a>";
+                                    } else {
+                                        echo $unameFetched['username'];
+                                    }  ?>
+                                </span>
                             </div>
                         </div>
 
                         <div class="card2">
                             <div class="location">
                                 <p>Location: </p>
-                                <span>Worldwide</span>
+                                <span> <?php echo $r['location']; ?></span>
                             </div>
                             
                             <div class="price">
-                                <p>Pay: $</p>
-                                <span>500,000</span>
+                                <?php if ($r['rate'] > 0) { ?>
+                                    <p>$<?php echo $r['rate']; ?> / hr</p>
+                                    <span><?php echo "Hourly Rate" ?></span>
+                                <?php } else if ($r['budget'] > 0) { ?>
+                                    <p>$ <?php echo $r['budget']; ?></p>
+                                    <span><?php echo "Project Budget" ?></span>
+                                <?php } else { ?>
+                                    <p></p>
+                                    <span> <?php echo "No budget or pay rate set yet..."; ?></span>
+                                <?php } ?>
                             </div>
                         </div>
 
                     </div>
+
+                    <?php
+                }
+            } else { ?>
+                <div class="postedJob">
+                    <div class="jobTitle">
+                        <h4 id="jobTitle">There are no jobs. :(</h4>
+                        <i class="fa fa-ellipsis-v" id="jobGodMode" aria-hidden="true"></i>
+                    </div>
+                </div>
+            <?php }
+            ?>
 
                     <div class="JobsFooter">
                         <p>SPACER</p>
