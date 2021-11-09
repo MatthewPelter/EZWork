@@ -18,7 +18,7 @@ if (isset($_POST['skills'])) {
         $img = $_FILES['image'];
         $filename = $img['tmp_name'];
         $client_id = "9f482e3edae002b";
-        // $handle = fopen($filename, "r");
+        $handle = fopen($filename, "r");
         // $data = fread($handle, filesize($filename));
         // $pvars   = array('image' => base64_encode($data));
         // $timeout = 30;
