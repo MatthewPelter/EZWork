@@ -132,7 +132,6 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
         </datalist>
 </body>
 <script src="../SkillsContainer/searchProfile.js"></script>
-<script src="./app.js"></script>
 <script>
     var job = document.querySelector('.jobCard');
     var talent = document.querySelector('.talentCard');
