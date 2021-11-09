@@ -1,3 +1,25 @@
+<?php
+session_start(); // Session starts here.
+require_once('../classes/DB.php');
+
+// Check if user is logged in. If not send them to the log in.
+if (!isset($_SESSION['user_id'])) {
+    header('Location: ../login/index');
+    echo "NOT LOGGED IN";
+} else {
+    $user_id = $_SESSION['user_id'];
+    $sql = "SELECT * FROM clients WHERE id = '$user_id' limit 1";
+    $result = mysqli_query($conn, $sql);
+    if (mysqli_num_rows($result) == 0) {
+        header('Location: ../login/index');
+    }
+}
+
+$jobsSQL = "SELECT * FROM jobs ORDER BY id DESC";
+$jobsQuery = mysqli_query($conn, $jobsSQL);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
