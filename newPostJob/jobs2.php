@@ -10,8 +10,10 @@ if (!isset($_SESSION['user_id'])) {
     $user_id = $_SESSION['user_id'];
     $sql = "SELECT * FROM clients WHERE id = '$user_id' limit 1";
     $result = mysqli_query($conn, $sql);
+    $r = mysqli_fetch_assoc($result);
     if (mysqli_num_rows($result) == 0) {
         header('Location: ../login/index');
+        die();
     }
 }
 
@@ -156,7 +158,7 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
             <div class="myProfile">
 
                 <div class="header">
-                    <img src="<?php echo $unameFetched['avatar']; ?>" alt="Avatar">
+                    <img src="<?php echo $r['avatar']; ?>" alt="Avatar">
                     <h4>My Profile</h4>
                 </div>
 
