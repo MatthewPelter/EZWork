@@ -2,7 +2,6 @@ $color1: #0a345e;
 $lightColor: #054e97;
 $darktext: rgb(121, 121, 121);
 .all-jobs-container{
-    margin-top: 4.5rem;
     width: 100%;
     background: whitesmoke;
     padding: 2.5rem 6rem;
@@ -35,6 +34,9 @@ $darktext: rgb(121, 121, 121);
                 border: 1px solid lightgrey;
                 border-radius: 8px;
                 #search{
+                    -moz-appearance: none;
+                    -webkit-appearance: none;
+                    appearance: none;
                     height: 100%;
                     width: 80%;
                     border: none;
@@ -46,6 +48,9 @@ $darktext: rgb(121, 121, 121);
                     outline: none;
                 }
                 #find{
+                    -moz-appearance: none;
+                    -webkit-appearance: none;
+                    appearance: none;
                     height: 100%;
                     width: 20%;
                     border: none;
@@ -120,7 +125,7 @@ $darktext: rgb(121, 121, 121);
                         width: 100%;
                         a{
                             text-decoration: none;
-                            font-size: 1.8rem;
+                            font-size: 1.5rem;
                             font-weight: bolder;
                             color: $lightColor;
 
@@ -257,5 +262,263 @@ $darktext: rgb(121, 121, 121);
             }
         }
 
+    }
+}
+
+@media screen and (max-width: 754px) {
+    .all-jobs-container{
+        width: 100%;
+        background: whitesmoke;
+        padding: 2.5rem 0rem;
+    
+        // Jobs Page Top Header CSS
+        .all-jobs-container-header{
+            width: 100%;
+            padding: 1rem 0rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            h4{
+                width: 100%;
+                text-align: center;
+                font-size: 2rem;
+            }
+    
+            .searchBar{
+                width: 80%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                #searchContainer{
+                    padding: 0;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    border: 1px solid lightgrey;
+                    border-radius: 8px;
+                    #search{
+                        -moz-appearance: none;
+                        -webkit-appearance: none;
+                        appearance: none;
+                        height: 100%;
+                        width: 80%;
+                        border: none;
+                        font-size: 1.1rem;
+                        color: black;
+                        padding: .5rem;
+                        border-top-left-radius: 8px;
+                        border-bottom-left-radius: 8px;
+                        outline: none;
+                    }
+                    #find{
+                        -moz-appearance: none;
+                        -webkit-appearance: none;
+                        appearance: none;
+                        height: 100%;
+                        width: 20%;
+                        border: none;
+                        cursor: pointer;
+                        font-size: 1rem;
+                        padding: .5rem 0rem;
+                        color: white;
+                        background: $lightColor;
+                        border-top-right-radius: 8px;
+                        border-bottom-right-radius: 8px;
+                        &:hover{
+                            background: $color1;
+                        }
+                    }
+                }
+            }
+    
+    
+        }
+    
+        //Under Jobs Page Top Header, jobs-container
+        .jobs-container{
+            display: flex;
+            flex-direction: column;
+    
+            .sortMenu{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                padding: 1rem;
+                h3{
+                    width: 100%;
+                    font-size: 1.5rem;
+                    text-decoration: underline;
+                }
+            }
+    
+            .allJobs{
+                width: 100%;
+    
+                .allJobsContainer{
+                    width: 100%;
+                    background: white;
+                    border-radius: 0;
+                    border: .7px solid lightgrey;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+    
+                    .JobsHeader{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        padding: 1rem 2rem;
+                        h3{
+                            font-size: 1.5rem;
+                        }
+                    }
+    
+                    .jobPost{
+                        width: 100%;
+                        padding: 1rem 2rem;
+                        border-top: .7px solid lightgrey;
+    
+                        .job-title{
+                            width: 100%;
+                            a{
+                                text-decoration: none;
+                                font-size: 1.5rem;
+                                font-weight: bolder;
+                                color: $lightColor;
+    
+                                &:hover{
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+    
+                        .status{
+                            width: 100%;
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            p{
+                                color: $darktext;
+                                font-size: 1rem;
+                                margin-right: .5rem;
+                            }
+                            span{
+                                font-size: 1rem;
+                                font-weight: bolder;
+                                color: lightgreen;
+                            }
+                        }
+    
+                        .card1{
+                            width: 100%;
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+    
+                            .postedOn,.postedBy{
+                                width: 50%;
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                p{
+                                    color: $darktext;
+                                    font-size: 1rem;
+                                    margin-right: .5rem;
+                                }
+                                span{
+                                    font-size: .95rem;
+                                }
+                            }
+                        }
+    
+                        .card2{
+                            width: 100%;
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+    
+                            .location,.price{
+                                width: 50%;
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                p{
+                                    color: $darktext;
+                                    font-size: 1rem;
+                                    margin-right: .25rem;
+                                }
+                                span{
+                                    font-size: .95rem;
+                                }
+                            }
+                        }
+                        cursor: pointer;
+                        &:hover{
+                            background: whitesmoke;
+                        }
+                    }
+    
+    
+                    .JobsFooter{
+                        display: none;
+                    }
+                }
+            }
+    
+            .myProfile{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                padding: 2rem;
+                align-items: center;
+                justify-content: center;
+    
+                .header{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    img{
+                        width: 2rem;
+                        height: 2rem;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                    h4{
+                        margin-left: 1rem;
+                        font-size: 1.8rem;
+                        color: black;
+                        text-decoration: underline;
+                    }
+    
+                }
+    
+                .view{
+                    margin: 0;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    color: $lightColor;
+                    font-size: .9rem;
+                    a{
+                        color: $lightColor;
+                        font-size: .9rem;
+                        margin-left: .5rem;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+    
+        }
     }
 }

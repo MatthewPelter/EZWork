@@ -373,7 +373,7 @@
 
 @media screen and (max-width: 754px) {
   .profile {
-    margin-top: 3.8rem;
+    margin-top: 0;
     width: 100%;
     background: whitesmoke;
     padding: 1rem;

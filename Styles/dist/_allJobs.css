@@ -1,5 +1,4 @@
 .all-jobs-container {
-  margin-top: 4.5rem;
   width: 100%;
   background: whitesmoke;
   padding: 2.5rem 6rem;
@@ -33,6 +32,9 @@
   border-radius: 8px;
 }
 .all-jobs-container .all-jobs-container-header .searchBar #searchContainer #search {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
   height: 100%;
   width: 80%;
   border: none;
@@ -44,6 +46,9 @@
   outline: none;
 }
 .all-jobs-container .all-jobs-container-header .searchBar #searchContainer #find {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
   height: 100%;
   width: 20%;
   border: none;
@@ -110,7 +115,7 @@
 }
 .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .job-title a {
   text-decoration: none;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: bolder;
   color: #054e97;
 }
@@ -228,4 +233,236 @@
 }
 .all-jobs-container .jobs-container .myProfile .view a:hover {
   text-decoration: underline;
+}
+
+@media screen and (max-width: 754px) {
+  .all-jobs-container {
+    width: 100%;
+    background: whitesmoke;
+    padding: 2.5rem 0rem;
+  }
+  .all-jobs-container .all-jobs-container-header {
+    width: 100%;
+    padding: 1rem 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .all-jobs-container .all-jobs-container-header h4 {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+  }
+  .all-jobs-container .all-jobs-container-header .searchBar {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .all-jobs-container .all-jobs-container-header .searchBar #searchContainer {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid lightgrey;
+    border-radius: 8px;
+  }
+  .all-jobs-container .all-jobs-container-header .searchBar #searchContainer #search {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 100%;
+    width: 80%;
+    border: none;
+    font-size: 1.1rem;
+    color: black;
+    padding: 0.5rem;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    outline: none;
+  }
+  .all-jobs-container .all-jobs-container-header .searchBar #searchContainer #find {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 100%;
+    width: 20%;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.5rem 0rem;
+    color: white;
+    background: #054e97;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  .all-jobs-container .all-jobs-container-header .searchBar #searchContainer #find:hover {
+    background: #0a345e;
+  }
+  .all-jobs-container .jobs-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .all-jobs-container .jobs-container .sortMenu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1rem;
+  }
+  .all-jobs-container .jobs-container .sortMenu h3 {
+    width: 100%;
+    font-size: 1.5rem;
+    text-decoration: underline;
+  }
+  .all-jobs-container .jobs-container .allJobs {
+    width: 100%;
+  }
+  .all-jobs-container .jobs-container .allJobs .allJobsContainer {
+    width: 100%;
+    background: white;
+    border-radius: 0;
+    border: 0.7px solid lightgrey;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .all-jobs-container .jobs-container .allJobs .allJobsContainer .JobsHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+  .all-jobs-container .jobs-container .allJobs .allJobsContainer .JobsHeader h3 {
+    font-size: 1.5rem;
+  }
+  .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost {
+    width: 100%;
+    padding: 1rem 2rem;
+    border-top: 0.7px solid lightgrey;
+    cursor: pointer;
+  }
+  .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .job-title {
+    width: 100%;
+  }
+  .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .job-title a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: #054e97;
+  }
+  .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .job-title a:hover {
+    text-decoration: underline;
+  }
+  .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .status {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .status p {
+    color: #797979;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+  }
+  .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .status span {
+    font-size: 1rem;
+    font-weight: bolder;
+    color: lightgreen;
+  }
+  .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .card1 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .card1 .postedOn, .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .card1 .postedBy {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .card1 .postedOn p, .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .card1 .postedBy p {
+    color: #797979;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+  }
+  .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .card1 .postedOn span, .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .card1 .postedBy span {
+    font-size: 0.95rem;
+  }
+  .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .card2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .card2 .location, .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .card2 .price {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .card2 .location p, .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .card2 .price p {
+    color: #797979;
+    font-size: 1rem;
+    margin-right: 0.25rem;
+  }
+  .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .card2 .location span, .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost .card2 .price span {
+    font-size: 0.95rem;
+  }
+  .all-jobs-container .jobs-container .allJobs .allJobsContainer .jobPost:hover {
+    background: whitesmoke;
+  }
+  .all-jobs-container .jobs-container .allJobs .allJobsContainer .JobsFooter {
+    display: none;
+  }
+  .all-jobs-container .jobs-container .myProfile {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .all-jobs-container .jobs-container .myProfile .header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .all-jobs-container .jobs-container .myProfile .header img {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .all-jobs-container .jobs-container .myProfile .header h4 {
+    margin-left: 1rem;
+    font-size: 1.8rem;
+    color: black;
+    text-decoration: underline;
+  }
+  .all-jobs-container .jobs-container .myProfile .view {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: #054e97;
+    font-size: 0.9rem;
+  }
+  .all-jobs-container .jobs-container .myProfile .view a {
+    color: #054e97;
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+  }
+  .all-jobs-container .jobs-container .myProfile .view a:hover {
+    text-decoration: underline;
+  }
 }
