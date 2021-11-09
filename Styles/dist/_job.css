@@ -98,6 +98,7 @@
   width: 50%;
 }
 .job .job-container .jobCard .budgetAndExperience .experience h4 {
+  text-decoration: underline;
   font-size: 1.2rem;
   color: #054e97;
 }
