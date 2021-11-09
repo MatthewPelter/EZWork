@@ -156,7 +156,7 @@
   margin: 1rem 0rem;
 }
 .job .job-container .jobCard .imageCard .image img {
-  border-radius: 5px;
+  border-radius: 10px;
   height: 100%;
   width: 100%;
   object-fit: contain;
