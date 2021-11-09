@@ -22,7 +22,7 @@ if (isset($_POST['skills'])) {
         $data = fread($handle, filesize($filename));
         $pvars   = array('image' => base64_encode($data));
         $timeout = 30;
-        $curl = curl_init();
+        // $curl = curl_init();
         // curl_setopt($curl, CURLOPT_URL, 'https://api.imgur.com/3/image/');
         // curl_setopt($curl, CURLOPT_TIMEOUT, $timeout);
         // curl_setopt($curl, CURLOPT_HTTPHEADER, array('Authorization: Client-ID ' . $client_id));
