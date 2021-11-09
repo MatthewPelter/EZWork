@@ -160,6 +160,7 @@ if (mysqli_num_rows($jobResult) > 0) {
                 ?>
                     <input type="button" onclick="deleteMenu()" id="deleteBtn" value="Delete Post">
 
+                    <span id="result"></span>
 
                     <div id="deleteMenu" style="display: none;">
                         <div class="deleteMenuContainer">
@@ -303,10 +304,8 @@ if (mysqli_num_rows($jobResult) > 0) {
     $('#noBtn').click(function() {
         $('#deleteMenu').css('display', 'none');
     });
-</script>
+    // <!--Toggle the nav burger button-->
 
-<!--Toggle the nav burger button-->
-<script>
     const navIcon = document.getElementById("nav-burger");
     const profileMobileNav = document.querySelector(".profile-mobile-nav");
 
@@ -320,8 +319,6 @@ if (mysqli_num_rows($jobResult) > 0) {
             searchIcon.style.opacity = '1';
         }
     }
-</script>
-<script>
     const sortDownBtn = document.getElementById('jobArrow');
 
     function toggleJobCard() {
@@ -334,9 +331,7 @@ if (mysqli_num_rows($jobResult) > 0) {
             sortDownBtn.style.transform = "rotate(360deg)";
         }
     }
-</script>
 
-<script>
     function copyToClipboard(link) {
         const el = document.createElement("textarea");
         el.value = link.innerText;
