@@ -14,7 +14,7 @@ if (isset($_POST['skills'])) {
         header("location: postSkill.php"); // Redirecting to second page. 
     } else {
         // Fetching all values posted from second page and storing it in variable.
-        if (!empty($_POST['image'])) {
+        if (!empty($_FILES['image'])) {
             $client_id = "9f482e3edae002b";
             $image = $_FILES['image']['tmp_name'];
             $file = file_get_contents($image);
