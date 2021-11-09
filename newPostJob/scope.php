@@ -18,10 +18,10 @@ if (isset($_POST['skills'])) {
         $img = $_FILES['image'];
         $filename = $img['tmp_name'];
         $client_id = "9f482e3edae002b";
-        $handle = fopen($filename, "r");
-        $data = fread($handle, filesize($filename));
-        $pvars   = array('image' => base64_encode($data));
-        $timeout = 30;
+        // $handle = fopen($filename, "r");
+        // $data = fread($handle, filesize($filename));
+        // $pvars   = array('image' => base64_encode($data));
+        // $timeout = 30;
         // $curl = curl_init();
         // curl_setopt($curl, CURLOPT_URL, 'https://api.imgur.com/3/image/');
         // curl_setopt($curl, CURLOPT_TIMEOUT, $timeout);
