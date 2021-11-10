@@ -282,9 +282,9 @@
     background: #dbdbdb;
   }
   .myJobs .myJobs-container .postedJob {
-    padding: 1.5rem;
+    padding: 1.5rem 0rem;
     width: 100%;
-    border-top: 0.7px solid lightgrey;
+    border-bottom: 0.7px solid lightgrey;
   }
   .myJobs .myJobs-container .postedJob .jobTitle {
     display: flex;

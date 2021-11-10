@@ -21624,9 +21624,9 @@ li {
     background: #dbdbdb;
   }
   .myJobs .myJobs-container .postedJob {
-    padding: 1.5rem;
+    padding: 1.5rem 0rem;
     width: 100%;
-    border-top: .7px solid lightgrey;
+    border-bottom: .7px solid lightgrey;
   }
   .myJobs .myJobs-container .postedJob .jobTitle {
     display: -webkit-box;

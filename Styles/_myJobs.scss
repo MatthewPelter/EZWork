@@ -309,9 +309,9 @@ $darktext: rgb(121, 121, 121);
         }
 
         .postedJob {
-            padding: 1.5rem;
+            padding: 1.5rem 0rem;
             width: 100%;
-            border-top: .7px solid lightgrey;
+            border-bottom: .7px solid lightgrey;
             .jobTitle {
               display: flex;
               flex-direction: row;
