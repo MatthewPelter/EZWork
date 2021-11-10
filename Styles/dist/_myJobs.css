@@ -1,5 +1,5 @@
 .myJobs {
-  margin-top: 4.5rem;
+  margin-top: 0;
   width: 100%;
   background: whitesmoke;
   padding: 2.5rem 10rem;
@@ -155,4 +155,165 @@
 }
 .myJobs .myJobs-container .spacer h3 {
   opacity: 0;
+}
+
+@media screen and (max-width: 754px) {
+  .myJobs {
+    width: 100%;
+    background: whitesmoke;
+    padding: 2.5rem 0rem;
+  }
+  .myJobs .myJobs-header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .myJobs .myJobs-header ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .myJobs .myJobs-header ul li {
+    margin: 0rem 0.1rem;
+    font-size: 0.9rem;
+    color: #797979;
+  }
+  .myJobs .myJobs-header ul li a {
+    text-decoration: none;
+    color: #054e97;
+  }
+  .myJobs .myJobs-header ul li a:hover {
+    text-decoration: underline;
+  }
+  .myJobs .myJobs-header button {
+    cursor: pointer;
+    border-radius: 12px;
+    border: none;
+    background: #054e97;
+    font-size: 0.9rem;
+    color: white;
+    font-weight: bolder;
+    padding: 0.6rem 1rem;
+    margin-left: 0.2rem;
+  }
+  .myJobs .myJobs-header button:hover {
+    transition: all 0.5s ease;
+    background: #0a345e;
+  }
+  .myJobs .myJobs-container {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0;
+    border: 0.8px solid lightgrey;
+    background-color: white;
+  }
+  .myJobs .myJobs-container .myJobs-container-header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 1rem;
+    border-bottom: 0.8px solid lightgrey;
+  }
+  .myJobs .myJobs-container .myJobs-container-header .searchBar {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .myJobs .myJobs-container .myJobs-container-header .searchBar #searchContainer {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid lightgrey;
+    border-radius: 8px;
+  }
+  .myJobs .myJobs-container .myJobs-container-header .searchBar #searchContainer #search {
+    height: 100%;
+    width: 80%;
+    border: none;
+    font-size: 1.1rem;
+    color: black;
+    padding: 0.5rem;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    outline: none;
+  }
+  .myJobs .myJobs-container .myJobs-container-header .searchBar #searchContainer #find {
+    height: 100%;
+    width: 20%;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.5rem 0rem;
+    color: white;
+    background: #054e97;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  .myJobs .myJobs-container .myJobs-container-header .searchBar #searchContainer #find:hover {
+    background: #0a345e;
+  }
+  .myJobs .myJobs-container .myJobs-container-header button {
+    cursor: pointer;
+    border-radius: 15px;
+    border: none;
+    background: #e9e9e9;
+    font-size: 1rem;
+    color: #0a345e;
+    font-weight: bolder;
+    padding: 0.6rem 1.5rem;
+    margin-right: 0.25rem;
+    border: 1px solid lightgrey;
+  }
+  .myJobs .myJobs-container .myJobs-container-header button i {
+    margin-right: 0.3rem;
+  }
+  .myJobs .myJobs-container .myJobs-container-header button:hover {
+    transition: all 0.2s ease;
+    background: #dbdbdb;
+  }
+  .myJobs .myJobs-container .postedJob {
+    padding: 1.5rem;
+    width: 100%;
+    border-top: 0.7px solid lightgrey;
+  }
+  .myJobs .myJobs-container .postedJob .jobTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .myJobs .myJobs-container .postedJob .jobTitle h4 a {
+    font-size: 1.2rem;
+    color: #0a345e;
+  }
+  .myJobs .myJobs-container .postedJob .jobTitle h4 a:hover {
+    text-decoration: underline;
+  }
+  .myJobs .myJobs-container .postedJob p {
+    color: #797979;
+    font-size: 1rem;
+  }
+  .myJobs .myJobs-container .postedJob #status,
+.myJobs .myJobs-container .postedJob #date,
+.myJobs .myJobs-container .postedJob #postedBy {
+    color: #054e97;
+  }
+  .myJobs .myJobs-container .spacer {
+    width: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .myJobs .myJobs-container .spacer h3 {
+    opacity: 0;
+  }
 }
