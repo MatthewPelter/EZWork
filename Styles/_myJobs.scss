@@ -151,51 +151,6 @@ $darktext: rgb(121, 121, 121);
                 }
       
               }
-              i {
-                opacity: 0;
-                font-size: 0.8rem;
-                color: $darktext;
-                border-radius: 50%;
-                border: 0.8px solid $darktext;
-                padding: 0.4rem 0.6rem;
-                pointer-events: none;
-                &:hover {
-                  background: lightgray;
-                }
-              }
-              .jobEdit {
-                display: none;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                background: $lightColor;
-                width: 20%;
-                padding: 0.5rem;
-                border: $darktext solid 1px;
-                border-radius: 8px;
-                button {
-                  width: 40%;
-                  cursor: pointer;
-                  background: none;
-                  color: $darktext;
-                  font-size: 1rem;
-                  border: none;
-                  padding: 0.5rem;
-                }
-                .exit {
-                  i {
-                    font-size: 1.1rem;
-                    color: black;
-                    border: none;
-                    padding: 0;
-                    background: none;
-                  }
-                  width: 100%;
-                  display: flex;
-                  flex-direction: row;
-                  justify-content: flex-end;
-                }
-              }
             }
             p {
               color: $darktext;
