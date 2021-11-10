@@ -308,33 +308,7 @@ $darktext: rgb(121, 121, 121);
             }
         }
 
-        .result {
-          width: 100%;
-          padding: 1.5rem 1rem;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          #quick-link-job2 {
-            cursor: pointer;
-            border-radius: 15px;
-            border: none;
-            background: $lightColor;
-            font-size: 1.1rem;
-            color: white;
-            max-width: fit-content;
-            font-weight: bolder;
-            padding: 0.6rem 1.5rem;
-            margin-left: 0.25rem;
-            &:hover {
-              transition: all 0.5s ease;
-              background: $color1;
-            }
-          }
-          span {
-            margin-top: 1rem;
-          }
-        }
+        
 
         .postedJob {
             padding: 1.5rem 0rem;

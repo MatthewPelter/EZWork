@@ -57,8 +57,7 @@ $userID = $_SESSION['user_id'];
                 <button><i class="fa fa-sliders" aria-hidden="true"></i>Filter</button>
             </div>
 
-            <div class="card result">
-                <button id="quick-link-job2" onclick="location.href='../newPostJob/length.php'">Post A Job</button>
+            <div class="postedJob">
                 <span>
                     <?php
                     $jobSQL = "SELECT * FROM jobs WHERE user_id='$userID' ORDER BY id DESC";
@@ -68,9 +67,6 @@ $userID = $_SESSION['user_id'];
                     }
                     ?>
                 </span>
-            </div>
-
-            <div class="postedJob"> 
                 <?php
                 if (mysqli_num_rows($jobResult) > 0) {
                     while ($r = mysqli_fetch_assoc($jobResult)) {
