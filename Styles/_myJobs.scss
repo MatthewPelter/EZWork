@@ -311,6 +311,7 @@ $darktext: rgb(121, 121, 121);
         
 
         .postedJob {
+          margin: 0;
             padding: 1.5rem 0rem;
             width: 100%;
             border-bottom: .7px solid lightgrey;
@@ -344,6 +345,7 @@ $darktext: rgb(121, 121, 121);
         .spacer{
             width: 100%;
             h3{
+              font-size: .5rem;
                 opacity: 0;
             }
             border-bottom-left-radius: 10px;

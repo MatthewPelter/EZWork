@@ -21624,6 +21624,7 @@ li {
     background: #dbdbdb;
   }
   .myJobs .myJobs-container .postedJob {
+    margin: 0;
     padding: 1.5rem 0rem;
     width: 100%;
     border-bottom: .7px solid lightgrey;
@@ -21665,6 +21666,7 @@ li {
     border-bottom-right-radius: 10px;
   }
   .myJobs .myJobs-container .spacer h3 {
+    font-size: .5rem;
     opacity: 0;
   }
 }

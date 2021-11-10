@@ -282,6 +282,7 @@
     background: #dbdbdb;
   }
   .myJobs .myJobs-container .postedJob {
+    margin: 0;
     padding: 1.5rem 0rem;
     width: 100%;
     border-bottom: 0.7px solid lightgrey;
@@ -314,6 +315,7 @@
     border-bottom-right-radius: 10px;
   }
   .myJobs .myJobs-container .spacer h3 {
+    font-size: 0.5rem;
     opacity: 0;
   }
 }
