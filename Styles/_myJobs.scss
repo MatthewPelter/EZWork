@@ -1,0 +1,220 @@
+$color1: #0a345e;
+$lightColor: #054e97;
+$darktext: rgb(121, 121, 121);
+.myJobs{
+    margin-top: 4.5rem;
+    width: 100%;
+    background: whitesmoke;
+    padding: 2.5rem 10rem;
+   
+    .myJobs-header{
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: space-between;
+     
+     ul{
+         display: flex;
+         flex-direction: row;
+         align-items: center;
+         
+         li{
+             margin: 0rem .2rem;
+             font-size: .9rem;
+             color: $darktext;
+             a{
+                 text-decoration: none;
+                 color: $lightColor;
+                 &:hover{
+                     text-decoration: underline;
+                 }
+             }
+         }
+     }
+
+     button{
+        cursor: pointer;
+        border-radius: 15px;
+        border: none;
+        background: $lightColor;
+        font-size: 1rem;
+        color: white;
+        font-weight: bolder;
+        padding: 0.6rem 1.5rem;
+        margin-left: 0.25rem;
+        &:hover {
+          transition: all 0.5s ease;
+          background: $color1;
+        }
+     }
+    }
+
+    .myJobs-container{
+        margin-top: 2rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        border: .8px solid lightgrey;
+        background-color: white;
+
+        .myJobs-container-header{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.5rem 2rem;
+            border-bottom: .8px solid lightgrey;
+
+
+            .searchBar{
+                width: 60%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                #searchContainer{
+                    padding: 0;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    border: 1px solid lightgrey;
+                    border-radius: 8px;
+                    #search{
+                        height: 100%;
+                        width: 80%;
+                        border: none;
+                        font-size: 1.1rem;
+                        color: black;
+                        padding: .5rem;
+                        border-top-left-radius: 8px;
+                        border-bottom-left-radius: 8px;
+                        outline: none;
+                    }
+                    #find{
+                        height: 100%;
+                        width: 20%;
+                        border: none;
+                        cursor: pointer;
+                        font-size: 1rem;
+                        padding: .5rem 0rem;
+                        color: white;
+                        background: $lightColor;
+                        border-top-right-radius: 8px;
+                        border-bottom-right-radius: 8px;
+                        &:hover{
+                            background: $color1;
+                        }
+                    }
+                }
+            }
+
+            button{
+                cursor: pointer;
+                border-radius: 15px;
+                border: none;
+                background: rgb(233, 233, 233);
+                font-size: 1rem;
+                color: $color1;
+                font-weight: bolder;
+                padding: 0.6rem 1.5rem;
+                margin-right: 0.25rem;
+                border: 1px solid lightgrey;
+                i{
+                    margin-right: .3rem;
+                }
+                &:hover {
+                  transition: all 0.2s ease;
+                  background: rgb(219, 219, 219);
+                }
+            }
+        }
+
+        .postedJob {
+            padding: 1.5rem;
+            width: 100%;
+            border-top: .7px solid lightgrey;
+            .jobTitle {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: space-between;
+              h4 {
+                a{
+                  font-size: 1.2rem;
+                  color: $color1;
+                  &:hover{
+                    text-decoration: underline;
+                  }
+                }
+      
+              }
+              i {
+                opacity: 0;
+                font-size: 0.8rem;
+                color: $darktext;
+                border-radius: 50%;
+                border: 0.8px solid $darktext;
+                padding: 0.4rem 0.6rem;
+                pointer-events: none;
+                &:hover {
+                  background: lightgray;
+                }
+              }
+              .jobEdit {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background: $lightColor;
+                width: 20%;
+                padding: 0.5rem;
+                border: $darktext solid 1px;
+                border-radius: 8px;
+                button {
+                  width: 40%;
+                  cursor: pointer;
+                  background: none;
+                  color: $darktext;
+                  font-size: 1rem;
+                  border: none;
+                  padding: 0.5rem;
+                }
+                .exit {
+                  i {
+                    font-size: 1.1rem;
+                    color: black;
+                    border: none;
+                    padding: 0;
+                    background: none;
+                  }
+                  width: 100%;
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: flex-end;
+                }
+              }
+            }
+            p {
+              color: $darktext;
+              font-size: 1rem;
+            }
+            #status,
+            #date,
+            #postedBy {
+              color: $lightColor;
+            }
+          }
+
+        .spacer{
+            width: 100%;
+            h3{
+                opacity: 0;
+            }
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+    }
+}
