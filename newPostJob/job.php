@@ -259,5 +259,7 @@ if (mysqli_num_rows($jobResult) > 0) {
         status.style.color = "red";
     }
 </script>
+<!--Script for the search bar and datalist-->
+<script src="../SkillsContainer/searchProfile.js"></script>
 
 </html>

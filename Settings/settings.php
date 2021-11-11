@@ -209,6 +209,8 @@ $row = mysqli_fetch_assoc($result);
     <datalist id="allskills"></datalist>
 </body>
 <script src="./settings.js"></script>
+<!--Script for the search bar and datalist-->
+<script src="../SkillsContainer/searchProfile.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
     // Change password handler

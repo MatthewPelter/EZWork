@@ -115,7 +115,8 @@ if (isset($_POST['length'])) {
     <datalist id="allskills"></datalist>
 
 </body>
-
+<!--Script for the search bar and datalist-->
+<script src="../SkillsContainer/searchProfile.js"></script>
 </html>
 <?php
 /* We can use this for the registration to improve input validation

@@ -114,6 +114,8 @@ if (isset($_POST['location'])) {
     <datalist id="allskills"></datalist>
 
 </body>
+<!--Script for the search bar and datalist-->
+<script src="../SkillsContainer/searchProfile.js"></script>
 
 <script type="text/javascript">
     var ratebtn = document.getElementById('rate');

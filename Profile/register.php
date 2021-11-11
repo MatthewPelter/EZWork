@@ -668,6 +668,9 @@ $row = mysqli_fetch_assoc($result);
     };
 </script>
 
+<!--Script for the search bar and datalist-->
+<script src="../SkillsContainer/searchProfile.js"></script>
+
 <script src="./register.js"></script>
 
 </html>

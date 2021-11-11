@@ -238,11 +238,8 @@ if (isset($_POST['submit'])) {
     elem.scrollTop = elem.scrollHeight;
 </script>
 
-
-<!--nav bar script -->
-<script>
-
-</script>
+<!--Script for the search bar and datalist-->
+<script src="../SkillsContainer/searchProfile.js"></script>
 <!--Toggle the nav burger button and mobile nav bar js-->
 <script>
     const navIcon2 = document.getElementById("nav-burger");

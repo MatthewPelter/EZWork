@@ -163,5 +163,6 @@ $userID = $userrow['id'];
 
     </datalist>
 </body>
-
+<!--Script for the search bar and datalist-->
+<script src="../SkillsContainer/searchProfile.js"></script>
 </html>

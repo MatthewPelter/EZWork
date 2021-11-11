@@ -158,5 +158,6 @@ if (isset($_POST['skills'])) {
     <datalist id="allskills"></datalist>
 
 </body>
-
+<!--Script for the search bar and datalist-->
+<script src="../SkillsContainer/searchProfile.js"></script>
 </html>

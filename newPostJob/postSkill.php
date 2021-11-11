@@ -120,4 +120,7 @@ if (isset($_POST['title'])) {
     };
 </script>
 
+<!--Script for the search bar and datalist-->
+<script src="../SkillsContainer/searchProfile.js"></script>
+
 </html>
