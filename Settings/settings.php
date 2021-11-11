@@ -209,7 +209,6 @@ $row = mysqli_fetch_assoc($result);
     <datalist id="allskills"></datalist>
 </body>
 <script src="./settings.js"></script>
-<script src="../SkillsContainer/searchProfile.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
     // Change password handler
@@ -275,91 +274,6 @@ $row = mysqli_fetch_assoc($result);
         image.src = URL.createObjectURL(event.target.files[0]);
     };
 
-    var job = document.querySelector('.jobCard');
-    var talent = document.querySelector('.talentCard');
-    var project = document.querySelector('.projectCard');
-    var help = document.querySelector('.helpCard');
-    var session = document.querySelector('.sessionCard');
-
-    function toggleJob() {
-        var job = document.querySelector('.jobCard');
-        if (job.style.display === 'none') {
-            job.style.display = 'inline-block';
-            talent.style.display = 'none';
-            project.style.display = 'none';
-            help.style.display = 'none';
-            session.style.display = 'none';
-        } else {
-            job.style.display = 'none';
-
-        }
-    }
-
-    function toggleTalent() {
-        var talent = document.querySelector('.talentCard');
-        if (talent.style.display === 'none') {
-            talent.style.display = 'inline-block';
-            job.style.display = 'none';
-            project.style.display = 'none';
-            help.style.display = 'none';
-            session.style.display = 'none';
-        } else {
-            talent.style.display = 'none';
-        }
-    }
-
-    function toggleProject() {
-        var project = document.querySelector('.projectCard');
-        if (project.style.display === 'none') {
-            project.style.display = 'inline-block';
-            talent.style.display = 'none';
-            job.style.display = 'none';
-            help.style.display = 'none';
-            session.style.display = 'none';
-        } else {
-            project.style.display = 'none';
-        }
-    }
-
-    function toggleHelp() {
-        var help = document.querySelector('.helpCard');
-        if (help.style.display === 'none') {
-            help.style.display = 'inline-block';
-            talent.style.display = 'none';
-            project.style.display = 'none';
-            job.style.display = 'none';
-            session.style.display = 'none';
-        } else {
-            help.style.display = 'none';
-        }
-    }
-
-    function toggleSession() {
-
-        if (session.style.display === 'none') {
-            session.style.display = 'inline-block';
-            talent.style.display = 'none';
-            project.style.display = 'none';
-            help.style.display = 'none';
-            job.style.display = 'none';
-        } else {
-            session.style.display = 'none';
-        }
-    }
-
-    const navIcon = document.getElementById("nav-burger");
-    const profileMobileNav = document.querySelector(".profile-mobile-nav");
-
-    function myFunction(x) {
-        x.classList.toggle("change");
-        if (x.classList.contains('change')) {
-            profileMobileNav.style.display = "inline-block";
-            searchIcon.style.opacity = '0';
-        } else {
-            profileMobileNav.style.display = 'none';
-            searchIcon.style.opacity = '1';
-        }
-    }
 
     function openCard() {
         document.getElementById("myOverlay").style.display = "block";

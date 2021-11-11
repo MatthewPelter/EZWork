@@ -239,137 +239,29 @@ if (isset($_POST['submit'])) {
 </script>
 
 
-<script src="../SkillsContainer/searchProfile.js"></script>
-
 <!--nav bar script -->
 <script>
-    var job = document.querySelector('.jobCard');
-    var talent = document.querySelector('.talentCard');
-    var project = document.querySelector('.projectCard');
-    var help = document.querySelector('.helpCard');
-    var session = document.querySelector('.sessionCard');
 
-    function toggleJob() {
-        var job = document.querySelector('.jobCard');
-        if (job.style.display === 'none') {
-            job.style.display = 'inline-block';
-            talent.style.display = 'none';
-            project.style.display = 'none';
-            help.style.display = 'none';
-            session.style.display = 'none';
-        } else {
-            job.style.display = 'none';
-
-        }
-    }
-
-    function toggleTalent() {
-        var talent = document.querySelector('.talentCard');
-        if (talent.style.display === 'none') {
-            talent.style.display = 'inline-block';
-            job.style.display = 'none';
-            project.style.display = 'none';
-            help.style.display = 'none';
-            session.style.display = 'none';
-        } else {
-            talent.style.display = 'none';
-        }
-    }
-
-    function toggleProject() {
-        var project = document.querySelector('.projectCard');
-        if (project.style.display === 'none') {
-            project.style.display = 'inline-block';
-            talent.style.display = 'none';
-            job.style.display = 'none';
-            help.style.display = 'none';
-            session.style.display = 'none';
-        } else {
-            project.style.display = 'none';
-        }
-    }
-
-    function toggleHelp() {
-        var help = document.querySelector('.helpCard');
-        if (help.style.display === 'none') {
-            help.style.display = 'inline-block';
-            talent.style.display = 'none';
-            project.style.display = 'none';
-            job.style.display = 'none';
-            session.style.display = 'none';
-        } else {
-            help.style.display = 'none';
-        }
-    }
-
-    function toggleSession() {
-
-        if (session.style.display === 'none') {
-            session.style.display = 'inline-block';
-            talent.style.display = 'none';
-            project.style.display = 'none';
-            help.style.display = 'none';
-            job.style.display = 'none';
-        } else {
-            session.style.display = 'none';
-        }
-    }
 </script>
 <!--Toggle the nav burger button and mobile nav bar js-->
 <script>
-    const navIcon = document.getElementById("nav-burger");
-    const profileMobileNav = document.querySelector(".profile-mobile-nav");
-    const messageMainContainer = document.querySelector('.messageMainContainer');
+    const navIcon2 = document.getElementById("nav-burger");
+    const profileMobileNav2 = document.querySelector(".profile-mobile-nav");
+    const messageMainContainer2 = document.querySelector('.messageMainContainer2');
 
     function myFunction(x) {
         x.classList.toggle("change");
         if (x.classList.contains('change')) {
-            profileMobileNav.style.display = "inline-block";
-            messageMainContainer.style.display = 'none';
-            searchIcon.style.opacity = '0';
+            profileMobileNav2.style.display = "inline-block";
+            messageMainContainer2.style.display = 'none';
+            searchIcon2.style.opacity = '0';
         } else {
-            profileMobileNav.style.display = 'none';
-            searchIcon.style.opacity = '1';
-            messageMainContainer.style.display = "inline-block";
+            profileMobileNav2.style.display = 'none';
+            searchIcon2.style.opacity = '1';
+            messageMainContainer2.style.display = "inline-block";
         }
     }
 
-    const sortDownBtn = document.getElementById('jobArrow');
-    async function toggleJobCard() {
-        var mobileJobCard = document.querySelector(".mobileJobCard");
-        if (mobileJobCard.style.display === "none") {
-            sortDownBtn.style.transform = "rotate(180deg)";
-            mobileJobCard.style.display = "inline-block";
-        } else {
-            mobileJobCard.style.display = "none";
-            sortDownBtn.style.transform = "rotate(360deg)";
-        }
-    }
-
-
-    const sortDownBtn2 = document.getElementById('freelanceArrow');
-    async function toggleFreelanceCard() {
-        var mobileFreelanceCard = document.querySelector(".mobileFreelanceCard");
-        if (mobileFreelanceCard.style.display === "none") {
-            sortDownBtn2.style.transform = "rotate(180deg)";
-            mobileFreelanceCard.style.display = "inline-block";
-        } else {
-            mobileFreelanceCard.style.display = "none";
-            sortDownBtn2.style.transform = "rotate(360deg)";
-        }
-    }
-
-    const sortDownBtn3 = document.getElementById('projectsArrow');
-    async function toggleProjectsCard() {
-        var mobileProjectsCard = document.querySelector(".mobileProjectsCard");
-        if (mobileProjectsCard.style.display === "none") {
-            sortDownBtn3.style.transform = "rotate(180deg)";
-            mobileProjectsCard.style.display = "inline-block";
-        } else {
-            mobileProjectsCard.style.display = "none";
-            sortDownBtn3.style.transform = "rotate(360deg)";
-        }
-    }
 </script>
 
 </html>

@@ -373,8 +373,6 @@ $userID = $_SESSION['user_id'];
     </datalist>
 </body>
 
-<!--Script for the search bar and datalist-->
-<script src="../SkillsContainer/searchProfile.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <!--nav bar script -->
 <script type="text/javascript">
