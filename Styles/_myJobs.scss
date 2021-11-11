@@ -240,7 +240,7 @@ $darktext: rgb(121, 121, 121);
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
-            padding: 1.5rem 1rem;
+            padding: 1.5rem 0rem;
             border-bottom: .8px solid lightgrey;
 
 
@@ -271,7 +271,7 @@ $darktext: rgb(121, 121, 121);
                     }
                     #find{
                         height: 100%;
-                        width: 20%;
+                        width: fit-content;
                         border: none;
                         cursor: pointer;
                         font-size: 1rem;
@@ -311,8 +311,8 @@ $darktext: rgb(121, 121, 121);
         
 
         .postedJob {
-          margin: 0;
-            padding: 1.5rem 0rem;
+            margin: 0;
+            padding: 1.5rem 1rem;
             width: 100%;
             border-bottom: .7px solid lightgrey;
             .jobTitle {

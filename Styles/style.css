@@ -21542,7 +21542,7 @@ li {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 0rem;
     border-bottom: .8px solid lightgrey;
   }
   .myJobs .myJobs-container .myJobs-container-header .searchBar {
@@ -21590,7 +21590,9 @@ li {
   }
   .myJobs .myJobs-container .myJobs-container-header .searchBar #searchContainer #find {
     height: 100%;
-    width: 20%;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
     border: none;
     cursor: pointer;
     font-size: 1rem;
@@ -21625,7 +21627,7 @@ li {
   }
   .myJobs .myJobs-container .postedJob {
     margin: 0;
-    padding: 1.5rem 0rem;
+    padding: 1.5rem 1rem;
     width: 100%;
     border-bottom: .7px solid lightgrey;
   }

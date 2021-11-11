@@ -21,10 +21,10 @@ $avatarFetch = mysqli_fetch_assoc($avatarResult);
     </div>
     <div class="mobileJobCard">
         <ul>
-            <a href="#/">
+            <a href="../ClientProfile/index.php">
                 <li>My Jobs</li>
             </a>
-            <a href="../newPostJob/jobs.php">
+            <a href="../newPostJob/myJobs.php">
                 <li>All Job Posts</li>
             </a>
             <a href="#/">
