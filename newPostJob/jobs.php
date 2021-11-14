@@ -182,6 +182,16 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
 
     </datalist>
 </body>
+<script>
+    const search2 = document.getElementById('search2');
+    const profileMobileNav2 = document.querySelector(".profile-mobile-nav");
+    if(getComputedStyle(profileMobileNav2).display === "inline-block"){
+        search2.style.display === "none";
+    }
+    else if(getComputedStyle(profileMobileNav2).display === "none"){
+        search2.style.display === "inline-block";
+    }
+</script>
 <!--Script for the search bar and datalist-->
 <script src="../SkillsContainer/searchProfile.js"></script>
 </html>
