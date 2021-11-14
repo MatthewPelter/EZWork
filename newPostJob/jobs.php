@@ -196,7 +196,7 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
         } else {
             profileMobileNav2.style.display = 'none';
             searchIcon2.style.opacity = '1';
-            searchBar2.style.display = "inline-block";
+            searchBar2.style.display = "block";
         }
     }
 
