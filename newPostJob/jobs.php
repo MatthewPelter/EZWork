@@ -185,18 +185,18 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
 <script>
     const navIcon2 = document.getElementById("nav-burger");
     const profileMobileNav2 = document.querySelector(".profile-mobile-nav");
-    const allJobsContainer = document.querySelector('.all-jobs-container');
+    const searchBar2 = document.querySelector('.searchBar2');
 
     function myFunction(x) {
         x.classList.toggle("change");
         if (x.classList.contains('change')) {
             profileMobileNav2.style.display = "inline-block";
-            allJobsContainer.style.display = 'none';
+            searchBar2.style.display = 'none';
             searchIcon2.style.opacity = '0';
         } else {
             profileMobileNav2.style.display = 'none';
             searchIcon2.style.opacity = '1';
-            allJobsContainer.style.display = "inline-block";
+            searchBar2.style.display = "inline-block";
         }
     }
 
