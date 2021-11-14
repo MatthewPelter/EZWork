@@ -182,33 +182,6 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
 
     </datalist>
 </body>
-<script>
-    const navIcon2 = document.getElementById("nav-burger");
-    const profileMobileNav2 = document.querySelector(".profile-mobile-nav");
-    var c;
-    function myFunction(x) {
-        x.classList.toggle("change");
-        if (x.classList.contains('change')) {
-            profileMobileNav2.style.display = "inline-block";
-            c = 1;
-        } else {
-            profileMobileNav2.style.display = 'none';
-            c = 0;
-        }
-
-    }
-
-    if( c == 0){
-        var searchBar2 = document.querySelector('.searchBar2');
-        searchBar2.style.display = 'none';
-    }
-    else if ( c == 1){
-        var searchBar2 = document.querySelector('.searchBar2');
-        searchBar2.style.display = 'flex';
-    }
-
-
-</script>
 <!--Script for the search bar and datalist-->
 <script src="../SkillsContainer/searchProfile.js"></script>
 </html>
