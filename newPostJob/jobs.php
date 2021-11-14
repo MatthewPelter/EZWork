@@ -185,7 +185,7 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
 <script>
     const navIcon2 = document.getElementById("nav-burger");
     const profileMobileNav2 = document.querySelector(".profile-mobile-nav");
-    var c = 0;
+    var c;
     function myFunction(x) {
         x.classList.toggle("change");
         if (x.classList.contains('change')) {
@@ -193,7 +193,6 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
             c = 1;
         } else {
             profileMobileNav2.style.display = 'none';
-            messageMainContainer2.style.display = "inline-block";
             c = 0;
         }
 
