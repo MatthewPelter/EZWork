@@ -21471,6 +21471,7 @@ li {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    padding: 0rem 1rem;
   }
   .myJobs .myJobs-header ul {
     display: -webkit-box;

@@ -169,6 +169,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    padding: 0rem 1rem;
   }
   .myJobs .myJobs-header ul {
     display: flex;
