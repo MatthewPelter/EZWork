@@ -20881,7 +20881,7 @@ li {
     -webkit-appearance: none;
     appearance: none;
     height: 100%;
-    width: 80%;
+    width: 65%;
     border: none;
     font-size: 1.1rem;
     color: black;
@@ -20895,9 +20895,7 @@ li {
     -webkit-appearance: none;
     appearance: none;
     height: 100%;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
+    width: 35%;
     border: none;
     cursor: pointer;
     font-size: 1rem;

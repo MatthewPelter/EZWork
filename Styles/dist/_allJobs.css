@@ -275,7 +275,7 @@
     -webkit-appearance: none;
     appearance: none;
     height: 100%;
-    width: 80%;
+    width: 65%;
     border: none;
     font-size: 1.1rem;
     color: black;
@@ -289,7 +289,7 @@
     -webkit-appearance: none;
     appearance: none;
     height: 100%;
-    width: fit-content;
+    width: 35%;
     border: none;
     cursor: pointer;
     font-size: 1rem;

@@ -183,14 +183,21 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
     </datalist>
 </body>
 <script>
-    const searchBar2 = document.querySelector('.searchBar2');
-    const profileMobileNav3 = document.querySelector(".profile-mobile-nav");
+    const navIcon2 = document.getElementById("nav-burger");
+    const profileMobileNav2 = document.querySelector(".profile-mobile-nav");
+    const allJobsContainer = document.querySelector('.all-jobs-container');
 
-    if(getComputedStyle(profileMobileNav3).display === 'inline-block'){
-        searchBar2.style.display = "none";
-    }
-    else{
-        searchBar2.style.display = "inline-block";
+    function myFunction(x) {
+        x.classList.toggle("change");
+        if (x.classList.contains('change')) {
+            profileMobileNav2.style.display = "inline-block";
+            allJobsContainer.style.display = 'none';
+            searchIcon2.style.opacity = '0';
+        } else {
+            profileMobileNav2.style.display = 'none';
+            searchIcon2.style.opacity = '1';
+            allJobsContainer.style.display = "inline-block";
+        }
     }
 
 </script>
