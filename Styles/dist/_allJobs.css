@@ -1,4 +1,5 @@
 .all-jobs-container {
+  display: inline-block;
   width: 100%;
   background: whitesmoke;
   padding: 2.5rem 6rem;
