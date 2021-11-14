@@ -191,10 +191,8 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
         if (x.classList.contains('change')) {
             profileMobileNav2.style.display = "inline-block";
             c = 1;
-            searchIcon2.style.opacity = '0';
         } else {
             profileMobileNav2.style.display = 'none';
-            searchIcon2.style.opacity = '1';
             messageMainContainer2.style.display = "inline-block";
             c = 0;
         }
