@@ -198,11 +198,11 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
 
     }
 
-    if( c = 1){
+    if( c == 0){
         var searchBar2 = document.querySelector('.searchBar2');
         searchBar2.style.display = 'none';
     }
-    else if ( c = 0){
+    else if ( c == 1){
         var searchBar2 = document.querySelector('.searchBar2');
         searchBar2.style.display = 'flex';
     }
