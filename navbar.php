@@ -277,8 +277,8 @@ $avatarFetch = mysqli_fetch_assoc($avatarResult);
     }
 
     function toggleHelp() {
-        const help2 = document.querySelector('.helpCard');
-        if (getComputedStyle(help2).style.display === 'none') {
+        var help = document.querySelector('.helpCard');
+        if (getComputedStyle(help).display === 'none') {
             help.style.display = 'inline-block';
             talent.style.display = 'none';
             project.style.display = 'none';
