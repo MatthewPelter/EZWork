@@ -4709,9 +4709,8 @@ section .container .login .login-container button:hover {
 }
 
 .sessionCardContainer {
-  position: fixed;
-  top: 4.5rem;
-  right: 8.3rem;
+  position: absolute;
+  z-index: 1;
 }
 
 .sessionCardContainer .sessionCard {
@@ -4805,9 +4804,8 @@ section .container .login .login-container button:hover {
 }
 
 .helpContainer {
-  position: fixed;
-  top: 4rem;
-  right: 15.4rem;
+  position: absolute;
+  z-index: 1;
 }
 
 .helpContainer .helpCard {
@@ -4850,9 +4848,8 @@ section .container .login .login-container button:hover {
 }
 
 .projectCardContainer {
-  position: fixed;
-  top: 3.9rem;
-  right: 19rem;
+  position: absolute;
+  z-index: 1;
 }
 
 .projectCardContainer .projectCard {
@@ -4896,9 +4893,8 @@ section .container .login .login-container button:hover {
 }
 
 .talentCardContainer {
-  position: fixed;
-  top: 4rem;
-  right: 24rem;
+  position: absolute;
+  z-index: 1;
 }
 
 .talentCardContainer .talentCard {
@@ -4941,9 +4937,8 @@ section .container .login .login-container button:hover {
 }
 
 .jobCardContainer {
-  position: fixed;
-  top: 4rem;
-  right: 28.8rem;
+  position: absolute;
+  z-index: 1;
 }
 
 .jobCardContainer .jobCard {
