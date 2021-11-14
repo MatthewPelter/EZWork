@@ -111,6 +111,7 @@
 }
 // Header pulldown
 .sessionCardContainer {
+  margin-top: 1.5rem;
   position: absolute;
   z-index: 1;
   .sessionCard {
@@ -183,13 +184,14 @@
   }
 }
 .helpContainer {
+  margin-top: 2rem;
   position: absolute;
   z-index: 1;
   .helpCard {
     display: none;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     background: white;
-    padding: 0.5rem 0rem;
+    padding: 0.5rem 1rem;
     width: 100%;
     border-radius: 10px;
     .card {
@@ -219,6 +221,7 @@
   }
 }
 .projectCardContainer {
+  margin-top: 2rem;
   position: absolute;
   z-index: 1;
   .projectCard {
@@ -256,6 +259,7 @@
   }
 }
 .talentCardContainer {
+  margin-top: 2rem;
   position: absolute;
   z-index: 1;
   .talentCard {
@@ -292,6 +296,7 @@
   }
 }
 .jobCardContainer {
+  margin-top: 2rem;
   position: absolute;
   z-index: 1;
   .jobCard {

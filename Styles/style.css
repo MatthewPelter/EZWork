@@ -4709,6 +4709,7 @@ section .container .login .login-container button:hover {
 }
 
 .sessionCardContainer {
+  margin-top: 1.5rem;
   position: absolute;
   z-index: 1;
 }
@@ -4804,6 +4805,7 @@ section .container .login .login-container button:hover {
 }
 
 .helpContainer {
+  margin-top: 2rem;
   position: absolute;
   z-index: 1;
 }
@@ -4813,7 +4815,7 @@ section .container .login .login-container button:hover {
   -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
           box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   background: white;
-  padding: 0.5rem 0rem;
+  padding: 0.5rem 1rem;
   width: 100%;
   border-radius: 10px;
 }
@@ -4848,6 +4850,7 @@ section .container .login .login-container button:hover {
 }
 
 .projectCardContainer {
+  margin-top: 2rem;
   position: absolute;
   z-index: 1;
 }
@@ -4893,6 +4896,7 @@ section .container .login .login-container button:hover {
 }
 
 .talentCardContainer {
+  margin-top: 2rem;
   position: absolute;
   z-index: 1;
 }
@@ -4937,6 +4941,7 @@ section .container .login .login-container button:hover {
 }
 
 .jobCardContainer {
+  margin-top: 2rem;
   position: absolute;
   z-index: 1;
 }
