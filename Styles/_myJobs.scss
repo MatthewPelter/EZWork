@@ -239,8 +239,8 @@ $darktext: rgb(121, 121, 121);
             display: flex;
             flex-direction: row;
             align-items: center;
-            justify-content: space-between;
-            padding: 1.5rem 0rem;
+            justify-content: space-evenly;
+            padding: 1.5rem 1rem;
             border-bottom: .8px solid lightgrey;
 
 
@@ -343,13 +343,7 @@ $darktext: rgb(121, 121, 121);
           }
 
         .spacer{
-            width: 100%;
-            h3{
-              font-size: .5rem;
-                opacity: 0;
-            }
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
+            display: none;
         }
     }
 }

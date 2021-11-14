@@ -20449,7 +20449,7 @@ li {
   font-size: 2rem;
 }
 
-.all-jobs-container .all-jobs-container-header .searchBar {
+.all-jobs-container .all-jobs-container-header .searchBar2 {
   width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -20466,7 +20466,7 @@ li {
           justify-content: center;
 }
 
-.all-jobs-container .all-jobs-container-header .searchBar #searchContainer {
+.all-jobs-container .all-jobs-container-header .searchBar2 #searchContainer2 {
   padding: 0;
   width: 100%;
   display: -webkit-box;
@@ -20483,7 +20483,7 @@ li {
   border-radius: 8px;
 }
 
-.all-jobs-container .all-jobs-container-header .searchBar #searchContainer #search {
+.all-jobs-container .all-jobs-container-header .searchBar2 #searchContainer2 #search2 {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
@@ -20498,7 +20498,7 @@ li {
   outline: none;
 }
 
-.all-jobs-container .all-jobs-container-header .searchBar #searchContainer #find {
+.all-jobs-container .all-jobs-container-header .searchBar2 #searchContainer2 #find2 {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
@@ -20514,7 +20514,7 @@ li {
   border-bottom-right-radius: 8px;
 }
 
-.all-jobs-container .all-jobs-container-header .searchBar #searchContainer #find:hover {
+.all-jobs-container .all-jobs-container-header .searchBar2 #searchContainer2 #find2:hover {
   background: #0a345e;
 }
 
@@ -21538,10 +21538,10 @@ li {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    padding: 1.5rem 0rem;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    padding: 1.5rem 1rem;
     border-bottom: .8px solid lightgrey;
   }
   .myJobs .myJobs-container .myJobs-container-header .searchBar {
@@ -21662,13 +21662,7 @@ li {
     color: #054e97;
   }
   .myJobs .myJobs-container .spacer {
-    width: 100%;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-  }
-  .myJobs .myJobs-container .spacer h3 {
-    font-size: .5rem;
-    opacity: 0;
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */

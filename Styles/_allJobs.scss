@@ -19,13 +19,13 @@ $darktext: rgb(121, 121, 121);
             font-size: 2rem;
         }
 
-        .searchBar{
+        .searchBar2{
             width: 60%;
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: center;
-            #searchContainer{
+            #searchContainer2{
                 padding: 0;
                 width: 100%;
                 display: flex;
@@ -33,7 +33,7 @@ $darktext: rgb(121, 121, 121);
                 align-items: center;
                 border: 1px solid lightgrey;
                 border-radius: 8px;
-                #search{
+                #search2{
                     -moz-appearance: none;
                     -webkit-appearance: none;
                     appearance: none;
@@ -47,7 +47,7 @@ $darktext: rgb(121, 121, 121);
                     border-bottom-left-radius: 8px;
                     outline: none;
                 }
-                #find{
+                #find2{
                     -moz-appearance: none;
                     -webkit-appearance: none;
                     appearance: none;

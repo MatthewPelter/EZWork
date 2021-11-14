@@ -53,10 +53,10 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
     <div class="all-jobs-container">
         <div class="all-jobs-container-header">
             <h4>Find Work</h4>
-            <div class="searchBar">
-                <form id="searchContainer">
-                    <input type="text" list="allskills" autocomplete="off" name="search" placeholder="Search" id="search">
-                    <input type="submit" value="Search" id="find">
+            <div class="searchBar2">
+                <form id="searchContainer2">
+                    <input type="text" list="allskills" autocomplete="off" name="search" placeholder="Search" id="search2">
+                    <input type="submit" value="Search" id="find2">
                 </form>
             </div>
         </div>
@@ -182,7 +182,6 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
 
     </datalist>
 </body>
-
 <!--Script for the search bar and datalist-->
 <script src="../SkillsContainer/searchProfile.js"></script>
 </html>
