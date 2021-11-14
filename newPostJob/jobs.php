@@ -185,20 +185,31 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
 <script>
     const navIcon2 = document.getElementById("nav-burger");
     const profileMobileNav2 = document.querySelector(".profile-mobile-nav");
-    const searchBar2 = document.querySelector('.searchBar2');
-
+    var c = 0;
     function myFunction(x) {
         x.classList.toggle("change");
         if (x.classList.contains('change')) {
             profileMobileNav2.style.display = "inline-block";
-            searchBar2.style.display = 'none';
+            c = 1;
             searchIcon2.style.opacity = '0';
         } else {
             profileMobileNav2.style.display = 'none';
             searchIcon2.style.opacity = '1';
-            searchBar2.style.display = "flex";
+            messageMainContainer2.style.display = "inline-block";
+            c = 0;
         }
+
     }
+
+    if( c = 1){
+        var searchBar2 = document.querySelector('.searchBar2');
+        searchBar2.style.display = 'none';
+    }
+    else if ( c = 0){
+        var searchBar2 = document.querySelector('.searchBar2');
+        searchBar2.style.display = 'flex';
+    }
+
 
 </script>
 <!--Script for the search bar and datalist-->
