@@ -21216,7 +21216,7 @@ li {
   }
   .all-jobs-container .jobs-container .sortMenu {
     width: 100%;
-    height: 10vh;
+    height: 20vh;
     overflow: hidden;
     overflow-y: scroll;
     display: -webkit-box;
