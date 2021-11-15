@@ -4708,8 +4708,17 @@ section .container .login .login-container button:hover {
   display: none;
 }
 
+.jobsNav span, .freelancerNav span, .projectsNav span {
+  color: white;
+  cursor: pointer;
+}
+
+.jobsNav span:hover, .freelancerNav span:hover, .projectsNav span:hover {
+  text-decoration: underline;
+}
+
 .sessionCardContainer {
-  margin-top: 1rem;
+  margin-top: .8rem;
   position: absolute;
   z-index: 1;
 }
@@ -4795,7 +4804,7 @@ section .container .login .login-container button:hover {
   content: "";
   position: absolute;
   top: -14%;
-  left: 75%;
+  left: 7%;
   border-width: 0.8rem;
   border-style: solid;
   margin-left: 0.8rem;
@@ -4840,7 +4849,7 @@ section .container .login .login-container button:hover {
   content: "";
   position: absolute;
   top: -26%;
-  left: 75%;
+  left: 7%;
   border-width: 0.8rem;
   border-style: solid;
   margin-left: 0.8rem;
@@ -4850,7 +4859,7 @@ section .container .login .login-container button:hover {
 }
 
 .projectCardContainer {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   position: absolute;
   z-index: 1;
 }
@@ -4861,7 +4870,7 @@ section .container .login .login-container button:hover {
   -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
           box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   background: white;
-  padding: 0.5rem 0rem;
+  padding: 0.5rem 1rem;
   width: 100%;
   border-radius: 10px;
 }
@@ -4896,7 +4905,7 @@ section .container .login .login-container button:hover {
 }
 
 .talentCardContainer {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   position: absolute;
   z-index: 1;
 }
@@ -4906,7 +4915,7 @@ section .container .login .login-container button:hover {
   -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
           box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   background: white;
-  padding: 0.5rem 0rem;
+  padding: 0.5rem 1rem;
   width: 100%;
   border-radius: 10px;
 }
@@ -4941,7 +4950,7 @@ section .container .login .login-container button:hover {
 }
 
 .jobCardContainer {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   position: absolute;
   z-index: 1;
 }
@@ -4951,7 +4960,7 @@ section .container .login .login-container button:hover {
   -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
           box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   background: white;
-  padding: 0.5rem 0rem;
+  padding: 0.5rem 1rem;
   width: 100%;
   border-radius: 10px;
 }
@@ -5477,6 +5486,9 @@ section .container .login .login-container button:hover {
     display: none;
   }
   .profile-header-container .profileHeader .profileImage {
+    display: none;
+  }
+  .profile-header-container .profileHeader .jobsNav, .profile-header-container .profileHeader .freelancerNav, .profile-header-container .profileHeader .projectsNav {
     display: none;
   }
   .profile-header-container .profileHeader .fa-search {

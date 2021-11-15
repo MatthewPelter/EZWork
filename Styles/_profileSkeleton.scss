@@ -109,9 +109,19 @@
     display: none;
   }
 }
+.jobsNav,.freelancerNav,.projectsNav{
+  span{
+    color: white;
+    cursor: pointer;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+}
 // Header pulldown
 .sessionCardContainer {
-  margin-top: 1rem;
+  margin-top: .8rem;
   position: absolute;
   z-index: 1;
   .sessionCard {
@@ -175,7 +185,7 @@
     content: "";
     position: absolute;
     top: -14%;
-    left: 75%;
+    left: 7%;
     border-width: 0.8rem;
     border-style: solid;
     margin-left: 0.8rem;
@@ -212,7 +222,7 @@
     content: "";
     position: absolute;
     top: -26%;
-    left: 75%;
+    left: 7%;
     border-width: 0.8rem;
     border-style: solid;
     margin-left: 0.8rem;
@@ -221,7 +231,7 @@
   }
 }
 .projectCardContainer {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   position: absolute;
   z-index: 1;
   .projectCard {
@@ -229,7 +239,7 @@
     display: none;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     background: white;
-    padding: 0.5rem 0rem;
+    padding: 0.5rem 1rem;
     width: 100%;
     border-radius: 10px;
     .card {
@@ -259,14 +269,14 @@
   }
 }
 .talentCardContainer {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   position: absolute;
   z-index: 1;
   .talentCard {
     display: none;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     background: white;
-    padding: 0.5rem 0rem;
+    padding: 0.5rem 1rem;
     width: 100%;
     border-radius: 10px;
     .card {
@@ -296,14 +306,14 @@
   }
 }
 .jobCardContainer {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   position: absolute;
   z-index: 1;
   .jobCard {
     display: none;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     background: white;
-    padding: 0.5rem 0rem;
+    padding: 0.5rem 1rem;
     width: 100%;
     border-radius: 10px;
     .card {
@@ -696,6 +706,9 @@
         display: none;
       }
       .profileImage {
+        display: none;
+      }
+      .jobsNav,.freelancerNav,.projectsNav{
         display: none;
       }
       .fa-search {

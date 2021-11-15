@@ -125,7 +125,7 @@ $avatarFetch = mysqli_fetch_assoc($avatarResult);
             </form>
         </div>
         <div class="jobsNav">
-            <span onclick="toggleJob()"  id="jobs">Jobs</span>
+            <span onclick="toggleJob()" id="jobs">Jobs</span>
             <div class="jobCardContainer">
                 <div class="jobCard">
                     <div class="card card1" onclick="location.href='../ClientProfile/index.php'">
