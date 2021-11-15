@@ -524,6 +524,9 @@ $darktext: rgb(121, 121, 121);
                     align-items: center;
                     border: 1px solid lightgrey;
                     border-radius: 8px;
+                    [list]::-webkit-calendar-picker-indicator {
+                        display: none;
+                    }
                     #search2{
                         -moz-appearance: none;
                         -webkit-appearance: none;
@@ -537,6 +540,7 @@ $darktext: rgb(121, 121, 121);
                         border-top-left-radius: 8px;
                         border-bottom-left-radius: 8px;
                         outline: none;
+
                     }
                     #find2{
                         -moz-appearance: none;
