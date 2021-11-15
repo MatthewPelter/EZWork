@@ -63,8 +63,163 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
 
         <div class="jobs-container">
             <div class="sortMenu">
-                <h3>Filter</h3>
-
+                <div class="sort" onclick="toggleSortCard()">
+                    <h3>Sort</h3>
+                    <i class="fa fa-sort-desc" id="sortArrow" aria-hidden="true"></i>
+                </div>
+                <div class="sortCard">
+                    <div class="sortAtoZ">
+                        <i class="fa fa-sort-alpha-asc" aria-hidden="true"></i>
+                        <p>A to Z</p>
+                    </div>
+                    <div class="sortZtoA">
+                        <i class="fa fa-sort-alpha-desc" aria-hidden="true"></i>
+                        <p>Z to A</p>
+                    </div>
+                    <div class="sortPriceLowHigh">
+                        <i class="fa fa-sort-amount-desc" aria-hidden="true"></i>
+                        <p>Price: Low to High</p>
+                    </div>
+                    <div class="sortPriceHighLow">
+                        <i class="fa fa-sort-amount-asc" aria-hidden="true"></i>
+                        <p>Price: High to Low</p>
+                    </div>
+                </div>
+                <div class="filter" onclick="toggleFilterCard()">
+                    <h3>Filter</h3>
+                    <i class="fa fa-sort-desc" id="filterArrow" aria-hidden="true"></i>
+                </div>
+                <div class="filterCard">
+                    <div class="FilterExperience">
+                        <h3>By Experience</h3>
+                        <div class="experienceCard">
+                            <div class="entry">
+                                <input type="checkbox" name="entry" id="entry">
+                                <label for="entry">Entry</label>
+                            </div>
+                            <div class="intermediate">
+                                <input type="checkbox" name="intermediate" id="intermediate">
+                                <label for="intermediate">Intermediate</label>
+                            </div>
+                            <div class="expert">
+                                <input type="checkbox" name="expert" id="expert">
+                                <label for="expert">Expert</label>
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <div class="FilterBudget">
+                        <h3>By Budget</h3>
+                        <div class="filterBudgetCard">
+                            <div class="hourly">
+                                <input type="checkbox"  onclick="toggleHourlyCard()" name="hourly" id="hourly">
+                                <label for="hourly">Hourly</label>
+                            </div>
+                            <div class="hourlyCard">
+                                <div class="ZeroToTwentyFive">
+                                    <input type="checkbox" name="ZeroToTwentyFive" id="ZeroToTwentyFive">
+                                    <label for="ZeroToTwentyFive">$0 - $25</label>
+                                </div>
+                                <div class="TwentySixToFifty">
+                                    <input type="checkbox" name="TwentysixToFifty" id="TwentySixToFifty">
+                                    <label for="TwentySixToFifty">$26 - $50</label>
+                                </div>
+                                <div class="FiftyOneToSeventyfive">
+                                    <input type="checkbox" name="FiftyOneToSeventyfive" id="FiftyOneToSeventyfive">
+                                    <label for="FiftyOneToSeventyfive">$51 - $75</label>
+                                </div>
+                                <div class="seventySixToOneHundred">
+                                    <input type="checkbox" name="seventySixToOneHundred"" id="seventySixToOneHundred"">
+                                    <label for="seventySixToOneHundred"">$76 - $100</label>
+                                </div>
+                                <div class="more">
+                                    <input type="checkbox" name="oneHundredPlus" id="oneHundredPlus">
+                                    <label for="oneHundredPlus">$100+</label>
+                                </div>
+                            </div>
+                            <div class="budget">
+                                <input type="checkbox" onclick="toggleBudgetCard()" name="budget" id="budget">
+                                <label for="budget">Budget</label>
+                            </div>
+                            <div class="budgetCard">
+                                <div class="ZeroToNinetyNine">
+                                    <input type="checkbox" name="ZeroToNinetyNine" id="ZeroToNinetyNine">
+                                    <label for="ZeroToNinetyNine">$0 - $99</label>
+                                </div>
+                                <div class="OneHundredOneToOneHundredNinetyNine">
+                                    <input type="checkbox" name="OneHundredOneToOneHundredNinetyNine" id="OneHundredOneToOneHundredNinetyNine">
+                                    <label for="OneHundredOneToOneHundredNinetyNine">$100 - $199</label>
+                                </div>
+                                <div class="TwoHundredOneToTwoeHundredNinetyNine">
+                                    <input type="checkbox" name="TwoHundredOneToTwoeHundredNinetyNine" id="TwoHundredOneToTwoeHundredNinetyNine">
+                                    <label for="TwoHundredOneToTwoeHundredNinetyNine">$200 - $299</label>
+                                </div>
+                                <div class="threeHundredToThreeHundredNinetyNine">
+                                    <input type="checkbox" name="threeHundredToThreeHundredNinetyNine" id="threeHundredToThreeHundredNinetyNine">
+                                    <label for="threeHundredToThreeHundredNinetyNine">$300 - $399</label>
+                                </div>
+                                <div class="fourHundredToFourHundredNinetyNine">
+                                    <input type="checkbox" name="fourHundredToFourHundredNinetyNine" id="fourHundredToFourHundredNinetyNine">
+                                    <label for="fourHundredToFourHundredNinetyNine">$400 - $499</label>
+                                </div>
+                                <div class="fiveHundredPlus">
+                                    <input type="checkbox" name="fiveHundredPlus" id="fiveHundredPlus">
+                                    <label for="fiveHundredPlus">$500+</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="FilterSkill">
+                        <h3>By Skill</h3>
+                        <div class="filterSkillCard">
+                            <select name="filterSkills" id="filterSkills">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="FilterLocation">
+                        <h3>By Location</h3>
+                        <div class="filterLocationCard">
+                            <div class="worldwide">
+                                <input type="checkbox" name="worldwide" id="worldwide">
+                                <label for="worldwide">Worldwide</label>
+                            </div>
+                            <div class="us">
+                                <input type="checkbox" name="us" id="us">
+                                <label for="us">United States</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="FilterProjectSize">
+                        <h3>By Project Size</h3>
+                        <div class="filterProjectSizeCard">
+                            <div class="small">
+                                <input type="checkbox" name="small" id="small">
+                                <label for="small">Small</label>
+                            </div>
+                            <div class="medium">
+                                <input type="checkbox" name="medium" id="medium">
+                                <label for="medium">Medium</label>
+                            </div>
+                            <div class="large">
+                                <input type="checkbox" name="large" id="large">
+                                <label for="large">Large</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="FilterProjectType">
+                        <h3>By Project Type</h3>
+                        <div class="filterProjectTypeCard">
+                            <div class="shortTerm">
+                                <input type="checkbox" name="shortTerm" id="shortTerm">
+                                <label for="shortTerm">Short Term</label>
+                            </div>
+                            <div class="longTerm">
+                                <input type="checkbox" name="longTerm" id="longTerm">
+                                <label for="longTerm">Long Term</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="allJobs">
@@ -193,5 +348,54 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
     }
 </script>
 <!--Script for the search bar and datalist-->
-<script src="../SkillsContainer/searchProfile.js"></script>
+<script src="../SkillsContainer/allJobsSkills.js"></script>
+
+
+<!-- This script is used to function the filer section-->
+<script>
+    const sortArrow = document.getElementById('sortArrow');
+    
+    function toggleSortCard(){
+    const sortCard = document.querySelector('.sortCard'); 
+    if (getComputedStyle(sortCard).display === "none") {
+        sortArrow.style.transform = "rotate(180deg)";
+        sortCard.style.display = "inline-block";
+    } else {
+        sortCard.style.display = "none";
+        sortArrow.style.transform = "rotate(360deg)";
+    }
+}
+
+
+const filterArrow = document.getElementById('filterArrow');
+
+function toggleFilterCard(){
+    const filterCard = document.querySelector('.filterCard'); 
+    if (getComputedStyle(filterCard).display === "none") {
+        filterArrow.style.transform = "rotate(180deg)";
+        filterCard.style.display = "inline-block";
+    } else {
+        filterCard.style.display = "none";
+        filterArrow.style.transform = "rotate(360deg)";
+    }
+}
+
+function toggleHourlyCard() {
+        var hourlyCard = document.querySelector(".hourlyCard");
+        if (getComputedStyle(hourlyCard).display === "none") {
+            hourlyCard.style.display = "inline-block";
+        } else {
+            hourlyCard.style.display = "none";
+        }
+}
+
+function toggleBudgetCard() {
+        var budgetCard = document.querySelector(".budgetCard");
+        if (getComputedStyle(budgetCard).display === "none") {
+            budgetCard.style.display = "inline-block";
+        } else {
+            budgetCard.style.display = "none";
+        }
+}
+</script>
 </html>

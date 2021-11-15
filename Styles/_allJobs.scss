@@ -82,14 +82,238 @@ $darktext: rgb(121, 121, 121);
         .sortMenu{
             grid-area:  1 / 1 / 2 / 2;
             width: 100%;
+            height: 75vh;
+            overflow: hidden;
+            overflow-y: scroll;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
             
-            h3{
+            .sort{
+                padding: 1rem 0rem;
+                cursor: pointer;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                h3{
+                    font-size: 1.5rem;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+                i{
+                    color: $color1;
+                    font-size: 1.5rem;
+                    cursor: pointer;
+                }
+                &:hover{
+                    color: $lightColor;
+                }
+
+            }
+            .sortCard{
+                display: none;
                 width: 100%;
-                font-size: 1.5rem;
-                text-decoration: underline;
+                .sortAtoZ,.sortZtoA,.sortPriceLowHigh,.sortPriceHighLow{
+                    width: 100%;
+                    margin-bottom: .5rem;
+                    padding: .5rem 0rem;
+                    cursor: pointer;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: flex-start;
+                    font-size: 1rem;
+                    p{
+                        font-size: .9rem;
+                        margin-left: 1rem;
+                        font-weight: bolder;
+                    }
+                    i{
+                        margin-left: .3rem;
+                    }
+
+                    &:hover{
+                        background: white;
+                        color: $lightColor;
+                    }
+                }
+            }
+
+            .filter{
+                cursor: pointer;
+                border-top: .7px solid lightgrey ;
+                padding: 1rem 0rem;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                h3{
+                    font-size: 1.5rem;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+                i{
+                    color: $color1;
+                    font-size: 1.5rem;
+                    cursor: pointer;
+                }
+                &:hover{
+                    color: $lightColor;
+                }
+
+            }
+
+            .filterCard{
+                display: none;
+                width: 100%;
+                .FilterProjectType,.FilterProjectSize,.FilterLocation,.FilterSkill,.FilterBudget,.FilterExperience{
+                    padding: 1rem 0rem;
+                    border: .7px solid lightgrey;
+                    border-left: none;
+                    border-right: none;
+
+                    h3{
+                        font-size: 1.2rem;
+                        color: $color1;
+                    }
+
+                    .experienceCard{
+                        padding: .5rem 0rem;
+                        .entry,.intermediate,.expert{
+                            padding: .5rem 0rem;
+
+                            label{
+                                margin-left: .5rem;
+                                cursor: pointer;
+                                font-size: 1rem;
+                                color: rgb(46, 46, 46);
+
+                                &:hover{
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+                    .filterBudgetCard{
+                        padding: .5rem 0rem;
+                        .hourly,.budget{
+                            padding: .5rem 0rem;
+
+                            label{
+                                margin-left: .5rem;
+                                cursor: pointer;
+                                font-size: 1rem;
+                                color: rgb(46, 46, 46);
+
+                                &:hover{
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                        .hourlyCard{
+                            display: none;
+                            width: 100%;
+                            margin-left: 1rem;
+                            .ZeroToTwentyFive,.TwentySixToFifty,.FiftyOneToSeventyfive,.seventySixToOneHundred,.more{
+                                padding: .5rem 0rem;
+                            }
+                            label{
+                                margin-left: .5rem;
+                                cursor: pointer;
+                                font-size: 1rem;
+                                color: rgb(46, 46, 46);
+
+                                &:hover{
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                        .budgetCard{
+                            display: none;
+                            width: 100%;
+                            margin-left: 1rem;
+                            .ZeroToNinetyNine,.OneHundredOneToOneHundredNinetyNine,.TwoHundredOneToTwoeHundredNinetyNine,.threeHundredToThreeHundredNinetyNine,.fourHundredToFourHundredNinetyNine,.fiveHundredPlus{
+                                padding: .5rem 0rem;
+                            }
+                            label{
+                                margin-left: .5rem;
+                                cursor: pointer;
+                                font-size: 1rem;
+                                color: rgb(46, 46, 46);
+
+                                &:hover{
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+                    .filterSkillCard{
+                        padding: .5rem 0rem;
+
+                        select{
+                            width: 100%;
+                            border: none;
+                            font-size: 1rem;
+                            font-weight: bolder;
+                            color: $color1;
+                            padding: .5rem 0rem;
+                        }
+                    }
+                    .filterLocationCard{
+                        padding: .5rem 0rem;
+                        .worldwide,.us{
+                            padding: .5rem 0rem;
+
+                            label{
+                                margin-left: .5rem;
+                                cursor: pointer;
+                                font-size: 1rem;
+                                color: rgb(46, 46, 46);
+
+                                &:hover{
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+                    .filterProjectSizeCard{
+                        padding: .5rem 0rem;
+                        .small,.medium,.large{
+                            padding: .5rem 0rem;
+
+                            label{
+                                margin-left: .5rem;
+                                cursor: pointer;
+                                font-size: 1rem;
+                                color: rgb(46, 46, 46);
+
+                                &:hover{
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+                    .filterProjectTypeCard{
+                        padding: .5rem 0rem;
+                        .shortTerm,.longTerm{
+                            padding: .5rem 0rem;
+
+                            label{
+                                margin-left: .5rem;
+                                cursor: pointer;
+                                font-size: 1rem;
+                                color: rgb(46, 46, 46);
+
+                                &:hover{
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+                }                    
             }
         }
 

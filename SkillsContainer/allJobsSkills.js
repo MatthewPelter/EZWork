@@ -1370,6 +1370,16 @@ for (let i = 0; i < AllSkills2.length; i++) {
   AllSkillsDatalist.appendChild(option);
 }
 
+const filterSkills = document.getElementById("filterSkills");
+for (let i = 0; i < AllSkills2.length; i++) {
+  var option = document.createElement("option");
+
+  option.value = AllSkills2[i];
+  option.innerText = AllSkills2[i];
+
+  filterSkills.appendChild(option);
+}
+
 const mobileSearchCard = document.querySelector(".mobileSearchCard");
 const searchIcon = document.getElementById("mobileSearch");
 searchIcon.addEventListener("click", () => {
