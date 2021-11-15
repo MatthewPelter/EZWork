@@ -339,13 +339,13 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
 </body>
 <script>
 function toggleSearch2(){
-    const search2 = document.getElementById('search2');
-    const profileMobileNav2 = document.querySelector(".profile-mobile-nav");
+    var search2 = document.getElementById('search2');
+    var profileMobileNav2 = document.querySelector(".profile-mobile-nav");
     if(getComputedStyle(profileMobileNav2).display === "inline-block"){
-        search2.style.display === "none";
+        search2.style.display = "none";
     }
     else if(getComputedStyle(profileMobileNav2).display === "none"){
-        search2.style.display === "inline-block";
+        search2.style.display = "inline-block";
     }
 }
 
