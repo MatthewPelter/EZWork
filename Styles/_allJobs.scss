@@ -47,6 +47,9 @@ $darktext: rgb(121, 121, 121);
                     border-top-left-radius: 8px;
                     border-bottom-left-radius: 8px;
                     outline: none;
+                    ::-ms-expand{
+                        opacity: 0;
+                    }
                 }
 
                 #find2{
