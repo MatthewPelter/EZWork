@@ -5488,7 +5488,7 @@ section .container .login .login-container button:hover {
   .profile-header-container .profileHeader .profileImage {
     display: none;
   }
-  .profile-header-container .profileHeader .jobsNav, .profile-header-container .profileHeader .freelancerNav, .profile-header-container .profileHeader .projectsNav {
+  .profile-header-container .profileHeader .jobsNav, .profile-header-container .profileHeader .freelancerNav, .profile-header-container .profileHeader .projectsNav, .profile-header-container .profileHeader .messagesNav {
     display: none;
   }
   .profile-header-container .profileHeader .fa-search {
