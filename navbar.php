@@ -143,22 +143,6 @@ $avatarFetch = mysqli_fetch_assoc($avatarResult);
                 </div>
             </div>
             <li onclick="toggleTalent()" id="talents">Freelancer</li>
-            <div class="talentCardContainer">
-                <div class="talentCard">
-                    <div class="card card1">
-                        <h4>Discover</h4>
-                    </div>
-                    <div class="card card2">
-                        <h4>Your Hires</h4>
-                    </div>
-                    <div class="card card4">
-                        <h4>Freelance History</h4>
-                    </div>
-                    <div class="card card4" onclick="location.href='../Profile/register.php'">
-                        <h4>Become Freelancer</h4>
-                    </div>
-                </div>
-            </div>
             <li onclick="toggleProject()" id="projects">Projects</li>
             <div class="projectCardContainer">
                 <div class="projectCard">
@@ -176,6 +160,22 @@ $avatarFetch = mysqli_fetch_assoc($avatarResult);
             <!-- Style tags are temporary -->
             <li><a style="color: white; text-decoration: none;" href="https://ez-work.herokuapp.com/message/messages">Messages</a></li>
         </ul>
+        <div class="talentCardContainer">
+                <div class="talentCard">
+                    <div class="card card1">
+                        <h4>Discover</h4>
+                    </div>
+                    <div class="card card2">
+                        <h4>Your Hires</h4>
+                    </div>
+                    <div class="card card4">
+                        <h4>Freelance History</h4>
+                    </div>
+                    <div class="card card4" onclick="location.href='../Profile/register.php'">
+                        <h4>Become Freelancer</h4>
+                    </div>
+                </div>
+            </div>
         <div class="guide">
             <i class="fa fa-bell" title="Notification"></i>
             <i class="fa fa-question" onclick="toggleHelp()" id="question"></i>
