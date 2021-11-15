@@ -124,8 +124,8 @@ $avatarFetch = mysqli_fetch_assoc($avatarResult);
                 <input type="submit" value="Find">
             </form>
         </div>
-        <ul>
-            <li onclick="toggleJob()" id="jobs">Jobs</li>
+        <div class="jobsNav">
+            <span onclick="toggleJob()"  id="jobs">Jobs</span>
             <div class="jobCardContainer">
                 <div class="jobCard">
                     <div class="card card1" onclick="location.href='../ClientProfile/index.php'">
@@ -142,25 +142,10 @@ $avatarFetch = mysqli_fetch_assoc($avatarResult);
                     </div>
                 </div>
             </div>
-            <li onclick="toggleTalent()" id="talents">Freelancer</li>
-            <li onclick="toggleProject()" id="projects">Projects</li>
-            <div class="projectCardContainer">
-                <div class="projectCard">
-                    <div class="card card1">
-                        <h4>Current Projects</h4>
-                    </div>
-                    <div class="card card2">
-                        <h4>Project History</h4>
-                    </div>
-                    <div class="card card3">
-                        <h4>Browse by Projects</h4>
-                    </div>
-                </div>
-            </div>
-            <!-- Style tags are temporary -->
-            <li><a style="color: white; text-decoration: none;" href="https://ez-work.herokuapp.com/message/messages">Messages</a></li>
-        </ul>
-        <div class="talentCardContainer">
+        </div>
+        <div class="freelancerNav">
+            <span onclick="toggleTalent()" id="talents">Freelancer</span>
+            <div class="talentCardContainer">
                 <div class="talentCard">
                     <div class="card card1">
                         <h4>Discover</h4>
@@ -176,6 +161,26 @@ $avatarFetch = mysqli_fetch_assoc($avatarResult);
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="projectsNav">
+            <span onclick="toggleProject()" id="projects">Projects</span>
+            <div class="projectCardContainer">
+                <div class="projectCard">
+                    <div class="card card1">
+                        <h4>Current Projects</h4>
+                    </div>
+                    <div class="card card2">
+                        <h4>Project History</h4>
+                    </div>
+                    <div class="card card3">
+                        <h4>Browse by Projects</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="messagesNav">
+            <a style="color: white; text-decoration: none;" href="https://ez-work.herokuapp.com/message/messages">Messages</a>
+        </div>
         <div class="guide">
             <i class="fa fa-bell" title="Notification"></i>
             <i class="fa fa-question" onclick="toggleHelp()" id="question"></i>
