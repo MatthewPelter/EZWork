@@ -475,9 +475,6 @@
     border: 1px solid lightgrey;
     border-radius: 8px;
   }
-  .all-jobs-container .all-jobs-container-header .searchBar2 #searchContainer2 [list]::-webkit-calendar-picker-indicator {
-    display: none;
-  }
   .all-jobs-container .all-jobs-container-header .searchBar2 #searchContainer2 #search2 {
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -491,6 +488,9 @@
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
     outline: none;
+  }
+  .all-jobs-container .all-jobs-container-header .searchBar2 #searchContainer2 #search2 :-webkit-calendar-picker-indicator {
+    display: none;
   }
   .all-jobs-container .all-jobs-container-header .searchBar2 #searchContainer2 #find2 {
     -moz-appearance: none;
