@@ -20517,10 +20517,6 @@ li {
   outline: none;
 }
 
-.all-jobs-container .all-jobs-container-header .searchBar2 #searchContainer2 #search2 ::-ms-expand {
-  display: none;
-}
-
 .all-jobs-container .all-jobs-container-header .searchBar2 #searchContainer2 #find2 {
   -moz-appearance: none;
   -webkit-appearance: none;
