@@ -180,16 +180,6 @@ $row = mysqli_fetch_assoc($result);
                 </div>
             </div>
         </div>
-        <div class="notification">
-            <div class="settings-container-title">
-                <h2 id="settings-title">Notification Settings</h2>
-            </div>
-        </div>
-        <div class="connectedServices">
-            <div class="settings-container-title">
-                <h2 id="settings-title">Connected Services</h2>
-            </div>
-        </div>
         <div id="myOverlay" class="overlay">
             <span class="closebtn" onclick="closeCard()" title="Close Overlay">×</span>
             <form id="editForm">
