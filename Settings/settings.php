@@ -50,8 +50,6 @@ $row = mysqli_fetch_assoc($result);
                 </li>
                 <li id="passwordSecurity"><a href="#/"><i class="fa fa-lock"></i> Password & Security</a></li>
                 <li id="billingMethods"><a href="#/"><i class="fa fa-credit-card-alt"></i> Billing Methods</a></li>
-                <li id="notification"><a href="#/"><i class="fa fa-envelope"></i> Notification Settings</a></li>
-                <li id="connectedServices"><a href="#/"><i class="fa fa-link"></i> Connected Services</a></li>
             </ul>
         </div>
         <div class="settings-container">

@@ -1,0 +1,1007 @@
+ul {
+  list-style: none;
+}
+
+.settings {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  background: whitesmoke;
+  padding: 2.5rem 10rem;
+}
+.settings .settings-nav {
+  min-width: 25%;
+  margin-right: 1rem;
+}
+.settings .settings-nav ul li {
+  cursor: pointer;
+  padding: 1rem 0rem;
+}
+.settings .settings-nav ul li a {
+  color: black;
+}
+.settings .settings-nav ul li a i {
+  padding: 0rem 1rem;
+}
+.settings .settings-nav ul li:hover {
+  background: lightgrey;
+}
+.settings .settings-container {
+  width: 80%;
+}
+.settings .settings-container .settings-container-title {
+  width: 100%;
+  padding-bottom: 1rem;
+}
+.settings .settings-container .settings-container-title h2 {
+  font-size: 2rem;
+}
+.settings .settings-container .settings-account-container {
+  background: white;
+  border-radius: 15px;
+  border: 1px solid lightgrey;
+  margin: 1rem 0rem;
+}
+.settings .settings-container .settings-account-container .settings-account-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.6rem;
+  background: white;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom: 1px solid lightgrey;
+}
+.settings .settings-container .settings-account-container .settings-account-card h3 {
+  font-size: 1.25rem;
+}
+.settings .settings-container .settings-account-container .settings-account-card i {
+  cursor: pointer;
+  color: #797979;
+  padding: 0.6rem;
+  border-radius: 50%;
+  background: transparent;
+  border: 0.7px solid lightgrey;
+}
+.settings .settings-container .settings-account-container .settings-account-card i:hover {
+  background: #e2e2e2;
+}
+.settings .settings-container .settings-account-container .settings-account-profile-image {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 0.7px solid lightgrey;
+  padding: 1rem 0rem;
+}
+.settings .settings-container .settings-account-container .settings-account-profile-image .image-card {
+  padding: 1rem 1rem 1rem 3rem;
+}
+.settings .settings-container .settings-account-container .settings-account-profile-image .image-card img {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+}
+.settings .settings-container .settings-account-container .settings-account-profile-image form {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.settings .settings-container .settings-account-container .settings-account-profile-image form label {
+  padding: 0.5rem 0rem;
+  font-size: 1.2rem;
+  color: #054e97;
+}
+.settings .settings-container .settings-account-container .settings-account-profile-image form #changeAvatar {
+  margin: 0.5rem 0rem;
+  width: fit-content;
+  color: white;
+  cursor: pointer;
+  background: #054e97;
+  border-radius: 15px;
+  border: none;
+  font-size: 1.1rem;
+  padding: 0.4rem 1rem;
+}
+.settings .settings-container .settings-account-container .settings-account-profile-image form #changeAvatar:hover {
+  background: #0a345e;
+}
+.settings .settings-container .settings-account-container .settings-account-profile-image form p {
+  font-size: 0.9rem;
+  color: #797979;
+}
+.settings .settings-container .settings-account-container .settings-account-profile-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1.6rem;
+}
+.settings .settings-container .settings-account-container .settings-account-profile-info p {
+  font-weight: bolder;
+  font-size: 1rem;
+  padding: 0.3rem 0rem;
+}
+.settings .settings-container .settings-account-container .settings-account-profile-info p span {
+  margin-left: 0.6rem;
+  font-weight: normal;
+}
+.settings .settings-container .settings-account-godMode {
+  background: white;
+  border-radius: 15px;
+  border: 1px solid lightgrey;
+  margin: 2rem 0rem;
+  padding: 2rem;
+}
+.settings .settings-container .settings-account-godMode p {
+  font-size: 1rem;
+  padding-bottom: 2rem;
+}
+.settings .settings-container .settings-account-godMode p span {
+  font-size: 1.1rem;
+}
+.settings .settings-container .settings-account-godMode #becomeFreelancer {
+  color: white;
+  cursor: pointer;
+  background: #054e97;
+  border-radius: 15px;
+  border: none;
+  font-size: 1.1rem;
+  padding: 0.4rem 1rem;
+  margin-right: 1rem;
+}
+.settings .settings-container .settings-account-godMode #becomeFreelancer:hover {
+  background: #0a345e;
+}
+.settings .settings-container .settings-account-godMode #deleteAccount {
+  background: transparent;
+  cursor: pointer;
+  color: #054e97;
+  border-radius: 15px;
+  border: none;
+  font-size: 1.1rem;
+}
+.settings .settings-container .settings-account-godMode #deleteAccount:hover {
+  text-decoration: underline;
+}
+.settings .notification,
+.settings .connectedServices {
+  display: none;
+  width: 80%;
+}
+.settings .notification .settings-container-title,
+.settings .connectedServices .settings-container-title {
+  width: 100%;
+  padding-bottom: 1rem;
+}
+.settings .notification .settings-container-title h2,
+.settings .connectedServices .settings-container-title h2 {
+  font-size: 2rem;
+}
+.settings .settings-password {
+  display: none;
+  width: 80%;
+}
+.settings .settings-password .settings-password-container {
+  background: white;
+  border-radius: 15px;
+  border: 1px solid lightgrey;
+  margin: 1rem 0rem;
+}
+.settings .settings-password .settings-password-container p {
+  font-size: 0.9rem;
+  color: #797979;
+}
+.settings .settings-password .settings-password-container .settings-password-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.6rem;
+  background: white;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom: 1px solid lightgrey;
+}
+.settings .settings-password .settings-password-container .settings-password-card h3 {
+  font-size: 1.25rem;
+}
+.settings .settings-password .settings-password-container .settings-password-card i {
+  cursor: pointer;
+  color: #797979;
+  padding: 0.6rem;
+  border-radius: 50%;
+  background: transparent;
+  border: 0.7px solid lightgrey;
+}
+.settings .settings-password .settings-password-container .settings-password-card i:hover {
+  background: #e2e2e2;
+}
+.settings .settings-password .settings-password-container .settings-password-card2 {
+  width: 100%;
+  padding: 1.6rem;
+}
+.settings .settings-password .settings-password-container .settings-password-card2 form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.settings .settings-password .settings-password-container .settings-password-card2 form input {
+  width: 40%;
+  padding: 0.25rem;
+  border: 0.7px solid lightgrey;
+  font-size: 1.1rem;
+  margin: 0.7rem 0rem;
+  border-radius: 3px;
+}
+.settings .settings-password .settings-password-container .settings-password-card2 form #changePassBTN {
+  width: fit-content;
+  color: white;
+  cursor: pointer;
+  background: #054e97;
+  border-radius: 15px;
+  border: none;
+  font-size: 1.1rem;
+  padding: 0.4rem 1rem;
+}
+.settings .settings-password .settings-password-container .settings-password-card2 form #changePassBTN:hover {
+  background: #0a345e;
+}
+.settings .settings-password .settings-password-twoStep {
+  background: white;
+  border-radius: 15px;
+  border: 1px solid lightgrey;
+  margin: 1rem 0rem;
+}
+.settings .settings-password .settings-password-twoStep p {
+  font-size: 0.9rem;
+  color: #797979;
+}
+.settings .settings-password .settings-password-twoStep .settings-password-twoStep-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: 1.6rem;
+  background: white;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom: 1px solid lightgrey;
+}
+.settings .settings-password .settings-password-twoStep .settings-password-twoStep-card h3 {
+  width: 100%;
+}
+.settings .settings-password .settings-password-twoStep .settings-password-twoStep-card p {
+  font-size: 0.9rem;
+  padding-top: 1rem;
+}
+.settings .settings-password .settings-password-twoStep .settings-password-twoStep-option {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1.6rem;
+  border-bottom: 1px solid lightgrey;
+}
+.settings .settings-password .settings-password-twoStep .settings-password-twoStep-option h3 {
+  width: 100%;
+  text-align: start;
+  font-size: 1.1rem;
+}
+.settings .settings-password .settings-password-twoStep .settings-password-twoStep-option p {
+  width: 100%;
+  text-align: start;
+  padding-top: 1rem;
+}
+.settings .settings-password .settings-password-twoStep .settings-password-twoStep-option button {
+  align-self: flex-end;
+  width: 17%;
+  color: white;
+  cursor: pointer;
+  background: #054e97;
+  border-radius: 15px;
+  border: none;
+  font-size: 1.1rem;
+  padding: 0.4rem 1rem;
+  margin-right: 1rem;
+}
+.settings .settings-password .settings-password-twoStep .settings-password-twoStep-option button:hover {
+  background: #0a345e;
+}
+.settings .settings-billing {
+  width: 80%;
+  display: none;
+}
+.settings .settings-billing .settings-balance-container {
+  background: white;
+  border-radius: 15px;
+  border: 1px solid lightgrey;
+  margin: 1rem 0rem;
+}
+.settings .settings-billing .settings-balance-container p {
+  font-size: 0.9rem;
+  color: #797979;
+}
+.settings .settings-billing .settings-balance-container .settings-balance-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.6rem;
+  background: white;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom: 1px solid lightgrey;
+}
+.settings .settings-billing .settings-balance-container .settings-balance-card h3 {
+  font-size: 1.25rem;
+}
+.settings .settings-billing .settings-balance-container .settings-balance-card i {
+  cursor: pointer;
+  color: #797979;
+  padding: 0.6rem;
+  border-radius: 50%;
+  background: transparent;
+  border: 0.7px solid lightgrey;
+}
+.settings .settings-billing .settings-balance-container .settings-balance-card i:hover {
+  background: #e2e2e2;
+}
+.settings .settings-billing .settings-balance-container .settings-balance-card2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1.6rem;
+}
+.settings .settings-billing .settings-balance-container .settings-balance-card2 span {
+  color: black;
+  font-size: 1.2rem;
+}
+.settings .settings-billing .settings-balance-container .settings-balance-card2 button {
+  color: white;
+  cursor: pointer;
+  background: #054e97;
+  border-radius: 15px;
+  border: none;
+  font-size: 1.1rem;
+  padding: 0.4rem 1rem;
+}
+.settings .settings-billing .settings-balance-container .settings-balance-card2 button:hover {
+  background: #0a345e;
+}
+.settings .settings-billing .settings-billing-container {
+  background: white;
+  border-radius: 15px;
+  border: 1px solid lightgrey;
+  margin: 1rem 0rem;
+}
+.settings .settings-billing .settings-billing-container p {
+  font-size: 0.9rem;
+  color: #797979;
+}
+.settings .settings-billing .settings-billing-container .settings-billing-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1.6rem;
+  background: white;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom: 1px solid lightgrey;
+}
+.settings .settings-billing .settings-billing-container .settings-billing-card h3 {
+  font-size: 1.2rem;
+}
+.settings .settings-billing .settings-billing-container .settings-billing-card button {
+  cursor: pointer;
+  border-radius: 15px;
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  color: #0a345e;
+  padding: 0.6rem 1rem;
+  border: 1px solid lightgrey;
+}
+.settings .settings-billing .settings-billing-container .settings-billing-card button:hover {
+  transition: all 0.2s ease;
+  background: #e9e9e9;
+}
+.settings .settings-billing .settings-billing-container .settings-billing-option {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1.6rem;
+}
+.settings .settings-billing .settings-billing-container .settings-billing-option p {
+  color: black;
+  font-size: 1rem;
+  padding-bottom: 0.5rem;
+}
+.settings .settings-billing .settings-billing-container .settings-billing-option span {
+  color: #797979;
+  font-size: 0.9rem;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  cursor: pointer;
+  color: white;
+}
+
+#editForm {
+  position: fixed;
+  top: 30%;
+  left: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  height: 35%;
+  padding: 2rem;
+  background: white;
+  border-radius: 15px;
+}
+#editForm label {
+  font-size: 1.5rem;
+  color: #0a345e;
+  text-decoration: underline;
+}
+#editForm input {
+  border: none;
+  border: solid 1px #0a345e;
+  border-radius: 15px;
+  width: 50%;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+}
+#editForm #continueBtn {
+  width: 40%;
+  color: white;
+  cursor: pointer;
+  background: #054e97;
+  border-radius: 15px;
+  border: none;
+  font-size: 1.1rem;
+  padding: 0.4rem 1rem;
+}
+#editForm #continueBtn:hover {
+  background: #0a345e;
+}
+
+.overlay .closebtn:hover {
+  color: #ccc;
+}
+
+@media screen and (max-width: 754px) {
+  .settings {
+    margin-top: 3.8rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: whitesmoke;
+    padding: 2.5rem 1rem;
+  }
+  .settings .settings-nav {
+    min-width: 25%;
+    margin-right: 0;
+  }
+  .settings .settings-nav ul li {
+    cursor: pointer;
+    padding: 1rem 0rem;
+  }
+  .settings .settings-nav ul li a {
+    color: black;
+  }
+  .settings .settings-nav ul li a i {
+    padding: 0rem 1rem;
+  }
+  .settings .settings-nav ul li:hover {
+    background: lightgrey;
+  }
+  .settings .settings-container {
+    width: 100%;
+  }
+  .settings .settings-container .settings-container-title {
+    width: 100%;
+    padding: 0.5rem;
+  }
+  .settings .settings-container .settings-container-title h2 {
+    font-size: 2rem;
+  }
+  .settings .settings-container .settings-account-container {
+    background: white;
+    border-radius: 15px;
+    border: 1px solid lightgrey;
+    margin: 1rem 0rem;
+  }
+  .settings .settings-container .settings-account-container .settings-account-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1.5rem;
+    background: white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom: 1px solid lightgrey;
+  }
+  .settings .settings-container .settings-account-container .settings-account-card h3 {
+    font-size: 1.25rem;
+  }
+  .settings .settings-container .settings-account-container .settings-account-card i {
+    cursor: pointer;
+    color: #797979;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 50%;
+    background: transparent;
+    border: 0.7px solid lightgrey;
+  }
+  .settings .settings-container .settings-account-container .settings-account-card i:hover {
+    background: #e2e2e2;
+  }
+  .settings .settings-container .settings-account-container .settings-account-profile-image {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 0.7px solid lightgrey;
+    padding: 1rem 0rem;
+  }
+  .settings .settings-container .settings-account-container .settings-account-profile-image .image-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+  }
+  .settings .settings-container .settings-account-container .settings-account-profile-image .image-card img {
+    width: 7rem;
+    height: 7rem;
+    border: 0.7px solid lightgrey;
+    border-radius: 50%;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  }
+  .settings .settings-container .settings-account-container .settings-account-profile-image form {
+    width: 100%;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .settings .settings-container .settings-account-container .settings-account-profile-image form label {
+    padding: 0.5rem 0rem;
+    font-size: 1.2rem;
+    color: #054e97;
+  }
+  .settings .settings-container .settings-account-container .settings-account-profile-image form #changeAvatar {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 1rem 0rem;
+    width: fit-content;
+    color: white;
+    cursor: pointer;
+    background: #054e97;
+    border-radius: 15px;
+    border: none;
+    font-size: 1.1rem;
+    padding: 0.4rem 1rem;
+  }
+  .settings .settings-container .settings-account-container .settings-account-profile-image form #changeAvatar:hover {
+    background: #0a345e;
+  }
+  .settings .settings-container .settings-account-container .settings-account-profile-image form p {
+    font-size: 0.9rem;
+    color: #797979;
+  }
+  .settings .settings-container .settings-account-container .settings-account-profile-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1.5rem;
+  }
+  .settings .settings-container .settings-account-container .settings-account-profile-info p {
+    font-weight: bolder;
+    font-size: 0.85rem;
+    padding: 0.3rem 0rem;
+  }
+  .settings .settings-container .settings-account-container .settings-account-profile-info p span {
+    margin-left: 0.4rem;
+    font-weight: normal;
+  }
+  .settings .settings-container .settings-account-godMode {
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    border: 1px solid lightgrey;
+    margin: 1rem 0rem;
+    padding: 2rem;
+  }
+  .settings .settings-container .settings-account-godMode p {
+    text-align: center;
+    font-size: 1rem;
+    padding-bottom: 2rem;
+  }
+  .settings .settings-container .settings-account-godMode p span {
+    font-size: 1.1rem;
+  }
+  .settings .settings-container .settings-account-godMode #becomeFreelancer {
+    color: white;
+    cursor: pointer;
+    background: #054e97;
+    border-radius: 15px;
+    border: none;
+    font-size: 1.1rem;
+    padding: 0.4rem 1rem;
+    margin-right: 0;
+  }
+  .settings .settings-container .settings-account-godMode #becomeFreelancer:hover {
+    background: #0a345e;
+  }
+  .settings .settings-container .settings-account-godMode #deleteAccount {
+    background: transparent;
+    cursor: pointer;
+    color: #054e97;
+    border-radius: 15px;
+    border: none;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+  }
+  .settings .settings-container .settings-account-godMode #deleteAccount:hover {
+    text-decoration: underline;
+  }
+  .settings .settings-password {
+    display: none;
+    width: 100%;
+  }
+  .settings .settings-password .settings-password-container {
+    background: white;
+    border-radius: 15px;
+    border: 1px solid lightgrey;
+    margin: 1rem 0rem;
+  }
+  .settings .settings-password .settings-password-container p {
+    font-size: 0.9rem;
+    color: #797979;
+  }
+  .settings .settings-password .settings-password-container .settings-password-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+    background: white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom: 1px solid lightgrey;
+  }
+  .settings .settings-password .settings-password-container .settings-password-card h3 {
+    font-size: 1.25rem;
+  }
+  .settings .settings-password .settings-password-container .settings-password-card i {
+    cursor: pointer;
+    color: #797979;
+    padding: 0.6rem;
+    border-radius: 50%;
+    background: transparent;
+    border: 0.7px solid lightgrey;
+  }
+  .settings .settings-password .settings-password-container .settings-password-card i:hover {
+    background: #e2e2e2;
+  }
+  .settings .settings-password .settings-password-container .settings-password-card2 {
+    width: 100%;
+    padding: 1rem;
+  }
+  .settings .settings-password .settings-password-container .settings-password-card2 form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .settings .settings-password .settings-password-container .settings-password-card2 form input {
+    width: 60%;
+    padding: 0.25rem;
+    border: 0.7px solid lightgrey;
+    font-size: 1rem;
+    margin: 0.5rem 0rem;
+    border-radius: 3px;
+  }
+  .settings .settings-password .settings-password-container .settings-password-card2 form #changePassBTN {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: fit-content;
+    color: white;
+    cursor: pointer;
+    background: #054e97;
+    border-radius: 15px;
+    border: none;
+    font-size: 1.1rem;
+    padding: 0.4rem 1rem;
+  }
+  .settings .settings-password .settings-password-container .settings-password-card2 form #changePassBTN:hover {
+    background: #0a345e;
+  }
+  .settings .settings-password .settings-password-twoStep {
+    background: white;
+    border-radius: 15px;
+    border: 1px solid lightgrey;
+    margin: 1rem 0rem;
+  }
+  .settings .settings-password .settings-password-twoStep p {
+    font-size: 0.9rem;
+    color: #797979;
+  }
+  .settings .settings-password .settings-password-twoStep .settings-password-twoStep-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 1rem;
+    background: white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom: 1px solid lightgrey;
+  }
+  .settings .settings-password .settings-password-twoStep .settings-password-twoStep-card h3 {
+    width: 100%;
+  }
+  .settings .settings-password .settings-password-twoStep .settings-password-twoStep-card p {
+    font-size: 0.9rem;
+    padding-top: 1rem;
+  }
+  .settings .settings-password .settings-password-twoStep .settings-password-twoStep-option {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid lightgrey;
+  }
+  .settings .settings-password .settings-password-twoStep .settings-password-twoStep-option h3 {
+    width: 100%;
+    text-align: start;
+    font-size: 1.1rem;
+  }
+  .settings .settings-password .settings-password-twoStep .settings-password-twoStep-option p {
+    width: 100%;
+    text-align: start;
+    padding-top: 1rem;
+  }
+  .settings .settings-password .settings-password-twoStep .settings-password-twoStep-option button {
+    align-self: flex-start;
+    width: 100%;
+    color: white;
+    cursor: pointer;
+    background: #054e97;
+    border-radius: 15px;
+    border: none;
+    font-size: 1.1rem;
+    padding: 0.4rem 1rem;
+    margin-right: 0;
+    margin-top: 1rem;
+  }
+  .settings .settings-password .settings-password-twoStep .settings-password-twoStep-option button:hover {
+    background: #0a345e;
+  }
+  .settings .settings-billing {
+    width: 100%;
+    display: none;
+  }
+  .settings .settings-billing .settings-balance-container {
+    background: white;
+    border-radius: 15px;
+    border: 1px solid lightgrey;
+    margin: 1rem 0rem;
+  }
+  .settings .settings-billing .settings-balance-container p {
+    font-size: 0.9rem;
+    color: #797979;
+  }
+  .settings .settings-billing .settings-balance-container .settings-balance-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+    background: white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom: 1px solid lightgrey;
+  }
+  .settings .settings-billing .settings-balance-container .settings-balance-card h3 {
+    font-size: 1.25rem;
+  }
+  .settings .settings-billing .settings-balance-container .settings-balance-card i {
+    cursor: pointer;
+    color: #797979;
+    padding: 0.6rem;
+    border-radius: 50%;
+    background: transparent;
+    border: 0.7px solid lightgrey;
+  }
+  .settings .settings-billing .settings-balance-container .settings-balance-card i:hover {
+    background: #e2e2e2;
+  }
+  .settings .settings-billing .settings-balance-container .settings-balance-card2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 1rem;
+  }
+  .settings .settings-billing .settings-balance-container .settings-balance-card2 span {
+    width: 100%;
+    text-align: start;
+    color: black;
+    font-size: 1.2rem;
+  }
+  .settings .settings-billing .settings-balance-container .settings-balance-card2 button {
+    width: 100%;
+    margin-top: 1rem;
+    color: white;
+    cursor: pointer;
+    background: #054e97;
+    border-radius: 15px;
+    border: none;
+    font-size: 1.1rem;
+    padding: 0.4rem 1rem;
+  }
+  .settings .settings-billing .settings-balance-container .settings-balance-card2 button:hover {
+    background: #0a345e;
+  }
+  .settings .settings-billing .settings-billing-container {
+    background: white;
+    border-radius: 15px;
+    border: 1px solid lightgrey;
+    margin: 1rem 0rem;
+  }
+  .settings .settings-billing .settings-billing-container p {
+    font-size: 0.9rem;
+    color: #797979;
+  }
+  .settings .settings-billing .settings-billing-container .settings-billing-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 1rem;
+    background: white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom: 1px solid lightgrey;
+  }
+  .settings .settings-billing .settings-billing-container .settings-billing-card h3 {
+    font-size: 1.2rem;
+  }
+  .settings .settings-billing .settings-billing-container .settings-billing-card button {
+    margin-top: 1rem;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 15px;
+    border: none;
+    background: transparent;
+    font-size: 1rem;
+    color: #0a345e;
+    padding: 0.6rem 1rem;
+    border: 1px solid lightgrey;
+  }
+  .settings .settings-billing .settings-billing-container .settings-billing-card button:hover {
+    transition: all 0.2s ease;
+    background: #e9e9e9;
+  }
+  .settings .settings-billing .settings-billing-container .settings-billing-option {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .settings .settings-billing .settings-billing-container .settings-billing-option p {
+    color: black;
+    font-size: 1rem;
+    padding-bottom: 0.5rem;
+  }
+  .settings .settings-billing .settings-billing-container .settings-billing-option span {
+    color: #797979;
+    font-size: 0.9rem;
+  }
+  .settings .overlay {
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: black;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  .settings .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    cursor: pointer;
+    color: white;
+  }
+  .settings #editForm {
+    position: fixed;
+    top: 25%;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    height: fit-content;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+  }
+  .settings #editForm label {
+    font-size: 1.5rem;
+    color: #0a345e;
+    text-decoration: underline;
+  }
+  .settings #editForm input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    border: solid 1px #0a345e;
+    border-radius: 15px;
+    width: 80%;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+  }
+  .settings #editForm #continueBtn {
+    width: 70%;
+    color: white;
+    cursor: pointer;
+    background: #054e97;
+    border-radius: 15px;
+    border: none;
+    font-size: 1.1rem;
+    padding: 0.4rem 1rem;
+  }
+  .settings #editForm #continueBtn:hover {
+    background: #0a345e;
+  }
+  .settings .overlay .closebtn:hover {
+    color: #ccc;
+  }
+}
