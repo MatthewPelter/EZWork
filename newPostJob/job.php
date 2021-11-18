@@ -88,7 +88,7 @@ if (mysqli_num_rows($jobResult) > 0) {
                             <?php if ($r['status'] == 0) {
                                 echo "Open";
                             } else {
-                                echo "Close";
+                                echo "Closed";
                             } ?>
                         </span>
                     </p>

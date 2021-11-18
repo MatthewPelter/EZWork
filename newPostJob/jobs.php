@@ -89,7 +89,11 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
 
     <style type="text/css">
         yellow {
-            color: yellow;
+            color: #e1b12c;
+        }
+
+        red {
+            color: #e74c3c;
         }
     </style>
 </head>
