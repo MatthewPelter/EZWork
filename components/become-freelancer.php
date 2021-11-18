@@ -8,7 +8,7 @@ function securityscan($data)
     return $data;
 }
 if (!isset($_SESSION['userid']) && !isset($_SESSION['user_id'])) {
-    die("Error");
+    die("Invalid Authorization");
 }
 
 $username = $_SESSION['userid'];

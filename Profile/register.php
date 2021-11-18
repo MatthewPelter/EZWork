@@ -311,7 +311,7 @@ $row = mysqli_fetch_assoc($result);
 
                         <div class="stepButtons">
                             <span id="backToProfilePhoto">Back</span>
-                            <input type="submit" value="Become Freelancer">
+                            <input type="submit" name="submit" value="Become Freelancer">
                         </div>
 
                     </div>
