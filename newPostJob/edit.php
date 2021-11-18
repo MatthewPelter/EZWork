@@ -62,9 +62,9 @@ if (mysqli_num_rows($jobResult) > 0) {
     ?>
 
     <div class="job">
-        <h2>Job Details</h2>
+        <h2>Edit Job Post</h2>
         <div class="job-container" style="grid-template-rows: none !important;">
-            <form class="form" action="../components/edit-post" method="post" name="edit-post" id="myForm">
+            <form class="form" action="../components/edit-post?id=<?php echo $job_id; ?>" method="post" name="edit-post" id="myForm">
                 <div class="jobCard">
                     <div class="jobTitle">
                         <input type="text" name="title" id="title" value="<?php echo $r['title']; ?>" required>
