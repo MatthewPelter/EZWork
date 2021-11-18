@@ -4,7 +4,7 @@ require_once('../classes/DB.php');
 
 if (!isset($_SESSION['userid'])) {
     header('Location: ../login/index');
-    echo "NOT LOGGED IN";
+    die("NOT LOGGED IN");
 }
 
 // Checking second page values for empty, If it finds any blank field then redirected to second page.
@@ -39,7 +39,7 @@ if (isset($_POST['skills'])) {
 
             $_POST['image'] = $url;
         } else {
-            $_POST['image'] = NULL;
+            $_POST['image'] = "";
         }
 
         foreach ($_POST as $key => $value) {
@@ -160,4 +160,5 @@ if (isset($_POST['skills'])) {
 </body>
 <!--Script for the search bar and datalist-->
 <script src="../SkillsContainer/searchProfile.js"></script>
+
 </html>
