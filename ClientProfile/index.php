@@ -5,9 +5,6 @@ require_once("../classes/DB.php");
 
 
 $username = $_SESSION['userid'];
-//$getUserID = "SELECT id FROM clients WHERE username = '$username'";
-// $getResult = mysqli_query($conn, $getUserID);
-// $userrow = mysqli_fetch_assoc($getResult);
 $userID = $_SESSION['user_id'];
 ?>
 
@@ -407,4 +404,5 @@ $userID = $_SESSION['user_id'];
     }
 </script>
 -->
+
 </html>

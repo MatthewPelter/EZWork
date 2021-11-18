@@ -1,4 +1,6 @@
+
 <?php
+session_start(); // Session starts here.
 require_once('../classes/DB.php');
 
 if (!isset($_SESSION['user_id'])) {
@@ -12,3 +14,4 @@ if (!isset($_SESSION['user_id'])) {
         header('Location: ../login/index');
     }
 }
+?>
