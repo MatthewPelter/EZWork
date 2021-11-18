@@ -13,28 +13,31 @@ if (!isset($_SESSION['userid'])) {
         header('Location: ../login/index');
     }
 }
-
+if (isset($_POST['typeOfJob']) && !empty($_POST['typeOfJob'])) {
+    foreach ($_POST as $key => $value) {
+        $_SESSION['post'][$key] = $value;
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <head>
-            <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="description" content="A platform for skilled workers or talented people to freelance, find projects to work on, extra ways to earn income.">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <script src="https://kit.fontawesome.com/e9089fea9d.js" crossorigin="anonymous"></script>
-            <title>EZWork | Find Jobs or Freelancers</title>
-            <link rel="preconnect" href="https://fonts.googleapis.com">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A platform for skilled workers or talented people to freelance, find projects to work on, extra ways to earn income.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e9089fea9d.js" crossorigin="anonymous"></script>
+    <title>EZWork | Find Jobs or Freelancers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet"> 
-            <link rel="icon" href="../logo/logo.svg">
-            <link rel="stylesheet" href="../Styles/style.css">
-        </head>
-    </head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link rel="icon" href="../logo/logo.svg">
+    <link rel="stylesheet" href="../Styles/style.css">
+</head>
 
 <body>
     <?php include '../navbar.php'; ?>
@@ -67,7 +70,7 @@ if (!isset($_SESSION['userid'])) {
                                     <div class="card2">
                                         <input type="radio" id="short" name="length" value="s" required>
                                     </div>
-                                    
+
                                 </div>
                                 <span class="checkmark"></span>
                                 <label for="short">Short term or part time work</label>
@@ -85,16 +88,16 @@ if (!isset($_SESSION['userid'])) {
                                         <input type="radio" id="long" name="length" value="l">
                                     </div>
                                 </div>
-                                <label for="long">Designated, longer term work</label>   
+                                <label for="long">Designated, longer term work</label>
                                 <div class="description">
                                     <p>More than 30hrs/week</p>
                                     <p>3+ months</p>
                                 </div>
                             </div>
                         </div>
-        
+
                         <div class="PostAJobCancel0rContinue">
-                
+
                             <input type="submit" value="Next: Title" />
                         </div>
                     </form>
@@ -111,4 +114,5 @@ if (!isset($_SESSION['userid'])) {
 </body>
 <!--Script for the search bar and datalist-->
 <script src="../SkillsContainer/searchProfile.js"></script>
+
 </html>
