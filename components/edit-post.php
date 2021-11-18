@@ -47,7 +47,7 @@ if (isset($_POST['submit'])) {
 
     $editPost = mysqli_query($conn, "UPDATE jobs SET length = '$length', title = '$title', size = '$size', budget = '$budget', rate = '$rate', description = '$description' WHERE id='$job_id'") or die(mysqli_errno($conn));
     if ($editPost) {
-        header("location: ./job?id=" . $job_id);
+        header("location: https://ez-work.herokuapp.com/newPostJob/job.php?id=" . $job_id);
     } else {
         die("We had an error editing your post...");
     }
