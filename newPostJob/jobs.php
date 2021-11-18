@@ -29,18 +29,12 @@ if (!isset($_SESSION['user_id'])) {
 
 $queries = array();
 parse_str($_SERVER['QUERY_STRING'], $queries);
-$jobsSQL = "SELECT * FROM jobs";
+$jobsSQL = "SELECT * FROM jobs WHERE status != 1";
 
-$num = 0;
 foreach ($queries as $x => $val) {
     if ($x != "sort") {
-        if ($num == 0) {
-            $jobsSQL .= " WHERE " . $x . "='" . $val . "'";
-        } else {
-            $jobsSQL .= " AND " . $x . "='" . $val . "'";
-        }
+        $jobsSQL .= " AND " . $x . "='" . $val . "'";
     }
-    $num = $num + 1;
 }
 
 if (isset($_GET['sort']) && !empty($_GET['sort'])) {
@@ -411,6 +405,7 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
 <script type="text/javascript">
     var url = "https://ez-work.herokuapp.com/newPostJob/jobs?";
 
+    // this function is such a mess but it works 
     function sort(by) {
         var newpage = "";
         var text = window.location.href;
