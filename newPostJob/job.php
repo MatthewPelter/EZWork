@@ -11,7 +11,9 @@ if (!isset($_SESSION['user_id'])) {
     $result = mysqli_query($conn, $sql);
     if (mysqli_num_rows($result) == 0) {
         header('Location: ../login/index');
+        die();
     }
+    $myData = mysqli_fetch_assoc($result);
 }
 
 $job_id = $_GET['id'];
@@ -154,7 +156,9 @@ if (mysqli_num_rows($jobResult) > 0) {
             </div>
 
             <div class="options">
-                <button>Submit A Proposal</button>
+                <?php if ($myData['freelancer_id'] != NULL && $unameFetched['username'] != $_SESSION['userid']) { ?>
+                    <button>Submit A Proposal</button>
+                <?php } ?>
 
                 <div class="flag">
                     <i class="fa fa-flag" aria-hidden="true"></i>
