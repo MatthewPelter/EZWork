@@ -33,7 +33,7 @@ $jobsSQL = "SELECT * FROM jobs";
 
 $num = 0;
 foreach ($queries as $x => $val) {
-    if ($x != "sort" || $x['skills'] != "") {
+    if ($x != "sort" || $val != "") {
         if ($num == 0) {
             $jobsSQL .= " WHERE " . $x . "='" . $val . "'";
         } else {
