@@ -373,6 +373,11 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
 
 <!-- This script is used to function the filer section-->
 <script type="text/javascript">
+    function sort(by) {
+        var url = "https://ez-work.herokuapp.com/newPostJob/jobs&sort=" + by;
+        window.location = url;
+    }
+
     const sortArrow = document.getElementById('sortArrow');
 
     function toggleSortCard() {
