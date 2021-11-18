@@ -163,19 +163,33 @@ if (isset($_POST['submit'])) {
                                             </div>
                                         </li>
 
-                                    <?php
+                                        <?php
                                     } else {
-                                    ?>
-                                        <li>
-                                            <div class="message-data">
-                                                <span class="message-data-name"><i class="fa fa-circle online"></i><?php echo $row['Sender']; ?></span>
-                                            </div>
-                                            <div class="message my-message">
-                                                <?php echo $row['body']; ?>
-                                            </div>
-                                        </li>
+                                        if ($row['jobID'] != NULL) { ?>
+                                            <li>
+                                                <div class="message-data">
+                                                    <span class="message-data-name"><i class="fa fa-circle online"></i><?php echo $row['Sender']; ?></span>
+                                                </div>
+                                                <div class="message my-message">
+                                                    <?php echo $row['Sender']; ?> is interested in your project you posted.<br />
+                                                    Make sure to view their profile and rating before you accept their proposal.<br />
+                                                    <button>Agree</button>
+                                                    <button>Deny</button>
+                                                    <?php echo $row['body']; ?>
+                                                </div>
+                                            </li>
+                                        <?php } else { ?>
+                                            <li>
+                                                <div class="message-data">
+                                                    <span class="message-data-name"><i class="fa fa-circle online"></i><?php echo $row['Sender']; ?></span>
+                                                </div>
+                                                <div class="message my-message">
+                                                    <?php echo $row['body']; ?>
+                                                </div>
+                                            </li>
 
                                 <?php
+                                        }
                                     }
                                 }
                                 ?>
@@ -258,7 +272,6 @@ if (isset($_POST['submit'])) {
             messageMainContainer2.style.display = "inline-block";
         }
     }
-
 </script>
 
 </html>

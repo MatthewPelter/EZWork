@@ -24,6 +24,12 @@ $receiver = $postBody->receiver;
 $body = securityscan($body);
 $receiver = securityscan($receiver);
 
+if (isset($_POST['jobID'])) {
+    $jobID = securityscan($_POST['jobID']);
+} else {
+    $jobID = NULL;
+}
+
 $id = mysqli_query($conn, "SELECT id FROM clients WHERE username='$receiver'");
 $getID = mysqli_fetch_assoc($id);
 $getID = $getID['id'];
@@ -42,5 +48,5 @@ if ($sender == null) {
     die('{ "Error": "Missing Sender!" }');
 }
 
-$query = mysqli_query($conn, "INSERT INTO messages(body, sender, receiver, isread) VALUES('$body', '$sender', '$getID', 0)") or die(mysqli_errno($conn));
+$query = mysqli_query($conn, "INSERT INTO messages(body, sender, receiver, isread, jobID) VALUES('$body', '$sender', '$getID', 0, '$jobID')") or die(mysqli_errno($conn));
 echo '{ "Success": "Message Sent!" }';
