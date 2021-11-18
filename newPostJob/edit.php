@@ -64,94 +64,106 @@ if (mysqli_num_rows($jobResult) > 0) {
     <div class="job">
         <h2>Job Details</h2>
         <div class="job-container">
-
-            <div class="jobCard">
-                <div class="jobTitle">
-                    <p><?php echo $r['title']; ?></p>
-                </div>
-                <div class="scope">
-                    <h3><?php echo $r['skills']; ?></h3>
-                    <p>Posted On: <span><?php echo $r['datePosted']; ?></span></p>
-                    <p>
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>
-                            <?php if ($r['location'] == 'us') {
-                                echo "United States ONLY";
-                            } else {
-                                echo "Worldwide";
-                            } ?>
-                        </span>
-                    </p>
-                    <p>Status:
-                        <span id="status">
-                            <?php if ($r['status'] == 0) {
-                                echo "Open";
-                            } else {
-                                echo "Close";
-                            } ?>
-                        </span>
-                    </p>
-                </div>
-
-                <div class="jobDescription">
-                    <h3>Description</h3>
-                    <p><?php echo $r['description']; ?></p>
-                </div>
-
-                <div class="budgetAndExperience">
-                    <div class="budget">
-                        <?php if ($r['rate'] > 0) { ?>
-                            <p>$<?php echo $r['rate']; ?> / hr</p>
-                            <span><?php echo "Hourly Rate" ?></span>
-                        <?php } else if ($r['budget'] > 0) { ?>
-                            <p>$ <?php echo $r['budget']; ?></p>
-                            <span><?php echo "Project Budget" ?></span>
-                        <?php } else { ?>
-                            <p></p>
-                            <span> <?php echo "No budget or pay rate set yet... Contact client for pricing."; ?></span>
-                        <?php } ?>
-
+            <form class="form" action="../components/register-process" method="post" name="register" id="myForm">
+                <div class="jobCard">
+                    <div class="jobTitle">
+                        <input type="text" name="title" id="title" value="<?php echo $r['title']; ?>" required>
                     </div>
-                    <div class="experience">
-                        <h4>Experience Level</h4>
-                        <span><?php echo ucfirst($r['experience']); ?></span>
-                    </div>
-                </div>
-
-                <div class="jobType">
-                    <div class="type">
-                        <h4>Job Type:</h4>
+                    <div class="scope">
+                        <h3><?php echo $r['skills']; ?></h3>
+                        <p>Posted On: <span><?php echo $r['datePosted']; ?></span></p>
                         <p>
-                            <?php if ($r['length'] == 'l') {
-                                echo "Designated, longer term work";
-                            } else {
-                                echo "Short term or part time work";
-                            } ?>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>
+                                <?php if ($r['location'] == 'us') {
+                                    echo "United States ONLY";
+                                } else {
+                                    echo "Worldwide";
+                                } ?>
+                            </span>
+                        </p>
+                        <p>Status:
+                            <span id="status">
+                                <?php if ($r['status'] == 0) {
+                                    echo "Open";
+                                } else {
+                                    echo "Close";
+                                } ?>
+                            </span>
                         </p>
                     </div>
-                    <div class="size">
-                        <h4>Project Size:</h4>
-                        <p><?php echo ucfirst($r['size']); ?></p>
+
+                    <div class="jobDescription">
+                        <h3>Description</h3>
+                        <input name="description" id="description" type="text" value="<?php echo $r['description']; ?>">
                     </div>
 
-                </div>
+                    <div class="budgetAndExperience">
+                        <div class="budget">
+                            <?php if ($r['rate'] > 0) { ?>
+                                <p>$<?php echo $r['rate']; ?> / hr</p>
+                                <span><?php echo "Hourly Rate" ?></span>
+                            <?php } else if ($r['budget'] > 0) { ?>
+                                <p>$ <?php echo $r['budget']; ?></p>
+                                <span><?php echo "Project Budget" ?></span>
+                            <?php } else { ?>
+                                <p></p>
+                                <span> <?php echo "No budget or pay rate set yet... Contact client for pricing."; ?></span>
+                            <?php } ?>
 
-                <div class="imageCard">
-                    <h3><i class="fa fa-paperclip" aria-hidden="true"></i>Attached Image</h3>
-                    <div class="image">
-                        <?php if ($r['image'] != NULL) { ?>
-                            <img src="<?php echo $r['image']; ?>" alt="">
-                        <?php } else { ?>
-                            <span>None Uploaded</span>
-                        <?php } ?>
+                        </div>
+                        <div class="experience">
+                            <h4>Experience Level</h4>
+                            <select id="experience" name="experience">
+                                <option <?php if ($r['experience'] == 'entry') {
+                                            echo "selected";
+                                        } ?> value="entry">Entry</option>
+                                <option <?php if ($r['experience'] == 'intermediate') {
+                                            echo "selected";
+                                        } ?> value="intermediate">Intermediate</option>
+                                <option <?php if ($r['experience'] == 'expert') {
+                                            echo "selected";
+                                        } ?> value="expert">Expert</option>
+                            </select>
+                            <span><?php echo ucfirst($r['experience']); ?></span>
+                        </div>
                     </div>
 
-                </div>
-            </div>
+                    <div class="jobType">
+                        <div class="type">
+                            <h4>Job Type:</h4>
+                            <select id="length" name="length">
+                                <option <?php if ($r['length'] == 's') {
+                                            echo "selected";
+                                        } ?> value="s">Short term or part time work</option>
+                                <option <?php if ($r['length'] == 'l') {
+                                            echo "selected";
+                                        } ?> value="l">Designated, longer term work"</option>
+                            </select>
+                        </div>
+                        <div class="size">
+                            <h4>Project Size:</h4>
 
-            <div class="options">
-                <button>Submit</button>
-            </div>
+                            <select id="size" name="size">
+                                <option <?php if ($r['size'] == 'small') {
+                                            echo "selected";
+                                        } ?> value="small">Small</option>
+                                <option <?php if ($r['size'] == 'medium') {
+                                            echo "selected";
+                                        } ?> value="medium">Medium</option>
+                                <option <?php if ($r['size'] == 'large') {
+                                            echo "selected";
+                                        } ?> value="large">Large</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="options">
+                    <input type="submit" value="Submit" name="submit">
+                </div>
+            </form>
         </div>
     </div>
 
