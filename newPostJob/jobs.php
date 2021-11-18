@@ -375,7 +375,7 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
 
 <!-- This script is used to function the filer section-->
 <script type="text/javascript">
-    var url = "https://ez-work.herokuapp.com/newPostJob/jobs?";
+    var url = window.location.href;
 
     function sort(by) {
         url = url + "sort=" + by;
@@ -384,7 +384,7 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
 
     function filter(by, type) {
         // messy but it works
-        if (url[url.length - 1] == "?") {
+        if (url[url.length - 1] != "?") {
             url = url + "&";
         }
         if (type == "experience") {
