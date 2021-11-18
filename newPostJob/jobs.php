@@ -27,7 +27,7 @@ if (!isset($_SESSION['user_id'])) {
     }
 }
 
-$jobsSQL = "SELECT * FROM jobs ORDER BY id DESC";
+$jobsSQL = "SELECT * FROM jobs";
 
 if (isset($_GET['sort']) && !empty($_GET['sort'])) {
     $sort = securityscan($_GET['sort']);
@@ -45,6 +45,7 @@ if (isset($_GET['sort']) && !empty($_GET['sort'])) {
             $jobsSQL .= " ORDER BY budget DESC, rate DESC";
             break;
         default:
+            $jobsSQL .= " ORDER BY id DESC";
             break;
     }
 }
