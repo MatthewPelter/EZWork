@@ -14,7 +14,7 @@ if (!isset($_SESSION['userid']) && !isset($_SESSION['user_id'])) {
 }
 
 $username = $_SESSION['userid'];
-$userID = $_SESSION['user_id'];
+$user_id = $_SESSION['user_id'];
 
 
 if (isset($_POST['submit'])) {
