@@ -92,9 +92,10 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
         </div>
 
         <div class="jobs-container">
-            <button id="resetSortFilter" onclick="resetOptions()">Reset</button>
+
 
             <div class="sortMenu">
+                <button id="resetSortFilter" onclick="resetOptions()">Reset</button>
                 <div class="sort" onclick="toggleSortCard()">
                     <h3>Sort</h3>
                     <i class="fa fa-sort-desc" id="sortArrow" aria-hidden="true"></i>
