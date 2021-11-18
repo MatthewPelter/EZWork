@@ -160,7 +160,7 @@ if (mysqli_num_rows($jobResult) > 0) {
                 <?php
                 if ($r['typeOfJob'] == 'require') {
                     if ($myData['freelancer_id'] != NULL && $unameFetched['username'] != $_SESSION['userid']) { ?>
-                        <button id="proposalBtn" onclick="openProposal()">Submit A Proposal</button>
+                        <button id="proposalBtn">Submit A Proposal</button>
                         <div id="proposal" style="display: none;">
                             <h1>Are you willing to pay for this service?</h1>
                             <h2>If this freelancer has what you are looking for, click Pay now and pay for your service.</h2>
@@ -170,7 +170,7 @@ if (mysqli_num_rows($jobResult) > 0) {
                         </div>
                     <?php }
                 } else { ?>
-                    <button id="payBtn" onclick="openPay()">Pay for Service</button>
+                    <button id="payBtn">Pay for Service</button>
                     <div id="offer" style="display: none;">
                         <h1>Are you willing to accept this job?</h1>
                         <h2>By submitting a proposal, you agree that you are fully capable of completing this task.</h2>
@@ -246,14 +246,13 @@ if (mysqli_num_rows($jobResult) > 0) {
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
-        function openProposal() {
+        $('#proposalBtn').click(function() {
             $('#proposal').css('display', 'block');
-            console.log("Clicked");
-        }
+        });
 
-        function openPay() {
+        $('#payBtn').click(function() {
             $('#offer').css('display', 'block');
-        }
+        });
 
         function cancel(this) {
             $(this).css('display', 'none');
