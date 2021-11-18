@@ -16,6 +16,7 @@ $user_id = $_SESSION['user_id'];
 
 
 if (isset($_POST['submit'])) {
+    require_once("../classes/DB.php");
     // wow -_-
     $linkedin = securityscan($_POST['linkedin']);
 
