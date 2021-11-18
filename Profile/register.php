@@ -249,7 +249,7 @@ $row = mysqli_fetch_assoc($result);
                         <input type="text" name="description" id="" placeholder="Biography...">
                         <div class="stepButtons">
                             <span id="backToHourlyRate">Back</span>
-                            <span id="nextStepLocation">Next Step</span>
+                            <span id="nextStepProfilePhoto">Next Step</span>
                         </div>
 
                     </div>
@@ -258,7 +258,7 @@ $row = mysqli_fetch_assoc($result);
             <!--Title&Description End-->
 
             <!--Profile Photo Start-->
-            <!-- <div class="profilePhoto">
+            <div class="profilePhoto">
                 <div class="profilePhoto-container">
                     <div class="profilePhoto-container-title">
                         <h2 id="profilePhoto-title">Profile Picture</h2>
@@ -286,7 +286,7 @@ $row = mysqli_fetch_assoc($result);
 
                     </div>
                 </div>
-            </div> -->
+            </div>
             <!--Profile Photo End-->
 
             <!--Location Start-->
