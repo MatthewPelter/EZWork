@@ -160,6 +160,7 @@ if (mysqli_num_rows($jobResult) > 0) {
                 <?php if ($unameFetched['username'] == $_SESSION['userid']) {
                 ?>
                     <input type="button" onclick="deleteMenu()" id="deleteBtn" value="Delete Post">
+                    <input type="button" id="editBtn" value="Edit Post">
 
                     <span id="result"></span>
 
@@ -231,7 +232,7 @@ if (mysqli_num_rows($jobResult) > 0) {
     $('#noBtn').click(function() {
         $('#deleteMenu').css('display', 'none');
     });
-  
+
     function copyToClipboard(link) {
         const el = document.createElement("textarea");
         el.value = link.innerText;
