@@ -56,5 +56,9 @@ if (isset($_POST['submit'])) {
         $fetchFreelancerID = $fetchFreelancerID['id'];
 
         mysqli_query($conn, "UPDATE clients SET freelancer_id = '$fetchFreelancerID' WHERE id = '$user_id'") or die(mysqli_errno($conn));
+
+        echo "You are now a freelancer!";
+    } else {
+        echo "could not insert into database";
     }
 }
