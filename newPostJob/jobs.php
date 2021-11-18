@@ -56,6 +56,8 @@ if (isset($_GET['sort']) && !empty($_GET['sort'])) {
             $jobsSQL .= " ORDER BY id DESC";
             break;
     }
+} else {
+    $jobsSQL .= " ORDER BY id DESC";
 }
 
 $jobsQuery = mysqli_query($conn, $jobsSQL);
