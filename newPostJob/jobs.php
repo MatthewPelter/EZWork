@@ -33,7 +33,7 @@ $jobsSQL = "SELECT * FROM jobs";
 
 $num = 0;
 foreach ($queries as $x => $val) {
-    if ($x != "sort" || $val != "") {
+    if ($x != "sort") {
         if ($num == 0) {
             $jobsSQL .= " WHERE " . $x . "='" . $val . "'";
         } else {
@@ -222,9 +222,9 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                         <div class="FilterSkill">
                             <h3>By Skill</h3>
                             <div class="filterSkillCard">
-                                <select name="skills" id="filterSkills">
+                                <!-- <select name="skills" id="filterSkills">
                                     <option value="">--Please choose an skill--</option>
-                                </select>
+                                </select> -->
                             </div>
                         </div>
                         <div class="FilterLocation">
