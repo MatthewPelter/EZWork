@@ -243,70 +243,71 @@ if (mysqli_num_rows($jobResult) > 0) {
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript">
-    function deleteMenu() {
-        $('#deleteMenu').css('display', 'block');
-    }
-    $('#yesBtn').click(function() {
-        $.ajax({
-            type: "POST",
-            url: "../api/delete-post.php",
-            data: 'postID=' + <?php echo $job_id; ?>,
-            success: function(data) {
-                $('#deleteMenu').css('display', 'none');
-                $('#result').html(data);
-            },
-            error: function(r) {
-                console.log(r);
-            }
+    $(document).ready(function() {
+        function openProposal() {
+            $('#proposal').css('display', 'block');
+            console.log("Clicked");
+        }
+
+        function openPay() {
+            $('#offer').css('display', 'block');
+        }
+
+        function cancel(this) {
+            $(this).css('display', 'none');
+        }
+
+        function deleteMenu() {
+            $('#deleteMenu').css('display', 'block');
+        }
+        $('#yesBtn').click(function() {
+            $.ajax({
+                type: "POST",
+                url: "../api/delete-post.php",
+                data: 'postID=' + <?php echo $job_id; ?>,
+                success: function(data) {
+                    $('#deleteMenu').css('display', 'none');
+                    $('#result').html(data);
+                },
+                error: function(r) {
+                    console.log(r);
+                }
+            });
         });
+
+        $('#noBtn').click(function() {
+            $('#deleteMenu').css('display', 'none');
+        });
+
+        function copyToClipboard(link) {
+            const el = document.createElement("textarea");
+            el.value = link.innerText;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand("copy");
+            document.body.removeChild(el);
+        } // Ends copyToClipboard()
+
+        const copyLinkBtn = document.getElementById('copyLink');
+
+        copyLinkBtn.addEventListener('click', () => {
+            var link = document.getElementById('link');
+            copyToClipboard(link);
+        })
+
+        // Status color
+        const status = document.getElementById('status');
+
+        var statusText = status.innerText;
+
+        if (statusText == "Open") {
+            status.style.color = "lightgreen";
+        } else if (statusText == "Closed") {
+            status.style.color = "red";
+        } else if (statusText == "In-Progress") {
+            status.style.color = "#e1b12c";
+        }
     });
-
-    $('#noBtn').click(function() {
-        $('#deleteMenu').css('display', 'none');
-    });
-
-
-    function openProposal() {
-        $('#proposal').css('display', 'block');
-        console.log("Clicked");
-    }
-
-    function openPay() {
-        $('#offer').css('display', 'block');
-    }
-
-    function cancel(this) {
-        $(this).css('display', 'none');
-    }
-
-    function copyToClipboard(link) {
-        const el = document.createElement("textarea");
-        el.value = link.innerText;
-        document.body.appendChild(el);
-        el.select();
-        document.execCommand("copy");
-        document.body.removeChild(el);
-    } // Ends copyToClipboard()
-
-    const copyLinkBtn = document.getElementById('copyLink');
-
-    copyLinkBtn.addEventListener('click', () => {
-        var link = document.getElementById('link');
-        copyToClipboard(link);
-    })
-
-    // Status color
-    const status = document.getElementById('status');
-
-    var statusText = status.innerText;
-
-    if (statusText == "Open") {
-        status.style.color = "lightgreen";
-    } else if (statusText == "Closed") {
-        status.style.color = "red";
-    } else if (statusText == "In-Progress") {
-        status.style.color = "#e1b12c";
-    }
 </script>
 <!--Script for the search bar and datalist-->
 <script src="../SkillsContainer/searchProfile.js"></script>
