@@ -257,7 +257,7 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                                 </div>
                             </div>
                         </div>
-                        <button id="submitFilter" onclick="submitFilter()">Submit Filter</button>
+                        <button id="submitFilter">Submit Filter</button>
                     </form>
                 </div>
             </div>
@@ -400,9 +400,9 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
         window.location = newpage;
     }
 
-    function submitFilter() {
+    $('#submitFilter').click(function() {
         window.location = "https://ez-work.herokuapp.com/newPostJob/jobs?" + $('form').serialize();
-    }
+    });
 
     function resetOptions() {
         window.location = "https://ez-work.herokuapp.com/newPostJob/jobs";
