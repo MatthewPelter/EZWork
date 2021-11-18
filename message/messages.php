@@ -158,9 +158,8 @@ if (isset($_POST['submit'])) {
                                                     <span class="message-data-name">Me</span> <i class="fa fa-circle me"></i>
                                                 </div>
                                                 <div class="message other-message float-right">
-                                                    <?php echo $row['Sender']; ?> is interested in your project you posted.<br />
-                                                    Make sure to view their profile and rating before you accept their proposal.<br />
-                                                    <?php echo $row['body']; ?>
+                                                    Your request has been sent to the client.<br />
+                                                    Give them time to view your portfolio and profile.<br />
                                                 </div>
                                             </li>
                                         <?php } else { ?>
