@@ -92,6 +92,8 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
         </div>
 
         <div class="jobs-container">
+            <button id="resetSortFilter" onclick="resetOptions()">Reset</button>
+
             <div class="sortMenu">
                 <div class="sort" onclick="toggleSortCard()">
                     <h3>Sort</h3>
@@ -415,6 +417,10 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
 
     function submitFilter() {
         window.location = url;
+    }
+
+    function resetOptions() {
+        window.location = "https://ez-work.herokuapp.com/newPostJob/jobs";
     }
 
     const sortArrow = document.getElementById('sortArrow');
