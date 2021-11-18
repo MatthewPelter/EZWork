@@ -378,8 +378,16 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
     var url = "https://ez-work.herokuapp.com/newPostJob/jobs?";
 
     function sort(by) {
-        newpage = window.location.href + "sort=" + by;
-        window.location = newpage;
+        if (window.location.href != "https://ez-work.herokuapp.com/newPostJob/jobs") {
+            newpage = window.location.href + "?sort=" + by;
+            window.location = newpage;
+        } else {
+            text = window.location.href;
+            if (text.indexOf("sort") > 0) {
+                text.replace(text.slice(text.indexOf("sort") - 1, text.length), "");
+            }
+            newpage = text + "&sort=" + by;
+        }
     }
 
     function filter(by, type) {
