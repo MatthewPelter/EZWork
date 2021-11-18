@@ -47,7 +47,6 @@ if (isset($_SESSION["userid"])) {
         <div class="container">
             <div class="login-container">
                 <h3>Log In To EzWork</h3>
-                <span style="color: green; text-align: center;">Check out the now working Reset Password page!<br /></span>
                 <form class="form" role="form" action="../components/login-process" method="post" name="login">
                     <input type="email" name="email" id="email" placeholder="Email" required>
                     <span style="color: red;font-size: 0.9rem;" id="emailError"></span>
@@ -66,7 +65,7 @@ if (isset($_SESSION["userid"])) {
             </div>
             <div class="help-container">
                 <h3><span>______________</span> Forgot Password? <span>______________</span></h3>
-                <a href="../forgot-password"><button><span style="color: green;">*NEW*</span> Reset Password</button></a>
+                <a href="../forgot-password"><button>Reset Password</button></a>
             </div>
             <div class="register">
                 <div class="register-container">
