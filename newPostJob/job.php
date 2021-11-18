@@ -159,8 +159,8 @@ if (mysqli_num_rows($jobResult) > 0) {
                 </div>
                 <?php if ($unameFetched['username'] == $_SESSION['userid']) {
                 ?>
-                    <input type="button" onclick="deleteMenu()" id="deleteBtn" value="Delete Post">
-                    <input type="button" onclick="location.href = 'ez-work.herokuapp.com/newPostJob/edit?id=<?php echo $r['id']; ?>';" id="deleteBtn" value="Edit Post">
+                    <input type="button" onclick="deleteMenu()" id="deleteBtn" value="Delete Post"> <br />
+                    <input type="button" onclick="location.href = 'edit?id=<?php echo $r['id']; ?>';" id="deleteBtn" value="Edit Post">
 
                     <span id="result"></span>
 
