@@ -23,7 +23,7 @@ $job_id = $_GET['id'];
 $job_id = mysqli_real_escape_string($conn, $job_id);
 $job_id = htmlspecialchars($job_id);
 
-$jobSQL = "SELECT * FROM jobs WHERE jobs.id='$job_id' LIMIT 1";
+$jobSQL = "SELECT jobs.*, clients.username AS uname FROM jobs INNER JOIN clients ON jobs.user_id = clients.id WHERE jobs.id='$job_id' LIMIT 1";
 $jobResult = mysqli_query($conn, $jobSQL) or die(mysqli_error($conn));
 
 
@@ -34,6 +34,8 @@ if (mysqli_num_rows($jobResult) > 0) {
     if ($receiver == $user_id) {
         die("You can't Accept your Own Job...");
     }
+
+    $receiver = $r['uname'];
 } else {
     header("location: ./jobs.php");
 }
