@@ -222,9 +222,9 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                         <div class="FilterSkill">
                             <h3>By Skill</h3>
                             <div class="filterSkillCard">
-                                <!-- <select name="skills" id="filterSkills">
-                                    <option value="">--Please choose an skill--</option>
-                                </select> -->
+                                <select name="skills" id="filterSkills">
+                                    <option disabled selected value>--Please choose an skill--</option>
+                                </select>
                             </div>
                         </div>
                         <div class="FilterLocation">
