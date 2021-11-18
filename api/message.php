@@ -24,8 +24,9 @@ $receiver = $postBody->receiver;
 $body = securityscan($body);
 $receiver = securityscan($receiver);
 
-if (isset($_POST['jobID'])) {
-    $jobID = securityscan($_POST['jobID']);
+if ($postBody->jobID != "") {
+    $jobID = $postBody->jobID;
+    $jobID = securityscan($jobID);
 } else {
     $jobID = NULL;
 }

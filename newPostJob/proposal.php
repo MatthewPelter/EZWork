@@ -23,7 +23,7 @@ $job_id = $_GET['id'];
 $job_id = mysqli_real_escape_string($conn, $job_id);
 $job_id = htmlspecialchars($job_id);
 
-$jobSQL = "SELECT jobs.*, clients.username AS uname FROM jobs INNER JOIN clients ON jobs.user_id = clients.id WHERE jobs.id='$job_id' LIMIT 1";
+$jobSQL = "SELECT * FROM jobs WHERE jobs.id='$job_id' LIMIT 1";
 $jobResult = mysqli_query($conn, $jobSQL) or die(mysqli_error($conn));
 
 
@@ -50,7 +50,7 @@ if (mysqli_num_rows($jobResult) > 0) {
 
 <body>
     <div id="proposal">
-        <h1>Are you willing to accept <?php echo $r['uname']; ?>'s job?</h1>
+        <h1>Are you willing to accept this job?</h1>
         <h2>By submitting a proposal, you agree that you are fully capable of completing this task.</h2>
         <h2>By hitting agree, you will be sending a proposal to the client and they will decide if they will accept your request.</h2>
         <p><span>optional:</span> Message</p><br />
