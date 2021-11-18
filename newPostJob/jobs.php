@@ -420,7 +420,7 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
             newpage = text + "?sort=" + by;
             window.location = newpage;
         } else {
-            if (window.location.href == "http://localhost/test.php") {
+            if (window.location.href == "https://ez-work.herokuapp.com/newPostJob/jobs") {
                 newpage = window.location.href + "?sort=" + by;
             } else {
                 newpage = text + "&sort=" + by;
