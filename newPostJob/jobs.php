@@ -416,11 +416,12 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
         if (text.indexOf("sort") > 0) {
             var remove = text.substring(text.indexOf("sort") - 1, text.length);
             text = text.replace(remove, "");
+            console.log(text);
         }
         if (window.location.href == "https://ez-work.herokuapp.com/newPostJob/jobs") {
-            newpage = window.location.href + "?sort=" + by;
+            //newpage = window.location.href + "?sort=" + by;
         } else {
-            newpage = text + "&sort=" + by;
+            //newpage = text + "&sort=" + by;
         }
         window.location = newpage;
     }
