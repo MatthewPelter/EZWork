@@ -66,7 +66,7 @@ $row = mysqli_fetch_assoc($result);
                     </div>
                     <div class="start-card">
                         <h3>Upload your LinkedIn Profile</h3>
-                        <input type="url" name="" id="" placeholder="Enter your LinkenIn Account">
+                        <input type="url" name="linkedin" id="" placeholder="Enter your LinkenIn Account">
                         <a href="https://www.linkedin.com/home" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i>LinkedIn</a>
                         <p>If you do not have a LinkedIn Account, you may skip this step.</p>
 
@@ -87,7 +87,7 @@ $row = mysqli_fetch_assoc($result);
                     </div>
                     <div class="expertise-card">
                         <h3>What is your Expertise?</h3>
-                        <input type="text" name="" id="" placeholder="Software Engineer">
+                        <input type="text" name="expertise" id="" placeholder="Software Engineer">
 
                         <h3 style="margin-top: 1rem;">What is your Experience Level?</h3>
                         <select name="experience">
@@ -119,9 +119,9 @@ $row = mysqli_fetch_assoc($result);
                     </div>
                     <div class="education-card">
                         <h3>School</h3>
-                        <input type="text" name="" id="" placeholder="School Name">
+                        <input type="text" name="school" id="" placeholder="School Name">
                         <h3>Degree</h3>
-                        <select>
+                        <select name="degree">
                             <option value="">----Select----</options>
                             <option value="GED">GED</option>
                             <option value="Associate's Degree">Associate's Degree</option>
@@ -130,13 +130,13 @@ $row = mysqli_fetch_assoc($result);
                             <option value="Doctorate or higher">Doctorate or higher</option>
                         </select>
                         <h3>Field of Study</h3>
-                        <input type="text" name="" id="" placeholder="Aviation">
+                        <input type="text" name="fos" id="" placeholder="Aviation">
                         <h3>Dates Attended</h3>
                         <div class="dateCard">
 
-                            <input type="number" min="1900" max="2099" step="1" placeholder="2017" value="2017" />
+                            <input type="number" name="schoolStart" min="1900" max="2099" step="1" placeholder="2017" value="2017" />
 
-                            <input type="number" min="1900" max="2099" step="1" placeholder="2021" value="2021" />
+                            <input type="number" name="schoolEnd" min="1900" max="2099" step="1" placeholder="2021" value="2021" />
                         </div>
 
                         <div class="noEducation">
@@ -162,11 +162,11 @@ $row = mysqli_fetch_assoc($result);
                     </div>
                     <div class="employment-card">
                         <h3>Job Title</h3>
-                        <input type="text" name="" id="jobTitle" placeholder="Senior Software Engineer">
+                        <input type="text" name="jobTitle" id="jobTitle" placeholder="Senior Software Engineer">
                         <h3>Company</h3>
-                        <input type="text" name="" id="" placeholder="Microsoft">
+                        <input type="text" name="company" id="" placeholder="Microsoft">
                         <h3>Location</h3>
-                        <input type="text" name="" id="" placeholder="Redmong, Washington, U.S.">
+                        <input type="text" name="jobLocation" id="" placeholder="Redmong, Washington, U.S.">
 
 
                         <div class="currentJob">
@@ -177,11 +177,11 @@ $row = mysqli_fetch_assoc($result);
                         <div class="dateCard">
                             <div class="from">
                                 <h3>Start Date</h3>
-                                <input type="date" name="" id="">
+                                <input type="date" name="jobStart" id="">
                             </div>
                             <div class="to">
                                 <h3>End Date</h3>
-                                <input type="date" name="" id="">
+                                <input type="date" name="jobEnd" id="">
                             </div>
 
                         </div>
@@ -213,7 +213,7 @@ $row = mysqli_fetch_assoc($result);
 
                         <div class="setPay">
                             <h3>Hourly Rate</h3>
-                            <p>$ <input type="number" name="" id="payRate" min="0" placeholder="$0.00" style="padding-left: .5rem;"> / hr</p>
+                            <p>$ <input type="number" name="hourRate" id="payRate" min="0" placeholder="$0.00" style="padding-left: .5rem;"> / hr</p>
                         </div>
 
                         <div class="ourFee">
@@ -246,7 +246,7 @@ $row = mysqli_fetch_assoc($result);
                         <h3>Write a bio to tell the world about yourself.</h3>
                         <p>Help our clients get to know you at a glance. What work are you best at? Tell them clearly.</p>
 
-                        <input type="text" name="" id="" placeholder="Biography...">
+                        <input type="text" name="description" id="" placeholder="Biography...">
                         <div class="stepButtons">
                             <span id="backToHourlyRate">Back</span>
                             <span id="nextStepProfilePhoto">Next Step</span>
@@ -258,7 +258,7 @@ $row = mysqli_fetch_assoc($result);
             <!--Title&Description End-->
 
             <!--Profile Photo Start-->
-            <div class="profilePhoto">
+            <!-- <div class="profilePhoto">
                 <div class="profilePhoto-container">
                     <div class="profilePhoto-container-title">
                         <h2 id="profilePhoto-title">Profile Picture</h2>
@@ -286,7 +286,7 @@ $row = mysqli_fetch_assoc($result);
 
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!--Profile Photo End-->
 
             <!--Location Start-->
@@ -297,16 +297,16 @@ $row = mysqli_fetch_assoc($result);
                     </div>
                     <div class="location-card">
                         <div class="country">
-                            <input type="text" autocomplete="off" id="countryID" list="Region&Countries" placeholder="Country">
+                            <input type="text" autocomplete="off" name="country" id="countryID" list="Region&Countries" placeholder="Country" required>
                         </div>
                         <div class="street-apartment">
-                            <input type="text" name="" id="" autocomplete="off" placeholder="Street Address">
-                            <input type="text" name="" id="" class="apt" autocomplete="off" placeholder="APT">
+                            <input type="text" name="street" id="" autocomplete="off" placeholder="Street Address" required>
+                            <input type="text" name="apt" id="" class="apt" autocomplete="off" placeholder="APT">
                         </div>
                         <div class="city-state-zip">
-                            <input type="text" name="" id="" autocomplete="off" placeholder="City">
-                            <input type="text" name="" id="" class="state" autocomplete="off" list="States" placeholder="State">
-                            <input type="text" name="" id="" class="zip" autocomplete="off" placeholder="Zip">
+                            <input type="text" name="city" id="" autocomplete="off" placeholder="City" required>
+                            <input type="text" name="state" id="" class="state" autocomplete="off" list="States" placeholder="State" required>
+                            <input type="text" name="zip" id="" class="zip" autocomplete="off" placeholder="Zip" required>
                         </div>
 
                         <div class="stepButtons">
