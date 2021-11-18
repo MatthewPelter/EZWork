@@ -249,7 +249,7 @@ $row = mysqli_fetch_assoc($result);
                         <input type="text" name="description" id="" placeholder="Biography...">
                         <div class="stepButtons">
                             <span id="backToHourlyRate">Back</span>
-                            <span id="nextStepProfilePhoto">Next Step</span>
+                            <span id="nextStepLocation">Next Step</span>
                         </div>
 
                     </div>
