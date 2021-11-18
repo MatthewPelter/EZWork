@@ -382,7 +382,7 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
         window.location = url;
     }
 
-    function fitler(by, type) {
+    function filter(by, type) {
         // messy but it works
         if (url[url.length - 1] == "?") {
             url = url + "&";
