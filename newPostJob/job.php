@@ -268,6 +268,7 @@ if (mysqli_num_rows($jobResult) > 0) {
 
     function openProposal() {
         $('#proposal').css('display', 'block');
+        console.log("Clicked");
     }
 
     function openPay() {
