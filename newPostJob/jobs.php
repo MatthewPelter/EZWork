@@ -124,15 +124,15 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                         <h3>By Experience</h3>
                         <div class="experienceCard">
                             <div class="entry">
-                                <input type="checkbox" name="entry" id="entry">
+                                <input type="checkbox" name="entry" id="entry" onclick="filter('entry', 'experience')">
                                 <label for="entry">Entry</label>
                             </div>
                             <div class="intermediate">
-                                <input type="checkbox" name="intermediate" id="intermediate">
+                                <input type="checkbox" name="intermediate" id="intermediate" onclick="filter('intermediate', 'experience')">
                                 <label for="intermediate">Intermediate</label>
                             </div>
                             <div class="expert">
-                                <input type="checkbox" name="expert" id="expert">
+                                <input type="checkbox" name="expert" id="expert" onclick="filter('expert', 'experience')">
                                 <label for="expert">Expert</label>
                             </div>
 
@@ -147,23 +147,23 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                             </div>
                             <div class="hourlyCard">
                                 <div class="ZeroToTwentyFive">
-                                    <input type="checkbox" name="ZeroToTwentyFive" id="ZeroToTwentyFive">
+                                    <input type="checkbox" name="ZeroToTwentyFive" id="ZeroToTwentyFive" onclick="filter('0to25', 'hourly')">
                                     <label for="ZeroToTwentyFive">$0 - $25</label>
                                 </div>
                                 <div class="TwentySixToFifty">
-                                    <input type="checkbox" name="TwentysixToFifty" id="TwentySixToFifty">
+                                    <input type="checkbox" name="TwentysixToFifty" id="TwentySixToFifty" onclick="filter('26to50', 'hourly')">
                                     <label for="TwentySixToFifty">$26 - $50</label>
                                 </div>
                                 <div class="FiftyOneToSeventyfive">
-                                    <input type="checkbox" name="FiftyOneToSeventyfive" id="FiftyOneToSeventyfive">
+                                    <input type="checkbox" name="FiftyOneToSeventyfive" id="FiftyOneToSeventyfive" onclick="filter('51to75', 'hourly')">
                                     <label for="FiftyOneToSeventyfive">$51 - $75</label>
                                 </div>
                                 <div class="seventySixToOneHundred">
-                                    <input type="checkbox" name="seventySixToOneHundred"" id=" seventySixToOneHundred"">
+                                    <input type="checkbox" name="seventySixToOneHundred"" id=" seventySixToOneHundred" onclick="filter('76to100', 'hourly')">
                                     <label for="seventySixToOneHundred"">$76 - $100</label>
                                 </div>
                                 <div class=" more">
-                                        <input type="checkbox" name="oneHundredPlus" id="oneHundredPlus">
+                                        <input type="checkbox" name="oneHundredPlus" id="oneHundredPlus" onclick="filter('100plus', 'hourly')">
                                         <label for="oneHundredPlus">$100+</label>
                                 </div>
                             </div>
@@ -173,27 +173,27 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                             </div>
                             <div class="budgetCard">
                                 <div class="ZeroToNinetyNine">
-                                    <input type="checkbox" name="ZeroToNinetyNine" id="ZeroToNinetyNine">
+                                    <input type="checkbox" name="ZeroToNinetyNine" id="ZeroToNinetyNine" onclick="filter('0to99', 'budget')">
                                     <label for="ZeroToNinetyNine">$0 - $99</label>
                                 </div>
                                 <div class="OneHundredOneToOneHundredNinetyNine">
-                                    <input type="checkbox" name="OneHundredOneToOneHundredNinetyNine" id="OneHundredOneToOneHundredNinetyNine">
+                                    <input type="checkbox" name="OneHundredOneToOneHundredNinetyNine" id="OneHundredOneToOneHundredNinetyNine" onclick="filter('100to199', 'budget')">
                                     <label for="OneHundredOneToOneHundredNinetyNine">$100 - $199</label>
                                 </div>
                                 <div class="TwoHundredOneToTwoeHundredNinetyNine">
-                                    <input type="checkbox" name="TwoHundredOneToTwoeHundredNinetyNine" id="TwoHundredOneToTwoeHundredNinetyNine">
+                                    <input type="checkbox" name="TwoHundredOneToTwoeHundredNinetyNine" id="TwoHundredOneToTwoeHundredNinetyNine" onclick="filter('200to299', 'budget')">
                                     <label for="TwoHundredOneToTwoeHundredNinetyNine">$200 - $299</label>
                                 </div>
                                 <div class="threeHundredToThreeHundredNinetyNine">
-                                    <input type="checkbox" name="threeHundredToThreeHundredNinetyNine" id="threeHundredToThreeHundredNinetyNine">
+                                    <input type="checkbox" name="threeHundredToThreeHundredNinetyNine" id="threeHundredToThreeHundredNinetyNine" onclick="filter('300to399', 'budget')">
                                     <label for="threeHundredToThreeHundredNinetyNine">$300 - $399</label>
                                 </div>
                                 <div class="fourHundredToFourHundredNinetyNine">
-                                    <input type="checkbox" name="fourHundredToFourHundredNinetyNine" id="fourHundredToFourHundredNinetyNine">
+                                    <input type="checkbox" name="fourHundredToFourHundredNinetyNine" id="fourHundredToFourHundredNinetyNine" onclick="filter('400to499', 'budget')">
                                     <label for="fourHundredToFourHundredNinetyNine">$400 - $499</label>
                                 </div>
                                 <div class="fiveHundredPlus">
-                                    <input type="checkbox" name="fiveHundredPlus" id="fiveHundredPlus">
+                                    <input type="checkbox" name="fiveHundredPlus" id="fiveHundredPlus" onclick="filter('500plus', 'budget')">
                                     <label for="fiveHundredPlus">$500+</label>
                                 </div>
                             </div>
@@ -210,11 +210,11 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                         <h3>By Location</h3>
                         <div class="filterLocationCard">
                             <div class="worldwide">
-                                <input type="checkbox" name="worldwide" id="worldwide">
+                                <input type="checkbox" name="worldwide" id="worldwide" onclick="filter('world', 'location')">
                                 <label for="worldwide">Worldwide</label>
                             </div>
                             <div class="us">
-                                <input type="checkbox" name="us" id="us">
+                                <input type="checkbox" name="us" id="us" onclick="filter('us', 'location')">
                                 <label for="us">United States</label>
                             </div>
                         </div>
@@ -223,15 +223,15 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                         <h3>By Project Size</h3>
                         <div class="filterProjectSizeCard">
                             <div class="small">
-                                <input type="checkbox" name="small" id="small">
+                                <input type="checkbox" name="small" id="small" onclick="filter('small', 'size')">
                                 <label for="small">Small</label>
                             </div>
                             <div class="medium">
-                                <input type="checkbox" name="medium" id="medium">
+                                <input type="checkbox" name="medium" id="medium" onclick="filter('medium', 'size')">
                                 <label for="medium">Medium</label>
                             </div>
                             <div class="large">
-                                <input type="checkbox" name="large" id="large">
+                                <input type="checkbox" name="large" id="large" onclick="filter('large', 'size')">
                                 <label for="large">Large</label>
                             </div>
                         </div>
@@ -240,15 +240,16 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                         <h3>By Project Type</h3>
                         <div class="filterProjectTypeCard">
                             <div class="shortTerm">
-                                <input type="checkbox" name="shortTerm" id="shortTerm">
+                                <input type="checkbox" name="shortTerm" id="shortTerm" onclick="filter('short', 'type')">
                                 <label for="shortTerm">Short Term</label>
                             </div>
                             <div class="longTerm">
-                                <input type="checkbox" name="longTerm" id="longTerm">
+                                <input type="checkbox" name="longTerm" id="longTerm" onclick="filter('long', 'type')">
                                 <label for="longTerm">Long Term</label>
                             </div>
                         </div>
                     </div>
+                    <button id="submitFilter" onclick="submitFilter()">Submit Filter</button>
                 </div>
             </div>
 
@@ -304,7 +305,7 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                                 <div class="card2">
                                     <div class="location">
                                         <p>Location: </p>
-                                        <span> <?php echo $r['location']; ?></span>
+                                        <span> <?php echo ucfirst($r['location']); ?></span>
                                     </div>
 
                                     <div class="price">
@@ -374,8 +375,36 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
 
 <!-- This script is used to function the filer section-->
 <script type="text/javascript">
+    var url = "https://ez-work.herokuapp.com/newPostJob/jobs?";
+
     function sort(by) {
-        var url = "https://ez-work.herokuapp.com/newPostJob/jobs?sort=" + by;
+        url = url + "sort=" + by;
+        window.location = url;
+    }
+
+    function fitler(by, type) {
+        // messy but it works
+        if (url[url.length - 1] == "?") {
+            url = url + "&";
+        }
+        if (type == "experience") {
+            url = url + "experience=" + by;
+        } else if (type == "hourly") {
+            url = url + "hourly=" + by;
+        } else if (type == "budget") {
+            url = url + "budget=" + by;
+        } else if (type == "skill") {
+            url = url + "skill=" + by;
+        } else if (type == "location") {
+            url = url + "location=" + by;
+        } else if (type == "size") {
+            url = url + "size=" + by;
+        } else if (type == "type") {
+            url = url + "type=" + by;
+        }
+    }
+
+    function submitFilter() {
         window.location = url;
     }
 
