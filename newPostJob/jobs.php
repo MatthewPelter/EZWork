@@ -378,9 +378,9 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
     var url = "https://ez-work.herokuapp.com/newPostJob/jobs?";
 
     function sort(by) {
-        if (window.location.href != "https://ez-work.herokuapp.com/newPostJob/jobs") {
+        if (window.location.href == "https://ez-work.herokuapp.com/newPostJob/jobs") {
             newpage = window.location.href + "?sort=" + by;
-            window.location = newpage;
+
         } else {
             text = window.location.href;
             if (text.indexOf("sort") > 0) {
@@ -388,6 +388,7 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
             }
             newpage = text + "&sort=" + by;
         }
+        window.location = newpage;
     }
 
     function filter(by, type) {
