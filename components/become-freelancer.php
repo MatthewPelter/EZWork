@@ -53,7 +53,7 @@ if (isset($_POST['submit'])) {
         $sql = "SELECT id FROM freelancers WHERE user_id = '$user_id'";
         $result = mysqli_query($conn, $sql);
         $fetchFreelancerID = mysqli_fetch_assoc($result);
-        $fetchFreelancerID = $fetchFreelancerID['user_id'];
+        $fetchFreelancerID = $fetchFreelancerID['id'];
 
         mysqli_query($conn, "UPDATE clients SET freelancer_id = '$fetchFreelancerID' WHERE id = '$user_id'") or die(mysqli_errno($conn));
     }
