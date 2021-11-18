@@ -166,6 +166,22 @@ if (mysqli_num_rows($jobResult) > 0) {
                     <button onclick="openOffer()">Pay for Service</button>
                 <?php } ?>
 
+                <div class="proposal" style="display: none;">
+                    <h1>Are you willing to pay for this service?</h1>
+                    <h2>If this freelancer has what you are looking for, click Pay now and pay for your service.</h2>
+                    <h2>The freelancer will be notified and will you can message them what you need done.</h2>
+                    <button onclick="agreeOffer()">Pay</button>
+                    <button onclick="cancel(this)">Cancel</button>
+                </div>
+
+                <div class="offer" style="display: none;">
+                    <h1>Are you willing to accept this job?</h1>
+                    <h2>By submitting a proposal, you agree that you are fully capable of completing this task.</h2>
+                    <h2>By hitting agree, you will be sending a proposal to the client and they will decide if they will accept your request.</h2>
+                    <button onclick="agreeProposal()">Agree</button>
+                    <button onclick="cancel(this)">Cancel</button>
+                </div>
+
                 <?php if ($unameFetched['username'] != $_SESSION['userid']) { ?>
                     <div class="flag">
                         <i class="fa fa-flag" aria-hidden="true"></i>
@@ -214,21 +230,7 @@ if (mysqli_num_rows($jobResult) > 0) {
         </div>
     </div>
 
-    <div class="proposal" style="display: none; position:absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-        <h1>Are you willing to pay for this service?</h1>
-        <h2>If this freelancer has what you are looking for, click Pay now and pay for your service.</h2>
-        <h2>The freelancer will be notified and will you can message them what you need done.</h2>
-        <button onclick="agreeOffer()">Pay</button>
-        <button onclick="cancel(this)">Cancel</button>
-    </div>
 
-    <div class="offer" style="display: none; position:absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-        <h1>Are you willing to accept this job?</h1>
-        <h2>By submitting a proposal, you agree that you are fully capable of completing this task.</h2>
-        <h2>By hitting agree, you will be sending a proposal to the client and they will decide if they will accept your request.</h2>
-        <button onclick="agreeProposal()">Agree</button>
-        <button onclick="cancel(this)">Cancel</button>
-    </div>
 
     <?php include '../footer.php'; ?>
 
