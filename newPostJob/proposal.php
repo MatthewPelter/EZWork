@@ -55,13 +55,13 @@ if (mysqli_num_rows($jobResult) > 0) {
         <h2>By hitting agree, you will be sending a proposal to the client and they will decide if they will accept your request.</h2>
         <p><span>optional:</span> Message</p><br />
         <textarea name="chat" id="chat" cols="30" rows="10"></textarea>
-        <button id="sendmessage" onclick="agreeProposal()">Agree</button>
+        <button id="sendmessage">Agree</button>
         <button onclick="cancel()">Cancel</button>
         <div id="result"></div>
     </div>
 
 
-    <!-- <div id="offer" style="display: none;">
+    <!-- <div id="offer">
         <h1>Are you willing to pay for this service?</h1>
         <h2>If this freelancer has what you are looking for, click Pay now and pay for your service.</h2>
         <h2>The freelancer will be notified and will you can message them what you need done.</h2>
@@ -70,31 +70,29 @@ if (mysqli_num_rows($jobResult) > 0) {
     </div> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript">
-        function agreeProposal() {
-            $('#sendmessage').click(function() {
-                $.ajax({
-                    type: "POST",
-                    url: "../api/message.php",
-                    processData: false,
-                    contentType: "application/json",
-                    data: '{ "body": "' + $("#chat").val() + '", "receiver": "<?php echo $receiver; ?>", "jobID": "<?php echo $job_id; ?>" }',
-                    success: function(data) {
-                        var obj = JSON.parse(data);
-                        console.log(obj);
-                        $("#chat").val('');
-                        if (obj.Success.length > 0) {
-                            $('#result').html(obj.Success);
-                        } else if (obj.Error.length > 0) {
-                            $('#result').html(obj.Error);
-                        }
-
-                    },
-                    error: function(r) {
-                        console.log(r);
+        $('#sendmessage').click(function() {
+            $.ajax({
+                type: "POST",
+                url: "../api/message.php",
+                processData: false,
+                contentType: "application/json",
+                data: '{ "body": "' + $("#chat").val() + '", "receiver": "<?php echo $receiver; ?>", "jobID": "<?php echo $job_id; ?>" }',
+                success: function(data) {
+                    var obj = JSON.parse(data);
+                    console.log(obj);
+                    $("#chat").val('');
+                    if (obj.Success.length > 0) {
+                        $('#result').html(obj.Success);
+                    } else if (obj.Error.length > 0) {
+                        $('#result').html(obj.Error);
                     }
-                });
+
+                },
+                error: function(r) {
+                    console.log(r);
+                }
             });
-        }
+        });
     </script>
 
 
