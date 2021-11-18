@@ -160,10 +160,10 @@ if (mysqli_num_rows($jobResult) > 0) {
                 <?php
                 if ($r['typeOfJob'] == 'require') {
                     if ($myData['freelancer_id'] != NULL && $unameFetched['username'] != $_SESSION['userid']) { ?>
-                        <button onclick="openProposal()">Submit A Proposal</button>
+                        <button id="proposalBtn">Submit A Proposal</button>
                     <?php }
                 } else { ?>
-                    <button onclick="openOffer()">Pay for Service</button>
+                    <button id="payBtn">Pay for Service</button>
                 <?php } ?>
 
                 <div class="proposal" style="display: none;">
@@ -265,13 +265,14 @@ if (mysqli_num_rows($jobResult) > 0) {
         $('#deleteMenu').css('display', 'none');
     });
 
-    function openOffer() {
-        $('.offer').css('display', 'block');
-    }
 
-    function openProposal() {
+    $('#proposalBtn').click(function() {
         $('.proposal').css('display', 'block');
-    }
+    });
+
+    $('#payBtn').click(function() {
+        $('.offer').css('display', 'block');
+    });
 
     function cancel(this) {
         $(this).css('display', 'none');
