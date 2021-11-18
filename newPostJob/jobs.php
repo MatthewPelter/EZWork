@@ -2,6 +2,15 @@
 session_start(); // Session starts here.
 require_once('../classes/DB.php');
 
+
+function securityscan($data)
+{
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+
 // Check if user is logged in. If not send them to the log in.
 if (!isset($_SESSION['user_id'])) {
     header('Location: ../login/index');
@@ -19,6 +28,26 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 $jobsSQL = "SELECT * FROM jobs ORDER BY id DESC";
+
+if (isset($_GET['sort']) && !empty($_GET['sort'])) {
+    $sort = securityscan($_GET['sort']);
+    switch ($sort) {
+        case "AtoZ":
+            $jobsSQL .= " ORDER BY title ASC";
+            break;
+        case "ZtoA":
+            $jobsSQL .= " ORDER BY title DESC";
+            break;
+        case "lowHigh":
+            $jobsSQL .= " ORDER BY budget ASC, rate ASC";
+            break;
+        case "highLow":
+            $jobsSQL .= " ORDER BY budget DESC, rate DESC";
+            break;
+        default:
+            break;
+    }
+}
 $jobsQuery = mysqli_query($conn, $jobsSQL);
 
 ?>
@@ -68,19 +97,19 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                     <i class="fa fa-sort-desc" id="sortArrow" aria-hidden="true"></i>
                 </div>
                 <div class="sortCard">
-                    <div class="sortAtoZ">
+                    <div class="sortAtoZ" onclick="sort('AtoZ')">
                         <i class="fa fa-sort-alpha-asc" aria-hidden="true"></i>
                         <p>A to Z</p>
                     </div>
-                    <div class="sortZtoA">
+                    <div class="sortZtoA" onclick="sort('ZtoA')">
                         <i class="fa fa-sort-alpha-desc" aria-hidden="true"></i>
                         <p>Z to A</p>
                     </div>
-                    <div class="sortPriceLowHigh">
+                    <div class="sortPriceLowHigh" onclick="sort('lowHigh')">
                         <i class="fa fa-sort-amount-desc" aria-hidden="true"></i>
                         <p>Price: Low to High</p>
                     </div>
-                    <div class="sortPriceHighLow">
+                    <div class="sortPriceHighLow" onclick="sort('highLow')">
                         <i class="fa fa-sort-amount-asc" aria-hidden="true"></i>
                         <p>Price: High to Low</p>
                     </div>
@@ -105,14 +134,14 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                                 <input type="checkbox" name="expert" id="expert">
                                 <label for="expert">Expert</label>
                             </div>
-                           
+
                         </div>
                     </div>
                     <div class="FilterBudget">
                         <h3>By Budget</h3>
                         <div class="filterBudgetCard">
                             <div class="hourly">
-                                <input type="checkbox"  onclick="toggleHourlyCard()" name="hourly" id="hourly">
+                                <input type="checkbox" onclick="toggleHourlyCard()" name="hourly" id="hourly">
                                 <label for="hourly">Hourly</label>
                             </div>
                             <div class="hourlyCard">
@@ -129,12 +158,12 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                                     <label for="FiftyOneToSeventyfive">$51 - $75</label>
                                 </div>
                                 <div class="seventySixToOneHundred">
-                                    <input type="checkbox" name="seventySixToOneHundred"" id="seventySixToOneHundred"">
+                                    <input type="checkbox" name="seventySixToOneHundred"" id=" seventySixToOneHundred"">
                                     <label for="seventySixToOneHundred"">$76 - $100</label>
                                 </div>
-                                <div class="more">
-                                    <input type="checkbox" name="oneHundredPlus" id="oneHundredPlus">
-                                    <label for="oneHundredPlus">$100+</label>
+                                <div class=" more">
+                                        <input type="checkbox" name="oneHundredPlus" id="oneHundredPlus">
+                                        <label for="oneHundredPlus">$100+</label>
                                 </div>
                             </div>
                             <div class="budget">
@@ -343,50 +372,51 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
 
 
 <!-- This script is used to function the filer section-->
-<script>
+<script type="text/javascript">
     const sortArrow = document.getElementById('sortArrow');
-    
-    function toggleSortCard(){
-    const sortCard = document.querySelector('.sortCard'); 
-    if (getComputedStyle(sortCard).display === "none") {
-        sortArrow.style.transform = "rotate(180deg)";
-        sortCard.style.display = "inline-block";
-    } else {
-        sortCard.style.display = "none";
-        sortArrow.style.transform = "rotate(360deg)";
+
+    function toggleSortCard() {
+        const sortCard = document.querySelector('.sortCard');
+        if (getComputedStyle(sortCard).display === "none") {
+            sortArrow.style.transform = "rotate(180deg)";
+            sortCard.style.display = "inline-block";
+        } else {
+            sortCard.style.display = "none";
+            sortArrow.style.transform = "rotate(360deg)";
+        }
     }
-}
 
 
-const filterArrow = document.getElementById('filterArrow');
+    const filterArrow = document.getElementById('filterArrow');
 
-function toggleFilterCard(){
-    const filterCard = document.querySelector('.filterCard'); 
-    if (getComputedStyle(filterCard).display === "none") {
-        filterArrow.style.transform = "rotate(180deg)";
-        filterCard.style.display = "inline-block";
-    } else {
-        filterCard.style.display = "none";
-        filterArrow.style.transform = "rotate(360deg)";
+    function toggleFilterCard() {
+        const filterCard = document.querySelector('.filterCard');
+        if (getComputedStyle(filterCard).display === "none") {
+            filterArrow.style.transform = "rotate(180deg)";
+            filterCard.style.display = "inline-block";
+        } else {
+            filterCard.style.display = "none";
+            filterArrow.style.transform = "rotate(360deg)";
+        }
     }
-}
 
-function toggleHourlyCard() {
+    function toggleHourlyCard() {
         var hourlyCard = document.querySelector(".hourlyCard");
         if (getComputedStyle(hourlyCard).display === "none") {
             hourlyCard.style.display = "inline-block";
         } else {
             hourlyCard.style.display = "none";
         }
-}
+    }
 
-function toggleBudgetCard() {
+    function toggleBudgetCard() {
         var budgetCard = document.querySelector(".budgetCard");
         if (getComputedStyle(budgetCard).display === "none") {
             budgetCard.style.display = "inline-block";
         } else {
             budgetCard.style.display = "none";
         }
-}
+    }
 </script>
+
 </html>
