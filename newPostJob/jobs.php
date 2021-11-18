@@ -264,11 +264,11 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                             <h3>By Project Type</h3>
                             <div class="filterProjectTypeCard">
                                 <div class="shortTerm">
-                                    <input type="radio" name="length" id="shortTerm" value="short">
+                                    <input type="radio" name="length" id="shortTerm" value="s">
                                     <label for="shortTerm">Short Term</label>
                                 </div>
                                 <div class="longTerm">
-                                    <input type="radio" name="length" id="longTerm" value="long">
+                                    <input type="radio" name="length" id="longTerm" value="l">
                                     <label for="longTerm">Long Term</label>
                                 </div>
                             </div>
