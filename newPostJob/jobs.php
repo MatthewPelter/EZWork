@@ -129,15 +129,15 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                             <div class="experienceCard">
 
                                 <div class="entry">
-                                    <input type="radio" name="entry" id="entry" onclick="filter('entry', 'experience')">
+                                    <input type="radio" name="experience" id="entry" value="entry">
                                     <label for="entry">Entry</label>
                                 </div>
                                 <div class="intermediate">
-                                    <input type="radio" name="intermediate" id="intermediate" onclick="filter('intermediate', 'experience')">
+                                    <input type="radio" name="experience" id="intermediate" value="intermediate">
                                     <label for="intermediate">Intermediate</label>
                                 </div>
                                 <div class="expert">
-                                    <input type="radio" name="expert" id="expert" onclick="filter('expert', 'experience')">
+                                    <input type="radio" name="experience" id="expert" value="expert">
                                     <label for="expert">Expert</label>
                                 </div>
 
@@ -147,58 +147,58 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                             <h3>By Budget</h3>
                             <div class="filterBudgetCard">
                                 <div class="hourly">
-                                    <input type="checkbox" onclick="toggleHourlyCard()" name="hourly" id="hourly">
+                                    <input type="radio" name="budgetType" onclick="toggleHourlyCard()" id="hourly">
                                     <label for="hourly">Hourly</label>
                                 </div>
                                 <div class="hourlyCard">
                                     <div class="ZeroToTwentyFive">
-                                        <input type="checkbox" name="ZeroToTwentyFive" id="ZeroToTwentyFive" onclick="filter('0to25', 'hourly')">
+                                        <input type="radio" name="hourly" id="ZeroToTwentyFive" value="0to25">
                                         <label for="ZeroToTwentyFive">$0 - $25</label>
                                     </div>
                                     <div class="TwentySixToFifty">
-                                        <input type="checkbox" name="TwentysixToFifty" id="TwentySixToFifty" onclick="filter('26to50', 'hourly')">
+                                        <input type="radio" name="hourly" id="TwentySixToFifty" value="26to50">
                                         <label for="TwentySixToFifty">$26 - $50</label>
                                     </div>
                                     <div class="FiftyOneToSeventyfive">
-                                        <input type="checkbox" name="FiftyOneToSeventyfive" id="FiftyOneToSeventyfive" onclick="filter('51to75', 'hourly')">
+                                        <input type="radio" name="hourly" id="FiftyOneToSeventyfive" value="51to75">
                                         <label for="FiftyOneToSeventyfive">$51 - $75</label>
                                     </div>
                                     <div class="seventySixToOneHundred">
-                                        <input type="checkbox" name="seventySixToOneHundred"" id=" seventySixToOneHundred" onclick="filter('76to100', 'hourly')">
-                                        <label for="seventySixToOneHundred"">$76 - $100</label>
-                                </div>
-                                <div class=" more">
-                                            <input type="checkbox" name="oneHundredPlus" id="oneHundredPlus" onclick="filter('100plus', 'hourly')">
-                                            <label for="oneHundredPlus">$100+</label>
+                                        <input type="radio" name="hourly" id=" seventySixToOneHundred" value="76to100">
+                                        <label for="seventySixToOneHundred">$76 - $100</label>
+                                    </div>
+                                    <div class="more">
+                                        <input type="radio" name="hourly" id="oneHundredPlus" value="100plus">
+                                        <label for="oneHundredPlus">$100+</label>
                                     </div>
                                 </div>
                                 <div class="budget">
-                                    <input type="checkbox" onclick="toggleBudgetCard()" name="budget" id="budget">
+                                    <input type="radio" onclick="toggleBudgetCard()" name="budgetType" id="budget">
                                     <label for="budget">Budget</label>
                                 </div>
                                 <div class="budgetCard">
                                     <div class="ZeroToNinetyNine">
-                                        <input type="checkbox" name="ZeroToNinetyNine" id="ZeroToNinetyNine" onclick="filter('0to99', 'budget')">
+                                        <input type="radio" name="budget" id="ZeroToNinetyNine" value="0to99">
                                         <label for="ZeroToNinetyNine">$0 - $99</label>
                                     </div>
                                     <div class="OneHundredOneToOneHundredNinetyNine">
-                                        <input type="checkbox" name="OneHundredOneToOneHundredNinetyNine" id="OneHundredOneToOneHundredNinetyNine" onclick="filter('100to199', 'budget')">
+                                        <input type="radio" name="budget" id="OneHundredOneToOneHundredNinetyNine" value="100to199">
                                         <label for="OneHundredOneToOneHundredNinetyNine">$100 - $199</label>
                                     </div>
                                     <div class="TwoHundredOneToTwoeHundredNinetyNine">
-                                        <input type="checkbox" name="TwoHundredOneToTwoeHundredNinetyNine" id="TwoHundredOneToTwoeHundredNinetyNine" onclick="filter('200to299', 'budget')">
+                                        <input type="radio" name="budget" id="TwoHundredOneToTwoeHundredNinetyNine" value="200to299">
                                         <label for="TwoHundredOneToTwoeHundredNinetyNine">$200 - $299</label>
                                     </div>
                                     <div class="threeHundredToThreeHundredNinetyNine">
-                                        <input type="checkbox" name="threeHundredToThreeHundredNinetyNine" id="threeHundredToThreeHundredNinetyNine" onclick="filter('300to399', 'budget')">
+                                        <input type="radio" name="budget" id="threeHundredToThreeHundredNinetyNine" value="300to399">
                                         <label for="threeHundredToThreeHundredNinetyNine">$300 - $399</label>
                                     </div>
                                     <div class="fourHundredToFourHundredNinetyNine">
-                                        <input type="checkbox" name="fourHundredToFourHundredNinetyNine" id="fourHundredToFourHundredNinetyNine" onclick="filter('400to499', 'budget')">
+                                        <input type="radio" name="budget" id="fourHundredToFourHundredNinetyNine" value="400to499">
                                         <label for="fourHundredToFourHundredNinetyNine">$400 - $499</label>
                                     </div>
                                     <div class="fiveHundredPlus">
-                                        <input type="checkbox" name="fiveHundredPlus" id="fiveHundredPlus" onclick="filter('500plus', 'budget')">
+                                        <input type="radio" name="budget" id="fiveHundredPlus" value="500plus">
                                         <label for="fiveHundredPlus">$500+</label>
                                     </div>
                                 </div>
@@ -216,11 +216,11 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                             <div class="filterLocationCard">
 
                                 <div class="worldwide">
-                                    <input type="radio" name="worldwide" id="worldwide" onclick="filter('world', 'location')">
+                                    <input type="radio" name="location" id="worldwide" value="world">
                                     <label for="worldwide">Worldwide</label>
                                 </div>
                                 <div class="us">
-                                    <input type="radio" name="us" id="us" onclick="filter('us', 'location')">
+                                    <input type="radio" name="location" id="us" value="us">
                                     <label for="us">United States</label>
                                 </div>
                             </div>
@@ -230,15 +230,15 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                             <div class="filterProjectSizeCard">
 
                                 <div class="small">
-                                    <input type="radio" name="small" id="small" onclick="filter('small', 'size')">
+                                    <input type="radio" name="size" id="small" value="small">
                                     <label for="small">Small</label>
                                 </div>
                                 <div class="medium">
-                                    <input type="radio" name="medium" id="medium" onclick="filter('medium', 'size')">
+                                    <input type="radio" name="size" id="medium" value="medium">
                                     <label for="medium">Medium</label>
                                 </div>
                                 <div class="large">
-                                    <input type="radio" name="large" id="large" onclick="filter('large', 'size')">
+                                    <input type="radio" name="size" id="large" value="large">
                                     <label for="large">Large</label>
                                 </div>
 
@@ -248,11 +248,11 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                             <h3>By Project Type</h3>
                             <div class="filterProjectTypeCard">
                                 <div class="shortTerm">
-                                    <input type="radio" name="shortTerm" id="shortTerm" onclick="filter('short', 'type')">
+                                    <input type="radio" name="type" id="shortTerm" value="short">
                                     <label for="shortTerm">Short Term</label>
                                 </div>
                                 <div class="longTerm">
-                                    <input type="radio" name="longTerm" id="longTerm" onclick="filter('long', 'type')">
+                                    <input type="radio" name="type" id="longTerm" value="long">
                                     <label for="longTerm">Long Term</label>
                                 </div>
                             </div>
@@ -381,7 +381,7 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
 <!--Script for the search bar and datalist-->
 <script src="../SkillsContainer/allJobsSkills.js"></script>
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <!-- This script is used to function the filer section-->
 <script type="text/javascript">
     var url = "https://ez-work.herokuapp.com/newPostJob/jobs?";
@@ -400,30 +400,8 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
         window.location = newpage;
     }
 
-    function filter(by, type) {
-        // messy but it works
-        if (url[url.length - 1] != "?") {
-            url = url + "&";
-        }
-        if (type == "experience") {
-            url = url + "experience=" + by;
-        } else if (type == "hourly") {
-            url = url + "hourly=" + by;
-        } else if (type == "budget") {
-            url = url + "budget=" + by;
-        } else if (type == "skill") {
-            url = url + "skill=" + by;
-        } else if (type == "location") {
-            url = url + "location=" + by;
-        } else if (type == "size") {
-            url = url + "size=" + by;
-        } else if (type == "type") {
-            url = url + "type=" + by;
-        }
-    }
-
     function submitFilter() {
-        window.location = url;
+        window.location = "https://ez-work.herokuapp.com/newPostJob/jobs?" + $('form').serialize();
     }
 
     function resetOptions() {
