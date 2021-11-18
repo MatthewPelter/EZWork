@@ -124,10 +124,10 @@ $row = mysqli_fetch_assoc($result);
                         <select name="degree">
                             <option value="">----Select----</options>
                             <option value="GED">GED</option>
-                            <option value="Associate's Degree">Associate's Degree</option>
-                            <option value="Bachelor's degree">Bachelor's degree</option>
-                            <option value="Master's degree">Master's degree</option>
-                            <option value="Doctorate or higher">Doctorate or higher</option>
+                            <option value="Associate">Associate's Degree</option>
+                            <option value="Bachelor">Bachelor's degree</option>
+                            <option value="Master">Master's degree</option>
+                            <option value="Doctorate">Doctorate or higher</option>
                         </select>
                         <h3>Field of Study</h3>
                         <input type="text" name="fos" id="" placeholder="Aviation">
