@@ -161,26 +161,28 @@ if (mysqli_num_rows($jobResult) > 0) {
                 if ($r['typeOfJob'] == 'require') {
                     if ($myData['freelancer_id'] != NULL && $unameFetched['username'] != $_SESSION['userid']) { ?>
                         <button id="proposalBtn" onclick="openProposal()">Submit A Proposal</button>
+                        <div id="proposal" style="display: none;">
+                            <h1>Are you willing to pay for this service?</h1>
+                            <h2>If this freelancer has what you are looking for, click Pay now and pay for your service.</h2>
+                            <h2>The freelancer will be notified and will you can message them what you need done.</h2>
+                            <button onclick="agreeOffer()">Pay</button>
+                            <button onclick="cancel(this)">Cancel</button>
+                        </div>
                     <?php }
                 } else { ?>
                     <button id="payBtn" onclick="openPay()">Pay for Service</button>
+                    <div id="offer" style="display: none;">
+                        <h1>Are you willing to accept this job?</h1>
+                        <h2>By submitting a proposal, you agree that you are fully capable of completing this task.</h2>
+                        <h2>By hitting agree, you will be sending a proposal to the client and they will decide if they will accept your request.</h2>
+                        <button onclick="agreeProposal()">Agree</button>
+                        <button onclick="cancel(this)">Cancel</button>
+                    </div>
                 <?php } ?>
 
-                <div id="proposal" style="display: none;">
-                    <h1>Are you willing to pay for this service?</h1>
-                    <h2>If this freelancer has what you are looking for, click Pay now and pay for your service.</h2>
-                    <h2>The freelancer will be notified and will you can message them what you need done.</h2>
-                    <button onclick="agreeOffer()">Pay</button>
-                    <button onclick="cancel(this)">Cancel</button>
-                </div>
 
-                <div id="offer" style="display: none;">
-                    <h1>Are you willing to accept this job?</h1>
-                    <h2>By submitting a proposal, you agree that you are fully capable of completing this task.</h2>
-                    <h2>By hitting agree, you will be sending a proposal to the client and they will decide if they will accept your request.</h2>
-                    <button onclick="agreeProposal()">Agree</button>
-                    <button onclick="cancel(this)">Cancel</button>
-                </div>
+
+
 
                 <?php if ($unameFetched['username'] != $_SESSION['userid']) { ?>
                     <div class="flag">
