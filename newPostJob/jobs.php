@@ -355,8 +355,7 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                     } else { ?>
                         <div class="postedJob">
                             <div class="jobTitle">
-                                <h4 id="jobTitle">There are no jobs. :(</h4>
-                                <i class="fa fa-ellipsis-v" id="jobGodMode" aria-hidden="true"></i>
+                                <h4 id="jobTitle">There are no jobs based on your filter set. :(</h4>
                             </div>
                         </div>
                     <?php }
