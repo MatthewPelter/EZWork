@@ -1,5 +1,6 @@
 <?php
 session_start();
+echo "hello";
 function securityscan($data)
 {
     $data = trim($data);
@@ -10,7 +11,7 @@ function securityscan($data)
 if (!isset($_SESSION['userid']) && !isset($_SESSION['user_id'])) {
     die("Error");
 }
-echo "hello";
+
 $username = $_SESSION['userid'];
 $user_id = $_SESSION['user_id'];
 
