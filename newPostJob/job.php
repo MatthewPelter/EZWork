@@ -160,7 +160,7 @@ if (mysqli_num_rows($jobResult) > 0) {
                 <?php
                 if ($r['typeOfJob'] == 'require') {
                     if ($myData['freelancer_id'] != NULL && $unameFetched['username'] != $_SESSION['userid']) { ?>
-                        <button id="proposalBtn">Submit A Proposal</button>
+                        <a href="./proposal.php?id=<?php echo $job_id; ?>"><button id="proposalBtn">Submit A Proposal</button></a>
                     <?php }
                 } else { ?>
                     <button id="payBtn">Pay for Service</button>
