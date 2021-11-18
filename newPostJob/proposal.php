@@ -24,7 +24,7 @@ $job_id = mysqli_real_escape_string($conn, $job_id);
 $job_id = htmlspecialchars($job_id);
 
 $jobSQL = "SELECT jobs.*, clients.avatar, clients.username AS uname FROM jobs INNER JOIN clients ON jobs.user_id = clients.id WHERE jobs.id='$job_id' LIMIT 1";
-$jobResult = mysqli_query($conn, $jobSQL);
+$jobResult = mysqli_query($conn, $jobSQL) or die(mysqli_error($conn));
 
 
 if (mysqli_num_rows($jobResult) > 0) {
