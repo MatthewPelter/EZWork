@@ -48,7 +48,7 @@ if (isset($_POST['submit'])) {
     $createFreelancer = mysqli_query(
         $conn,
         "INSERT INTO freelancers(linkedin, user_id, expertise, experience, school, degree, fos, schoolStart, schoolEnd, jobTitle, company, jobLocation, jobStart, jobEnd, hourRate, description, country, street, apt, city, state, zip) VALUES ($linkedin, $user_id, $expertise, $experience, $school, $degree, $fos, $schoolStart, $schoolEnd, $jobTitle, $company, $jobLocation, $jobStart, $jobEnd, $hourRate, $description, $country, $street, $apt, $city, $state, $zip)"
-    ) or die(mysqli_errno($conn));
+    ) or die(mysqli_error($conn));
     if ($createFreelancer) {
         $sql = "SELECT id FROM freelancers WHERE user_id = '$user_id'";
         $result = mysqli_query($conn, $sql);
