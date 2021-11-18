@@ -2,7 +2,6 @@
 session_start(); // Session starts here.
 require_once('../classes/DB.php');
 
-
 function securityscan($data)
 {
     $data = trim($data);
@@ -27,7 +26,22 @@ if (!isset($_SESSION['user_id'])) {
     }
 }
 
+
+$queries = array();
+parse_str($_SERVER['QUERY_STRING'], $queries);
 $jobsSQL = "SELECT * FROM jobs";
+
+$num = 0;
+foreach ($queries as $x => $val) {
+    if ($x != "sort") {
+        if ($num == 0) {
+            $jobsSQL .= " WHERE " . $x . "='" . $val . "'";
+        } else {
+            $jobsSQL .= " AND " . $x . "='" . $val . "'";
+        }
+    }
+    $num = $num + 1;
+}
 
 if (isset($_GET['sort']) && !empty($_GET['sort'])) {
     $sort = securityscan($_GET['sort']);
@@ -49,6 +63,7 @@ if (isset($_GET['sort']) && !empty($_GET['sort'])) {
             break;
     }
 }
+
 $jobsQuery = mysqli_query($conn, $jobsSQL);
 
 ?>
@@ -249,11 +264,11 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                             <h3>By Project Type</h3>
                             <div class="filterProjectTypeCard">
                                 <div class="shortTerm">
-                                    <input type="radio" name="type" id="shortTerm" value="short">
+                                    <input type="radio" name="length" id="shortTerm" value="short">
                                     <label for="shortTerm">Short Term</label>
                                 </div>
                                 <div class="longTerm">
-                                    <input type="radio" name="type" id="longTerm" value="long">
+                                    <input type="radio" name="length" id="longTerm" value="long">
                                     <label for="longTerm">Long Term</label>
                                 </div>
                             </div>
