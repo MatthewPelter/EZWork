@@ -87,9 +87,12 @@ if (mysqli_num_rows($jobResult) > 0) {
                         <span id="status">
                             <?php if ($r['status'] == 0) {
                                 echo "Open";
-                            } else {
+                            } else if ($r['status'] == 1) {
                                 echo "Closed";
-                            } ?>
+                            } else if ($r['status'] == -1) {
+                                echo "In-Progress";
+                            }
+                            ?>
                         </span>
                     </p>
                 </div>
@@ -255,8 +258,10 @@ if (mysqli_num_rows($jobResult) > 0) {
 
     if (statusText == "Open") {
         status.style.color = "lightgreen";
-    } else {
+    } else if (statusText == "Closed") {
         status.style.color = "red";
+    } else if (statusText == "In-Progress") {
+        status.style.color = "#e1b12c";
     }
 </script>
 <!--Script for the search bar and datalist-->
