@@ -64,7 +64,7 @@ if (mysqli_num_rows($jobResult) > 0) {
     <div class="job">
         <h2>Job Details</h2>
         <div class="job-container">
-            <form class="form" action="../components/register-process" method="post" name="register" id="myForm">
+            <form class="form" action="../components/edit-post" method="post" name="edit-post" id="myForm">
                 <div class="jobCard">
                     <div class="jobTitle">
                         <input type="text" name="title" id="title" value="<?php echo $r['title']; ?>" required>
@@ -95,7 +95,7 @@ if (mysqli_num_rows($jobResult) > 0) {
 
                     <div class="jobDescription">
                         <h3>Description</h3>
-                        <input name="description" id="description" type="text" value="<?php echo $r['description']; ?>">
+                        <textarea name="description" id="description" type="text"><?php echo $r['description']; ?></textarea>
                     </div>
 
                     <div class="budgetAndExperience">
