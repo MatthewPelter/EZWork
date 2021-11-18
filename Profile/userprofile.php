@@ -515,9 +515,13 @@ if (mysqli_num_rows($result) > 0) {
 
                             <!-- if freelancer -->
 
-                            <?php if ($row['freelancer_id'] != NULL) { ?>
+                            <?php if ($row['freelancer_id'] != NULL) {
+                                $freeID = $row['freelancer_id'];
+                                $pullJobs = mysqli_query($conn, "SELECT COUNT(*) AS completedJobs FROM jobs WHERE freelancer_id = '$freeID' AND status=1");
+                                $pullJobCount = mysqli_fetch_assoc($pullJobs);
+                            ?>
                                 <div class="profile-card-inf__item">
-                                    <div class="profile-card-inf__title">not configured yet</div>
+                                    <div class="profile-card-inf__title"><?php echo $pullJobCount['completedJobs']; ?></div>
                                     <div class="profile-card-inf__txt">Completed Freelance Jobs</div>
                                 </div>
                             <?php } ?>
