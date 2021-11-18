@@ -1,6 +1,6 @@
 <?php
 $user_id = $_SESSION['user_id'];
-$avatarResult = mysqli_query($conn, "SELECT avatar FROM clients WHERE id = '$user_id'");
+$avatarResult = mysqli_query($conn, "SELECT avatar, freelancer_id FROM clients WHERE id = '$user_id'");
 $avatarFetch = mysqli_fetch_assoc($avatarResult);
 ?>
 <div class="profile-mobile-nav">
@@ -35,26 +35,28 @@ $avatarFetch = mysqli_fetch_assoc($avatarResult);
             </a>
         </ul>
     </div>
-    <div class="mobileNavCard" onclick="toggleFreelanceCard(this)">
-        <p>Freelancer</p>
-        <i class="fa fa-sort-down" id="freelanceArrow"></i>
-    </div>
-    <div class="mobileFreelanceCard">
-        <ul>
-            <a href="../newPostJob/jobs.php">
-                <li>Discover</li>
-            </a>
-            <a href="#/">
-                <li>Your Hires</li>
-            </a>
-            <a href="#/">
-                <li>Freelance History</li>
-            </a>
-            <a href="../Profile/register.php">
-                <li>Become Freelancer</li>
-            </a>
-        </ul>
-    </div>
+    <?php if ($avatarFetch['freelancer_id'] != NULL) { ?>
+        <div class="mobileNavCard" onclick="toggleFreelanceCard(this)">
+            <p>Freelancer</p>
+            <i class="fa fa-sort-down" id="freelanceArrow"></i>
+        </div>
+        <div class="mobileFreelanceCard">
+            <ul>
+                <a href="../newPostJob/jobs.php">
+                    <li>Discover</li>
+                </a>
+                <a href="#/">
+                    <li>Your Hires</li>
+                </a>
+                <a href="#/">
+                    <li>Freelance History</li>
+                </a>
+                <a href="../Profile/register.php">
+                    <li>Become Freelancer</li>
+                </a>
+            </ul>
+        </div>
+    <?php } ?>
 
     <div class="mobileNavCard" onclick="toggleProjectsCard(this)">
         <p>Projects</p>
@@ -143,25 +145,27 @@ $avatarFetch = mysqli_fetch_assoc($avatarResult);
                 </div>
             </div>
         </div>
-        <div class="freelancerNav">
-            <span onclick="toggleTalent()" id="talents">Freelancer</span>
-            <div class="talentCardContainer">
-                <div class="talentCard">
-                    <div class="card card1">
-                        <h4>Discover</h4>
-                    </div>
-                    <div class="card card2">
-                        <h4>Your Hires</h4>
-                    </div>
-                    <div class="card card4">
-                        <h4>Freelance History</h4>
-                    </div>
-                    <div class="card card4" onclick="location.href='../Profile/register.php'">
-                        <h4>Become Freelancer</h4>
+        <?php if ($avatarFetch['freelancer_id'] != NULL) { ?>
+            <div class="freelancerNav">
+                <span onclick="toggleTalent()" id="talents">Freelancer</span>
+                <div class="talentCardContainer">
+                    <div class="talentCard">
+                        <div class="card card1">
+                            <h4>Discover</h4>
+                        </div>
+                        <div class="card card2">
+                            <h4>Your Hires</h4>
+                        </div>
+                        <div class="card card4">
+                            <h4>Freelance History</h4>
+                        </div>
+                        <div class="card card4" onclick="location.href='../Profile/register.php'">
+                            <h4>Become Freelancer</h4>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        <?php } ?>
         <div class="projectsNav">
             <span onclick="toggleProject()" id="projects">Projects</span>
             <div class="projectCardContainer">
@@ -234,7 +238,6 @@ $avatarFetch = mysqli_fetch_assoc($avatarResult);
 
 <!--nav bar script -->
 <script type="text/javascript">
-
     var job = document.querySelector('.jobCard');
     var talent = document.querySelector('.talentCard');
     var project = document.querySelector('.projectCard');

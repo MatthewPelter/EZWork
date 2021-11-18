@@ -57,7 +57,7 @@ if (isset($_POST['submit'])) {
 
         mysqli_query($conn, "UPDATE clients SET freelancer_id = '$fetchFreelancerID' WHERE id = '$user_id'") or die(mysqli_errno($conn));
 
-        echo "You are now a freelancer!";
+        header("location: https://ez-work.herokuapp.com/ClientProfile/index");
     } else {
         echo "could not insert into database";
     }
