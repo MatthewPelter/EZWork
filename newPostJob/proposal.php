@@ -95,6 +95,10 @@ if (mysqli_num_rows($jobResult) > 0) {
                 }
             });
         });
+
+        function cancel() {
+            window.location = "https://ez-work.herokuapp.com/newPostJob/jobs.php";
+        }
     </script>
 
 

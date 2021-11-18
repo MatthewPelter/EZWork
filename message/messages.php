@@ -152,18 +152,31 @@ if (isset($_POST['submit'])) {
                                 while ($row = mysqli_fetch_assoc($result)) {
                                     //echo $row['id'] . ": " . $row['body'] . "<br />";
                                     if ($row['Sender'] == $username) {
-                                ?>
-                                        <li class="clearfix">
-                                            <div class="message-data align-right">
-                                                <span class="message-data-name">Me</span> <i class="fa fa-circle me"></i>
+                                        if ($row['jobID'] != NULL) { ?>
+                                            <li>
+                                                <div class="message-data align-right">
+                                                    <span class="message-data-name">Me</span> <i class="fa fa-circle me"></i>
+                                                </div>
+                                                <div class="message other-message float-right">
+                                                    <?php echo $row['Sender']; ?> is interested in your project you posted.<br />
+                                                    Make sure to view their profile and rating before you accept their proposal.<br />
+                                                    <?php echo $row['body']; ?>
+                                                </div>
+                                            </li>
+                                        <?php } else { ?>
 
-                                            </div>
-                                            <div class="message other-message float-right">
-                                                <?php echo $row['body']; ?>
-                                            </div>
-                                        </li>
+                                            <li class="clearfix">
+                                                <div class="message-data align-right">
+                                                    <span class="message-data-name">Me</span> <i class="fa fa-circle me"></i>
+
+                                                </div>
+                                                <div class="message other-message float-right">
+                                                    <?php echo $row['body']; ?>
+                                                </div>
+                                            </li>
 
                                         <?php
+                                        }
                                     } else {
                                         if ($row['jobID'] != NULL) { ?>
                                             <li>
