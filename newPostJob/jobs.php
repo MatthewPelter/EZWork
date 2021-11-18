@@ -86,7 +86,7 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
             <div class="searchBar2">
                 <form id="searchContainer2">
                     <input type="text" list="allskills" autocomplete="off" name="search" placeholder="Search" id="search2">
-                    <input type="submit" value="Search" id="find2">
+                    <input type="submit" value="Not Configured Yet :)" id="find2" disabled>
                 </form>
             </div>
         </div>
