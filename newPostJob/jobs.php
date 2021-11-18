@@ -423,7 +423,7 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
         } else {
             //newpage = text + "&sort=" + by;
         }
-        window.location = newpage;
+        //window.location = newpage;
     }
 
     $('#submitFilter').click(function() {
