@@ -412,18 +412,22 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
     var url = "https://ez-work.herokuapp.com/newPostJob/jobs?";
 
     function sort(by) {
-        text = window.location.href;
+        var newpage = "";
+        var text = window.location.href;
         if (text.indexOf("sort") > 0) {
             var remove = text.substring(text.indexOf("sort") - 1, text.length);
             text = text.replace(remove, "");
-            console.log(text);
-        }
-        if (window.location.href == "https://ez-work.herokuapp.com/newPostJob/jobs") {
-            //newpage = window.location.href + "?sort=" + by;
+            newpage = text + "?sort=" + by;
+            window.location = newpage;
         } else {
-            //newpage = text + "&sort=" + by;
+            if (window.location.href == "http://localhost/test.php") {
+                newpage = window.location.href + "?sort=" + by;
+            } else {
+                newpage = text + "&sort=" + by;
+            }
+            window.location = newpage;
         }
-        //window.location = newpage;
+
     }
 
     $('#submitFilter').click(function() {

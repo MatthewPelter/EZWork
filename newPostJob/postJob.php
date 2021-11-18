@@ -53,6 +53,10 @@ if (!isset($_SESSION['userid'])) {
                             $_SESSION['post']['hourrate'] = NULL;
                         }
 
+                        if (!isset($_POST['typeOfJob']) && empty($_POST['typeOfJob'])) {
+                            $typeOfJob = 'require';
+                        }
+
                         //print_r($_SESSION['post']);
                         $datePosted = date("Y-m-d");
                         $sql = "INSERT INTO jobs(length,title,skills,size,location,budget,rate,description,image,user_id,freelancer_id,status, datePosted, experience, typeOfJob) VALUES('$length','$title','$skills','$size','$location','$maxbudget','$hourrate', '$description', '$image', '$userID',0,0, '$datePosted', '$experience', '$typeOfJob')";
