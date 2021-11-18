@@ -123,7 +123,7 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                     <i class="fa fa-sort-desc" id="filterArrow" aria-hidden="true"></i>
                 </div>
                 <div class="filterCard">
-                    <form action="javascript:void(0);">
+                    <form id="filterForm" action="javascript:void(0);">
                         <div class="FilterExperience">
                             <h3>By Experience</h3>
                             <div class="experienceCard">
@@ -401,7 +401,7 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
     }
 
     $('#submitFilter').click(function() {
-        window.location = "https://ez-work.herokuapp.com/newPostJob/jobs?" + $('form').serialize();
+        window.location = "https://ez-work.herokuapp.com/newPostJob/jobs?" + $('#filterForm').serialize();
     });
 
     function resetOptions() {
