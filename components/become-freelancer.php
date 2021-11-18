@@ -62,4 +62,6 @@ if (isset($_POST['submit'])) {
     } else {
         echo "could not insert into database";
     }
+} else {
+    echo "submit not set";
 }

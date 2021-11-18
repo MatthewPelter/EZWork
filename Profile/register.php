@@ -58,7 +58,7 @@ $row = mysqli_fetch_assoc($result);
         </div>
 
         <!--Form Start-->
-        <form id="registerForm" method="POST" action="../components/freelancer-process.php">
+        <form id="registerForm" method="post" action="../components/freelancer-process.php">
             <div class="start">
                 <div class="start-container">
                     <div class="start-container-title">
