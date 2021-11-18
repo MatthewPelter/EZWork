@@ -18,7 +18,7 @@ $job_id = $_GET['id'];
 $job_id = mysqli_real_escape_string($conn, $job_id);
 $job_id = htmlspecialchars($job_id);
 
-$jobSQL = "SELECT jobs.*, clients.avatar FROM jobs INNER JOIN clients ON jobs.user_id = clients.id WHERE jobs.id='$job_id' LIMIT 1";
+$jobSQL = "SELECT * FROM jobs WHERE jobs.id='$job_id' LIMIT 1";
 $jobResult = mysqli_query($conn, $jobSQL);
 
 if (mysqli_num_rows($jobResult) > 0) {
@@ -27,9 +27,6 @@ if (mysqli_num_rows($jobResult) > 0) {
     if ($user_id != $uid) {
         die("You cannot edit someone else's post...");
     }
-    $unameSQL = "SELECT username FROM clients WHERE id='$uid'";
-    $unameResult = mysqli_query($conn, $unameSQL);
-    $unameFetched = mysqli_fetch_assoc($unameResult);
 } else {
     header("location: ./jobs.php");
 }
@@ -153,51 +150,7 @@ if (mysqli_num_rows($jobResult) > 0) {
             </div>
 
             <div class="options">
-                <button>Submit A Proposal</button>
-
-                <div class="flag">
-                    <i class="fa fa-flag" aria-hidden="true"></i>
-                    <span>Flag as Inappropiate</span>
-                </div>
-                <?php if ($unameFetched['username'] == $_SESSION['userid']) {
-                ?>
-                    <input type="button" onclick="deleteMenu()" id="deleteBtn" value="Delete Post"> <br />
-                    <input type="button" onclick="location.href = 'edit?id=<?php echo $r['id']; ?>';" id="deleteBtn" value="Edit Post">
-
-                    <span id="result"></span>
-
-                    <div id="deleteMenu" style="display: none;">
-                        <div class="deleteMenuContainer">
-                            <span>Are you sure you want to delete this post?</span>
-                            <input type="button" id="yesBtn" value="Yes">
-                            <input type="button" id="noBtn" value="No">
-                        </div>
-                    </div>
-
-                <?php } ?>
-            </div>
-            <div class="clientInfo">
-                <h3>About the Client</h3>
-                <div class="username">
-                    <p>Posted By: </p>
-                    <?php if ($unameFetched['username'] != $_SESSION['userid']) { ?>
-                        <a href="../Profile/userprofile.php?name=<?php echo $unameFetched['username']; ?>"><?php echo $unameFetched['username']; ?></a>
-
-                    <?php } else {
-                        echo $unameFetched['username'];
-                    } ?>
-                </div>
-                <div class="img-card">
-                    <img src="<?php echo $r['avatar']; ?>" alt="">
-                </div>
-            </div>
-            <div class="joblink">
-                <h4>Job Link</h4>
-                <div class="link">
-                    <span id="link">https://ez-work.herokuapp.com/newPostJob/job.php?id=<?php echo $r['id']; ?></span>
-                </div>
-
-                <p id="copyLink">Copy Link</p>
+                <button>Submit</button>
             </div>
         </div>
     </div>
