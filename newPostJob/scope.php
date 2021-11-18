@@ -7,6 +7,7 @@ if (!isset($_SESSION['userid'])) {
     die("NOT LOGGED IN");
 }
 
+
 // Checking second page values for empty, If it finds any blank field then redirected to second page.
 if (isset($_POST['skills'])) {
     if (empty($_POST['skills'])) {
@@ -14,7 +15,7 @@ if (isset($_POST['skills'])) {
         header("location: postSkill.php"); // Redirecting to second page. 
     } else {
         // Fetching all values posted from second page and storing it in variable.
-        if (!empty($_FILES['image'])) {
+        if (!empty($_POST['image'])) {
             $client_id = "9f482e3edae002b";
             $image = $_FILES['image']['tmp_name'];
             $file = file_get_contents($image);
@@ -39,7 +40,7 @@ if (isset($_POST['skills'])) {
 
             $_POST['image'] = $url;
         } else {
-            $_POST['image'] = "";
+            $_POST['image'] = NULL;
         }
 
         foreach ($_POST as $key => $value) {
