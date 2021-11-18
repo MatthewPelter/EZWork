@@ -156,14 +156,22 @@ if (mysqli_num_rows($jobResult) > 0) {
             </div>
 
             <div class="options">
-                <?php if ($myData['freelancer_id'] != NULL && $unameFetched['username'] != $_SESSION['userid']) { ?>
-                    <button>Submit A Proposal</button>
+
+                <?php
+                if ($r['typeOfJob'] == 'require') {
+                    if ($myData['freelancer_id'] != NULL && $unameFetched['username'] != $_SESSION['userid']) { ?>
+                        <button onclick="openProposal()">Submit A Proposal</button>
+                    <?php }
+                } else { ?>
+                    <button onclick="openOffer()">Pay for Service</button>
                 <?php } ?>
 
-                <div class="flag">
-                    <i class="fa fa-flag" aria-hidden="true"></i>
-                    <span>Flag as Inappropiate</span>
-                </div>
+                <?php if ($unameFetched['username'] != $_SESSION['userid']) { ?>
+                    <div class="flag">
+                        <i class="fa fa-flag" aria-hidden="true"></i>
+                        <span>Flag as Inappropiate</span>
+                    </div>
+                <?php } ?>
                 <?php if ($unameFetched['username'] == $_SESSION['userid']) {
                 ?>
                     <input type="button" onclick="location.href = 'edit?id=<?php echo $r['id']; ?>';" id="deleteBtn" value="Edit Post"><br />
@@ -206,6 +214,22 @@ if (mysqli_num_rows($jobResult) > 0) {
         </div>
     </div>
 
+    <div class="proposal" style="display: none;">
+        <h1>Are you willing to pay for this service?</h1>
+        <h2>If this freelancer has what you are looking for, click Pay now and pay for your service.</h2>
+        <h2>The freelancer will be notified and will you can message them what you need done.</h2>
+        <button onclick="agreeOffer()">Pay</button>
+        <button onclick="cancel(this)">Cancel</button>
+    </div>
+
+    <div class="offer" style="display: none;">
+        <h1>Are you willing to accept this job?</h1>
+        <h2>By submitting a proposal, you agree that you are fully capable of completing this task.</h2>
+        <h2>By hitting agree, you will be sending a proposal to the client and they will decide if they will accept your request.</h2>
+        <button onclick="agreeProposal()">Agree</button>
+        <button onclick="cancel(this)">Cancel</button>
+    </div>
+
     <?php include '../footer.php'; ?>
 
     <!--DataList-->
@@ -238,6 +262,18 @@ if (mysqli_num_rows($jobResult) > 0) {
     $('#noBtn').click(function() {
         $('#deleteMenu').css('display', 'none');
     });
+
+    function openOffer() {
+        $('.offer').css('display', 'block');
+    }
+
+    function openProposal() {
+        $('.proposal').css('display', 'block');
+    }
+
+    function cancel(this) {
+        $(this).css('display', 'none');
+    }
 
     function copyToClipboard(link) {
         const el = document.createElement("textarea");
