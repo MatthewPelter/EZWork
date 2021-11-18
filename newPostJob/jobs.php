@@ -375,7 +375,7 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
 
 <!-- This script is used to function the filer section-->
 <script type="text/javascript">
-    var url = window.location.href + "?";
+    var url = "https://ez-work.herokuapp.com/newPostJob/jobs?";
 
     function sort(by) {
         url = url + "sort=" + by;
