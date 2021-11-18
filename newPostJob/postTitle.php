@@ -85,17 +85,27 @@ if (isset($_POST['length'])) {
                 <form action="postSkill.php" method="post" style="width: 100%;">
                     <h3>Write a title for your job post</h3>
                     <div class="titleContainer">
-                        <input name="title" id="title" type="text" placeholder="I need my garage door installed..." value=""><br />
+                        <input name="title" id="title" type="text" placeholder="Enter Title Here..." value=""><br />
                     </div>
+
                     <h4>Example titles</h4>
-                    <ul>
-                        <li>Build a website for my local coffee shop business</li>
-                        <li>Logo Designer needed to design a modern company logo.</li>
-                        <li>Computer Technician needed to build my custom gaming pc.</li>
-                    </ul>
+                    <?php if (isset($_POST['typeOfJob']) && $_POST['typeOfJob'] == 'offer') { ?>
+                        <ul>
+                            <li>I can design a website for your company.</li>
+                            <li>I can install car parts for you.</li>
+                            <li>I can build custom gaming PC's for your gaming needs.</li>
+                        </ul>
+
+                    <?php } else { ?>
+                        <ul>
+                            <li>Build a website for my local coffee shop business</li>
+                            <li>Logo Designer needed to design a modern company logo.</li>
+                            <li>Computer Technician needed to build my custom gaming pc.</li>
+                        </ul>
+                    <?php } ?>
                     <h3>Enter a job description</h3>
                     <div class="descriptionContainer">
-                        <input name="description" id="description" type="text" placeholder="My son drove into my garage door and completely ruined my beautiful door..." value="">
+                        <input name="description" id="description" type="text" placeholder="Let people know more about your project..." value="">
                     </div>
                     <div class="CancelOrNext">
                         <input type="reset" value="Reset" id="reset" />
@@ -117,6 +127,7 @@ if (isset($_POST['length'])) {
 </body>
 <!--Script for the search bar and datalist-->
 <script src="../SkillsContainer/searchProfile.js"></script>
+
 </html>
 <?php
 /* We can use this for the registration to improve input validation
