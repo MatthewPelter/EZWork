@@ -169,6 +169,20 @@ section {
         }
       }
     }
+    #continue{
+      margin: 0.8rem 0rem;
+      width: 40%;
+      cursor: pointer;
+      background: transparent;
+      color: $color1;
+      padding: 0.5rem 0rem;
+      font-size: 1rem;
+      border-radius: 15px;
+      border: solid 1.2px $color1;
+      &:hover {
+        background: whitesmoke;
+      }      
+    }
     .login {
       width: 100%;
       border-top: 0.8px solid lightgray;

@@ -4346,6 +4346,22 @@ section .container .register-container form button:hover {
   background: #0a345e;
 }
 
+section .container #continue {
+  margin: 0.8rem 0rem;
+  width: 40%;
+  cursor: pointer;
+  background: transparent;
+  color: #0a345e;
+  padding: 0.5rem 0rem;
+  font-size: 1rem;
+  border-radius: 15px;
+  border: solid 1.2px #0a345e;
+}
+
+section .container #continue:hover {
+  background: whitesmoke;
+}
+
 section .container .login {
   width: 100%;
   border-top: 0.8px solid lightgray;
