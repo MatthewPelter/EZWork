@@ -604,7 +604,7 @@ $darktext: rgb(121, 121, 121);
     
             .sortMenu{
                 width: 100%;
-                height: 20vh;
+                height: 30vh;
                 overflow: hidden;
                 overflow-y: scroll;
                 display: flex;
@@ -636,8 +636,8 @@ $darktext: rgb(121, 121, 121);
     
                 }
                 #resetSortFilter{
-                    margin: 0.3rem 0rem;
-                    width: 100%;
+                    margin: 0.2rem 0rem;
+                    width: fit-content;
                     cursor: pointer;
                     background: transparent;
                     color: $color1;
