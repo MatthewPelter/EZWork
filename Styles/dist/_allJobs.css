@@ -576,7 +576,7 @@
   }
   .all-jobs-container .jobs-container .sortMenu #resetSortFilter {
     margin: 0.2rem 0rem;
-    width: fit-content;
+    width: 50%;
     cursor: pointer;
     background: transparent;
     color: #0a345e;
