@@ -64,43 +64,12 @@
   width: 60%;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
-.myJobs .myJobs-container .myJobs-container-header .searchBar #searchContainer {
-  padding: 0;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  border: 1px solid lightgrey;
-  border-radius: 8px;
-}
-.myJobs .myJobs-container .myJobs-container-header .searchBar #searchContainer #search {
-  height: 100%;
-  width: 80%;
-  border: none;
-  font-size: 1.1rem;
-  color: black;
-  padding: 0.5rem;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
-  outline: none;
-}
-.myJobs .myJobs-container .myJobs-container-header .searchBar #searchContainer #find {
-  height: 100%;
-  width: 20%;
-  border: none;
-  cursor: pointer;
-  font-size: 1rem;
-  padding: 0.5rem 0rem;
-  color: white;
-  background: #054e97;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
-}
-.myJobs .myJobs-container .myJobs-container-header .searchBar #searchContainer #find:hover {
-  background: #0a345e;
+.myJobs .myJobs-container .myJobs-container-header .searchBar h3 {
+  font-size: 1.5rem;
+  color: #0a345e;
 }
 .myJobs .myJobs-container .myJobs-container-header button {
   cursor: pointer;
