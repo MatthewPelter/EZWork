@@ -201,7 +201,7 @@
 .job .job-container .options .flag span:hover {
   text-decoration: underline;
 }
-.job .job-container .options #deleteBtn {
+.job .job-container .options #deleteBtn, .job .job-container .options #editBtn {
   margin: 0.5rem 0rem;
   -moz-appearance: none;
   -webkit-appearance: none;
