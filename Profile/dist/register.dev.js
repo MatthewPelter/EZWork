@@ -1,172 +1,149 @@
+"use strict";
+
 //Conatiners
-const start = document.querySelector(".start");
-const expertise = document.querySelector(".expertise");
-const education = document.querySelector(".education");
-const employment = document.querySelector(".employment");
-const hourlyRate = document.querySelector(".hourlyRate");
-const titleDescription = document.querySelector(".titleDescription");
-const profilePhoto = document.querySelector(".profilePhoto");
-const locationCard = document.querySelector(".locationCard");
+var start = document.querySelector(".start");
+var expertise = document.querySelector(".expertise");
+var education = document.querySelector(".education");
+var employment = document.querySelector(".employment");
+var hourlyRate = document.querySelector(".hourlyRate");
+var titleDescription = document.querySelector(".titleDescription");
+var profilePhoto = document.querySelector(".profilePhoto");
+var locationCard = document.querySelector(".locationCard"); //Side Nav
 
-//Side Nav
-const expertiseNav = document.getElementById("expertiseNav");
-const linkeninNav = document.getElementById("linkeninNav");
-const educationNav = document.getElementById("educationNav");
-const employmentNav = document.getElementById("employmentNav");
-const payRateNav = document.getElementById("payRateNav");
-const titleNav = document.getElementById("titleNav");
-const profilePicNav = document.getElementById("profilePicNav");
-const locationNav = document.getElementById("locationNav");
+var expertiseNav = document.getElementById("expertiseNav");
+var linkeninNav = document.getElementById("linkeninNav");
+var educationNav = document.getElementById("educationNav");
+var employmentNav = document.getElementById("employmentNav");
+var payRateNav = document.getElementById("payRateNav");
+var titleNav = document.getElementById("titleNav");
+var profilePicNav = document.getElementById("profilePicNav");
+var locationNav = document.getElementById("locationNav"); //Buttons
 
-//Buttons
-const skipBtn = document.getElementById("skipStep");
-
-skipBtn.addEventListener("click", () => {
+var skipBtn = document.getElementById("skipStep");
+skipBtn.addEventListener("click", function () {
   expertise.style.display = "block";
   start.style.display = "none";
   expertiseNav.style.background = "lightgray";
   linkeninNav.style.background = "whitesmoke";
-});
+}); // Next Button for start
 
-// Next Button for start
-const nextBtn = document.getElementById("nextStep");
-nextBtn.addEventListener("click", () => {
+var nextBtn = document.getElementById("nextStep");
+nextBtn.addEventListener("click", function () {
   expertise.style.display = "block";
   start.style.display = "none";
   expertiseNav.style.background = "lightgray";
   linkeninNav.style.background = "whitesmoke";
-});
+}); // EXPERTISE CARD
 
-// EXPERTISE CARD
-const backToLinkedInBTN = document.getElementById("backToLinkedIn");
-backToLinkedInBTN.addEventListener("click", () => {
+var backToLinkedInBTN = document.getElementById("backToLinkedIn");
+backToLinkedInBTN.addEventListener("click", function () {
   expertise.style.display = "none";
   start.style.display = "inline-block";
   expertiseNav.style.background = "whitesmoke";
   linkeninNav.style.background = "lightgray";
 });
-
-const nextStepEducationBtn = document.getElementById("nextStepEducation");
-nextStepEducationBtn.addEventListener("click", () => {
+var nextStepEducationBtn = document.getElementById("nextStepEducation");
+nextStepEducationBtn.addEventListener("click", function () {
   expertise.style.display = "none";
   education.style.display = "inline-block";
   expertiseNav.style.background = "whitesmoke";
   educationNav.style.background = "lightgray";
-});
+}); // EDUCATION CARD
 
-// EDUCATION CARD
-const backToExpertiseBtn = document.getElementById("backToExpertise");
-backToExpertiseBtn.addEventListener("click", () => {
+var backToExpertiseBtn = document.getElementById("backToExpertise");
+backToExpertiseBtn.addEventListener("click", function () {
   expertise.style.display = "inline-block";
   education.style.display = "none";
   expertiseNav.style.background = "lightgray";
   educationNav.style.background = "whitesmoke";
 });
-
-const nextStepEmploymentBtn = document.getElementById("nextStepEmployment");
-nextStepEmploymentBtn.addEventListener("click", () => {
+var nextStepEmploymentBtn = document.getElementById("nextStepEmployment");
+nextStepEmploymentBtn.addEventListener("click", function () {
   education.style.display = "none";
   employment.style.display = "inline-block";
   educationNav.style.background = "whitesmoke";
   employmentNav.style.background = "lightgray";
-});
+}); // Employment Card
 
-// Employment Card
-const backToEducationBtn = document.getElementById("backToEducation");
-backToEducationBtn.addEventListener("click", () => {
+var backToEducationBtn = document.getElementById("backToEducation");
+backToEducationBtn.addEventListener("click", function () {
   employment.style.display = "none";
   education.style.display = "inline-block";
   educationNav.style.background = "lightgray";
   employmentNav.style.background = "whitesmoke";
 });
-
-const nextStepPayRateBtn = document.getElementById("nextStepPayRate");
-nextStepPayRateBtn.addEventListener("click", () => {
+var nextStepPayRateBtn = document.getElementById("nextStepPayRate");
+nextStepPayRateBtn.addEventListener("click", function () {
   employment.style.display = "none";
   hourlyRate.style.display = "inline-block";
   payRateNav.style.background = "lightgray";
   employmentNav.style.background = "whitesmoke";
-});
+}); //HOURLY RATE
 
-//HOURLY RATE
-const nextStepTitleBtn = document.getElementById("nextStepTitle");
-nextStepTitleBtn.addEventListener("click", () => {
+var nextStepTitleBtn = document.getElementById("nextStepTitle");
+nextStepTitleBtn.addEventListener("click", function () {
   hourlyRate.style.display = "none";
   payRateNav.style.background = "whitesmoke";
   titleDescription.style.display = "inline-block";
   titleNav.style.background = "lightgray";
 });
-
-const backToEmploymentBtn = document.getElementById("backToEmployment");
-backToEmploymentBtn.addEventListener("click", () => {
+var backToEmploymentBtn = document.getElementById("backToEmployment");
+backToEmploymentBtn.addEventListener("click", function () {
   employment.style.display = "inline-block";
   hourlyRate.style.display = "none";
   payRateNav.style.background = "whitesmoke";
   employmentNav.style.background = "lightgray";
-});
+}); // TITLE AND DESCRIPTION
 
-// TITLE AND DESCRIPTION
-const nextStepProfilePhotoBtn = document.getElementById("nextStepProfilePhoto");
-nextStepProfilePhotoBtn.addEventListener("click", () => {
+var nextStepProfilePhotoBtn = document.getElementById("nextStepProfilePhoto");
+nextStepProfilePhotoBtn.addEventListener("click", function () {
   titleDescription.style.display = "none";
   titleNav.style.background = "whitesmoke";
   profilePhoto.style.display = "inline-block";
   profilePicNav.style.background = "lightgray";
 });
-
-const backToHourlyRateBtn = document.getElementById("backToHourlyRate");
-backToHourlyRateBtn.addEventListener("click", () => {
+var backToHourlyRateBtn = document.getElementById("backToHourlyRate");
+backToHourlyRateBtn.addEventListener("click", function () {
   hourlyRate.style.display = "inline-block";
   payRateNav.style.background = "lightgray";
   titleDescription.style.display = "none";
   titleNav.style.background = "whitesmoke";
-});
+}); // PROFILE PHOTO
 
-// PROFILE PHOTO
-const backToTitleDescriptionBtn = document.getElementById(
-  "backToTitleDescription"
-);
-backToTitleDescriptionBtn.addEventListener("click", () => {
+var backToTitleDescriptionBtn = document.getElementById("backToTitleDescription");
+backToTitleDescriptionBtn.addEventListener("click", function () {
   titleDescription.style.display = "inline-block";
   titleNav.style.background = "lightgray";
   profilePhoto.style.display = "none";
   profilePicNav.style.background = "whitesmoke";
 });
-
-const nextStepLocationBtn = document.getElementById("nextStepLocation");
-nextStepLocationBtn.addEventListener("click", () => {
+var nextStepLocationBtn = document.getElementById("nextStepLocation");
+nextStepLocationBtn.addEventListener("click", function () {
   profilePhoto.style.display = "none";
   profilePicNav.style.background = "whitesmoke";
   locationCard.style.display = "inline-block";
   locationNav.style.background = "lightgray";
-});
+}); // LOCATION
 
-// LOCATION
-const backToProfilePhotoBtn = document.getElementById("backToProfilePhoto");
-backToProfilePhotoBtn.addEventListener("click", () => {
+var backToProfilePhotoBtn = document.getElementById("backToProfilePhoto");
+backToProfilePhotoBtn.addEventListener("click", function () {
   profilePhoto.style.display = "inline-block";
   profilePicNav.style.background = "lightgray";
   locationCard.style.display = "none";
   locationNav.style.background = "whitesmoke";
 });
-
-const payRateI = document.getElementById("payRate");
-
-const totalPaySpan = document.getElementById("totalPay");
+var payRateI = document.getElementById("payRate");
+var totalPaySpan = document.getElementById("totalPay");
 var serviceFee = 0.1;
 var userRate = payRateI.value;
-
 var total = userRate - serviceFee * userRate;
 totalPaySpan.innerText = total.toFixed(2);
-
-payRateI.addEventListener("input", () => {
+payRateI.addEventListener("input", function () {
   var serviceFee = 0.1;
   var userRate = payRateI.value;
-
   var total = userRate - serviceFee * userRate;
   totalPaySpan.innerText = total.toFixed(2);
 });
-
 /* I belive this code was causing the issue on uplaoding location
 const countryID = document.getElementById("countryID");
 
