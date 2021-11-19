@@ -20605,8 +20605,8 @@ li {
   margin: 0.3rem 0rem;
   width: 90%;
   cursor: pointer;
-  background: #0a345e;
-  color: white;
+  background: transparent;
+  color: #0a345e;
   padding: 0.5rem 0rem;
   font-size: 1rem;
   border-radius: 10px;
