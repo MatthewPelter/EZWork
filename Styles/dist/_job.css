@@ -202,6 +202,7 @@
   text-decoration: underline;
 }
 .job .job-container .options #deleteBtn {
+  margin: 0.5rem 0rem;
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
