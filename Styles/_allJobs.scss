@@ -92,6 +92,21 @@ $darktext: rgb(121, 121, 121);
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
+
+            #resetSortFilter{
+                margin: 0.3rem 0rem;
+                width: 90%;
+                cursor: pointer;
+                background: $color1;
+                color: white;
+                padding: 0.5rem 0rem;
+                font-size: 1rem;
+                border-radius: 10px;
+                border: solid .7px $color1;
+                &:hover {
+                  background: whitesmoke;
+                }  
+            }
             
             .sort{
                 padding: 1rem 0rem;
@@ -317,6 +332,20 @@ $darktext: rgb(121, 121, 121);
                             }
                         }
                     }
+                }
+                #submitFilter{
+                    margin: 0.3rem 0rem;
+                    width: 70%;
+                    cursor: pointer;
+                    background: transparent;
+                    color: $color1;
+                    padding: 0.2rem 0rem;
+                    font-size: 1rem;
+                    border-radius: 10px;
+                    border: solid .7px $color1;
+                    &:hover {
+                      background: whitesmoke;
+                    }  
                 }                    
             }
         }

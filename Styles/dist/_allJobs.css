@@ -83,6 +83,20 @@
   flex-direction: column;
   justify-content: flex-start;
 }
+.all-jobs-container .jobs-container .sortMenu #resetSortFilter {
+  margin: 0.3rem 0rem;
+  width: 90%;
+  cursor: pointer;
+  background: #0a345e;
+  color: white;
+  padding: 0.5rem 0rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: solid 0.7px #0a345e;
+}
+.all-jobs-container .jobs-container .sortMenu #resetSortFilter:hover {
+  background: whitesmoke;
+}
 .all-jobs-container .jobs-container .sortMenu .sort {
   padding: 1rem 0rem;
   cursor: pointer;
@@ -288,6 +302,20 @@
 }
 .all-jobs-container .jobs-container .sortMenu .filterCard .FilterProjectType .filterProjectTypeCard .shortTerm label:hover, .all-jobs-container .jobs-container .sortMenu .filterCard .FilterProjectType .filterProjectTypeCard .longTerm label:hover, .all-jobs-container .jobs-container .sortMenu .filterCard .FilterProjectSize .filterProjectTypeCard .shortTerm label:hover, .all-jobs-container .jobs-container .sortMenu .filterCard .FilterProjectSize .filterProjectTypeCard .longTerm label:hover, .all-jobs-container .jobs-container .sortMenu .filterCard .FilterLocation .filterProjectTypeCard .shortTerm label:hover, .all-jobs-container .jobs-container .sortMenu .filterCard .FilterLocation .filterProjectTypeCard .longTerm label:hover, .all-jobs-container .jobs-container .sortMenu .filterCard .FilterSkill .filterProjectTypeCard .shortTerm label:hover, .all-jobs-container .jobs-container .sortMenu .filterCard .FilterSkill .filterProjectTypeCard .longTerm label:hover, .all-jobs-container .jobs-container .sortMenu .filterCard .FilterBudget .filterProjectTypeCard .shortTerm label:hover, .all-jobs-container .jobs-container .sortMenu .filterCard .FilterBudget .filterProjectTypeCard .longTerm label:hover, .all-jobs-container .jobs-container .sortMenu .filterCard .FilterExperience .filterProjectTypeCard .shortTerm label:hover, .all-jobs-container .jobs-container .sortMenu .filterCard .FilterExperience .filterProjectTypeCard .longTerm label:hover {
   text-decoration: underline;
+}
+.all-jobs-container .jobs-container .sortMenu .filterCard #submitFilter {
+  margin: 0.3rem 0rem;
+  width: 70%;
+  cursor: pointer;
+  background: transparent;
+  color: #0a345e;
+  padding: 0.2rem 0rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: solid 0.7px #0a345e;
+}
+.all-jobs-container .jobs-container .sortMenu .filterCard #submitFilter:hover {
+  background: whitesmoke;
 }
 .all-jobs-container .jobs-container .allJobs {
   grid-area: 1/2/2/3;
