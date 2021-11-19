@@ -635,6 +635,20 @@ $darktext: rgb(121, 121, 121);
                     }
     
                 }
+                #resetSortFilter{
+                    margin: 0.3rem 0rem;
+                    width: 100%;
+                    cursor: pointer;
+                    background: transparent;
+                    color: $color1;
+                    padding: 0.5rem 0rem;
+                    font-size: 1rem;
+                    border-radius: 10px;
+                    border: solid .7px $color1;
+                    &:hover {
+                      background: whitesmoke;
+                    }  
+                }
                 .sortCard{
                     display: none;
                     width: 100%;
@@ -839,6 +853,20 @@ $darktext: rgb(121, 121, 121);
                     }                    
                 }
             }
+            #submitFilter{
+                margin: 0.3rem 0rem;
+                width: 100%;
+                cursor: pointer;
+                background: transparent;
+                color: $color1;
+                padding: 0.2rem 0rem;
+                font-size: 1rem;
+                border-radius: 10px;
+                border: solid .7px $color1;
+                &:hover {
+                  background: whitesmoke;
+                }  
+            } 
     
             .allJobs{
                 width: 100%;
