@@ -62,8 +62,8 @@ if (isset($_POST['resetpassword'])) {
                     <input type="submit" name="resetpassword" value="Reset Password">
                 </form>
 
-                <a class="btn" href="https://ez-work.herokuapp.com/login/index">Go Back</a>
             </div>
+            <a class="btn" href="https://ez-work.herokuapp.com/login/index">Go Back</a>
         </div>
         <!--Waves Container-->
         <div>
