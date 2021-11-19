@@ -48,10 +48,7 @@ $userID = $_SESSION['user_id'];
         <div class="myJobs-container">
             <div class="myJobs-container-header">
                 <div class="searchBar">
-                    <form id="searchContainer" onsubmit="return false">
-                        <input type="text" autocomplete="off" name="search" placeholder="Search" id="search">
-                        <input type="submit" value="Search" id="find" >
-                    </form>
+                    <h3>All Jobs Postings</h3>
                 </div>
 
                 <button><i class="fa fa-sliders" aria-hidden="true"></i>Filter</button>
