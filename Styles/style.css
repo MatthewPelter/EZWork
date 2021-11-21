@@ -22359,12 +22359,13 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .head {
+  background: linear-gradient(60deg, #543ab7 0%, #00acc1 100%);
   width: 100%;
   height: 65vh;
   display: -webkit-box;
@@ -22380,6 +22381,21 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  line-height: 2rem;
+}
+
+.head h1 {
+  font-weight: 300;
+  letter-spacing: 2px;
+  font-size: 48px;
+}
+
+.head h2 {
+  font-weight: 300;
+}
+
+.head h3 {
+  font-weight: 300;
 }
 
 .head form {
@@ -22395,8 +22411,23 @@ body {
           align-items: center;
 }
 
+.head form #textbox {
+  padding: 1rem 0rem;
+  font-size: 1.1rem;
+}
+
+.head form #reset {
+  background: linear-gradient(60deg, #00acc1 0%, #543ab7 100%);
+  color: white;
+  font-size: 1rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+}
+
 .waves-Container {
   width: 100%;
+  background: linear-gradient(60deg, #543ab7 0%, #00acc1 100%);
 }
 
 .waves-Container .waves {
