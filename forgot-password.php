@@ -52,12 +52,12 @@ if (isset($_POST['resetpassword'])) {
 
 <body>
 
-    <div class="container">
+    <div class="forgot-container">
 
-        <div class="content">
+        <div class="forgot-content">
             <h1>forgot your password?</h1>
             <h2>just enter your email..</h2>
-            <form action="forgot-password.php" method="post">
+            <form id="forgotForm" action="forgot-password.php" method="post">
                 <input id="textbox" type="text" name="email" value="" placeholder="Email ..." required>
                 <input id="reset" type="submit" name="resetpassword" value="Reset Password">
             </form>
