@@ -22392,6 +22392,7 @@ body {
 }
 
 .head h2 {
+  padding: 1rem 0rem;
   color: white;
   font-weight: 300;
 }
@@ -22432,6 +22433,7 @@ body {
 
 .waves-Container {
   width: 100%;
+  background: linear-gradient(60deg, #543ab7 0%, #00acc1 100%);
 }
 
 .waves-Container .waves {
