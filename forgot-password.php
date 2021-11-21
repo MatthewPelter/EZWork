@@ -51,43 +51,34 @@ if (isset($_POST['resetpassword'])) {
 </head>
 
 <body>
-    <div class="header">
-        <!--Content before waves-->
-        <div class="inner-header">
-            <div class="textBox">
+    <div class="head">
                 <h1>forgot your password?</h1>
                 <h2>just enter your email..</h2>
                 <form action="forgot-password.php" method="post">
                     <input id="textbox" type="text" name="email" value="" placeholder="Email ..." required>
                     <input id="reset" type="submit" name="resetpassword" value="Reset Password">
                 </form>
-
-            </div>
-            <a class="btn" href="https://ez-work.herokuapp.com/login/index">Go Back</a>
-        </div>
-        <!--Waves Container-->
-        <div>
-            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-                <defs>
-                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-                </defs>
-                <g class="parallax">
-                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
-                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
-                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
-                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
-                </g>
-            </svg>
-        </div>
-        <!--Waves end-->
-    </div>
+                <a class="btn" href="https://ez-work.herokuapp.com/login/index">Go Back</a>
+    </div> 
     <!--Header ends-->
 
-    <!--Content starts-->
-    <div class="content flex">
-        <p>Team Apex | 2021 | BCS 430W</p>
+    <div class="waves-Container">
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+            </g>
+        </svg>        
     </div>
-    <!--Content ends-->
+
+    <footer>
+        <p>Team Apex | 2021 | BCS 430W</p> 
+    </footer>
 </body>
 
 </html>
