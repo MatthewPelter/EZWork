@@ -22457,7 +22457,7 @@ body {
 }
 
 .container .content form #textbox {
-  width: 50%;
+  width: 35%;
   padding: .4rem 0.2rem;
   font-size: 1rem;
   outline: linear-gradient(60deg, #00acc1 0%, #543ab7 100%);
