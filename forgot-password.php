@@ -59,7 +59,7 @@ if (isset($_POST['resetpassword'])) {
                 <h2>just enter your email..</h2>
                 <form action="forgot-password.php" method="post">
                     <input id="textbox" type="text" name="email" value="" placeholder="Email ..." required>
-                    <input type="submit" name="resetpassword" value="Reset Password">
+                    <input id="reset" type="submit" name="resetpassword" value="Reset Password">
                 </form>
 
             </div>
