@@ -22385,16 +22385,19 @@ body {
 }
 
 .head h1 {
+  color: white;
   font-weight: 300;
   letter-spacing: 2px;
   font-size: 48px;
 }
 
 .head h2 {
+  color: white;
   font-weight: 300;
 }
 
 .head h3 {
+  color: white;
   font-weight: 300;
 }
 
@@ -22412,22 +22415,23 @@ body {
 }
 
 .head form #textbox {
-  padding: 1rem 0rem;
-  font-size: 1.1rem;
+  padding: .4rem 0rem;
+  font-size: 1rem;
 }
 
 .head form #reset {
+  margin-left: 1rem;
   background: linear-gradient(60deg, #00acc1 0%, #543ab7 100%);
   color: white;
   font-size: 1rem;
-  padding: 1rem;
+  padding: .5rem 1rem;
   border: none;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .waves-Container {
   width: 100%;
-  background: linear-gradient(60deg, #543ab7 0%, #00acc1 100%);
 }
 
 .waves-Container .waves {
@@ -22445,6 +22449,12 @@ footer {
   height: 20vh;
   text-align: center;
   background-color: white;
+}
+
+footer p {
+  letter-spacing: 1px;
+  font-size: 14px;
+  color: #333333;
 }
 
 /* Animation */
