@@ -22314,6 +22314,9 @@ li {
 }
 
 .forgot-container .forgot-content #forgotForm #textbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   width: 35%;
   padding: .4rem 0.2rem;
   font-size: 1rem;
@@ -22321,6 +22324,9 @@ li {
 }
 
 .forgot-container .forgot-content #forgotForm #reset {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   margin-left: 1rem;
   background: linear-gradient(60deg, #00acc1 0%, #543ab7 100%);
   color: white;
