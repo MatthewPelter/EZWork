@@ -22518,11 +22518,11 @@ footer p {
   }
   .forgot-container .forgot-content #forgotForm #reset {
     margin-left: 0;
-    margin-top: 1rem;
+    margin-top: 2rem;
     background: linear-gradient(60deg, #00acc1 0%, #543ab7 100%);
     color: white;
     font-size: 1rem;
-    padding: .5rem 1rem;
+    padding: .4rem 1rem;
     border: white .4px solid;
     border-radius: 10px;
     cursor: pointer;
