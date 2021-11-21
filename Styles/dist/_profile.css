@@ -73,12 +73,13 @@
 .profile .user-postings .title h3 {
   font-size: 1.5rem;
 }
-.profile .user-postings .title span {
+.profile .user-postings .title span a {
+  text-decoration: none;
   color: #054e97;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   cursor: pointer;
 }
-.profile .user-postings .title span:hover {
+.profile .user-postings .title span a:hover {
   text-decoration: underline;
 }
 .profile .user-postings .result {
