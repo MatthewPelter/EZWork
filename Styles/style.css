@@ -22408,20 +22408,25 @@ body {
   background: linear-gradient(60deg, #543ab7 0%, #00acc1 100%);
 }
 
-.container h1 {
+.container .content {
+  width: 100%;
+  height: 65%;
+}
+
+.container .content h1 {
   color: white;
   font-weight: 300;
   letter-spacing: 2px;
   font-size: 48px;
 }
 
-.container h2 {
+.container .content h2 {
   padding: 1rem 0rem;
   color: white;
   font-weight: 300;
 }
 
-.container form {
+.container .content form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22437,13 +22442,13 @@ body {
           justify-content: center;
 }
 
-.container form #textbox {
+.container .content form #textbox {
   padding: .4rem 0.2rem;
   font-size: 1rem;
   outline: linear-gradient(60deg, #00acc1 0%, #543ab7 100%);
 }
 
-.container form #reset {
+.container .content form #reset {
   margin-left: 1rem;
   background: linear-gradient(60deg, #00acc1 0%, #543ab7 100%);
   color: white;
@@ -22454,13 +22459,18 @@ body {
   cursor: pointer;
 }
 
-.container a {
+.container .content form #reset:hover {
+  color: lightgrey;
+  border: lightgrey .4px solid;
+}
+
+.container .content a {
   padding: 1rem 0rem;
   font-size: 1.5rem;
   color: white;
 }
 
-.container a:hover {
+.container .content a:hover {
   text-decoration: underline;
 }
 
