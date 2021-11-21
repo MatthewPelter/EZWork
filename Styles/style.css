@@ -22442,21 +22442,6 @@ body {
   text-decoration: underline;
 }
 
-.waves-Container {
-  width: 100%;
-  background: linear-gradient(60deg, #543ab7 0%, #00acc1 100%);
-}
-
-.waves-Container .waves {
-  position: relative;
-  width: 100%;
-  height: 15vh;
-  margin-bottom: -7px;
-  /*Fix for safari gap*/
-  min-height: 100px;
-  max-height: 150px;
-}
-
 .container {
   padding: 0;
   margin: 0;
@@ -22473,6 +22458,20 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background: linear-gradient(60deg, #543ab7 0%, #00acc1 100%);
+}
+
+.container .waves-Container {
+  width: 100%;
+}
+
+.container .waves-Container .waves {
+  position: relative;
+  width: 100%;
+  height: 15%;
+  margin-bottom: -7px;
+  /*Fix for safari gap*/
+  min-height: 100px;
+  max-height: 150px;
 }
 
 .container footer {
