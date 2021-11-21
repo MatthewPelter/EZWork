@@ -78,15 +78,14 @@ if (isset($_POST['resetpassword'])) {
                 </g>
             </svg>        
         </div>
-
-        <footer>
-            <p>Team Apex | &copy Copyright.
-                <script>document.write(new Date().getFullYear())</script>
-                EzWork&trade; Global Inc. | BCS 430W
-            </p> 
-        </footer>
         
     </div>
+    <footer>
+        <p>Team Apex | &copy Copyright.
+            <script>document.write(new Date().getFullYear())</script>
+            EzWork&trade; Global Inc. | BCS 430W
+        </p> 
+    </footer>
 
     <!--
     <div class="head">

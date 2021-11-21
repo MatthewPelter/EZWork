@@ -22499,7 +22499,7 @@ body {
   height: 20%;
 }
 
-.container footer {
+footer {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22519,7 +22519,7 @@ body {
   height: 30%;
 }
 
-.container footer p {
+footer p {
   letter-spacing: 1px;
   font-size: 14px;
   color: #333333;
