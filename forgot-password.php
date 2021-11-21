@@ -51,6 +51,16 @@ if (isset($_POST['resetpassword'])) {
 </head>
 
 <body>
+
+    <div class="container">
+
+        <footer>
+            <p>Team Apex | 2021 | BCS 430W</p> 
+        </footer>
+        
+    </div>
+
+    <!--
     <div class="head">
                 <h1>forgot your password?</h1>
                 <h2>just enter your email..</h2>
@@ -60,8 +70,6 @@ if (isset($_POST['resetpassword'])) {
                 </form>
                 <a class="btn" href="https://ez-work.herokuapp.com/login/index">Go Back</a>
     </div> 
-    <!--Header ends-->
-
     <div class="waves-Container">
         <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
             <defs>
@@ -75,10 +83,7 @@ if (isset($_POST['resetpassword'])) {
             </g>
         </svg>        
     </div>
-
-    <footer>
-        <p>Team Apex | 2021 | BCS 430W</p> 
-    </footer>
+-->
 </body>
 
 </html>
