@@ -56,6 +56,11 @@ if (isset($_POST['resetpassword'])) {
 
         <h1>forgot your password?</h1>
         <h2>just enter your email..</h2>
+        <form action="forgot-password.php" method="post">
+            <input id="textbox" type="text" name="email" value="" placeholder="Email ..." required>
+            <input id="reset" type="submit" name="resetpassword" value="Reset Password">
+        </form>
+        <a class="btn" href="https://ez-work.herokuapp.com/login/index">Go Back</a>
 
         <div class="waves-Container">
             <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
