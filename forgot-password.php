@@ -53,7 +53,7 @@ if (isset($_POST['resetpassword'])) {
 <body>
     <div class="header">
         <!--Content before waves-->
-        <div class="inner-header flex">
+        <div class="inner-header">
             <div class="textBox">
                 <h1>forgot your password?</h1>
                 <h2>just enter your email..</h2>
