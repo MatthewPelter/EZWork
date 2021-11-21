@@ -22384,19 +22384,6 @@ body {
   line-height: 2rem;
 }
 
-.head h1 {
-  color: white;
-  font-weight: 300;
-  letter-spacing: 2px;
-  font-size: 48px;
-}
-
-.head h2 {
-  padding: 1rem 0rem;
-  color: white;
-  font-weight: 300;
-}
-
 .head h3 {
   color: white;
   font-weight: 300;
@@ -22454,10 +22441,23 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background: linear-gradient(60deg, #543ab7 0%, #00acc1 100%);
+}
+
+.container h1 {
+  color: white;
+  font-weight: 300;
+  letter-spacing: 2px;
+  font-size: 48px;
+}
+
+.container h2 {
+  padding: 1rem 0rem;
+  color: white;
+  font-weight: 300;
 }
 
 .container .waves-Container {

@@ -54,6 +54,9 @@ if (isset($_POST['resetpassword'])) {
 
     <div class="container">
 
+        <h1>forgot your password?</h1>
+        <h2>just enter your email..</h2>
+
         <div class="waves-Container">
             <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
                 <defs>
