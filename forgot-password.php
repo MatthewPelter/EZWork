@@ -55,7 +55,10 @@ if (isset($_POST['resetpassword'])) {
     <div class="container">
 
         <footer>
-            <p>Team Apex | 2021 | BCS 430W</p> 
+            <p>&copy Copyright. 2021-
+                <script>document.write(new Date().getFullYear())</script>
+                EzWork&trade; Global Inc. | TEAM APEX
+            </p> 
         </footer>
         
     </div>
