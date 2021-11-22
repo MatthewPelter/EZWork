@@ -190,8 +190,8 @@ if (isset($_POST['submit'])) {
                                                 <div class="message my-message">
                                                     <?php echo $row['Sender']; ?> is interested in your project you posted.<br />
                                                     Make sure to view their profile and rating before you accept their proposal.<br />
-                                                    <button onclick="respondToJob(<?php echo $row['jobID']; ?>, <?php echo $fetchID; ?>, 'accept')">Agree</button>
-                                                    <button onclick="respondToJob(<?php echo $row['jobID']; ?>, <?php echo $fetchID; ?>, 'deny')">Deny</button>
+                                                    <span onclick="respondToJob(<?php echo $row['jobID']; ?>, <?php echo $fetchID; ?>, 'accept')">Agree</span>
+                                                    <span onclick="respondToJob(<?php echo $row['jobID']; ?>, <?php echo $fetchID; ?>, 'deny')">Deny</span>
                                                     <?php echo $row['body']; ?>
                                                 </div>
                                             </li>
