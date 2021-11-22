@@ -163,8 +163,8 @@ if (mysqli_num_rows($jobResult) > 0) {
             <div class="options">
 
                 <?php
-                if ($r['typeOfJob'] == 'require') {
-                    if ($myData['freelancer_id'] != NULL && $unameFetched['username'] != $_SESSION['userid']) {
+                if ($r['typeOfJob'] == 'require' && $unameFetched['username'] != $_SESSION['userid']) {
+                    if ($myData['freelancer_id'] != NULL) {
 
                         $checkProposal = mysqli_query($conn, "SELECT * FROM messages WHERE jobID='$job_id' AND sender='$user_id'") or die(mysqli_error($conn));
                         if (mysqli_num_rows($checkProposal) > 0) {
