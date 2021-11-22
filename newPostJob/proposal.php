@@ -52,18 +52,23 @@ if (mysqli_num_rows($jobResult) > 0) {
 
 <body>
     <div id="proposal">
-
-        <h1>Are you willing to accept this job?</h1>
-        <h2>By submitting a proposal, you agree that you are fully capable of completing this task.</h2>
-        <h2>By hitting agree, you will be sending a proposal to the client and they will decide if they will accept your request.</h2>
-        <p><span>optional:</span> Message</p><br />
-        <textarea name="chat" id="chat" cols="30" rows="10"></textarea>
-        <button id="sendmessage">Agree</button>
-        <button onclick="cancel()">Cancel</button>
-        <div id="result"></div>
-
-        <?php //} 
+        <?php
+        $checkProposal = mysqli_query($conn, "SELECT * FROM jobs WHERE jobID='$job_id' AND sender='$user_id'") or die(mysqli_error($conn));
+        if (mysqli_num_rows($checkProposal) > 0) {
         ?>
+            <h1>You already sent a request...</h1>
+        <?php } else { ?>
+
+            <h1>Are you willing to accept this job?</h1>
+            <h2>By submitting a proposal, you agree that you are fully capable of completing this task.</h2>
+            <h2>By hitting agree, you will be sending a proposal to the client and they will decide if they will accept your request.</h2>
+            <p><span>optional:</span> Message</p><br />
+            <textarea name="chat" id="chat" cols="30" rows="10"></textarea>
+            <button id="sendmessage">Agree</button>
+            <button onclick="cancel()">Cancel</button>
+            <div id="result"></div>
+
+        <?php } ?>
     </div>
 
 
