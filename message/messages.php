@@ -139,7 +139,7 @@ if (isset($_POST['submit'])) {
                         <div class="chat-header clearfix">
 
                             <div class="chat-about">
-                                <div class="chat-with">Chat with <?php echo $otherUsername; ?></div>
+                                <div class="chat-with">Chat with <a href="https://ez-work.herokuapp.com/Profile/userprofile.php?name=<?php echo $otherUsername; ?>"><?php echo $otherUsername; ?></a></div>
                                 <div class="chat-num-messages">Do not share any confidential information</div>
                             </div>
                             <i class="fa fa-star"></i>
@@ -258,16 +258,14 @@ if (isset($_POST['submit'])) {
     </div>
 
 </body>
-
+<script src="../SkillsContainer/searchProfile.js"></script>
 <script type="text/javascript">
     var elem = document.querySelector('.chat-history');
     elem.scrollTop = elem.scrollHeight;
-</script>
 
-<!--Script for the search bar and datalist-->
-<script src="../SkillsContainer/searchProfile.js"></script>
-<!--Toggle the nav burger button and mobile nav bar js-->
-<script>
+    // <!--Script for the search bar and datalist-->
+
+    // <!--Toggle the nav burger button and mobile nav bar js-->
     const navIcon2 = document.getElementById("nav-burger");
     const profileMobileNav2 = document.querySelector(".profile-mobile-nav");
     const messageMainContainer2 = document.querySelector('.messageMainContainer2');
