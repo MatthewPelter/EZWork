@@ -199,28 +199,54 @@ if (isset($_POST['submit'])) {
                                                 </div>
                                             </li>
 
-                                        <?php
+                                            <?php
                                         }
                                     } else {
-                                        if ($row['jobID'] != NULL && $row['response'] == 0) {
+                                        if ($row['jobID'] != NULL) {
                                             $name = $row['Sender'];
                                             $nameToID = mysqli_query($conn, "SELECT id FROM clients WHERE username = '$name'");
                                             $fetchID = mysqli_fetch_assoc($nameToID);
                                             $fetchID = $fetchID['id'];
-                                        ?>
-                                            <li class="propose">
-                                                <div class="message-data">
-                                                    <span class="message-data-name"><i class="fa fa-circle online"></i><?php echo $row['Sender']; ?></span>
-                                                </div>
-                                                <div class="message my-message">
-                                                    <?php echo $row['Sender']; ?> is interested in your project you posted.<br />
-                                                    Make sure to view their profile and rating before you accept their proposal.<br />
-                                                    <span onclick="respondToJob(<?php echo $row['jobID']; ?>, <?php echo $fetchID; ?>, 'accept')">Agree</span>
-                                                    <span onclick="respondToJob(<?php echo $row['jobID']; ?>, <?php echo $fetchID; ?>, 'deny')">Deny</span>
-                                                    <?php echo $row['body']; ?>
-                                                </div>
-                                            </li>
-                                        <?php } else { ?>
+
+                                            if ($row['response'] == NULL) {
+                                            ?>
+                                                <li class="propose">
+                                                    <div class="message-data">
+                                                        <span class="message-data-name"><i class="fa fa-circle online"></i><?php echo $row['Sender']; ?></span>
+                                                    </div>
+                                                    <div class="message my-message">
+                                                        <?php echo $row['Sender']; ?> is interested in your project you posted.<br />
+                                                        Make sure to view their profile and rating before you accept their proposal.<br />
+                                                        <span onclick="respondToJob(<?php echo $row['jobID']; ?>, <?php echo $fetchID; ?>, 'accept')">Agree</span>
+                                                        <span onclick="respondToJob(<?php echo $row['jobID']; ?>, <?php echo $fetchID; ?>, 'deny')">Deny</span>
+                                                        <?php echo $row['body']; ?>
+                                                    </div>
+                                                </li>
+                                            <?php }
+
+                                            if ($row['response'] == "accept") { ?>
+                                                <li class="propose">
+                                                    <div class="message-data">
+                                                        <span class="message-data-name"><i class="fa fa-circle online"></i><?php echo $row['Sender']; ?></span>
+                                                    </div>
+                                                    <div class="message my-message">
+                                                        You accepted the job.<br />
+                                                        View the job page to view the progress of the contract.<br />
+                                                    </div>
+                                                </li>
+
+                                            <?php  }
+                                            if ($row['response'] == "denied") { ?>
+                                                <li class="propose">
+                                                    <div class="message-data">
+                                                        <span class="message-data-name"><i class="fa fa-circle online"></i><?php echo $row['Sender']; ?></span>
+                                                    </div>
+                                                    <div class="message my-message">
+                                                        You denied the job.<br />
+                                                    </div>
+                                                </li>
+                                            <?php }
+                                        } else { ?>
                                             <li>
                                                 <div class="message-data">
                                                     <span class="message-data-name"><i class="fa fa-circle online"></i><?php echo $row['Sender']; ?></span>
