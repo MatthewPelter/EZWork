@@ -40,8 +40,8 @@ if ($my_id == null || $my_id == "") {
 
 $check = mysqli_query($conn, "SELECT * FROM messages WHERE jobID = '$jobID' AND sender='$freelancer_id' AND receiver='$my_id'");
 if (mysqli_num_rows($check) > 0) {
-    $query = mysqli_query($conn, "INSERT INTO messages(body, sender, receiver, isread, jobID, response) VALUES('$body', '$sender', '$getID', 0, '$jobID', 0)") or die(mysqli_errno($conn));
-    echo '{ "Success": "Message Sent!" }';
+    $query = mysqli_query($conn, "UPDATE messages SET response = 1 WHERE jobID='$jobID' AND sender='$freelancer_id' AND receiver='$my_id'") or die(mysqli_error($conn));
+    echo '{ "Success": "Denied!" }';
 } else {
     die('{ "Error": "Invalid Data" }');
 }
