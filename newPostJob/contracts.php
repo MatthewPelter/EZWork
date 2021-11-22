@@ -47,32 +47,68 @@ if ($checkFreelancer == NULL) {
     <!-- END NAVBAR -->
 
 
+    <div class="myJobs">
+        <div class="myJobs-header">
+            <ul>
+                <li><a href="../ClientProfile/index.php">Freelancer</a></li>
+                <li>/</li>
+                <li>Contracts</li>
+            </ul>
+            <button onclick="location.href='../newPostJob/length.php'">Post a New Job</button>
+        </div>
+        <div class="myJobs-container">
+            <div class="myJobs-container-header">
+                <div class="searchBar">
+                    <h3>My Contracts</h3>
+                </div>
+            </div>
 
-    <?php
-    $fetchContracts = mysqli_query($conn, "SELECT * FROM jobs WHERE freelancer_id='$checkFreelancer'");
+            <div class="postedJob">
 
-    if (mysqli_num_rows($fetchContracts) > 0) {
-        while ($row = mysqli_fetch_assoc($fetchContracts)) {
-            echo "Title" . $row['title'];
-            if ($row['status'] == 0) {
-                echo "Status: Open";
-            } else if ($row['status'] == 1) {
-                echo "Status: Closed";
-            } else {
-                echo "Status: In-Progress";
-            }
+                <?php
+                $fetchContracts = mysqli_query($conn, "SELECT * FROM jobs WHERE freelancer_id='$checkFreelancer'");
 
-            echo "Date Posted: " . $row['datePosted'];
+                if (mysqli_num_rows($fetchContracts) > 0) {
+                    while ($row = mysqli_fetch_assoc($fetchContracts)) { ?>
+                        <div class="allJobsCard" style="overflow-y: scroll;">
+                            <div class="postedJob" data-postid="<?php echo $row['id']; ?>">
+                                <div class="jobTitle">
+                                    <h4 id="jobTitle"><a href="../newPostJob/job.php?id=<?php echo $row['id']; ?>"><?php echo $row['title']; ?></a></h4>
 
-            $jobid = $row['id'];
-            print("<a href='./jobs?id=$jobid'>View Job</a>");
-        }
-    } else { ?>
-        <h1>No current contracts</h1>
+                                </div>
+                                <p>Status: <span id="status"><?php if ($row['status'] == 0) {
+                                                                    echo "Status: Open";
+                                                                } else if ($row['status'] == 1) {
+                                                                    echo "Status: Closed";
+                                                                } else {
+                                                                    echo "Status: In-Progress";
+                                                                } ?></span></p>
+                                <p>Job Posted on <span id="date"><?php echo $row['datePosted']; ?></span> by <span id="postedBy">Me</span></p>
+                            </div>
+                        </div>
 
-    <?php
-    }
-    ?>
+
+
+
+                    <?php
+                    }
+                } else { ?>
+                    <h1>No current contracts</h1>
+
+                <?php
+                }
+                ?>
+            </div>
+
+
+            <div class="spacer">
+                <h3>SPACER</h3>
+            </div>
+        </div>
+    </div>
+
+
+
 
 
 
