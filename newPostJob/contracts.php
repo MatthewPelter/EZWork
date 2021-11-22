@@ -66,7 +66,7 @@ if ($checkFreelancer == NULL) {
             <div class="postedJob">
 
                 <?php
-                $fetchContracts = mysqli_query($conn, "SELECT * FROM jobs WHERE freelancer_id='$checkFreelancer'");
+                $fetchContracts = mysqli_query($conn, "SELECT *, clients.username AS uname FROM jobs JOIN clients ON jobs.user_id = clients.id WHERE freelancer_id='$checkFreelancer'");
 
                 if (mysqli_num_rows($fetchContracts) > 0) {
                     while ($row = mysqli_fetch_assoc($fetchContracts)) { ?>
@@ -83,7 +83,7 @@ if ($checkFreelancer == NULL) {
                                                                 } else {
                                                                     echo "Status: In-Progress";
                                                                 } ?></span></p>
-                                <p>Job Posted on <span id="date"><?php echo $row['datePosted']; ?></span> by <span id="postedBy">Me</span></p>
+                                <p>Job Posted on <span id="date"><?php echo $row['datePosted']; ?></span> by <span id="postedBy"><?php echo $row['uname']; ?></span></p>
                             </div>
                         </div>
 
