@@ -53,7 +53,7 @@ if (mysqli_num_rows($jobResult) > 0) {
 <body>
     <div id="proposal">
         <?php
-        $checkProposal = mysqli_query($conn, "SELECT * FROM jobs WHERE jobID='$job_id'");
+        $checkProposal = mysqli_query($conn, "SELECT * FROM jobs WHERE jobID='$job_id' AND sender='$user_id'");
         if (mysqli_num_rows($checkProposal) > 0) {
         ?>
             <h1>You already sent a request...</h1>
