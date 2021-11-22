@@ -1,5 +1,5 @@
 <?php
-/*session_start();
+session_start();
 include '../components/session-checker.php';
 require_once("../classes/DB.php");
 
@@ -120,5 +120,3 @@ if ($checkFreelancer == NULL) {
 </body>
 
 </html>
-
-<?php */
