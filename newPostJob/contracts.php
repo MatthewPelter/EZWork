@@ -13,8 +13,6 @@ $checkFreelancer = $checkFreelancer['freelancer_id'];
 if ($checkFreelancer == NULL) {
     die("You are not a freelancer buddy");
 }
-
-
 ?>
 
 
