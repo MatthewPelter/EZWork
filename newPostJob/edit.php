@@ -202,22 +202,6 @@ if (mysqli_num_rows($jobResult) > 0) {
         $('#deleteMenu').css('display', 'none');
     });
 
-    function copyToClipboard(link) {
-        const el = document.createElement("textarea");
-        el.value = link.innerText;
-        document.body.appendChild(el);
-        el.select();
-        document.execCommand("copy");
-        document.body.removeChild(el);
-    } // Ends copyToClipboard()
-
-    const copyLinkBtn = document.getElementById('copyLink');
-
-    copyLinkBtn.addEventListener('click', () => {
-        var link = document.getElementById('link');
-        copyToClipboard(link);
-    })
-
     // Status color
     const status = document.getElementById('status');
 
