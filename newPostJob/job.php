@@ -194,7 +194,7 @@ if (mysqli_num_rows($jobResult) > 0) {
                 <?php if ($unameFetched['username'] == $_SESSION['userid']) {
                 ?>
                     <input type="button" onclick="location.href = 'edit?id=<?php echo $r['id']; ?>';" id="editBtn" value="Edit Post">
-                    <input type="button" onclick="deleteMenu()" id="deleteBtn" style="color: red;" value="Delete Post">
+                    <input type="button" id="deleteBtn" style="color: red;" value="Delete Post">
                     <span id="result"></span>
 
                     <div id="deleteMenu" style="display: none;">
@@ -247,9 +247,11 @@ if (mysqli_num_rows($jobResult) > 0) {
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
-        function deleteMenu() {
+
+        $("#deleteBtn").click(function() {
             $('#deleteMenu').css('display', 'block');
-        }
+        });
+
         $('#yesBtn').click(function() {
             $.ajax({
                 type: "POST",
