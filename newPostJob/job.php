@@ -66,6 +66,11 @@ if (mysqli_num_rows($jobResult) > 0) {
 
     <div class="job">
         <h2>Job Details</h2>
+        <h3><?php if ($r['typeOfJob'] == "require") {
+                echo "Needs a service";
+            } else {
+                echo "Offering a service";
+            } ?></h3>
         <div class="job-container">
 
             <div class="jobCard">
