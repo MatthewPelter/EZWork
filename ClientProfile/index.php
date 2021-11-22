@@ -123,6 +123,8 @@ $userID = $_SESSION['user_id'];
                                 </div>
                                 <p>Status: <span id="status"><?php if ($r['status'] == 0) {
                                                                     echo "Open";
+                                                                } else if ($r['status'] == -1) {
+                                                                    echo "In-Progress";
                                                                 } else {
                                                                     echo "Closed";
                                                                 } ?></span></p>
