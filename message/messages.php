@@ -26,7 +26,7 @@ if (isset($_POST['submit'])) {
         $message_body = stripslashes($message_body);
         $cleanmessage = mysqli_real_escape_string($conn, $message_body);
 
-        $insertSQL = "INSERT INTO messages(body, sender, receiver, isread) VALUES('$cleanmessage', '$senderID', '$receiverID', 0)";
+        $insertSQL = "INSERT INTO messages(body, sender, receiver, isread, jobID, response) VALUES('$cleanmessage', '$senderID', '$receiverID', 0, NULL, 0)";
         $insertresult = mysqli_query($conn, $insertSQL) or die(mysqli_error($conn));
 
         if (!$insertresult) {
@@ -177,16 +177,21 @@ if (isset($_POST['submit'])) {
                                         <?php
                                         }
                                     } else {
-                                        if ($row['jobID'] != NULL) { ?>
-                                            <li>
+                                        if ($row['jobID'] != NULL && $row['response'] == 0) {
+                                            $name = $row['Sender'];
+                                            $nameToID = mysqli_query($conn, "SELECT id FROM clients WHERE username = '$name'");
+                                            $fetchID = mysqli_fetch_assoc($nameToID);
+                                            $fetchID = $fetchID['id'];
+                                        ?>
+                                            <li class="propose">
                                                 <div class="message-data">
                                                     <span class="message-data-name"><i class="fa fa-circle online"></i><?php echo $row['Sender']; ?></span>
                                                 </div>
                                                 <div class="message my-message">
                                                     <?php echo $row['Sender']; ?> is interested in your project you posted.<br />
                                                     Make sure to view their profile and rating before you accept their proposal.<br />
-                                                    <button>Agree</button>
-                                                    <button>Deny</button>
+                                                    <button onclick="acceptJob(<?php echo $row['jobID']; ?>, <?php echo $fetchID; ?>)">Agree</button>
+                                                    <button onclick="denyJob()">Deny</button>
                                                     <?php echo $row['body']; ?>
                                                 </div>
                                             </li>
@@ -213,6 +218,7 @@ if (isset($_POST['submit'])) {
                         <form class="form" action="messages.php?mid=<?php echo $id; ?>" method="post" name="message">
                             <div class="chat-message clearfix">
                                 <textarea name="msg" id="message-to-send" placeholder="Type your message" rows="3" required></textarea>
+                                <div id="result"></div>
                                 <input type="submit" value="Send" name="submit" class="button"></input>
 
                             </div> <!-- end chat-message -->
@@ -258,14 +264,62 @@ if (isset($_POST['submit'])) {
     </div>
 
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="../SkillsContainer/searchProfile.js"></script>
 <script type="text/javascript">
     var elem = document.querySelector('.chat-history');
     elem.scrollTop = elem.scrollHeight;
 
-    // <!--Script for the search bar and datalist-->
+    function acceptJob(jobID, id, free_id) {
+        $.ajax({
+            type: "POST",
+            url: "../api/accept.php",
+            processData: false,
+            contentType: "application/json",
+            data: '{ "jobID": "' + jobID + '", "id": "' + id + '", "freelancer_id": "' + free_id + '" }',
+            success: function(data) {
+                var obj = JSON.parse(data);
+                console.log(obj);
+                if (obj.Success.length > 0) {
+                    $('#status').html(obj.Success);
+                    $('.propose').hide();
+                } else if (obj.Error.length > 0) {
+                    $('#status').html(obj.Error);
+                }
 
-    // <!--Toggle the nav burger button and mobile nav bar js-->
+            },
+            error: function(r) {
+                console.log(r);
+            }
+        });
+    }
+
+    function denyJob() {
+        $.ajax({
+            type: "POST",
+            url: "../api/deny.php",
+            processData: false,
+            contentType: "application/json",
+            data: '{ "jobID": "' + jobID + '", "id": "' + id + '", "freelancer_id": "' + free_id + '" }',
+            success: function(data) {
+                var obj = JSON.parse(data);
+                console.log(obj);
+                if (obj.Success.length > 0) {
+                    $('#status').html(obj.Success);
+                    $('.propose').hide();
+                } else if (obj.Error.length > 0) {
+                    $('#status').html(obj.Error);
+                }
+
+            },
+            error: function(r) {
+                console.log(r);
+            }
+        });
+    }
+
+
+    // Toggle the nav burger button and mobile nav bar js
     const navIcon2 = document.getElementById("nav-burger");
     const profileMobileNav2 = document.querySelector(".profile-mobile-nav");
     const messageMainContainer2 = document.querySelector('.messageMainContainer2');
