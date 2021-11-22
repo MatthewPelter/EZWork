@@ -260,6 +260,10 @@ if (mysqli_num_rows($jobResult) > 0) {
                 success: function(data) {
                     $('#deleteMenu').css('display', 'none');
                     $('#result').html(data);
+
+                    setTimeout(function() {
+                        window.location.reload(1);
+                    }, 5000);
                 },
                 error: function(r) {
                     console.log(r);
