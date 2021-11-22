@@ -40,7 +40,7 @@ if ($my_id == null || $my_id == "") {
 
 $check = mysqli_query($conn, "SELECT * FROM messages WHERE jobID = '$jobID' AND sender='$freelancer_id' AND receiver='$my_id'");
 if (mysqli_num_rows($check) > 0) {
-    $query = mysqli_query($conn, "UPDATE messages SET response=1 WHERE jobID='$jobID' AND sender='$freelancer_id' AND receiver='$my_id'") or die(mysqli_error($conn));
+    $query = mysqli_query($conn, "UPDATE messages SET response = 'accept' WHERE jobID='$jobID' AND sender='$freelancer_id' AND receiver='$my_id'") or die(mysqli_error($conn));
     $query = mysqli_query($conn, "UPDATE jobs SET freelancer_id='$freelancer_id', status=-1 WHERE id='$jobID'") or die(mysqli_error($conn));
     echo '{ "Success": "Accepted!" }';
 } else {

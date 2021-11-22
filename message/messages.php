@@ -26,7 +26,7 @@ if (isset($_POST['submit'])) {
         $message_body = stripslashes($message_body);
         $cleanmessage = mysqli_real_escape_string($conn, $message_body);
 
-        $insertSQL = "INSERT INTO messages(body, sender, receiver, isread, jobID, response) VALUES('$cleanmessage', '$senderID', '$receiverID', 0, NULL, 0)";
+        $insertSQL = "INSERT INTO messages(body, sender, receiver, isread, jobID, response) VALUES('$cleanmessage', '$senderID', '$receiverID', 0, NULL, NULL)";
         $insertresult = mysqli_query($conn, $insertSQL) or die(mysqli_error($conn));
 
         if (!$insertresult) {
@@ -152,17 +152,42 @@ if (isset($_POST['submit'])) {
                                 while ($row = mysqli_fetch_assoc($result)) {
                                     //echo $row['id'] . ": " . $row['body'] . "<br />";
                                     if ($row['Sender'] == $username) {
-                                        if ($row['jobID'] != NULL && $row['response'] == 0) { ?>
-                                            <li>
-                                                <div class="message-data align-right">
-                                                    <span class="message-data-name">Me</span> <i class="fa fa-circle me"></i>
-                                                </div>
-                                                <div class="message other-message float-right">
-                                                    Your request has been sent to the client.<br />
-                                                    Give them time to view your portfolio and profile.<br />
-                                                </div>
-                                            </li>
-                                        <?php } else { ?>
+                                        if ($row['jobID'] != NULL) {
+                                            if ($row['response'] == NULL) {
+                                ?>
+                                                <li>
+                                                    <div class="message-data align-right">
+                                                        <!-- <span class="message-data-name">Me</span> <i class="fa fa-circle me"></i> -->
+                                                    </div>
+                                                    <div class="message other-message float-right">
+                                                        Your request has been sent to the client.<br />
+                                                        Give them time to view your portfolio and profile.<br />
+                                                    </div>
+                                                </li>
+                                            <?php }
+                                            if ($row['response'] == "accept") { ?>
+                                                <li>
+                                                    <div class="message-data align-right">
+                                                        <!-- <span class="message-data-name">Me</span> <i class="fa fa-circle me"></i> -->
+                                                    </div>
+                                                    <div class="message other-message float-right">
+                                                        Your request has been accepted.<br />
+                                                        View the job post to see the progress of the contract.<br />
+                                                    </div>
+                                                </li>
+                                            <?php  }
+                                            if ($row['response'] == "denied") { ?>
+                                                <li>
+                                                    <div class="message-data align-right">
+                                                        <!-- <span class="message-data-name">Me</span> <i class="fa fa-circle me"></i> -->
+                                                    </div>
+                                                    <div class="message other-message float-right">
+                                                        Your request has been denied by the client.<br />
+                                                    </div>
+                                                </li>
+
+                                            <?php }
+                                        } else { ?>
 
                                             <li class="clearfix">
                                                 <div class="message-data align-right">
