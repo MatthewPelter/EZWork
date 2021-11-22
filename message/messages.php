@@ -190,8 +190,8 @@ if (isset($_POST['submit'])) {
                                                 <div class="message my-message">
                                                     <?php echo $row['Sender']; ?> is interested in your project you posted.<br />
                                                     Make sure to view their profile and rating before you accept their proposal.<br />
-                                                    <button onclick="acceptJob(<?php echo $row['jobID']; ?>, <?php echo $fetchID; ?>)">Agree</button>
-                                                    <button onclick="denyJob()">Deny</button>
+                                                    <button onclick="respondToJob(<?php echo $row['jobID']; ?>, <?php echo $fetchID; ?>, 'agree')">Agree</button>
+                                                    <button onclick="respondToJob(<?php echo $row['jobID']; ?>, <?php echo $fetchID; ?>, 'deny')">Deny</button>
                                                     <?php echo $row['body']; ?>
                                                 </div>
                                             </li>
@@ -270,52 +270,52 @@ if (isset($_POST['submit'])) {
     var elem = document.querySelector('.chat-history');
     elem.scrollTop = elem.scrollHeight;
 
-    function acceptJob(jobID, id, free_id) {
-        $.ajax({
-            type: "POST",
-            url: "../api/accept.php",
-            processData: false,
-            contentType: "application/json",
-            data: '{ "jobID": "' + jobID + '", "id": "' + id + '", "freelancer_id": "' + free_id + '" }',
-            success: function(data) {
-                var obj = JSON.parse(data);
-                console.log(obj);
-                if (obj.Success.length > 0) {
-                    $('#status').html(obj.Success);
-                    $('.propose').hide();
-                } else if (obj.Error.length > 0) {
-                    $('#status').html(obj.Error);
+    function respondToJob(jobID, free_id, response) {
+        if (response == "accept") {
+            $.ajax({
+                type: "POST",
+                url: "../api/accept.php",
+                processData: false,
+                contentType: "application/json",
+                data: '{ "jobID": "' + jobID + '", "id": "<?php echo $user_id; ?>", "freelancer_id": "' + free_id + '" }',
+                success: function(data) {
+                    var obj = JSON.parse(data);
+                    console.log(obj);
+                    if (obj.Success.length > 0) {
+                        $('#status').html(obj.Success);
+                        $('.propose').hide();
+                    } else if (obj.Error.length > 0) {
+                        $('#status').html(obj.Error);
+                    }
+
+                },
+                error: function(r) {
+                    console.log(r);
                 }
+            });
+        } else {
+            $.ajax({
+                type: "POST",
+                url: "../api/deny.php",
+                processData: false,
+                contentType: "application/json",
+                data: '{ "jobID": "' + jobID + '", "id": "<?php echo $user_id; ?>", "freelancer_id": "' + free_id + '" }',
+                success: function(data) {
+                    var obj = JSON.parse(data);
+                    console.log(obj);
+                    if (obj.Success.length > 0) {
+                        $('#status').html(obj.Success);
+                        $('.propose').hide();
+                    } else if (obj.Error.length > 0) {
+                        $('#status').html(obj.Error);
+                    }
 
-            },
-            error: function(r) {
-                console.log(r);
-            }
-        });
-    }
-
-    function denyJob() {
-        $.ajax({
-            type: "POST",
-            url: "../api/deny.php",
-            processData: false,
-            contentType: "application/json",
-            data: '{ "jobID": "' + jobID + '", "id": "' + id + '", "freelancer_id": "' + free_id + '" }',
-            success: function(data) {
-                var obj = JSON.parse(data);
-                console.log(obj);
-                if (obj.Success.length > 0) {
-                    $('#status').html(obj.Success);
-                    $('.propose').hide();
-                } else if (obj.Error.length > 0) {
-                    $('#status').html(obj.Error);
+                },
+                error: function(r) {
+                    console.log(r);
                 }
-
-            },
-            error: function(r) {
-                console.log(r);
-            }
-        });
+            });
+        }
     }
 
 
