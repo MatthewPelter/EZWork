@@ -66,7 +66,7 @@ if ($checkFreelancer == NULL) {
             <div class="postedJob">
 
                 <?php
-                $fetchContracts = mysqli_query($conn, "SELECT *, clients.username AS uname FROM jobs JOIN clients ON jobs.user_id = clients.id WHERE freelancer_id='$checkFreelancer'");
+                $fetchContracts = mysqli_query($conn, "SELECT jobs.*, clients.username AS uname FROM jobs INNER JOIN clients ON jobs.user_id = clients.id WHERE freelancer_id='$checkFreelancer'");
 
                 if (mysqli_num_rows($fetchContracts) > 0) {
                     while ($row = mysqli_fetch_assoc($fetchContracts)) { ?>
