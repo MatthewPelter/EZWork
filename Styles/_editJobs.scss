@@ -93,6 +93,26 @@ $darktext: rgb(121, 121, 121);
                         }
                     }
                 }
+
+                .jobDescription{
+                    width: 100%;
+                    padding: 2rem;
+                    border-bottom: 1px solid lightgrey;
+
+                    h3{
+                        font-size: 1.2rem;
+                        color: $color1;
+                        width: 100%;
+                    }
+
+                    textarea{
+                        resize: none;
+                        width: 80%;
+                        font-size: 1rem;
+                        outline: none;
+                        border: .7px solid $lightColor;
+                    }
+                }
             }
 
         }

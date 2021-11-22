@@ -82,3 +82,20 @@
   color: #797979;
   font-size: 1rem;
 }
+.edit-jobs .edit-jobs-container form .edit-jobCard .jobDescription {
+  width: 100%;
+  padding: 2rem;
+  border-bottom: 1px solid lightgrey;
+}
+.edit-jobs .edit-jobs-container form .edit-jobCard .jobDescription h3 {
+  font-size: 1.2rem;
+  color: #0a345e;
+  width: 100%;
+}
+.edit-jobs .edit-jobs-container form .edit-jobCard .jobDescription textarea {
+  resize: none;
+  width: 80%;
+  font-size: 1rem;
+  outline: none;
+  border: 0.7px solid #054e97;
+}
