@@ -61,9 +61,12 @@ if (mysqli_num_rows($jobResult) > 0) {
     include '../navbar.php';
     ?>
 
-    <div class="job">
-        <h2>Edit Job Post</h2>
-        <div class="job-container" style="grid-template-rows: none !important;">
+    <div class="edit-job">
+        <div class="edit-jobs-container-header">
+            <h4>Edit Job Post</h4>
+        </div>
+
+        <div class="edit-job-container">
             <form class="form" action="../components/edit-post?id=<?php echo $job_id; ?>" method="post" name="edit-post" id="myForm">
                 <div class="jobCard">
                     <div class="jobTitle">
