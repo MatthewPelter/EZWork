@@ -79,7 +79,7 @@ $userID = $_SESSION['user_id'];
 
     <div class="profile">
         <div class="user-profile-header">
-            <h2 id="username"><?php echo $_SESSION['userid']; ?></h2>
+            <h2 id="username">Welcome, <?php echo $_SESSION['userid']; ?></h2>
             <div class="quick-links">
                 <button id="quick-link-job" onclick="location.href='../newPostJob/start.php'">Post A Job</button>
                 <button id="quick-link-market" onclick="location.href='../newPostJob/jobs.php'">Browse Marketplace</button>
