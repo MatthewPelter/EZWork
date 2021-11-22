@@ -127,7 +127,7 @@ if (isset($_POST['submit'])) {
                 // Get messages between you and the user
                 if (isset($_GET['mid'])) {
                     $id = htmlspecialchars($_GET['mid']);
-                    $sql = "SELECT messages.id, messages.body, messages.jobID, s.username AS Sender, r.username AS Receiver FROM messages LEFT JOIN clients s ON messages.sender = s.id LEFT JOIN clients r ON messages.receiver = r.id WHERE (r.id='$userID' AND s.id = '$id') OR r.id = $id AND s.id = '$userID'";
+                    $sql = "SELECT messages.id, messages.body, messages.jobID, messages.response, s.username AS Sender, r.username AS Receiver FROM messages LEFT JOIN clients s ON messages.sender = s.id LEFT JOIN clients r ON messages.receiver = r.id WHERE (r.id='$userID' AND s.id = '$id') OR r.id = $id AND s.id = '$userID'";
                     $result = mysqli_query($conn, $sql);
 
                     $otherUsernameSQL = mysqli_query($conn, "SELECT username FROM clients WHERE id='$id'");
