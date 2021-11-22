@@ -1,0 +1,41 @@
+$color1: #0a345e;
+$lightColor: #054e97;
+$darktext: rgb(121, 121, 121);
+
+.edit-jobs{
+    display: inline-block;
+    width: 100%;
+    background: whitesmoke;
+    padding: 2.5rem 6rem;
+
+    .edit-jobs-container-header{
+        width: 100%;
+        padding: 1rem 0rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        h4{
+            width: 20%;
+            font-size: 2rem;
+        }
+
+    }
+
+    .edit-jobs-container{
+        width: 100%;
+        background-color: white;
+        background-color: white;
+        border-radius: 15px;
+        border: 1px solid lightgrey;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        form{
+            width: 100%;
+        }
+
+    }
+}
