@@ -35,6 +35,66 @@ $darktext: rgb(121, 121, 121);
         justify-content: flex-start;
         form{
             width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            .edit-jobCard{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+
+                .jobTitle{
+                    width: 100%;
+                    padding: 2rem;
+                    border-bottom: 1px solid lightgrey;
+
+                    input{
+                        -moz-appearance: none;
+                        -webkit-appearance: none;
+                        appearance: none;
+                        width: 70%;
+                        font-size: 1.2rem;
+                        color: $color1;
+                        font-weight: bolders;
+                        padding: .4rem .2rem;
+
+                    }
+                }
+
+                .scope{
+                    width: 100%;
+                    padding: 2rem;
+                    border-bottom: 1px solid lightgrey;
+                    
+                    h3{
+                       font-size: 1.1rem;
+                       font-weight: bolder;
+                       width: 100%;
+                       color: $color1;
+                       
+                       span{
+                           color: $darktext;
+                           font-size: 1rem;
+                       }
+                    }
+
+                    p{
+                        font-size: 1.1rem;
+                        font-weight: bolder;
+                        width: 100%;
+                        color: $color1;
+                        
+                        span{
+                            color: $darktext;
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+
         }
 
     }
