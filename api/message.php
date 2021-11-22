@@ -49,5 +49,5 @@ if ($sender == null) {
     die('{ "Error": "Missing Sender!" }');
 }
 
-$query = mysqli_query($conn, "INSERT INTO messages(body, sender, receiver, isread, jobID, response) VALUES('$body', '$sender', '$getID', 0, '$jobID', 0)") or die(mysqli_errno($conn));
+$query = mysqli_query($conn, "INSERT INTO messages(body, sender, receiver, isread, jobID, response) VALUES('$body', '$sender', '$getID', 0, '$jobID', NULL)") or die(mysqli_errno($conn));
 echo '{ "Success": "Message Sent!" }';

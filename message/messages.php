@@ -26,7 +26,7 @@ if (isset($_POST['submit'])) {
         $message_body = stripslashes($message_body);
         $cleanmessage = mysqli_real_escape_string($conn, $message_body);
 
-        $insertSQL = "INSERT INTO messages(body, sender, receiver, isread, jobID, response) VALUES('$cleanmessage', '$senderID', '$receiverID', 0, NULL, 0)";
+        $insertSQL = "INSERT INTO messages(body, sender, receiver, isread, jobID, response) VALUES('$cleanmessage', '$senderID', '$receiverID', 0, NULL, NULL)";
         $insertresult = mysqli_query($conn, $insertSQL) or die(mysqli_error($conn));
 
         if (!$insertresult) {
@@ -152,7 +152,28 @@ if (isset($_POST['submit'])) {
                                 while ($row = mysqli_fetch_assoc($result)) {
                                     //echo $row['id'] . ": " . $row['body'] . "<br />";
                                     if ($row['Sender'] == $username) {
-                                        if ($row['jobID'] != NULL && $row['response'] == 0) { ?>
+                                        if ($row['jobID'] != NULL && $row['response'] == NULL) {
+                                            if ($row['response'] == "accept") { ?>
+                                                <li>
+                                                    <div class="message-data align-right">
+                                                        <span class="message-data-name">Me</span> <i class="fa fa-circle me"></i>
+                                                    </div>
+                                                    <div class="message other-message float-right">
+                                                        Your request has been accepted.<br />
+                                                        View the job post to view the progess.<br />
+                                                    </div>
+                                                </li>
+                                            <?php } else if ($row['response'] == "denied") { ?>
+                                                <li>
+                                                    <div class="message-data align-right">
+                                                        <span class="message-data-name">Me</span> <i class="fa fa-circle me"></i>
+                                                    </div>
+                                                    <div class="message other-message float-right">
+                                                        Your request has been denied.<br />
+                                                    </div>
+                                                </li>
+                                            <?php }
+                                            ?>
                                             <li>
                                                 <div class="message-data align-right">
                                                     <span class="message-data-name">Me</span> <i class="fa fa-circle me"></i>
