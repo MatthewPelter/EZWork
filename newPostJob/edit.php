@@ -68,12 +68,12 @@ if (mysqli_num_rows($jobResult) > 0) {
 
         <div class="edit-job-container">
             <form class="form" action="../components/edit-post?id=<?php echo $job_id; ?>" method="post" name="edit-post" id="myForm">
-                <div class="jobCard">
+                <div class="edit-jobCard">
                     <div class="jobTitle">
                         <input type="text" name="title" id="title" value="<?php echo $r['title']; ?>" required>
                     </div>
                     <div class="scope">
-                        <h3><?php echo $r['skills']; ?></h3>
+                        <h3>Needed Skill: <span><?php echo $r['skills']; ?></span></h3>
                         <p>Posted On: <span><?php echo $r['datePosted']; ?></span></p>
                         <p>
                             <i class="fas fa-map-marker-alt"></i>
