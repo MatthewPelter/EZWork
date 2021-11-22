@@ -212,7 +212,7 @@ if (isset($_POST['submit'])) {
                                             ?>
                                                 <li class="propose">
                                                     <div class="message-data">
-                                                        <span class="message-data-name"><i class="fa fa-circle online"></i><?php echo $row['Sender']; ?></span>
+                                                        <!-- <span class="message-data-name"><i class="fa fa-circle online"></i><?php echo $row['Sender']; ?></span> -->
                                                     </div>
                                                     <div class="message my-message">
                                                         <?php echo $row['Sender']; ?> is interested in your project you posted.<br />
@@ -227,7 +227,7 @@ if (isset($_POST['submit'])) {
                                             if ($row['response'] == "accept") { ?>
                                                 <li class="propose">
                                                     <div class="message-data">
-                                                        <span class="message-data-name"><i class="fa fa-circle online"></i><?php echo $row['Sender']; ?></span>
+                                                        <!-- <span class="message-data-name"><i class="fa fa-circle online"></i><?php echo $row['Sender']; ?></span> -->
                                                     </div>
                                                     <div class="message my-message">
                                                         You accepted the job.<br />
@@ -239,7 +239,7 @@ if (isset($_POST['submit'])) {
                                             if ($row['response'] == "denied") { ?>
                                                 <li class="propose">
                                                     <div class="message-data">
-                                                        <span class="message-data-name"><i class="fa fa-circle online"></i><?php echo $row['Sender']; ?></span>
+                                                        <!-- <span class="message-data-name"><i class="fa fa-circle online"></i><?php echo $row['Sender']; ?></span> -->
                                                     </div>
                                                     <div class="message my-message">
                                                         You denied the job.<br />
