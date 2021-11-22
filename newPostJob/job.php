@@ -263,7 +263,7 @@ if (mysqli_num_rows($jobResult) > 0) {
 
                     setTimeout(function() {
                         window.location.reload(1);
-                    }, 5000);
+                    }, 3000);
                 },
                 error: function(r) {
                     console.log(r);
