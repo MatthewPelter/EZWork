@@ -181,8 +181,7 @@ if (mysqli_num_rows($jobResult) > 0) {
                     if ($myData['freelancer_id'] != NULL && $unameFetched['username'] != $_SESSION['userid']) {
 
                         $checkProposal = mysqli_query($conn, "SELECT * FROM messages WHERE jobID='$job_id' AND sender='$user_id'") or die(mysqli_error($conn));
-                        if (mysqli_num_rows($checkProposal) > 0) {
-                ?>
+                        if (mysqli_num_rows($checkProposal) > 0) { ?>
                             <button id="proposalBtn" disabled>Proposal Submitted</button>
                         <?php } else { ?>
                             <a href="./proposal.php?id=<?php echo $job_id; ?>"><button id="proposalBtn">Submit A Proposal</button></a>
