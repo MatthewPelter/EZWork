@@ -22663,6 +22663,13 @@ footer p {
   border-bottom: 1px solid lightgrey;
 }
 
+.edit-jobs .edit-job-container form .edit-jobCard .jobTitle h3 {
+  font-size: 1.5rem;
+  color: #0a345e;
+  width: 100%;
+  margin: .5rem 0rem;
+}
+
 .edit-jobs .edit-job-container form .edit-jobCard .jobTitle input {
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -22670,8 +22677,9 @@ footer p {
   width: 70%;
   font-size: 1.2rem;
   color: #0a345e;
-  font-weight: bolders;
-  padding: .4rem .2rem;
+  font-weight: bolder;
+  padding: .8rem .4rem;
+  border-radius: 9px;
 }
 
 .edit-jobs .edit-job-container form .edit-jobCard .scope {
@@ -22681,10 +22689,11 @@ footer p {
 }
 
 .edit-jobs .edit-job-container form .edit-jobCard .scope h3 {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   font-weight: bolder;
   width: 100%;
   color: #0a345e;
+  margin: .5rem 0rem;
 }
 
 .edit-jobs .edit-job-container form .edit-jobCard .scope h3 span {
@@ -22711,23 +22720,69 @@ footer p {
 }
 
 .edit-jobs .edit-job-container form .edit-jobCard .jobDescription h3 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: #0a345e;
   width: 100%;
+  margin: .5rem 0rem;
 }
 
 .edit-jobs .edit-job-container form .edit-jobCard .jobDescription textarea {
-  resize: none;
-  width: 80%;
+  width: 50%;
   font-size: 1rem;
+  padding: .8rem .4rem;
   outline: none;
   border: 0.7px solid #054e97;
+  border-radius: 9px;
 }
 
 .edit-jobs .edit-job-container form .edit-jobCard .budgetAndExperience {
   width: 100%;
   padding: 2rem;
   border-bottom: 1px solid lightgrey;
+}
+
+.edit-jobs .edit-job-container form .edit-jobCard .budgetAndExperience .budget, .edit-jobs .edit-job-container form .edit-jobCard .budgetAndExperience .experience {
+  width: 100%;
+  margin: .5rem 0rem;
+}
+
+.edit-jobs .edit-job-container form .edit-jobCard .budgetAndExperience .budget h4, .edit-jobs .edit-job-container form .edit-jobCard .budgetAndExperience .experience h4 {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  width: 100%;
+  color: #0a345e;
+  margin: .5rem 0rem;
+}
+
+.edit-jobs .edit-job-container form .edit-jobCard .budgetAndExperience .budget span, .edit-jobs .edit-job-container form .edit-jobCard .budgetAndExperience .experience span {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  width: 100%;
+  color: #0a345e;
+  margin: .5rem 0rem;
+}
+
+.edit-jobs .edit-job-container form .edit-jobCard .budgetAndExperience .budget p, .edit-jobs .edit-job-container form .edit-jobCard .budgetAndExperience .experience p {
+  font-size: 1rem;
+  color: #797979;
+}
+
+.edit-jobs .edit-job-container form .edit-jobCard .budgetAndExperience .budget input, .edit-jobs .edit-job-container form .edit-jobCard .budgetAndExperience .experience input {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 30%;
+  font-size: 1.3rem;
+  color: #0a345e;
+  padding: .4rem .2rem;
+}
+
+.edit-jobs .edit-job-container form .edit-jobCard .budgetAndExperience .budget select, .edit-jobs .edit-job-container form .edit-jobCard .budgetAndExperience .experience select {
+  width: 30%;
+  font-size: 1rem;
+  color: #054e97;
+  padding: .8rem .4rem;
+  cursor: pointer;
 }
 
 .edit-jobs .edit-job-container form .edit-jobCard .jobType {
@@ -22740,18 +22795,19 @@ footer p {
 }
 
 .edit-jobs .edit-job-container form .edit-jobCard .jobType .type h4, .edit-jobs .edit-job-container form .edit-jobCard .jobType .size h4 {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   font-weight: bolder;
   width: 100%;
   color: #0a345e;
+  margin: .5rem 0rem;
 }
 
 .edit-jobs .edit-job-container form .edit-jobCard .jobType .type select, .edit-jobs .edit-job-container form .edit-jobCard .jobType .size select {
-  width: 50%;
+  width: 30%;
   font-size: 1rem;
   color: #054e97;
-  padding: .4rem .2rem;
-  border: none;
+  padding: .8rem .4rem;
+  cursor: pointer;
 }
 
 .edit-jobs .edit-job-container form .edit-jobCard .options {

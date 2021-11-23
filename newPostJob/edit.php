@@ -70,6 +70,7 @@ if (mysqli_num_rows($jobResult) > 0) {
             <form class="form" action="../components/edit-post?id=<?php echo $job_id; ?>" method="post" name="edit-post" id="myForm">
                 <div class="edit-jobCard">
                     <div class="jobTitle">
+                        <h3>Job Title</h3>
                         <input type="text" name="title" id="title" value="<?php echo $r['title']; ?>" required>
                     </div>
                     <div class="scope">
@@ -104,11 +105,13 @@ if (mysqli_num_rows($jobResult) > 0) {
                     <div class="budgetAndExperience">
                         <div class="budget">
                             <?php if ($r['rate'] > 0) { ?>
-                                <p>$<input type="number" id="rate" name="rate" value="<?php echo $r['rate']; ?>"> / hr</p>
                                 <span><?php echo "Hourly Rate" ?></span>
+                                <p>$<input type="number" id="rate" name="rate" value="<?php echo $r['rate']; ?>"> / hr</p>
+                                
                             <?php } else if ($r['budget'] > 0) { ?>
-                                <p>$ <input type="number" id="budget" name="budget" value="<?php echo $r['budget']; ?>"></p>
                                 <span><?php echo "Project Budget" ?></span>
+                                <p>$ <input type="number" id="budget" name="budget" value="<?php echo $r['budget']; ?>"></p>
+                                
                             <?php } else { ?>
                                 <p></p>
                                 <span> <?php echo "No budget or pay rate set yet... Contact client for pricing."; ?></span>
@@ -159,11 +162,11 @@ if (mysqli_num_rows($jobResult) > 0) {
                             </select>
                         </div>
 
-                    </div>
-                </div>
+                        <div class="options">
+                            <input type="submit" value="Submit" name="submit">
+                        </div>
 
-                <div class="options">
-                    <input type="submit" value="Submit" name="submit">
+                    </div>
                 </div>
             </form>
         </div>

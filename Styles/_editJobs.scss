@@ -46,6 +46,12 @@ $darktext: rgb(121, 121, 121);
                     padding: 2rem;
                     border-bottom: 1px solid lightgrey;
 
+                    h3{
+                        font-size: 1.5rem;
+                        color: $color1;
+                        width: 100%;
+                        margin: .5rem 0rem;
+                    }
                     input{
                         -moz-appearance: none;
                         -webkit-appearance: none;
@@ -53,8 +59,9 @@ $darktext: rgb(121, 121, 121);
                         width: 70%;
                         font-size: 1.2rem;
                         color: $color1;
-                        font-weight: bolders;
-                        padding: .4rem .2rem;
+                        font-weight: bolder;
+                        padding: .8rem .4rem;
+                        border-radius: 9px;
 
                     }
                 }
@@ -65,10 +72,11 @@ $darktext: rgb(121, 121, 121);
                     border-bottom: 1px solid lightgrey;
                     
                     h3{
-                       font-size: 1.1rem;
+                       font-size: 1.5rem;
                        font-weight: bolder;
                        width: 100%;
                        color: $color1;
+                       margin: .5rem 0rem;
                        
                        span{
                            color: $darktext;
@@ -95,17 +103,20 @@ $darktext: rgb(121, 121, 121);
                     border-bottom: 1px solid lightgrey;
 
                     h3{
-                        font-size: 1.2rem;
+                        font-size: 1.5rem;
                         color: $color1;
                         width: 100%;
+                        margin: .5rem 0rem;
                     }
 
                     textarea{
-                        resize: none;
-                        width: 80%;
+                        
+                        width: 50%;
                         font-size: 1rem;
+                        padding: .8rem .4rem;
                         outline: none;
                         border: .7px solid $lightColor;
+                        border-radius: 9px;
                     }
                 }
                 .budgetAndExperience{
@@ -113,6 +124,49 @@ $darktext: rgb(121, 121, 121);
                     padding: 2rem;
                     border-bottom: 1px solid lightgrey;
 
+                    .budget,.experience{
+                        width: 100%;
+                        margin: .5rem 0rem;
+                        h4{
+                            font-size: 1.5rem;
+                            font-weight: bolder;
+                            width: 100%;
+                            color: $color1;
+                            margin: .5rem 0rem;
+
+                        }
+                        span{
+                            font-size: 1.5rem;
+                            font-weight: bolder;
+                            width: 100%;
+                            color: $color1;
+                            margin: .5rem 0rem;
+                        }
+                        p{
+                            font-size: 1rem;
+                            color: $darktext;
+                        }
+
+                        input{
+                            -moz-appearance: none;
+                            -webkit-appearance: none;
+                            appearance: none;
+                            width: 30%;
+                            font-size: 1.3rem;
+                            color: $color1;
+                            padding: .4rem .2rem;
+                        }
+
+                        select{
+                            width: 30%;
+                            font-size: 1rem;
+                            color: $lightColor;
+                            padding: .8rem .4rem;
+                            cursor: pointer;
+                        }
+
+
+                    }
                 }
                 .jobType{
                     width: 100%;
@@ -122,18 +176,19 @@ $darktext: rgb(121, 121, 121);
                         width: 100%;
                         padding: 1rem 2rem;
                         h4{
-                            font-size: 1.1rem;
+                            font-size: 1.5rem;
                             font-weight: bolder;
                             width: 100%;
                             color: $color1;
+                            margin: .5rem 0rem;
                         }
 
                         select{
-                            width: 50%;
+                            width: 30%;
                             font-size: 1rem;
                             color: $lightColor;
-                            padding: .4rem .2rem;
-                            border: none;
+                            padding: .8rem .4rem;
+                            cursor: pointer;
                         }
                     }
                 }
