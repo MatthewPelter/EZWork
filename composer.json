@@ -10,6 +10,7 @@
         "hyperf/event": "^2.1",
         "php-http/httplug": "^2.2",
         "phpmailer/phpmailer": "^6.5",
+        "steampixel/simple-php-router": "^0.7.0",
         "vlucas/phpdotenv": "^5.4"
     },
     "require-dev": {
