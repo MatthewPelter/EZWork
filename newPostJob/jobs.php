@@ -64,6 +64,13 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
 
 ?>
 
+<!-- ----------------------------------------- -->
+<!-- JOB STATUS -->
+<!-- 0 : OPEN -->
+<!-- 1 : CLOSED -->
+<!-- -1 : IN PROGRESS -->
+<!-- ----------------------------------------- -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -301,6 +308,14 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                                 <div class="job-title">
                                     <a href="job.php?id=<?php echo $r['id']; ?>"><?php echo $r['title']; ?></a>
                                 </div>
+
+                                <!-- ----------------------------------------- -->
+                                <!-- JOB STATUS -->
+                                <!-- 0 : OPEN -->
+                                <!-- 1 : CLOSED -->
+                                <!-- -1 : IN PROGRESS -->
+                                <!-- ----------------------------------------- -->
+
                                 <div class="status">
                                     <p>Status:</p>
                                     <span>

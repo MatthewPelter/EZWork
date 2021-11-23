@@ -35,6 +35,14 @@ if (mysqli_num_rows($jobResult) > 0) {
 }
 ?>
 
+<!-- ----------------------------------------- -->
+<!-- JOB STATUS -->
+<!-- 0 : OPEN -->
+<!-- 1 : CLOSED -->
+<!-- -1 : IN PROGRESS -->
+<!-- ----------------------------------------- -->
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -90,6 +98,12 @@ if (mysqli_num_rows($jobResult) > 0) {
                             } ?>
                         </span>
                     </p>
+                    <!-- ----------------------------------------- -->
+                    <!-- JOB STATUS -->
+                    <!-- 0 : OPEN -->
+                    <!-- 1 : CLOSED -->
+                    <!-- -1 : IN PROGRESS -->
+                    <!-- ----------------------------------------- -->
                     <p>Status:
                         <span id="status">
                             <?php if ($r['status'] == 0) {
