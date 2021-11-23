@@ -23089,10 +23089,13 @@ footer p {
     font-size: 1.5rem;
     font-weight: bolder;
     width: 100%;
+    text-align: center;
     color: #0a345e;
     margin: .5rem 0rem;
   }
   .edit-jobs .edit-job-container form .edit-jobCard .budgetAndExperience .budget p, .edit-jobs .edit-job-container form .edit-jobCard .budgetAndExperience .experience p {
+    width: 100%;
+    text-align: center;
     font-size: 1rem;
     color: #797979;
   }
@@ -23100,7 +23103,7 @@ footer p {
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
-    width: 50%;
+    width: 90%;
     font-size: 1.3rem;
     color: #0a345e;
     padding: .4rem .2rem;

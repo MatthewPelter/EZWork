@@ -414,10 +414,13 @@ $darktext: rgb(121, 121, 121);
                                 font-size: 1.5rem;
                                 font-weight: bolder;
                                 width: 100%;
+                                text-align: center;
                                 color: $color1;
                                 margin: .5rem 0rem;
                             }
                             p{
+                                width: 100%;
+                                text-align: center;
                                 font-size: 1rem;
                                 color: $darktext;
                             }
@@ -426,7 +429,7 @@ $darktext: rgb(121, 121, 121);
                                 -moz-appearance: none;
                                 -webkit-appearance: none;
                                 appearance: none;
-                                width: 50%;
+                                width: 90%;
                                 font-size: 1.3rem;
                                 color: $color1;
                                 padding: .4rem .2rem;
