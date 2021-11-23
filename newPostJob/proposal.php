@@ -67,11 +67,11 @@ if (mysqli_num_rows($jobResult) > 0) {
             <textarea name="chat" id="chat" cols="30" rows="10"></textarea>
             <button id="sendmessage">Agree</button>
             <button onclick="cancel()">Cancel</button>
-            <div id="result"></div>
+
 
         <?php } ?>
     </div>
-
+    <div id="result"></div>
 
     <!-- <div id="offer">
         <h1>Are you willing to pay for this service?</h1>
@@ -95,6 +95,7 @@ if (mysqli_num_rows($jobResult) > 0) {
                     $("#chat").val('');
                     if (obj.Success.length > 0) {
                         $('#result').html(obj.Success);
+                        $('#proposal').hide();
                     } else if (obj.Error.length > 0) {
                         $('#result').html(obj.Error);
                     }
