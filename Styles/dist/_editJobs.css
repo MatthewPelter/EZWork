@@ -2,7 +2,7 @@
   display: inline-block;
   width: 100%;
   background: whitesmoke;
-  padding: 2.5rem 10rem;
+  padding: 2.5rem 12rem;
 }
 .edit-jobs .edit-jobs-container-header {
   width: 100%;
@@ -52,7 +52,7 @@
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-  width: 60%;
+  width: fit-content;
   font-size: 1.2rem;
   color: #0a345e;
   font-weight: bolder;
