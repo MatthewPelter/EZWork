@@ -22617,10 +22617,6 @@ footer p {
 
 .edit-jobs .edit-jobs-container {
   width: 100%;
-}
-
-.edit-jobs .edit-jobs-container form {
-  width: 100%;
   background-color: white;
   border-radius: 15px;
   border: 1px solid lightgrey;
@@ -22638,6 +22634,10 @@ footer p {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+
+.edit-jobs .edit-jobs-container form {
+  width: 100%;
 }
 
 .edit-jobs .edit-jobs-container form .edit-jobCard {
