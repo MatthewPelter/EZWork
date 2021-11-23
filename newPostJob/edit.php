@@ -110,7 +110,7 @@ if (mysqli_num_rows($jobResult) > 0) {
                                 
                             <?php } else if ($r['budget'] > 0) { ?>
                                 <span><?php echo "Project Budget" ?></span>
-                                <p>$ <input type="number" id="budget" name="budget" value="<?php echo $r['budget']; ?>"></p>
+                                <p><input type="number" id="budget" name="budget" value="<?php echo $r['budget']; ?>"></p>
                                 
                             <?php } else { ?>
                                 <p></p>

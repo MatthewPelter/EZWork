@@ -6,7 +6,7 @@ $darktext: rgb(121, 121, 121);
     display: inline-block;
     width: 100%;
     background: whitesmoke;
-    padding: 2.5rem 6rem;
+    padding: 2.5rem 10rem;
 
     .edit-jobs-container-header{
         width: 100%;
@@ -61,6 +61,7 @@ $darktext: rgb(121, 121, 121);
                         color: $color1;
                         font-weight: bolder;
                         padding: .8rem .4rem;
+                        border: .7px solid $lightColor;
                         border-radius: 9px;
 
                     }
@@ -85,14 +86,16 @@ $darktext: rgb(121, 121, 121);
                     }
 
                     p{
-                        font-size: 1.1rem;
+                        font-size: 1.5rem;
                         font-weight: bolder;
                         width: 100%;
                         color: $color1;
+                        margin: .5rem 0rem;
                         
                         span{
                             color: $darktext;
                             font-size: 1rem;
+                            font-weight: lighter;
                         }
                     }
                 }
@@ -155,6 +158,8 @@ $darktext: rgb(121, 121, 121);
                             font-size: 1.3rem;
                             color: $color1;
                             padding: .4rem .2rem;
+                            border: .7px solid $lightColor;
+                            border-radius: 9px;
                         }
 
                         select{
@@ -163,6 +168,12 @@ $darktext: rgb(121, 121, 121);
                             color: $lightColor;
                             padding: .8rem .4rem;
                             cursor: pointer;
+                            border: .7px solid $lightColor;
+                            border-radius: 9px;
+
+                            option{
+                                cursor: pointer;
+                            }
                         }
 
 
@@ -189,6 +200,13 @@ $darktext: rgb(121, 121, 121);
                             color: $lightColor;
                             padding: .8rem .4rem;
                             cursor: pointer;
+                            border: .7px solid $lightColor;
+                            border-radius: 9px;
+
+                            
+                            option{
+                                cursor: pointer;
+                            }
                         }
                     }
                 }
