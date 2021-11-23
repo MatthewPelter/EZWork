@@ -20064,17 +20064,23 @@ li {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .job .job-container .jobCard .scope h3 {
     font-size: 1.4rem;
     color: #054e97;
     width: 100%;
+    text-align: center;
     font-weight: bolder;
   }
   .job .job-container .jobCard .scope p {
+    width: 100%;
+    text-align: center;
     font-size: 1.2rem;
     color: #054e97;
     padding: .5rem 0rem;
@@ -20226,12 +20232,15 @@ li {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     border-bottom: .7px solid lightgrey;
   }
-  .job .job-container .jobCard .imageCard h4 {
+  .job .job-container .jobCard .imageCard h3 {
     width: 100%;
     text-align: center;
     font-size: 1.2rem;
@@ -23103,7 +23112,9 @@ footer p {
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
-    width: 90%;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
     font-size: 1.3rem;
     color: #0a345e;
     padding: .4rem .2rem;

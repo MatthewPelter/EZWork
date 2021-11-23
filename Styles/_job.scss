@@ -407,16 +407,20 @@ $darktext: rgb(121, 121, 121);
                     border-bottom: solid lightgrey .7px;  
                     display: flex;
                     flex-direction: column;  
-                    justify-content: space-between;
+                    justify-content: center;
+                    align-items: center;
                     
                     h3{
                         font-size: 1.4rem;
                         color: $lightColor;
                         width: 100%;
+                        text-align: center;
                         font-weight: bolder;
                     }
     
                     p{
+                        width: 100%;
+                        text-align: center;
                         font-size: 1.2rem;
                         color: $lightColor;
                         padding: .5rem 0rem;
@@ -533,9 +537,10 @@ $darktext: rgb(121, 121, 121);
                     padding: 2rem;
                     display: flex;
                     flex-direction: column;
-                    align-items: flex-start;
+                    align-items: center;
+                    justify-content: center;
                     border-bottom: .7px solid lightgrey;
-                    h4{
+                    h3{
                         width: 100%;
                         text-align: center;
                         font-size: 1.2rem;
