@@ -226,6 +226,7 @@
   }
   .edit-jobs .edit-jobs-container-header h4 {
     width: 100%;
+    margin-left: 1rem;
     font-size: 2rem;
   }
   .edit-jobs .edit-job-container {
@@ -259,6 +260,7 @@
     border-bottom: 1px solid lightgrey;
   }
   .edit-jobs .edit-job-container form .edit-jobCard .jobTitle h3 {
+    text-align: center;
     font-size: 1.5rem;
     color: #0a345e;
     width: 100%;
@@ -268,7 +270,7 @@
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
-    width: fit-content;
+    width: 100%;
     font-size: 1.2rem;
     color: #0a345e;
     font-weight: bolder;
@@ -290,6 +292,7 @@
     font-size: 1.5rem;
     font-weight: bolder;
     width: 100%;
+    text-align: center;
     color: #0a345e;
     margin: 0.5rem 0rem;
   }
@@ -301,6 +304,7 @@
     font-size: 1.5rem;
     font-weight: bolder;
     width: 100%;
+    text-align: center;
     color: #0a345e;
     margin: 0.5rem 0rem;
   }
@@ -322,6 +326,7 @@
     font-size: 1.5rem;
     color: #0a345e;
     width: 100%;
+    text-align: center;
     margin: 0.5rem 0rem;
   }
   .edit-jobs .edit-job-container form .edit-jobCard .jobDescription textarea {
@@ -343,12 +348,17 @@
   }
   .edit-jobs .edit-job-container form .edit-jobCard .budgetAndExperience .budget, .edit-jobs .edit-job-container form .edit-jobCard .budgetAndExperience .experience {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin: 0.5rem 0rem;
   }
   .edit-jobs .edit-job-container form .edit-jobCard .budgetAndExperience .budget h4, .edit-jobs .edit-job-container form .edit-jobCard .budgetAndExperience .experience h4 {
     font-size: 1.5rem;
     font-weight: bolder;
     width: 100%;
+    text-align: center;
     color: #0a345e;
     margin: 0.5rem 0rem;
   }
@@ -394,6 +404,10 @@
     width: 100%;
   }
   .edit-jobs .edit-job-container form .edit-jobCard .jobType .type, .edit-jobs .edit-job-container form .edit-jobCard .jobType .size {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     padding: 1rem 2rem;
   }
@@ -401,6 +415,7 @@
     font-size: 1.5rem;
     font-weight: bolder;
     width: 100%;
+    text-align: center;
     color: #0a345e;
     margin: 0.5rem 0rem;
   }

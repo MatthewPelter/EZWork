@@ -262,6 +262,7 @@ $darktext: rgb(121, 121, 121);
             justify-content: flex-start;
             h4{
                 width: 100%;
+                margin-left: 1rem;
                 font-size: 2rem;
             }
     
@@ -296,6 +297,7 @@ $darktext: rgb(121, 121, 121);
                         border-bottom: 1px solid lightgrey;
     
                         h3{
+                            text-align: center;
                             font-size: 1.5rem;
                             color: $color1;
                             width: 100%;
@@ -305,7 +307,7 @@ $darktext: rgb(121, 121, 121);
                             -moz-appearance: none;
                             -webkit-appearance: none;
                             appearance: none;
-                            width: fit-content;
+                            width: 100%;
                             font-size: 1.2rem;
                             color: $color1;
                             font-weight: bolder;
@@ -330,6 +332,7 @@ $darktext: rgb(121, 121, 121);
                            font-size: 1.5rem;
                            font-weight: bolder;
                            width: 100%;
+                           text-align: center;
                            color: $color1;
                            margin: .5rem 0rem;
                            
@@ -343,6 +346,7 @@ $darktext: rgb(121, 121, 121);
                             font-size: 1.5rem;
                             font-weight: bolder;
                             width: 100%;
+                            text-align: center;
                             color: $color1;
                             margin: .5rem 0rem;
                             
@@ -367,6 +371,7 @@ $darktext: rgb(121, 121, 121);
                             font-size: 1.5rem;
                             color: $color1;
                             width: 100%;
+                            text-align: center;
                             margin: .5rem 0rem;
                         }
     
@@ -391,11 +396,16 @@ $darktext: rgb(121, 121, 121);
     
                         .budget,.experience{
                             width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
                             margin: .5rem 0rem;
                             h4{
                                 font-size: 1.5rem;
                                 font-weight: bolder;
                                 width: 100%;
+                                text-align: center;
                                 color: $color1;
                                 margin: .5rem 0rem;
     
@@ -449,6 +459,10 @@ $darktext: rgb(121, 121, 121);
                         width: 100%;
     
                         .type,.size{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
     
                             width: 100%;
                             padding: 1rem 2rem;
@@ -456,6 +470,7 @@ $darktext: rgb(121, 121, 121);
                                 font-size: 1.5rem;
                                 font-weight: bolder;
                                 width: 100%;
+                                text-align: center;
                                 color: $color1;
                                 margin: .5rem 0rem;
                             }

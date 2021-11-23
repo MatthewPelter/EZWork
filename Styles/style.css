@@ -22886,6 +22886,7 @@ footer p {
   }
   .edit-jobs .edit-jobs-container-header h4 {
     width: 100%;
+    margin-left: 1rem;
     font-size: 2rem;
   }
   .edit-jobs .edit-job-container {
@@ -22946,6 +22947,7 @@ footer p {
     border-bottom: 1px solid lightgrey;
   }
   .edit-jobs .edit-job-container form .edit-jobCard .jobTitle h3 {
+    text-align: center;
     font-size: 1.5rem;
     color: #0a345e;
     width: 100%;
@@ -22955,9 +22957,7 @@ footer p {
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
+    width: 100%;
     font-size: 1.2rem;
     color: #0a345e;
     font-weight: bolder;
@@ -22988,6 +22988,7 @@ footer p {
     font-size: 1.5rem;
     font-weight: bolder;
     width: 100%;
+    text-align: center;
     color: #0a345e;
     margin: .5rem 0rem;
   }
@@ -22999,6 +23000,7 @@ footer p {
     font-size: 1.5rem;
     font-weight: bolder;
     width: 100%;
+    text-align: center;
     color: #0a345e;
     margin: .5rem 0rem;
   }
@@ -23029,6 +23031,7 @@ footer p {
     font-size: 1.5rem;
     color: #0a345e;
     width: 100%;
+    text-align: center;
     margin: .5rem 0rem;
   }
   .edit-jobs .edit-job-container form .edit-jobCard .jobDescription textarea {
@@ -23059,12 +23062,26 @@ footer p {
   }
   .edit-jobs .edit-job-container form .edit-jobCard .budgetAndExperience .budget, .edit-jobs .edit-job-container form .edit-jobCard .budgetAndExperience .experience {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin: .5rem 0rem;
   }
   .edit-jobs .edit-job-container form .edit-jobCard .budgetAndExperience .budget h4, .edit-jobs .edit-job-container form .edit-jobCard .budgetAndExperience .experience h4 {
     font-size: 1.5rem;
     font-weight: bolder;
     width: 100%;
+    text-align: center;
     color: #0a345e;
     margin: .5rem 0rem;
   }
@@ -23121,6 +23138,19 @@ footer p {
     width: 100%;
   }
   .edit-jobs .edit-job-container form .edit-jobCard .jobType .type, .edit-jobs .edit-job-container form .edit-jobCard .jobType .size {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 100%;
     padding: 1rem 2rem;
   }
@@ -23128,6 +23158,7 @@ footer p {
     font-size: 1.5rem;
     font-weight: bolder;
     width: 100%;
+    text-align: center;
     color: #0a345e;
     margin: .5rem 0rem;
   }
