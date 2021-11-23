@@ -22674,13 +22674,14 @@ footer p {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-  width: 70%;
+  width: 60%;
   font-size: 1.2rem;
   color: #0a345e;
   font-weight: bolder;
   padding: .8rem .4rem;
   border: 0.7px solid #054e97;
   border-radius: 9px;
+  outline: none;
 }
 
 .edit-jobs .edit-job-container form .edit-jobCard .scope {
@@ -22699,7 +22700,7 @@ footer p {
 
 .edit-jobs .edit-job-container form .edit-jobCard .scope h3 span {
   color: #797979;
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
 
 .edit-jobs .edit-job-container form .edit-jobCard .scope p {
@@ -22712,7 +22713,7 @@ footer p {
 
 .edit-jobs .edit-job-container form .edit-jobCard .scope p span {
   color: #797979;
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: lighter;
 }
 
@@ -22730,7 +22731,7 @@ footer p {
 }
 
 .edit-jobs .edit-job-container form .edit-jobCard .jobDescription textarea {
-  width: 50%;
+  width: 60%;
   font-size: 1rem;
   padding: .8rem .4rem;
   outline: none;

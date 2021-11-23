@@ -106,7 +106,7 @@ if (mysqli_num_rows($jobResult) > 0) {
                         <div class="budget">
                             <?php if ($r['rate'] > 0) { ?>
                                 <span><?php echo "Hourly Rate" ?></span>
-                                <p>$<input type="number" id="rate" name="rate" value="<?php echo $r['rate']; ?>"> / hr</p>
+                                <p><input type="number" id="rate" name="rate" value="<?php echo $r['rate']; ?>"> / hr</p>
                                 
                             <?php } else if ($r['budget'] > 0) { ?>
                                 <span><?php echo "Project Budget" ?></span>

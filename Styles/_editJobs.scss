@@ -56,13 +56,14 @@ $darktext: rgb(121, 121, 121);
                         -moz-appearance: none;
                         -webkit-appearance: none;
                         appearance: none;
-                        width: 70%;
+                        width: 60%;
                         font-size: 1.2rem;
                         color: $color1;
                         font-weight: bolder;
                         padding: .8rem .4rem;
                         border: .7px solid $lightColor;
                         border-radius: 9px;
+                        outline: none;
 
                     }
                 }
@@ -81,7 +82,7 @@ $darktext: rgb(121, 121, 121);
                        
                        span{
                            color: $darktext;
-                           font-size: 1rem;
+                           font-size: 1.25rem;
                        }
                     }
 
@@ -94,7 +95,7 @@ $darktext: rgb(121, 121, 121);
                         
                         span{
                             color: $darktext;
-                            font-size: 1rem;
+                            font-size: 1.25rem;
                             font-weight: lighter;
                         }
                     }
@@ -114,7 +115,7 @@ $darktext: rgb(121, 121, 121);
 
                     textarea{
                         
-                        width: 50%;
+                        width: 60%;
                         font-size: 1rem;
                         padding: .8rem .4rem;
                         outline: none;
