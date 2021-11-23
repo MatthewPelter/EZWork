@@ -20047,6 +20047,7 @@ li {
   }
   .job .job-container .jobCard .jobTitle {
     width: 100%;
+    text-align: center;
     padding: 2rem;
     font-size: 1.4rem;
     color: black;
@@ -20107,6 +20108,7 @@ li {
     text-decoration: underline;
   }
   .job .job-container .jobCard .jobDescription p {
+    text-align: center;
     padding: .5rem 0rem;
     font-size: 1rem;
     width: 100%;

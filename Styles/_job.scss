@@ -394,6 +394,7 @@ $darktext: rgb(121, 121, 121);
                 border-right: solid lightgrey .7px;
                 .jobTitle{
                     width: 100%;
+                    text-align: center;
                     padding: 2rem;
                     font-size: 1.4rem;
                     color: black;
@@ -450,6 +451,7 @@ $darktext: rgb(121, 121, 121);
                         text-decoration: underline;
                     }
                     p{
+                        text-align: center;
                         padding: .5rem 0rem;
                         font-size: 1rem;
                         width: 100%;
