@@ -163,7 +163,7 @@ if (mysqli_num_rows($jobResult) > 0) {
             <div class="options">
 
                 <?php
-                if ($r['typeOfJob'] == 'require') {
+                if ($r['typeOfJob'] == 'require' && $r['status'] == NULL) {
                     if ($myData['freelancer_id'] != NULL && $unameFetched['username'] != $_SESSION['userid']) {
 
                         $checkProposal = mysqli_query($conn, "SELECT * FROM messages WHERE jobID='$job_id' AND sender='$user_id'") or die(mysqli_error($conn));
@@ -174,9 +174,12 @@ if (mysqli_num_rows($jobResult) > 0) {
                             <a href="./proposal.php?id=<?php echo $job_id; ?>"><button id="proposalBtn">Submit A Proposal</button></a>
                         <?php } ?>
                     <?php }
-                } else { ?>
-                    <button id="payBtn">Pay for Service</button>
-                <?php } ?>
+                } else {
+
+                    if ($unameFetched['username'] != $_SESSION['userid'] && $r['status'] == NULL) { ?>
+                        <button id="payBtn">Pay for Service</button>
+                <?php }
+                } ?>
 
 
 
@@ -191,7 +194,7 @@ if (mysqli_num_rows($jobResult) > 0) {
                 <?php if ($unameFetched['username'] == $_SESSION['userid']) {
                 ?>
                     <input type="button" onclick="location.href = 'edit?id=<?php echo $r['id']; ?>';" id="editBtn" value="Edit Post">
-                    <input type="button" onclick="deleteMenu()" id="deleteBtn" style="color: red;" value="Delete Post">
+                    <input type="button" id="deleteBtn" style="color: red;" value="Delete Post">
                     <span id="result"></span>
 
                     <div id="deleteMenu" style="display: none;">
@@ -244,9 +247,11 @@ if (mysqli_num_rows($jobResult) > 0) {
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
-        function deleteMenu() {
+
+        $("#deleteBtn").click(function() {
             $('#deleteMenu').css('display', 'block');
-        }
+        });
+
         $('#yesBtn').click(function() {
             $.ajax({
                 type: "POST",
@@ -255,6 +260,10 @@ if (mysqli_num_rows($jobResult) > 0) {
                 success: function(data) {
                     $('#deleteMenu').css('display', 'none');
                     $('#result').html(data);
+
+                    setTimeout(function() {
+                        window.location.reload(1);
+                    }, 3000);
                 },
                 error: function(r) {
                     console.log(r);

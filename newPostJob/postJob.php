@@ -53,7 +53,7 @@ if (!isset($_SESSION['userid'])) {
                             $_SESSION['post']['hourrate'] = NULL;
                         }
 
-                        if (!isset($_POST['typeOfJob']) && empty($_POST['typeOfJob'])) {
+                        if ($typeOfJob == '') {
                             $typeOfJob = 'require';
                         }
 
