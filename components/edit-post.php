@@ -26,7 +26,7 @@ if (isset($_POST['submit'])) {
     $job_id = htmlspecialchars($job_id);
 
     $jobSQL = "SELECT user_id FROM jobs WHERE jobs.id='$job_id' LIMIT 1";
-    $jobResult = mysqli_query($conn, $jobSQL);
+    $jobResult = mysqli_query($conn, $jobSQL) or die(mysqli_error($conn));
 
     if (mysqli_num_rows($jobResult) > 0) {
         $r = mysqli_fetch_assoc($jobResult);
@@ -52,4 +52,6 @@ if (isset($_POST['submit'])) {
     } else {
         die("We had an error editing your post...");
     }
+} else {
+    die("Error: Invalid input");
 }
