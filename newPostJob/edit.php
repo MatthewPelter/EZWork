@@ -61,7 +61,7 @@ if (mysqli_num_rows($jobResult) > 0) {
     include '../navbar.php';
     ?>
 
-    <div class="edit-job">
+    <div class="edit-jobs">
         <div class="edit-jobs-container-header">
             <h4>Edit Job Post</h4>
         </div>
