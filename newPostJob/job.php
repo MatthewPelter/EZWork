@@ -163,7 +163,7 @@ if (mysqli_num_rows($jobResult) > 0) {
             <div class="options">
 
                 <?php
-                if ($r['typeOfJob'] == 'require' && $r['status'] == NULL) {
+                if ($r['typeOfJob'] == 'require' && $r['status'] == 0) {
                     if ($myData['freelancer_id'] != NULL && $unameFetched['username'] != $_SESSION['userid']) {
 
                         $checkProposal = mysqli_query($conn, "SELECT * FROM messages WHERE jobID='$job_id' AND sender='$user_id'") or die(mysqli_error($conn));
@@ -176,7 +176,7 @@ if (mysqli_num_rows($jobResult) > 0) {
                     <?php }
                 } else {
 
-                    if ($unameFetched['username'] != $_SESSION['userid'] && $r['status'] == NULL) { ?>
+                    if ($unameFetched['username'] != $_SESSION['userid'] && $r['status'] == 0) { ?>
                         <button id="payBtn">Pay for Service</button>
                 <?php }
                 } ?>
