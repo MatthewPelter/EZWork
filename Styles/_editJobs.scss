@@ -244,3 +244,273 @@ $darktext: rgb(121, 121, 121);
 
     }
 }
+
+//Media Queires
+@media screen and (max-width: 754px) {
+    .edit-jobs{
+        display: inline-block;
+        width: 100%;
+        background: whitesmoke;
+        padding: 2.5rem 0rem;
+    
+        .edit-jobs-container-header{
+            width: 100%;
+            padding: 1rem 0rem;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            h4{
+                width: 100%;
+                font-size: 2rem;
+            }
+    
+        }
+    
+        .edit-job-container{
+            width: 100%;
+            background-color: white;
+            border-radius: 0;
+            border: 1px solid lightgrey;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            form{
+                width: 100%;
+                .edit-jobCard{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+    
+                    .jobTitle{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                        padding: 1rem;
+                        border-bottom: 1px solid lightgrey;
+    
+                        h3{
+                            font-size: 1.5rem;
+                            color: $color1;
+                            width: 100%;
+                            margin: .5rem 0rem;
+                        }
+                        input{
+                            -moz-appearance: none;
+                            -webkit-appearance: none;
+                            appearance: none;
+                            width: fit-content;
+                            font-size: 1.2rem;
+                            color: $color1;
+                            font-weight: bolder;
+                            padding: .8rem .4rem;
+                            border: .7px solid $lightColor;
+                            border-radius: 9px;
+                            outline: none;
+    
+                        }
+                    }
+    
+                    .scope{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                        padding: 1rem;
+                        border-bottom: 1px solid lightgrey;
+                        
+                        h3{
+                           font-size: 1.5rem;
+                           font-weight: bolder;
+                           width: 100%;
+                           color: $color1;
+                           margin: .5rem 0rem;
+                           
+                           span{
+                               color: $darktext;
+                               font-size: 1.25rem;
+                           }
+                        }
+    
+                        p{
+                            font-size: 1.5rem;
+                            font-weight: bolder;
+                            width: 100%;
+                            color: $color1;
+                            margin: .5rem 0rem;
+                            
+                            span{
+                                color: $darktext;
+                                font-size: 1.25rem;
+                                font-weight: lighter;
+                            }
+                        }
+                    }
+    
+                    .jobDescription{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                        padding: 1rem;
+                        border-bottom: 1px solid lightgrey;
+    
+                        h3{
+                            font-size: 1.5rem;
+                            color: $color1;
+                            width: 100%;
+                            margin: .5rem 0rem;
+                        }
+    
+                        textarea{
+                            
+                            width: 90%;
+                            font-size: 1rem;
+                            padding: .8rem .4rem;
+                            outline: none;
+                            border: .7px solid $lightColor;
+                            border-radius: 9px;
+                        }
+                    }
+                    .budgetAndExperience{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                        padding: 1rem;
+                        border-bottom: 1px solid lightgrey;
+    
+                        .budget,.experience{
+                            width: 100%;
+                            margin: .5rem 0rem;
+                            h4{
+                                font-size: 1.5rem;
+                                font-weight: bolder;
+                                width: 100%;
+                                color: $color1;
+                                margin: .5rem 0rem;
+    
+                            }
+                            span{
+                                font-size: 1.5rem;
+                                font-weight: bolder;
+                                width: 100%;
+                                color: $color1;
+                                margin: .5rem 0rem;
+                            }
+                            p{
+                                font-size: 1rem;
+                                color: $darktext;
+                            }
+    
+                            input{
+                                -moz-appearance: none;
+                                -webkit-appearance: none;
+                                appearance: none;
+                                width: 50%;
+                                font-size: 1.3rem;
+                                color: $color1;
+                                padding: .4rem .2rem;
+                                border: .7px solid $lightColor;
+                                border-radius: 9px;
+                            }
+    
+                            select{
+                                width: fit-content;
+                                font-size: 1rem;
+                                color: $lightColor;
+                                padding: .8rem .4rem;
+                                cursor: pointer;
+                                border: .7px solid $lightColor;
+                                border-radius: 9px;
+    
+                                option{
+                                    cursor: pointer;
+                                }
+                            }
+    
+    
+                        }
+                    }
+                    .jobType{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+    
+                        .type,.size{
+    
+                            width: 100%;
+                            padding: 1rem 2rem;
+                            h4{
+                                font-size: 1.5rem;
+                                font-weight: bolder;
+                                width: 100%;
+                                color: $color1;
+                                margin: .5rem 0rem;
+                            }
+    
+                            select{
+                                width: fit-content;
+                                font-size: 1rem;
+                                color: $lightColor;
+                                padding: .8rem .4rem;
+                                cursor: pointer;
+                                border: .7px solid $lightColor;
+                                border-radius: 9px;
+    
+                                
+                                option{
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+    
+                    .options{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                        padding: 1rem;
+                        border-top: 1px solid lightgrey;
+    
+                        input{
+                            -moz-appearance: none;
+                            -webkit-appearance: none;
+                            appearance: none;
+                            cursor: pointer;
+                            border-radius: 15px;
+                            border: none;
+                            background: rgb(233, 233, 233);
+                            font-size: 1.1rem;
+                            color: $color1;
+                            font-weight: bolder;
+                            padding: 0.6rem 1.5rem;
+                            margin-right: 0.25rem;
+                            border: 1px solid lightgrey;
+                            &:hover {
+                              transition: all 0.2s ease;
+                              background: rgb(219, 219, 219);
+                            }
+                        }
+    
+                    }
+                }
+    
+            }
+    
+        }
+    }
+}
