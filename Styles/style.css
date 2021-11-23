@@ -22678,9 +22678,7 @@ footer p {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 80%;
   font-size: 1.2rem;
   color: #0a345e;
   font-weight: bolder;
