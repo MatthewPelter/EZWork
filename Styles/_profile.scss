@@ -375,6 +375,12 @@ $darktext: rgb(121, 121, 121);
         }
       }
     }
+    .allClients{
+      display: inline-block;
+    }
+    .allFreelancers{
+      display: none;
+    }
     .categoryCard {
       cursor: pointer;
       padding: 1.5rem 1rem;

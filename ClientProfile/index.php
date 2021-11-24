@@ -145,8 +145,8 @@ $userID = $_SESSION['user_id'];
                 <div class="categories-title">
                     <h3 style="color: #0a345e;"><i class="fa fa-users" aria-hidden="true"></i> Current Users</h3>
                     <div class="usersType">
-                        <span onclick="toggleFreelancers()">Freelancers</span>
-                        <span onclick="toggleClients()">Clients</span>
+                        <span onclick="toggleClients()">All Clients</span>
+                        <span onclick="toggleFreelancers()">All Freelancers</span>
                     </div>
                 </div>
 
@@ -161,16 +161,31 @@ $userID = $_SESSION['user_id'];
 
                                 if ($row['freelancer_id'] == NULL) {
                     ?>
-
-                                <a style="color: black; text-decoration: none;" href="../Profile/userprofile.php?name=<?php echo $row['username']; ?>">
-                                    <div class="categoryCard">
-                                        <img src="<?php echo $row['avatar']; ?>" style="border-radius: 50%; width: 2rem;height: 2rem;" id="current-user-img" alt=`<?php echo $row['username']; ?>`>
-                                        <p><?php echo $row['username']; ?></p><br />
-                                        <i class="fa fa-angle-right"></i>
-                                    </div>
-                                </a>
+                                <div class="allClients">
+                                    <a style="color: black; text-decoration: none;" href="../Profile/userprofile.php?name=<?php echo $row['username']; ?>">
+                                        <div class="categoryCard">
+                                            <img src="<?php echo $row['avatar']; ?>" style="border-radius: 50%; width: 2rem;height: 2rem;" id="current-user-img" alt=`<?php echo $row['username']; ?>`>
+                                            <p><?php echo $row['username']; ?></p><br />
+                                            <i class="fa fa-angle-right"></i>
+                                        </div>
+                                    </a>
+                                </div>
 
                         <?php
+                                }
+                                else if ($row['freelancer_id'] != NULL){
+                        ?>
+                                <div class="allFreelancers">
+                                    <a style="color: black; text-decoration: none;" href="../Profile/userprofile.php?name=<?php echo $row['username']; ?>">
+                                        <div class="categoryCard">
+                                            <img src="<?php echo $row['avatar']; ?>" style="border-radius: 50%; width: 2rem;height: 2rem;" id="current-user-img" alt=`<?php echo $row['username']; ?>`>
+                                            <p><?php echo $row['username']; ?></p><br />
+                                            <i class="fa fa-angle-right"></i>
+                                        </div>
+                                    </a>
+                                </div>                                                
+                        <?php
+
                                 }
                             }
                         }
@@ -258,11 +273,31 @@ $userID = $_SESSION['user_id'];
 
 <script>
 
+const allClients = document.querySelector('.allClients');
+
+const allFreelancers = document.querySelector('.allFreelancers');
+
 function toggleClients(){
     //console.log("Clients");
+    if (getComputedStyle(allClients).display === 'none') {
+        allClients.style.display = "inline-block";
+        allFreelancers.style.display = "none";
+    }
+    else{
+        allClients.style.display = "none";
+    }
+
 }
 function toggleFreelancers(){
     //console.log("Freelancers");
+
+    if (getComputedStyle(allFreelancers).display === 'none') {
+        allFreelancers.style.display = "inline-block";
+        allClients.style.display = "none";
+    }
+    else{
+        allFreelancers.style.display = "none";
+    }
 }
 </script>
 

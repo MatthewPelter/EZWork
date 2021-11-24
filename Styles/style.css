@@ -6170,6 +6170,14 @@ section .container .login .login-container button:hover {
   text-decoration: underline;
 }
 
+.profile .profile-categories-container .allClients {
+  display: inline-block;
+}
+
+.profile .profile-categories-container .allFreelancers {
+  display: none;
+}
+
 .profile .profile-categories-container .categoryCard {
   cursor: pointer;
   padding: 1.5rem 1rem;
