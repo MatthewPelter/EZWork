@@ -98,7 +98,7 @@ if (mysqli_num_rows($jobResult) > 0) {
                         $('#proposal').hide();
                         setTimeout(function() {
                             window.location.href = "./job?id=<?php echo $job_id; ?>";
-                        }, 3000);
+                        }, 1500);
                     } else if (obj.Error.length > 0) {
                         $('#result').html(obj.Error);
                     }
