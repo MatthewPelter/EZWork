@@ -6140,6 +6140,32 @@ section .container .login .login-container button:hover {
   font-size: 1.5rem;
 }
 
+.profile .profile-categories-container .categories-title .usersType {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.profile .profile-categories-container .categories-title .usersType span {
+  font-size: .95rem;
+  color: #0a345e;
+}
+
+.profile .profile-categories-container .categories-title .usersType span:hover {
+  text-decoration: underline;
+}
+
 .profile .profile-categories-container .categoryCard {
   cursor: pointer;
   padding: 1.5rem 1rem;

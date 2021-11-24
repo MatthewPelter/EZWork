@@ -343,6 +343,20 @@
 .profile .profile-categories-container .categories-title h3 {
   font-size: 1.5rem;
 }
+.profile .profile-categories-container .categories-title .usersType {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.profile .profile-categories-container .categories-title .usersType span {
+  font-size: 0.95rem;
+  color: #0a345e;
+}
+.profile .profile-categories-container .categories-title .usersType span:hover {
+  text-decoration: underline;
+}
 .profile .profile-categories-container .categoryCard {
   cursor: pointer;
   padding: 1.5rem 1rem;

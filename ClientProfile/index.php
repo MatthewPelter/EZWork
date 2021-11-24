@@ -144,6 +144,10 @@ $userID = $_SESSION['user_id'];
             <div class="activeUsers profile-categories-container">
                 <div class="categories-title">
                     <h3 style="color: #0a345e;"><i class="fa fa-users" aria-hidden="true"></i> Current Users</h3>
+                    <div class="usersType">
+                        <span>Freelancers</span>
+                        <span>Clients</span>
+                    </div>
                 </div>
 
                 <div class="activerUsersBody" style="overflow-y: scroll;max-height: 65vh;">

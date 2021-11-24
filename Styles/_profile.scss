@@ -355,6 +355,21 @@ $darktext: rgb(121, 121, 121);
       h3 {
         font-size: 1.5rem;
       }
+      .usersType{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+
+        span{
+          font-size: .95rem;
+          color: $color1;
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+      }
     }
     .categoryCard {
       cursor: pointer;
