@@ -304,10 +304,16 @@ function toggleUsers(){
     if(getComputedStyle(freelancerSpan).display === 'none'){
         userSpan.style.display = "none";
         freelancerSpan.style.display = "inline-block";
+
+        activerUsersBody2.style.display = "inline-block";
+        activerUsersBody.style.display = "none";
     }
     else{
         freelancerSpan.style.display = "none";
         userSpan.style.display = "inline-block";
+
+        activerUsersBody.style.display = "inline-block";
+        activerUsersBody2.style.display = "none";
     }
 }
 function toggleUsers2(){
