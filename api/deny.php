@@ -37,10 +37,13 @@ if ($freelancer_id == null || $freelancer_id == "") {
 if ($my_id == null || $my_id == "") {
     die('{ "Error": "ID field is null or empty" }');
 }
+$getRegID = mysqli_query($conn, "SELECT id FROM clients WHERE freelancer_id='$freelancer_id'");
+$getRegID = mysqli_fetch_assoc($getRegID);
+$getRegID = $getRegID['id'];
 
-$check = mysqli_query($conn, "SELECT * FROM messages WHERE jobID = '$jobID' AND sender='$freelancer_id' AND receiver='$my_id'");
+$check = mysqli_query($conn, "SELECT * FROM messages WHERE jobID = '$jobID' AND sender='$getRegID' AND receiver='$my_id'");
 if (mysqli_num_rows($check) > 0) {
-    $query = mysqli_query($conn, "UPDATE messages SET response = 'denied' WHERE jobID='$jobID' AND sender='$freelancer_id' AND receiver='$my_id'") or die(mysqli_error($conn));
+    $query = mysqli_query($conn, "UPDATE messages SET response = 'denied' WHERE jobID='$jobID' AND sender='$getRegID' AND receiver='$my_id'") or die(mysqli_error($conn));
     echo '{ "Success": "Denied!" }';
 } else {
     die('{ "Error": "Invalid Data" }');
