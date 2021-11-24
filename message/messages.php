@@ -335,6 +335,7 @@ if (isset($_POST['submit'])) {
                     if (obj.Success.length > 0) {
                         $('#status').html(obj.Success);
                         $('.propose').hide();
+                        location.reload();
                     } else if (obj.Error.length > 0) {
                         $('#status').html(obj.Error);
                     }
