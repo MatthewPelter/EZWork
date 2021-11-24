@@ -6137,6 +6137,8 @@ section .container .login .login-container button:hover {
 }
 
 .profile .profile-categories-container .categories-title h3 {
+  width: 100%;
+  margin-bottom: .25rem;
   font-size: 1.5rem;
 }
 
@@ -6152,14 +6154,16 @@ section .container .login .login-container button:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .profile .profile-categories-container .categories-title .usersType span {
+  margin: 0rem .5rem;
   font-size: .95rem;
   color: #0a345e;
+  cursor: pointer;
 }
 
 .profile .profile-categories-container .categories-title .usersType span:hover {
