@@ -65,3 +65,8 @@ Route::add('/logout', function () use ($auth0) {
 });
 
 Route::run('/');
+
+
+?>
+
+<h1>The website isnt broken. I am just testing something...</h1>
