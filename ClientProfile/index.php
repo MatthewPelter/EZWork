@@ -298,7 +298,12 @@ const userSpan = document.getElementById('userSpan');
 const activerUsersBody2 = document.querySelector('.activerUsersBody2');
 function toggleUsers(){
     //console.log("Clients");
-    userSpan.innerText = "View All Clients";
+    if (userSpan.innerText == "View All Freelancers"){
+        userSpan.innerText = "View All Clients";
+    }
+    else{
+        userSpan.innerText = "View All Freelancers";
+    }
 }
 </script>
 
