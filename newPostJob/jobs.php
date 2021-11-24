@@ -29,7 +29,7 @@ if (!isset($_SESSION['user_id'])) {
 
 $queries = array();
 parse_str($_SERVER['QUERY_STRING'], $queries);
-$jobsSQL = "SELECT * FROM jobs WHERE status != 1";
+$jobsSQL = "SELECT * FROM jobs WHERE status != 1 AND status != -1";
 
 foreach ($queries as $x => $val) {
     if ($x != "sort") {
