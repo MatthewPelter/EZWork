@@ -145,8 +145,8 @@ $userID = $_SESSION['user_id'];
                 <div class="categories-title">
                     <h3 style="color: #0a345e;"><i class="fa fa-users" aria-hidden="true"></i> Current Users</h3>
                     <div class="usersType">
-                        <span>Freelancers</span>
-                        <span>Clients</span>
+                        <span onclick="toggleFreelancers()">Freelancers</span>
+                        <span onclick="toggleClients()">Clients</span>
                     </div>
                 </div>
 
@@ -254,6 +254,16 @@ $userID = $_SESSION['user_id'];
 <script src="../SkillsContainer/searchProfile.js"></script>
 <!--nav bar script -->
 <script type="text/javascript">
+</script>
+
+<script>
+
+function toggleClients(){
+    console.log("Clients");
+}
+function toggleFreelancers(){
+    console.log("Freelancers");
+}
 </script>
 
 </html>
