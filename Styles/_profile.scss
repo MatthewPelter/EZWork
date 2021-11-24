@@ -373,6 +373,9 @@ $darktext: rgb(121, 121, 121);
             text-decoration: underline;
           }
         }
+        #clientSpan{
+          display: none;
+        }
       }
     }
     .allClients{

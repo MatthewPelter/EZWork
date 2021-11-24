@@ -361,6 +361,9 @@
 .profile .profile-categories-container .categories-title .usersType span:hover {
   text-decoration: underline;
 }
+.profile .profile-categories-container .categories-title .usersType #clientSpan {
+  display: none;
+}
 .profile .profile-categories-container .allClients {
   width: 100%;
   display: inline-block;
