@@ -173,7 +173,7 @@ $userID = $_SESSION['user_id'];
 
                         <?php
                                 }
-                                else if ($row['freelancer_id'] != NULL){
+                                if ($row['freelancer_id'] != NULL){
                         ?>
                                 <div class="allFreelancers">
                                     <a style="color: black; text-decoration: none;" href="../Profile/userprofile.php?name=<?php echo $row['username']; ?>">
@@ -285,6 +285,7 @@ function toggleClients(){
     }
     else{
         allClients.style.display = "none";
+        allFreelancers.style.display = "inline-block";
     }
 
 }
@@ -297,6 +298,7 @@ function toggleFreelancers(){
     }
     else{
         allFreelancers.style.display = "none";
+        allClients.style.display = "inline-block";
     }
 }
 </script>
