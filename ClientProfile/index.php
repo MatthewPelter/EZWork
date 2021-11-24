@@ -159,7 +159,7 @@ $userID = $_SESSION['user_id'];
                         while ($row = mysqli_fetch_assoc($result)) {
                             if ($row['username'] != $_SESSION['userid']) {
 
-                                if ($row['freelancer_id'] != NULL) {
+                                if ($row['freelancer_id'] = NULL) {
                     ?>
 
                                 <a style="color: black; text-decoration: none;" href="../Profile/userprofile.php?name=<?php echo $row['username']; ?>">
