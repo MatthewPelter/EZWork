@@ -146,6 +146,7 @@ $userID = $_SESSION['user_id'];
                     <h3 style="color: #0a345e;"><i class="fa fa-users" aria-hidden="true"></i> Current Users</h3>
                     <div class="usersType">
                         <span onclick="toggleUsers()" id="userSpan">View All Clients</span>
+                        <span id="freelancerSpan" style="display: none;">View All Freelancers</span>
                     </div>
                 </div>
 
@@ -293,21 +294,19 @@ $userID = $_SESSION['user_id'];
 
 <script>
 
-
+const freelancerSpan = document.getElementById('freelancerSpan');
 const userSpan = document.getElementById('userSpan');
 const activerUsersBody = document.querySelector('.activerUsersBody');
 const activerUsersBody2 = document.querySelector('.activerUsersBody2');
 function toggleUsers(){
     //console.log("Clients");
-    if (userSpan.innerText == "View All Clients"){
-        userSpan.innerText = "View All Freelancers";
-        activerUsersBody.style.display = "inline-block";
-        activerUsersBody2.style.display = "none";
+    if(getComputedStyle(freelancerSpan).display === 'none'){
+        userSpan.style.display = "none";
+        freelancerSpan.style.display = "inline-block";
     }
     else{
-        userSpan.innerText = "View All Clients";
-        activerUsersBody.style.display = "none";
-        activerUsersBody2.style.display = "inline-block";
+        freelancerSpan.style.display = "none";
+        userSpan.style.display = "inline-block";
     }
 }
 </script>
