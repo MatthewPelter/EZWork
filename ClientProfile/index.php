@@ -157,16 +157,13 @@ $userID = $_SESSION['user_id'];
                     $result = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
                     if (mysqli_num_rows($result) > 0) {
                         while ($row = mysqli_fetch_assoc($result)) {
-                            if ($row['username'] != $_SESSION['userid']) {
+                            if ($row['username'] != $_SESSION['userid'] && $row['freelancer_id'] = NULL ) {
                     ?>
 
                                 <a style="color: black; text-decoration: none;" href="../Profile/userprofile.php?name=<?php echo $row['username']; ?>">
                                     <div class="categoryCard">
                                         <img src="<?php echo $row['avatar']; ?>" style="border-radius: 50%; width: 2rem;height: 2rem;" id="current-user-img" alt=`<?php echo $row['username']; ?>`>
                                         <p><?php echo $row['username']; ?></p><br />
-                                        <?php if ($row['freelancer_id'] != NULL) { ?>
-                                            <span>Freelancer</span>
-                                        <?php } ?>
                                         <i class="fa fa-angle-right"></i>
                                     </div>
                                 </a>
@@ -259,10 +256,10 @@ $userID = $_SESSION['user_id'];
 <script>
 
 function toggleClients(){
-    console.log("Clients");
+    //console.log("Clients");
 }
 function toggleFreelancers(){
-    console.log("Freelancers");
+    //console.log("Freelancers");
 }
 </script>
 
