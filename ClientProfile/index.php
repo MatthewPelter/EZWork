@@ -145,8 +145,8 @@ $userID = $_SESSION['user_id'];
                 <div class="categories-title">
                     <h3 style="color: #0a345e;"><i class="fa fa-users" aria-hidden="true"></i> Current Users</h3>
                     <div class="usersType">
-                        <span onclick="toggleClients()" id="clientSpan">All Clients</span>
-                        <span onclick="toggleFreelancers()" id="freelancerSpan">All Freelancers</span>
+                        <span onclick="toggleFreelancers()">Freelancers</span>
+                        <span onclick="toggleClients()">Clients</span>
                     </div>
                 </div>
 
@@ -159,33 +159,18 @@ $userID = $_SESSION['user_id'];
                         while ($row = mysqli_fetch_assoc($result)) {
                             if ($row['username'] != $_SESSION['userid']) {
 
-                                if ($row['freelancer_id'] == NULL) {
+                                if ($row['freelancer_id'] != NULL) {
                     ?>
-                                <div class="allClients">
-                                    <a style="color: black; text-decoration: none;" href="../Profile/userprofile.php?name=<?php echo $row['username']; ?>">
-                                        <div class="categoryCard">
-                                            <img src="<?php echo $row['avatar']; ?>" style="border-radius: 50%; width: 2rem;height: 2rem;" id="current-user-img" alt=`<?php echo $row['username']; ?>`>
-                                            <p><?php echo $row['username']; ?></p><br />
-                                            <i class="fa fa-angle-right"></i>
-                                        </div>
-                                    </a>
-                                </div>
+
+                                <a style="color: black; text-decoration: none;" href="../Profile/userprofile.php?name=<?php echo $row['username']; ?>">
+                                    <div class="categoryCard">
+                                        <img src="<?php echo $row['avatar']; ?>" style="border-radius: 50%; width: 2rem;height: 2rem;" id="current-user-img" alt=`<?php echo $row['username']; ?>`>
+                                        <p><?php echo $row['username']; ?></p><br />
+                                        <i class="fa fa-angle-right"></i>
+                                    </div>
+                                </a>
 
                         <?php
-                                }
-                                if ($row['freelancer_id'] != NULL){
-                        ?>
-                                <div class="allFreelancers">
-                                    <a style="color: black; text-decoration: none;" href="../Profile/userprofile.php?name=<?php echo $row['username']; ?>">
-                                        <div class="categoryCard">
-                                            <img src="<?php echo $row['avatar']; ?>" style="border-radius: 50%; width: 2rem;height: 2rem;" id="current-user-img" alt=`<?php echo $row['username']; ?>`>
-                                            <p><?php echo $row['username']; ?></p><br />
-                                            <i class="fa fa-angle-right"></i>
-                                        </div>
-                                    </a>
-                                </div>                                                
-                        <?php
-
                                 }
                             }
                         }
@@ -273,39 +258,11 @@ $userID = $_SESSION['user_id'];
 
 <script>
 
-const allClients = document.querySelector('.allClients');
-
-const allFreelancers = document.querySelector('.allFreelancers');
-
-const clientSpan = document.getElementById('clientSpan');
-
-const freelancerSpan = document.getElementById('freelancerSpan');
-
 function toggleClients(){
     //console.log("Clients");
-    if (getComputedStyle(allClients).display === 'none') {
-        allClients.style.display = "inline-block";
-        allFreelancers.style.display = "none";
-    }
-    else{
-        allClients.style.display = "none";
-        allFreelancers.style.display = "inline-block";
-    }
-
 }
 function toggleFreelancers(){
     //console.log("Freelancers");
-
-    if (getComputedStyle(allFreelancers).display === 'none') {
-        allFreelancers.style.display = "inline-block";
-        allClients.style.display = "none";
-        clientSpan.style.display = "inline-block";
-        freelancerSpan.style.display = "none";
-    }
-    else{
-        allFreelancers.style.display = "none";
-        freelancerSpan.style.display = "inline-block";
-    }
 }
 </script>
 
