@@ -157,7 +157,9 @@ $userID = $_SESSION['user_id'];
                     $result = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
                     if (mysqli_num_rows($result) > 0) {
                         while ($row = mysqli_fetch_assoc($result)) {
-                            if ($row['username'] != $_SESSION['userid'] && $row['freelancer_id'] = NULL ) {
+                            if ($row['username'] != $_SESSION['userid']) {
+
+                                if ($row['freelancer_id'] != NULL) {
                     ?>
 
                                 <a style="color: black; text-decoration: none;" href="../Profile/userprofile.php?name=<?php echo $row['username']; ?>">
@@ -169,6 +171,7 @@ $userID = $_SESSION['user_id'];
                                 </a>
 
                         <?php
+                                }
                             }
                         }
                     } else {
