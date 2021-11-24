@@ -206,7 +206,7 @@ if (isset($_POST['submit'])) {
                                             $name = $row['Sender'];
                                             $nameToID = mysqli_query($conn, "SELECT freelancer_id FROM clients WHERE username = '$name'");
                                             $fetchID = mysqli_fetch_assoc($nameToID);
-                                            $fetchID = $fetchID['id'];
+                                            $fetchID = $fetchID['freelancer_id'];
 
                                             if ($row['response'] == NULL) {
                                             ?>
