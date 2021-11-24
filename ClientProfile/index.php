@@ -295,14 +295,19 @@ $userID = $_SESSION['user_id'];
 
 
 const userSpan = document.getElementById('userSpan');
+const activerUsersBody = document.querySelector('.activerUsersBody');
 const activerUsersBody2 = document.querySelector('.activerUsersBody2');
 function toggleUsers(){
     //console.log("Clients");
     if (userSpan.innerText == "View All Freelancers"){
         userSpan.innerText = "View All Clients";
+        activerUsersBody.style.display = "inline-block";
+        activerUsersBody2.style.display = "none";
     }
     else{
         userSpan.innerText = "View All Freelancers";
+        activerUsersBody.style.display = "none";
+        activerUsersBody2.style.display = "inline-block";
     }
 }
 </script>
