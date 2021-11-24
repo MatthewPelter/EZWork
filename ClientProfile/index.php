@@ -301,13 +301,18 @@ function toggleUsers(){
     //console.log("Clients");
     if (userSpan.innerText == "View All Freelancers"){
         userSpan.innerText = "View All Clients";
-        activerUsersBody.style.display = "inline-block";
-        activerUsersBody2.style.display = "none";
+
+        if (getComputedStyle(activerUsersBody2).display === 'none') {
+            activerUsersBody.style.display = "inline-block";
+            activerUsersBody2.style.display = "none";
+        }
+        else{
+            activerUsersBody.style.display = "none";
+            activerUsersBody2.style.display = "inline-block";            
+        }
     }
     else{
         userSpan.innerText = "View All Freelancers";
-        activerUsersBody.style.display = "none";
-        activerUsersBody2.style.display = "inline-block";
     }
 }
 </script>
