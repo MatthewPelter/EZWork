@@ -145,8 +145,7 @@ $userID = $_SESSION['user_id'];
                 <div class="categories-title">
                     <h3 style="color: #0a345e;"><i class="fa fa-users" aria-hidden="true"></i> Current Users</h3>
                     <div class="usersType">
-                        <span onclick="toggleFreelancers()">Freelancers</span>
-                        <span onclick="toggleClients()">Clients</span>
+                        <span onclick="toggleUsers()" id="userSpan">View All Freelancers</span>
                     </div>
                 </div>
 
@@ -160,6 +159,42 @@ $userID = $_SESSION['user_id'];
                             if ($row['username'] != $_SESSION['userid']) {
 
                                 if ($row['freelancer_id'] != NULL) {
+                    ?>
+
+                                <a style="color: black; text-decoration: none;" href="../Profile/userprofile.php?name=<?php echo $row['username']; ?>">
+                                    <div class="categoryCard">
+                                        <img src="<?php echo $row['avatar']; ?>" style="border-radius: 50%; width: 2rem;height: 2rem;" id="current-user-img" alt=`<?php echo $row['username']; ?>`>
+                                        <p><?php echo $row['username']; ?></p><br />
+                                        <i class="fa fa-angle-right"></i>
+                                    </div>
+                                </a>
+
+                        <?php
+                                }
+                            }
+                        }
+                    } else {
+                        ?>
+                        <div class="categoryCard">
+                            <p>That's sad.. There are no users on this site yet.</p>
+                        </div>
+                    <?php
+                    }
+                    ?>
+                    <div class="categoryCardEnd" style="border-bottom: none; padding: .5rem;">
+
+                    </div>
+                </div>
+                <div class="activerUsersBody2" style="overflow-y: scroll;max-height: 65vh;display: none;">
+
+                    <?php
+                    $sql = "SELECT username, avatar, freelancer_id FROM clients";
+                    $result = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
+                    if (mysqli_num_rows($result) > 0) {
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            if ($row['username'] != $_SESSION['userid']) {
+
+                                if ($row['freelancer_id'] == NULL) {
                     ?>
 
                                 <a style="color: black; text-decoration: none;" href="../Profile/userprofile.php?name=<?php echo $row['username']; ?>">
@@ -258,11 +293,12 @@ $userID = $_SESSION['user_id'];
 
 <script>
 
-function toggleClients(){
+
+const userSpan = document.getElementById('userSpan');
+const activerUsersBody2 = document.querySelector('.activerUsersBody2');
+function toggleUsers(){
     //console.log("Clients");
-}
-function toggleFreelancers(){
-    //console.log("Freelancers");
+    userSpan.innerText = "View All Clients";
 }
 </script>
 

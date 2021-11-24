@@ -361,17 +361,6 @@
 .profile .profile-categories-container .categories-title .usersType span:hover {
   text-decoration: underline;
 }
-.profile .profile-categories-container .categories-title .usersType #clientSpan {
-  display: none;
-}
-.profile .profile-categories-container .allClients {
-  width: 100%;
-  display: inline-block;
-}
-.profile .profile-categories-container .allFreelancers {
-  width: 100%;
-  display: none;
-}
 .profile .profile-categories-container .categoryCard {
   cursor: pointer;
   padding: 1.5rem 1rem;
