@@ -6171,10 +6171,12 @@ section .container .login .login-container button:hover {
 }
 
 .profile .profile-categories-container .allClients {
+  width: 100%;
   display: inline-block;
 }
 
 .profile .profile-categories-container .allFreelancers {
+  width: 100%;
   display: none;
 }
 
