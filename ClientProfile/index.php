@@ -145,8 +145,8 @@ $userID = $_SESSION['user_id'];
                 <div class="categories-title">
                     <h3 style="color: #0a345e;"><i class="fa fa-users" aria-hidden="true"></i> Current Users</h3>
                     <div class="usersType">
-                        <span onclick="toggleUsers()" id="userSpan">View All Clients</span>
-                        <span id="freelancerSpan" onclick="toggleUsers2()" style="display: none;">View All Freelancers</span>
+                        <span onclick="toggleUsers()" id="userSpan">View All Freelancers</span>
+                        <span id="freelancerSpan" onclick="toggleUsers2()" style="display: none;">View All Clients</span>
                     </div>
                 </div>
 
@@ -159,7 +159,7 @@ $userID = $_SESSION['user_id'];
                         while ($row = mysqli_fetch_assoc($result)) {
                             if ($row['username'] != $_SESSION['userid']) {
 
-                                if ($row['freelancer_id'] != NULL) {
+                                if ($row['freelancer_id'] == NULL) {
                     ?>
 
                                 <a style="color: black; text-decoration: none;" href="../Profile/userprofile.php?name=<?php echo $row['username']; ?>">
@@ -195,7 +195,7 @@ $userID = $_SESSION['user_id'];
                         while ($row = mysqli_fetch_assoc($result)) {
                             if ($row['username'] != $_SESSION['userid']) {
 
-                                if ($row['freelancer_id'] == NULL) {
+                                if ($row['freelancer_id'] != NULL) {
                     ?>
 
                                 <a style="color: black; text-decoration: none;" href="../Profile/userprofile.php?name=<?php echo $row['username']; ?>">
@@ -322,10 +322,17 @@ function toggleUsers2(){
 if(getComputedStyle(userSpan).display === 'none'){
     freelancerSpan.style.display = "none";
     userSpan.style.display = "inline-block";
+
+    activerUsersBody.style.display = "inline-block";
+        activerUsersBody2.style.display = "none";
 }
 else{
     userSpan.style.display = "none";
     freelancerSpan.style.display = "inline-block";
+
+    
+    activerUsersBody2.style.display = "inline-block";
+        activerUsersBody.style.display = "none";
 }
 }
 
