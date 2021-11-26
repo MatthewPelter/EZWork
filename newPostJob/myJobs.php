@@ -39,7 +39,7 @@ $userID = $_SESSION['user_id'];
     <div class="myJobs">
         <div class="myJobs-header">
             <ul>
-                <li><a href="../ClientProfile/index.php">My Jobs</a></li>
+                <li><a href="../ClientProfile/index.php">My Profile</a></li>
                 <li>/</li>
                 <li>Job Postings</li>
             </ul>

@@ -1258,6 +1258,7 @@ const TranslationSpecialty = [
 //"Web, Mobile & Software Dev"
 const WebMobileSoftwareSpecialty = [
   "Ecommerce Development",
+  "Web Developer",
   "Desktop Software Development",
   "Scripting & Automation",
   "Manual Testing",
