@@ -6,12 +6,6 @@ $avatarFetch = mysqli_fetch_assoc($avatarResult);
 <style type="text/css">
     @import 'https://fonts.googleapis.com/css?family=Material+Icons';
 
-    a:hover {
-        opacity: 0.8;
-        cursor: pointer;
-        text-decoration: underline;
-    }
-
     .notification-container {
         cursor: default;
         position: absolute;
