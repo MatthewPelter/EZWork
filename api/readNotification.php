@@ -32,7 +32,7 @@ if ($notificationCheck != $_SESSION['user_id']) {
 $query = mysqli_query($conn, "UPDATE notifications SET isRead = 1 WHERE id='$notificationID'") or die(mysqli_error($conn));
 
 if ($query) {
-    echo '{ "Success": "Accepted!" }';
+    echo '{ "Success": "Notification set to read!" }';
 } else {
     echo '{ "Error": "Query Failed" }';
 }
