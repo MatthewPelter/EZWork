@@ -296,7 +296,10 @@ $avatarFetch = mysqli_fetch_assoc($avatarResult);
             <a style="color: white; text-decoration: none;" href="https://ez-work.herokuapp.com/message/messages">Messages</a>
         </div>
         <div class="guide">
-
+            <div class="notification-icon right">
+                <i class="material-icons dp48">notifications</i>
+                <span class="num-count">13</span>
+            </div>
             <!-- <a href="https://ez-work.herokuapp.com/notifications"><i class="fa fa-bell" title="Notification"></i></a> -->
             <div class="notification-container">
                 <h3>Notifications
