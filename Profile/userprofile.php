@@ -76,12 +76,10 @@ if (mysqli_num_rows($result) > 0) {
                     </span>
                 </div>
             </div>
-
+                    
             <div class="profile-body">
                 <div class="profile-nav">
-                    <p><?php echo $row['firstname'] . " " . $row['lastname']; ?> Info</p>
-                    
-                        
+                    <p>Contact <?php echo $row['firstname'] . " " . $row['lastname']; ?></p>
                 </div>
                 <div class="profile-info">
                     <div class="profile-expertise">
@@ -102,11 +100,11 @@ if (mysqli_num_rows($result) > 0) {
                     </div>
                     <div class="profile-job">
                         <h3>Job Experience</h3>
-                        <p><?php echo $row['jobTitle']; ?></p>
-                        <p><?php echo $row['company']; ?></p>
-                        <p><?php echo $row['jobLocation']; ?></p>
-                        <p><?php echo $row['jobStart']; ?></p>
-                        <p><?php echo $row['jobEnd']; ?></p>
+                        <p><?php echo $freelancer_array['jobTitle']; ?></p>
+                        <p><?php echo $freelancer_array['company']; ?></p>
+                        <p><?php echo $freelancer_array['jobLocation']; ?></p>
+                        <p><?php echo $freelancer_array['jobStart']; ?></p>
+                        <p><?php echo $freelancer_array['jobEnd']; ?></p>
                     </div>
                     <div class="profile-location">
                         <p><?php echo $row['country']; ?></p>

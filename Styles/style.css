@@ -23864,7 +23864,7 @@ a:hover {
 }
 
 .profile .profile-container .profile-body .profile-nav {
-  width: 30%;
+  width: 25%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -23887,11 +23887,15 @@ a:hover {
 
 .profile .profile-container .profile-body .profile-info {
   padding: 1rem 0rem;
-  width: 70%;
+  width: 75%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;

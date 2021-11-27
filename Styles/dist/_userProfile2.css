@@ -58,7 +58,7 @@
   justify-content: space-evenly;
 }
 .profile .profile-container .profile-body .profile-nav {
-  width: 30%;
+  width: 25%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -74,9 +74,10 @@
 }
 .profile .profile-container .profile-body .profile-info {
   padding: 1rem 0rem;
-  width: 70%;
+  width: 75%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: flex-start;
 }
