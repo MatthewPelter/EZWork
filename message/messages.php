@@ -6,10 +6,11 @@ require_once("../classes/DB.php");
 $username = $_SESSION['userid'];
 $userID = $_SESSION['user_id'];
 
-$uname = $_GET['mid'];
-$cleanid = mysqli_real_escape_string($conn, $uname);
-$receiverID = $cleanid;
 
+if (isset($_GET['mid'])) {
+    $receiverID = $_GET['mid'];
+    $receiverID = mysqli_real_escape_string($conn, $receiverID);
+}
 // Check if reply button was pressed
 /*if (isset($_POST['submit'])) {
     if (!empty($_POST['msg'])) {
