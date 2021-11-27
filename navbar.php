@@ -242,7 +242,14 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
         </div>
         <div class="guide">
 
-            <i onclick="toggleNotifications()" class="fa fa-bell" id="notifications"></i></a>
+            <?php
+            $notiCount = mysqli_query($conn, "SELECT COUNT(*) AS notiCount FROM notifications WHERE receiver='$user_id' AND isRead=0");
+            $notiCount = mysqli_fetch_assoc($notiCount);
+            $notiCount = $notiCount['notiCount'];
+            ?>
+            <i onclick="toggleNotifications()" class="fa fa-bell" id="notifications"><?php if ($notiCount > 0) {
+                                                                                            echo $notiCount;
+                                                                                        } ?></i></a>
             <div class="helpContainer">
                 <div class="notificationCard">
                     <div class="card card1">
