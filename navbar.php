@@ -245,7 +245,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                         if ($r['type'] == 'm') {
                     ?>
                             <div class="card">
-                                <h4 onclick="location.href='./message/messages?mid=<?php echo $r['sender']; ?>'">You got a message from <?php echo $senderName; ?></h4>
+                                <h4 onclick="location.href='../message/messages?mid=<?php echo $r['sender']; ?>'">You got a message from <?php echo $senderName; ?></h4>
                                 <button onclick="readNotification(<?php echo $r['id']; ?>)" class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
                             </div>
 
@@ -264,7 +264,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
 
                         <?php } else if ($r['type'] == 'r') { ?>
                             <div class="card">
-                                <h4 onclick="location.href='./message/messages?mid=<?php echo $r['sender']; ?>'"><?php echo $senderName; ?> has submitted a proprosal to your job.</h4>
+                                <h4 onclick="location.href='../message/messages?mid=<?php echo $r['sender']; ?>'"><?php echo $senderName; ?> has submitted a proprosal to your job.</h4>
                                 <button onclick="readNotification(<?php echo $r['id']; ?>)" class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
                             </div>
                     <?php }
