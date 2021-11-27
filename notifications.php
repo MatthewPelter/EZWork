@@ -174,6 +174,10 @@ if (!isset($_SESSION['user_id'])) {
         .tint {
             color: #ccc;
         }
+
+        .dimmed {
+            filter: brightness(75%);
+        }
     </style>
 </head>
 
@@ -195,7 +199,9 @@ if (!isset($_SESSION['user_id'])) {
                     $senderName = $senderName['username'];
                     if ($r['type'] == 'm') {
             ?>
-                        <div class="Message">
+                        <div class="Message <?php if ($r['isRead'] == 1) {
+                                                echo "dimmed";
+                                            } ?>">
                             <div class="Message-icon">
                                 <i class="fa fa-bell-o"></i>
                             </div>
@@ -209,7 +215,9 @@ if (!isset($_SESSION['user_id'])) {
                     <?php } else if ($r['type'] == 'a') { ?>
 
 
-                        <div class="Message Message--green">
+                        <div class="Message Message--green <?php if ($r['isRead'] == 1) {
+                                                                echo "dimmed";
+                                                            } ?>">
                             <div class="Message-icon">
                                 <i class="fa fa-check"></i>
                             </div>
@@ -223,7 +231,9 @@ if (!isset($_SESSION['user_id'])) {
 
                     <?php } else if ($r['type'] == 'd') { ?>
 
-                        <div class="Message Message--red">
+                        <div class="Message Message--red <?php if ($r['isRead'] == 1) {
+                                                                echo "dimmed";
+                                                            } ?>">
                             <div class="Message-icon">
                                 <i class="fa fa-times"></i>
                             </div>
@@ -236,7 +246,9 @@ if (!isset($_SESSION['user_id'])) {
 
                     <?php } else if ($r['type'] == 'r') {
                     ?>
-                        <div class="Message">
+                        <div class="Message <?php if ($r['isRead'] == 1) {
+                                                echo "dimmed";
+                                            } ?>">
                             <div class="Message-icon">
                                 <i class="fa fa-bell-o"></i>
                             </div>
