@@ -24,7 +24,7 @@ $notificationCheck = mysqli_query($conn, "SELECT receiver FROM notifications WHE
 $notificationCheck = mysqli_fetch_assoc($notificationCheck);
 $notificationCheck = $notificationCheck['receiver'];
 
-if ($notificationCheck != $_SESSION['user_id']) {
+if ($notificationCheck != $_SESSION['user_id'] && $notificationID != 0) {
     die('{ "Error": "This notification was not sent to you" }');
 }
 
