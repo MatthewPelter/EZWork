@@ -84,17 +84,7 @@ if (mysqli_num_rows($result) > 0) {
                         
                 </div>
                 <div class="profile-info">
-                    <?php if ($row['freelancer_id'] != NULL) {
-                        
-                        <p><?php echo $row['firstname'] . " " . $row['lastname']; ?> Information</p>
-                    ?>
-
-                    <?php
-                    } else {
-                    ?>
-                        <h4>THIS IS A CLIENT ACCOUNT</h4>
-                    <?php    
-                    } ?>
+                    
                 </div>
             </div>
         </div>
