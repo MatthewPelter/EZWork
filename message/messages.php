@@ -21,32 +21,6 @@ if (isset($_GET['mid'])) {
     $getName = mysqli_fetch_assoc($getName);
     $getName = $getName['username'];
 }
-// Check if reply button was pressed
-/*if (isset($_POST['submit'])) {
-    if (!empty($_POST['msg'])) {
-
-        $senderID = $userID;
-
-
-        // Clean up the input to prevent SQL injection
-        $message_body = $_POST['msg'];
-        $message_body = htmlspecialchars($message_body);
-        $message_body = stripslashes($message_body);
-        $cleanmessage = mysqli_real_escape_string($conn, $message_body);
-
-        $insertSQL = "INSERT INTO messages(body, sender, receiver, isread, jobID, response) VALUES('$cleanmessage', '$senderID', '$receiverID', 0, NULL, NULL)";
-        $insertresult = mysqli_query($conn, $insertSQL) or die(mysqli_error($conn));
-        date_default_timezone_set("America/New_York");
-        $date = date('Y-m-d H:i:s');
-        $sendNotification = mysqli_query($conn, "INSERT INTO notifications (type, receiver, sender, isRead, sentAt) VALUES ('m', '$receiverID', '$senderID', 0, '$date')") or die(mysqli_errno($conn));
-
-        if (!$insertresult) {
-            echo "Error Sending Message...";
-        }
-    } else {
-        echo "Please fill in the data";
-    }
-}*/
 ?>
 
 <!DOCTYPE html>
