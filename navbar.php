@@ -53,7 +53,8 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
         font-size: 0;
         padding: 0;
         margin: 0 auto;
-        display: block
+        display: block;
+        transition: 200ms all ease-in-out;
     }
 </style>
 
@@ -244,7 +245,9 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
             <i onclick="toggleNotifications()" class="fa fa-bell" id="notifications"></i></a>
             <div class="helpContainer">
                 <div class="notificationCard">
-
+                    <div class="card card1">
+                        <h4 onclick="location.href='../notifications'">View All Notifications</h4>
+                    </div>
                     <?php
                     $notifications = mysqli_query($conn, "SELECT * FROM notifications WHERE receiver='$user_id' AND isRead=0 ORDER BY id DESC");
                     if (mysqli_num_rows($notifications) > 0) { ?>
@@ -369,6 +372,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
     function closeAll() {
         $('.notificationCard .card').each(function() {
             $(this).addClass('is-hidden');
+            $('.notificationCard').append("<div class='card card1'><h4>You are all caught up!</h4> </div>");
         });
     }
 
