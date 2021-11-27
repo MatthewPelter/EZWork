@@ -46,7 +46,7 @@ if (!isset($_SESSION['user_id'])) {
             margin: 50px 0;
         }
 
-        #notifications {
+        #notifications-section {
             max-height: 70vh;
             overflow: auto;
             background: #e3e3e3;
@@ -178,7 +178,7 @@ if (!isset($_SESSION['user_id'])) {
             <h1 id="title">Notifications</h1>
             <button onclick="readNotification(0);closeAll();">Mark as Read</button>
         </div>
-        <div id="notifications">
+        <div id="notifications-section">
             <?php
             $notifications = mysqli_query($conn, "SELECT * FROM notifications WHERE receiver='$user_id' ORDER BY id DESC");
             if (mysqli_num_rows($notifications) > 0) {
