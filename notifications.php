@@ -180,68 +180,72 @@ if (!isset($_SESSION['user_id'])) {
         <div id="notifications">
             <?php
             $notifications = mysqli_query($conn, "SELECT * FROM notifications WHERE receiver='$user_id' AND isRead=0 ORDER BY id DESC");
-            while ($r = mysqli_fetch_assoc($notifications)) {
-                $senderID = $r['sender'];
-                $senderName = mysqli_query($conn, "SELECT username FROM clients WHERE id=$senderID");
-                $senderName = mysqli_fetch_assoc($senderName);
-                $senderName = $senderName['username'];
-                if ($r['type'] == 'm') {
+            if (mysqli_num_rows($notifications) > 0) {
+                while ($r = mysqli_fetch_assoc($notifications)) {
+                    $senderID = $r['sender'];
+                    $senderName = mysqli_query($conn, "SELECT username FROM clients WHERE id=$senderID");
+                    $senderName = mysqli_fetch_assoc($senderName);
+                    $senderName = $senderName['username'];
+                    if ($r['type'] == 'm') {
             ?>
-                    <div class="Message">
-                        <div class="Message-icon">
-                            <i class="fa fa-bell-o"></i>
+                        <div class="Message">
+                            <div class="Message-icon">
+                                <i class="fa fa-bell-o"></i>
+                            </div>
+                            <div class="Message-body">
+                                <p>You got a message from <?php echo $senderName; ?></p>
+                                <p class="tint">at <?php echo $r['sentAt']; ?></p>
+                                <button class="Message-button" onclick="location.href='./message/messages?mid=<?php echo $r['sender']; ?>'" id="js-showMe">Show me</button>
+                            </div>
+                            <button onclick="readNotification(<?php echo $r['id']; ?>)" class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
                         </div>
-                        <div class="Message-body">
-                            <p>You got a message from <?php echo $senderName; ?></p>
-                            <p class="tint">at <?php echo $r['sentAt']; ?></p>
-                            <button class="Message-button" onclick="location.href='./message/messages?mid=<?php echo $r['sender']; ?>'" id="js-showMe">Show me</button>
-                        </div>
-                        <button onclick="readNotification(<?php echo $r['id']; ?>)" class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
-                    </div>
-                <?php } else if ($r['type'] == 'a') { ?>
+                    <?php } else if ($r['type'] == 'a') { ?>
 
 
-                    <div class="Message Message--green">
-                        <div class="Message-icon">
-                            <i class="fa fa-check"></i>
+                        <div class="Message Message--green">
+                            <div class="Message-icon">
+                                <i class="fa fa-check"></i>
+                            </div>
+                            <div class="Message-body">
+                                <p><?php echo $senderName; ?> has accepted your proposal!</p>
+                                <p>View your messages to gain more information regarding the job.</p>
+                                <p class="tint">at <?php echo $r['sentAt']; ?></p>
+                            </div>
+                            <button onclick="readNotification(<?php echo $r['id']; ?>)" class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
                         </div>
-                        <div class="Message-body">
-                            <p><?php echo $senderName; ?> has accepted your proposal!</p>
-                            <p>View your messages to gain more information regarding the job.</p>
-                            <p class="tint">at <?php echo $r['sentAt']; ?></p>
-                        </div>
-                        <button onclick="readNotification(<?php echo $r['id']; ?>)" class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
-                    </div>
 
-                <?php } else if ($r['type'] == 'd') { ?>
+                    <?php } else if ($r['type'] == 'd') { ?>
 
-                    <div class="Message Message--red">
-                        <div class="Message-icon">
-                            <i class="fa fa-times"></i>
+                        <div class="Message Message--red">
+                            <div class="Message-icon">
+                                <i class="fa fa-times"></i>
+                            </div>
+                            <div class="Message-body">
+                                <p><?php echo $senderName; ?> denied your proposal.</p>
+                                <p class="tint">at <?php echo $r['sentAt']; ?></p>
+                            </div>
+                            <button onclick="readNotification(<?php echo $r['id']; ?>)" class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
                         </div>
-                        <div class="Message-body">
-                            <p><?php echo $senderName; ?> denied your proposal.</p>
-                            <p class="tint">at <?php echo $r['sentAt']; ?></p>
-                        </div>
-                        <button onclick="readNotification(<?php echo $r['id']; ?>)" class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
-                    </div>
 
-                <?php } else if ($r['type'] == 'r') {
-                ?>
-                    <div class="Message">
-                        <div class="Message-icon">
-                            <i class="fa fa-bell-o"></i>
+                    <?php } else if ($r['type'] == 'r') {
+                    ?>
+                        <div class="Message">
+                            <div class="Message-icon">
+                                <i class="fa fa-bell-o"></i>
+                            </div>
+                            <div class="Message-body">
+                                <p><?php echo $senderName; ?> has submitted a proprosal to your job.</p>
+                                <p>View your messages for more details.</p>
+                                <p class="tint">at <?php echo $r['sentAt']; ?></p>
+                                <button onclick="location.href='./message/messages?mid=<?php echo $r['sender']; ?>'" class="Message-button" id="js-showMe">Show me</button>
+                            </div>
+                            <button onclick="readNotification(<?php echo $r['id']; ?>)" class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
                         </div>
-                        <div class="Message-body">
-                            <p><?php echo $senderName; ?> has submitted a proprosal to your job.</p>
-                            <p>View your messages for more details.</p>
-                            <p class="tint">at <?php echo $r['sentAt']; ?></p>
-                            <button onclick="location.href='./message/messages?mid=<?php echo $r['sender']; ?>'" class="Message-button" id="js-showMe">Show me</button>
-                        </div>
-                        <button onclick="readNotification(<?php echo $r['id']; ?>)" class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
-                    </div>
 
             <?php }
+                }
+            } else {
+                echo "No Notifications :(";
             } ?>
         </div>
 
