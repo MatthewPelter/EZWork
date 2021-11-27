@@ -51,6 +51,10 @@ if (!isset($_SESSION['user_id'])) {
             font-weight: 300
         }
 
+        #header {
+            text-align: center;
+        }
+
         .Message {
             display: table;
             position: relative;
@@ -160,9 +164,10 @@ if (!isset($_SESSION['user_id'])) {
 
 <body>
     <?php include 'navbar.php'; ?>
-
-    <h1>Notifications</h1>
-    <button type="submit">Mark as Read</button>
+    <div id="header">
+        <h1 id="title">Notifications</h1>
+        <button type="submit">Mark as Read</button>
+    </div>
     <?php
     $notifications = mysqli_query($conn, "SELECT * FROM notifications WHERE receiver='$user_id'");
     while ($r = mysqli_fetch_assoc($notifications)) {
