@@ -54,9 +54,8 @@ $darktext: rgb(121, 121, 121);
                     text-align: start;
                 }
                 .profile-card-social {
-                    margin-top: 25px;
                     display: flex;
-                    justify-content: center;
+                    justify-content: flex-start;
                     align-items: center;
                     flex-wrap: wrap;
                 }
