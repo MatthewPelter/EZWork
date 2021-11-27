@@ -74,9 +74,15 @@ if (mysqli_num_rows($result) > 0) {
                             echo "Client";
                         } ?>
                     </span>
-                    <div class="linkedIn">
-                    <a href="https://www.linkedin.com/in/leonel-barrientos-519b5a152/" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                    <div class="contact">
+                        <div class="linkedIn">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        </div>
+                        <div class="message">
+                            <button>Message</button>
+                        </div>                        
                     </div>
+
                 </div>
             </div>
                     
@@ -85,19 +91,19 @@ if (mysqli_num_rows($result) > 0) {
                 <div class="profile-info">
                     <div class="profile-expertise">
                         <h3>Expertise & Skills</h3>
-                        <p><?php echo $row['expertise']; ?></p>
-                        <p><?php echo $row['experience']; ?></p>
+                        <p><?php echo $freelancer_array['expertise']; ?></p>
+                        <p><?php echo $freelancer_array['experience']; ?></p>
                     </div>
                     <div class="profile-description">
-                        <p><?php echo $row['description']; ?></p>
+                        <p><?php echo $freelancer_array['description']; ?></p>
                     </div>
                     <div class="profile-education">
                         <h3>Education</h3>
-                        <p><?php echo $row['school']; ?></p>
-                        <p><?php echo $row['degree']; ?></p>
-                        <p><?php echo $row['fos']; ?></p>
-                        <p><?php echo $row['schoolStart']; ?></p>
-                        <p><?php echo $row['schoolEnd']; ?></p>
+                        <p><?php echo $freelancer_array['school']; ?></p>
+                        <p><?php echo $freelancer_array['degree']; ?></p>
+                        <p><?php echo $freelancer_array['fos']; ?></p>
+                        <p><?php echo $freelancer_array['schoolStart']; ?></p>
+                        <p><?php echo $freelancer_array['schoolEnd']; ?></p>
                     </div>
                     <div class="profile-job">
                         <h3>Job Experience</h3>
@@ -108,7 +114,7 @@ if (mysqli_num_rows($result) > 0) {
                         <p><?php echo $freelancer_array['jobEnd']; ?></p>
                     </div>
                     <div class="profile-location">
-                        <p><?php echo $row['country']; ?></p>
+                        <p><?php echo $freelancer_array['country']; ?></p>
                     </div>
                 </div>
             </div>

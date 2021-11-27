@@ -23846,30 +23846,34 @@ a:hover {
   text-align: start;
 }
 
-.profile .profile-container .profile-header .username .linkedIn {
+.profile .profile-container .profile-header .username .contact {
   width: 100%;
-  margin-top: .5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
 
-.profile .profile-container .profile-header .username .linkedIn i {
+.profile .profile-container .profile-header .username .contact .linkedIn {
+  margin-top: .5rem;
+}
+
+.profile .profile-container .profile-header .username .contact .linkedIn i {
   border-radius: 50%;
-  padding: 1rem;
+  padding: .5rem;
   background: white;
   -webkit-box-shadow: 0px 7px 30px rgba(43, 98, 169, 0.5);
           box-shadow: 0px 7px 30px rgba(43, 98, 169, 0.5);
+}
+
+.profile .profile-container .profile-header .username .contact .message {
+  margin-left: 1rem;
 }
 
 .profile .profile-container .profile-body {
