@@ -208,7 +208,7 @@ if (!isset($_SESSION['user_id'])) {
                             <div class="Message-body">
                                 <p>You got a message from <?php echo $senderName; ?></p>
                                 <p class="tint">at <?php echo $r['sentAt']; ?></p>
-                                <button class="Message-button" onclick="location.href='./message/messages?mid=<?php echo $r['sender']; ?>'" id="js-showMe">Show me</button>
+                                <button class="Message-button" onclick="readNotification(<?php echo $r['id']; ?>); location.href='./message/messages?mid=<?php echo $r['sender']; ?>';" id="js-showMe">Show me</button>
                             </div>
                             <button onclick="readNotification(<?php echo $r['id']; ?>)" class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
                         </div>
@@ -256,7 +256,7 @@ if (!isset($_SESSION['user_id'])) {
                                 <p><?php echo $senderName; ?> has submitted a proprosal to your job.</p>
                                 <p>View your messages for more details.</p>
                                 <p class="tint">at <?php echo $r['sentAt']; ?></p>
-                                <button onclick="location.href='./message/messages?mid=<?php echo $r['sender']; ?>'" class="Message-button" id="js-showMe">Show me</button>
+                                <button onclick="readNotification(<?php echo $r['id']; ?>); location.href='./message/messages?mid=<?php echo $r['sender']; ?>';" class="Message-button" id="js-showMe">Show me</button>
                             </div>
                             <button onclick="readNotification(<?php echo $r['id']; ?>)" class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
                         </div>
