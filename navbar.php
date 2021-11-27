@@ -46,6 +46,15 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
         transform: rotate(180deg);
         border-color: white transparent transparent transparent;
     }
+
+    .is-hidden {
+        opacity: 0;
+        height: 0;
+        font-size: 0;
+        padding: 0;
+        margin: 0 auto;
+        display: block
+    }
 </style>
 
 <div class="profile-mobile-nav">
@@ -235,6 +244,9 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
             <i onclick="toggleNotifications()" class="fa fa-bell" id="notifications"></i></a>
             <div class="helpContainer">
                 <div class="notificationCard">
+                    <div class="card card1">
+                        <h4 onclick="readNotification(0);closeAll();">Mark as Read</h4>
+                    </div>
                     <?php
                     $notifications = mysqli_query($conn, "SELECT * FROM notifications WHERE receiver='$user_id' AND isRead=0 ORDER BY id DESC");
                     while ($r = mysqli_fetch_assoc($notifications)) {
@@ -343,6 +355,12 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
             error: function(r) {
                 console.log(r);
             }
+        });
+    }
+
+    function closeAll() {
+        $('#notificationCard').children('.card').each(function() {
+            $(this).addClass('is-hidden');
         });
     }
 
