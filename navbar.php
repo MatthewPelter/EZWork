@@ -371,6 +371,9 @@ $avatarFetch = mysqli_fetch_assoc($avatarResult);
 
 
 <!--nav bar script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react-dom.min.js"></script>
+<script src="https://unpkg.com/react-motion/build/react-motion.js"></script>
 <script type="text/javascript">
     var job = document.querySelector('.jobCard');
     var talent = document.querySelector('.talentCard');
