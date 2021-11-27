@@ -57,7 +57,7 @@ if (!isset($_SESSION['user_id'])) {
             margin: 50px 0;
         }
 
-        .notifications {
+        #notifications {
             max-height: 70vh;
             overflow: auto;
             background: #e3e3e3;
