@@ -74,13 +74,30 @@ if (mysqli_num_rows($result) > 0) {
                             echo "Client";
                         } ?>
                     </span>
+                    <div class="profile-card-social">
+
+<?php if ($row['freelancer_id'] != NULL && $freelancer_array['linkedin'] != "") { ?>
+    <a href="<?php echo $freelancer_array['linkedin']; ?>" class="profile-card-social__item" style="background-color: white !important;" target="_blank">
+        <span class="icon-font">
+            <svg class="icon">
+                <use xlink:href="#icon-linkedin"></use>
+            </svg>
+        </span>
+    </a>
+<?php } ?>
+<a href="../404Page/index.html" class="profile-card-social__item link" target="_blank">
+    <span class="icon-font">
+        <svg class="icon">
+            <use xlink:href="#icon-link"></use>
+        </svg>
+    </span>
+</a>
+
+</div>                    
                 </div>
             </div>
                     
             <div class="profile-body">
-                <div class="profile-nav">
-                    <p>Contact <?php echo $row['firstname'] . " " . $row['lastname']; ?></p>
-                </div>
                 <div class="profile-info">
                     <div class="profile-expertise">
                         <h3>Expertise & Skills</h3>
