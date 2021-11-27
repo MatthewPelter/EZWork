@@ -169,7 +169,7 @@ if (!isset($_SESSION['user_id'])) {
         <button type="submit">Mark as Read</button>
     </div>
     <?php
-    $notifications = mysqli_query($conn, "SELECT * FROM notifications WHERE receiver='$user_id'");
+    $notifications = mysqli_query($conn, "SELECT * FROM notifications WHERE receiver='$user_id' AND isRead=0");
     while ($r = mysqli_fetch_assoc($notifications)) {
         if ($r['type'] == 'm') {
             $senderID = $r['sender'];
@@ -238,7 +238,7 @@ if (!isset($_SESSION['user_id'])) {
         }
 
         $('.js-messageClose').on('click', function(e) {
-            // closeMessage($(this).closest('.Message'));
+            closeMessage($(this).closest('.Message'));
         });
 
         function readNotification(id) {
