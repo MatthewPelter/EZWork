@@ -165,29 +165,7 @@ echo "Here are your notifications:";
 <body>
     <?php include 'navbar.php'; ?>
 
-
-    <div class="Message" id="js-timer">
-        <div class="Message-icon">
-            <i class="fa fa-bell-o"></i>
-        </div>
-        <div class="Message-body">
-            <p>This is a simple, but friendly, notification.</p>
-            <p class="u-italic">It will disappear within a few seconds.</p>
-        </div>
-        <button class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
-    </div>
-
-    <div class="Message Message--orange">
-        <div class="Message-icon">
-            <i class="fa fa-exclamation"></i>
-        </div>
-        <div class="Message-body">
-            <p>This is a simple notification with a brighter color...</p>
-            <p>If you bring you mouse here you can close it manually.</p>
-        </div>
-        <button class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
-    </div>
-
+    <h1>Notification</h1>
 
     <div class="Message Message--green">
         <div class="Message-icon">
@@ -224,19 +202,6 @@ echo "Here are your notifications:";
         <button class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
     </div>
 
-    <div class="Message Message--orange">
-        <div class="Message-icon">
-            <i class="fa fa-exclamation"></i>
-        </div>
-        <div class="Message-body">
-            <p>You haven't authorized your LinkedIn account. Would you like some help with that?</p>
-            <p class="u-italic">With your account connected we can show you what connections you have at a company that visited your site!</p>
-            <button class="Message-button" id="js-authMe">Authorize!</button>
-            <button class="Message-button js-messageClose">I'll just keep using carrier pigeons</button>
-        </div>
-        <button class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
-    </div>
-
 
 
     <?php include 'footer.php'; ?>
@@ -248,27 +213,6 @@ echo "Here are your notifications:";
 
         $('.js-messageClose').on('click', function(e) {
             closeMessage($(this).closest('.Message'));
-        });
-
-        $('#js-helpMe').on('click', function(e) {
-            alert('Help you we will, young padawan');
-            closeMessage($(this).closest('.Message'));
-        });
-
-        $('#js-authMe').on('click', function(e) {
-            alert('Okelidokeli, requesting data transfer.');
-            closeMessage($(this).closest('.Message'));
-        });
-
-        $('#js-showMe').on('click', function(e) {
-            alert("You're off to our help section. See you later!");
-            closeMessage($(this).closest('.Message'));
-        });
-
-        $(document).ready(function() {
-            setTimeout(function() {
-                closeMessage($('#js-timer'));
-            }, 5000);
         });
     </script>
 
