@@ -17,6 +17,9 @@ function securityscan($data)
 if (isset($_GET['mid'])) {
     $receiverID = $_GET['mid'];
     $receiverID = securityscan($receiverID);
+    $getName = mysqli_query($conn, "SELECT username FROM clients WHERE id='$receiverID'");
+    $getName = mysqli_fetch_assoc($getName);
+    $getName = $getName['username'];
 }
 // Check if reply button was pressed
 /*if (isset($_POST['submit'])) {
@@ -335,7 +338,7 @@ if (isset($_GET['mid'])) {
             url: "../api/message.php",
             processData: false,
             contentType: "application/json",
-            data: '{ "body": "' + $("#message-to-send").val() + '", "receiver": "<?php echo $receiverID; ?>" }',
+            data: '{ "body": "' + $("#message-to-send").val() + '", "receiver": "<?php echo $getName; ?>" }',
             success: function(data) {
                 var obj = JSON.parse(data);
                 console.log(obj);
