@@ -38,15 +38,6 @@ if (!isset($_SESSION['user_id'])) {
     <link rel="stylesheet" href="./Styles/style.css">
 
     <style type="text/css">
-        * {
-            box-sizing: border-box
-        }
-
-        body {
-            background-color: #ddd;
-            font-weight: 300
-        }
-
         #header {
             text-align: center;
         }
