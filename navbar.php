@@ -244,43 +244,51 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
             <i onclick="toggleNotifications()" class="fa fa-bell" id="notifications"></i></a>
             <div class="helpContainer">
                 <div class="notificationCard">
-                    <div class="card card1">
-                        <h4 onclick="readNotification(0);closeAll();">Mark as Read</h4>
-                    </div>
+
                     <?php
                     $notifications = mysqli_query($conn, "SELECT * FROM notifications WHERE receiver='$user_id' AND isRead=0 ORDER BY id DESC");
-                    while ($r = mysqli_fetch_assoc($notifications)) {
-                        $senderID = $r['sender'];
-                        $senderName = mysqli_query($conn, "SELECT username FROM clients WHERE id=$senderID");
-                        $senderName = mysqli_fetch_assoc($senderName);
-                        $senderName = $senderName['username'];
-                        if ($r['type'] == 'm') {
-                    ?>
-                            <div class="card">
-                                <h4 onclick="location.href='../message/messages?mid=<?php echo $r['sender']; ?>'">You got a message from <?php echo $senderName; ?></h4>
-                                <i onclick="readNotification(<?php echo $r['id']; ?>)" class="fa fa-times"></i>
-                            </div>
+                    if (mysqli_num_rows($notifications) > 0) { ?>
+                        <div class="card card1">
+                            <h4 onclick="readNotification(0);closeAll();">Mark as Read</h4>
+                        </div>
+                        <?php
+                        while ($r = mysqli_fetch_assoc($notifications)) {
+                            $senderID = $r['sender'];
+                            $senderName = mysqli_query($conn, "SELECT username FROM clients WHERE id=$senderID");
+                            $senderName = mysqli_fetch_assoc($senderName);
+                            $senderName = $senderName['username'];
+                            if ($r['type'] == 'm') {
+                        ?>
+                                <div class="card">
+                                    <h4 onclick="location.href='../message/messages?mid=<?php echo $r['sender']; ?>'">You got a message from <?php echo $senderName; ?></h4>
+                                    <i onclick="readNotification(<?php echo $r['id']; ?>)" class="fa fa-times"></i>
+                                </div>
 
-                        <?php } else if ($r['type'] == 'a') { ?>
+                            <?php } else if ($r['type'] == 'a') { ?>
 
-                            <div class="card">
-                                <h4><?php echo $senderName; ?> has accepted your proposal!</h4>
-                                <i onclick="readNotification(<?php echo $r['id']; ?>)" class="fa fa-times"></i>
-                            </div>
+                                <div class="card">
+                                    <h4><?php echo $senderName; ?> has accepted your proposal!</h4>
+                                    <i onclick="readNotification(<?php echo $r['id']; ?>)" class="fa fa-times"></i>
+                                </div>
 
-                        <?php } else if ($r['type'] == 'd') { ?>
-                            <div class="card">
-                                <h4><?php echo $senderName; ?> denied your proposal.</h4>
-                                <i onclick="readNotification(<?php echo $r['id']; ?>)" class="fa fa-times"></i>
-                            </div>
+                            <?php } else if ($r['type'] == 'd') { ?>
+                                <div class="card">
+                                    <h4><?php echo $senderName; ?> denied your proposal.</h4>
+                                    <i onclick="readNotification(<?php echo $r['id']; ?>)" class="fa fa-times"></i>
+                                </div>
 
-                        <?php } else if ($r['type'] == 'r') { ?>
-                            <div class="card">
-                                <h4 onclick="location.href='../message/messages?mid=<?php echo $r['sender']; ?>'"><?php echo $senderName; ?> has submitted a proprosal to your job.</h4>
-                                <i onclick="readNotification(<?php echo $r['id']; ?>)" class="fa fa-times"></i>
-                            </div>
-                    <?php }
-                    } ?>
+                            <?php } else if ($r['type'] == 'r') { ?>
+                                <div class="card">
+                                    <h4 onclick="location.href='../message/messages?mid=<?php echo $r['sender']; ?>'"><?php echo $senderName; ?> has submitted a proprosal to your job.</h4>
+                                    <i onclick="readNotification(<?php echo $r['id']; ?>)" class="fa fa-times"></i>
+                                </div>
+                        <?php }
+                        }
+                    } else { ?>
+                        <div class="card card1">
+                            <h4>You're all caught up!</h4>
+                        </div>
+                    <?php } ?>
                 </div>
             </div>
 
@@ -346,9 +354,9 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                 var obj = JSON.parse(data);
                 console.log(obj);
                 if (obj.Success.length > 0) {
-                    $('#status').html(obj.Success);
+                    //$('#status').html(obj.Success);
                 } else if (obj.Error.length > 0) {
-                    $('#status').html(obj.Error);
+                    //$('#status').html(obj.Error);
                 }
 
             },
