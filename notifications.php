@@ -39,7 +39,6 @@ if (!isset($_SESSION['user_id'])) {
 
     <style type="text/css">
         @import url(https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
-        @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
 
         * {
             box-sizing: border-box
@@ -47,7 +46,6 @@ if (!isset($_SESSION['user_id'])) {
 
         body {
             background-color: #ddd;
-            font-family: "Source Sans Pro";
             font-weight: 300
         }
 
