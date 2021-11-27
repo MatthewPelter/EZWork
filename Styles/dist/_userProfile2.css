@@ -58,7 +58,7 @@
   justify-content: space-evenly;
 }
 .profile .profile-container .profile-body .profile-nav {
-  width: 20%;
+  width: 30%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -67,14 +67,16 @@
 }
 .profile .profile-container .profile-body .profile-nav p {
   width: 100%;
-  text-align: start;
+  text-align: center;
   color: #797979;
   font-size: 1rem;
   text-decoration: underline;
 }
 .profile .profile-container .profile-body .profile-info {
-  padding: 1rem;
-  width: 80%;
+  padding: 1rem 0rem;
+  width: 70%;
+  height: 100%;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }

@@ -64,7 +64,7 @@ $darktext: rgb(121, 121, 121);
             justify-content: space-evenly;
 
             .profile-nav{
-                width: 20%;
+                width: 30%;
                 height: 100%;
                 display: flex;
                 flex-direction: column;
@@ -73,17 +73,19 @@ $darktext: rgb(121, 121, 121);
 
                 p{
                     width: 100%;
-                    text-align: start;
+                    text-align: center;
                     color: $darktext;
                     font-size: 1rem;
                     text-decoration: underline;
                 }
             }
             .profile-info{
-                padding: 1rem;
-                width: 80%;
+                padding: 1rem 0rem;
+                width: 70%;
+                height: 100%;
                 display: flex;
-                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
             }
         }
     }
