@@ -3,6 +3,114 @@ $user_id = $_SESSION['user_id'];
 $avatarResult = mysqli_query($conn, "SELECT avatar, freelancer_id FROM clients WHERE id = '$user_id'");
 $avatarFetch = mysqli_fetch_assoc($avatarResult);
 ?>
+<style type="text/css">
+    .notification-container {
+        cursor: default;
+        position: absolute;
+        z-index: 999;
+        top: 0;
+        right: 10rem;
+        width: 400px;
+        font-weight: 300;
+        background: white;
+        border-radius: 0.5rem;
+        box-sizing: border-box;
+        box-shadow: 0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2);
+        animation-name: dropPanel;
+        animation-iteration-count: 1;
+        animation-timing-function: all;
+        animation-duration: 0.75s;
+    }
+
+    .notification-container:before {
+        content: "";
+        position: absolute;
+        top: 1px;
+        right: 0;
+        width: 0;
+        height: 0;
+        transform: translate(-1rem, -100%);
+        border-left: 0.75rem solid transparent;
+        border-right: 0.75rem solid transparent;
+        border-bottom: 0.75rem solid white;
+    }
+
+    .notification-container h3 {
+        text-transform: uppercase;
+        font-size: 75%;
+        font-weight: 700;
+        color: #84929f;
+        padding: 1.5rem 2rem;
+    }
+
+    .notification-container i {
+        color: #b5c4d2;
+        font-size: 140%;
+        @vertical-align (50%);
+        position: absolute;
+    }
+
+    .notification-container i.right {
+        right: 2rem;
+    }
+
+    .notification-container i.right:hover {
+        opacity: 0.8;
+        cursor: pointer;
+    }
+
+    .notification-container em {
+        margin-right: 0.75rem;
+        font-weight: 700;
+        font-size: 115%;
+        color: #b5c4d2;
+        vertical-align: bottom;
+        display: inline-block;
+    }
+
+    @keyframes dropPanel {
+        0% {
+            opacity: 0;
+            transform: translateY(-100px) scaleY(0.5);
+        }
+    }
+
+    .notification {
+        box-sizing: border-box;
+    }
+
+    .notification.new {
+        background: #f3f9fd;
+    }
+
+    input.checkbox[type=checkbox] {
+        display: none;
+    }
+
+    input.checkbox[type=checkbox]+label {
+        display: block;
+    }
+
+    input.checkbox[type=checkbox]:not(:checked)+label {
+        transition: height 0.25s;
+        height: 0;
+        padding: 0;
+        font-size: 0;
+        border: none;
+    }
+
+    input.checkbox[type=checkbox]:not(:checked)+label * {
+        display: none;
+    }
+
+    input.checkbox[type=checkbox]:checked+label {
+        height: 3.25rem;
+        padding: 1.125rem 4rem 0.75rem 2rem;
+        font-size: 75%;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+</style>
+
 <div class="profile-mobile-nav">
     <div class="profile-nav-search">
         <form id="searchContainer">
@@ -186,7 +294,31 @@ $avatarFetch = mysqli_fetch_assoc($avatarResult);
             <a style="color: white; text-decoration: none;" href="https://ez-work.herokuapp.com/message/messages">Messages</a>
         </div>
         <div class="guide">
-            <a href="https://ez-work.herokuapp.com/notifications"><i class="fa fa-bell" title="Notification"></i></a>
+
+            <!-- <a href="https://ez-work.herokuapp.com/notifications"><i class="fa fa-bell" title="Notification"></i></a> -->
+            <div class="notification-container">
+                <h3>Notifications
+                    <i class="material-icons dp48 right">settings</i>
+                </h3>
+
+                <input class="checkbox" type="checkbox" id="size_1" value="small" checked />
+                <label class="notification new" for="size_1"><em>1</em> new <a href="">guest account(s)</a> have been created.<i class="material-icons dp48 right">clear</i></label>
+
+                <input class="checkbox" type="checkbox" id="size_2" value="small" checked />
+                <label class="notification new" for="size_2"><em>3</em> new <a href="">lead(s)</a> are available in the system.<i class="material-icons dp48 right">clear</i></label>
+
+                <input class="checkbox" type="checkbox" id="size_3" value="small" checked />
+                <label class="notification" for="size_3"><em>5</em> new <a href="">task(s)</a>.<i class="material-icons dp48 right">clear</i></label>
+
+                <input class="checkbox" type="checkbox" id="size_4" value="small" checked />
+                <label class="notification" for="size_4"><em>9</em> new <a href="">calendar event(s)</a> are scheduled for today.<i class="material-icons dp48 right">clear</i></label>
+
+                <input class="checkbox" type="checkbox" id="size_5" value="small" checked />
+                <label class="notification" for="size_5"><em>1</em> blog post <a href="">comment(s)</a> need approval.<i class="material-icons dp48 right">clear</i></label>
+
+            </div>
+
+
             <i class="fa fa-question" onclick="toggleHelp()" id="question"></i>
             <div class="helpContainer">
                 <div class="helpCard">

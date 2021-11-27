@@ -244,6 +244,7 @@ if (!isset($_SESSION['user_id'])) {
             <?php }
             } ?>
         </div>
+
         <div id="status"></div>
     </div>
 
