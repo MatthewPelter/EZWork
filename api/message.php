@@ -23,14 +23,6 @@ $receiver = $postBody->receiver;
 
 $body = securityscan($body);
 $receiver = securityscan($receiver);
-
-if (property_exists($postBody, 'jobID')) {
-    $jobID = $postBody->jobID;
-    $jobID = securityscan($jobID);
-} else {
-    $jobID = NULL;
-}
-
 $id = mysqli_query($conn, "SELECT id FROM clients WHERE username='$receiver'");
 $getID = mysqli_fetch_assoc($id);
 $getID = $getID['id'];
@@ -49,7 +41,14 @@ if ($sender == null) {
     die('{ "Error": "Missing Sender!" }');
 }
 
-$query = mysqli_query($conn, "INSERT INTO messages(body, sender, receiver, isread, jobID, response) VALUES('$body', '$sender', '$getID', 0, '$jobID', NULL)") or die(mysqli_errno($conn));
+if (isset($postBody->jobID)) {
+    $jobID = $postBody->jobID;
+    $jobID = securityscan($jobID);
+    $query = mysqli_query($conn, "INSERT INTO messages(body, sender, receiver, isread, jobID, response) VALUES('$body', '$sender', '$getID', 0, '$jobID', NULL)") or die(mysqli_errno($conn));
+} else {
+    $query = mysqli_query($conn, "INSERT INTO messages(body, sender, receiver, isread, jobID, response) VALUES('$body', '$sender', '$getID', 0, NULL, NULL)") or die(mysqli_errno($conn));
+}
+
 if ($query) {
     date_default_timezone_set("America/New_York");
     $date = date('Y-m-d H:i:s');
