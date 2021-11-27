@@ -83,6 +83,24 @@ $avatarFetch = mysqli_fetch_assoc($avatarResult);
         }
     }
 
+    .num-count {
+        position: absolute;
+        user-select: none;
+        cursor: default;
+        font-size: 0.6rem;
+        background: #e74c3c;
+        width: 1.2rem;
+        height: 1.2rem;
+        color: #ecf0f1;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        top: -0.33rem;
+        right: -0.66rem;
+        box-sizing: border-box;
+    }
+
     .notification {
         box-sizing: border-box;
     }
