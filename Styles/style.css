@@ -23881,7 +23881,7 @@ a:hover {
   width: 100%;
   text-align: start;
   color: #797979;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-decoration: underline;
 }
 
@@ -23894,14 +23894,5 @@ a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.profile .profile-container .profile-footer {
-  padding: .5rem;
-  width: 100%;
-}
-
-.profile .profile-container .profile-footer h2 {
-  opacity: 0;
 }
 /*# sourceMappingURL=style.css.map */

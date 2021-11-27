@@ -75,7 +75,7 @@ $darktext: rgb(121, 121, 121);
                     width: 100%;
                     text-align: start;
                     color: $darktext;
-                    font-size: 1.2rem;
+                    font-size: 1rem;
                     text-decoration: underline;
                 }
             }
@@ -83,14 +83,6 @@ $darktext: rgb(121, 121, 121);
                 width: 80%;
                 display: flex;
                 flex-direction: column;
-            }
-        }
-
-        .profile-footer{
-            padding: .5rem;
-            width: 100%;
-            h2{
-                opacity: 0;
             }
         }
     }
