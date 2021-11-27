@@ -23774,4 +23774,61 @@ a:hover {
   -webkit-box-shadow: 0px 8px 60px -10px rgba(13, 28, 39, 0.6);
           box-shadow: 0px 8px 60px -10px rgba(13, 28, 39, 0.6);
 }
+
+.profile .profile-container .profile-header {
+  width: 100%;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile .profile-container .profile-header .user-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 50%;
+}
+
+.profile .profile-container .profile-header .user-image img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 5px 50px 0px #1d4354, 0px 0px 0px 7px #1d4354;
+          box-shadow: 0px 5px 50px 0px #1d4354, 0px 0px 0px 7px #1d4354;
+}
+
+.profile .profile-container .profile-header .username {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 50%;
+}
 /*# sourceMappingURL=style.css.map */

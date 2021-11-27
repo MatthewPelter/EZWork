@@ -57,9 +57,18 @@ if (mysqli_num_rows($result) > 0) {
     <?php include '../navbar.php'; ?>
 
     <div class="profile">
-
+        
         <div class="profile-container">
-            <h3>temp</h3>
+            
+            
+            <div class="profile-header">
+                <div class="user-image">
+                    <img src="<?php echo $row['avatar']; ?>" alt="profile card">
+                </div>
+                <div class="username">
+                    <h2><?php echo $row['firstname'] . " " . $row['lastname']; ?></h2>
+                </div>
+            </div>
         </div>
 
     </div>
