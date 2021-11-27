@@ -3,6 +3,51 @@ $user_id = $_SESSION['user_id'];
 $avatarResult = mysqli_query($conn, "SELECT avatar, freelancer_id FROM clients WHERE id = '$user_id'");
 $avatarFetch = mysqli_fetch_assoc($avatarResult);
 ?>
+
+
+<!-- I didnt want to break the style.css file so I put this here temporarily 
+to style the notification dropdown. it is still ugly and needs fixing. -->
+<style type="text/css">
+    .helpContainer .notificationCard {
+        display: none;
+        -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        background: white;
+        padding: 0.5rem 1rem;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .helpContainer .notificationCard .card {
+        padding: 0.3rem 0rem;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    .helpContainer .notificationCard .card h4 {
+        font-weight: lighter;
+        font-size: 0.85rem;
+        margin-left: 0.8rem;
+    }
+
+    .helpContainer .notificationCard .card:hover {
+        background: lightgrey;
+    }
+
+    .helpContainer .notificationCard::after {
+        content: "";
+        position: absolute;
+        top: -26%;
+        left: 14%;
+        border-width: 0.8rem;
+        border-style: solid;
+        margin-left: 0.8rem;
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+        border-color: white transparent transparent transparent;
+    }
+</style>
+
 <div class="profile-mobile-nav">
     <div class="profile-nav-search">
         <form id="searchContainer">
