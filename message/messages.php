@@ -7,7 +7,7 @@ $username = $_SESSION['userid'];
 $userID = $_SESSION['user_id'];
 
 // Check if reply button was pressed
-if (isset($_POST['submit'])) {
+/*if (isset($_POST['submit'])) {
     if (!empty($_POST['msg'])) {
         $uname = $_GET['mid'];
         $cleanid = mysqli_real_escape_string($conn, $uname);
@@ -33,7 +33,7 @@ if (isset($_POST['submit'])) {
     } else {
         echo "Please fill in the data";
     }
-}
+}*/
 ?>
 
 <!DOCTYPE html>
@@ -264,11 +264,11 @@ if (isset($_POST['submit'])) {
 
                         </div> <!-- end chat-history -->
 
-                        <form class="form" action="messages.php?mid=<?php echo $id; ?>" method="post" name="message">
+                        <form class="form" action="javascript:void(0);" method="post" name="message">
                             <div class="chat-message clearfix">
                                 <textarea name="msg" id="message-to-send" placeholder="Type your message" rows="3" required></textarea>
                                 <div id="result"></div>
-                                <input type="submit" value="Send" name="submit" class="button"></input>
+                                <input id="sendmessage" type="submit" value="Send" name="submit" class="button"></input>
 
                             </div> <!-- end chat-message -->
                         </form>
@@ -318,6 +318,31 @@ if (isset($_POST['submit'])) {
 <script type="text/javascript">
     var elem = document.querySelector('.chat-history');
     elem.scrollTop = elem.scrollHeight;
+
+    $('#sendmessage').click(function() {
+        $.ajax({
+            type: "POST",
+            url: "../api/message.php",
+            processData: false,
+            contentType: "application/json",
+            data: '{ "body": "' + $("#message-to-send").val() + '", "receiver": "<?php echo $receiverID; ?>" }',
+            success: function(data) {
+                var obj = JSON.parse(data);
+                console.log(obj);
+                $("#message-to-send").val('');
+                if (obj.Success.length > 0) {
+                    location.reload();
+                    //$('#status').html(obj.Success);
+                } else if (obj.Error.length > 0) {
+                    $('#result').html(obj.Error);
+                }
+
+            },
+            error: function(r) {
+                console.log(r);
+            }
+        });
+    });
 
     function respondToJob(jobID, free_id, response) {
         if (response == "accept") {
