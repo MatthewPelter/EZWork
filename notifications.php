@@ -15,10 +15,6 @@ if (!isset($_SESSION['user_id'])) {
         die();
     }
 }
-
-echo "Here are your notifications:";
-
-
 ?>
 
 
@@ -165,44 +161,69 @@ echo "Here are your notifications:";
 <body>
     <?php include 'navbar.php'; ?>
 
-    <h1>Notification</h1>
-
-    <div class="Message Message--green">
-        <div class="Message-icon">
-            <i class="fa fa-check"></i>
-        </div>
-        <div class="Message-body">
-            <p>This is a message telling you that everything is a-okay!</p>
-            <p>Good job, and good riddance.</p>
-        </div>
-        <button class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
-    </div>
-
-    <div class="Message Message--red">
-        <div class="Message-icon">
-            <i class="fa fa-times"></i>
-        </div>
-        <div class="Message-body">
-            <p>This is a notification that something went wrong...</p>
-            <button class="Message-button" id="js-helpMe">Yikes, help me please!</button>
-            <button class="Message-button js-messageClose">Don't care.</button>
-        </div>
-        <button class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
-    </div>
-
-    <div class="Message">
-        <div class="Message-icon">
-            <i class="fa fa-bell-o"></i>
-        </div>
-        <div class="Message-body">
-            <p>Do you know that you can assign status and relation to a company right in the visit list?</p>
-            <button class="Message-button" id="js-showMe">Show me how</button>
-            <button class="Message-button js-messageClose">Nah, not interested</button>
-        </div>
-        <button class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
-    </div>
+    <h1>Notifications</h1>
+    <button type="submit">Mark as Read</button>
+    <?php
+    $notifications = mysqli_query($conn, "SELECT * FROM notifications WHERE receiver='$user_id'");
+    while ($r = mysqli_fetch_assoc($notifications)) {
+        if ($r['type'] == 'm') {
+            $senderID = $r['sender'];
+            $senderName = mysqli_query($conn, "SELECT username FROM clients WHERE id=$senderID");
+            $senderName = mysqli_fetch_assoc($senderName);
+            $senderName = $senderName['username'];
+    ?>
+            <div class="Message">
+                <div class="Message-icon">
+                    <i class="fa fa-bell-o"></i>
+                </div>
+                <div class="Message-body">
+                    <p>You got a message from <?php echo $senderName; ?></p>
+                    <button class="Message-button" onclick="location.href='ez-work.herokuapp.com/message/messages?mid=<?php echo $r['sender']; ?>'" id="js-showMe">Show me</button>
+                </div>
+                <button onclick="readNotification(<?php echo $r['id']; ?>)" class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
+            </div>
+        <?php } else if ($r['type'] == 'a') { ?>
 
 
+            <div class="Message Message--green">
+                <div class="Message-icon">
+                    <i class="fa fa-check"></i>
+                </div>
+                <div class="Message-body">
+                    <p>This is a message telling you that everything is a-okay!</p>
+                    <p>Good job, and good riddance.</p>
+                </div>
+                <button onclick="readNotification(<?php echo $r['id']; ?>)" class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
+            </div>
+
+        <?php } else if ($r['type'] == 'd') { ?>
+
+            <div class="Message Message--red">
+                <div class="Message-icon">
+                    <i class="fa fa-times"></i>
+                </div>
+                <div class="Message-body">
+                    <p>This is a notification that something went wrong...</p>
+                </div>
+                <button onclick="readNotification(<?php echo $r['id']; ?>)" class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
+            </div>
+
+        <?php } else if ($r['type'] == 'r') { ?>
+            <div class="Message">
+                <div class="Message-icon">
+                    <i class="fa fa-bell-o"></i>
+                </div>
+                <div class="Message-body">
+                    <p>Do you know that you can assign status and relation to a company right in the visit list?</p>
+                    <button class="Message-button" id="js-showMe">Show me</button>
+                </div>
+                <button onclick="readNotification(<?php echo $r['id']; ?>)" class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
+            </div>
+
+    <?php }
+    } ?>
+
+    <div id="status"></div>
 
     <?php include 'footer.php'; ?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -212,8 +233,31 @@ echo "Here are your notifications:";
         }
 
         $('.js-messageClose').on('click', function(e) {
-            closeMessage($(this).closest('.Message'));
+            // closeMessage($(this).closest('.Message'));
         });
+
+        function readNotification(id) {
+            $.ajax({
+                type: "POST",
+                url: "./api/readNotification.php",
+                processData: false,
+                contentType: "application/json",
+                data: '{ "notificationID": "' + id + '" }',
+                success: function(data) {
+                    var obj = JSON.parse(data);
+                    console.log(obj);
+                    if (obj.Success.length > 0) {
+                        $('#status').html(obj.Success);
+                    } else if (obj.Error.length > 0) {
+                        $('#status').html(obj.Error);
+                    }
+
+                },
+                error: function(r) {
+                    console.log(r);
+                }
+            });
+        }
     </script>
 
 </body>
