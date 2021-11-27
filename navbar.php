@@ -187,8 +187,45 @@ $avatarFetch = mysqli_fetch_assoc($avatarResult);
         </div>
         <div class="guide">
 
-            <a href="https://ez-work.herokuapp.com/notifications"><i class="fa fa-bell" title="Notification"></i></a>
+            <i onclick="toggleNotifications()" class="fa fa-bell" id="notifications"></i></a>
+            <div class="helpContainer">
+                <div class="notificationCard">
+                    <?php
+                    $notifications = mysqli_query($conn, "SELECT * FROM notifications WHERE receiver='$user_id' AND isRead=0 ORDER BY id DESC");
+                    while ($r = mysqli_fetch_assoc($notifications)) {
+                        $senderID = $r['sender'];
+                        $senderName = mysqli_query($conn, "SELECT username FROM clients WHERE id=$senderID");
+                        $senderName = mysqli_fetch_assoc($senderName);
+                        $senderName = $senderName['username'];
+                        if ($r['type'] == 'm') {
+                    ?>
+                            <div class="card">
+                                <h4 onclick="location.href='./message/messages?mid=<?php echo $r['sender']; ?>'">You got a message from <?php echo $senderName; ?></h4>
+                                <button onclick="readNotification(<?php echo $r['id']; ?>)" class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
+                            </div>
 
+                        <?php } else if ($r['type'] == 'a') { ?>
+
+                            <div class="card">
+                                <h4><?php echo $senderName; ?> has accepted your proposal!</h4>
+                                <button onclick="readNotification(<?php echo $r['id']; ?>)" class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
+                            </div>
+
+                        <?php } else if ($r['type'] == 'd') { ?>
+                            <div class="card">
+                                <h4><?php echo $senderName; ?> denied your proposal.</h4>
+                                <button onclick="readNotification(<?php echo $r['id']; ?>)" class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
+                            </div>
+
+                        <?php } else if ($r['type'] == 'r') { ?>
+                            <div class="card">
+                                <h4 onclick="location.href='./message/messages?mid=<?php echo $r['sender']; ?>'"><?php echo $senderName; ?> has submitted a proprosal to your job.</h4>
+                                <button onclick="readNotification(<?php echo $r['id']; ?>)" class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
+                            </div>
+                    <?php }
+                    } ?>
+                </div>
+            </div>
 
             <i class="fa fa-question" onclick="toggleHelp()" id="question"></i>
             <div class="helpContainer">
@@ -241,6 +278,29 @@ $avatarFetch = mysqli_fetch_assoc($avatarResult);
 
 <!--nav bar script -->
 <script type="text/javascript">
+    function readNotification(id, type) {
+        $.ajax({
+            type: "POST",
+            url: "./api/readNotification.php",
+            processData: false,
+            contentType: "application/json",
+            data: '{ "notificationID": "' + id + '" }',
+            success: function(data) {
+                var obj = JSON.parse(data);
+                console.log(obj);
+                if (obj.Success.length > 0) {
+                    $('#status').html(obj.Success);
+                } else if (obj.Error.length > 0) {
+                    $('#status').html(obj.Error);
+                }
+
+            },
+            error: function(r) {
+                console.log(r);
+            }
+        });
+    }
+
     var job = document.querySelector('.jobCard');
     var talent = document.querySelector('.talentCard');
     var project = document.querySelector('.projectCard');
@@ -289,6 +349,19 @@ $avatarFetch = mysqli_fetch_assoc($avatarResult);
 
     function toggleHelp() {
         var help = document.querySelector('.helpCard');
+        if (getComputedStyle(help).display === 'none') {
+            help.style.display = 'inline-block';
+            talent.style.display = 'none';
+            project.style.display = 'none';
+            job.style.display = 'none';
+            session.style.display = 'none';
+        } else {
+            help.style.display = 'none';
+        }
+    }
+
+    function toggleNotifications() {
+        var help = document.querySelector('.notificationCard');
         if (getComputedStyle(help).display === 'none') {
             help.style.display = 'inline-block';
             talent.style.display = 'none';
