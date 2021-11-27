@@ -211,7 +211,8 @@ if (!isset($_SESSION['user_id'])) {
                                 <p class="tint">at <?php echo $r['sentAt']; ?></p>
                                 <button class="Message-button" onclick="readNotification(<?php echo $r['id']; ?>); location.href='./message/messages?mid=<?php echo $r['sender']; ?>';" id="js-showMe">Show me</button>
                             </div>
-                            <button onclick="readNotification(<?php echo $r['id']; ?>)" class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
+                            <!-- <button onclick="readNotification(<?php //echo $r['id']; 
+                                                                    ?>)" class="Message-close js-messageClose"><i class="fa fa-times"></i></button> -->
                         </div>
                     <?php } else if ($r['type'] == 'a') { ?>
 
@@ -227,7 +228,8 @@ if (!isset($_SESSION['user_id'])) {
                                 <p>View your messages to gain more information regarding the job.</p>
                                 <p class="tint">at <?php echo $r['sentAt']; ?></p>
                             </div>
-                            <button onclick="readNotification(<?php echo $r['id']; ?>)" class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
+                            <!-- <button onclick="readNotification(<?php //echo $r['id']; 
+                                                                    ?>)" class="Message-close js-messageClose"><i class="fa fa-times"></i></button> -->
                         </div>
 
                     <?php } else if ($r['type'] == 'd') { ?>
@@ -242,7 +244,8 @@ if (!isset($_SESSION['user_id'])) {
                                 <p><?php echo $senderName; ?> denied your proposal.</p>
                                 <p class="tint">at <?php echo $r['sentAt']; ?></p>
                             </div>
-                            <button onclick="readNotification(<?php echo $r['id']; ?>)" class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
+                            <!-- <button onclick="readNotification(<?php //echo $r['id']; 
+                                                                    ?>)" class="Message-close js-messageClose"><i class="fa fa-times"></i></button> -->
                         </div>
 
                     <?php } else if ($r['type'] == 'r') {
@@ -259,7 +262,8 @@ if (!isset($_SESSION['user_id'])) {
                                 <p class="tint">at <?php echo $r['sentAt']; ?></p>
                                 <button onclick="readNotification(<?php echo $r['id']; ?>); location.href='./message/messages?mid=<?php echo $r['sender']; ?>';" class="Message-button" id="js-showMe">Show me</button>
                             </div>
-                            <button onclick="readNotification(<?php echo $r['id']; ?>)" class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
+                            <!-- <button onclick="readNotification(<?php //echo $r['id']; 
+                                                                    ?>)" class="Message-close js-messageClose"><i class="fa fa-times"></i></button> -->
                         </div>
 
             <?php }
