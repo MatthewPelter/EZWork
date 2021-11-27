@@ -4,6 +4,8 @@ $avatarResult = mysqli_query($conn, "SELECT avatar, freelancer_id FROM clients W
 $avatarFetch = mysqli_fetch_assoc($avatarResult);
 ?>
 <style type="text/css">
+    @import 'https://fonts.googleapis.com/css?family=Material+Icons';
+
     .notification-container {
         cursor: default;
         position: absolute;
