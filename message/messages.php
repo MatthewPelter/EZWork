@@ -6,10 +6,17 @@ require_once("../classes/DB.php");
 $username = $_SESSION['userid'];
 $userID = $_SESSION['user_id'];
 
+function securityscan($data)
+{
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
 
 if (isset($_GET['mid'])) {
     $receiverID = $_GET['mid'];
-    $receiverID = mysqli_real_escape_string($conn, $receiverID);
+    $receiverID = securityscan($receiverID);
 }
 // Check if reply button was pressed
 /*if (isset($_POST['submit'])) {
@@ -335,7 +342,7 @@ if (isset($_GET['mid'])) {
                 $("#message-to-send").val('');
                 if (obj.Success.length > 0) {
                     location.reload();
-                    //$('#status').html(obj.Success);
+                    $('#result').html(obj.Success);
                 } else if (obj.Error.length > 0) {
                     $('#result').html(obj.Error);
                 }
