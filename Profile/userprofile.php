@@ -74,30 +74,14 @@ if (mysqli_num_rows($result) > 0) {
                             echo "Client";
                         } ?>
                     </span>
-                    <div class="profile-card-social">
-
-<?php if ($row['freelancer_id'] != NULL && $freelancer_array['linkedin'] != "") { ?>
-    <a href="<?php echo $freelancer_array['linkedin']; ?>" class="profile-card-social__item" style="background-color: white !important;" target="_blank">
-        <span class="icon-font">
-            <svg class="icon">
-                <use xlink:href="#icon-linkedin"></use>
-            </svg>
-        </span>
-    </a>
-<?php } ?>
-<a href="../404Page/index.html" class="profile-card-social__item link" target="_blank">
-    <span class="icon-font">
-        <svg class="icon">
-            <use xlink:href="#icon-link"></use>
-        </svg>
-    </span>
-</a>
-
-</div>                    
+                    <div class="linkedIn">
+                    <a href="https://www.linkedin.com/in/leonel-barrientos-519b5a152/" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                    </div>
                 </div>
             </div>
                     
             <div class="profile-body">
+
                 <div class="profile-info">
                     <div class="profile-expertise">
                         <h3>Expertise & Skills</h3>
