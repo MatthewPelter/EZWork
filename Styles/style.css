@@ -23764,7 +23764,7 @@ a:hover {
   margin-top: 0;
   width: 100%;
   background: whitesmoke;
-  padding: 2.5rem 10rem;
+  padding: 2.5rem 8rem;
 }
 
 .profile .profile-container {
@@ -23873,6 +23873,15 @@ a:hover {
       -ms-flex-direction: column;
           flex-direction: column;
   border-right: .7px solid lightgrey;
+  padding: 1rem;
+}
+
+.profile .profile-container .profile-body .profile-nav h4 {
+  width: 100%;
+  text-align: start;
+  color: #797979;
+  font-size: 1.2rem;
+  text-decoration: underline;
 }
 
 .profile .profile-container .profile-body .profile-info {

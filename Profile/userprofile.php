@@ -76,6 +76,16 @@ if (mysqli_num_rows($result) > 0) {
                     </span>
                 </div>
             </div>
+
+            <div class="profile-body">
+                <div class="profile-nav">
+                    <h4>Contact <?php echo $row['firstname'] . " " . $row['lastname']; ?></h4>
+                </div>
+                <div class="profile-info">
+
+                </div>
+            </div>
+
             <div class="profile-footer">
                 <h2>NOTHING</h2>
             </div>

@@ -6,7 +6,7 @@ $darktext: rgb(121, 121, 121);
     margin-top: 0;
     width: 100%;
     background: whitesmoke;
-    padding: 2.5rem 10rem;
+    padding: 2.5rem 8rem;
 
     .profile-container{
         background: white;
@@ -68,6 +68,15 @@ $darktext: rgb(121, 121, 121);
                 display: flex;
                 flex-direction: column;
                 border-right: .7px solid lightgrey;
+                padding: 1rem;
+
+                h4{
+                    width: 100%;
+                    text-align: start;
+                    color: $darktext;
+                    font-size: 1.2rem;
+                    text-decoration: underline;
+                }
             }
             .profile-info{
                 width: 65%;
