@@ -76,6 +76,9 @@ if (mysqli_num_rows($result) > 0) {
                     </span>
                 </div>
             </div>
+            <div class="profile-footer">
+                <h2>NOTHING</h2>
+            </div>
         </div>
 
     </div>
