@@ -200,8 +200,8 @@ if (!isset($_SESSION['user_id'])) {
                     <i class="fa fa-check"></i>
                 </div>
                 <div class="Message-body">
-                    <p>This is a message telling you that everything is a-okay!</p>
-                    <p>Good job, and good riddance.</p>
+                    <p><?php echo $senderName; ?> has accepted your proposal!</p>
+                    <p>View your messages to gain more information regarding the job.</p>
                     <p class="tint">at <?php echo $r['sentAt']; ?></p>
                 </div>
                 <button onclick="readNotification(<?php echo $r['id']; ?>)" class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
@@ -214,7 +214,7 @@ if (!isset($_SESSION['user_id'])) {
                     <i class="fa fa-times"></i>
                 </div>
                 <div class="Message-body">
-                    <p>This is a notification that something went wrong...</p>
+                    <p><?php echo $senderName; ?> denied your proposal.</p>
                     <p class="tint">at <?php echo $r['sentAt']; ?></p>
                 </div>
                 <button onclick="readNotification(<?php echo $r['id']; ?>)" class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
