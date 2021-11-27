@@ -262,8 +262,8 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                             $senderName = $senderName['username'];
                             if ($r['type'] == 'm') {
                         ?>
-                                <div class="card">
-                                    <h4 onclick="readNotification(<?php echo $r['id']; ?>); location.href='../message/messages?mid=<?php echo $r['sender']; ?>';">You got a message from <?php echo $senderName; ?></h4>
+                                <div onclick="readNotification(<?php echo $r['id']; ?>); location.href='../message/messages?mid=<?php echo $r['sender']; ?>';" class="card">
+                                    <h4>You got a message from <?php echo $senderName; ?></h4>
 
                                 </div>
 
@@ -281,8 +281,8 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                                 </div>
 
                             <?php } else if ($r['type'] == 'r') { ?>
-                                <div class="card">
-                                    <h4 onclick="readNotification(<?php echo $r['id']; ?>); location.href='../message/messages?mid=<?php echo $r['sender']; ?>';"><?php echo $senderName; ?> has submitted a proprosal to your job.</h4>
+                                <div onclick="readNotification(<?php echo $r['id']; ?>); location.href='../message/messages?mid=<?php echo $r['sender']; ?>';" class="card">
+                                    <h4><?php echo $senderName; ?> has submitted a proprosal to your job.</h4>
                                 </div>
                         <?php }
                         }
