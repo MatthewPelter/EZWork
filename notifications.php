@@ -179,9 +179,7 @@ if (isset($_POST['submit'])) {
     <div id="main-page">
         <div id="header">
             <h1 id="title">Notifications</h1>
-            <form action="notifications.php" method="post">
-                <button type="submit">Mark as Read</button>
-            </form>
+            <button onclick="readNotification(0)" type="submit">Mark as Read</button>
         </div>
         <?php
         $notifications = mysqli_query($conn, "SELECT * FROM notifications WHERE receiver='$user_id' AND isRead=0");
@@ -255,8 +253,6 @@ if (isset($_POST['submit'])) {
     <?php include 'footer.php'; ?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-        $('.profileFooter').appendTo('body');
-
         function closeMessage(el) {
             el.addClass('is-hidden');
         }
@@ -265,7 +261,7 @@ if (isset($_POST['submit'])) {
             closeMessage($(this).closest('.Message'));
         });
 
-        function readNotification(id) {
+        function readNotification(id, type) {
             $.ajax({
                 type: "POST",
                 url: "./api/readNotification.php",

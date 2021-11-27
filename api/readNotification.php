@@ -28,8 +28,12 @@ if ($notificationCheck != $_SESSION['user_id']) {
     die('{ "Error": "This notification was not sent to you" }');
 }
 
-
-$query = mysqli_query($conn, "UPDATE notifications SET isRead = 1 WHERE id='$notificationID'") or die(mysqli_error($conn));
+$user_id = $_SESSION['user_id'];
+if ($notificationID == 0) {
+    $query = mysqli_query($conn, "UPDATE notifications SET isRead = 1 WHERE receiver='$user_id'") or die(mysqli_error($conn));
+} else {
+    $query = mysqli_query($conn, "UPDATE notifications SET isRead = 1 WHERE id='$notificationID'") or die(mysqli_error($conn));
+}
 
 if ($query) {
     echo '{ "Success": "Notification set to read!" }';
