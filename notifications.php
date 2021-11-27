@@ -183,7 +183,7 @@ if (!isset($_SESSION['user_id'])) {
                 </div>
                 <div class="Message-body">
                     <p>You got a message from <?php echo $senderName; ?></p>
-                    <button class="Message-button" onclick="location.href='ez-work.herokuapp.com/message/messages?mid=<?php echo $r['sender']; ?>'" id="js-showMe">Show me</button>
+                    <button class="Message-button" onclick="location.href='./message/messages?mid=<?php echo $r['sender']; ?>'" id="js-showMe">Show me</button>
                 </div>
                 <button onclick="readNotification(<?php echo $r['id']; ?>)" class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
             </div>
