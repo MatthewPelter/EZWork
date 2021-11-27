@@ -23886,6 +23886,7 @@ a:hover {
 }
 
 .profile .profile-container .profile-body .profile-info {
+  padding: 1rem;
   width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;

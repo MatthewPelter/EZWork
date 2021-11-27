@@ -79,12 +79,38 @@ if (mysqli_num_rows($result) > 0) {
 
             <div class="profile-body">
                 <div class="profile-nav">
-                    <p>Contact <?php echo $row['firstname'] . " " . $row['lastname']; ?></p>
+                    <p><?php echo $row['firstname'] . " " . $row['lastname']; ?> Info</p>
                     
                         
                 </div>
                 <div class="profile-info">
-                    
+                    <div class="profile-expertise">
+                        <h3>Expertise & Skills</h3>
+                        <p><?php echo $row['expertise']; ?></p>
+                        <p><?php echo $row['experience']; ?></p>
+                    </div>
+                    <div class="profile-description">
+                        <p><?php echo $row['description']; ?></p>
+                    </div>
+                    <div class="profile-education">
+                        <h3>Education</h3>
+                        <p><?php echo $row['school']; ?></p>
+                        <p><?php echo $row['degree']; ?></p>
+                        <p><?php echo $row['fos']; ?></p>
+                        <p><?php echo $row['schoolStart']; ?></p>
+                        <p><?php echo $row['schoolEnd']; ?></p>
+                    </div>
+                    <div class="profile-job">
+                        <h3>Job Experience</h3>
+                        <p><?php echo $row['jobTitle']; ?></p>
+                        <p><?php echo $row['company']; ?></p>
+                        <p><?php echo $row['jobLocation']; ?></p>
+                        <p><?php echo $row['jobStart']; ?></p>
+                        <p><?php echo $row['jobEnd']; ?></p>
+                    </div>
+                    <div class="profile-location">
+                        <p><?php echo $row['country']; ?></p>
+                    </div>
                 </div>
             </div>
         </div>
