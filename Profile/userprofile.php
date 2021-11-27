@@ -56,8 +56,16 @@ if (mysqli_num_rows($result) > 0) {
 
     <?php include '../navbar.php'; ?>
 
-
     <div class="profile">
+
+        <div class="profile-container">
+            <h3>temp</h3>
+        </div>
+
+    </div>
+
+
+    <div class="profile2" style="display: none;">
         <?php
         if ($dataFound) {
         ?>

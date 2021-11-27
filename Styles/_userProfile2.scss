@@ -1,0 +1,17 @@
+$color1: #0a345e;
+$lightColor: #054e97;
+$darktext: rgb(121, 121, 121);
+
+.profile{
+    margin-top: 0;
+    width: 100%;
+    background: whitesmoke;
+    padding: 2.5rem 10rem;
+
+    .profile-container{
+        background: white;
+        width: 100%;
+        border-radius: 15px;
+        box-shadow: 0px 8px 60px -10px rgba(13, 28, 39, 0.6);
+    }
+}
