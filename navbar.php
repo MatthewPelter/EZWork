@@ -368,7 +368,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
 
     function closeAll() {
         $('#notificationCard').children('.card').each(function() {
-            $(this).addClass('is-hidden');
+            $(this).hide();
         });
     }
 
