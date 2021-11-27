@@ -6,61 +6,10 @@ $avatarFetch = mysqli_fetch_assoc($avatarResult);
 <style type="text/css">
     @import 'https://fonts.googleapis.com/css?family=Material+Icons';
 
-    @charset "UTF-8";
-    @import 'https://fonts.googleapis.com/css?family=Material+Icons';
-
-    a {
-        color: cornflowerblue;
-        text-decoration: none;
-    }
-
     a:hover {
         opacity: 0.8;
         cursor: pointer;
         text-decoration: underline;
-    }
-
-    body {
-        padding: 5% 0;
-        margin: 0;
-        box-sizing: border-box;
-        width: 100vw;
-        height: 100vh;
-        background: #ecf0f1;
-        background: linear-gradient(30deg, #dde4e6, #ecf0f1);
-        font-family: "Lato", Arial, sans-serif;
-        font-weight: 500;
-        letter-spacing: 0.05rem;
-    }
-
-    .profile {
-        position: relative;
-        display: flex;
-        align-items: center;
-    }
-
-    .profile:after {
-        content: "";
-        top: -0.75rem;
-        bottom: -0.75rem;
-        left: 0;
-        right: -0.75rem;
-        position: absolute;
-        background: rgba(255, 255, 255, 0.1);
-    }
-
-    .user-photo {
-        display: inline-block;
-        min-width: 40px;
-        width: 40px;
-        height: 40px;
-        margin-left: 0.75rem;
-        cursor: default;
-        background: #ecf0f1;
-        background: url("https://pre.images.century21.ca/Users/pic56342.jpg?crop=(263%2c173%2c550%2c388.25)&cropxunits=640&cropyunits=480&r=636135193218930000&mode=crop");
-        background-position: center;
-        background-size: cover;
-        border-radius: 2px;
     }
 
     .notification-container {
@@ -206,27 +155,6 @@ $avatarFetch = mysqli_fetch_assoc($avatarResult);
         float: right;
     }
 
-    spacer {
-        width: 100%;
-    }
-
-    button {
-        float: right;
-        border-radius: 3px;
-        cursor: pointer;
-        display: inline-block;
-        font-weight: normal;
-        padding: 8px 12px;
-        border: 0;
-        font-size: 13px;
-        line-height: 13px;
-        color: white;
-        background: #B2B9C5;
-    }
-
-    button:hover {
-        opacity: 0.9;
-    }
 
     .notification-icon {
         position: relative;
