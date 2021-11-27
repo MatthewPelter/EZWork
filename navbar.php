@@ -264,26 +264,25 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                         ?>
                                 <div class="card">
                                     <h4 onclick="readNotification(<?php echo $r['id']; ?>); location.href='../message/messages?mid=<?php echo $r['sender']; ?>';">You got a message from <?php echo $senderName; ?></h4>
-                                    <i onclick="readNotification(<?php echo $r['id']; ?>)" class="fa fa-times"></i>
+
                                 </div>
 
                             <?php } else if ($r['type'] == 'a') { ?>
 
                                 <div class="card">
                                     <h4><?php echo $senderName; ?> has accepted your proposal!</h4>
-                                    <i onclick="readNotification(<?php echo $r['id']; ?>)" class="fa fa-times"></i>
+
                                 </div>
 
                             <?php } else if ($r['type'] == 'd') { ?>
                                 <div class="card">
                                     <h4><?php echo $senderName; ?> denied your proposal.</h4>
-                                    <i onclick="readNotification(<?php echo $r['id']; ?>)" class="fa fa-times"></i>
+
                                 </div>
 
                             <?php } else if ($r['type'] == 'r') { ?>
                                 <div class="card">
                                     <h4 onclick="readNotification(<?php echo $r['id']; ?>); location.href='../message/messages?mid=<?php echo $r['sender']; ?>';"><?php echo $senderName; ?> has submitted a proprosal to your job.</h4>
-                                    <i onclick="readNotification(<?php echo $r['id']; ?>)" class="fa fa-times"></i>
                                 </div>
                         <?php }
                         }
