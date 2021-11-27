@@ -79,7 +79,7 @@ if (mysqli_num_rows($result) > 0) {
 
             <div class="profile-body">
                 <div class="profile-nav">
-                    <h4>Contact <?php echo $row['firstname'] . " " . $row['lastname']; ?></h4>
+                    <p>Contact <?php echo $row['firstname'] . " " . $row['lastname']; ?></h4>
                 </div>
                 <div class="profile-info">
 

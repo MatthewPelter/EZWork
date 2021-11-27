@@ -23864,7 +23864,8 @@ a:hover {
 }
 
 .profile .profile-container .profile-body .profile-nav {
-  width: 35%;
+  width: 20%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23876,7 +23877,7 @@ a:hover {
   padding: 1rem;
 }
 
-.profile .profile-container .profile-body .profile-nav h4 {
+.profile .profile-container .profile-body .profile-nav p {
   width: 100%;
   text-align: start;
   color: #797979;
@@ -23885,7 +23886,7 @@ a:hover {
 }
 
 .profile .profile-container .profile-body .profile-info {
-  width: 65%;
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
