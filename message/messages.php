@@ -28,6 +28,7 @@ if (isset($_POST['submit'])) {
 
         $insertSQL = "INSERT INTO messages(body, sender, receiver, isread, jobID, response) VALUES('$cleanmessage', '$senderID', '$receiverID', 0, NULL, NULL)";
         $insertresult = mysqli_query($conn, $insertSQL) or die(mysqli_error($conn));
+        $sendNotification = mysqli_query($conn, "INSERT INTO notifications (type, receiver, sender, isRead) VALUES ('m', '$receiverID', '$senderID', 0)") or die(mysqli_errno($conn));
 
         if (!$insertresult) {
             echo "Error Sending Message...";
