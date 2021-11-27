@@ -50,4 +50,14 @@ if ($sender == null) {
 }
 
 $query = mysqli_query($conn, "INSERT INTO messages(body, sender, receiver, isread, jobID, response) VALUES('$body', '$sender', '$getID', 0, '$jobID', NULL)") or die(mysqli_errno($conn));
-echo '{ "Success": "Message Sent!" }';
+if ($query) {
+    if ($jobID != NULL) {
+        $sendNotification = mysqli_query($conn, "INSERT INTO notifications (type, receiver, sender, isRead) VALUES ('r', '$getID', '$sender', 0)") or die(mysqli_errno($conn));
+    } else {
+        $sendNotification = mysqli_query($conn, "INSERT INTO notifications (type, receiver, sender, isRead) VALUES ('m', '$getID', '$sender', 0)") or die(mysqli_errno($conn));
+    }
+
+    echo '{ "Success": "Message Sent!" }';
+} else {
+    echo '{ "Error": "Query Failed" }';
+}
