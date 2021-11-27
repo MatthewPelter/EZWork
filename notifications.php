@@ -159,9 +159,10 @@ if (!isset($_SESSION['user_id'])) {
             cursor: pointer
         }
 
+        /* 
         .Message:hover .Message-close {
             opacity: 1
-        }
+        } */
 
         .Message-close:hover {
             background-color: rgba(0, 0, 0, .5)
@@ -278,15 +279,15 @@ if (!isset($_SESSION['user_id'])) {
             el.addClass('is-hidden');
         }
 
-        function closeAll() {
+        /*function closeAll() {
             $('#notifications').children('.Message').each(function() {
                 closeMessage($(this));
             });
-        }
+        }*/
 
-        $('.js-messageClose').on('click', function(e) {
+        /*$('.js-messageClose').on('click', function(e) {
             closeMessage($(this).closest('.Message'));
-        });
+        });*/
 
         function readNotification(id, type) {
             $.ajax({
