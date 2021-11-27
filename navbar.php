@@ -186,7 +186,7 @@ $avatarFetch = mysqli_fetch_assoc($avatarResult);
             <a style="color: white; text-decoration: none;" href="https://ez-work.herokuapp.com/message/messages">Messages</a>
         </div>
         <div class="guide">
-            <i class="fa fa-bell" title="Notification"></i>
+            <a href="https://ez-work.herokuapp.com/notifications"><i class="fa fa-bell" title="Notification"></i></a>
             <i class="fa fa-question" onclick="toggleHelp()" id="question"></i>
             <div class="helpContainer">
                 <div class="helpCard">
