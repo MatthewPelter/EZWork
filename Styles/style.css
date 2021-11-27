@@ -23847,7 +23847,26 @@ a:hover {
 }
 
 .profile .profile-container .profile-header .username .linkedIn {
+  width: 100%;
+  margin-top: .5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.profile .profile-container .profile-header .username .linkedIn i {
   border-radius: 50%;
+  padding: 1rem;
   background: white;
   -webkit-box-shadow: 0px 7px 30px rgba(43, 98, 169, 0.5);
           box-shadow: 0px 7px 30px rgba(43, 98, 169, 0.5);
