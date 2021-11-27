@@ -15,10 +15,6 @@ if (!isset($_SESSION['user_id'])) {
         die();
     }
 }
-
-if (isset($_POST['submit'])) {
-    $readAll = mysqli_query($conn, "UPDATE notifications SET isRead=1 WHERE receiver='$user_id'") or die(mysqli_error($conn));
-}
 ?>
 
 
@@ -179,7 +175,7 @@ if (isset($_POST['submit'])) {
     <div id="main-page">
         <div id="header">
             <h1 id="title">Notifications</h1>
-            <button onclick="readNotification(0)" type="submit">Mark as Read</button>
+            <button onclick="readNotification(0)">Mark as Read</button>
         </div>
         <?php
         $notifications = mysqli_query($conn, "SELECT * FROM notifications WHERE receiver='$user_id' AND isRead=0");
