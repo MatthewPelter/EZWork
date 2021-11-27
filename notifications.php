@@ -38,8 +38,6 @@ if (!isset($_SESSION['user_id'])) {
     <link rel="stylesheet" href="./Styles/style.css">
 
     <style type="text/css">
-        @import url(https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
-
         * {
             box-sizing: border-box
         }
