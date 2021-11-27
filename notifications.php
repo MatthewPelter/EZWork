@@ -255,6 +255,8 @@ if (isset($_POST['submit'])) {
     <?php include 'footer.php'; ?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
+        $('.profileFooter').prependTo('body');
+
         function closeMessage(el) {
             el.addClass('is-hidden');
         }
