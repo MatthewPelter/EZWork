@@ -25,7 +25,7 @@ $avatarFetch = mysqli_fetch_assoc($avatarResult);
                 <li>My Jobs</li>
             </a>
             <a href="../newPostJob/myJobs.php">
-                <li>All Job Posts</li>
+                <li>All My Job Posts</li>
             </a>
             <a href="#/">
                 <li>All Contracts</li>

@@ -82,7 +82,7 @@ var SalesMarketingSpecialty = ["Social Media Strategy", "Marketing Strategy", "C
 
 var TranslationSpecialty = ["Legal Translation", "Technical Translation", "Language Tutoring", "Translation", "Language Localization", "Medical Translation"]; //"Web, Mobile & Software Dev"
 
-var WebMobileSoftwareSpecialty = ["Ecommerce Development", "Desktop Software Development", "Scripting & Automation", "Manual Testing", "Automation Testing", "Mobile App Development", "Mobile Game Development", "Prototyping", "Mobile Design", "Web Design", "User Research", "UX/UI Design", "Firmware Development", "Emerging Tech", "AR/VR Development", "Coding Tutoring", "Database Development", "Scrum Master", "Product Management", "Back-End Development", "Front-End Development", "Full Stack Development", "CMS Development", "Game Development"]; //"Writing"
+var WebMobileSoftwareSpecialty = ["Ecommerce Development", "Web Developer", "Desktop Software Development", "Scripting & Automation", "Manual Testing", "Automation Testing", "Mobile App Development", "Mobile Game Development", "Prototyping", "Mobile Design", "Web Design", "User Research", "UX/UI Design", "Firmware Development", "Emerging Tech", "AR/VR Development", "Coding Tutoring", "Database Development", "Scrum Master", "Product Management", "Back-End Development", "Front-End Development", "Full Stack Development", "CMS Development", "Game Development"]; //"Writing"
 
 var WritingSpecialty = ["Editing & Proofreading", "Career Coaching", "Scriptwriting", "Creative Writing", "Ghostwriting", "Grant Writing", "Technical Writing", "Writing Tutoring", "Business Writing", "Content Writing", "Copywriting"]; //All Specialty
 
