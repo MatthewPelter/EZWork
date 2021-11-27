@@ -54,13 +54,14 @@ $darktext: rgb(121, 121, 121);
                     text-align: start;
                 }
                 .contact{
+                    margin-top: .5rem;
                     width: 100%;
                     display: flex;
                     flex-direction: column;
                     justify-content: flex-start;
                 
                     .linkedIn{
-                        margin-top: .5rem;    
+                        width: fit-content;    
                         i{
                           
                             border-radius: 50%;
@@ -70,7 +71,22 @@ $darktext: rgb(121, 121, 121);
                         }
                     }
                     .message{
-                        margin-left: 1rem;
+                        button{
+                            background: none;
+                            border: none;
+                            font-family: "Quicksand", sans-serif;
+                            font-weight: 700;
+                            font-size: 19px;
+                            margin: 15px 35px;
+                            padding: 15px 40px;
+                            min-width: 201px;
+                            border-radius: 50px;
+                            min-height: 55px;
+                            color: #fff;
+                            cursor: pointer;
+                            backface-visibility: hidden;
+                            transition: all 0.3s;
+                        }
                     }
                 }
  
