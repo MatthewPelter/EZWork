@@ -24,7 +24,7 @@ $receiver = $postBody->receiver;
 $body = securityscan($body);
 $receiver = securityscan($receiver);
 
-if (isset($postBody->jobID)) {
+if (property_exists($postBody, 'jobID')) {
     $jobID = $postBody->jobID;
     $jobID = securityscan($jobID);
 } else {
