@@ -159,6 +159,10 @@ if (!isset($_SESSION['user_id'])) {
         .u-italic {
             font-style: italic
         }
+
+        .tint {
+            color: #ccc;
+        }
     </style>
 </head>
 
@@ -171,11 +175,11 @@ if (!isset($_SESSION['user_id'])) {
     <?php
     $notifications = mysqli_query($conn, "SELECT * FROM notifications WHERE receiver='$user_id' AND isRead=0");
     while ($r = mysqli_fetch_assoc($notifications)) {
+        $senderID = $r['sender'];
+        $senderName = mysqli_query($conn, "SELECT username FROM clients WHERE id=$senderID");
+        $senderName = mysqli_fetch_assoc($senderName);
+        $senderName = $senderName['username'];
         if ($r['type'] == 'm') {
-            $senderID = $r['sender'];
-            $senderName = mysqli_query($conn, "SELECT username FROM clients WHERE id=$senderID");
-            $senderName = mysqli_fetch_assoc($senderName);
-            $senderName = $senderName['username'];
     ?>
             <div class="Message">
                 <div class="Message-icon">
@@ -183,6 +187,7 @@ if (!isset($_SESSION['user_id'])) {
                 </div>
                 <div class="Message-body">
                     <p>You got a message from <?php echo $senderName; ?></p>
+                    <p class="tint">at <?php echo $r['sentAt']; ?></p>
                     <button class="Message-button" onclick="location.href='./message/messages?mid=<?php echo $r['sender']; ?>'" id="js-showMe">Show me</button>
                 </div>
                 <button onclick="readNotification(<?php echo $r['id']; ?>)" class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
@@ -197,6 +202,7 @@ if (!isset($_SESSION['user_id'])) {
                 <div class="Message-body">
                     <p>This is a message telling you that everything is a-okay!</p>
                     <p>Good job, and good riddance.</p>
+                    <p class="tint">at <?php echo $r['sentAt']; ?></p>
                 </div>
                 <button onclick="readNotification(<?php echo $r['id']; ?>)" class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
             </div>
@@ -209,18 +215,21 @@ if (!isset($_SESSION['user_id'])) {
                 </div>
                 <div class="Message-body">
                     <p>This is a notification that something went wrong...</p>
+                    <p class="tint">at <?php echo $r['sentAt']; ?></p>
                 </div>
                 <button onclick="readNotification(<?php echo $r['id']; ?>)" class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
             </div>
 
-        <?php } else if ($r['type'] == 'r') { ?>
+        <?php } else if ($r['type'] == 'r') {
+        ?>
             <div class="Message">
                 <div class="Message-icon">
                     <i class="fa fa-bell-o"></i>
                 </div>
                 <div class="Message-body">
-                    <p>Do you know that you can assign status and relation to a company right in the visit list?</p>
-                    <button class="Message-button" id="js-showMe">Show me</button>
+                    <p><?php echo $senderName; ?> has submitted a proprosal to your job. View your messages for more details.</p>
+                    <p class="tint">at <?php echo $r['sentAt']; ?></p>
+                    <button onclick="location.href='./message/messages?mid=<?php echo $r['sender']; ?>'" class="Message-button" id="js-showMe">Show me</button>
                 </div>
                 <button onclick="readNotification(<?php echo $r['id']; ?>)" class="Message-close js-messageClose"><i class="fa fa-times"></i></button>
             </div>
