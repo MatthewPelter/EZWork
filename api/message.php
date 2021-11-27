@@ -51,6 +51,7 @@ if ($sender == null) {
 
 $query = mysqli_query($conn, "INSERT INTO messages(body, sender, receiver, isread, jobID, response) VALUES('$body', '$sender', '$getID', 0, '$jobID', NULL)") or die(mysqli_errno($conn));
 if ($query) {
+    date_default_timezone_set("America/New_York");
     $date = date('Y-m-d H:i:s');
     if ($jobID != NULL) {
         $sendNotification = mysqli_query($conn, "INSERT INTO notifications (type, receiver, sender, isRead, sentAt) VALUES ('r', '$getID', '$sender', 0, '$date')") or die(mysqli_errno($conn));

@@ -46,6 +46,7 @@ $check = mysqli_query($conn, "SELECT * FROM messages WHERE jobID = '$jobID' AND 
 if (mysqli_num_rows($check) > 0) {
     $query = mysqli_query($conn, "UPDATE messages SET response = 'accept' WHERE jobID='$jobID' AND sender='$getRegID' AND receiver='$my_id'") or die(mysqli_error($conn));
     $query = mysqli_query($conn, "UPDATE jobs SET freelancer_id='$freelancer_id', status=-1 WHERE id='$jobID'") or die(mysqli_error($conn));
+    date_default_timezone_set("America/New_York");
     $date = date('Y-m-d H:i:s');
     $sendNotification = mysqli_query($conn, "INSERT INTO notifications (type, receiver, sender, isRead, sentAt) VALUES ('a', '$getRegID', '$my_id', 0, '$date')") or die(mysqli_errno($conn));
     echo '{ "Success": "Accepted!" }';

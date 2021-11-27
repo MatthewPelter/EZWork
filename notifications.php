@@ -227,7 +227,8 @@ if (!isset($_SESSION['user_id'])) {
                     <i class="fa fa-bell-o"></i>
                 </div>
                 <div class="Message-body">
-                    <p><?php echo $senderName; ?> has submitted a proprosal to your job. View your messages for more details.</p>
+                    <p><?php echo $senderName; ?> has submitted a proprosal to your job.</p>
+                    <p>View your messages for more details.</p>
                     <p class="tint">at <?php echo $r['sentAt']; ?></p>
                     <button onclick="location.href='./message/messages?mid=<?php echo $r['sender']; ?>'" class="Message-button" id="js-showMe">Show me</button>
                 </div>

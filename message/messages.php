@@ -23,6 +23,7 @@ if (isset($_POST['submit'])) {
 
         $insertSQL = "INSERT INTO messages(body, sender, receiver, isread, jobID, response) VALUES('$cleanmessage', '$senderID', '$receiverID', 0, NULL, NULL)";
         $insertresult = mysqli_query($conn, $insertSQL) or die(mysqli_error($conn));
+        date_default_timezone_set("America/New_York");
         $date = date('Y-m-d H:i:s');
         $sendNotification = mysqli_query($conn, "INSERT INTO notifications (type, receiver, sender, isRead, sentAt) VALUES ('m', '$receiverID', '$senderID', 0, '$date')") or die(mysqli_errno($conn));
 
