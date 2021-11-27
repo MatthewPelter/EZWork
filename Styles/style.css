@@ -23771,8 +23771,7 @@ a:hover {
   background: white;
   width: 100%;
   border-radius: 15px;
-  -webkit-box-shadow: 0px 8px 60px -10px rgba(13, 28, 39, 0.6);
-          box-shadow: 0px 8px 60px -10px rgba(13, 28, 39, 0.6);
+  border: 1px solid lightgrey;
 }
 
 .profile .profile-container .profile-header {
@@ -23801,15 +23800,15 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  width: 50%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 30%;
 }
 
 .profile .profile-container .profile-header .user-image img {
-  width: 150px;
-  height: 150px;
+  width: 125px;
+  height: 125px;
   border-radius: 50%;
   -webkit-box-shadow: 0px 5px 50px 0px #1d4354, 0px 0px 0px 7px #1d4354;
           box-shadow: 0px 5px 50px 0px #1d4354, 0px 0px 0px 7px #1d4354;
@@ -23819,16 +23818,30 @@ a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  width: 50%;
+  width: 70%;
+}
+
+.profile .profile-container .profile-header .username h2 {
+  width: 100%;
+  text-align: start;
+  font-size: 3rem;
+  color: black;
+}
+
+.profile .profile-container .profile-header .username span {
+  color: #0a345e;
+  font-size: 1.2rem;
+  width: 100%;
+  text-align: start;
 }
 /*# sourceMappingURL=style.css.map */

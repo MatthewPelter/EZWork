@@ -67,6 +67,13 @@ if (mysqli_num_rows($result) > 0) {
                 </div>
                 <div class="username">
                     <h2><?php echo $row['firstname'] . " " . $row['lastname']; ?></h2>
+                    <span>
+                        <?php if ($row['freelancer_id'] != NULL) {
+                            echo "Freelancer";
+                        } else {
+                            echo "Client";
+                        } ?>
+                    </span>
                 </div>
             </div>
         </div>
