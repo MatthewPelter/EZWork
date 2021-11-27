@@ -179,7 +179,7 @@ if (!isset($_SESSION['user_id'])) {
         </div>
         <div id="notifications">
             <?php
-            $notifications = mysqli_query($conn, "SELECT * FROM notifications WHERE receiver='$user_id' AND isRead=0 ORDER BY id DESC");
+            $notifications = mysqli_query($conn, "SELECT * FROM notifications WHERE receiver='$user_id' ORDER BY id DESC");
             if (mysqli_num_rows($notifications) > 0) {
                 while ($r = mysqli_fetch_assoc($notifications)) {
                     $senderID = $r['sender'];
