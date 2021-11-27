@@ -256,7 +256,7 @@ if (!isset($_SESSION['user_id'])) {
 
         function closeAll() {
             $('#notifications').children('.Message').each(function() {
-                closeMessage(this);
+                closeMessage($(this));
             });
         }
 
