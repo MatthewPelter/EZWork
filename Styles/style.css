@@ -24004,6 +24004,7 @@ a:hover {
 }
 
 .profile .profile-container .profile-body .profile-info .profile-expertise {
+  margin: 1rem 0rem;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -24015,9 +24016,9 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .profile .profile-container .profile-body .profile-info .profile-expertise h3 {
@@ -24026,12 +24027,12 @@ a:hover {
 }
 
 .profile .profile-container .profile-body .profile-info .profile-expertise p {
+  margin: 0rem .5rem;
   font-size: 1.25rem;
   color: #797979;
-  margin-left: .5rem;
 }
 
-.profile .profile-container .profile-body .profile-info .profile-descriiption {
+.profile .profile-container .profile-body .profile-info .profile-description {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -24042,13 +24043,13 @@ a:hover {
           flex-direction: column;
 }
 
-.profile .profile-container .profile-body .profile-info .profile-descriiption h3 {
+.profile .profile-container .profile-body .profile-info .profile-description h3 {
   width: 100%;
   font-size: 1.25rem;
   color: black;
 }
 
-.profile .profile-container .profile-body .profile-info .profile-descriiption .bio-container {
+.profile .profile-container .profile-body .profile-info .profile-description .bio-container {
   width: 100%;
   border: .5px solid lightgrey;
   border-radius: 7px;
@@ -24071,7 +24072,7 @@ a:hover {
           justify-content: flex-start;
 }
 
-.profile .profile-container .profile-body .profile-info .profile-descriiption .bio-container p {
+.profile .profile-container .profile-body .profile-info .profile-description .bio-container p {
   color: #797979;
   font-size: 1.1rem;
 }

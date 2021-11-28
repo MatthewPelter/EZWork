@@ -151,32 +151,33 @@
   text-decoration: underline;
 }
 .profile .profile-container .profile-body .profile-info .profile-expertise {
+  margin: 1rem 0rem;
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 .profile .profile-container .profile-body .profile-info .profile-expertise h3 {
   font-size: 1.25rem;
   color: black;
 }
 .profile .profile-container .profile-body .profile-info .profile-expertise p {
+  margin: 0rem 0.5rem;
   font-size: 1.25rem;
   color: #797979;
-  margin-left: 0.5rem;
 }
-.profile .profile-container .profile-body .profile-info .profile-descriiption {
+.profile .profile-container .profile-body .profile-info .profile-description {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
-.profile .profile-container .profile-body .profile-info .profile-descriiption h3 {
+.profile .profile-container .profile-body .profile-info .profile-description h3 {
   width: 100%;
   font-size: 1.25rem;
   color: black;
 }
-.profile .profile-container .profile-body .profile-info .profile-descriiption .bio-container {
+.profile .profile-container .profile-body .profile-info .profile-description .bio-container {
   width: 100%;
   border: 0.5px solid lightgrey;
   border-radius: 7px;
@@ -188,7 +189,7 @@
   align-items: center;
   justify-content: flex-start;
 }
-.profile .profile-container .profile-body .profile-info .profile-descriiption .bio-container p {
+.profile .profile-container .profile-body .profile-info .profile-description .bio-container p {
   color: #797979;
   font-size: 1.1rem;
 }
