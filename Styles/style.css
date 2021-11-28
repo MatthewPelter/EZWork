@@ -24151,6 +24151,24 @@ a:hover {
   text-decoration: underline;
 }
 
+.profile .profile-container .profile-body .profile-info .educationJob .profile-job h4 {
+  color: #054e97;
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+
+.profile .profile-container .profile-body .profile-info .educationJob .profile-job #company {
+  margin: .5rem 0rem;
+  width: 100%;
+  font-size: 1.2rem;
+  color: #1b1b1b;
+}
+
+.profile .profile-container .profile-body .profile-info .educationJob .profile-job #date {
+  font-size: 1.1rem;
+  color: #797979;
+}
+
 .profile .profile-container .profile-body .profile-info .profile-location {
   width: 100%;
   display: -webkit-box;

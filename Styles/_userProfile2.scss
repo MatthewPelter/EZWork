@@ -265,6 +265,21 @@ $darktext: rgb(121, 121, 121);
                             margin: .25rem 0rem;
                             text-decoration: underline;
                         }
+                        h4{
+                            color: $lightColor;
+                            font-size: 1.4rem;
+                            text-decoration: none;
+                        }
+                        #company{
+                            margin: .5rem 0rem;
+                            width: 100%;
+                            font-size: 1.2rem;
+                            color: rgb(27, 27, 27);
+                        }
+                        #date{
+                            font-size: 1.1rem;
+                            color: $darktext;
+                        }
                     }
                 }
 
