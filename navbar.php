@@ -77,7 +77,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
     <div class="mobileJobCard">
         <ul>
             <a href="../ClientProfile/index.php">
-                <li>My Jobs</li>
+                <li>My Profile</li>
             </a>
             <a href="../newPostJob/myJobs.php">
                 <li>All My Job Posts</li>

@@ -136,6 +136,7 @@ if (mysqli_num_rows($result) > 0) {
                                 <p><?php echo $fetchJobCount['jobCount']; ?> Job(s) Posted</p>
                             </div>
                 </div>
+                <?php if ($row['freelancer_id'] != NULL) {?>
                 <div class="profile-info">
                     <h4>Personal Information</h4>
                     <div class="profile-expertise">
@@ -256,6 +257,15 @@ if (mysqli_num_rows($result) > 0) {
                         <h4>Reviews</h4>
                     </div>
                 </div>
+                <?php
+                } else{
+                ?>
+                <div class="profile-info">
+                    <h5>Client Account</h5>
+                </div>                
+                <?php
+                }
+                ?>
             </div>
         </div>
         
