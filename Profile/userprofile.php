@@ -168,13 +168,17 @@ if (mysqli_num_rows($result) > 0) {
                             <h4><?php echo $freelancer_array['jobTitle']; ?></h4>
                             <p id="company">Company: <?php echo $freelancer_array['company']; ?></p>
                             <p id="location">Job Location: <?php echo $freelancer_array['jobLocation']; ?></p>
-                            <p id="date"><?php echo $freelancer_array['jobStart']; ?> - <?php echo $freelancer_array['jobEnd']; ?></p>
+                            <p id="date">Dates Worked: <?php echo $freelancer_array['jobStart']; ?> - <?php echo $freelancer_array['jobEnd']; ?></p>
                         </div>
 
                     </div>
                     <div class="profile-location">
                         <h3>Location</h3>
                         <p><?php echo $freelancer_array['country']; ?></p>
+                    </div>
+
+                    <div class="ratings">
+                        <h4>Ratings</h4>
                     </div>
                 </div>
             </div>

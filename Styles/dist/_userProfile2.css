@@ -259,6 +259,7 @@
 }
 .profile .profile-container .profile-body .profile-info .educationJob .profile-job #location {
   margin-bottom: 0.5rem;
+  font-size: 1.1rem;
 }
 .profile .profile-container .profile-body .profile-info .educationJob .profile-job #date {
   font-size: 1.1rem;
@@ -281,4 +282,12 @@
   width: 100%;
   font-size: 1.4rem;
   color: #797979;
+}
+.profile .profile-container .profile-body .profile-info .ratings {
+  width: 100%;
+}
+.profile .profile-container .profile-body .profile-info .ratings h4 {
+  font-size: 2rem;
+  width: 100%;
+  text-align: start;
 }
