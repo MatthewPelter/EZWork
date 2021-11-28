@@ -24037,6 +24037,47 @@ a:hover {
   text-decoration: underline;
 }
 
+.profile .profile-container .profile-body .profile-job-info .jobCompleted {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem 0rem;
+}
+
+.profile .profile-container .profile-body .profile-job-info .jobCompleted p {
+  width: 100%;
+  font-size: 1.1rem;
+  color: #797979;
+}
+
+.profile .profile-container .profile-body .profile-job-info .jobPosted {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile .profile-container .profile-body .profile-job-info .jobPosted p {
+  width: 100%;
+  font-size: 1.1rem;
+  color: #797979;
+}
+
 .profile .profile-container .profile-body .profile-info {
   padding: 1rem;
   width: 100%;

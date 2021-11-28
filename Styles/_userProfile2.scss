@@ -206,6 +206,30 @@ $darktext: rgb(121, 121, 121);
                     font-size: 1.1rem;
                     text-decoration: underline;
                 }
+
+                .jobCompleted{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    margin: 1rem 0rem;
+                    p{
+                        width: 100%;
+                        font-size: 1.1rem;
+                        color: $darktext;
+                    }
+                }
+                .jobPosted{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    p{
+                        width: 100%;
+                        font-size: 1.1rem;
+                        color: $darktext;
+                    }
+                }
             }
             .profile-info{
                 padding: 1rem;
