@@ -330,4 +330,5 @@
 .profile .profile-container .profile-body .profile-info .userJobs img {
   width: 50%;
   object-fit: contain;
+  border-radius: 10px;
 }
