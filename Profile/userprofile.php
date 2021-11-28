@@ -285,10 +285,13 @@ if (mysqli_num_rows($result) > 0) {
                             <?php echo "Seems like " . $row['username'] . " is inactive."; ?>
                         </p>
                         <img src="../Image/sad-cartoon.gif" alt="no-activity">
+                    </div>
                         <?php   
                             }
                             else{
                         ?>
+                    <div class="userJobs2">
+                        <h4>Jobs Posted</h4>       
                             <?php
                             $username = $row['username'];
                             $getUserID = "SELECT id FROM clients WHERE username = '$username'";
@@ -301,7 +304,6 @@ if (mysqli_num_rows($result) > 0) {
                             if (mysqli_num_rows($jobResult) > 0) {
                                 while ($r = mysqli_fetch_assoc($jobResult)) {
                             ?>
-                            <h4>Jobs Posted</h4>       
                             <div class="jobPost" onclick="location.href=`../newPostJob/job.php?id=<?php echo $r['id']; ?>`">
                                 <div class="job-title">
                                     <a href="job.php?id=<?php echo $r['id']; ?>"><?php echo $r['title']; ?></a>
@@ -356,7 +358,8 @@ if (mysqli_num_rows($result) > 0) {
                                     </div>
                                 </div>
 
-                            </div>                        
+                            </div>                             
+                    </div>                       
                             <?php
                                 }
                             }
@@ -364,8 +367,6 @@ if (mysqli_num_rows($result) > 0) {
                         <?php   
                             }
                         ?>
-
-                    </div>
                 </div>                
                 <?php
                 }

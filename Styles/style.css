@@ -24276,29 +24276,46 @@ a:hover {
   border-radius: 10px;
 }
 
-.profile .profile-container .profile-body .profile-info .userJobs .jobPost {
+.profile .profile-container .profile-body .profile-info .userJobs2 {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.profile .profile-container .profile-body .profile-info .userJobs2 .jobPost {
   width: 100%;
   padding: 1rem 2rem;
   border-top: .7px solid lightgrey;
   cursor: pointer;
 }
 
-.profile .profile-container .profile-body .profile-info .userJobs .jobPost .job-title {
+.profile .profile-container .profile-body .profile-info .userJobs2 .jobPost .job-title {
   width: 100%;
 }
 
-.profile .profile-container .profile-body .profile-info .userJobs .jobPost .job-title a {
+.profile .profile-container .profile-body .profile-info .userJobs2 .jobPost .job-title a {
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: bolder;
   color: #054e97;
 }
 
-.profile .profile-container .profile-body .profile-info .userJobs .jobPost .job-title a:hover {
+.profile .profile-container .profile-body .profile-info .userJobs2 .jobPost .job-title a:hover {
   text-decoration: underline;
 }
 
-.profile .profile-container .profile-body .profile-info .userJobs .jobPost .status {
+.profile .profile-container .profile-body .profile-info .userJobs2 .jobPost .status {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -24312,19 +24329,19 @@ a:hover {
           align-items: center;
 }
 
-.profile .profile-container .profile-body .profile-info .userJobs .jobPost .status p {
+.profile .profile-container .profile-body .profile-info .userJobs2 .jobPost .status p {
   color: #797979;
   font-size: 1rem;
   margin-right: .5rem;
 }
 
-.profile .profile-container .profile-body .profile-info .userJobs .jobPost .status span {
+.profile .profile-container .profile-body .profile-info .userJobs2 .jobPost .status span {
   font-size: 1rem;
   font-weight: bolder;
   color: lightgreen;
 }
 
-.profile .profile-container .profile-body .profile-info .userJobs .jobPost .card1 {
+.profile .profile-container .profile-body .profile-info .userJobs2 .jobPost .card1 {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -24338,7 +24355,7 @@ a:hover {
           align-items: center;
 }
 
-.profile .profile-container .profile-body .profile-info .userJobs .jobPost .card1 .postedOn, .profile .profile-container .profile-body .profile-info .userJobs .jobPost .card1 .postedBy {
+.profile .profile-container .profile-body .profile-info .userJobs2 .jobPost .card1 .postedOn, .profile .profile-container .profile-body .profile-info .userJobs2 .jobPost .card1 .postedBy {
   width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -24352,17 +24369,17 @@ a:hover {
           align-items: center;
 }
 
-.profile .profile-container .profile-body .profile-info .userJobs .jobPost .card1 .postedOn p, .profile .profile-container .profile-body .profile-info .userJobs .jobPost .card1 .postedBy p {
+.profile .profile-container .profile-body .profile-info .userJobs2 .jobPost .card1 .postedOn p, .profile .profile-container .profile-body .profile-info .userJobs2 .jobPost .card1 .postedBy p {
   color: #797979;
   font-size: 1rem;
   margin-right: .5rem;
 }
 
-.profile .profile-container .profile-body .profile-info .userJobs .jobPost .card1 .postedOn span, .profile .profile-container .profile-body .profile-info .userJobs .jobPost .card1 .postedBy span {
+.profile .profile-container .profile-body .profile-info .userJobs2 .jobPost .card1 .postedOn span, .profile .profile-container .profile-body .profile-info .userJobs2 .jobPost .card1 .postedBy span {
   font-size: .95rem;
 }
 
-.profile .profile-container .profile-body .profile-info .userJobs .jobPost .card2 {
+.profile .profile-container .profile-body .profile-info .userJobs2 .jobPost .card2 {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -24376,7 +24393,7 @@ a:hover {
           align-items: center;
 }
 
-.profile .profile-container .profile-body .profile-info .userJobs .jobPost .card2 .location, .profile .profile-container .profile-body .profile-info .userJobs .jobPost .card2 .price {
+.profile .profile-container .profile-body .profile-info .userJobs2 .jobPost .card2 .location, .profile .profile-container .profile-body .profile-info .userJobs2 .jobPost .card2 .price {
   width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -24390,17 +24407,17 @@ a:hover {
           align-items: center;
 }
 
-.profile .profile-container .profile-body .profile-info .userJobs .jobPost .card2 .location p, .profile .profile-container .profile-body .profile-info .userJobs .jobPost .card2 .price p {
+.profile .profile-container .profile-body .profile-info .userJobs2 .jobPost .card2 .location p, .profile .profile-container .profile-body .profile-info .userJobs2 .jobPost .card2 .price p {
   color: #797979;
   font-size: 1rem;
   margin-right: .25rem;
 }
 
-.profile .profile-container .profile-body .profile-info .userJobs .jobPost .card2 .location span, .profile .profile-container .profile-body .profile-info .userJobs .jobPost .card2 .price span {
+.profile .profile-container .profile-body .profile-info .userJobs2 .jobPost .card2 .location span, .profile .profile-container .profile-body .profile-info .userJobs2 .jobPost .card2 .price span {
   font-size: .95rem;
 }
 
-.profile .profile-container .profile-body .profile-info .userJobs .jobPost:hover {
+.profile .profile-container .profile-body .profile-info .userJobs2 .jobPost:hover {
   background: whitesmoke;
 }
 /*# sourceMappingURL=style.css.map */
