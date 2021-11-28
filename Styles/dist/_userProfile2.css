@@ -334,8 +334,7 @@
 .profile .profile-container .profile-body .profile-info .userJobs2 {
   width: 100%;
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
   justify-content: flex-start;
 }
 .profile .profile-container .profile-body .profile-info .userJobs2 .jobPost {
