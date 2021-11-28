@@ -340,7 +340,7 @@
 .profile .profile-container .profile-body .profile-info .userJobs .jobPost {
   width: 100%;
   padding: 1rem 2rem;
-  border-top: 0.7px solid lightgrey;
+  border-bottom: 0.7px solid lightgrey;
   cursor: pointer;
 }
 .profile .profile-container .profile-body .profile-info .userJobs .jobPost .job-title {
