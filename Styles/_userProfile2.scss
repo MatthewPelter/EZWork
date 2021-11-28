@@ -179,7 +179,7 @@ $darktext: rgb(121, 121, 121);
                         justify-content: flex-start;
                         h3{
                             text-decoration: underline;
-                            font-size: 1.25rem;
+                            font-size: 1.5rem;
                             color: $color1;
                         }
                         p{
@@ -196,9 +196,9 @@ $darktext: rgb(121, 121, 121);
                     h3{
 
                         width: 100%;
-                        font-size: 1.25rem;
+                        font-size: 1.5rem;
                         color: $color1;
-                        margin-bottom: 1rem;
+                        margin-bottom: .25rem;
                     }
                     .bio-container{
                         width: 100%;
@@ -225,14 +225,16 @@ $darktext: rgb(121, 121, 121);
                         font-size: 1.5rem;
                         color: $color1;
                         width: 100%;
+                        margin: .25rem 0rem;
                     }
 
                     h4{
                         color: $lightColor;
-                        font-size: 1.3rem;
+                        font-size: 1.4rem;
                     }
 
                     #degree{
+                        margin: .5rem 0rem;
                         width: 100%;
                         font-size: 1.2rem;
                         color: rgb(27, 27, 27);

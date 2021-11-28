@@ -166,7 +166,7 @@
 }
 .profile .profile-container .profile-body .profile-info .profile-expertise .expertise h3, .profile .profile-container .profile-body .profile-info .profile-expertise .experienceLevel h3 {
   text-decoration: underline;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: #0a345e;
 }
 .profile .profile-container .profile-body .profile-info .profile-expertise .expertise p, .profile .profile-container .profile-body .profile-info .profile-expertise .experienceLevel p {
@@ -180,9 +180,9 @@
 }
 .profile .profile-container .profile-body .profile-info .profile-description h3 {
   width: 100%;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: #0a345e;
-  margin-bottom: 1rem;
+  margin-bottom: 0.25rem;
 }
 .profile .profile-container .profile-body .profile-info .profile-description .bio-container {
   width: 100%;
@@ -208,12 +208,14 @@
   font-size: 1.5rem;
   color: #0a345e;
   width: 100%;
+  margin: 0.25rem 0rem;
 }
 .profile .profile-container .profile-body .profile-info .profile-education h4 {
   color: #054e97;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 .profile .profile-container .profile-body .profile-info .profile-education #degree {
+  margin: 0.5rem 0rem;
   width: 100%;
   font-size: 1.2rem;
   color: #1b1b1b;

@@ -140,11 +140,11 @@ if (mysqli_num_rows($result) > 0) {
                     <h4>Personal Information</h4>
                     <div class="profile-expertise">
                         <div class="expertise">
-                            <h3>Expertise:</h3>
+                            <h3>Expertise</h3>
                             <p><?php echo $freelancer_array['expertise']; ?></p>
                         </div>
                         <div class="experienceLevel">
-                            <h3>Experience Level:</h3>
+                            <h3>Experience Level</h3>
                             <p><?php echo $freelancer_array['experience']; ?></p>
                         </div>
                      
@@ -158,9 +158,9 @@ if (mysqli_num_rows($result) > 0) {
                     </div>
                     <div class="profile-education">
                         <h3>Education</h3>
-                        <h4 id="School">School: <?php echo $freelancer_array['school']; ?></h4>
-                        <p id="degree">Degree: <?php echo $freelancer_array['degree']; ?> Degree in <?php echo $freelancer_array['fos']; ?></p>
-                        <p id="date">Date Attended: <?php echo $freelancer_array['schoolStart']; ?> to <?php echo $freelancer_array['schoolEnd']; ?></p>
+                        <h4><?php echo $freelancer_array['school']; ?></h4>
+                        <p id="degree"><?php echo $freelancer_array['degree']; ?> Degree in <?php echo $freelancer_array['fos']; ?></p>
+                        <p id="date">Dates Attended: <?php echo $freelancer_array['schoolStart']; ?> to <?php echo $freelancer_array['schoolEnd']; ?></p>
                     </div>
                     <div class="profile-job">
                         <h3>Job Experience</h3>
