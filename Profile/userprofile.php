@@ -290,6 +290,7 @@ if (mysqli_num_rows($result) > 0) {
                             else{
                         ?>
                             <?php
+                            $username = $row['username'];
                             $getUserID = "SELECT id FROM clients WHERE username = '$username'";
                             $getResult = mysqli_query($conn, $getUserID);
                             $userrow = mysqli_fetch_assoc($getResult);
