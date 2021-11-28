@@ -380,15 +380,12 @@ if (mysqli_num_rows($result) > 0) {
                 }
             ?>
         </div>
-        
-
     </div>
-    <?php include '../footer.php'; ?>
 
     <!--DataList-->
     <datalist id="allskills"></datalist>
 
-
+    <?php include '../footer.php'; ?>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="./app.js"></script>
