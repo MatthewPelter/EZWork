@@ -24247,9 +24247,7 @@ a:hover {
 .profile .profile-container .profile-body .profile-info .userJobs {
   width: 100%;
   margin: 1rem 0rem;
-  border: .7px solid lightgrey;
-  border-left: none;
-  border-right: none;
+  padding: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -24266,12 +24264,13 @@ a:hover {
 }
 
 .profile .profile-container .profile-body .profile-info .userJobs p {
+  padding: .5rem 0rem;
   font-size: 1.4rem;
   color: #797979;
 }
 
 .profile .profile-container .profile-body .profile-info .userJobs img {
-  width: 50%;
+  width: 45%;
   -o-object-fit: contain;
      object-fit: contain;
   border-radius: 10px;
