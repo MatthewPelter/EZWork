@@ -300,8 +300,9 @@ if (mysqli_num_rows($result) > 0) {
                             
                             if (mysqli_num_rows($jobResult) > 0) {
                                 while ($r = mysqli_fetch_assoc($jobResult)) {
-                            ?>       
-                            <div class="jobPost" onclick="location.href=`job.php?id=<?php echo $r['id']; ?>`">
+                            ?>
+                            <h4>Jobs Posted</h4>       
+                            <div class="jobPost" onclick="location.href=`newPostJob/job.php?id=<?php echo $r['id']; ?>`">
                                 <div class="job-title">
                                     <a href="job.php?id=<?php echo $r['id']; ?>"><?php echo $r['title']; ?></a>
                                 </div>
@@ -330,17 +331,6 @@ if (mysqli_num_rows($result) > 0) {
                                         <p>Posted on:</p>
                                         <span>
                                             <?php echo $r['datePosted']; ?>
-                                        </span>
-                                    </div>
-                                    <div class="postedBy">
-                                        <p>Posted By:</p>
-                                        <img style="width: 16px; border-radius:50%; margin-right: 0.5rem;" src="<?php echo $unameFetched['avatar']; ?>" alt="Avatar">
-                                        <span>
-                                            <?php if ($unameFetched['username'] != $_SESSION['userid']) {
-                                                echo "<a href='../Profile/userprofile.php?name=" . $unameFetched['username'] . "'>" . $unameFetched['username'] . "</a>";
-                                            } else {
-                                                echo $unameFetched['username'];
-                                            }  ?>
                                         </span>
                                     </div>
                                 </div>
