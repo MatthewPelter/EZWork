@@ -272,7 +272,9 @@ if (mysqli_num_rows($result) > 0) {
                 } else{
                 ?>
                 <div class="profile-info">
-                    <h5>Client Account</h5>
+                    <div class="client-info">
+                        <h3>Username: <span><?php echo $row['username'] ?></span></h3>
+                    </div>
                 </div>                
                 <?php
                 }

@@ -319,6 +319,17 @@ $darktext: rgb(121, 121, 121);
                         text-align: start;
                     }
                 }
+                .client-info{
+                    width: 100%;
+                    h3{
+                        font-size: 2rem;
+                        color: $color1;
+
+                        span{
+                            color: $darktext;
+                        }
+                    }
+                }
 
             }
         }

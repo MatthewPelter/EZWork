@@ -24214,4 +24214,17 @@ a:hover {
   width: 100%;
   text-align: start;
 }
+
+.profile .profile-container .profile-body .profile-info .client-info {
+  width: 100%;
+}
+
+.profile .profile-container .profile-body .profile-info .client-info h3 {
+  font-size: 2rem;
+  color: #0a345e;
+}
+
+.profile .profile-container .profile-body .profile-info .client-info h3 span {
+  color: #797979;
+}
 /*# sourceMappingURL=style.css.map */
