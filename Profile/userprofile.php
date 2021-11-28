@@ -306,7 +306,7 @@ if (mysqli_num_rows($result) > 0) {
                             ?>
                             <div class="jobPost" onclick="location.href=`../newPostJob/job.php?id=<?php echo $r['id']; ?>`">
                                 <div class="job-title">
-                                    <a href="job.php?id=<?php echo $r['id']; ?>"><?php echo $r['title']; ?></a>
+                                    <a href="../newPostJob/job.php?id=<?php echo $r['id']; ?>"><?php echo $r['title']; ?></a>
                                 </div>
 
                                 <!-- ----------------------------------------- -->
