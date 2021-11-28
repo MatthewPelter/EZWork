@@ -112,7 +112,7 @@ if (mysqli_num_rows($result) > 0) {
             <div class="profile-body">
 
                 <div class="profile-job-info">
-                    <h4>EZWork Jobs</h4>
+                    <h4>EZWork Information</h4>
                             <!-- if freelancer -->
 
                             <?php if ($row['freelancer_id'] != NULL) {

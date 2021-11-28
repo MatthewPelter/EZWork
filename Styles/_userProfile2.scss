@@ -201,18 +201,19 @@ $darktext: rgb(121, 121, 121);
                 border-right: 1px solid lightgrey;
 
                 h4{
+                    margin: 1rem 0rem;
                     width: 100%;
                     text-align: center;
-                    font-size: 1.1rem;
+                    font-size: 1.5rem;
                     text-decoration: underline;
                 }
 
                 .jobCompleted{
                     width: 100%;
+                    text-align: center;
                     display: flex;
                     flex-direction: row;
                     align-items: center;
-                    margin: 1rem 0rem;
                     p{
                         width: 100%;
                         font-size: 1.1rem;
@@ -221,7 +222,9 @@ $darktext: rgb(121, 121, 121);
                 }
                 .jobPosted{
                     width: 100%;
+                    margin: 1rem 0rem;
                     display: flex;
+                    text-align: center;
                     flex-direction: row;
                     align-items: center;
                     p{

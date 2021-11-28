@@ -183,17 +183,18 @@
   border-right: 1px solid lightgrey;
 }
 .profile .profile-container .profile-body .profile-job-info h4 {
+  margin: 1rem 0rem;
   width: 100%;
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   text-decoration: underline;
 }
 .profile .profile-container .profile-body .profile-job-info .jobCompleted {
   width: 100%;
+  text-align: center;
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 1rem 0rem;
 }
 .profile .profile-container .profile-body .profile-job-info .jobCompleted p {
   width: 100%;
@@ -202,7 +203,9 @@
 }
 .profile .profile-container .profile-body .profile-job-info .jobPosted {
   width: 100%;
+  margin: 1rem 0rem;
   display: flex;
+  text-align: center;
   flex-direction: row;
   align-items: center;
 }
