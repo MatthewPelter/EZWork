@@ -23848,6 +23848,7 @@ a:hover {
 
 .profile .profile-container .profile-header .username .contact {
   margin-top: .5rem;
+  margin-right: 1rem;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -23895,10 +23896,6 @@ a:hover {
           transform: scale(1.2);
 }
 
-.profile .profile-container .profile-header .username .contact .message {
-  margin-left: 1rem;
-}
-
 .profile .profile-container .profile-header .username .contact .message button {
   cursor: pointer;
   border-radius: 15px;
@@ -23907,7 +23904,7 @@ a:hover {
   font-size: 1rem;
   color: #0a345e;
   font-weight: bolder;
-  padding: 0.5rem 1rem;
+  padding: 0.25rem .5rem;
   border: 1px solid lightgrey;
 }
 

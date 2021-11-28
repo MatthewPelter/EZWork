@@ -83,7 +83,7 @@ if (mysqli_num_rows($result) > 0) {
                         <?php } ?>                            
                         </div>
                         <div class="message">
-                            <button class="profile-card__button button--blue js-message-btn">Message</button>
+                            <button>Message</button>
                         </div>
                         <div class="profile-card-message js-message">
                             <form class="profile-card-form">
@@ -137,6 +137,7 @@ if (mysqli_num_rows($result) > 0) {
                         <p><?php echo $freelancer_array['jobEnd']; ?></p>
                     </div>
                     <div class="profile-location">
+                        <h3>Location</h3>
                         <p><?php echo $freelancer_array['country']; ?></p>
                     </div>
                 </div>
@@ -234,7 +235,7 @@ if (mysqli_num_rows($result) > 0) {
                         </div>
                         <span id="status"></span>
                     </div>
-
+                    <!--
                     <div class="profile-card-message js-message">
                         <form class="profile-card-form">
                             <div class="profile-card-form__container">
@@ -258,6 +259,7 @@ if (mysqli_num_rows($result) > 0) {
                 </div>
 
             </div>
+        -->
 
             <svg hidden="hidden">
                 <defs>
