@@ -157,21 +157,21 @@ if (mysqli_num_rows($result) > 0) {
                         
                     </div>
                     <div class="educationJob">
-                        
-                    </div>
-                    <div class="profile-education">
-                        <h3>Education</h3>
-                        <h4><?php echo $freelancer_array['school']; ?></h4>
-                        <p id="degree"><?php echo $freelancer_array['degree']; ?> Degree in <?php echo $freelancer_array['fos']; ?></p>
-                        <p id="date">Dates Attended: <?php echo $freelancer_array['schoolStart']; ?> - <?php echo $freelancer_array['schoolEnd']; ?></p>
-                    </div>
-                    <div class="profile-job">
-                        <h3>Job Experience</h3>
-                        <p><?php echo $freelancer_array['jobTitle']; ?></p>
-                        <p><?php echo $freelancer_array['company']; ?></p>
-                        <p><?php echo $freelancer_array['jobLocation']; ?></p>
-                        <p><?php echo $freelancer_array['jobStart']; ?></p>
-                        <p><?php echo $freelancer_array['jobEnd']; ?></p>
+                        <div class="profile-education">
+                            <h3>Education</h3>
+                            <h4><?php echo $freelancer_array['school']; ?></h4>
+                            <p id="degree"><?php echo $freelancer_array['degree']; ?> Degree in <?php echo $freelancer_array['fos']; ?></p>
+                            <p id="date">Dates Attended: <?php echo $freelancer_array['schoolStart']; ?> - <?php echo $freelancer_array['schoolEnd']; ?></p>
+                        </div>
+                        <div class="profile-job">
+                            <h3>Job Experience</h3>
+                            <p><?php echo $freelancer_array['jobTitle']; ?></p>
+                            <p><?php echo $freelancer_array['company']; ?></p>
+                            <p><?php echo $freelancer_array['jobLocation']; ?></p>
+                            <p><?php echo $freelancer_array['jobStart']; ?></p>
+                            <p><?php echo $freelancer_array['jobEnd']; ?></p>
+                        </div>
+
                     </div>
                     <div class="profile-location">
                         <h3>Location</h3>
