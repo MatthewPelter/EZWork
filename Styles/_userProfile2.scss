@@ -354,6 +354,91 @@ $darktext: rgb(121, 121, 121);
                         object-fit: contain;
                         border-radius: 10px;
                     }
+
+                    .jobPost{
+                        width: 100%;
+                        padding: 1rem 2rem;
+                        border-top: .7px solid lightgrey;
+    
+                        .job-title{
+                            width: 100%;
+                            a{
+                                text-decoration: none;
+                                font-size: 1.5rem;
+                                font-weight: bolder;
+                                color: $lightColor;
+    
+                                &:hover{
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+    
+                        .status{
+                            width: 100%;
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            p{
+                                color: $darktext;
+                                font-size: 1rem;
+                                margin-right: .5rem;
+                            }
+                            span{
+                                font-size: 1rem;
+                                font-weight: bolder;
+                                color: lightgreen;
+                            }
+                        }
+    
+                        .card1{
+                            width: 100%;
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+    
+                            .postedOn,.postedBy{
+                                width: 50%;
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                p{
+                                    color: $darktext;
+                                    font-size: 1rem;
+                                    margin-right: .5rem;
+                                }
+                                span{
+                                    font-size: .95rem;
+                                }
+                            }
+                        }
+    
+                        .card2{
+                            width: 100%;
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+    
+                            .location,.price{
+                                width: 50%;
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                p{
+                                    color: $darktext;
+                                    font-size: 1rem;
+                                    margin-right: .25rem;
+                                }
+                                span{
+                                    font-size: .95rem;
+                                }
+                            }
+                        }
+                        cursor: pointer;
+                        &:hover{
+                            background: whitesmoke;
+                        }
+                    }
                 }
 
             }
