@@ -275,6 +275,16 @@ if (mysqli_num_rows($result) > 0) {
                     <div class="client-info">
                         <h3>Username: <span><?php echo $row['username'] ?></span></h3>
                     </div>
+                    <div class="userJobs">
+                        <?php
+                            if($fetchJobCount['jobCount'] = 0){
+                                echo "Seems like " . $row['username'] . " is inactive.";
+                            }
+                            else{
+                                echo "Nice";
+                            }
+                        ?>
+                    </div>
                 </div>                
                 <?php
                 }

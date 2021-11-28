@@ -24220,11 +24220,13 @@ a:hover {
 }
 
 .profile .profile-container .profile-body .profile-info .client-info h3 {
-  font-size: 2rem;
+  text-decoration: underline;
+  font-size: 1.5rem;
   color: #0a345e;
 }
 
 .profile .profile-container .profile-body .profile-info .client-info h3 span {
+  text-decoration: none;
   color: #797979;
 }
 /*# sourceMappingURL=style.css.map */
