@@ -319,7 +319,7 @@
   border-left: none;
   border-right: none;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -329,5 +329,5 @@
 }
 .profile .profile-container .profile-body .profile-info .userJobs img {
   width: 50%;
-  object-fit: cover;
+  object-fit: contain;
 }

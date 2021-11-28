@@ -343,7 +343,7 @@ $darktext: rgb(121, 121, 121);
                     border-left: none;
                     border-right: none;
                     display: flex;
-                    flex-direction: row;
+                    flex-direction: column;
                     justify-content: center;
                     align-items: center;
                     p{
@@ -352,7 +352,7 @@ $darktext: rgb(121, 121, 121);
                     }
                     img{
                         width: 50%;
-                        object-fit: cover;
+                        object-fit: contain;
                     }
                 }
 
