@@ -163,7 +163,16 @@ if (mysqli_num_rows($result) > 0) {
                     <div class="profile-description">
                         <h3>Biography</h3>
                         <div class="bio-container">
-                            <p><?php echo $freelancer_array['description']; ?></p>
+                            <p>
+                                <?php 
+                                    if( $freelancer_array['description'] != NULL){
+                                        echo $freelancer_array['description']; 
+                                    } else{
+                                        echo "No Biography";
+                                    }
+                                    
+                                ?>
+                            </p>
                         </div>
                         
                     </div>
