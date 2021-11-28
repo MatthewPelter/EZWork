@@ -59,7 +59,9 @@ if (mysqli_num_rows($result) > 0) {
     <div class="profile">
         
         <div class="profile-container">
-            
+        <?php
+        if ($dataFound) {
+        ?>
             
             <div class="profile-header">
                 <div class="user-image">
@@ -267,6 +269,13 @@ if (mysqli_num_rows($result) > 0) {
                 }
                 ?>
             </div>
+            <?php
+                } else {
+            ?>
+                <span>User does not Exists</span>
+            <?php
+                }
+            ?>
         </div>
         
 
