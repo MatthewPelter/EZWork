@@ -317,13 +317,7 @@ if (mysqli_num_rows($result) > 0) {
                 }
                 ?>
             </div>
-            <?php
-                } else {
-            ?>
-                <span>User does not Exists</span>
-            <?php
-                }
-            ?>
+            <?php } ?>
         </div>
     </div>
 
