@@ -24092,8 +24092,9 @@ a:hover {
 }
 
 .profile .profile-container .profile-body .profile-info .educationJob {
-  margin-top: 1rem;
+  margin: 1rem 0rem;
   width: 100%;
+  height: 10vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -24108,6 +24109,7 @@ a:hover {
 
 .profile .profile-container .profile-body .profile-info .educationJob .profile-education {
   width: 50%;
+  height: 100%;
 }
 
 .profile .profile-container .profile-body .profile-info .educationJob .profile-education h3 {
@@ -24138,6 +24140,7 @@ a:hover {
 
 .profile .profile-container .profile-body .profile-info .educationJob .profile-job {
   width: 50%;
+  height: 100%;
 }
 
 .profile .profile-container .profile-body .profile-info .educationJob .profile-job h3 {
@@ -24146,5 +24149,31 @@ a:hover {
   width: 100%;
   margin: .25rem 0rem;
   text-decoration: underline;
+}
+
+.profile .profile-container .profile-body .profile-info .profile-location {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.profile .profile-container .profile-body .profile-info .profile-location h3 {
+  width: 100%;
+  font-size: 1.5rem;
+  color: #0a345e;
+  width: 100%;
+  margin: .25rem 0rem;
+  text-decoration: underline;
+}
+
+.profile .profile-container .profile-body .profile-info .profile-location p {
+  width: 100%;
+  font-size: 1.4rem;
+  color: #797979;
 }
 /*# sourceMappingURL=style.css.map */
