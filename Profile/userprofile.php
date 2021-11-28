@@ -156,6 +156,9 @@ if (mysqli_num_rows($result) > 0) {
                         </div>
                         
                     </div>
+                    <div class="educationJob">
+                        
+                    </div>
                     <div class="profile-education">
                         <h3>Education</h3>
                         <h4><?php echo $freelancer_array['school']; ?></h4>
