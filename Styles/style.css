@@ -23935,10 +23935,11 @@ a:hover {
 }
 
 .profile .profile-container .profile-body .profile-job-info h4 {
+  color: #0a345e;
   margin: 1rem 0rem;
   width: 100%;
   text-align: start;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   text-decoration: underline;
 }
 
@@ -23986,7 +23987,7 @@ a:hover {
 }
 
 .profile .profile-container .profile-body .profile-info {
-  padding: 1rem;
+  padding: 2rem;
   width: 100%;
   -ms-grid-row: 1;
   -ms-grid-row-span: 5;
@@ -24057,7 +24058,8 @@ a:hover {
 .profile .profile-container .profile-body .profile-info .profile-description h3 {
   width: 100%;
   font-size: 1.25rem;
-  color: black;
+  color: #0a345e;
+  margin-bottom: 1rem;
 }
 
 .profile .profile-container .profile-body .profile-info .profile-description .bio-container {
@@ -24086,5 +24088,32 @@ a:hover {
 .profile .profile-container .profile-body .profile-info .profile-description .bio-container p {
   color: #797979;
   font-size: 1.1rem;
+}
+
+.profile .profile-container .profile-body .profile-info .profile-education {
+  width: 100%;
+  margin: 1rem 0rem;
+}
+
+.profile .profile-container .profile-body .profile-info .profile-education h3 {
+  font-size: 1.5rem;
+  color: #0a345e;
+  width: 100%;
+}
+
+.profile .profile-container .profile-body .profile-info .profile-education h4 {
+  color: #054e97;
+  font-size: 1.3rem;
+}
+
+.profile .profile-container .profile-body .profile-info .profile-education #degree {
+  width: 100%;
+  font-size: 1.2rem;
+  color: #1b1b1b;
+}
+
+.profile .profile-container .profile-body .profile-info .profile-education #date {
+  font-size: 1.1rem;
+  color: #797979;
 }
 /*# sourceMappingURL=style.css.map */

@@ -158,11 +158,9 @@ if (mysqli_num_rows($result) > 0) {
                     </div>
                     <div class="profile-education">
                         <h3>Education</h3>
-                        <p><?php echo $freelancer_array['school']; ?></p>
-                        <p><?php echo $freelancer_array['degree']; ?></p>
-                        <p><?php echo $freelancer_array['fos']; ?></p>
-                        <p><?php echo $freelancer_array['schoolStart']; ?></p>
-                        <p><?php echo $freelancer_array['schoolEnd']; ?></p>
+                        <h4 id="School">School: <?php echo $freelancer_array['school']; ?></h4>
+                        <p id="degree">Degree: <?php echo $freelancer_array['degree']; ?> Degree in <?php echo $freelancer_array['fos']; ?></p>
+                        <p id="date">Date Attended: <?php echo $freelancer_array['schoolStart']; ?> to <?php echo $freelancer_array['schoolEnd']; ?></p>
                     </div>
                     <div class="profile-job">
                         <h3>Job Experience</h3>
