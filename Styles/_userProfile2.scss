@@ -357,13 +357,18 @@ $darktext: rgb(121, 121, 121);
                 }
 
                 .userJobs2{
+                    h4{
+                        width: 100%;
+                        text-align: start;
+                    }
+                    padding: 1rem;
                     width: 100%;
                     display: flex;
                     flex-direction: column;
                     justify-content: flex-start;
                     .jobPost{
                         width: 100%;
-                        padding: 1rem 2rem;
+                        padding: 1rem;
                         border-top: .7px solid lightgrey;
     
                         .job-title{

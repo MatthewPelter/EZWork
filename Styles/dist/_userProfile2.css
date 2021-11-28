@@ -332,14 +332,19 @@
   border-radius: 10px;
 }
 .profile .profile-container .profile-body .profile-info .userJobs2 {
+  padding: 1rem;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
+.profile .profile-container .profile-body .profile-info .userJobs2 h4 {
+  width: 100%;
+  text-align: start;
+}
 .profile .profile-container .profile-body .profile-info .userJobs2 .jobPost {
   width: 100%;
-  padding: 1rem 2rem;
+  padding: 1rem;
   border-top: 0.7px solid lightgrey;
   cursor: pointer;
 }

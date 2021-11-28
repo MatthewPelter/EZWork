@@ -24277,6 +24277,7 @@ a:hover {
 }
 
 .profile .profile-container .profile-body .profile-info .userJobs2 {
+  padding: 1rem;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -24290,9 +24291,14 @@ a:hover {
           justify-content: flex-start;
 }
 
+.profile .profile-container .profile-body .profile-info .userJobs2 h4 {
+  width: 100%;
+  text-align: start;
+}
+
 .profile .profile-container .profile-body .profile-info .userJobs2 .jobPost {
   width: 100%;
-  padding: 1rem 2rem;
+  padding: 1rem;
   border-top: .7px solid lightgrey;
   cursor: pointer;
 }
