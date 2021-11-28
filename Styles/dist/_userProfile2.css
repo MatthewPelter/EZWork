@@ -90,8 +90,9 @@
   padding: 0.25rem 1rem;
   border: 1px solid lightgrey;
 }
-.profile .profile-container .profile-header .username .contact .message button :hover {
-  background: whitesmoke;
+.profile .profile-container .profile-header .username .contact .message button:hover {
+  background: white;
+  box-shadow: 0px 7px 30px rgba(19, 127, 212, 0.75);
 }
 .profile .profile-container .profile-body {
   width: 100%;
@@ -269,6 +270,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  margin-bottom: 2rem;
 }
 .profile .profile-container .profile-body .profile-info .profile-location h3 {
   width: 100%;
@@ -284,7 +286,6 @@
   color: #797979;
 }
 .profile .profile-container .profile-body .profile-info .ratings {
-  margin: 1rem 0rem;
   padding: 1rem 0rem;
   width: 100%;
   border-top: 0.7px solid lightgrey;

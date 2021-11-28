@@ -23908,8 +23908,10 @@ a:hover {
   border: 1px solid lightgrey;
 }
 
-.profile .profile-container .profile-header .username .contact .message button :hover {
-  background: whitesmoke;
+.profile .profile-container .profile-header .username .contact .message button:hover {
+  background: white;
+  -webkit-box-shadow: 0px 7px 30px rgba(19, 127, 212, 0.75);
+          box-shadow: 0px 7px 30px rgba(19, 127, 212, 0.75);
 }
 
 .profile .profile-container .profile-body {
@@ -24183,6 +24185,7 @@ a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-bottom: 2rem;
 }
 
 .profile .profile-container .profile-body .profile-info .profile-location h3 {
@@ -24201,7 +24204,6 @@ a:hover {
 }
 
 .profile .profile-container .profile-body .profile-info .ratings {
-  margin: 1rem 0rem;
   padding: 1rem 0rem;
   width: 100%;
   border-top: .7px solid lightgrey;
