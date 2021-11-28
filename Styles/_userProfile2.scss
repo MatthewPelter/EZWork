@@ -321,18 +321,27 @@ $darktext: rgb(121, 121, 121);
                 }
                 .client-info{
                     width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: flex-start;
                     h3{
                         font-size: 1.5rem;
+                        text-decoration: underline;
                         color: $color1;
-
-                        span{
-                            color: $darktext;
-                        }
+                    }
+                    span{
+                        padding-left: .25rem;
+                        font-size: 1.5rem;
+                        color: $darktext;
                     }
                 }
                 .userJobs{
                     width: 100%;
                     margin: 1rem 0rem;
+                    border: .7px solid lightgrey;
+                    border-left: none;
+                    border-right: none;
                     display: flex;
                     flex-direction: row;
                     justify-content: center;
@@ -340,6 +349,10 @@ $darktext: rgb(121, 121, 121);
                     p{
                         font-size: 1.4rem;
                         color: $darktext;
+                    }
+                    img{
+                        width: 50%;
+                        object-fit: cover;
                     }
                 }
 

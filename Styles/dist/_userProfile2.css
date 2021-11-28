@@ -297,17 +297,27 @@
 }
 .profile .profile-container .profile-body .profile-info .client-info {
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
 }
 .profile .profile-container .profile-body .profile-info .client-info h3 {
   font-size: 1.5rem;
+  text-decoration: underline;
   color: #0a345e;
 }
-.profile .profile-container .profile-body .profile-info .client-info h3 span {
+.profile .profile-container .profile-body .profile-info .client-info span {
+  padding-left: 0.25rem;
+  font-size: 1.5rem;
   color: #797979;
 }
 .profile .profile-container .profile-body .profile-info .userJobs {
   width: 100%;
   margin: 1rem 0rem;
+  border: 0.7px solid lightgrey;
+  border-left: none;
+  border-right: none;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -316,4 +326,8 @@
 .profile .profile-container .profile-body .profile-info .userJobs p {
   font-size: 1.4rem;
   color: #797979;
+}
+.profile .profile-container .profile-body .profile-info .userJobs img {
+  width: 50%;
+  object-fit: cover;
 }

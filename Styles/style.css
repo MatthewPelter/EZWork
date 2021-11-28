@@ -24217,20 +24217,39 @@ a:hover {
 
 .profile .profile-container .profile-body .profile-info .client-info {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .profile .profile-container .profile-body .profile-info .client-info h3 {
   font-size: 1.5rem;
+  text-decoration: underline;
   color: #0a345e;
 }
 
-.profile .profile-container .profile-body .profile-info .client-info h3 span {
+.profile .profile-container .profile-body .profile-info .client-info span {
+  padding-left: .25rem;
+  font-size: 1.5rem;
   color: #797979;
 }
 
 .profile .profile-container .profile-body .profile-info .userJobs {
   width: 100%;
   margin: 1rem 0rem;
+  border: .7px solid lightgrey;
+  border-left: none;
+  border-right: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -24249,5 +24268,11 @@ a:hover {
 .profile .profile-container .profile-body .profile-info .userJobs p {
   font-size: 1.4rem;
   color: #797979;
+}
+
+.profile .profile-container .profile-body .profile-info .userJobs img {
+  width: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 /*# sourceMappingURL=style.css.map */

@@ -273,19 +273,28 @@ if (mysqli_num_rows($result) > 0) {
                 ?>
                 <div class="profile-info">
                     <div class="client-info">
-                        <h3>Username: <span><?php echo $row['username'] ?></span></h3>
+                        <h3>Username</h3>
+                        <span><?php echo $row['username'] ?></span>
                     </div>
                     <div class="userJobs">
-                        <p>
+
                         <?php
                             if($fetchJobCount['jobCount'] < 1){
-                                echo "Seems like " . $row['username'] . " is inactive.";
+                        ?>
+                        <p>
+                            <?php echo "Seems like " . $row['username'] . " is inactive."; ?>
+                        </p>
+                        <img src="../Image/sad-cartoon.gif" alt="no-activity">
+                        <?php   
                             }
                             else{
-                                echo "Nice";
+                        ?>
+                        <p>
+                            <?php  echo "Nice"; ?> 
+                        </p>
+                        <?php   
                             }
                         ?>
-                        </p>
 
                     </div>
                 </div>                
