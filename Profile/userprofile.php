@@ -76,10 +76,14 @@ if (mysqli_num_rows($result) > 0) {
                     </span>
                     <div class="contact">
                         <div class="linkedIn">
-                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        <?php if ($row['freelancer_id'] != NULL && $freelancer_array['linkedin'] != "") { ?>
+                                <a href="<?php echo $freelancer_array['linkedin']; ?>" target="_blank">
+                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                </a>
+                        <?php } ?>                            
                         </div>
                         <div class="message">
-                            <button>Message</button>
+                            <button class="profile-card__button button--blue js-message-btn">Message</button>
                         </div>                        
                     </div>
 
@@ -119,6 +123,25 @@ if (mysqli_num_rows($result) > 0) {
                 </div>
             </div>
         </div>
+        <div class="profile-card-message js-message">
+            <form class="profile-card-form">
+                <div class="profile-card-form__container">
+                    <textarea id="messagecontent" placeholder="Say something..." required></textarea>
+                </div>
+
+                <div class="profile-card-form__bottom">
+                    <button name="send-message" id="sendmessage" class="profile-card__button button--blue js-message-close">
+                        Send
+                    </button>
+
+                    <button class="profile-card__button button--gray js-message-close">
+                        Cancel
+                    </button>
+                </div>
+            </form>
+
+            <div class="profile-card__overlay js-message-close"></div>
+        </div>        
 
     </div>
 
