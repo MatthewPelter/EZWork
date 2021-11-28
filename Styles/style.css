@@ -24202,6 +24202,7 @@ a:hover {
 
 .profile .profile-container .profile-body .profile-info .ratings {
   width: 100%;
+  border-top: .7px solid lightgrey;
 }
 
 .profile .profile-container .profile-body .profile-info .ratings h4 {
