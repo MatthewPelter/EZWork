@@ -23997,7 +23997,7 @@ a:hover {
 
 .profile .profile-container .profile-body .profile-info h4 {
   width: 100%;
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #0a345e;
   text-align: start;
   text-decoration: underline;
@@ -24016,18 +24016,29 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.profile .profile-container .profile-body .profile-info .profile-expertise .expertise, .profile .profile-container .profile-body .profile-info .profile-expertise .experienceLevel {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
 
-.profile .profile-container .profile-body .profile-info .profile-expertise h3 {
+.profile .profile-container .profile-body .profile-info .profile-expertise .expertise h3, .profile .profile-container .profile-body .profile-info .profile-expertise .experienceLevel h3 {
+  text-decoration: underline;
   font-size: 1.25rem;
-  color: black;
+  color: #0a345e;
 }
 
-.profile .profile-container .profile-body .profile-info .profile-expertise p {
-  margin: 0rem .5rem;
+.profile .profile-container .profile-body .profile-info .profile-expertise .expertise p, .profile .profile-container .profile-body .profile-info .profile-expertise .experienceLevel p {
   font-size: 1.25rem;
   color: #797979;
 }
@@ -24053,7 +24064,7 @@ a:hover {
   width: 100%;
   border: .5px solid lightgrey;
   border-radius: 7px;
-  padding: .5rem;
+  padding: 1rem;
   background: whitesmoke;
   display: -webkit-box;
   display: -ms-flexbox;

@@ -158,7 +158,7 @@ $darktext: rgb(121, 121, 121);
                 
                 h4{
                     width: 100%;
-                    font-size: 1.5rem;
+                    font-size: 2rem;
                     color: $color1;
                     text-align: start;
                     text-decoration: underline;
@@ -170,17 +170,22 @@ $darktext: rgb(121, 121, 121);
                     display: flex;
                     flex-direction: row;
                     align-items: center;
-                    justify-content:flex-start;
-                    h3{
-                        font-size: 1.25rem;
-                        color: black;
+                    
+                    .expertise,.experienceLevel{
+                        width: 50%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        h3{
+                            text-decoration: underline;
+                            font-size: 1.25rem;
+                            color: $color1;
+                        }
+                        p{
+                            font-size: 1.25rem;
+                            color: $darktext;
+                        }
                     }
-                    p{
-                        margin: 0rem .5rem;
-                        font-size: 1.25rem;
-                        color: $darktext;
-                    }
-
                 }
 
                 .profile-description{
@@ -196,7 +201,7 @@ $darktext: rgb(121, 121, 121);
                         width: 100%;
                         border: .5px solid lightgrey;
                         border-radius: 7px;
-                        padding: .5rem;
+                        padding: 1rem;
                         background: whitesmoke; 
                         display: flex;
                         flex-direction: row;

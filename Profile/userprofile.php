@@ -139,10 +139,15 @@ if (mysqli_num_rows($result) > 0) {
                 <div class="profile-info">
                     <h4>Personal Information</h4>
                     <div class="profile-expertise">
-                        <h3>Expertise:</h3>
-                        <p><?php echo $freelancer_array['expertise']; ?></p>
-                        <h3>Experience Level:</h3>
-                        <p><?php echo $freelancer_array['experience']; ?></p>
+                        <div class="expertise">
+                            <h3>Expertise:</h3>
+                            <p><?php echo $freelancer_array['expertise']; ?></p>
+                        </div>
+                        <div class="experienceLevel">
+                            <h3>Experience Level:</h3>
+                            <p><?php echo $freelancer_array['experience']; ?></p>
+                        </div>
+                     
                     </div>
                     <div class="profile-description">
                         <h3>Biography</h3>
