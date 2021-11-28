@@ -299,11 +299,9 @@
   width: 100%;
 }
 .profile .profile-container .profile-body .profile-info .client-info h3 {
-  text-decoration: underline;
   font-size: 1.5rem;
   color: #0a345e;
 }
 .profile .profile-container .profile-body .profile-info .client-info h3 span {
-  text-decoration: none;
   color: #797979;
 }
