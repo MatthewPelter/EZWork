@@ -179,6 +179,7 @@
   flex-direction: column;
 }
 .profile .profile-container .profile-body .profile-info .profile-description h3 {
+  text-decoration: underline;
   width: 100%;
   font-size: 1.5rem;
   color: #0a345e;
@@ -209,10 +210,12 @@
   color: #0a345e;
   width: 100%;
   margin: 0.25rem 0rem;
+  text-decoration: underline;
 }
 .profile .profile-container .profile-body .profile-info .profile-education h4 {
   color: #054e97;
   font-size: 1.4rem;
+  text-decoration: none;
 }
 .profile .profile-container .profile-body .profile-info .profile-education #degree {
   margin: 0.5rem 0rem;
