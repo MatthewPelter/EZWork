@@ -86,7 +86,7 @@ $darktext: rgb(121, 121, 121);
                     .message{
                         button{
                             cursor: pointer;
-                            border-radius: 15px;
+                            border-radius: 10px;
                             border: none;
                             background: rgb(219, 219, 219);
                             font-size: 1rem;
@@ -204,13 +204,13 @@ $darktext: rgb(121, 121, 121);
                     margin: 1rem 0rem;
                     width: 100%;
                     text-align: center;
-                    font-size: 1.5rem;
+                    font-size: 1rem;
                     text-decoration: underline;
                 }
 
                 .jobCompleted{
                     width: 100%;
-                    text-align: center;
+                    text-align: start;
                     display: flex;
                     flex-direction: row;
                     align-items: center;
@@ -224,7 +224,7 @@ $darktext: rgb(121, 121, 121);
                     width: 100%;
                     margin: 1rem 0rem;
                     display: flex;
-                    text-align: center;
+                    text-align: start;
                     flex-direction: row;
                     align-items: center;
                     p{
@@ -238,6 +238,14 @@ $darktext: rgb(121, 121, 121);
                 padding: 1rem;
                 width: 100%;
                 grid-area: 1 / 2 / 6 / 6;
+                
+                h3{
+                    width: 100%;
+                    font-size: 1.2rem;
+                    color: $color1;
+                    text-align: start;
+                    text-decoration: underline;
+                }
             }
         }
     }

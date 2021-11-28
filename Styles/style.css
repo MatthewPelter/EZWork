@@ -23898,7 +23898,7 @@ a:hover {
 
 .profile .profile-container .profile-header .username .contact .message button {
   cursor: pointer;
-  border-radius: 15px;
+  border-radius: 10px;
   border: none;
   background: #dbdbdb;
   font-size: 1rem;
@@ -24034,13 +24034,13 @@ a:hover {
   margin: 1rem 0rem;
   width: 100%;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-decoration: underline;
 }
 
 .profile .profile-container .profile-body .profile-job-info .jobCompleted {
   width: 100%;
-  text-align: center;
+  text-align: start;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -24065,7 +24065,7 @@ a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  text-align: center;
+  text-align: start;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -24089,5 +24089,13 @@ a:hover {
   -ms-grid-column: 2;
   -ms-grid-column-span: 4;
   grid-area: 1 / 2 / 6 / 6;
+}
+
+.profile .profile-container .profile-body .profile-info h3 {
+  width: 100%;
+  font-size: 1.2rem;
+  color: #0a345e;
+  text-align: start;
+  text-decoration: underline;
 }
 /*# sourceMappingURL=style.css.map */

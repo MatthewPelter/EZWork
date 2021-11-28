@@ -80,7 +80,9 @@ if (mysqli_num_rows($result) > 0) {
                                 <a href="<?php echo $freelancer_array['linkedin']; ?>" target="_blank">
                                     <i class="fa fa-linkedin" aria-hidden="true"></i>
                                 </a>
-                        <?php } ?>                            
+                        <?php } else { ?>
+                                <a href="../404Page/index.html" style="display: none;"></a>
+                        <?php } ?>
                         </div>
                         <div class="message">
                             <button>Message</button>
@@ -135,6 +137,7 @@ if (mysqli_num_rows($result) > 0) {
                             </div>
                 </div>
                 <div class="profile-info">
+                    <h3>Personal Information</h3>
                     <div class="profile-expertise">
                         <h3>Expertise & Skills</h3>
                         <p><?php echo $freelancer_array['expertise']; ?></p>
