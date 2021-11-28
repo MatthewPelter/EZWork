@@ -174,9 +174,37 @@ if (mysqli_num_rows($result) > 0) {
                                 }
                                 ?>
                             </h4>
-                            <p id="company">Company: <?php echo $freelancer_array['company']; ?></p>
-                            <p id="location">Job Location: <?php echo $freelancer_array['jobLocation']; ?></p>
-                            <p id="date">Dates Worked: <?php echo $freelancer_array['jobStart']; ?> - <?php echo $freelancer_array['jobEnd']; ?></p>
+                            <p id="company">
+                                Company: 
+                                <?php 
+                                    if( $freelancer_array['company'] != NULL){
+                                        echo $freelancer_array['company']; 
+                                    } else{
+                                        echo "None";
+                                    }
+                                ?>
+                            </p>
+                            <p id="location">
+                                Job Location:
+                                <?php 
+                                    if( $freelancer_array['jobLocation'] != NULL){
+                                        echo $freelancer_array['jobLocation'];
+                                    } else{
+                                        echo "None";
+                                    }
+                                ?> 
+                            </p>
+                            <p id="date">
+                                Dates Worked: 
+                                <?php 
+                                    if( $freelancer_array['jobStart'] != 0000){
+                                        echo $freelancer_array['jobStart']; ?> - <?php echo $freelancer_array['jobEnd'];
+                                    }else{
+                                        echo "";
+                                    }
+                                
+                                ?>
+                            </p>
                         </div>
 
                     </div>
