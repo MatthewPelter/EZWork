@@ -284,6 +284,8 @@
   color: #797979;
 }
 .profile .profile-container .profile-body .profile-info .ratings {
+  margin: 1rem 0rem;
+  padding: 1rem 0rem;
   width: 100%;
   border-top: 0.7px solid lightgrey;
 }

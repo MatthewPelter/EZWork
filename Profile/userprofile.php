@@ -165,7 +165,15 @@ if (mysqli_num_rows($result) > 0) {
                         </div>
                         <div class="profile-job">
                             <h3>Job Experience</h3>
-                            <h4><?php echo $freelancer_array['jobTitle']; ?></h4>
+                            <h4>
+                                <?php 
+                                if ($freelancer_array['jobTitle'] != NULL ){
+                                    echo $freelancer_array['jobTitle'];
+                                } else{
+                                    echo "None";
+                                }
+                                ?>
+                            </h4>
                             <p id="company">Company: <?php echo $freelancer_array['company']; ?></p>
                             <p id="location">Job Location: <?php echo $freelancer_array['jobLocation']; ?></p>
                             <p id="date">Dates Worked: <?php echo $freelancer_array['jobStart']; ?> - <?php echo $freelancer_array['jobEnd']; ?></p>
@@ -178,7 +186,7 @@ if (mysqli_num_rows($result) > 0) {
                     </div>
 
                     <div class="ratings">
-                        <h4>Ratings</h4>
+                        <h4>Reviews</h4>
                     </div>
                 </div>
             </div>
