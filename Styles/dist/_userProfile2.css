@@ -305,3 +305,15 @@
 .profile .profile-container .profile-body .profile-info .client-info h3 span {
   color: #797979;
 }
+.profile .profile-container .profile-body .profile-info .userJobs {
+  width: 100%;
+  margin: 1rem 0rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.profile .profile-container .profile-body .profile-info .userJobs p {
+  font-size: 1.4rem;
+  color: #797979;
+}
