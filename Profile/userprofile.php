@@ -111,6 +111,31 @@ if (mysqli_num_rows($result) > 0) {
                     
             <div class="profile-body">
 
+                <div class="profile-job-info">
+                    <h4>EZWork Jobs</h4>
+                            <!-- if freelancer -->
+
+                            <?php if ($row['freelancer_id'] != NULL) {
+                                $freeID = $row['freelancer_id'];
+                                $pullJobs = mysqli_query($conn, "SELECT COUNT(*) AS completedJobs FROM jobs WHERE freelancer_id = '$freeID' AND status=1");
+                                $pullJobCount = mysqli_fetch_assoc($pullJobs);
+                            ?>
+                                <div class="profile-card-inf__item">
+                                    <div class="profile-card-inf__title"><?php echo $pullJobCount['completedJobs']; ?></div>
+                                    <div class="profile-card-inf__txt">Completed Freelance Jobs</div>
+                                </div>
+                            <?php } ?>
+
+                            <?php
+                            $userid = $row['id'];
+                            $getJobs = mysqli_query($conn, "SELECT COUNT(*) AS jobCount FROM jobs WHERE user_id = '$userid'");
+                            $fetchJobCount = mysqli_fetch_assoc($getJobs);
+                            ?>
+                            <div class="profile-card-inf__item">
+                                <div class="profile-card-inf__title"><?php echo $fetchJobCount['jobCount']; ?></div>
+                                <div class="profile-card-inf__txt">Job(s) Posted</div>
+                            </div>
+                </div>
                 <div class="profile-info">
                     <div class="profile-expertise">
                         <h3>Expertise & Skills</h3>
@@ -199,7 +224,7 @@ if (mysqli_num_rows($result) > 0) {
                             ?>
                             <div class="profile-card-inf__item">
                                 <div class="profile-card-inf__title"><?php echo $fetchJobCount['jobCount']; ?></div>
-                                <div class="profile-card-inf__txt">Job(s) Requested</div>
+                                <div class="profile-card-inf__txt">Job(s) Posted</div>
                             </div>
 
                             <div class="profile-card-inf__item">
