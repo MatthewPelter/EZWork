@@ -24276,6 +24276,13 @@ a:hover {
   border-radius: 10px;
 }
 
+.profile .profile-container .profile-body .profile-info .userJobs .jobPostTitle {
+  margin: 1rem 0rem 0rem 0rem;
+  font-size: 1.5rem;
+  text-decoration: underline;
+  color: #0a345e;
+}
+
 .profile .profile-container .profile-body .profile-info .userJobs .jobPost {
   width: 100%;
   padding: 1rem 2rem;
