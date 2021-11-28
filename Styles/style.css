@@ -24164,6 +24164,10 @@ a:hover {
   color: #1b1b1b;
 }
 
+.profile .profile-container .profile-body .profile-info .educationJob .profile-job #location {
+  margin-bottom: .5rem;
+}
+
 .profile .profile-container .profile-body .profile-info .educationJob .profile-job #date {
   font-size: 1.1rem;
   color: #797979;
