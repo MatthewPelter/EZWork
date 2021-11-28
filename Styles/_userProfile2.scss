@@ -55,7 +55,6 @@ $darktext: rgb(121, 121, 121);
                 }
                 .contact{
                     margin-top: .5rem;
-                    margin-right: 1rem;
                     width: 100%;
                     display: flex;
                     flex-direction: row;
@@ -63,6 +62,7 @@ $darktext: rgb(121, 121, 121);
                     justify-content: flex-start;
                 
                     .linkedIn{
+                        margin-right: 1rem;
                         width: fit-content;    
                         flex-shrink: 0;
                         transition: all 0.3s;
@@ -92,12 +92,14 @@ $darktext: rgb(121, 121, 121);
                             font-size: 1rem;
                             color: $color1;
                             font-weight: bolder;
-                            padding: 0.25rem .5rem;
+                            padding: 0.25rem 1rem;
                             border: 1px solid lightgrey;
-                            &:hover {
-                              transition: all 0.2s ease;
-                              background: rgb(233, 233, 233);
-                            }  
+                            flex-shrink: 0;
+                            transition: all 0.3s;
+                            :hover{
+                                box-shadow: 0px 7px 30px rgba(19, 127, 212, 0.75);
+                                transform: scale(1.2);
+                            } 
                         }
                     }
                     .profile-card-message {
