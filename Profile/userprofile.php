@@ -141,7 +141,15 @@ if (mysqli_num_rows($result) > 0) {
                     <div class="profile-expertise">
                         <div class="expertise">
                             <h3>Expertise</h3>
-                            <p><?php echo $freelancer_array['expertise']; ?></p>
+                            <p>
+                                <?php
+                                    if( $freelancer_array['expertise'] != NULL){
+                                        echo $freelancer_array['expertise'];
+                                    }else{
+                                        echo "No Expertise";
+                                    }
+                                ?>
+                            </p>
                         </div>
                         <div class="experienceLevel">
                             <h3>Experience Level</h3>
@@ -159,9 +167,40 @@ if (mysqli_num_rows($result) > 0) {
                     <div class="educationJob">
                         <div class="profile-education">
                             <h3>Education</h3>
-                            <h4><?php echo $freelancer_array['school']; ?></h4>
-                            <p id="degree"><?php echo $freelancer_array['degree']; ?> Degree in <?php echo $freelancer_array['fos']; ?></p>
-                            <p id="date">Dates Attended: <?php echo $freelancer_array['schoolStart']; ?> - <?php echo $freelancer_array['schoolEnd']; ?></p>
+                            <h4>
+                                <?php 
+                                    if( $freelancer_array['school'] != NULL){
+                                        echo $freelancer_array['school']; 
+                                    }else{
+                                        echo "None";
+                                    }
+                              
+                                ?>
+                            </h4>
+          
+                            <p id="degree">
+                                <?php 
+                                    if( $freelancer_array['degree'] != NULL){
+                                ?>
+                                <?php echo $freelancer_array['degree']; ?> Degree in <?php echo $freelancer_array['fos']; ?>
+                                <?php
+                                    } else{
+                                        echo "None";
+                                    }
+                                ?>
+                            </p>
+                            <p id="date">
+                                <?php
+                                    if( $freelancer_array['schoolStart'] != 0000){
+                                ?>
+                                Dates Attended: <?php echo $freelancer_array['schoolStart']; ?> - <?php echo $freelancer_array['schoolEnd']; ?>
+                                <?php         
+                                } else{
+                                    echo "None";
+                                }
+                                ?>
+                               
+                            </p>
                         </div>
                         <div class="profile-job">
                             <h3>Job Experience</h3>
@@ -200,7 +239,7 @@ if (mysqli_num_rows($result) > 0) {
                                     if( $freelancer_array['jobStart'] != 0000){
                                         echo $freelancer_array['jobStart']; ?> - <?php echo $freelancer_array['jobEnd'];
                                     }else{
-                                        echo "";
+                                        echo "None";
                                     }
                                 
                                 ?>
