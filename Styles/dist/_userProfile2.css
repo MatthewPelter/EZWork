@@ -201,29 +201,45 @@
   color: #797979;
   font-size: 1.1rem;
 }
-.profile .profile-container .profile-body .profile-info .profile-education {
+.profile .profile-container .profile-body .profile-info .educationJob {
+  margin-top: 1rem;
   width: 100%;
-  margin: 1rem 0rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
-.profile .profile-container .profile-body .profile-info .profile-education h3 {
+.profile .profile-container .profile-body .profile-info .educationJob .profile-education {
+  width: 50%;
+}
+.profile .profile-container .profile-body .profile-info .educationJob .profile-education h3 {
   font-size: 1.5rem;
   color: #0a345e;
   width: 100%;
   margin: 0.25rem 0rem;
   text-decoration: underline;
 }
-.profile .profile-container .profile-body .profile-info .profile-education h4 {
+.profile .profile-container .profile-body .profile-info .educationJob .profile-education h4 {
   color: #054e97;
   font-size: 1.4rem;
   text-decoration: none;
 }
-.profile .profile-container .profile-body .profile-info .profile-education #degree {
+.profile .profile-container .profile-body .profile-info .educationJob .profile-education #degree {
   margin: 0.5rem 0rem;
   width: 100%;
   font-size: 1.2rem;
   color: #1b1b1b;
 }
-.profile .profile-container .profile-body .profile-info .profile-education #date {
+.profile .profile-container .profile-body .profile-info .educationJob .profile-education #date {
   font-size: 1.1rem;
   color: #797979;
+}
+.profile .profile-container .profile-body .profile-info .educationJob .profile-job {
+  width: 50%;
+}
+.profile .profile-container .profile-body .profile-info .educationJob .profile-job h3 {
+  font-size: 1.5rem;
+  color: #0a345e;
+  width: 100%;
+  margin: 0.25rem 0rem;
+  text-decoration: underline;
 }

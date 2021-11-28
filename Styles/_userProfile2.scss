@@ -218,35 +218,54 @@ $darktext: rgb(121, 121, 121);
                     }
                 }
 
-                .profile-education{
+                .educationJob{
+                    margin-top: 1rem;
                     width: 100%;
-                    margin: 1rem 0rem;
-                    h3{
-                        font-size: 1.5rem;
-                        color: $color1;
-                        width: 100%;
-                        margin: .25rem 0rem;
-                        text-decoration: underline;
-                    }
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
 
-                    h4{
-                        color: $lightColor;
-                        font-size: 1.4rem;
-                        text-decoration: none;
-                    }
+                    
+                    .profile-education{
+                        width: 50%;
+                        h3{
+                            font-size: 1.5rem;
+                            color: $color1;
+                            width: 100%;
+                            margin: .25rem 0rem;
+                            text-decoration: underline;
+                        }
 
-                    #degree{
-                        margin: .5rem 0rem;
-                        width: 100%;
-                        font-size: 1.2rem;
-                        color: rgb(27, 27, 27);
-                    }
+                        h4{
+                            color: $lightColor;
+                            font-size: 1.4rem;
+                            text-decoration: none;
+                        }
 
-                    #date{
-                        font-size: 1.1rem;
-                        color: $darktext;
+                        #degree{
+                            margin: .5rem 0rem;
+                            width: 100%;
+                            font-size: 1.2rem;
+                            color: rgb(27, 27, 27);
+                        }
+
+                        #date{
+                            font-size: 1.1rem;
+                            color: $darktext;
+                        }
+                    }
+                    .profile-job{
+                        width: 50%;
+                        h3{
+                            font-size: 1.5rem;
+                            color: $color1;
+                            width: 100%;
+                            margin: .25rem 0rem;
+                            text-decoration: underline;
+                        }
                     }
                 }
+
             }
         }
     }

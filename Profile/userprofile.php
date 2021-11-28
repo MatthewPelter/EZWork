@@ -160,7 +160,7 @@ if (mysqli_num_rows($result) > 0) {
                         <h3>Education</h3>
                         <h4><?php echo $freelancer_array['school']; ?></h4>
                         <p id="degree"><?php echo $freelancer_array['degree']; ?> Degree in <?php echo $freelancer_array['fos']; ?></p>
-                        <p id="date">Dates Attended: <?php echo $freelancer_array['schoolStart']; ?> to <?php echo $freelancer_array['schoolEnd']; ?></p>
+                        <p id="date">Dates Attended: <?php echo $freelancer_array['schoolStart']; ?> - <?php echo $freelancer_array['schoolEnd']; ?></p>
                     </div>
                     <div class="profile-job">
                         <h3>Job Experience</h3>
