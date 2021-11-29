@@ -25,6 +25,7 @@ if (isset($_POST['postID'])) {
         if ($_SESSION['user_id'] == $user_id) {
 
             mysqli_query($conn, "DELETE FROM jobs WHERE id='$jobid'") or die(mysqli_errno($conn));
+            mysqli_query($conn, "DELETE FROM messages WHERE jobID='$jobid'") or die(mysqli_errno($conn));
             echo "Post has been deleted!";
         } else {
             die("This is not your post...");
