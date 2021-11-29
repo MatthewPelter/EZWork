@@ -331,15 +331,15 @@
   object-fit: contain;
   border-radius: 10px;
 }
-.profile .profile-container .profile-body .profile-info .userJobs .jobPostTitle {
-  margin: 1rem 0rem 0rem 0rem;
+.profile .profile-container .profile-body .profile-info .userJobs h3 {
+  width: 100%;
   font-size: 1.1rem;
-  text-decoration: underline;
   color: #0a345e;
+  text-decoration: underline;
 }
 .profile .profile-container .profile-body .profile-info .userJobs .jobPost {
   width: 100%;
-  padding: 1rem 2rem;
+  padding: 0.5rem 0rem;
   border-bottom: 0.7px solid lightgrey;
   cursor: pointer;
 }
@@ -348,7 +348,7 @@
 }
 .profile .profile-container .profile-body .profile-info .userJobs .jobPost .job-title a {
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: bolder;
   color: #054e97;
 }

@@ -354,24 +354,22 @@ $darktext: rgb(121, 121, 121);
                         object-fit: contain;
                         border-radius: 10px;
                     }
-
-                    .jobPostTitle{
-                        margin: 1rem 0rem 0rem 0rem;
+                    h3{
+                        width: 100%;
                         font-size: 1.1rem;
-                        text-decoration: underline;
                         color: $color1;
+                        text-decoration: underline;
                     }
-
                     .jobPost{
                         width: 100%;
-                        padding: 1rem 2rem;
+                        padding: .5rem 0rem;
                         border-bottom: .7px solid lightgrey;
     
                         .job-title{
                             width: 100%;
                             a{
                                 text-decoration: none;
-                                font-size: 1.5rem;
+                                font-size: 1.25rem;
                                 font-weight: bolder;
                                 color: $lightColor;
     

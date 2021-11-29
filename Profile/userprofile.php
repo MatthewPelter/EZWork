@@ -276,9 +276,6 @@ if (mysqli_num_rows($result) > 0) {
                         <h3>Username:</h3>
                         <span><?php echo $row['username'] ?></span>
                     </div>
-                    <div class="jobPostTitle">
-                        <h4>Jobs Posted</h4> 
-                    </div>
                     <div class="userJobs">
 
                         <?php
@@ -292,6 +289,7 @@ if (mysqli_num_rows($result) > 0) {
                             }
                             else{
                         ?>     
+                            <h3>All Jobs Post(s)</h3>
                             <?php
                             $username = $row['username'];
                             $getUserID = "SELECT id FROM clients WHERE username = '$username'";
