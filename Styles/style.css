@@ -23918,20 +23918,20 @@ a:hover {
   width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  -ms-grid-rows: (1fr)[3];
-      grid-template-rows: repeat(3, 1fr);
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  -ms-grid-rows: (1fr)[5];
+      grid-template-rows: repeat(5, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 }
 
 .profile .profile-container .profile-body .profile-job-info {
   -ms-grid-row: 1;
-  -ms-grid-row-span: 3;
+  -ms-grid-row-span: 5;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
-  grid-area: 1 / 1 / 4 / 2;
+  grid-area: 1 / 1 / 6 / 2;
   padding: 1rem;
   border-right: 1px solid lightgrey;
 }
@@ -23992,10 +23992,10 @@ a:hover {
   padding: 2rem;
   width: 100%;
   -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
+  -ms-grid-row-span: 5;
   -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
-  grid-area: 1 / 2 / 3 / 4;
+  -ms-grid-column-span: 4;
+  grid-area: 1 / 2 / 6 / 6;
 }
 
 .profile .profile-container .profile-body .profile-info h4 {
@@ -24276,45 +24276,36 @@ a:hover {
   border-radius: 10px;
 }
 
-.profile .profile-container .profile-body .jobs {
-  border-top: .7px solid lightgrey;
-  width: 100%;
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 1;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
-  grid-area: 3 / 2 / 4 / 4;
-}
-
-.profile .profile-container .profile-body .jobs h3 {
-  font-size: 1.2rem;
+.profile .profile-container .profile-body .profile-info .userJobs .jobPostTitle {
+  margin: 1rem 0rem 0rem 0rem;
+  font-size: 1.1rem;
+  text-decoration: underline;
   color: #0a345e;
-  width: 100%;
 }
 
-.profile .profile-container .profile-body .jobs .jobPost {
+.profile .profile-container .profile-body .profile-info .userJobs .jobPost {
   width: 100%;
   padding: 1rem 2rem;
   border-bottom: .7px solid lightgrey;
   cursor: pointer;
 }
 
-.profile .profile-container .profile-body .jobs .jobPost .job-title {
+.profile .profile-container .profile-body .profile-info .userJobs .jobPost .job-title {
   width: 100%;
 }
 
-.profile .profile-container .profile-body .jobs .jobPost .job-title a {
+.profile .profile-container .profile-body .profile-info .userJobs .jobPost .job-title a {
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: bolder;
   color: #054e97;
 }
 
-.profile .profile-container .profile-body .jobs .jobPost .job-title a:hover {
+.profile .profile-container .profile-body .profile-info .userJobs .jobPost .job-title a:hover {
   text-decoration: underline;
 }
 
-.profile .profile-container .profile-body .jobs .jobPost .status {
+.profile .profile-container .profile-body .profile-info .userJobs .jobPost .status {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -24328,19 +24319,19 @@ a:hover {
           align-items: center;
 }
 
-.profile .profile-container .profile-body .jobs .jobPost .status p {
+.profile .profile-container .profile-body .profile-info .userJobs .jobPost .status p {
   color: #797979;
   font-size: 1rem;
   margin-right: .5rem;
 }
 
-.profile .profile-container .profile-body .jobs .jobPost .status span {
+.profile .profile-container .profile-body .profile-info .userJobs .jobPost .status span {
   font-size: 1rem;
   font-weight: bolder;
   color: lightgreen;
 }
 
-.profile .profile-container .profile-body .jobs .jobPost .card1 {
+.profile .profile-container .profile-body .profile-info .userJobs .jobPost .card1 {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -24354,7 +24345,7 @@ a:hover {
           align-items: center;
 }
 
-.profile .profile-container .profile-body .jobs .jobPost .card1 .postedOn, .profile .profile-container .profile-body .jobs .jobPost .card1 .postedBy {
+.profile .profile-container .profile-body .profile-info .userJobs .jobPost .card1 .postedOn, .profile .profile-container .profile-body .profile-info .userJobs .jobPost .card1 .postedBy {
   width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -24368,17 +24359,17 @@ a:hover {
           align-items: center;
 }
 
-.profile .profile-container .profile-body .jobs .jobPost .card1 .postedOn p, .profile .profile-container .profile-body .jobs .jobPost .card1 .postedBy p {
+.profile .profile-container .profile-body .profile-info .userJobs .jobPost .card1 .postedOn p, .profile .profile-container .profile-body .profile-info .userJobs .jobPost .card1 .postedBy p {
   color: #797979;
   font-size: 1rem;
   margin-right: .5rem;
 }
 
-.profile .profile-container .profile-body .jobs .jobPost .card1 .postedOn span, .profile .profile-container .profile-body .jobs .jobPost .card1 .postedBy span {
+.profile .profile-container .profile-body .profile-info .userJobs .jobPost .card1 .postedOn span, .profile .profile-container .profile-body .profile-info .userJobs .jobPost .card1 .postedBy span {
   font-size: .95rem;
 }
 
-.profile .profile-container .profile-body .jobs .jobPost .card2 {
+.profile .profile-container .profile-body .profile-info .userJobs .jobPost .card2 {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -24392,7 +24383,7 @@ a:hover {
           align-items: center;
 }
 
-.profile .profile-container .profile-body .jobs .jobPost .card2 .location, .profile .profile-container .profile-body .jobs .jobPost .card2 .price {
+.profile .profile-container .profile-body .profile-info .userJobs .jobPost .card2 .location, .profile .profile-container .profile-body .profile-info .userJobs .jobPost .card2 .price {
   width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -24406,17 +24397,17 @@ a:hover {
           align-items: center;
 }
 
-.profile .profile-container .profile-body .jobs .jobPost .card2 .location p, .profile .profile-container .profile-body .jobs .jobPost .card2 .price p {
+.profile .profile-container .profile-body .profile-info .userJobs .jobPost .card2 .location p, .profile .profile-container .profile-body .profile-info .userJobs .jobPost .card2 .price p {
   color: #797979;
   font-size: 1rem;
   margin-right: .25rem;
 }
 
-.profile .profile-container .profile-body .jobs .jobPost .card2 .location span, .profile .profile-container .profile-body .jobs .jobPost .card2 .price span {
+.profile .profile-container .profile-body .profile-info .userJobs .jobPost .card2 .location span, .profile .profile-container .profile-body .profile-info .userJobs .jobPost .card2 .price span {
   font-size: .95rem;
 }
 
-.profile .profile-container .profile-body .jobs .jobPost:hover {
+.profile .profile-container .profile-body .profile-info .userJobs .jobPost:hover {
   background: whitesmoke;
 }
 /*# sourceMappingURL=style.css.map */
