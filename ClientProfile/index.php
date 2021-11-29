@@ -287,6 +287,15 @@ $userID = $_SESSION['user_id'];
         unset($_SESSION['loginSuccess']);
     } ?>
 
+    <?php
+    if (isset($_SESSION['registerSuccess'])) { ?>
+        Toast.fire({
+            icon: 'success',
+            title: 'Successfully registered'
+        });
+    <?php
+        unset($_SESSION['registerSuccess']);
+    } ?>
 
 
 

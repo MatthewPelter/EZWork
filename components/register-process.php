@@ -68,6 +68,7 @@ if (isset($_POST['submit'])) {
         $user_id = mysqli_fetch_assoc(mysqli_query($conn, "SELECT id FROM clients WHERE username = '$username'"));
         $_SESSION['userid'] = $username;
         $_SESSION['user_id'] = $user_id['id'];
+        $_SESSION['registerSuccess'] = "Successfully registered!";
         header("Location: ../ClientProfile/index");
     } else {
         echo "not working";
