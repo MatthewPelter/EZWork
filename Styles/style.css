@@ -24549,4 +24549,716 @@ a:hover {
 .profile .profile-container .profile-body .profile-info .userJobs .jobPost:hover {
   background: whitesmoke;
 }
+
+@media screen and (max-width: 754px) {
+  .profile {
+    margin-top: 0;
+    width: 100%;
+    background: whitesmoke;
+    padding: 2.5rem 0rem;
+  }
+  .profile .profile-container {
+    background: white;
+    width: 100%;
+    border-radius: 15px;
+    border: 1px solid lightgrey;
+  }
+  .profile .profile-container .profile-header {
+    width: 100%;
+    padding: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-bottom: .7px solid lightgrey;
+  }
+  .profile .profile-container .profile-header .user-image {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+  .profile .profile-container .profile-header .user-image img {
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+    -webkit-box-shadow: 0px 5px 50px 0px #1d4354, 0px 0px 0px 7px #1d4354;
+            box-shadow: 0px 5px 50px 0px #1d4354, 0px 0px 0px 7px #1d4354;
+  }
+  .profile .profile-container .profile-header .username {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+  .profile .profile-container .profile-header .username h2 {
+    width: 100%;
+    text-align: start;
+    font-size: 2.5rem;
+    color: black;
+  }
+  .profile .profile-container .profile-header .username span {
+    color: #0a345e;
+    font-size: 1.1rem;
+    width: 100%;
+    text-align: center;
+  }
+  .profile .profile-container .profile-header .username .contact {
+    margin-top: .5rem;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .profile .profile-container .profile-header .username .contact .linkedIn {
+    margin-right: 1rem;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .profile .profile-container .profile-header .username .contact .linkedIn a {
+    text-decoration: none;
+  }
+  .profile .profile-container .profile-header .username .contact .linkedIn a i {
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 50%;
+    padding: .5rem;
+    background: white;
+    -webkit-box-shadow: 0px 7px 30px rgba(43, 98, 169, 0.5);
+            box-shadow: 0px 7px 30px rgba(43, 98, 169, 0.5);
+  }
+  .profile .profile-container .profile-header .username .contact .linkedIn :hover {
+    -webkit-box-shadow: 0px 7px 30px rgba(19, 127, 212, 0.75);
+            box-shadow: 0px 7px 30px rgba(19, 127, 212, 0.75);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  .profile .profile-container .profile-header .username .contact .message button {
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    background: #dbdbdb;
+    font-size: 1rem;
+    color: #0a345e;
+    font-weight: bolder;
+    padding: 0.25rem 1rem;
+    border: 1px solid lightgrey;
+  }
+  .profile .profile-container .profile-header .username .contact .message button:hover {
+    background: white;
+    -webkit-box-shadow: 0px 7px 30px rgba(19, 127, 212, 0.75);
+            box-shadow: 0px 7px 30px rgba(19, 127, 212, 0.75);
+  }
+  .profile .profile-container .profile-body {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
+    -ms-grid-rows: (1fr)[5];
+        grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+  .profile .profile-container .profile-body .profile-job-info {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 5;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-area: 1 / 1 / 6 / 2;
+    padding: 1rem;
+    border-right: 1px solid lightgrey;
+  }
+  .profile .profile-container .profile-body .profile-job-info h4 {
+    color: #0a345e;
+    margin: 1rem 0rem;
+    width: 100%;
+    text-align: start;
+    font-size: 1.5rem;
+    text-decoration: underline;
+  }
+  .profile .profile-container .profile-body .profile-job-info .jobCompleted {
+    width: 100%;
+    text-align: start;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .profile .profile-container .profile-body .profile-job-info .jobCompleted p {
+    width: 100%;
+    font-size: 1.1rem;
+    color: #797979;
+  }
+  .profile .profile-container .profile-body .profile-job-info .jobPosted {
+    width: 100%;
+    margin: 1rem 0rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .profile .profile-container .profile-body .profile-job-info .jobPosted p {
+    width: 100%;
+    font-size: 1.1rem;
+    color: #797979;
+  }
+  .profile .profile-container .profile-body .profile-job-info .freelancerQoute {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .profile .profile-container .profile-body .profile-job-info .freelancerQoute p {
+    font-size: .9rem;
+    color: #797979;
+  }
+  .profile .profile-container .profile-body .profile-job-info .freelancerQoute p span {
+    color: #054e97;
+  }
+  .profile .profile-container .profile-body .profile-info {
+    padding: 2rem;
+    width: 100%;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 5;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 4;
+    grid-area: 1 / 2 / 6 / 6;
+  }
+  .profile .profile-container .profile-body .profile-info h4 {
+    width: 100%;
+    font-size: 2rem;
+    color: #0a345e;
+    text-align: start;
+    text-decoration: underline;
+  }
+  .profile .profile-container .profile-body .profile-info .profile-expertise {
+    margin: 1rem 0rem;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .profile .profile-container .profile-body .profile-info .profile-expertise .expertise, .profile .profile-container .profile-body .profile-info .profile-expertise .experienceLevel {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .profile .profile-container .profile-body .profile-info .profile-expertise .expertise h3, .profile .profile-container .profile-body .profile-info .profile-expertise .experienceLevel h3 {
+    text-decoration: underline;
+    font-size: 1.5rem;
+    color: #0a345e;
+  }
+  .profile .profile-container .profile-body .profile-info .profile-expertise .expertise p, .profile .profile-container .profile-body .profile-info .profile-expertise .experienceLevel p {
+    font-size: 1.25rem;
+    color: #797979;
+  }
+  .profile .profile-container .profile-body .profile-info .profile-description {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .profile .profile-container .profile-body .profile-info .profile-description h3 {
+    text-decoration: underline;
+    width: 100%;
+    font-size: 1.5rem;
+    color: #0a345e;
+    margin-bottom: .25rem;
+  }
+  .profile .profile-container .profile-body .profile-info .profile-description .bio-container {
+    width: 100%;
+    border: .5px solid lightgrey;
+    border-radius: 7px;
+    padding: 1rem;
+    background: whitesmoke;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .profile .profile-container .profile-body .profile-info .profile-description .bio-container p {
+    color: #797979;
+    font-size: 1.1rem;
+  }
+  .profile .profile-container .profile-body .profile-info .educationJob {
+    margin: 1rem 0rem;
+    width: 100%;
+    height: 25vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .profile .profile-container .profile-body .profile-info .educationJob .profile-education {
+    width: 50%;
+    height: 100%;
+  }
+  .profile .profile-container .profile-body .profile-info .educationJob .profile-education h3 {
+    font-size: 1.5rem;
+    color: #0a345e;
+    width: 100%;
+    margin: .25rem 0rem;
+    text-decoration: underline;
+  }
+  .profile .profile-container .profile-body .profile-info .educationJob .profile-education h4 {
+    color: #054e97;
+    font-size: 1.4rem;
+    text-decoration: none;
+  }
+  .profile .profile-container .profile-body .profile-info .educationJob .profile-education #degree {
+    margin: .5rem 0rem;
+    width: 100%;
+    font-size: 1.2rem;
+    color: #1b1b1b;
+  }
+  .profile .profile-container .profile-body .profile-info .educationJob .profile-education #date {
+    font-size: 1.1rem;
+    color: #797979;
+  }
+  .profile .profile-container .profile-body .profile-info .educationJob .profile-job {
+    width: 50%;
+    height: 100%;
+  }
+  .profile .profile-container .profile-body .profile-info .educationJob .profile-job h3 {
+    font-size: 1.5rem;
+    color: #0a345e;
+    width: 100%;
+    margin: .25rem 0rem;
+    text-decoration: underline;
+  }
+  .profile .profile-container .profile-body .profile-info .educationJob .profile-job h4 {
+    color: #054e97;
+    font-size: 1.4rem;
+    text-decoration: none;
+  }
+  .profile .profile-container .profile-body .profile-info .educationJob .profile-job #company {
+    margin: .5rem 0rem;
+    width: 100%;
+    font-size: 1.2rem;
+    color: #1b1b1b;
+  }
+  .profile .profile-container .profile-body .profile-info .educationJob .profile-job #location {
+    margin-bottom: .5rem;
+    font-size: 1.1rem;
+  }
+  .profile .profile-container .profile-body .profile-info .educationJob .profile-job #date {
+    font-size: 1.1rem;
+    color: #797979;
+  }
+  .profile .profile-container .profile-body .profile-info .profile-location {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 2rem;
+  }
+  .profile .profile-container .profile-body .profile-info .profile-location h3 {
+    width: 100%;
+    font-size: 1.5rem;
+    color: #0a345e;
+    width: 100%;
+    margin: .25rem 0rem;
+    text-decoration: underline;
+  }
+  .profile .profile-container .profile-body .profile-info .profile-location p {
+    width: 100%;
+    font-size: 1.4rem;
+    color: #797979;
+  }
+  .profile .profile-container .profile-body .profile-info .ratings {
+    padding: 1rem 0rem;
+    width: 100%;
+    border-top: .7px solid lightgrey;
+  }
+  .profile .profile-container .profile-body .profile-info .ratings h4 {
+    font-size: 2rem;
+    width: 100%;
+    text-align: start;
+  }
+  .profile .profile-container .profile-body .profile-info .client-info {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .profile .profile-container .profile-body .profile-info .client-info h3 {
+    font-size: 1.5rem;
+    text-decoration: underline;
+    color: #0a345e;
+  }
+  .profile .profile-container .profile-body .profile-info .client-info span {
+    padding-left: .25rem;
+    font-size: 1.5rem;
+    color: #797979;
+  }
+  .profile .profile-container .profile-body .profile-info .userJobsFreelancer {
+    padding: 1rem 0rem;
+    border-top: .7px solid lightgrey;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .profile .profile-container .profile-body .profile-info .userJobsFreelancer p {
+    padding: .5rem 0rem;
+    font-size: 1.4rem;
+    color: #797979;
+  }
+  .profile .profile-container .profile-body .profile-info .userJobsFreelancer img {
+    width: 45%;
+    -o-object-fit: contain;
+       object-fit: contain;
+    border-radius: 10px;
+  }
+  .profile .profile-container .profile-body .profile-info .userJobsFreelancer h3 {
+    width: 100%;
+    font-size: 2rem;
+    color: #0a345e;
+    text-decoration: underline;
+  }
+  .profile .profile-container .profile-body .profile-info .userJobsFreelancer .jobPost {
+    width: 100%;
+    padding: .5rem;
+    border-bottom: .7px solid lightgrey;
+    cursor: pointer;
+  }
+  .profile .profile-container .profile-body .profile-info .userJobsFreelancer .jobPost .job-title {
+    width: 100%;
+  }
+  .profile .profile-container .profile-body .profile-info .userJobsFreelancer .jobPost .job-title a {
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: bolder;
+    color: #054e97;
+  }
+  .profile .profile-container .profile-body .profile-info .userJobsFreelancer .jobPost .job-title a:hover {
+    text-decoration: underline;
+  }
+  .profile .profile-container .profile-body .profile-info .userJobsFreelancer .jobPost .card1 {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .profile .profile-container .profile-body .profile-info .userJobsFreelancer .jobPost .card1 .postedOn, .profile .profile-container .profile-body .profile-info .userJobsFreelancer .jobPost .card1 .status {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .profile .profile-container .profile-body .profile-info .userJobsFreelancer .jobPost .card1 .postedOn p, .profile .profile-container .profile-body .profile-info .userJobsFreelancer .jobPost .card1 .status p {
+    color: #797979;
+    font-size: 1rem;
+    margin-right: .5rem;
+  }
+  .profile .profile-container .profile-body .profile-info .userJobsFreelancer .jobPost .card1 .postedOn span, .profile .profile-container .profile-body .profile-info .userJobsFreelancer .jobPost .card1 .status span {
+    font-size: .95rem;
+  }
+  .profile .profile-container .profile-body .profile-info .userJobsFreelancer .jobPost .card2 {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .profile .profile-container .profile-body .profile-info .userJobsFreelancer .jobPost .card2 .location, .profile .profile-container .profile-body .profile-info .userJobsFreelancer .jobPost .card2 .price {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .profile .profile-container .profile-body .profile-info .userJobsFreelancer .jobPost .card2 .location p, .profile .profile-container .profile-body .profile-info .userJobsFreelancer .jobPost .card2 .price p {
+    color: #797979;
+    font-size: 1rem;
+    margin-right: .25rem;
+  }
+  .profile .profile-container .profile-body .profile-info .userJobsFreelancer .jobPost .card2 .location span, .profile .profile-container .profile-body .profile-info .userJobsFreelancer .jobPost .card2 .price span {
+    font-size: .95rem;
+  }
+  .profile .profile-container .profile-body .profile-info .userJobsFreelancer .jobPost:hover {
+    background: whitesmoke;
+  }
+  .profile .profile-container .profile-body .profile-info .userJobs {
+    width: 100%;
+    margin: 1rem 0rem;
+    padding: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .profile .profile-container .profile-body .profile-info .userJobs p {
+    padding: .5rem 0rem;
+    font-size: 1.4rem;
+    color: #797979;
+  }
+  .profile .profile-container .profile-body .profile-info .userJobs img {
+    width: 45%;
+    -o-object-fit: contain;
+       object-fit: contain;
+    border-radius: 10px;
+  }
+  .profile .profile-container .profile-body .profile-info .userJobs h3 {
+    width: 100%;
+    font-size: 1.1rem;
+    color: #0a345e;
+    text-decoration: underline;
+  }
+  .profile .profile-container .profile-body .profile-info .userJobs .jobPost {
+    width: 100%;
+    padding: .5rem;
+    border-bottom: .7px solid lightgrey;
+    cursor: pointer;
+  }
+  .profile .profile-container .profile-body .profile-info .userJobs .jobPost .job-title {
+    width: 100%;
+  }
+  .profile .profile-container .profile-body .profile-info .userJobs .jobPost .job-title a {
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: bolder;
+    color: #054e97;
+  }
+  .profile .profile-container .profile-body .profile-info .userJobs .jobPost .job-title a:hover {
+    text-decoration: underline;
+  }
+  .profile .profile-container .profile-body .profile-info .userJobs .jobPost .card1 {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .profile .profile-container .profile-body .profile-info .userJobs .jobPost .card1 .postedOn, .profile .profile-container .profile-body .profile-info .userJobs .jobPost .card1 .status {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .profile .profile-container .profile-body .profile-info .userJobs .jobPost .card1 .postedOn p, .profile .profile-container .profile-body .profile-info .userJobs .jobPost .card1 .status p {
+    color: #797979;
+    font-size: 1rem;
+    margin-right: .5rem;
+  }
+  .profile .profile-container .profile-body .profile-info .userJobs .jobPost .card1 .postedOn span, .profile .profile-container .profile-body .profile-info .userJobs .jobPost .card1 .status span {
+    font-size: .95rem;
+  }
+  .profile .profile-container .profile-body .profile-info .userJobs .jobPost .card2 {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .profile .profile-container .profile-body .profile-info .userJobs .jobPost .card2 .location, .profile .profile-container .profile-body .profile-info .userJobs .jobPost .card2 .price {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .profile .profile-container .profile-body .profile-info .userJobs .jobPost .card2 .location p, .profile .profile-container .profile-body .profile-info .userJobs .jobPost .card2 .price p {
+    color: #797979;
+    font-size: 1rem;
+    margin-right: .25rem;
+  }
+  .profile .profile-container .profile-body .profile-info .userJobs .jobPost .card2 .location span, .profile .profile-container .profile-body .profile-info .userJobs .jobPost .card2 .price span {
+    font-size: .95rem;
+  }
+  .profile .profile-container .profile-body .profile-info .userJobs .jobPost:hover {
+    background: whitesmoke;
+  }
+}
 /*# sourceMappingURL=style.css.map */

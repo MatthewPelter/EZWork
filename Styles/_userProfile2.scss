@@ -537,3 +537,543 @@ $darktext: rgb(121, 121, 121);
         }
     }
 }
+
+@media screen and (max-width: 754px) {
+    .profile{
+        margin-top: 0;
+        width: 100%;
+        background: whitesmoke;
+        padding: 2.5rem 0rem;
+    
+        .profile-container{
+            background: white;
+            width: 100%;
+            border-radius: 15px;
+            border: 1px solid lightgrey;
+            .profile-header{
+                width: 100%;
+                padding: 2rem;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                border-bottom: .7px solid lightgrey;
+                
+                .user-image{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;    
+                    img{
+                        width: 115px;
+                        height: 115px;
+                        border-radius: 50%;
+                        box-shadow: 0px 5px 50px 0px #1d4354, 0px 0px 0px 7px #1d4354;
+                    }      
+                }
+                .username{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+    
+                    h2{
+                        width: 100%;
+                        text-align: start;
+                        font-size: 2.5rem;
+                        color: black;
+                    }
+                    span{
+                        color: $color1;
+                        font-size: 1.1rem;
+                        width: 100%;
+                        text-align: center;
+                    }
+                    .contact{
+                        margin-top: .5rem;
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: flex-start;
+                    
+                        .linkedIn{
+                            margin-right: 1rem;
+                            width: fit-content;    
+                            flex-shrink: 0;
+                            transition: all 0.3s;
+                            a{
+                                text-decoration: none;
+                                i{
+                                    cursor: pointer;
+                                    font-size: 1rem;
+                                    border-radius: 50%;
+                                    padding: .5rem;
+                                    background: white;
+                                    box-shadow: 0px 7px 30px rgba(43, 98, 169, 0.5);
+                                }
+                            }
+        
+                            :hover{
+                                box-shadow: 0px 7px 30px rgba(19, 127, 212, 0.75);
+                                transform: scale(1.2);
+                            }
+                        }
+                        .message{
+                            button{
+                                cursor: pointer;
+                                border-radius: 10px;
+                                border: none;
+                                background: rgb(219, 219, 219);
+                                font-size: 1rem;
+                                color: $color1;
+                                font-weight: bolder;
+                                padding: 0.25rem 1rem;
+                                border: 1px solid lightgrey;
+                                &:hover{
+                                    background: white;
+                                    box-shadow: 0px 7px 30px rgba(19, 127, 212, 0.75);
+                                }
+                            }
+                        }
+      
+                    }
+     
+                }
+            }
+    
+            .profile-body{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                grid-template-columns: repeat(5, 1fr);
+                grid-template-rows: repeat(5, 1fr);
+                grid-column-gap: 0px;
+                grid-row-gap: 0px;
+                .profile-job-info{
+                    grid-area: 1 / 1 / 6 / 2;
+                    padding: 1rem;
+                    border-right: 1px solid lightgrey;
+    
+                    h4{
+                        color: $color1;
+                        margin: 1rem 0rem;
+                        width: 100%;
+                        text-align: start;
+                        font-size: 1.5rem;
+                        text-decoration: underline;
+                    }
+    
+                    .jobCompleted{
+                        width: 100%;
+                        text-align: start;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        p{
+                            width: 100%;
+                            font-size: 1.1rem;
+                            color: $darktext;
+                        }
+                    }
+                    .jobPosted{
+                        width: 100%;
+                        margin: 1rem 0rem;
+                        display: flex;
+                        text-align: start;
+                        flex-direction: row;
+                        align-items: center;
+                        p{
+                            width: 100%;
+                            font-size: 1.1rem;
+                            color: $darktext;
+                        }
+                    }
+                    .freelancerQoute{
+                        width: 100%;
+                        display: flex;
+                        flex-wrap: wrap;
+                        p{
+                            font-size: .9rem;
+                            color: $darktext;
+                            span{
+                                color: $lightColor;
+                            }
+                        }
+                    }
+                }
+                .profile-info{
+                    padding: 2rem;
+                    width: 100%;
+                    grid-area: 1 / 2 / 6 / 6;
+                    
+                    h4{
+                        width: 100%;
+                        font-size: 2rem;
+                        color: $color1;
+                        text-align: start;
+                        text-decoration: underline;
+                    }
+    
+                    .profile-expertise{
+                        margin: 1rem 0rem;
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        
+                        .expertise,.experienceLevel{
+                            width: 50%;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-start;
+                            h3{
+                                text-decoration: underline;
+                                font-size: 1.5rem;
+                                color: $color1;
+                            }
+                            p{
+                                font-size: 1.25rem;
+                                color: $darktext;
+                            }
+                        }
+                    }
+    
+                    .profile-description{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        h3{
+                            text-decoration: underline;
+                            width: 100%;
+                            font-size: 1.5rem;
+                            color: $color1;
+                            margin-bottom: .25rem;
+                        }
+                        .bio-container{
+                            width: 100%;
+                            border: .5px solid lightgrey;
+                            border-radius: 7px;
+                            padding: 1rem;
+                            background: whitesmoke; 
+                            display: flex;
+                            flex-direction: row;
+                            flex-wrap: wrap;
+                            align-items: center;
+                            justify-content: flex-start;
+                            p{
+                                color:$darktext;
+                                font-size: 1.1rem;
+                            }
+                        }
+                    }
+    
+                    .educationJob{
+                        margin: 1rem 0rem;
+                        width: 100%;
+                        height: 25vh;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+    
+                        .profile-education{
+                            width: 50%;
+                            height: 100%;
+                            h3{
+                                font-size: 1.5rem;
+                                color: $color1;
+                                width: 100%;
+                                margin: .25rem 0rem;
+                                text-decoration: underline;
+                            }
+    
+                            h4{
+                                color: $lightColor;
+                                font-size: 1.4rem;
+                                text-decoration: none;
+                            }
+    
+                            #degree{
+                                margin: .5rem 0rem;
+                                width: 100%;
+                                font-size: 1.2rem;
+                                color: rgb(27, 27, 27);
+                            }
+    
+                            #date{
+                                font-size: 1.1rem;
+                                color: $darktext;
+                            }
+                        }
+                        .profile-job{
+                            width: 50%;
+                            height: 100%;
+                            h3{
+                                font-size: 1.5rem;
+                                color: $color1;
+                                width: 100%;
+                                margin: .25rem 0rem;
+                                text-decoration: underline;
+                            }
+                            h4{
+                                color: $lightColor;
+                                font-size: 1.4rem;
+                                text-decoration: none;
+                            }
+                            #company{
+                                margin: .5rem 0rem;
+                                width: 100%;
+                                font-size: 1.2rem;
+                                color: rgb(27, 27, 27);
+                            }
+                            #location{
+                                margin-bottom: .5rem;
+                                font-size: 1.1rem;
+                            }
+                            #date{
+                                font-size: 1.1rem;
+                                color: $darktext;
+                            }
+                        }
+                    }
+    
+                    .profile-location{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        margin-bottom:2rem;
+                        h3{
+                            width: 100%;
+                            font-size: 1.5rem;
+                            color: $color1;
+                            width: 100%;
+                            margin: .25rem 0rem;
+                            text-decoration: underline;
+                        }
+                        p{
+                            width: 100%;
+                            font-size: 1.4rem;
+                            color: $darktext;
+    
+                        }
+                    }
+    
+                    .ratings{
+                        padding: 1rem 0rem;
+                        width: 100%;
+                        border-top: .7px solid lightgrey;
+                        h4{
+                            font-size: 2rem;
+                            width: 100%;
+                            text-align: start;
+                        }
+                    }
+                    .client-info{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: flex-start;
+                        h3{
+                            font-size: 1.5rem;
+                            text-decoration: underline;
+                            color: $color1;
+                        }
+                        span{
+                            padding-left: .25rem;
+                            font-size: 1.5rem;
+                            color: $darktext;
+                        }
+                    }
+                    .userJobsFreelancer{
+                        padding: 1rem 0rem;
+                        border-top: .7px solid lightgrey;
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        p{
+                            padding: .5rem 0rem;
+                            font-size: 1.4rem;
+                            color: $darktext;
+                        }
+                        img{
+                            width: 45%;
+                            object-fit: contain;
+                            border-radius: 10px;
+                        }
+                        h3{
+                            width: 100%;
+                            font-size: 2rem;
+                            color: $color1;
+                            text-decoration: underline;
+                        }
+                        .jobPost{
+                            width: 100%;
+                            padding: .5rem;
+                            border-bottom: .7px solid lightgrey;
+                            .job-title{
+                                width: 100%;
+                                a{
+                                    text-decoration: none;
+                                    font-size: 1.25rem;
+                                    font-weight: bolder;
+                                    color: $lightColor;
+        
+                                    &:hover{
+                                        text-decoration: underline;
+                                    }
+                                }
+                            }
+        
+        
+                            .card1{
+                                width: 100%;
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                .postedOn,.status{
+                                    width: 50%;
+                                    display: flex;
+                                    flex-direction: row;
+                                    align-items: center;
+                                    justify-content: flex-start;
+                                    p{
+                                        color: $darktext;
+                                        font-size: 1rem;
+                                        margin-right: .5rem;
+                                    }
+                                    span{
+                                        font-size: .95rem;
+                                    }
+                                }
+                            }
+        
+                            .card2{
+                                width: 100%;
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+        
+                                .location,.price{
+                                    width: 50%;
+                                    display: flex;
+                                    flex-direction: row;
+                                    align-items: center;
+                                    p{
+                                        color: $darktext;
+                                        font-size: 1rem;
+                                        margin-right: .25rem;
+                                    }
+                                    span{
+                                        font-size: .95rem;
+                                    }
+                                }
+                            }
+                            cursor: pointer;
+                            &:hover{
+                                background: whitesmoke;
+                            }
+                        }
+                    }
+                    .userJobs{
+                        width: 100%;
+                        margin: 1rem 0rem;
+                        padding: 2rem;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        p{
+                            padding: .5rem 0rem;
+                            font-size: 1.4rem;
+                            color: $darktext;
+                        }
+                        img{
+                            width: 45%;
+                            object-fit: contain;
+                            border-radius: 10px;
+                        }
+                        h3{
+                            width: 100%;
+                            font-size: 1.1rem;
+                            color: $color1;
+                            text-decoration: underline;
+                        }
+                        .jobPost{
+                            width: 100%;
+                            padding: .5rem;
+                            border-bottom: .7px solid lightgrey;
+                            .job-title{
+                                width: 100%;
+                                a{
+                                    text-decoration: none;
+                                    font-size: 1.25rem;
+                                    font-weight: bolder;
+                                    color: $lightColor;
+        
+                                    &:hover{
+                                        text-decoration: underline;
+                                    }
+                                }
+                            }
+        
+        
+                            .card1{
+                                width: 100%;
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                .postedOn,.status{
+                                    width: 50%;
+                                    display: flex;
+                                    flex-direction: row;
+                                    align-items: center;
+                                    justify-content: flex-start;
+                                    p{
+                                        color: $darktext;
+                                        font-size: 1rem;
+                                        margin-right: .5rem;
+                                    }
+                                    span{
+                                        font-size: .95rem;
+                                    }
+                                }
+                            }
+        
+                            .card2{
+                                width: 100%;
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+        
+                                .location,.price{
+                                    width: 50%;
+                                    display: flex;
+                                    flex-direction: row;
+                                    align-items: center;
+                                    p{
+                                        color: $darktext;
+                                        font-size: 1rem;
+                                        margin-right: .25rem;
+                                    }
+                                    span{
+                                        font-size: .95rem;
+                                    }
+                                }
+                            }
+                            cursor: pointer;
+                            &:hover{
+                                background: whitesmoke;
+                            }
+                        }
+                    }
+    
+                }
+            }
+        }
+    }
+}
