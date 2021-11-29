@@ -39,16 +39,6 @@ $userID = $_SESSION['user_id'];
     <!-- NAV BAR -->
     <?php include '../navbar.php'; ?>
     <!-- END NAVBAR -->
-
-
-    <?php
-    if (isset($_SESSION['postSuccess'])) { ?>
-
-    <?php
-        unset($_SESSION['postSuccess']);
-    } ?>
-
-
     <div class="profile">
         <div class="user-profile-header">
             <h2 id="username">Welcome, <?php echo $_SESSION['userid']; ?></h2>
@@ -258,13 +248,24 @@ $userID = $_SESSION['user_id'];
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.2.1/dist/sweetalert2.all.min.js"></script>
 <!--Script for the search bar and datalist-->
 <script src="../SkillsContainer/searchProfile.js"></script>
 <!--nav bar script -->
 <script type="text/javascript">
-</script>
+    <?php
+    if (isset($_SESSION['postSuccess'])) { ?>
+        Swal.fire(
+            'Yay!',
+            'Your job has been posted successfully!',
+            'success'
+        )
+    <?php
+        unset($_SESSION['postSuccess']);
+    } ?>
 
-<script>
+
+
     const freelancerSpan = document.getElementById('freelancerSpan');
     const userSpan = document.getElementById('userSpan');
     const activerUsersBody = document.querySelector('.activerUsersBody');
