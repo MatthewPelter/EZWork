@@ -34,7 +34,7 @@ function securityscan($data)
             <h2>Post a Job</h2>
             <?php
             if (isset($_POST['budgetoption'])) {
-                if (!empty($_SESSION['post'])) {
+                if (!empty($_SESSION['post']) || $_POST['title'] == "") {
                     if (empty($_POST['budgetoption'])) {
                         // Setting error for page 5.
                         $_SESSION['error_page6'] = "Mandatory field(s) are missing, Please fill it again";
@@ -92,10 +92,10 @@ function securityscan($data)
 
                     }
                 } else {
-                    header("location: length.php"); // Redirecting to first page.
+                    header("location: start.php"); // Redirecting to first page.
                 }
             } else {
-                header("location: length.php"); // Redirecting to first page.
+                header("location: start.php"); // Redirecting to first page.
             }
             ?>
         </div>
