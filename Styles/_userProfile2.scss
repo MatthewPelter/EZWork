@@ -159,6 +159,10 @@ $darktext: rgb(121, 121, 121);
                     p{
                         font-size: .9rem;
                         color: $darktext;
+                        span{
+                            color: $lightColor;
+                            font-size: 1rem;
+                        }
                     }
                 }
             }

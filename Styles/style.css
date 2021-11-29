@@ -24002,6 +24002,11 @@ a:hover {
   color: #797979;
 }
 
+.profile .profile-container .profile-body .profile-job-info .freelancerQoute p span {
+  color: #054e97;
+  font-size: 1rem;
+}
+
 .profile .profile-container .profile-body .profile-info {
   padding: 2rem;
   width: 100%;
