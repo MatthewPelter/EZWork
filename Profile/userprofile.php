@@ -57,420 +57,415 @@ if (mysqli_num_rows($result) > 0) {
     <?php include '../navbar.php'; ?>
 
     <div class="profile">
-        
+
         <div class="profile-container">
-        <?php
-        if ($dataFound) {
-        ?>
-            
-            <div class="profile-header">
-                <div class="user-image">
-                    <img src="<?php echo $row['avatar']; ?>" alt="profile card">
-                </div>
-                <div class="username">
-                    <h2><?php echo $row['firstname'] . " " . $row['lastname']; ?></h2>
-                    <span>
-                        <?php if ($row['freelancer_id'] != NULL) {
-                            echo "Freelancer";
-                        } else {
-                            echo "Client";
-                        } ?>
-                    </span>
-                    <div class="contact">
-                        <div class="linkedIn">
-                        <?php if ($row['freelancer_id'] != NULL && $freelancer_array['linkedin'] != "") { ?>
-                                <a href="<?php echo $freelancer_array['linkedin']; ?>" target="_blank">
-                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
-                                </a>
-                        <?php } else { ?>
-                                <a href="../404Page/index.html" style="display: none;"></a>
-                        <?php } ?>
-                        </div>
-                        <div class="message">
-                            <button>Message</button>
-                        </div>
-                        <div class="profile-card-message js-message">
-                            <form class="profile-card-form">
-                                <div class="profile-card-form__container">
-                                    <textarea id="messagecontent" placeholder="Say something..." required></textarea>
-                                </div>
-    
-                                <div class="profile-card-form__bottom">
-                                    <button name="send-message" id="sendmessage" class="profile-card__button button--blue js-message-close">
-                                        Send
-                                    </button>
-    
-                                    <button class="profile-card__button button--gray js-message-close">
-                                        Cancel
-                                    </button>
-                                </div>
-                            </form>
-    
-                            <div class="profile-card__overlay js-message-close"></div>
-                        </div>                        
+            <?php
+            if ($dataFound) {
+            ?>
+
+                <div class="profile-header">
+                    <div class="user-image">
+                        <img src="<?php echo $row['avatar']; ?>" alt="profile card">
                     </div>
-
-                </div>
-            </div>
-                    
-            <div class="profile-body">
-
-                <div class="profile-job-info">
-                    <h4>EZWork Information</h4>
-                            <!-- if freelancer -->
-
+                    <div class="username">
+                        <h2><?php echo $row['firstname'] . " " . $row['lastname']; ?></h2>
+                        <span>
                             <?php if ($row['freelancer_id'] != NULL) {
-                                $freeID = $row['freelancer_id'];
-                                $pullJobs = mysqli_query($conn, "SELECT COUNT(*) AS completedJobs FROM jobs WHERE freelancer_id = '$freeID' AND status=1");
-                                $pullJobCount = mysqli_fetch_assoc($pullJobs);
-                            ?>
+                                echo "Freelancer";
+                            } else {
+                                echo "Client";
+                            } ?>
+                        </span>
+                        <div class="contact">
+                            <div class="linkedIn">
+                                <?php if ($row['freelancer_id'] != NULL && $freelancer_array['linkedin'] != "") { ?>
+                                    <a href="<?php echo $freelancer_array['linkedin']; ?>" target="_blank">
+                                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                    </a>
+                                <?php } else { ?>
+                                    <a href="../404Page/index.html" style="display: none;"></a>
+                                <?php } ?>
+                            </div>
+                            <div class="message">
+                                <button>Message</button>
+                            </div>
+                            <div class="profile-card-message js-message">
+                                <form class="profile-card-form">
+                                    <div class="profile-card-form__container">
+                                        <textarea id="messagecontent" placeholder="Say something..." required></textarea>
+                                    </div>
+
+                                    <div class="profile-card-form__bottom">
+                                        <button name="send-message" id="sendmessage" class="profile-card__button button--blue js-message-close">
+                                            Send
+                                        </button>
+
+                                        <button class="profile-card__button button--gray js-message-close">
+                                            Cancel
+                                        </button>
+                                    </div>
+                                </form>
+
+                                <div class="profile-card__overlay js-message-close"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="profile-body">
+
+                    <div class="profile-job-info">
+                        <h4>EZWork Information</h4>
+                        <!-- if freelancer -->
+
+                        <?php if ($row['freelancer_id'] != NULL) {
+                            $freeID = $row['freelancer_id'];
+                            $pullJobs = mysqli_query($conn, "SELECT COUNT(*) AS completedJobs FROM jobs WHERE freelancer_id = '$freeID' AND status=1");
+                            $pullJobCount = mysqli_fetch_assoc($pullJobs);
+                        ?>
                             <div class="jobCompleted">
                                 <p><?php echo $pullJobCount['completedJobs']; ?> completed Jobs</p>
                             </div>
-                            <?php } ?>
+                        <?php } ?>
 
-                            <?php
-                            $userid = $row['id'];
-                            $getJobs = mysqli_query($conn, "SELECT COUNT(*) AS jobCount FROM jobs WHERE user_id = '$userid'");
-                            $fetchJobCount = mysqli_fetch_assoc($getJobs);
-                            ?>
-                            <div class="jobPosted">
-                                <p><?php echo $fetchJobCount['jobCount']; ?> Job(s) Posted</p>
-                            </div>
-                            <?php
-                                if ($row['freelancer_id'] != NULL) {
-                            ?>
+                        <?php
+                        $userid = $row['id'];
+                        $getJobs = mysqli_query($conn, "SELECT COUNT(*) AS jobCount FROM jobs WHERE user_id = '$userid'");
+                        $fetchJobCount = mysqli_fetch_assoc($getJobs);
+                        ?>
+                        <div class="jobPosted">
+                            <p><?php echo $fetchJobCount['jobCount']; ?> Job(s) Posted</p>
+                        </div>
+                        <?php
+                        if ($row['freelancer_id'] != NULL) {
+                        ?>
                             <div class="freelancerQoute">
                                 <p>**Freelancers also have the option to post jobs to the <span>EZWORK</span> marketplace.</p>
                             </div>
-                            <?php
-                                }
-                            ?>
-                </div>
-                <?php if ($row['freelancer_id'] != NULL) {?>
-                <div class="profile-info">
-                    <h4>Personal Information</h4>
-                    <div class="profile-expertise">
-                        <div class="expertise">
-                            <h3>Expertise</h3>
-                            <p>
-                                <?php
-                                    if( $freelancer_array['expertise'] != NULL){
-                                        echo $freelancer_array['expertise'];
-                                    }else{
-                                        echo "No Expertise";
-                                    }
-                                ?>
-                            </p>
-                        </div>
-                        <div class="experienceLevel">
-                            <h3>Experience Level</h3>
-                            <p><?php echo $freelancer_array['experience']; ?></p>
-                        </div>
-                     
-                    </div>
-                    <div class="profile-description">
-                        <h3>Biography</h3>
-                        <div class="bio-container">
-                            <p>
-                                <?php 
-                                    if( $freelancer_array['description'] != NULL){
-                                        echo $freelancer_array['description']; 
-                                    } else{
-                                        echo "No Biography";
-                                    }
-                                    
-                                ?>
-                            </p>
-                        </div>
-                        
-                    </div>
-                    <div class="educationJob">
-                        <div class="profile-education">
-                            <h3>Education</h3>
-                            <h4>
-                                <?php 
-                                    if( $freelancer_array['school'] != NULL){
-                                        echo $freelancer_array['school']; 
-                                    }else{
-                                        echo "None";
-                                    }
-                              
-                                ?>
-                            </h4>
-          
-                            <p id="degree">
-                                <?php 
-                                    if( $freelancer_array['degree'] != NULL){
-                                ?>
-                                <?php echo $freelancer_array['degree']; ?> Degree in <?php echo $freelancer_array['fos']; ?>
-                                <?php
-                                    } else{
-                                        echo "None";
-                                    }
-                                ?>
-                            </p>
-                            <p id="date">
-                                <?php
-                                    if( $freelancer_array['schoolStart'] != 0000){
-                                ?>
-                                Dates Attended: <?php echo $freelancer_array['schoolStart']; ?> - <?php echo $freelancer_array['schoolEnd']; ?>
-                                <?php         
-                                } else{
-                                    echo "None";
-                                }
-                                ?>
-                               
-                            </p>
-                        </div>
-                        <div class="profile-job">
-                            <h3>Job Experience</h3>
-                            <h4>
-                                <?php 
-                                if ($freelancer_array['jobTitle'] != NULL ){
-                                    echo $freelancer_array['jobTitle'];
-                                } else{
-                                    echo "None";
-                                }
-                                ?>
-                            </h4>
-                            <p id="company">
-                                Company: 
-                                <?php 
-                                    if( $freelancer_array['company'] != NULL){
-                                        echo $freelancer_array['company']; 
-                                    } else{
-                                        echo "None";
-                                    }
-                                ?>
-                            </p>
-                            <p id="location">
-                                Job Location:
-                                <?php 
-                                    if( $freelancer_array['jobLocation'] != NULL){
-                                        echo $freelancer_array['jobLocation'];
-                                    } else{
-                                        echo "None";
-                                    }
-                                ?> 
-                            </p>
-                            <p id="date">
-                                Dates Worked: 
-                                <?php 
-                                    if( $freelancer_array['jobStart'] != 0000){
-                                        echo $freelancer_array['jobStart']; ?> - <?php echo $freelancer_array['jobEnd'];
-                                    }else{
-                                        echo "None";
-                                    }
-                                
-                                ?>
-                            </p>
-                        </div>
-
-                    </div>
-                    <div class="profile-location">
-                        <h3>Location</h3>
-                        <p><?php echo $freelancer_array['country']; ?></p>
-                    </div>
-
-                    <div class="ratings">
-                        <h4>Reviews</h4>
-                    </div>
-                    <div class="userJobsFreelancer">
-
                         <?php
-                            if($fetchJobCount['jobCount'] > 0){
-                        ?>     
-                            <h3>All Jobs Post(s)</h3>
-                            <?php
-                            $username = $row['username'];
-                            $getUserID = "SELECT id FROM clients WHERE username = '$username'";
-                            $getResult = mysqli_query($conn, $getUserID);
-                            $userrow = mysqli_fetch_assoc($getResult);
-                            $userID = $userrow['id'];
-                            $jobSQL = "SELECT * FROM jobs WHERE user_id='$userID' ORDER BY id DESC";
-                            $jobResult = mysqli_query($conn, $jobSQL) or die(mysqli_errno($conn));  
-                            
-                            if (mysqli_num_rows($jobResult) > 0) {
-                                while ($r = mysqli_fetch_assoc($jobResult)) {
-                            ?>
-                            <div class="jobPost" onclick="location.href=`../newPostJob/job.php?id=<?php echo $r['id']; ?>`">
-                                <div class="job-title">
-                                    <a href="../newPostJob/job.php?id=<?php echo $r['id']; ?>"><?php echo $r['title']; ?></a>
-                                </div>
-
-                                <!-- ----------------------------------------- -->
-                                <!-- JOB STATUS -->
-                                <!-- 0 : OPEN -->
-                                <!-- 1 : CLOSED -->
-                                <!-- -1 : IN PROGRESS -->
-                                <!-- ----------------------------------------- -->
-
-                                <div class="card1">
-                                    <div class="status">
-                                        <p>Status:</p>
-                                        <span>
-                                            <?php if ($r['status'] == 0) { ?>
-                                                <span style="color: lightgreen;"><?php echo "Open"; ?></span>
-                                            <?php } else if ($r['status'] == 1) { ?>
-                                                <span style="color: red;"><?php echo "Closed"; ?></span>
-                                            <?php } else if ($r['status'] == -1) { ?>
-                                                <span style="color: yellow;"><?php echo "In-Progress"; ?></span>
-                                            <?php } ?>
-                                        </span>
-                                    </div>
-                                    <div class="postedOn">
-                                        <p>Posted on:</p>
-                                        <span>
-                                            <?php echo $r['datePosted']; ?>
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="card2">
-                                    <div class="location">
-                                        <p>Location: </p>
-                                        <span> <?php echo ucfirst($r['location']); ?></span>
-                                    </div>
-
-                                    <div class="price">
-                                        <p>Pay: </p>
-                                        <?php if ($r['rate'] > 0) { ?>
-                                            <span>$<?php echo $r['rate']; ?> / hr - </span>
-                                            <span><?php echo "Hourly Rate" ?></span>
-                                        <?php } else if ($r['budget'] > 0) { ?>
-                                            <span>$ <?php echo $r['budget']; ?> - </span>
-                                            <span><?php echo "Project Budget" ?></span>
-                                        <?php } else { ?>
-                                            <p></p>
-                                            <span> <?php echo "No budget or pay rate set yet..."; ?></span>
-                                        <?php } ?>
-                                    </div>
-                                </div>
-
-                            </div>                        
-                            <?php
-                                }
-                            }
-                            ?> 
-                        <?php   
-                            }
+                        }
                         ?>
+                    </div>
+                    <?php if ($row['freelancer_id'] != NULL) { ?>
+                        <div class="profile-info">
+                            <h4>Personal Information</h4>
+                            <div class="profile-expertise">
+                                <div class="expertise">
+                                    <h3>Expertise</h3>
+                                    <p>
+                                        <?php
+                                        if ($freelancer_array['expertise'] != NULL) {
+                                            echo $freelancer_array['expertise'];
+                                        } else {
+                                            echo "No Expertise";
+                                        }
+                                        ?>
+                                    </p>
+                                </div>
+                                <div class="experienceLevel">
+                                    <h3>Experience Level</h3>
+                                    <p><?php echo $freelancer_array['experience']; ?></p>
+                                </div>
 
-                    </div>                  
+                            </div>
+                            <div class="profile-description">
+                                <h3>Biography</h3>
+                                <div class="bio-container">
+                                    <p>
+                                        <?php
+                                        if ($freelancer_array['description'] != NULL) {
+                                            echo $freelancer_array['description'];
+                                        } else {
+                                            echo "No Biography";
+                                        }
+
+                                        ?>
+                                    </p>
+                                </div>
+
+                            </div>
+                            <div class="educationJob">
+                                <div class="profile-education">
+                                    <h3>Education</h3>
+                                    <h4>
+                                        <?php
+                                        if ($freelancer_array['school'] != NULL) {
+                                            echo $freelancer_array['school'];
+                                        } else {
+                                            echo "None";
+                                        }
+
+                                        ?>
+                                    </h4>
+
+                                    <p id="degree">
+                                        <?php
+                                        if ($freelancer_array['degree'] != NULL) {
+                                        ?>
+                                            <?php echo $freelancer_array['degree']; ?> Degree in <?php echo $freelancer_array['fos']; ?>
+                                        <?php
+                                        } else {
+                                            echo "None";
+                                        }
+                                        ?>
+                                    </p>
+                                    <p id="date">
+                                        <?php
+                                        if ($freelancer_array['schoolStart'] != 0000) {
+                                        ?>
+                                            Dates Attended: <?php echo $freelancer_array['schoolStart']; ?> - <?php echo $freelancer_array['schoolEnd']; ?>
+                                        <?php
+                                        } else {
+                                            echo "None";
+                                        }
+                                        ?>
+
+                                    </p>
+                                </div>
+                                <div class="profile-job">
+                                    <h3>Job Experience</h3>
+                                    <h4>
+                                        <?php
+                                        if ($freelancer_array['jobTitle'] != NULL) {
+                                            echo $freelancer_array['jobTitle'];
+                                        } else {
+                                            echo "None";
+                                        }
+                                        ?>
+                                    </h4>
+                                    <p id="company">
+                                        Company:
+                                        <?php
+                                        if ($freelancer_array['company'] != NULL) {
+                                            echo $freelancer_array['company'];
+                                        } else {
+                                            echo "None";
+                                        }
+                                        ?>
+                                    </p>
+                                    <p id="location">
+                                        Job Location:
+                                        <?php
+                                        if ($freelancer_array['jobLocation'] != NULL) {
+                                            echo $freelancer_array['jobLocation'];
+                                        } else {
+                                            echo "None";
+                                        }
+                                        ?>
+                                    </p>
+                                    <p id="date">
+                                        Dates Worked:
+                                        <?php
+                                        if ($freelancer_array['jobStart'] != 0000) {
+                                            echo $freelancer_array['jobStart']; ?> - <?php echo $freelancer_array['jobEnd'];
+                                                                                } else {
+                                                                                    echo "None";
+                                                                                }
+
+                                                                                    ?>
+                                    </p>
+                                </div>
+
+                            </div>
+                            <div class="profile-location">
+                                <h3>Location</h3>
+                                <p><?php echo $freelancer_array['country']; ?></p>
+                            </div>
+
+                            <div class="ratings">
+                                <h4>Reviews</h4>
+                            </div>
+                            <div class="userJobsFreelancer">
+
+                                <?php
+                                if ($fetchJobCount['jobCount'] > 0) {
+                                ?>
+                                    <h3>All Jobs Post(s)</h3>
+                                    <?php
+                                    $userID = $row['id'];
+                                    $jobSQL = "SELECT * FROM jobs WHERE user_id='$userID' ORDER BY id DESC";
+                                    $jobResult = mysqli_query($conn, $jobSQL) or die(mysqli_errno($conn));
+
+                                    if (mysqli_num_rows($jobResult) > 0) {
+                                        while ($r = mysqli_fetch_assoc($jobResult)) {
+                                    ?>
+                                            <div class="jobPost" onclick="location.href=`../newPostJob/job.php?id=<?php echo $r['id']; ?>`">
+                                                <div class="job-title">
+                                                    <a href="../newPostJob/job.php?id=<?php echo $r['id']; ?>"><?php echo $r['title']; ?></a>
+                                                </div>
+
+                                                <!-- ----------------------------------------- -->
+                                                <!-- JOB STATUS -->
+                                                <!-- 0 : OPEN -->
+                                                <!-- 1 : CLOSED -->
+                                                <!-- -1 : IN PROGRESS -->
+                                                <!-- ----------------------------------------- -->
+
+                                                <div class="card1">
+                                                    <div class="status">
+                                                        <p>Status:</p>
+                                                        <span>
+                                                            <?php if ($r['status'] == 0) { ?>
+                                                                <span style="color: lightgreen;"><?php echo "Open"; ?></span>
+                                                            <?php } else if ($r['status'] == 1) { ?>
+                                                                <span style="color: red;"><?php echo "Closed"; ?></span>
+                                                            <?php } else if ($r['status'] == -1) { ?>
+                                                                <span style="color: yellow;"><?php echo "In-Progress"; ?></span>
+                                                            <?php } ?>
+                                                        </span>
+                                                    </div>
+                                                    <div class="postedOn">
+                                                        <p>Posted on:</p>
+                                                        <span>
+                                                            <?php echo $r['datePosted']; ?>
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="card2">
+                                                    <div class="location">
+                                                        <p>Location: </p>
+                                                        <span> <?php echo ucfirst($r['location']); ?></span>
+                                                    </div>
+
+                                                    <div class="price">
+                                                        <p>Pay: </p>
+                                                        <?php if ($r['rate'] > 0) { ?>
+                                                            <span>$<?php echo $r['rate']; ?> / hr - </span>
+                                                            <span><?php echo "Hourly Rate" ?></span>
+                                                        <?php } else if ($r['budget'] > 0) { ?>
+                                                            <span>$ <?php echo $r['budget']; ?> - </span>
+                                                            <span><?php echo "Project Budget" ?></span>
+                                                        <?php } else { ?>
+                                                            <p></p>
+                                                            <span> <?php echo "No budget or pay rate set yet..."; ?></span>
+                                                        <?php } ?>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                    <?php
+                                        }
+                                    }
+                                    ?>
+                                <?php
+                                }
+                                ?>
+
+                            </div>
+                        </div>
+                    <?php
+                    } else {
+                    ?>
+                        <div class="profile-info">
+                            <div class="client-info">
+                                <h3>Username:</h3>
+                                <span><?php echo $row['username'] ?></span>
+                            </div>
+                            <div class="userJobs">
+
+                                <?php
+                                if ($fetchJobCount['jobCount'] < 1) {
+                                ?>
+                                    <p>
+                                        <?php echo "Seems like " . $row['username'] . " is inactive."; ?>
+                                    </p>
+                                    <img src="../Image/sad-cartoon.gif" alt="no-activity">
+                                <?php
+                                } else {
+                                ?>
+                                    <h3>All Jobs Post(s)</h3>
+                                    <?php
+                                    $username = $row['username'];
+                                    $getUserID = "SELECT id FROM clients WHERE username = '$username'";
+                                    $getResult = mysqli_query($conn, $getUserID);
+                                    $userrow = mysqli_fetch_assoc($getResult);
+                                    $userID = $userrow['id'];
+                                    $jobSQL = "SELECT * FROM jobs WHERE user_id='$userID' ORDER BY id DESC";
+                                    $jobResult = mysqli_query($conn, $jobSQL) or die(mysqli_errno($conn));
+
+                                    if (mysqli_num_rows($jobResult) > 0) {
+                                        while ($r = mysqli_fetch_assoc($jobResult)) {
+                                    ?>
+                                            <div class="jobPost" onclick="location.href=`../newPostJob/job.php?id=<?php echo $r['id']; ?>`">
+                                                <div class="job-title">
+                                                    <a href="../newPostJob/job.php?id=<?php echo $r['id']; ?>"><?php echo $r['title']; ?></a>
+                                                </div>
+
+                                                <!-- ----------------------------------------- -->
+                                                <!-- JOB STATUS -->
+                                                <!-- 0 : OPEN -->
+                                                <!-- 1 : CLOSED -->
+                                                <!-- -1 : IN PROGRESS -->
+                                                <!-- ----------------------------------------- -->
+
+                                                <div class="card1">
+                                                    <div class="status">
+                                                        <p>Status:</p>
+                                                        <span>
+                                                            <?php if ($r['status'] == 0) { ?>
+                                                                <span style="color: lightgreen;"><?php echo "Open"; ?></span>
+                                                            <?php } else if ($r['status'] == 1) { ?>
+                                                                <span style="color: red;"><?php echo "Closed"; ?></span>
+                                                            <?php } else if ($r['status'] == -1) { ?>
+                                                                <span style="color: yellow;"><?php echo "In-Progress"; ?></span>
+                                                            <?php } ?>
+                                                        </span>
+                                                    </div>
+                                                    <div class="postedOn">
+                                                        <p>Posted on:</p>
+                                                        <span>
+                                                            <?php echo $r['datePosted']; ?>
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="card2">
+                                                    <div class="location">
+                                                        <p>Location: </p>
+                                                        <span> <?php echo ucfirst($r['location']); ?></span>
+                                                    </div>
+
+                                                    <div class="price">
+                                                        <p>Pay: </p>
+                                                        <?php if ($r['rate'] > 0) { ?>
+                                                            <span>$<?php echo $r['rate']; ?> / hr - </span>
+                                                            <span><?php echo "Hourly Rate" ?></span>
+                                                        <?php } else if ($r['budget'] > 0) { ?>
+                                                            <span>$ <?php echo $r['budget']; ?> - </span>
+                                                            <span><?php echo "Project Budget" ?></span>
+                                                        <?php } else { ?>
+                                                            <p></p>
+                                                            <span> <?php echo "No budget or pay rate set yet..."; ?></span>
+                                                        <?php } ?>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                    <?php
+                                        }
+                                    }
+                                    ?>
+                                <?php
+                                }
+                                ?>
+
+                            </div>
+                        </div>
+                    <?php
+                    }
+                    ?>
                 </div>
-                <?php
-                } else{
-                ?>
-                <div class="profile-info">
-                    <div class="client-info">
-                        <h3>Username:</h3>
-                        <span><?php echo $row['username'] ?></span>
-                    </div>
-                    <div class="userJobs">
-
-                        <?php
-                            if($fetchJobCount['jobCount'] < 1){
-                        ?>
-                        <p>
-                            <?php echo "Seems like " . $row['username'] . " is inactive."; ?>
-                        </p>
-                        <img src="../Image/sad-cartoon.gif" alt="no-activity">
-                        <?php   
-                            }
-                            else{
-                        ?>     
-                            <h3>All Jobs Post(s)</h3>
-                            <?php
-                            $username = $row['username'];
-                            $getUserID = "SELECT id FROM clients WHERE username = '$username'";
-                            $getResult = mysqli_query($conn, $getUserID);
-                            $userrow = mysqli_fetch_assoc($getResult);
-                            $userID = $userrow['id'];
-                            $jobSQL = "SELECT * FROM jobs WHERE user_id='$userID' ORDER BY id DESC";
-                            $jobResult = mysqli_query($conn, $jobSQL) or die(mysqli_errno($conn));  
-                            
-                            if (mysqli_num_rows($jobResult) > 0) {
-                                while ($r = mysqli_fetch_assoc($jobResult)) {
-                            ?>
-                            <div class="jobPost" onclick="location.href=`../newPostJob/job.php?id=<?php echo $r['id']; ?>`">
-                                <div class="job-title">
-                                    <a href="../newPostJob/job.php?id=<?php echo $r['id']; ?>"><?php echo $r['title']; ?></a>
-                                </div>
-
-                                <!-- ----------------------------------------- -->
-                                <!-- JOB STATUS -->
-                                <!-- 0 : OPEN -->
-                                <!-- 1 : CLOSED -->
-                                <!-- -1 : IN PROGRESS -->
-                                <!-- ----------------------------------------- -->
-
-                                <div class="card1">
-                                    <div class="status">
-                                        <p>Status:</p>
-                                        <span>
-                                            <?php if ($r['status'] == 0) { ?>
-                                                <span style="color: lightgreen;"><?php echo "Open"; ?></span>
-                                            <?php } else if ($r['status'] == 1) { ?>
-                                                <span style="color: red;"><?php echo "Closed"; ?></span>
-                                            <?php } else if ($r['status'] == -1) { ?>
-                                                <span style="color: yellow;"><?php echo "In-Progress"; ?></span>
-                                            <?php } ?>
-                                        </span>
-                                    </div>
-                                    <div class="postedOn">
-                                        <p>Posted on:</p>
-                                        <span>
-                                            <?php echo $r['datePosted']; ?>
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="card2">
-                                    <div class="location">
-                                        <p>Location: </p>
-                                        <span> <?php echo ucfirst($r['location']); ?></span>
-                                    </div>
-
-                                    <div class="price">
-                                        <p>Pay: </p>
-                                        <?php if ($r['rate'] > 0) { ?>
-                                            <span>$<?php echo $r['rate']; ?> / hr - </span>
-                                            <span><?php echo "Hourly Rate" ?></span>
-                                        <?php } else if ($r['budget'] > 0) { ?>
-                                            <span>$ <?php echo $r['budget']; ?> - </span>
-                                            <span><?php echo "Project Budget" ?></span>
-                                        <?php } else { ?>
-                                            <p></p>
-                                            <span> <?php echo "No budget or pay rate set yet..."; ?></span>
-                                        <?php } ?>
-                                    </div>
-                                </div>
-
-                            </div>                        
-                            <?php
-                                }
-                            }
-                            ?> 
-                        <?php   
-                            }
-                        ?>
-
-                    </div>
-                </div>                
-                <?php
-                }
-                ?>
-            </div>
             <?php
-                } else {
+            } else {
             ?>
                 <span>User does not Exists</span>
             <?php
-                }
+            }
             ?>
         </div>
-        
+
 
     </div>
     <?php include '../footer.php'; ?>
