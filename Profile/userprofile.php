@@ -276,9 +276,10 @@ if (mysqli_num_rows($result) > 0) {
                         <h3>Username:</h3>
                         <span><?php echo $row['username'] ?></span>
                     </div>
-                    <div class="jobPostTitle">
-                        <h4>Jobs Posted</h4> 
-                    </div>
+
+                </div>
+                <div class="jobs">
+                    <h3><?php echo $row['username'] ?> Jobs Posted</h3>
                     <div class="userJobs">
 
                         <?php
