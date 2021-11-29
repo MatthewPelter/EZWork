@@ -364,7 +364,6 @@ $darktext: rgb(121, 121, 121);
                         width: 100%;
                         padding: .5rem 0rem;
                         border-bottom: .7px solid lightgrey;
-    
                         .job-title{
                             width: 100%;
                             a{
@@ -379,30 +378,29 @@ $darktext: rgb(121, 121, 121);
                             }
                         }
     
-                        .status{
-                            width: 100%;
-                            display: flex;
-                            flex-direction: row;
-                            align-items: center;
-                            p{
-                                color: $darktext;
-                                font-size: 1rem;
-                                margin-right: .5rem;
-                            }
-                            span{
-                                font-size: 1rem;
-                                font-weight: bolder;
-                                color: lightgreen;
-                            }
-                        }
     
                         .card1{
                             width: 100%;
                             display: flex;
                             flex-direction: row;
                             align-items: center;
-    
-                            .postedOn,.postedBy{
+                            .status{
+                                width: 50%;
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                p{
+                                    color: $darktext;
+                                    font-size: 1rem;
+                                    margin-right: .5rem;
+                                }
+                                span{
+                                    font-size: 1rem;
+                                    font-weight: bolder;
+                                    color: lightgreen;
+                                }
+                            }
+                            .postedOn{
                                 width: 50%;
                                 display: flex;
                                 flex-direction: row;

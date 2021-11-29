@@ -24305,32 +24305,6 @@ a:hover {
   text-decoration: underline;
 }
 
-.profile .profile-container .profile-body .profile-info .userJobs .jobPost .status {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.profile .profile-container .profile-body .profile-info .userJobs .jobPost .status p {
-  color: #797979;
-  font-size: 1rem;
-  margin-right: .5rem;
-}
-
-.profile .profile-container .profile-body .profile-info .userJobs .jobPost .status span {
-  font-size: 1rem;
-  font-weight: bolder;
-  color: lightgreen;
-}
-
 .profile .profile-container .profile-body .profile-info .userJobs .jobPost .card1 {
   width: 100%;
   display: -webkit-box;
@@ -24345,7 +24319,7 @@ a:hover {
           align-items: center;
 }
 
-.profile .profile-container .profile-body .profile-info .userJobs .jobPost .card1 .postedOn, .profile .profile-container .profile-body .profile-info .userJobs .jobPost .card1 .postedBy {
+.profile .profile-container .profile-body .profile-info .userJobs .jobPost .card1 .status {
   width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -24359,13 +24333,39 @@ a:hover {
           align-items: center;
 }
 
-.profile .profile-container .profile-body .profile-info .userJobs .jobPost .card1 .postedOn p, .profile .profile-container .profile-body .profile-info .userJobs .jobPost .card1 .postedBy p {
+.profile .profile-container .profile-body .profile-info .userJobs .jobPost .card1 .status p {
   color: #797979;
   font-size: 1rem;
   margin-right: .5rem;
 }
 
-.profile .profile-container .profile-body .profile-info .userJobs .jobPost .card1 .postedOn span, .profile .profile-container .profile-body .profile-info .userJobs .jobPost .card1 .postedBy span {
+.profile .profile-container .profile-body .profile-info .userJobs .jobPost .card1 .status span {
+  font-size: 1rem;
+  font-weight: bolder;
+  color: lightgreen;
+}
+
+.profile .profile-container .profile-body .profile-info .userJobs .jobPost .card1 .postedOn {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile .profile-container .profile-body .profile-info .userJobs .jobPost .card1 .postedOn p {
+  color: #797979;
+  font-size: 1rem;
+  margin-right: .5rem;
+}
+
+.profile .profile-container .profile-body .profile-info .userJobs .jobPost .card1 .postedOn span {
   font-size: .95rem;
 }
 

@@ -314,19 +314,19 @@ if (mysqli_num_rows($result) > 0) {
                                 <!-- -1 : IN PROGRESS -->
                                 <!-- ----------------------------------------- -->
 
-                                <div class="status">
-                                    <p>Status:</p>
-                                    <span>
-                                        <?php if ($r['status'] == 0) { ?>
-                                            <green><?php echo "Open"; ?></green>
-                                        <?php } else if ($r['status'] == 1) { ?>
-                                            <red><?php echo "Closed"; ?></red>
-                                        <?php } else if ($r['status'] == -1) { ?>
-                                            <yellow><?php echo "In-Progress"; ?></yellow>
-                                        <?php } ?>
-                                    </span>
-                                </div>
                                 <div class="card1">
+                                    <div class="status">
+                                        <p>Status:</p>
+                                        <span>
+                                            <?php if ($r['status'] == 0) { ?>
+                                                <green><?php echo "Open"; ?></green>
+                                            <?php } else if ($r['status'] == 1) { ?>
+                                                <red><?php echo "Closed"; ?></red>
+                                            <?php } else if ($r['status'] == -1) { ?>
+                                                <yellow><?php echo "In-Progress"; ?></yellow>
+                                            <?php } ?>
+                                        </span>
+                                    </div>
                                     <div class="postedOn">
                                         <p>Posted on:</p>
                                         <span>
