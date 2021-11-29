@@ -23,6 +23,7 @@ $receiver = $postBody->receiver;
 
 $body = securityscan($body);
 $receiver = securityscan($receiver);
+// i am stupid and made you send a username instead of a user id and im too lazy to fix it. now I have to convert username to a id. im dumb 
 $id = mysqli_query($conn, "SELECT id FROM clients WHERE username='$receiver'");
 $getID = mysqli_fetch_assoc($id);
 $getID = $getID['id'];
