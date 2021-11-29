@@ -24263,6 +24263,7 @@ a:hover {
 }
 
 .profile .profile-container .profile-body .profile-info .userJobsFreelancer {
+  padding: 1rem 0rem;
   border-top: .7px solid lightgrey;
   width: 100%;
   display: -webkit-box;

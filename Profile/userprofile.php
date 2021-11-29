@@ -311,11 +311,11 @@ if (mysqli_num_rows($result) > 0) {
                                         <p>Status:</p>
                                         <span>
                                             <?php if ($r['status'] == 0) { ?>
-                                                <green><?php echo "Open"; ?></green>
+                                                <span style="color: lightgreen;"><?php echo "Open"; ?></span>
                                             <?php } else if ($r['status'] == 1) { ?>
-                                                <red><?php echo "Closed"; ?></red>
+                                                <span style="color: red;"><?php echo "Closed"; ?></span>
                                             <?php } else if ($r['status'] == -1) { ?>
-                                                <yellow><?php echo "In-Progress"; ?></yellow>
+                                                <span style="color: yellow;"><?php echo "In-Progress"; ?></span>
                                             <?php } ?>
                                         </span>
                                     </div>
@@ -410,11 +410,11 @@ if (mysqli_num_rows($result) > 0) {
                                         <p>Status:</p>
                                         <span>
                                             <?php if ($r['status'] == 0) { ?>
-                                                <green><?php echo "Open"; ?></green>
+                                                <span style="color: lightgreen;"><?php echo "Open"; ?></span>
                                             <?php } else if ($r['status'] == 1) { ?>
-                                                <red><?php echo "Closed"; ?></red>
+                                                <span style="color: red;"><?php echo "Closed"; ?></span>
                                             <?php } else if ($r['status'] == -1) { ?>
-                                                <yellow><?php echo "In-Progress"; ?></yellow>
+                                                <span style="color: yellow;"><?php echo "In-Progress"; ?></span>
                                             <?php } ?>
                                         </span>
                                     </div>
