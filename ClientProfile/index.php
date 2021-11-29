@@ -255,9 +255,9 @@ $userID = $_SESSION['user_id'];
 <script type="text/javascript">
     const Toast = Swal.mixin({
         toast: true,
-        position: 'top-end',
+        position: 'bottom-end',
         showConfirmButton: false,
-        timer: 3000,
+        timer: 5000,
         timerProgressBar: true,
         didOpen: (toast) => {
             toast.addEventListener('mouseenter', Swal.stopTimer)
