@@ -258,14 +258,48 @@ if (mysqli_num_rows($jobResult) > 0) {
 <script src="./app.js"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.2.1/dist/sweetalert2.all.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
 
         $("#deleteBtn").click(function() {
-            $('#deleteMenu').css('display', 'block');
+            // $('#deleteMenu').css('display', 'block');
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $.ajax({
+                        type: "POST",
+                        url: "../api/delete-post.php",
+                        data: 'postID=' + <?php echo $job_id; ?>,
+                        success: function(data) {
+                            //$('#deleteMenu').css('display', 'none');
+                            //$('#result').html(data);
+                            Swal.fire(
+                                'Deleted!',
+                                'Your file has been deleted.',
+                                'success'
+                            )
+                            setTimeout(function() {
+                                window.location.reload(1);
+                            }, 3000);
+                        },
+                        error: function(r) {
+                            console.log(r);
+                        }
+                    });
+
+                }
+            })
         });
 
-        $('#yesBtn').click(function() {
+        /*$('#yesBtn').click(function() {
             $.ajax({
                 type: "POST",
                 url: "../api/delete-post.php",
@@ -286,7 +320,7 @@ if (mysqli_num_rows($jobResult) > 0) {
 
         $('#noBtn').click(function() {
             $('#deleteMenu').css('display', 'none');
-        });
+        });*/
 
         function copyToClipboard(link) {
             const el = document.createElement("textarea");
