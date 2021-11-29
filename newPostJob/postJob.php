@@ -12,7 +12,13 @@ if (!isset($_SESSION['userid'])) {
         header('Location: ../login/index');
     }
 }
-
+function securityscan($data)
+{
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
 ?>
 
 <!DOCTYPE HTML>
@@ -56,6 +62,17 @@ if (!isset($_SESSION['userid'])) {
                         if ($typeOfJob == '') {
                             $typeOfJob = 'require';
                         }
+
+                        $length = securityscan($length);
+                        $title = securityscan($title);
+                        $skills = securityscan($skills);
+                        $size = securityscan($size);
+                        $location = securityscan($location);
+                        $maxbudget = securityscan($maxbudget);
+                        $hourrate = securityscan($hourrate);
+                        $description = securityscan($description);
+                        $experience = securityscan($experience);
+                        $typeOfJob = securityscan($typeOfJob);
 
                         //print_r($_SESSION['post']);
                         $datePosted = date("Y-m-d");
