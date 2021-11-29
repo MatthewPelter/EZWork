@@ -2,6 +2,5 @@
 session_start();
 unset($_SESSION['user_id']);
 unset($_SESSION['userid']);
-
-$_SESSION['logoutSuccess'] = "Logged out successfully";
+session_destroy();
 header('location:../login/index');
