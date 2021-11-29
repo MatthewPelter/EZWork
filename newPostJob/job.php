@@ -285,10 +285,9 @@ if (mysqli_num_rows($jobResult) > 0) {
                                 'Deleted!',
                                 'Your file has been deleted.',
                                 'success'
-                            )
-                            setTimeout(function() {
+                            ).then(function() {
                                 window.location.reload(1);
-                            }, 3000);
+                            });
                         },
                         error: function(r) {
                             console.log(r);
