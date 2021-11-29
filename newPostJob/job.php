@@ -295,7 +295,7 @@ if (mysqli_num_rows($jobResult) > 0) {
                     });
 
                 }
-            })
+            });
         });
 
         /*$('#yesBtn').click(function() {

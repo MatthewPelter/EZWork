@@ -253,16 +253,40 @@ $userID = $_SESSION['user_id'];
 <script src="../SkillsContainer/searchProfile.js"></script>
 <!--nav bar script -->
 <script type="text/javascript">
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+    });
+
+
     <?php
     if (isset($_SESSION['postSuccess'])) { ?>
         Swal.fire(
             'Yay!',
             'Your job has been posted successfully!',
             'success'
-        )
+        );
     <?php
         unset($_SESSION['postSuccess']);
     } ?>
+
+    <?php
+    if (isset($_SESSION['loginSuccess'])) { ?>
+        Toast.fire({
+            icon: 'success',
+            title: 'Signed in successfully'
+        });
+    <?php
+        unset($_SESSION['loginSuccess']);
+    } ?>
+
 
 
 

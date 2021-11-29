@@ -21,6 +21,7 @@ if (isset($_POST['submit'])) {
 		if (password_verify($password, $data['password'])) {
 			$_SESSION['userid'] = $data['username'];
 			$_SESSION['user_id'] = $data['id'];
+			$_SESSION['loginSuccess'] = "Successfully logged in!";
 			header("Location: ../ClientProfile/index");
 		} else {
 			$_SESSION['error'] = "Username or Password is incorrect! Try again...";
