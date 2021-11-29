@@ -30,6 +30,7 @@ if (mysqli_num_rows($jobResult) > 0) {
     $unameSQL = "SELECT username FROM clients WHERE id='$uid'";
     $unameResult = mysqli_query($conn, $unameSQL);
     $unameFetched = mysqli_fetch_assoc($unameResult);
+    $receiverUsername = $unameFetched['username'];
 } else {
     header("location: ./jobs.php");
 }
@@ -286,7 +287,7 @@ if (mysqli_num_rows($jobResult) > 0) {
                         url: "../api/message.php",
                         processData: false,
                         contentType: "application/json",
-                        data: '{ "body": "' + text + '", "receiver": "<?php echo $uid; ?>", "jobID": "<?php echo $job_id; ?>" }',
+                        data: '{ "body": "' + text + '", "receiver": "<?php echo $receiverUsername; ?>", "jobID": "<?php echo $job_id; ?>" }',
                         success: function(data) {
                             var obj = JSON.parse(data);
                             console.log(obj);
