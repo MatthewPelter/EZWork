@@ -90,6 +90,31 @@ if (isset($_SESSION["userid"])) {
         </div>
     </div>
     <script src="/login/loginPage.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.2.1/dist/sweetalert2.all.min.js"></script>
+
+    <script type="text/javascript">
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 5000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        });
+        <?php
+        if (isset($_SESSION['logoutSuccess'])) { ?>
+            Toast.fire({
+                icon: 'success',
+                title: 'Logged out successfully'
+            });
+        <?php
+            unset($_SESSION['logoutSuccess']);
+        } ?>
+    </script>
 </body>
 
 </html>
