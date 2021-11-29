@@ -141,7 +141,7 @@ if (mysqli_num_rows($result) > 0) {
                                 if ($row['freelancer_id'] != NULL) {
                             ?>
                             <div class="freelancerQoute">
-                                <p>**Freelancers also have the option to post jobs to the <span>EZWORK</span>cmarketplace.</p>
+                                <p>**Freelancers also have the option to post jobs to the <span>EZWORK</span> marketplace.</p>
                             </div>
                             <?php
                                 }
@@ -276,18 +276,10 @@ if (mysqli_num_rows($result) > 0) {
                     <div class="ratings">
                         <h4>Reviews</h4>
                     </div>
-                    <div class="userJobs">
+                    <div class="userJobsFreelancer">
 
                         <?php
-                            if($fetchJobCount['jobCount'] < 1){
-                        ?>
-                        <p>
-                            <?php echo "Seems like " . $row['username'] . " is inactive."; ?>
-                        </p>
-                        <img src="../Image/sad-cartoon.gif" alt="no-activity">
-                        <?php   
-                            }
-                            else{
+                            if($fetchJobCount['jobCount'] > 0){
                         ?>     
                             <h3>All Jobs Post(s)</h3>
                             <?php

@@ -24004,7 +24004,6 @@ a:hover {
 
 .profile .profile-container .profile-body .profile-job-info .freelancerQoute p span {
   color: #054e97;
-  font-size: 1rem;
 }
 
 .profile .profile-container .profile-body .profile-info {
@@ -24261,6 +24260,149 @@ a:hover {
   padding-left: .25rem;
   font-size: 1.5rem;
   color: #797979;
+}
+
+.profile .profile-container .profile-body .profile-info .userJobsFreelancer {
+  border-top: .7px solid lightgrey;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile .profile-container .profile-body .profile-info .userJobsFreelancer p {
+  padding: .5rem 0rem;
+  font-size: 1.4rem;
+  color: #797979;
+}
+
+.profile .profile-container .profile-body .profile-info .userJobsFreelancer img {
+  width: 45%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 10px;
+}
+
+.profile .profile-container .profile-body .profile-info .userJobsFreelancer h3 {
+  width: 100%;
+  font-size: 2rem;
+  color: #0a345e;
+  text-decoration: underline;
+}
+
+.profile .profile-container .profile-body .profile-info .userJobsFreelancer .jobPost {
+  width: 100%;
+  padding: .5rem;
+  border-bottom: .7px solid lightgrey;
+  cursor: pointer;
+}
+
+.profile .profile-container .profile-body .profile-info .userJobsFreelancer .jobPost .job-title {
+  width: 100%;
+}
+
+.profile .profile-container .profile-body .profile-info .userJobsFreelancer .jobPost .job-title a {
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: bolder;
+  color: #054e97;
+}
+
+.profile .profile-container .profile-body .profile-info .userJobsFreelancer .jobPost .job-title a:hover {
+  text-decoration: underline;
+}
+
+.profile .profile-container .profile-body .profile-info .userJobsFreelancer .jobPost .card1 {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile .profile-container .profile-body .profile-info .userJobsFreelancer .jobPost .card1 .postedOn, .profile .profile-container .profile-body .profile-info .userJobsFreelancer .jobPost .card1 .status {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.profile .profile-container .profile-body .profile-info .userJobsFreelancer .jobPost .card1 .postedOn p, .profile .profile-container .profile-body .profile-info .userJobsFreelancer .jobPost .card1 .status p {
+  color: #797979;
+  font-size: 1rem;
+  margin-right: .5rem;
+}
+
+.profile .profile-container .profile-body .profile-info .userJobsFreelancer .jobPost .card1 .postedOn span, .profile .profile-container .profile-body .profile-info .userJobsFreelancer .jobPost .card1 .status span {
+  font-size: .95rem;
+}
+
+.profile .profile-container .profile-body .profile-info .userJobsFreelancer .jobPost .card2 {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile .profile-container .profile-body .profile-info .userJobsFreelancer .jobPost .card2 .location, .profile .profile-container .profile-body .profile-info .userJobsFreelancer .jobPost .card2 .price {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile .profile-container .profile-body .profile-info .userJobsFreelancer .jobPost .card2 .location p, .profile .profile-container .profile-body .profile-info .userJobsFreelancer .jobPost .card2 .price p {
+  color: #797979;
+  font-size: 1rem;
+  margin-right: .25rem;
+}
+
+.profile .profile-container .profile-body .profile-info .userJobsFreelancer .jobPost .card2 .location span, .profile .profile-container .profile-body .profile-info .userJobsFreelancer .jobPost .card2 .price span {
+  font-size: .95rem;
+}
+
+.profile .profile-container .profile-body .profile-info .userJobsFreelancer .jobPost:hover {
+  background: whitesmoke;
 }
 
 .profile .profile-container .profile-body .profile-info .userJobs {

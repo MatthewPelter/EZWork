@@ -161,7 +161,6 @@ $darktext: rgb(121, 121, 121);
                         color: $darktext;
                         span{
                             color: $lightColor;
-                            font-size: 1rem;
                         }
                     }
                 }
@@ -347,6 +346,97 @@ $darktext: rgb(121, 121, 121);
                         padding-left: .25rem;
                         font-size: 1.5rem;
                         color: $darktext;
+                    }
+                }
+                .userJobsFreelancer{
+                    border-top: .7px solid lightgrey;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    p{
+                        padding: .5rem 0rem;
+                        font-size: 1.4rem;
+                        color: $darktext;
+                    }
+                    img{
+                        width: 45%;
+                        object-fit: contain;
+                        border-radius: 10px;
+                    }
+                    h3{
+                        width: 100%;
+                        font-size: 2rem;
+                        color: $color1;
+                        text-decoration: underline;
+                    }
+                    .jobPost{
+                        width: 100%;
+                        padding: .5rem;
+                        border-bottom: .7px solid lightgrey;
+                        .job-title{
+                            width: 100%;
+                            a{
+                                text-decoration: none;
+                                font-size: 1.25rem;
+                                font-weight: bolder;
+                                color: $lightColor;
+    
+                                &:hover{
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+    
+    
+                        .card1{
+                            width: 100%;
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            .postedOn,.status{
+                                width: 50%;
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                justify-content: flex-start;
+                                p{
+                                    color: $darktext;
+                                    font-size: 1rem;
+                                    margin-right: .5rem;
+                                }
+                                span{
+                                    font-size: .95rem;
+                                }
+                            }
+                        }
+    
+                        .card2{
+                            width: 100%;
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+    
+                            .location,.price{
+                                width: 50%;
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                p{
+                                    color: $darktext;
+                                    font-size: 1rem;
+                                    margin-right: .25rem;
+                                }
+                                span{
+                                    font-size: .95rem;
+                                }
+                            }
+                        }
+                        cursor: pointer;
+                        &:hover{
+                            background: whitesmoke;
+                        }
                     }
                 }
                 .userJobs{
