@@ -140,6 +140,15 @@
   font-size: 1.1rem;
   color: #797979;
 }
+.profile .profile-container .profile-body .profile-job-info .freelancerQoute {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.profile .profile-container .profile-body .profile-job-info .freelancerQoute p {
+  font-size: 0.9rem;
+  color: #797979;
+}
 .profile .profile-container .profile-body .profile-info {
   padding: 2rem;
   width: 100%;
@@ -339,7 +348,7 @@
 }
 .profile .profile-container .profile-body .profile-info .userJobs .jobPost {
   width: 100%;
-  padding: 0.5rem 0rem;
+  padding: 0.5rem;
   border-bottom: 0.7px solid lightgrey;
   cursor: pointer;
 }

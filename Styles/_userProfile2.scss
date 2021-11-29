@@ -152,6 +152,15 @@ $darktext: rgb(121, 121, 121);
                         color: $darktext;
                     }
                 }
+                .freelancerQoute{
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    p{
+                        font-size: .9rem;
+                        color: $darktext;
+                    }
+                }
             }
             .profile-info{
                 padding: 2rem;
@@ -362,7 +371,7 @@ $darktext: rgb(121, 121, 121);
                     }
                     .jobPost{
                         width: 100%;
-                        padding: .5rem 0rem;
+                        padding: .5rem;
                         border-bottom: .7px solid lightgrey;
                         .job-title{
                             width: 100%;

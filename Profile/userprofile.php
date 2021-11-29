@@ -137,6 +137,15 @@ if (mysqli_num_rows($result) > 0) {
                             <div class="jobPosted">
                                 <p><?php echo $fetchJobCount['jobCount']; ?> Job(s) Posted</p>
                             </div>
+                            <?php
+                                if ($row['freelancer_id'] != NULL) {
+                            ?>
+                            <div class="freelancerQoute">
+                                <p>**Freelancers also have the option to post jobs to the EZWork marketplace.</p>
+                            </div>
+                            <?php
+                                }
+                            ?>
                 </div>
                 <?php if ($row['freelancer_id'] != NULL) {?>
                 <div class="profile-info">

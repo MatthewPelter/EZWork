@@ -23988,6 +23988,20 @@ a:hover {
   color: #797979;
 }
 
+.profile .profile-container .profile-body .profile-job-info .freelancerQoute {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.profile .profile-container .profile-body .profile-job-info .freelancerQoute p {
+  font-size: .9rem;
+  color: #797979;
+}
+
 .profile .profile-container .profile-body .profile-info {
   padding: 2rem;
   width: 100%;
@@ -24285,7 +24299,7 @@ a:hover {
 
 .profile .profile-container .profile-body .profile-info .userJobs .jobPost {
   width: 100%;
-  padding: .5rem 0rem;
+  padding: .5rem;
   border-bottom: .7px solid lightgrey;
   cursor: pointer;
 }
