@@ -64,6 +64,7 @@ if (!isset($_SESSION['userid'])) {
 
                         if ($query) {
                             unset($_SESSION['post']);
+                            $_SESSION['postSuccess'] = "Job Posted Sucessfully!";
                             header("location: https://ez-work.herokuapp.com/ClientProfile/index");
                         } else {
             ?>

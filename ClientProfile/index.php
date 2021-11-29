@@ -30,43 +30,231 @@ $userID = $_SESSION['user_id'];
         <link rel="stylesheet" href="../Styles/style.css">
 
         <style type="text/css">
-            .alert {
-                padding: 20px;
-                background-color: #f44336;
-                color: white;
-                opacity: 1;
-                transition: opacity 0.6s;
-                margin-bottom: 15px;
-                position: fixed;
-                top: 5rem;
-                right: 2rem;
+            #container {
+                position: relative;
+                margin: auto;
+                overflow: hidden;
+                width: 700px;
+                height: 250px;
             }
 
-            .alert.success {
-                background-color: #04AA6D;
+            #container h1 {
+                font-size: 0.9em;
+                font-weight: 100;
+                letter-spacing: 3px;
+                padding-top: 5px;
+                color: #FCFCFC;
+                padding-bottom: 5px;
+                text-transform: uppercase;
             }
 
-            .alert.info {
-                background-color: #2196F3;
+            #container .green {
+                color: #4ec07d;
             }
 
-            .alert.warning {
-                background-color: #ff9800;
+            #container .red {
+                color: #e96075;
             }
 
-            .closebtn {
-                margin-left: 15px;
-                color: white;
-                font-weight: bold;
-                float: right;
-                font-size: 22px;
-                line-height: 20px;
+            #container .alert {
+                font-weight: 700;
+                letter-spacing: 5px;
+            }
+
+            #container p {
+                margin-top: -5px;
+                font-size: 0.5em;
+                font-weight: 100;
+                color: #5e5e5e;
+                letter-spacing: 1px;
+            }
+
+            button,
+            .dot {
                 cursor: pointer;
-                transition: 0.3s;
             }
 
-            .closebtn:hover {
-                color: black;
+            #success-box {
+                position: absolute;
+                width: 35%;
+                height: 100%;
+                left: 12%;
+                background: linear-gradient(to bottom right, #B0DB7D 40%, #99DBB4 100%);
+                border-radius: 20px;
+                box-shadow: 5px 5px 20px rgba(203, 205, 211, 0.1);
+                perspective: 40px;
+            }
+
+            .dot {
+                width: 8px;
+                height: 8px;
+                background: #FCFCFC;
+                border-radius: 50%;
+                position: absolute;
+                top: 4%;
+                right: 6%;
+            }
+
+            .dot:hover {
+                background: #c9c9c9;
+            }
+
+            .two {
+                right: 12%;
+                opacity: 0.5;
+            }
+
+            .face {
+                position: absolute;
+                width: 22%;
+                height: 22%;
+                background: #FCFCFC;
+                border-radius: 50%;
+                border: 1px solid #777777;
+                top: 21%;
+                left: 37.5%;
+                z-index: 2;
+                animation: bounce 1s ease-in infinite;
+            }
+
+            .face2 {
+                position: absolute;
+                width: 22%;
+                height: 22%;
+                background: #FCFCFC;
+                border-radius: 50%;
+                border: 1px solid #777777;
+                top: 21%;
+                left: 37.5%;
+                z-index: 2;
+                animation: roll 3s ease-in-out infinite;
+            }
+
+            .eye {
+                position: absolute;
+                width: 5px;
+                height: 5px;
+                background: #777777;
+                border-radius: 50%;
+                top: 40%;
+                left: 20%;
+            }
+
+            #container .right {
+                left: 68%;
+            }
+
+            .mouth {
+                position: absolute;
+                top: 43%;
+                left: 41%;
+                width: 7px;
+                height: 7px;
+                border-radius: 50%;
+            }
+
+            .happy {
+                border: 2px solid;
+                border-color: transparent #777777 #777777 transparent;
+                transform: rotate(45deg);
+            }
+
+            .sad {
+                top: 49%;
+                border: 2px solid;
+                border-color: #777777 transparent transparent #777777;
+                transform: rotate(45deg);
+            }
+
+            .shadow {
+                position: absolute;
+                width: 21%;
+                height: 3%;
+                opacity: 0.5;
+                background: #777777;
+                left: 40%;
+                top: 43%;
+                border-radius: 50%;
+                z-index: 1;
+            }
+
+            .scale {
+                animation: scale 1s ease-in infinite;
+            }
+
+            .move {
+                animation: move 3s ease-in-out infinite;
+            }
+
+            .message {
+                position: absolute;
+                width: 100%;
+                text-align: center;
+                height: 40%;
+                top: 47%;
+            }
+
+            .button-box {
+                position: absolute;
+                background: #FCFCFC;
+                width: 50%;
+                height: 15%;
+                border-radius: 20px;
+                top: 73%;
+                left: 25%;
+                outline: 0;
+                border: none;
+                box-shadow: 2px 2px 10px rgba(119, 119, 119, 0.5);
+                transition: all 0.5s ease-in-out;
+            }
+
+            .button-box:hover {
+                background: #efefef;
+                transform: scale(1.05);
+                transition: all 0.3s ease-in-out;
+            }
+
+            @keyframes bounce {
+                50% {
+                    transform: translateY(-10px);
+                }
+            }
+
+            @keyframes scale {
+                50% {
+                    transform: scale(0.9);
+                }
+            }
+
+            @keyframes roll {
+                0% {
+                    transform: rotate(0deg);
+                    left: 25%;
+                }
+
+                50% {
+                    left: 60%;
+                    transform: rotate(168deg);
+                }
+
+                100% {
+                    transform: rotate(0deg);
+                    left: 25%;
+                }
+            }
+
+            @keyframes move {
+                0% {
+                    left: 25%;
+                }
+
+                50% {
+                    left: 60%;
+                }
+
+                100% {
+                    left: 25%;
+                }
             }
         </style>
     </head>
@@ -76,6 +264,33 @@ $userID = $_SESSION['user_id'];
     <!-- NAV BAR -->
     <?php include '../navbar.php'; ?>
     <!-- END NAVBAR -->
+
+
+    <?php
+    if (isset($_SESSION['postSuccess'])) { ?>
+        <div id="container">
+            <div id="success-box">
+                <div class="dot"></div>
+                <div class="dot two"></div>
+                <div class="face">
+                    <div class="eye"></div>
+                    <div class="eye right"></div>
+                    <div class="mouth happy"></div>
+                </div>
+                <div class="shadow scale"></div>
+                <div class="message">
+                    <h1 class="alert">Success!</h1>
+                    <p>yay, you have sucessfully posted a job.</p>
+                </div>
+                <button class="button-box">
+                    <h1 class="green">continue</h1>
+                </button>
+            </div>
+        </div>
+    <?php
+        unset($_SESSION['postSuccess']);
+    } ?>
+
 
     <div class="profile">
         <div class="user-profile-header">
@@ -162,13 +377,13 @@ $userID = $_SESSION['user_id'];
                                 if ($row['freelancer_id'] == NULL) {
                     ?>
 
-                                <a style="color: black; text-decoration: none;" href="../Profile/userprofile.php?name=<?php echo $row['username']; ?>">
-                                    <div class="categoryCard">
-                                        <img src="<?php echo $row['avatar']; ?>" style="border-radius: 50%; width: 2rem;height: 2rem;" id="current-user-img" alt=`<?php echo $row['username']; ?>`>
-                                        <p><?php echo $row['username']; ?></p><br />
-                                        <i class="fa fa-angle-right"></i>
-                                    </div>
-                                </a>
+                                    <a style="color: black; text-decoration: none;" href="../Profile/userprofile.php?name=<?php echo $row['username']; ?>">
+                                        <div class="categoryCard">
+                                            <img src="<?php echo $row['avatar']; ?>" style="border-radius: 50%; width: 2rem;height: 2rem;" id="current-user-img" alt=`<?php echo $row['username']; ?>`>
+                                            <p><?php echo $row['username']; ?></p><br />
+                                            <i class="fa fa-angle-right"></i>
+                                        </div>
+                                    </a>
 
                         <?php
                                 }
@@ -198,13 +413,13 @@ $userID = $_SESSION['user_id'];
                                 if ($row['freelancer_id'] != NULL) {
                     ?>
 
-                                <a style="color: black; text-decoration: none;" href="../Profile/userprofile.php?name=<?php echo $row['username']; ?>">
-                                    <div class="categoryCard">
-                                        <img src="<?php echo $row['avatar']; ?>" style="border-radius: 50%; width: 2rem;height: 2rem;" id="current-user-img" alt=`<?php echo $row['username']; ?>`>
-                                        <p><?php echo $row['username']; ?></p><br />
-                                        <i class="fa fa-angle-right"></i>
-                                    </div>
-                                </a>
+                                    <a style="color: black; text-decoration: none;" href="../Profile/userprofile.php?name=<?php echo $row['username']; ?>">
+                                        <div class="categoryCard">
+                                            <img src="<?php echo $row['avatar']; ?>" style="border-radius: 50%; width: 2rem;height: 2rem;" id="current-user-img" alt=`<?php echo $row['username']; ?>`>
+                                            <p><?php echo $row['username']; ?></p><br />
+                                            <i class="fa fa-angle-right"></i>
+                                        </div>
+                                    </a>
 
                         <?php
                                 }
@@ -293,49 +508,47 @@ $userID = $_SESSION['user_id'];
 </script>
 
 <script>
+    const freelancerSpan = document.getElementById('freelancerSpan');
+    const userSpan = document.getElementById('userSpan');
+    const activerUsersBody = document.querySelector('.activerUsersBody');
+    const activerUsersBody2 = document.querySelector('.activerUsersBody2');
 
-const freelancerSpan = document.getElementById('freelancerSpan');
-const userSpan = document.getElementById('userSpan');
-const activerUsersBody = document.querySelector('.activerUsersBody');
-const activerUsersBody2 = document.querySelector('.activerUsersBody2');
-function toggleUsers(){
+    function toggleUsers() {
 
-    //console.log("Clients");
-    if(getComputedStyle(freelancerSpan).display === 'none'){
-        userSpan.style.display = "none";
-        freelancerSpan.style.display = "inline-block";
+        //console.log("Clients");
+        if (getComputedStyle(freelancerSpan).display === 'none') {
+            userSpan.style.display = "none";
+            freelancerSpan.style.display = "inline-block";
 
-        activerUsersBody2.style.display = "inline-block";
-        activerUsersBody.style.display = "none";
+            activerUsersBody2.style.display = "inline-block";
+            activerUsersBody.style.display = "none";
+        } else {
+            freelancerSpan.style.display = "none";
+            userSpan.style.display = "inline-block";
+
+            activerUsersBody.style.display = "inline-block";
+            activerUsersBody2.style.display = "none";
+        }
     }
-    else{
-        freelancerSpan.style.display = "none";
-        userSpan.style.display = "inline-block";
 
-        activerUsersBody.style.display = "inline-block";
-        activerUsersBody2.style.display = "none";
+    function toggleUsers2() {
+
+        //console.log("Clients");
+        if (getComputedStyle(userSpan).display === 'none') {
+            freelancerSpan.style.display = "none";
+            userSpan.style.display = "inline-block";
+
+            activerUsersBody.style.display = "inline-block";
+            activerUsersBody2.style.display = "none";
+        } else {
+            userSpan.style.display = "none";
+            freelancerSpan.style.display = "inline-block";
+
+
+            activerUsersBody2.style.display = "inline-block";
+            activerUsersBody.style.display = "none";
+        }
     }
-}
-function toggleUsers2(){
-
-//console.log("Clients");
-if(getComputedStyle(userSpan).display === 'none'){
-    freelancerSpan.style.display = "none";
-    userSpan.style.display = "inline-block";
-
-    activerUsersBody.style.display = "inline-block";
-        activerUsersBody2.style.display = "none";
-}
-else{
-    userSpan.style.display = "none";
-    freelancerSpan.style.display = "inline-block";
-
-    
-    activerUsersBody2.style.display = "inline-block";
-        activerUsersBody.style.display = "none";
-}
-}
-
 </script>
 
 </html>
