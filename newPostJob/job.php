@@ -184,7 +184,8 @@ if (mysqli_num_rows($jobResult) > 0) {
                         if (mysqli_num_rows($checkProposal) > 0) { ?>
                             <button id="proposalBtn" disabled>Proposal Submitted</button>
                         <?php } else { ?>
-                            <a href="./proposal.php?id=<?php echo $job_id; ?>"><button id="proposalBtn">Submit A Proposal</button></a>
+                            <!-- <a href="./proposal.php?id=<?php echo $job_id; ?>">--><button id="proposalBtn">Submit A Proposal</button>
+                            <!--</a> -->
                         <?php } ?>
                     <?php }
                 } else {
@@ -261,6 +262,59 @@ if (mysqli_num_rows($jobResult) > 0) {
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.2.1/dist/sweetalert2.all.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
+
+        $("#proposalBtn").click(function() {
+            (async () => {
+                const {
+                    value: text
+                } = await Swal.fire({
+                    title: "Are you willing to accept this job?",
+                    html: "By submitting a proposal, you agree that you are fully capable of completing this task." +
+                        "<br />By hitting agree, you will be sending a proposal to the client and they will decide if they will accept your request.",
+                    input: "textarea",
+                    inputLabel: "Optional Message:",
+                    inputPlaceholder: "Type your message here...",
+                    inputAttributes: {
+                        "aria-label": "Type your message here"
+                    },
+                    showCancelButton: true
+                });
+
+                if (text) {
+                    $.ajax({
+                        type: "POST",
+                        url: "../api/message.php",
+                        processData: false,
+                        contentType: "application/json",
+                        data: '{ "body": "' + text + '", "receiver": "<?php echo $uid; ?>", "jobID": "<?php echo $job_id; ?>" }',
+                        success: function(data) {
+                            var obj = JSON.parse(data);
+                            console.log(obj);
+                            // $("#chat").val('');
+                            if (obj.Success.length > 0) {
+                                // $('#result').html(obj.Success);
+                                // $('#proposal').hide();
+                                Swal.fire(
+                                    'Proposal Sent!',
+                                    'Your proposal has been sent to the client.',
+                                    'success'
+                                ).then(function() {
+                                    window.location.reload(1);
+                                });
+                            } else if (obj.Error.length > 0) {
+                                // $('#result').html(obj.Error);
+                            }
+
+                        },
+                        error: function(r) {
+                            console.log(r);
+                        }
+                    });
+
+                }
+            })();
+
+        });
 
         $("#deleteBtn").click(function() {
             // $('#deleteMenu').css('display', 'block');
