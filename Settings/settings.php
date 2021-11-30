@@ -160,11 +160,15 @@ $row = mysqli_fetch_assoc($result);
             </div>
             <div class="settings-balance-container">
                 <div class="settings-balance-card">
-                    <h3>Balance Due</h3>
+                    <h3>Funds Available</h3>
                 </div>
+                <?php
+                $getCards = mysqli_query($conn, "SELECT card, funds FROM clients WHERE id='$user_id'");
+                $getCards = mysqli_fetch_assoc($getCards);
+                ?>
                 <div class="settings-balance-card2">
-                    <p>Your balance due is <span>$</span><span id="balance">0.00</span></p>
-                    <button id="payBalance">Pay Now</button>
+                    <p>Your balance is <span>$</span><span id="balance"><?php echo $getCards['funds']; ?></span></p>
+                    <button id="payBalance">Add Funds</button>
                 </div>
             </div>
             <div class="settings-billing-container">
@@ -174,8 +178,6 @@ $row = mysqli_fetch_assoc($result);
                 </div>
                 <div class="settings-billing-option">
                     <?php
-                    $getCards = mysqli_query($conn, "SELECT card FROM clients WHERE id='$user_id'");
-                    $getCards = mysqli_fetch_assoc($getCards);
                     $getCards = $getCards['card'];
                     if ($getCards == NULL) { ?>
                         <p>You have not set up any billing methods yet.</p>
@@ -335,6 +337,39 @@ $row = mysqli_fetch_assoc($result);
         "3556535807131450",
         "56022328864541413"
     ];
+
+    $("#payBalance").click(function() {
+        const {
+            value: funds
+        } = await Swal.fire({
+            title: 'Input fund amount',
+            input: 'text',
+            inputPlaceholder: 'Enter amount'
+        })
+
+        if (funds) {
+            $.ajax({
+                url: "../api/addFunds.php",
+                data: {
+                    funds: funds
+                },
+                type: "POST",
+                success: function(data) {
+                    Swal.fire(
+                        'Card Added!',
+                        data,
+                        'success'
+                    ).then(function() {
+                        $(".settings-balance-card2").load(window.location.href + " .settings-balance-card2");
+                    });
+                },
+                error: function(data) {
+                    console.log(data);
+                }
+            });
+        }
+    });
+
 
     $("#addCard").click(function() {
         var randomMonth = parseInt(Math.random() * (12 - 1) + 1);

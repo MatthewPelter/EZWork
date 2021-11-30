@@ -60,7 +60,7 @@ if (isset($_POST['submit'])) {
     }
     //$username = $firstname . "" . $lastname;
     $password_hash = password_hash($password, PASSWORD_BCRYPT);
-    $sql = "INSERT INTO clients(username,firstname,lastname,email,password,phone, freelancer_id, avatar, card) VALUES('$username', '$firstname', '$lastname', '$email', '$password_hash', '$phone', NULL, 'https://i.imgur.com/J3MipnQ.png', NULL)";
+    $sql = "INSERT INTO clients(username,firstname,lastname,email,password,phone, freelancer_id, avatar, card, funds) VALUES('$username', '$firstname', '$lastname', '$email', '$password_hash', '$phone', NULL, 'https://i.imgur.com/J3MipnQ.png', NULL, 0)";
 
     $result = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
 
