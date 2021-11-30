@@ -65,13 +65,6 @@ if (mysqli_num_rows($jobResult) > 0) {
         <link rel="icon" href="../logo/logo.svg">
         <link rel="stylesheet" href="../Styles/style.css">
         <style>
-            .squares {
-                position: fixed;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
-
             .boxes {
                 position: fixed;
                 top: 50%;
@@ -433,7 +426,6 @@ if (mysqli_num_rows($jobResult) > 0) {
                 </div>
 
                 <div class="jobDescription">
-                    <img class="squares" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/squares.png" />
                     <div class="boxes">
                         <div class="box"></div>
                         <div class="box"></div>
@@ -461,7 +453,6 @@ if (mysqli_num_rows($jobResult) > 0) {
                             </div>
                         </div>
                     </div>
-                    <button class="radius-toggle">Toggle Click Radius</button>
                 </div>
 
                 <div class="options">
