@@ -64,6 +64,157 @@ if (mysqli_num_rows($jobResult) > 0) {
         <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
         <link rel="icon" href="../logo/logo.svg">
         <link rel="stylesheet" href="../Styles/style.css">
+        <style>
+            .squares {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            .boxes {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                width: 90%;
+                max-width: 790px;
+                height: 180px;
+                font-family: "Open Sans", sans-serif;
+                transform: translate(-50%, -50%);
+            }
+
+            .box {
+                position: relative;
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                background: #FFF;
+                width: 100%;
+                height: 100%;
+                border-radius: 20px;
+                box-shadow: 40px 0 65px rgba(212, 197, 186, 0.4);
+                padding: 0 80px;
+                box-sizing: border-box;
+                opacity: 0;
+                transform-origin: center;
+                transform: scale(1.2, 1.2);
+            }
+
+            .box:nth-child(1),
+            .box:nth-child(2) {
+                position: absolute;
+            }
+
+            .box:nth-child(1) {
+                left: 3%;
+                width: 94%;
+            }
+
+            .box:nth-child(2) {
+                left: 2%;
+                width: 96%;
+            }
+
+            .progress {
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 100%;
+            }
+
+            .bar {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                background: #E8DFD8;
+                width: 100%;
+                height: 3px;
+                border-radius: 10px;
+                transform: translate(-50%, -50%);
+                overflow: hidden;
+            }
+
+            .bar__fill {
+                display: block;
+                background: #BD8044;
+                height: 100%;
+            }
+
+            .point {
+                position: relative;
+                color: #AC9585;
+                cursor: pointer;
+            }
+
+            .point:before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 120px;
+                height: 120px;
+                border-radius: 100%;
+                transform: translate(-50%, -50%);
+                transition: 0.3s ease;
+            }
+
+            .show-radius .point:before {
+                background: rgba(0, 0, 0, 0.1);
+            }
+
+            .point--complete,
+            .point--active {
+                color: #BA7C3F;
+            }
+
+            .bullet {
+                z-index: 1;
+                position: relative;
+                background: #AC9585;
+                width: 8px;
+                height: 8px;
+                border-radius: 100%;
+                transition: 0.3s ease;
+            }
+
+            .point--complete .bullet,
+            .point--active .bullet {
+                background: #FFFFFF;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 0 0 6px #BD8044;
+            }
+
+            .point--active .bullet {
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 0 0 10px #BD8044;
+            }
+
+            .label {
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                margin: 20px 0 0 0;
+                font-size: 0.75rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                transform: translate(-50%, 0);
+            }
+
+            .radius-toggle {
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                display: block;
+                background: #FFF;
+                border: 0;
+                border-radius: 4px;
+                box-shadow: 40px 0 65px rgba(212, 197, 186, 0.4);
+                padding: 10px;
+                color: #BA7C3F;
+                font-size: 0.75rem;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+        </style>
     </head>
 </head>
 
@@ -281,6 +432,38 @@ if (mysqli_num_rows($jobResult) > 0) {
                     </div>
                 </div>
 
+                <div class="jobDescription">
+                    <img class="squares" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/squares.png" />
+                    <div class="boxes">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box">
+                            <div class="progress">
+                                <div class="bar">
+                                    <div class="bar__fill" style="width: 33%;"></div>
+                                </div>
+                                <div class="point point--complete">
+                                    <div class="bullet"></div>
+                                    <label class="label">Select</label>
+                                </div>
+                                <div class="point point--active">
+                                    <div class="bullet"></div>
+                                    <label class="label">Review</label>
+                                </div>
+                                <div class="point">
+                                    <div class="bullet"></div>
+                                    <label class="label">Payment</label>
+                                </div>
+                                <div class="point">
+                                    <div class="bullet"></div>
+                                    <label class="label">Success </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="radius-toggle">Toggle Click Radius</button>
+                </div>
+
                 <div class="options">
                     <?php
 
@@ -482,6 +665,121 @@ if (mysqli_num_rows($jobResult) > 0) {
         } else if (statusText == "In-Progress") {
             status.style.color = "#e1b12c";
         }
+
+
+
+        var $boxOne = $(".box:nth-child(1)"),
+            $boxTwo = $(".box:nth-child(2)"),
+            $boxThree = $(".box:nth-child(3)");
+
+        var boxOne = new TimelineMax(),
+            boxTwo = new TimelineMax(),
+            boxThree = new TimelineMax();
+
+        boxOne
+            .to($boxOne, 0.6, {
+                opacity: 0.25,
+                scale: 1,
+                ease: Back.easeOut
+            })
+            .to(
+                $boxOne,
+                0.6, {
+                    rotation: 4,
+                    ease: Back.easeOut
+                },
+                2
+            );
+
+        boxTwo
+            .to(
+                $boxTwo,
+                0.6, {
+                    opacity: 0.5,
+                    scale: 1,
+                    ease: Back.easeOut
+                },
+                0.6
+            )
+            .to(
+                $boxTwo,
+                0.6, {
+                    rotation: -4,
+                    ease: Back.easeOut
+                },
+                1.8
+            );
+
+        boxThree.to(
+            $boxThree,
+            0.6, {
+                opacity: 1,
+                scale: 1,
+                ease: Back.easeOut
+            },
+            1.2
+        );
+
+        /**
+         * Point Animation
+         */
+        $(".point").on("click", function(e) {
+            var getTotalPoints = $(".point").length,
+                getIndex = $(this).index(),
+                getCompleteIndex = $(".point--active").index();
+
+            TweenMax.to($(".bar__fill"), 0.6, {
+                width: ((getIndex - 1) / (getTotalPoints - 1)) * 100 + "%"
+            });
+
+            if ((getIndex) => getCompleteIndex) {
+                $(".point--active")
+                    .addClass("point--complete")
+                    .removeClass("point--active");
+
+                $(this).addClass("point--active");
+                $(this).prevAll().addClass("point--complete");
+                $(this).nextAll().removeClass("point--complete");
+            }
+        });
+
+        /*
+          Demo Purposes
+        */
+        var progressAnimation = function() {
+            var getTotalPoints = $(".point").length,
+                getIndex = Math.floor(Math.random() * 4) + 1,
+                getCompleteIndex = $(".point--active").index();
+
+            TweenMax.to($(".bar__fill"), 0.6, {
+                width: ((getIndex - 1) / (getTotalPoints - 1)) * 100 + "%"
+            });
+
+            if ((getIndex) => getCompleteIndex) {
+                $(".point--active")
+                    .addClass("point--complete")
+                    .removeClass("point--active");
+
+                $(".point:nth-child(" + (getIndex + 1) + ")").addClass("point--active");
+                $(".point:nth-child(" + (getIndex + 1) + ")")
+                    .prevAll()
+                    .addClass("point--complete");
+                $(".point:nth-child(" + (getIndex + 1) + ")")
+                    .nextAll()
+                    .removeClass("point--complete");
+            }
+        };
+
+        var animateProgress = setInterval(progressAnimation, 1200);
+
+        $(document).hover(function() {
+            clearInterval(animateProgress);
+        });
+
+        $(".radius-toggle").on("click", function() {
+            $("body").toggleClass("show-radius");
+        });
+
     });
 </script>
 <!--Script for the search bar and datalist-->
