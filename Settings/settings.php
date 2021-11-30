@@ -375,7 +375,9 @@ $row = mysqli_fetch_assoc($result);
                             'Card Added!',
                             'You card has been added and you are all set to pay!',
                             'success'
-                        );
+                        ).then(function() {
+                            window.location.reload(1);
+                        });
                     },
                     error: function(data) {
                         console.log(data);
