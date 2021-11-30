@@ -248,6 +248,84 @@ if (mysqli_num_rows($jobResult) > 0) {
         </div>
     </div>
 
+    <?php
+    $getFreelancerID = mysqli_query($conn, "SELECT freelancer_id FROM clients WHERE id='$user_id'");
+    $getFreelancerID = mysqli_fetch_assoc($getFreelancerID);
+    $getFreelancerID = $getFreelancerID['freelancer_id'];
+    if ($r['status'] == -1 && ($r['user_id'] == $user_id || $r['freelancer_id'] == $getFreelancerID)) { ?>
+        <!-- style as you please. just temporary -->
+        <div class="job progress">
+            <h2>Job Progress</h2>
+            <div class="job-container">
+
+                <div class="jobCard">
+                    <div class="scope">
+                        <!-- ----------------------------------------- -->
+                        <!-- JOB STATUS -->
+                        <!-- 0 : OPEN -->
+                        <!-- 1 : CLOSED -->
+                        <!-- -1 : IN PROGRESS -->
+                        <!-- ----------------------------------------- -->
+                        <p>Status:
+                            <span id="status">
+                                <?php if ($r['status'] == 0) {
+                                    echo "Open";
+                                } else if ($r['status'] == 1) {
+                                    echo "Closed";
+                                } else if ($r['status'] == -1) {
+                                    echo "In-Progress";
+                                }
+                                ?>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="options">
+                    <?php
+
+                    ?>
+
+                    <?php if ($unameFetched['username'] != $_SESSION['userid']) { ?>
+                        <div class="flag">
+                            <i class="fa fa-flag" aria-hidden="true"></i>
+                            <span>Mark Job as Complete</span>
+                        </div>
+                    <?php } ?>
+                    <?php if ($unameFetched['username'] == $_SESSION['userid']) {
+                    ?>
+                        <input type="button" onclick="location.href = 'edit?id=<?php echo $r['id']; ?>';" id="editBtn" value="Edit Post">
+                        <input type="button" id="deleteBtn" style="color: red;" value="Delete Post">
+                        <span id="result"></span>
+
+                        <div id="deleteMenu" style="display: none;">
+                            <div class="deleteMenuContainer">
+                                <span>Are you sure you want to delete this post?</span>
+                                <input type="button" id="yesBtn" value="Yes">
+                                <input type="button" id="noBtn" value="No">
+                            </div>
+                        </div>
+
+                    <?php } ?>
+                </div>
+                <div class="clientInfo">
+                    <h3>About the Freelancer</h3>
+                    <div class="username">
+                        <p>Work By: </p>
+                        <?php
+                        $workFreelancer = $r['freelancer_id'];
+                        $getFreelancerName = mysqli_query($conn, "SELECT username, avatar FROM clients WHERE freelancer_id='$workFreelancer'");
+                        $getFreelancerName = mysqli_fetch_assoc($getFreelancerName);
+                        ?>
+                        <a href="../Profile/userprofile.php?name=<?php echo $getFreelancerName['username']; ?>"><?php echo $getFreelancerName['username']; ?></a>
+                    </div>
+                    <div class="img-card">
+                        <img src="<?php echo $getFreelancerName['avatar']; ?>" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    <?php } ?>
 
 
     <?php include '../footer.php'; ?>
