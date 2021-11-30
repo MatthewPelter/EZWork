@@ -339,35 +339,37 @@ $row = mysqli_fetch_assoc($result);
     ];
 
     $("#payBalance").click(function() {
-        const {
-            value: funds
-        } = await Swal.fire({
-            title: 'Input fund amount',
-            input: 'text',
-            inputPlaceholder: 'Enter amount'
-        });
-
-        if (funds) {
-            $.ajax({
-                url: "../api/addFunds.php",
-                data: {
-                    funds: funds
-                },
-                type: "POST",
-                success: function(data) {
-                    Swal.fire(
-                        'Card Added!',
-                        data,
-                        'success'
-                    ).then(function() {
-                        $(".settings-balance-card2").load(window.location.href + " .settings-balance-card2");
-                    });
-                },
-                error: function(data) {
-                    console.log(data);
-                }
+        (async () => {
+            const {
+                value: funds
+            } = await Swal.fire({
+                title: 'Input fund amount',
+                input: 'text',
+                inputPlaceholder: 'Enter amount'
             });
-        }
+
+            if (funds) {
+                $.ajax({
+                    url: "../api/addFunds.php",
+                    data: {
+                        funds: funds
+                    },
+                    type: "POST",
+                    success: function(data) {
+                        Swal.fire(
+                            'Funds Added!',
+                            data,
+                            'success'
+                        ).then(function() {
+                            $(".settings-balance-card2").load(window.location.href + " .settings-balance-card2");
+                        });
+                    },
+                    error: function(data) {
+                        console.log(data);
+                    }
+                });
+            }
+        })();
     });
 
 
