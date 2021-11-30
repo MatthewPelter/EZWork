@@ -410,10 +410,6 @@ if (mysqli_num_rows($jobResult) > 0) {
                             <button id="previous">Previous</button>
                             <button id="advance">Advance</button>
                         </p>
-
-                        <p>
-                            Apply .is-current to a list item note the current step in the list. Apply .is-complete to show the checkmark. The line will be drawn when two list items marked with either class sit next to each other.
-                        </p>
                     </div>
 
                     <svg xmlns="http://www.w3.org/2000/svg">
@@ -428,26 +424,11 @@ if (mysqli_num_rows($jobResult) > 0) {
 
                     ?>
 
-                    <?php if ($unameFetched['username'] != $_SESSION['userid']) { ?>
+                    <?php if ($r['user_id'] == $_SESSION['user_id']) { ?>
                         <div class="flag">
                             <i class="fa fa-flag" aria-hidden="true"></i>
                             <span>Mark Job as Complete</span>
                         </div>
-                    <?php } ?>
-                    <?php if ($unameFetched['username'] == $_SESSION['userid']) {
-                    ?>
-                        <input type="button" onclick="location.href = 'edit?id=<?php echo $r['id']; ?>';" id="editBtn" value="Edit Post">
-                        <input type="button" id="deleteBtn" style="color: red;" value="Delete Post">
-                        <span id="result"></span>
-
-                        <div id="deleteMenu" style="display: none;">
-                            <div class="deleteMenuContainer">
-                                <span>Are you sure you want to delete this post?</span>
-                                <input type="button" id="yesBtn" value="Yes">
-                                <input type="button" id="noBtn" value="No">
-                            </div>
-                        </div>
-
                     <?php } ?>
                 </div>
                 <div class="clientInfo">
