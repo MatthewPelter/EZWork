@@ -596,6 +596,9 @@ if (mysqli_num_rows($jobResult) > 0) {
 
 
         //Uses jQuery because it was quick. You'll want to write something that works within the context of your app.
+        var $bar = $(".ProgressBar");
+        $bar.children().first().addClass("is-current");
+
 
         $("#advance").on("click", function() {
             var $bar = $(".ProgressBar");
