@@ -48,167 +48,115 @@ if (mysqli_num_rows($jobResult) > 0) {
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A platform for skilled workers or talented people to freelance, find projects to work on, extra ways to earn income.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e9089fea9d.js" crossorigin="anonymous"></script>
+    <title>EZWork | <?php echo $r['title']; ?></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link rel="icon" href="../logo/logo.svg">
+    <link rel="stylesheet" href="../Styles/style.css">
+    <style>
+        /*
+* Scut, a collection of Sass utilities
+* to ease and improve our implementations of common style-code patterns.
+* v1.3.0
+* Docs at https://davidtheclark.github.io/scut
+*/
+        .ProgressBar {
+            margin: 0 auto;
+            padding: 2em 0 3em;
+            list-style: none;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+        }
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="description" content="A platform for skilled workers or talented people to freelance, find projects to work on, extra ways to earn income.">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://kit.fontawesome.com/e9089fea9d.js" crossorigin="anonymous"></script>
-        <title>EZWork | <?php echo $r['title']; ?></title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
-        <link rel="icon" href="../logo/logo.svg">
-        <link rel="stylesheet" href="../Styles/style.css">
-        <style>
-            .boxes {
-                position: fixed;
-                top: 50%;
-                left: 50%;
-                width: 90%;
-                max-width: 790px;
-                height: 180px;
-                font-family: "Open Sans", sans-serif;
-                transform: translate(-50%, -50%);
-            }
+        .ProgressBar-step {
+            text-align: center;
+            position: relative;
+            width: 100%;
+        }
 
-            .box {
-                position: relative;
-                display: flex;
-                align-items: center;
-                flex-direction: row;
-                background: #FFF;
-                width: 100%;
-                height: 100%;
-                border-radius: 20px;
-                box-shadow: 40px 0 65px rgba(212, 197, 186, 0.4);
-                padding: 0 80px;
-                box-sizing: border-box;
-                opacity: 0;
-                transform-origin: center;
-                transform: scale(1.2, 1.2);
-            }
+        .ProgressBar-step:before,
+        .ProgressBar-step:after {
+            content: "";
+            height: 0.5em;
+            background-color: #9F9FA3;
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            left: -50%;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: all 0.25s ease-out;
+        }
 
-            .box:nth-child(1),
-            .box:nth-child(2) {
-                position: absolute;
-            }
+        .ProgressBar-step:first-child:before,
+        .ProgressBar-step:first-child:after {
+            display: none;
+        }
 
-            .box:nth-child(1) {
-                left: 3%;
-                width: 94%;
-            }
+        .ProgressBar-step:after {
+            background-color: #00637C;
+            width: 0%;
+        }
 
-            .box:nth-child(2) {
-                left: 2%;
-                width: 96%;
-            }
+        .ProgressBar-step.is-complete+.ProgressBar-step.is-current:after,
+        .ProgressBar-step.is-complete+.ProgressBar-step.is-complete:after {
+            width: 100%;
+        }
 
-            .progress {
-                position: relative;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                width: 100%;
-            }
+        .ProgressBar-icon {
+            width: 1.5em;
+            height: 1.5em;
+            background-color: #F2E7BF;
+            fill: #9F9FA3;
+            border-radius: 50%;
+            padding: 0.5em;
+            max-width: 100%;
+            z-index: 10;
+            position: relative;
+            transition: all 0.25s ease-out;
+        }
 
-            .bar {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                background: #E8DFD8;
-                width: 100%;
-                height: 3px;
-                border-radius: 10px;
-                transform: translate(-50%, -50%);
-                overflow: hidden;
-            }
+        .is-current .ProgressBar-icon {
+            fill: #00637C;
+            background-color: #00637C;
+        }
 
-            .bar__fill {
-                display: block;
-                background: #BD8044;
-                height: 100%;
-            }
+        .is-complete .ProgressBar-icon {
+            fill: #DBF1FF;
+            background-color: #00637C;
+        }
 
-            .point {
-                position: relative;
-                color: #AC9585;
-                cursor: pointer;
-            }
+        .ProgressBar-stepLabel {
+            display: block;
+            text-transform: uppercase;
+            color: #9F9FA3;
+            position: absolute;
+            padding-top: 0.5em;
+            width: 100%;
+            transition: all 0.25s ease-out;
+        }
 
-            .point:before {
-                content: "";
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                width: 120px;
-                height: 120px;
-                border-radius: 100%;
-                transform: translate(-50%, -50%);
-                transition: 0.3s ease;
-            }
+        .is-current>.ProgressBar-stepLabel,
+        .is-complete>.ProgressBar-stepLabel {
+            color: #00637C;
+        }
 
-            .show-radius .point:before {
-                background: rgba(0, 0, 0, 0.1);
-            }
-
-            .point--complete,
-            .point--active {
-                color: #BA7C3F;
-            }
-
-            .bullet {
-                z-index: 1;
-                position: relative;
-                background: #AC9585;
-                width: 8px;
-                height: 8px;
-                border-radius: 100%;
-                transition: 0.3s ease;
-            }
-
-            .point--complete .bullet,
-            .point--active .bullet {
-                background: #FFFFFF;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 0 0 6px #BD8044;
-            }
-
-            .point--active .bullet {
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 0 0 10px #BD8044;
-            }
-
-            .label {
-                position: absolute;
-                top: 100%;
-                left: 50%;
-                margin: 20px 0 0 0;
-                font-size: 0.75rem;
-                font-weight: 600;
-                text-transform: uppercase;
-                transform: translate(-50%, 0);
-            }
-
-            .radius-toggle {
-                position: absolute;
-                top: 20px;
-                left: 20px;
-                display: block;
-                background: #FFF;
-                border: 0;
-                border-radius: 4px;
-                box-shadow: 40px 0 65px rgba(212, 197, 186, 0.4);
-                padding: 10px;
-                color: #BA7C3F;
-                font-size: 0.75rem;
-                font-weight: 600;
-                text-transform: uppercase;
-            }
-        </style>
-    </head>
+        .wrapper {
+            max-width: 1000px;
+            margin: 4em auto;
+            font-size: 16px;
+        }
+    </style>
 </head>
 
 <body>
@@ -426,33 +374,53 @@ if (mysqli_num_rows($jobResult) > 0) {
                 </div>
 
                 <div class="jobDescription">
-                    <div class="boxes">
-                        <div class="box"></div>
-                        <div class="box"></div>
-                        <div class="box">
-                            <div class="progress">
-                                <div class="bar">
-                                    <div class="bar__fill" style="width: 33%;"></div>
-                                </div>
-                                <div class="point point--complete">
-                                    <div class="bullet"></div>
-                                    <label class="label">Select</label>
-                                </div>
-                                <div class="point point--active">
-                                    <div class="bullet"></div>
-                                    <label class="label">Review</label>
-                                </div>
-                                <div class="point">
-                                    <div class="bullet"></div>
-                                    <label class="label">Payment</label>
-                                </div>
-                                <div class="point">
-                                    <div class="bullet"></div>
-                                    <label class="label">Success </label>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="wrapper">
+
+                        <h1>Dot-check Progress Bar</h1>
+
+                        <ol class="ProgressBar">
+                            <li class="ProgressBar-step">
+                                <svg class="ProgressBar-icon">
+                                    <use xlink:href="#checkmark-bold" />
+                                </svg>
+                                <span class="ProgressBar-stepLabel">Cheese</span>
+                            </li>
+                            <li class="ProgressBar-step">
+                                <svg class="ProgressBar-icon">
+                                    <use xlink:href="#checkmark-bold" />
+                                </svg>
+                                <span class="ProgressBar-stepLabel">Pizza</span>
+                            </li>
+                            <li class="ProgressBar-step">
+                                <svg class="ProgressBar-icon">
+                                    <use xlink:href="#checkmark-bold" />
+                                </svg>
+                                <span class="ProgressBar-stepLabel">Steak</span>
+                            </li>
+                            <li class="ProgressBar-step">
+                                <svg class="ProgressBar-icon">
+                                    <use xlink:href="#checkmark-bold" />
+                                </svg>
+                                <span class="ProgressBar-stepLabel">Potatoes</span>
+                            </li>
+                        </ol>
+
+
+                        <p>
+                            <button id="previous">Previous</button>
+                            <button id="advance">Advance</button>
+                        </p>
+
+                        <p>
+                            Apply .is-current to a list item note the current step in the list. Apply .is-complete to show the checkmark. The line will be drawn when two list items marked with either class sit next to each other.
+                        </p>
                     </div>
+
+                    <svg xmlns="http://www.w3.org/2000/svg">
+                        <symbol id="checkmark-bold" viewBox="0 0 24 24">
+                            <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" />
+                        </symbol>
+                    </svg>
                 </div>
 
                 <div class="options">
@@ -658,119 +626,25 @@ if (mysqli_num_rows($jobResult) > 0) {
         }
 
 
+        //Uses jQuery because it was quick. You'll want to write something that works within the context of your app.
 
-        var $boxOne = $(".box:nth-child(1)"),
-            $boxTwo = $(".box:nth-child(2)"),
-            $boxThree = $(".box:nth-child(3)");
-
-        var boxOne = new TimelineMax(),
-            boxTwo = new TimelineMax(),
-            boxThree = new TimelineMax();
-
-        boxOne
-            .to($boxOne, 0.6, {
-                opacity: 0.25,
-                scale: 1,
-                ease: Back.easeOut
-            })
-            .to(
-                $boxOne,
-                0.6, {
-                    rotation: 4,
-                    ease: Back.easeOut
-                },
-                2
-            );
-
-        boxTwo
-            .to(
-                $boxTwo,
-                0.6, {
-                    opacity: 0.5,
-                    scale: 1,
-                    ease: Back.easeOut
-                },
-                0.6
-            )
-            .to(
-                $boxTwo,
-                0.6, {
-                    rotation: -4,
-                    ease: Back.easeOut
-                },
-                1.8
-            );
-
-        boxThree.to(
-            $boxThree,
-            0.6, {
-                opacity: 1,
-                scale: 1,
-                ease: Back.easeOut
-            },
-            1.2
-        );
-
-        /**
-         * Point Animation
-         */
-        $(".point").on("click", function(e) {
-            var getTotalPoints = $(".point").length,
-                getIndex = $(this).index(),
-                getCompleteIndex = $(".point--active").index();
-
-            TweenMax.to($(".bar__fill"), 0.6, {
-                width: ((getIndex - 1) / (getTotalPoints - 1)) * 100 + "%"
-            });
-
-            if ((getIndex) => getCompleteIndex) {
-                $(".point--active")
-                    .addClass("point--complete")
-                    .removeClass("point--active");
-
-                $(this).addClass("point--active");
-                $(this).prevAll().addClass("point--complete");
-                $(this).nextAll().removeClass("point--complete");
+        $("#advance").on("click", function() {
+            var $bar = $(".ProgressBar");
+            if ($bar.children(".is-current").length > 0) {
+                $bar.children(".is-current").removeClass("is-current").addClass("is-complete").next().addClass("is-current");
+            } else {
+                $bar.children().first().addClass("is-current");
             }
         });
 
-        /*
-          Demo Purposes
-        */
-        var progressAnimation = function() {
-            var getTotalPoints = $(".point").length,
-                getIndex = Math.floor(Math.random() * 4) + 1,
-                getCompleteIndex = $(".point--active").index();
-
-            TweenMax.to($(".bar__fill"), 0.6, {
-                width: ((getIndex - 1) / (getTotalPoints - 1)) * 100 + "%"
-            });
-
-            if ((getIndex) => getCompleteIndex) {
-                $(".point--active")
-                    .addClass("point--complete")
-                    .removeClass("point--active");
-
-                $(".point:nth-child(" + (getIndex + 1) + ")").addClass("point--active");
-                $(".point:nth-child(" + (getIndex + 1) + ")")
-                    .prevAll()
-                    .addClass("point--complete");
-                $(".point:nth-child(" + (getIndex + 1) + ")")
-                    .nextAll()
-                    .removeClass("point--complete");
+        $("#previous").on("click", function() {
+            var $bar = $(".ProgressBar");
+            if ($bar.children(".is-current").length > 0) {
+                $bar.children(".is-current").removeClass("is-current").prev().removeClass("is-complete").addClass("is-current");
+            } else {
+                $bar.children(".is-complete").last().removeClass("is-complete").addClass("is-current");
             }
-        };
-
-        var animateProgress = setInterval(progressAnimation, 1200);
-
-        $(document).hover(function() {
-            clearInterval(animateProgress);
         });
-
-        $(".radius-toggle").on("click", function() {
-            $("body").toggleClass("show-radius");
-        });
-
     });
 </script>
 <!--Script for the search bar and datalist-->
