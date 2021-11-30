@@ -63,12 +63,6 @@ if (mysqli_num_rows($jobResult) > 0) {
     <link rel="icon" href="../logo/logo.svg">
     <link rel="stylesheet" href="../Styles/style.css">
     <style>
-        /*
-* Scut, a collection of Sass utilities
-* to ease and improve our implementations of common style-code patterns.
-* v1.3.0
-* Docs at https://davidtheclark.github.io/scut
-*/
         .ProgressBar {
             margin: 0 auto;
             padding: 2em 0 3em;
@@ -383,25 +377,19 @@ if (mysqli_num_rows($jobResult) > 0) {
                                 <svg class="ProgressBar-icon">
                                     <use xlink:href="#checkmark-bold" />
                                 </svg>
-                                <span class="ProgressBar-stepLabel">Cheese</span>
+                                <span class="ProgressBar-stepLabel">Accepted Job</span>
                             </li>
                             <li class="ProgressBar-step">
                                 <svg class="ProgressBar-icon">
                                     <use xlink:href="#checkmark-bold" />
                                 </svg>
-                                <span class="ProgressBar-stepLabel">Pizza</span>
+                                <span class="ProgressBar-stepLabel">Started Work</span>
                             </li>
                             <li class="ProgressBar-step">
                                 <svg class="ProgressBar-icon">
                                     <use xlink:href="#checkmark-bold" />
                                 </svg>
-                                <span class="ProgressBar-stepLabel">Steak</span>
-                            </li>
-                            <li class="ProgressBar-step">
-                                <svg class="ProgressBar-icon">
-                                    <use xlink:href="#checkmark-bold" />
-                                </svg>
-                                <span class="ProgressBar-stepLabel">Potatoes</span>
+                                <span class="ProgressBar-stepLabel">Finished</span>
                             </li>
                         </ol>
 
