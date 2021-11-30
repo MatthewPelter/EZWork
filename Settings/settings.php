@@ -170,11 +170,21 @@ $row = mysqli_fetch_assoc($result);
             <div class="settings-billing-container">
                 <div class="settings-billing-card">
                     <h3>Billing Methods</h3>
-                    <button>Add a New Billing Method</button>
+                    <button id="addCard">Add a New Billing Method</button>
                 </div>
                 <div class="settings-billing-option">
-                    <p>You have not set up any billing methods yet.</p>
-                    <span>Set up your billing methods so you'll be able to hire right away when you're ready.</span>
+                    <?php
+                    $getCards = mysqli_query($conn, "SELECT card FROM clients WHERE id='$user_id'");
+                    $getCards = mysqli_fetch_assoc($getCards);
+                    $getCards = $getCards['card'];
+                    if ($getCards == NULL) { ?>
+                        <p>You have not set up any billing methods yet.</p>
+                        <span>Set up your billing methods so you'll be able to hire right away when you're ready.</span>
+                    <?php } else { ?>
+                        <p>My Credit Card.</p>
+                        <span>You are all set up to pay.</span>
+                    <?php }
+                    ?>
                 </div>
             </div>
         </div>
@@ -200,6 +210,7 @@ $row = mysqli_fetch_assoc($result);
 <!--Script for the search bar and datalist-->
 <script src="../SkillsContainer/searchProfile.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.2.1/dist/sweetalert2.all.min.js"></script>
 <script>
     // Change password handler
     $("#changePassBTN").click(function() {
@@ -219,6 +230,161 @@ $row = mysqli_fetch_assoc($result);
             }
         });
     });
+
+
+    const cards = [
+        "3583178707603109",
+        "3571124704299826",
+        "5893341317087676671",
+        "5048370878983022",
+        "377856894357623",
+        "3542756748442577",
+        "30094653929163",
+        "374283836755157",
+        "3563173528221185",
+        "4041375380672",
+        "3583035128161010",
+        "676388901157804103",
+        "3584423522417064",
+        "3550827159145469",
+        "4175002551915439",
+        "501837642450004812",
+        "6761036046409348",
+        "3568384580968432",
+        "3542414637940240",
+        "6331108146710574331",
+        "4041593647589",
+        "5602231600293027674",
+        "3542719056551934",
+        "3541767582525519",
+        "56022405933571413",
+        "5602232046321360",
+        "3584025049915825",
+        "3579360553655054",
+        "3549391743413317",
+        "4026653922321730",
+        "4903662109233950780",
+        "3564462840354520",
+        "5602216195042547",
+        "5280975091492358",
+        "3553524085166605",
+        "30300311556185",
+        "3566930822315493",
+        "3552706344485071",
+        "36319513444150",
+        "6304732671986518010",
+        "56104295501468089",
+        "3559330046929832",
+        "560224138559774915",
+        "5511555217191075",
+        "3583074574852137",
+        "30453504206561",
+        "3553746788264615",
+        "3535149079647049",
+        "6771974431953579",
+        "3543689426877310",
+        "3586651423029434",
+        "3534917470976584",
+        "4917388015868022",
+        "3551330839819602",
+        "201868391935878",
+        "633355690087820194",
+        "3536265742778281",
+        "3581861843491339",
+        "3576763255861669",
+        "3572259262846763",
+        "3558716144264661",
+        "3577298969138475",
+        "3559581774513863",
+        "560221499125127761",
+        "5221379720802966",
+        "201587883143193",
+        "5556607060341905",
+        "5610329212246650",
+        "5602240069801184",
+        "3573203602191596",
+        "3541033599458537",
+        "3530011929541894",
+        "3570165271010717",
+        "374288569617011",
+        "4911792561180367",
+        "4405964307382895",
+        "06046658109871499",
+        "3565719045141500",
+        "3546153532343789",
+        "4041598627626209",
+        "677148935316933816",
+        "5602255489997842",
+        "6334227004454008",
+        "36345384586571",
+        "6761141768609049039",
+        "3572607342042086",
+        "5602232076974559",
+        "3565853146455699",
+        "3578755555957872",
+        "3568904947499241",
+        "3577356131402011",
+        "30234391828570",
+        "63049256352855687",
+        "5108754207794423",
+        "3582200482632193",
+        "4917010756440767",
+        "5002359241818027",
+        "30188242319918",
+        "3556535807131450",
+        "56022328864541413"
+    ];
+
+    $("#addCard").click(function() {
+        var randomMonth = parseInt(Math.random() * (12 - 1) + 1);
+        var randomYear = Math.floor(Math.random() * 7 + 21);
+        var randomCVV = Math.floor(Math.random() * 999);
+        var randomDate = randomMonth + "/" + randomYear;
+
+        (async () => {
+            const {
+                value: formValues
+            } = await Swal.fire({
+                title: "Enter Card Information",
+                html: '<input id="swal-input1" class="swal2-input" name="card" type="tel" inputmode="numeric" pattern="[0-9s]{13,19}" autocomplete="cc-number" maxlength="19" value="' +
+                    cards[Math.floor(Math.random() * cards.length)] +
+                    '">' +
+                    '<input id="swal-input2" class="swal2-input" placeholder="Expiration" maxlength="5" value="' +
+                    randomDate +
+                    '">' +
+                    '<input id="swal-input3" maxlength="4" class="swal2-input" placeholder="CVV" value="' +
+                    randomCVV +
+                    '">',
+                focusConfirm: false,
+                preConfirm: () => {
+                    return document.getElementById("swal-input1").value;
+                }
+            });
+
+            if (formValues) {
+                $.ajax({
+                    url: "../api/addCard.php",
+                    data: {
+                        card: formValues[0]
+                    },
+                    type: "POST",
+                    success: function(data) {
+                        // $("#url").html(data);
+                        Swal.fire(
+                            'Card Added!',
+                            'You card has been added and you are all set to pay!',
+                            'success'
+                        )
+                    },
+                    error: function(data) {
+                        console.log(data);
+                    }
+                });
+            }
+        })();
+    });
+
+
 
     const file = document.getElementById("file");
     const img = document.getElementById("img");
