@@ -370,7 +370,7 @@ if (mysqli_num_rows($jobResult) > 0) {
                 <div class="jobDescription">
                     <div class="wrapper">
 
-                        <h1>Dot-check Progress Bar</h1>
+                        <h1>Project Progress</h1>
 
                         <ol class="ProgressBar">
                             <li class="ProgressBar-step">
