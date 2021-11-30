@@ -167,7 +167,7 @@ $row = mysqli_fetch_assoc($result);
                 $getCards = mysqli_fetch_assoc($getCards);
                 ?>
                 <div class="settings-balance-card2">
-                    <p>Your balance is <span>$</span><span id="balance"><?php echo $getCards['funds']; ?></span></p>
+                    <p class="balance">Your balance is <span>$</span><span id="balance"><?php echo $getCards['funds']; ?></span></p>
                     <button id="payBalance">Add Funds</button>
                 </div>
             </div>
@@ -361,7 +361,7 @@ $row = mysqli_fetch_assoc($result);
                             data,
                             'success'
                         ).then(function() {
-                            $(".settings-balance-card2").load(window.location.href + " .settings-balance-card2");
+                            $(".balance").load(window.location.href + " .balance");
                         });
                     },
                     error: function(data) {
