@@ -376,7 +376,7 @@ $row = mysqli_fetch_assoc($result);
                             'You card has been added and you are all set to pay!',
                             'success'
                         ).then(function() {
-                            window.location.reload(1);
+                            $(".settings-billing-option").load(window.location.href + " .settings-billing-option");
                         });
                     },
                     error: function(data) {
