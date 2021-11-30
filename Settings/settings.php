@@ -126,7 +126,7 @@ $row = mysqli_fetch_assoc($result);
                     </form>
                 </div>
             </div>
-            <div class="settings-password-twoStep">
+            <!-- <div class="settings-password-twoStep">
                 <div class="settings-password-twoStep-card">
                     <h3>Two-step verification options</h3>
                     <p>Add an extra layer of security to prevent unauthorized access.</p>
@@ -152,7 +152,7 @@ $row = mysqli_fetch_assoc($result);
                     </div>
                     <button onclick="guidGenerator()">Enable</button>
                 </div>
-            </div>
+            </div> -->
         </div>
         <div class="settings-billing">
             <div class="settings-container-title">
@@ -185,6 +185,7 @@ $row = mysqli_fetch_assoc($result);
                         <span>You are all set up to pay.</span>
                     <?php }
                     ?>
+                    <div id="cardResult"></div>
                 </div>
             </div>
         </div>
@@ -369,12 +370,12 @@ $row = mysqli_fetch_assoc($result);
                     },
                     type: "POST",
                     success: function(data) {
-                        // $("#url").html(data);
+                        $("#cardResult").html(data);
                         Swal.fire(
                             'Card Added!',
                             'You card has been added and you are all set to pay!',
                             'success'
-                        )
+                        );
                     },
                     error: function(data) {
                         console.log(data);
