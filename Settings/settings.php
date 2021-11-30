@@ -345,7 +345,7 @@ $row = mysqli_fetch_assoc($result);
             title: 'Input fund amount',
             input: 'text',
             inputPlaceholder: 'Enter amount'
-        })
+        });
 
         if (funds) {
             $.ajax({
