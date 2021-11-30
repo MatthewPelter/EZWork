@@ -58,7 +58,7 @@ const editAccountIcon = document.getElementById("editAccountIcon");
 //Blocks Pay Now BUtton from being pressed
 const balance = document.getElementById("balance");
 const payBalance = document.getElementById("payBalance");
-
+/*
 if (balance.innerText === "0.00") {
   payBalance.style.cursor = "not-allowed";
   payBalance.style.background = "lightgrey";
@@ -66,3 +66,4 @@ if (balance.innerText === "0.00") {
 } else {
   payBalance.style.cursor = "pointer";
 }
+*/
