@@ -366,7 +366,7 @@ $row = mysqli_fetch_assoc($result);
                 $.ajax({
                     url: "../api/addCard.php",
                     data: {
-                        card: formValues[0]
+                        card: formValues
                     },
                     type: "POST",
                     success: function(data) {
