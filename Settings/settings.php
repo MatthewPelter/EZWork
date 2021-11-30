@@ -59,7 +59,7 @@ $row = mysqli_fetch_assoc($result);
             <div class="settings-account-container">
                 <div class="settings-account-card">
                     <h3>Account</h3>
-                    <i class="fa fa-pencil" onclick="openCard()" id="editAccountIcon" aria-hidden="true"></i>
+                    <i class="fa fa-pencil" id="editAccountIcon" aria-hidden="true"></i>
                 </div>
                 <div class="settings-account-profile-image">
                     <div class="image-card">
@@ -96,7 +96,7 @@ $row = mysqli_fetch_assoc($result);
                     <button id="becomeFreelancer" onclick="location.href='../Profile/register.php'">Become Freelancer</button>
                 <?php
                 } ?>
-                <button id="deleteAccount" onclick="openCard()">Delete Account</button>
+                <button id="deleteAccount">Delete Account</button>
             </div>
         </div>
 
@@ -345,7 +345,10 @@ $row = mysqli_fetch_assoc($result);
             } = await Swal.fire({
                 title: 'Input fund amount',
                 input: 'text',
-                inputPlaceholder: 'Enter amount'
+                inputPlaceholder: 'Enter amount ($)',
+                inputAttributes: {
+                    maxlength: 4
+                }
             });
 
             if (funds) {
