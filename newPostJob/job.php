@@ -408,11 +408,20 @@ if (mysqli_num_rows($jobResult) > 0) {
                                 <i class="fa fa-money" aria-hidden="true"></i>
                                 Pay For Service
                             </button>
-                        <?php } else if ($r['status'] != 1) {
+                        <?php } else if ($r['status'] != 1 && $r['freelancer_complete'] == 1) {
                         ?>
 
 
-                            <button class="complete">
+                            <button class="completeClient">
+                                <i class="fa fa-flag" aria-hidden="true"></i>
+                                Mark Job as Complete
+                            </button>
+                    <?php }
+                    } ?>
+                    <?php if ($r['freelancer_id'] == $getFreelancerID) {
+                        if ($r['status'] != 1) {
+                    ?>
+                            <button class="completeFreelancer">
                                 <i class="fa fa-flag" aria-hidden="true"></i>
                                 Mark Job as Complete
                             </button>
@@ -552,10 +561,10 @@ if (mysqli_num_rows($jobResult) > 0) {
 
 
         // complete btn click
-        $(".complete").click(function() {
+        $(".completeClient").click(function() {
             Swal.fire({
                 title: 'Mark Job as Complete',
-                text: "If feel like like the freelancer completed your job, you may mark it as complete and the payment will be released to the freelancer.",
+                text: "If feel like the freelancer completed your job, you may mark it as complete and the payment will be released to the freelancer.",
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
@@ -571,6 +580,40 @@ if (mysqli_num_rows($jobResult) > 0) {
                             Swal.fire(
                                 'Complete!',
                                 'We are glad your job is complete.',
+                                'success'
+                            ).then(function() {
+                                window.location.reload(1);
+                            });
+                        },
+                        error: function(r) {
+                            console.log(r);
+                        }
+                    });
+
+                }
+            });
+        }); // end complete btn click
+
+        // complete btn click
+        $(".completeFreelancer").click(function() {
+            Swal.fire({
+                title: 'Mark Job as Complete',
+                text: "If feel like you have completed the clients required work, you may mark this job as complete.",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Mark as Complete!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $.ajax({
+                        type: "POST",
+                        url: "../api/mark-as-complete.php",
+                        data: 'postID=' + <?php echo $job_id; ?>,
+                        success: function(data) {
+                            Swal.fire(
+                                'Complete!',
+                                'Once the client reviews your work and marks as complete, your payment will be released.',
                                 'success'
                             ).then(function() {
                                 window.location.reload(1);

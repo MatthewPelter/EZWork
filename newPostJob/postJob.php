@@ -72,7 +72,7 @@ function securityscan($data)
 
                         //print_r($_SESSION['post']);
                         $datePosted = date("Y-m-d");
-                        $sql = "INSERT INTO jobs(length,title,skills,size,location,budget,description,image,user_id,freelancer_id,status,datePosted,experience,typeOfJob,paid) VALUES('$length','$title','$skills','$size','$location','$maxbudget', '$description', '$image', '$userID', NULL, 0, '$datePosted', '$experience', '$typeOfJob', 0)";
+                        $sql = "INSERT INTO jobs(length,title,skills,size,location,budget,description,image,user_id,freelancer_id,status,datePosted,experience,typeOfJob,paid,freelancer_complete) VALUES('$length','$title','$skills','$size','$location','$maxbudget', '$description', '$image', '$userID', NULL, 0, '$datePosted', '$experience', '$typeOfJob', 0, 0)";
                         $query = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 
                         if ($query) {
