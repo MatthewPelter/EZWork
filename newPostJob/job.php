@@ -416,7 +416,10 @@ if (mysqli_num_rows($jobResult) > 0) {
                                 <i class="fa fa-flag" aria-hidden="true"></i>
                                 Mark Job as Complete
                             </button>
-                    <?php }
+                        <?php } else { ?>
+                            <h2>Freelancer is working on your job now.</h2>
+                    <?php
+                        }
                     } ?>
                     <?php if ($r['freelancer_id'] == $getFreelancerID) {
                         if ($r['status'] != 1) {
