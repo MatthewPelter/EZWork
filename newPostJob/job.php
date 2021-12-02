@@ -531,7 +531,7 @@ if (mysqli_num_rows($jobResult) > 0) {
                                 Swal.fire({
                                     title: 'Insufficient Balance!',
                                     text: 'You do not have enough money to pay for this service. Please add funds.',
-                                    icon: 'success',
+                                    icon: 'error',
                                     confirmButtonText: 'Add Funds',
                                     showCancelButton: true
                                 }).then(function() {
