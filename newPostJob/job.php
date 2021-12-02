@@ -20,8 +20,7 @@ $job_id = $_GET['id'];
 $job_id = mysqli_real_escape_string($conn, $job_id);
 $job_id = htmlspecialchars($job_id);
 
-//$jobSQL = "SELECT jobs.* FROM jobs INNER JOIN clients ON jobs.user_id = clients.id WHERE jobs.id='$job_id' LIMIT 1";
-$jobSQL = "SELECT * FROM jobs WHERE jobs.id='$job_id' LIMIT 1";
+$jobSQL = "SELECT jobs.* FROM jobs INNER JOIN clients ON jobs.user_id = clients.id WHERE jobs.id='$job_id' LIMIT 1";
 $jobResult = mysqli_query($conn, $jobSQL);
 
 if (mysqli_num_rows($jobResult) > 0) {
@@ -704,17 +703,6 @@ if (mysqli_num_rows($jobResult) > 0) {
         <?php }
         ?>
 
-        <?php
-        if ($r['freelancer_complete'] == 1) { ?>
-            $bar.children(".is-current").removeClass("is-current").addClass("is-complete").next().addClass("is-current");
-        <?php }
-        ?>
-
-        <?php
-        if ($r['status'] == 1) { ?>
-            $bar.children(".is-current").removeClass("is-current").addClass("is-complete").next().addClass("is-current");
-        <?php }
-        ?>
     });
 </script>
 <!--Script for the search bar and datalist-->
