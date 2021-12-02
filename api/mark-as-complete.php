@@ -17,9 +17,10 @@ if (isset($_SESSION['user_id']) && isset($_POST['postID'])) {
     }
 
     $user_id = $_SESSION['user_id'];
-
     $postID = securityscan($_POST['postID']);
-    $pullUser = mysqli_query($conn, "SELECT user_id, freelancer_id FROM jobs WHERE id='$postID'") or die(mysqli_error($conn));
+
+
+    $pullUser = mysqli_query($conn, "SELECT 'user_id', 'freelancer_id' FROM jobs WHERE id='$postID'") or die(mysqli_error($conn));
     $pullUser = mysqli_fetch_assoc($pullUser);
     $pullUser = $pullUser['user_id'];
 
