@@ -265,7 +265,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                     $notifications = mysqli_query($conn, "SELECT * FROM notifications WHERE receiver='$user_id' AND isRead=0 ORDER BY id DESC");
                     if (mysqli_num_rows($notifications) > 0) { ?>
                         <div class="card card1">
-                            <h4 onclick="readNotification(0);closeAll();">Mark as Read</h4>
+                            <h4 onclick="readNotification(0);/*closeAll();*/">Mark as Read</h4>
                         </div>
                         <?php
                         while ($row = mysqli_fetch_assoc($notifications)) {
@@ -401,12 +401,12 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
         });
     }
 
-    function closeAll() {
-        $('.notificationCard .card').each(function() {
-            $(this).addClass('is-hidden');
-            $('.notificationCard').append("<div class='card card1'><h4>You are all caught up!</h4> </div>");
-        });
-    }
+    // function closeAll() {
+    //     $('.notificationCard .card').each(function() {
+    //         $(this).addClass('is-hidden');
+    //         $('.notificationCard').append("<div class='card card1'><h4>You are all caught up!</h4> </div>");
+    //     });
+    // }
 
     var job = document.querySelector('.jobCard');
     var talent = document.querySelector('.talentCard');
