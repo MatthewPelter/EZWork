@@ -255,7 +255,22 @@ if (!isset($_SESSION['user_id'])) {
                                                                     ?>)" class="Message-close js-messageClose"><i class="fa fa-times"></i></button> -->
                         </div>
 
-            <?php }
+                    <?php } else if ($r['type'] == 'p') {
+                    ?>
+                        <div class="Message <?php if ($r['isRead'] == 1) {
+                                                echo "dimmed";
+                                            } ?>">
+                            <div class="Message-icon">
+                                <i class="fa fa-bell-o"></i>
+                            </div>
+                            <div class="Message-body">
+                                <p><?php echo $senderName; ?> has submitted a their payment.</p>
+                                <p>You may now begin working on their job.</p>
+                                <p class="tint">at <?php echo $r['sentAt']; ?></p>
+                            </div>
+                        </div>
+            <?php
+                    }
                 }
             } else {
                 echo "No Notifications :(";

@@ -297,7 +297,13 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                                 <div onclick="readNotification(<?php echo $row['id']; ?>); location.href='../message/messages?mid=<?php echo $row['sender']; ?>';" class="card">
                                     <h4><?php echo $senderName; ?> has submitted a proprosal to your job.</h4>
                                 </div>
-                        <?php }
+                            <?php } else if ($row['type'] == 'p') { ?>
+                                <div class="card">
+                                    <h4><?php echo $senderName; ?> sent their payment.</h4>
+
+                                </div>
+                        <?php
+                            }
                         }
                     } else { ?>
                         <div class="card card1">
