@@ -221,7 +221,8 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                 </div>
             </div>
         <?php // } ?>
-        <div class="projectsNav">
+        
+        <!--<div class="projectsNav">
             <span onclick="toggleProject()" id="projects">Projects</span>
             <div class="projectCardContainer">
                 <div class="projectCard">
@@ -237,6 +238,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                 </div>
             </div>
         </div>
+        -->
         <div class="messagesNav">
             <a style="color: white; text-decoration: none;" href="https://ez-work.herokuapp.com/message/messages">Messages</a>
         </div>
@@ -384,7 +386,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
 
     var job = document.querySelector('.jobCard');
     var talent = document.querySelector('.talentCard');
-    var project = document.querySelector('.projectCard');
+    //var project = document.querySelector('.projectCard');
     var help = document.querySelector('.helpCard');
     var session = document.querySelector('.sessionCard');
 
@@ -393,7 +395,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
         if (getComputedStyle(job).display === 'none') {
             job.style.display = 'inline-block';
             talent.style.display = 'none';
-            project.style.display = 'none';
+            //project.style.display = 'none';
             help.style.display = 'none';
             session.style.display = 'none';
         } else {
@@ -407,7 +409,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
         if (getComputedStyle(talent).display === 'none') {
             talent.style.display = 'inline-block';
             job.style.display = 'none';
-            project.style.display = 'none';
+            //project.style.display = 'none';
             help.style.display = 'none';
             session.style.display = 'none';
         } else {
@@ -415,7 +417,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
         }
     }
 
-    function toggleProject() {
+    //function toggleProject() {
         var project = document.querySelector('.projectCard');
         if (getComputedStyle(project).display === 'none') {
             project.style.display = 'inline-block';
@@ -426,14 +428,14 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
         } else {
             project.style.display = 'none';
         }
-    }
+    //}
 
     function toggleHelp() {
         var help = document.querySelector('.helpCard');
         if (getComputedStyle(help).display === 'none') {
             help.style.display = 'inline-block';
             talent.style.display = 'none';
-            project.style.display = 'none';
+            //project.style.display = 'none';
             job.style.display = 'none';
             session.style.display = 'none';
         } else {
@@ -446,7 +448,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
         if (getComputedStyle(help).display === 'none') {
             help.style.display = 'inline-block';
             talent.style.display = 'none';
-            project.style.display = 'none';
+            //project.style.display = 'none';
             job.style.display = 'none';
             session.style.display = 'none';
         } else {
@@ -459,7 +461,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
         if (getComputedStyle(session).display === 'none') {
             session.style.display = 'inline-block';
             talent.style.display = 'none';
-            project.style.display = 'none';
+            //project.style.display = 'none';
             help.style.display = 'none';
             job.style.display = 'none';
         } else {
