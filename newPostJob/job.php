@@ -20,7 +20,7 @@ $job_id = $_GET['id'];
 $job_id = mysqli_real_escape_string($conn, $job_id);
 $job_id = htmlspecialchars($job_id);
 
-$jobSQL = "SELECT jobs.* FROM jobs INNER JOIN clients ON jobs.user_id = clients.id WHERE jobs.id='$job_id' LIMIT 1";
+$jobSQL = "SELECT jobs.*, clients.avatar FROM jobs INNER JOIN clients ON jobs.user_id = clients.id WHERE jobs.id='$job_id' LIMIT 1";
 $jobResult = mysqli_query($conn, $jobSQL);
 
 if (mysqli_num_rows($jobResult) > 0) {
@@ -422,7 +422,7 @@ if (mysqli_num_rows($jobResult) > 0) {
                         }
                     } ?>
                     <?php if ($r['freelancer_id'] == $getFreelancerID) {
-                        if ($r['status'] != 1 && $r['paid'] == 1 && $r['freelancer_complete'] == 0) {
+                        if ($r['status'] != 1) {
                     ?>
                             <button class="completeFreelancer">
                                 <i class="fa fa-flag" aria-hidden="true"></i>
@@ -695,6 +695,8 @@ if (mysqli_num_rows($jobResult) > 0) {
             status.style.color = "#e1b12c";
         }
 
+
+        //Uses jQuery because it was quick. You'll want to write something that works within the context of your app.
         var $bar = $(".ProgressBar");
         $bar.children().first().addClass("is-current");
         <?php
@@ -703,6 +705,21 @@ if (mysqli_num_rows($jobResult) > 0) {
         <?php }
         ?>
 
+        <?php
+        if ($r['status'] == 1) { ?>
+            $bar.children(".is-current").removeClass("is-current").addClass("is-complete").next().addClass("is-current");
+        <?php }
+        ?>
+
+        /*
+        $("#advance").on("click", function() {
+            var $bar = $(".ProgressBar");
+            if ($bar.children(".is-current").length > 0) {
+                $bar.children(".is-current").removeClass("is-current").addClass("is-complete").next().addClass("is-current");
+            } else {
+                $bar.children().first().addClass("is-current");
+            }
+        });*/
     });
 </script>
 <!--Script for the search bar and datalist-->
