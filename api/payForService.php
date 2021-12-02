@@ -17,15 +17,20 @@ if (isset($_SESSION['user_id']) && isset($_POST['postID'])) {
     }
 
     $postID = securityscan($_POST['postID']);
-    $pullUser = mysqli_query($conn, "SELECT user_id FROM jobs WHERE id='$postID'");
+    $pullUser = mysqli_query($conn, "SELECT user_id, freelancer_id FROM jobs WHERE id='$postID'");
     $pullUser = mysqli_fetch_assoc($pullUser);
-    $pullUser = $pullUser['user_id'];
+    $pullUserID = $pullUser['user_id'];
 
     $user_id = $_SESSION['user_id'];
 
-    if ($pullUser != $user_id) {
+    if ($pullUserID != $user_id) {
         die("Error: This is not your job");
     }
+
+    $pullFreelancer = $pullUser['freelancer_id'];
+    $pullFreelancerUserID = mysqli_query($conn, "SELECT id FROM clients WHERE freelancer_id='$pullFreelancer'") or die(mysqli_error($conn));
+    $pullFreelancerUserID = mysqli_fetch_assoc($pullFreelancerUserID);
+    $pullFreelancerUserID = $pullFreelancerUserID['id'];
 
     $pullBalance = mysqli_query($conn, "SELECT funds FROM clients WHERE id='$user_id'");
     $pullBalance = mysqli_fetch_assoc($pullBalance);
@@ -41,6 +46,7 @@ if (isset($_SESSION['user_id']) && isset($_POST['postID'])) {
         $setFunds = mysqli_query($conn, "UPDATE clients SET funds = funds - '$pullBudget' WHERE id='$user_id'") or die(mysqli_errno($conn));
         if ($setFunds) {
             $setPaid = mysqli_query($conn, "UPDATE jobs SET paid=1 WHERE id='$postID'") or die(mysqli_errno($conn));
+            $sendNotification = mysqli_query($conn, "INSERT INTO notifications (type, receiver, sender, isRead, sentAt) VALUES ('p', '$pullFreelancerUserID', '$user_id', 0, '$date')") or die(mysqli_errno($conn));
         } else {
             die("Payment Failure, Try Again");
         }
