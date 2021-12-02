@@ -614,6 +614,7 @@ if (mysqli_num_rows($jobResult) > 0) {
                         url: "../api/mark-as-complete.php",
                         data: 'postID=' + <?php echo $job_id; ?>,
                         success: function(data) {
+                            console.log(data);
                             Swal.fire(
                                 'Complete!',
                                 'Once the client reviews your work and marks as complete, your payment will be released.',
