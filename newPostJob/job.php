@@ -550,6 +550,41 @@ if (mysqli_num_rows($jobResult) > 0) {
             });
         }); // end pay for service btn click
 
+
+        // complete btn click
+        $(".complete").click(function() {
+            Swal.fire({
+                title: 'Mark Job as Complete',
+                text: "If feel like like the freelancer completed your job, you may mark it as complete and the payment will be released to the freelancer.",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Mark as Complete!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $.ajax({
+                        type: "POST",
+                        url: "../api/mark-as-complete.php",
+                        data: 'postID=' + <?php echo $job_id; ?>,
+                        success: function(data) {
+                            Swal.fire(
+                                'Complete!',
+                                'We are glad your job is complete.',
+                                'success'
+                            ).then(function() {
+                                window.location.reload(1);
+                            });
+                        },
+                        error: function(r) {
+                            console.log(r);
+                        }
+                    });
+
+                }
+            });
+        }); // end complete btn click
+
         // delete btn click
         $("#deleteBtn").click(function() {
             Swal.fire({
@@ -598,7 +633,7 @@ if (mysqli_num_rows($jobResult) > 0) {
         copyLinkBtn.addEventListener('click', () => {
             var link = document.getElementById('link');
             copyToClipboard(link);
-        })
+        });
 
         // Status color
         const status = document.getElementById('status');
