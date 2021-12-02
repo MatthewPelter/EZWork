@@ -334,6 +334,9 @@ if (mysqli_num_rows($jobResult) > 0) {
         </div>
     </div>
 
+    <!-- ---------------------------------------------------------- -->
+    <!-- PROGRESS SECTION -->
+    <!-- ---------------------------------------------------------- -->
     <?php
     $getFreelancerID = mysqli_query($conn, "SELECT freelancer_id FROM clients WHERE id='$user_id'");
     $getFreelancerID = mysqli_fetch_assoc($getFreelancerID);
@@ -392,12 +395,6 @@ if (mysqli_num_rows($jobResult) > 0) {
                                 <span class="ProgressBar-stepLabel">Finished</span>
                             </li>
                         </ol>
-
-
-                        <p>
-                            <button id="previous">Previous</button>
-                            <button id="advance">Advance</button>
-                        </p>
                     </div>
 
                     <svg xmlns="http://www.w3.org/2000/svg">
@@ -480,10 +477,7 @@ if (mysqli_num_rows($jobResult) > 0) {
                         success: function(data) {
                             var obj = JSON.parse(data);
                             console.log(obj);
-                            // $("#chat").val('');
                             if (obj.Success.length > 0) {
-                                // $('#result').html(obj.Success);
-                                // $('#proposal').hide();
                                 Swal.fire(
                                     'Proposal Sent!',
                                     'Your proposal has been sent to the client.',
@@ -491,9 +485,7 @@ if (mysqli_num_rows($jobResult) > 0) {
                                 ).then(function() {
                                     window.location.reload(1);
                                 });
-                            } else if (obj.Error.length > 0) {
-                                // $('#result').html(obj.Error);
-                            }
+                            } else if (obj.Error.length > 0) {}
 
                         },
                         error: function(r) {
@@ -507,7 +499,6 @@ if (mysqli_num_rows($jobResult) > 0) {
         });
 
         $("#deleteBtn").click(function() {
-            // $('#deleteMenu').css('display', 'block');
             Swal.fire({
                 title: 'Are you sure?',
                 text: "You won't be able to revert this!",
@@ -523,8 +514,6 @@ if (mysqli_num_rows($jobResult) > 0) {
                         url: "../api/delete-post.php",
                         data: 'postID=' + <?php echo $job_id; ?>,
                         success: function(data) {
-                            //$('#deleteMenu').css('display', 'none');
-                            //$('#result').html(data);
                             Swal.fire(
                                 'Deleted!',
                                 'Your file has been deleted.',
@@ -541,29 +530,6 @@ if (mysqli_num_rows($jobResult) > 0) {
                 }
             });
         });
-
-        /*$('#yesBtn').click(function() {
-            $.ajax({
-                type: "POST",
-                url: "../api/delete-post.php",
-                data: 'postID=' + <?php echo $job_id; ?>,
-                success: function(data) {
-                    $('#deleteMenu').css('display', 'none');
-                    $('#result').html(data);
-
-                    setTimeout(function() {
-                        window.location.reload(1);
-                    }, 3000);
-                },
-                error: function(r) {
-                    console.log(r);
-                }
-            });
-        });
-
-        $('#noBtn').click(function() {
-            $('#deleteMenu').css('display', 'none');
-        });*/
 
         function copyToClipboard(link) {
             const el = document.createElement("textarea");
@@ -599,7 +565,7 @@ if (mysqli_num_rows($jobResult) > 0) {
         var $bar = $(".ProgressBar");
         $bar.children().first().addClass("is-current");
 
-
+        /*
         $("#advance").on("click", function() {
             var $bar = $(".ProgressBar");
             if ($bar.children(".is-current").length > 0) {
@@ -607,16 +573,7 @@ if (mysqli_num_rows($jobResult) > 0) {
             } else {
                 $bar.children().first().addClass("is-current");
             }
-        });
-
-        $("#previous").on("click", function() {
-            var $bar = $(".ProgressBar");
-            if ($bar.children(".is-current").length > 0) {
-                $bar.children(".is-current").removeClass("is-current").prev().removeClass("is-complete").addClass("is-current");
-            } else {
-                $bar.children(".is-complete").last().removeClass("is-complete").addClass("is-current");
-            }
-        });
+        });*/
     });
 </script>
 <!--Script for the search bar and datalist-->
