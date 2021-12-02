@@ -76,8 +76,9 @@ if (isset($_POST['location'])) {
                 <form action="postJob.php" method="post">
                     <div class="budget">
                         <label for="budget">Project Budget</label>
+                        <input type="radio" id="budget" name="budgetoption" value="budget" required>
                     </div>
-                    <div id="budgetChecked" style="display: block;">
+                    <div id="budgetChecked">
                         <span>Optional*</span>
                         <div class="budgetChecked-container">
                             <label>Maximum Budget ($):</label>
@@ -105,7 +106,11 @@ if (isset($_POST['location'])) {
 <script src="../SkillsContainer/searchProfile.js"></script>
 
 <script type="text/javascript">
+    var budgetbtn = document.getElementById('budget');
 
+    budgetbtn.addEventListener("click", function() {
+        document.getElementById('budgetChecked').style.display = "block";
+    });
 </script>
 
 </html>
