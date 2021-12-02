@@ -422,7 +422,7 @@ if (mysqli_num_rows($jobResult) > 0) {
                         }
                     } ?>
                     <?php if ($r['freelancer_id'] == $getFreelancerID) {
-                        if ($r['status'] != 1) {
+                        if ($r['status'] != 1 && $r['paid'] == 1) {
                     ?>
                             <button class="completeFreelancer">
                                 <i class="fa fa-flag" aria-hidden="true"></i>
