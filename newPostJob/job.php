@@ -422,13 +422,18 @@ if (mysqli_num_rows($jobResult) > 0) {
                         }
                     } ?>
                     <?php if ($r['freelancer_id'] == $getFreelancerID) {
-                        if ($r['status'] != 1 && $r['paid'] == 1 && $r['freelancer_complete'] == 0) {
-                    ?>
-                            <button class="completeFreelancer">
-                                <i class="fa fa-flag" aria-hidden="true"></i>
-                                Mark Job as Complete
-                            </button>
+                        if ($r['status'] != 1 && $r['freelancer_complete'] == 0) {
+                            if ($r['paid'] == 0) { ?>
+                                <h2>Wait until the client pays before you begin working.</h2>
+                            <?php
+                            } else {
+                            ?>
+                                <button class="completeFreelancer">
+                                    <i class="fa fa-flag" aria-hidden="true"></i>
+                                    Mark Job as Complete
+                                </button>
                     <?php }
+                        }
                     } ?>
                 </div>
                 <div class="clientInfo">
