@@ -55,10 +55,7 @@ function securityscan($data)
                         // Clean up values
                         if ($_SESSION['post']['maxbudget'] == 0) {
                             $_SESSION['post']['maxbudget'] = NULL;
-                        } else if ($_SESSION['post']['hourrate'] == 0) {
-                            $_SESSION['post']['hourrate'] = NULL;
                         }
-
                         if ($typeOfJob == '') {
                             $typeOfJob = 'require';
                         }
@@ -69,14 +66,13 @@ function securityscan($data)
                         $size = securityscan($size);
                         $location = securityscan($location);
                         $maxbudget = securityscan($maxbudget);
-                        $hourrate = securityscan($hourrate);
                         $description = securityscan($description);
                         $experience = securityscan($experience);
                         $typeOfJob = securityscan($typeOfJob);
 
                         //print_r($_SESSION['post']);
                         $datePosted = date("Y-m-d");
-                        $sql = "INSERT INTO jobs(length,title,skills,size,location,budget,rate,description,image,user_id,freelancer_id,status,datePosted,experience,typeOfJob) VALUES('$length','$title','$skills','$size','$location','$maxbudget','$hourrate', '$description', '$image', '$userID', NULL, 0, '$datePosted', '$experience', '$typeOfJob')";
+                        $sql = "INSERT INTO jobs(length,title,skills,size,location,budget,description,image,user_id,freelancer_id,status,datePosted,experience,typeOfJob,paid) VALUES('$length','$title','$skills','$size','$location','$maxbudget', '$description', '$image', '$userID', NULL, 0, '$datePosted', '$experience', '$typeOfJob', 0)";
                         $query = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 
                         if ($query) {
