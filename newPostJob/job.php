@@ -695,8 +695,6 @@ if (mysqli_num_rows($jobResult) > 0) {
             status.style.color = "#e1b12c";
         }
 
-
-        //Uses jQuery because it was quick. You'll want to write something that works within the context of your app.
         var $bar = $(".ProgressBar");
         $bar.children().first().addClass("is-current");
         <?php
@@ -711,15 +709,11 @@ if (mysqli_num_rows($jobResult) > 0) {
         <?php }
         ?>
 
-        /*
-        $("#advance").on("click", function() {
-            var $bar = $(".ProgressBar");
-            if ($bar.children(".is-current").length > 0) {
-                $bar.children(".is-current").removeClass("is-current").addClass("is-complete").next().addClass("is-current");
-            } else {
-                $bar.children().first().addClass("is-current");
-            }
-        });*/
+        <?php
+        if ($r['status'] == 1) { ?>
+            $bar.children(".is-current").removeClass("is-current").addClass("is-complete").next().addClass("is-current");
+        <?php }
+        ?>
     });
 </script>
 <!--Script for the search bar and datalist-->
