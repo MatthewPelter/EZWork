@@ -200,7 +200,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                 </div>
             </div>
         </div>
-        <?php if ($avatarFetch['freelancer_id'] != NULL) { ?>
+        <?php // if ($avatarFetch['freelancer_id'] != NULL) { ?>
             <div class="freelancerNav">
                 <span onclick="toggleTalent()" id="talents">Freelancer</span>
                 <div class="talentCardContainer">
@@ -220,7 +220,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                     </div>
                 </div>
             </div>
-        <?php } ?>
+        <?php // } ?>
         <div class="projectsNav">
             <span onclick="toggleProject()" id="projects">Projects</span>
             <div class="projectCardContainer">
