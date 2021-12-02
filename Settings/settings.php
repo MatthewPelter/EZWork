@@ -168,7 +168,7 @@ $row = mysqli_fetch_assoc($result);
                 ?>
                 <div class="settings-balance-card2">
                     <p class="balance">Your balance is <span>$</span><span id="balance"><?php echo $getCards['funds']; ?></span></p>
-                    <button id="payBalance">Add Funds</button>
+                    <button id="payBalance" <?php if ($getCards['card'] == NULL) { echo "disabled"; } ?>>Add Funds</button>
                 </div>
             </div>
             <div class="settings-billing-container">
