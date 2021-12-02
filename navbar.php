@@ -305,7 +305,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                             <?php
                             } else if ($row['type'] == 'pr') { ?>
                                 <div class="card">
-                                    <h4>Your paymane has been released.</h4>
+                                    <h4>Your payment has been released.</h4>
 
                                 </div>
 

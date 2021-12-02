@@ -411,7 +411,8 @@ if (mysqli_num_rows($jobResult) > 0) {
                         <?php } else if ($r['status'] != 1 && $r['freelancer_complete'] == 1) {
                         ?>
 
-
+                            <h2>The freelancer has compelted your job.</h2>
+                            <h3>If you think they completed it correctly, mark it as complete.</h3>
                             <button class="completeClient">
                                 <i class="fa fa-flag" aria-hidden="true"></i>
                                 Mark Job as Complete
