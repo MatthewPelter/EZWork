@@ -506,7 +506,7 @@ if (mysqli_num_rows($jobResult) > 0) {
         $(".pay").click(function() {
             Swal.fire({
                 title: 'Pay For Service',
-                text: "The payment will be release to the freelancer once the job is complete",
+                text: "The payment will be released to the freelancer once the job is complete!",
                 icon: 'info',
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
@@ -519,6 +519,7 @@ if (mysqli_num_rows($jobResult) > 0) {
                         url: "../api/payForService.php",
                         data: 'postID=' + <?php echo $job_id; ?>,
                         success: function(data) {
+                            console.log(data);
                             if (data == "insufficient") {
                                 Swal.fire({
                                     title: 'You are all set!',
