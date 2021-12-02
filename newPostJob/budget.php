@@ -74,18 +74,6 @@ if (isset($_POST['location'])) {
                     ?>
                 </span>
                 <form action="postJob.php" method="post">
-                    <div class="hourly">
-                        <label for="rate">Hourly Rate</label>
-                        <input type="radio" id="rate" name="budgetoption" value="rate" required>
-                    </div>
-                    <div id="rateChecked">
-                        <span>Optional*</span>
-                        <div class="rateChecked-container">
-                            <label>Hourly Rate ($ / hour): </label>
-                            <input name="hourrate" id="hourrate" type="number" placeholder="Enter $ Amount" value="">
-                        </div>
-
-                    </div>
                     <div class="budget">
                         <label for="budget">Project Budget</label>
                         <input type="radio" id="budget" name="budgetoption" value="budget">

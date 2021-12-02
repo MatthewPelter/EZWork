@@ -346,7 +346,6 @@ if (mysqli_num_rows($jobResult) > 0) {
         <div class="job progress">
             <h2>Job Progress</h2>
             <div class="job-container">
-
                 <div class="jobCard">
                     <div class="scope">
                         <!-- ----------------------------------------- -->
@@ -357,9 +356,7 @@ if (mysqli_num_rows($jobResult) > 0) {
                         <!-- ----------------------------------------- -->
                         <p>Status:
                             <span id="status">
-                                <?php if ($r['status'] == 0) {
-                                    echo "Open";
-                                } else if ($r['status'] == 1) {
+                                <?php if ($r['status'] == 1) {
                                     echo "Closed";
                                 } else if ($r['status'] == -1) {
                                     echo "In-Progress";
@@ -405,16 +402,22 @@ if (mysqli_num_rows($jobResult) > 0) {
                 </div>
 
                 <div class="options">
-                    <?php
+                    <?php if ($r['user_id'] == $_SESSION['user_id']) {
+                        if ($r['paid'] == 1) { ?>
+                            <div class="pay">
+                                <i class="fa fa-money" aria-hidden="true"></i>
+                                <span>Pay For Service</span>
+                            </div>
+                        <?php } else if ($r['status'] != 1) {
+                        ?>
 
-                    ?>
 
-                    <?php if ($r['user_id'] == $_SESSION['user_id']) { ?>
-                        <div class="flag">
-                            <i class="fa fa-flag" aria-hidden="true"></i>
-                            <span>Mark Job as Complete</span>
-                        </div>
-                    <?php } ?>
+                            <div class="complete">
+                                <i class="fa fa-flag" aria-hidden="true"></i>
+                                <span>Mark Job as Complete</span>
+                            </div>
+                    <?php }
+                    } ?>
                 </div>
                 <div class="clientInfo">
                     <h3>About the Freelancer</h3>
@@ -450,6 +453,7 @@ if (mysqli_num_rows($jobResult) > 0) {
 <script type="text/javascript">
     $(document).ready(function() {
 
+        // proposal btn click
         $("#proposalBtn").click(function() {
             (async () => {
                 const {
@@ -496,8 +500,55 @@ if (mysqli_num_rows($jobResult) > 0) {
                 }
             })();
 
-        });
+        }); // end proposal btn click
 
+        // pay for service btn click
+        $(".pay").click(function() {
+            Swal.fire({
+                title: 'Pay For Service',
+                text: "The payment will be release to the freelancer once the job is complete",
+                icon: 'info',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Pay'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $.ajax({
+                        type: "POST",
+                        url: "../api/payForService.php",
+                        data: 'postID=' + <?php echo $job_id; ?>,
+                        success: function(data) {
+                            if (data == "insufficient") {
+                                Swal.fire({
+                                    title: 'You are all set!',
+                                    text: 'Your payment has been accepted. The freelancer will now begin on your project.',
+                                    icon: 'success',
+                                }).then(function() {
+                                    window.location.reload(1);
+                                });
+                            } else {
+                                Swal.fire({
+                                    title: 'Insufficient Balance!',
+                                    text: 'You do not have enough money to pay for this service. Please add funds.',
+                                    icon: 'success',
+                                    confirmButtonText: 'Add Funds',
+                                    showCancelButton: true
+                                }).then(function() {
+                                    window.location.href = "https://ez-work.herokuapp.com/Settings/settings";
+                                });
+                            }
+                        },
+                        error: function(r) {
+                            console.log(r);
+                        }
+                    });
+
+                }
+            });
+        }); // end pay for service btn click
+
+        // delete btn click
         $("#deleteBtn").click(function() {
             Swal.fire({
                 title: 'Are you sure?',
@@ -529,7 +580,7 @@ if (mysqli_num_rows($jobResult) > 0) {
 
                 }
             });
-        });
+        }); // end delete btn click
 
         function copyToClipboard(link) {
             const el = document.createElement("textarea");
