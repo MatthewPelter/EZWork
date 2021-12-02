@@ -35,8 +35,11 @@ if (isset($_SESSION['user_id']) && isset($_POST['postID'])) {
         $pullBudget = $pullBudget['budget'];
         $setFunds = mysqli_query($conn, "UPDATE clients SET funds = funds + '$pullBudget' WHERE id='$pullFreelancerUserID'") or die(mysqli_error($conn));
         $setPaid = mysqli_query($conn, "UPDATE jobs SET status=1 WHERE id='$postID'") or die(mysqli_error($conn));
+
+        $sendNotification = mysqli_query($conn, "INSERT INTO notifications (type, receiver, sender, isRead, sentAt) VALUES ('pr', '$pullFreelancerUserID', '$user_id', 0, '$date')") or die(mysqli_errno($conn));
     } else if ($pullFreelancerUserID == $user_id) {
         $setFreelancerComplete = mysqli_query($conn, "UPDATE jobs SET freelancer_complete=1 WHERE id='$postID'") or die(mysqli_error($conn));
+        $sendNotification = mysqli_query($conn, "INSERT INTO notifications (type, receiver, sender, isRead, sentAt) VALUES ('fc', '$pullUserID', '$user_id', 0, '$date')") or die(mysqli_errno($conn));
     } else {
         die("Error: This is not your job");
     }

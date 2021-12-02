@@ -269,6 +269,40 @@ if (!isset($_SESSION['user_id'])) {
                                 <p class="tint">at <?php echo $r['sentAt']; ?></p>
                             </div>
                         </div>
+
+
+                    <?php
+                    } else if ($r['type'] == 'pr') {
+                    ?>
+                        <div class="Message <?php if ($r['isRead'] == 1) {
+                                                echo "dimmed";
+                                            } ?>">
+                            <div class="Message-icon">
+                                <i class="fa fa-bell-o"></i>
+                            </div>
+                            <div class="Message-body">
+                                <p>Your payment has been released.</p>
+                                <p>Your balance is now updated to reflect that.</p>
+                                <p class="tint">at <?php echo $r['sentAt']; ?></p>
+                            </div>
+                        </div>
+
+                    <?php
+                    } else if ($r['type'] == 'fc') {
+                    ?>
+                        <div class="Message <?php if ($r['isRead'] == 1) {
+                                                echo "dimmed";
+                                            } ?>">
+                            <div class="Message-icon">
+                                <i class="fa fa-bell-o"></i>
+                            </div>
+                            <div class="Message-body">
+                                <p><?php echo $senderName; ?> has completed their work.</p>
+                                <p>View the progress page to ensure they completed.</p>
+                                <p class="tint">at <?php echo $r['sentAt']; ?></p>
+                            </div>
+                        </div>
+
             <?php
                     }
                 }
