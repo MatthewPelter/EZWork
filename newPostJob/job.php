@@ -519,8 +519,7 @@ if (mysqli_num_rows($jobResult) > 0) {
                         url: "../api/payForService.php",
                         data: 'postID=' + <?php echo $job_id; ?>,
                         success: function(data) {
-                            console.log(data);
-                            if (data == "insufficient") {
+                            if (data != "insufficient") {
                                 Swal.fire({
                                     title: 'You are all set!',
                                     text: 'Your payment has been accepted. The freelancer will now begin on your project.',
