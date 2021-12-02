@@ -90,7 +90,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
             </a>
         </ul>
     </div>
-    <?php if ($avatarFetch['freelancer_id'] != NULL) { ?>
+    <?php // if ($avatarFetch['freelancer_id'] != NULL) { ?>
         <div class="mobileNavCard" onclick="toggleFreelanceCard(this)">
             <p>Freelancer</p>
             <i class="fa fa-sort-down" id="freelanceArrow"></i>
@@ -111,9 +111,9 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                 </a>
             </ul>
         </div>
-    <?php } ?>
+    <?php // } ?>
 
-    <div class="mobileNavCard" onclick="toggleProjectsCard(this)">
+    <!--<div class="mobileNavCard" onclick="toggleProjectsCard(this)">
         <p>Projects</p>
         <i class="fa fa-sort-down" id="projectsArrow"></i>
     </div>
@@ -131,7 +131,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
             </a>
         </ul>
     </div>
-
+    -->
 
     <div class="mobileNavCard" onclick="location.href='../message/messages'">
         <p>Messages</p>
@@ -417,7 +417,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
         }
     }
 
-    //function toggleProject() {
+    /*function toggleProject() {
         var project = document.querySelector('.projectCard');
         if (getComputedStyle(project).display === 'none') {
             project.style.display = 'inline-block';
@@ -428,7 +428,8 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
         } else {
             project.style.display = 'none';
         }
-    //}
+    }
+    */
 
     function toggleHelp() {
         var help = document.querySelector('.helpCard');

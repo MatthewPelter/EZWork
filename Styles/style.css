@@ -25261,4 +25261,137 @@ a:hover {
     background: whitesmoke;
   }
 }
+
+.AllFreelancers {
+  margin-top: 4.5rem;
+  width: 100%;
+  background: whitesmoke;
+  padding: 2.5rem 6rem;
+}
+
+.AllFreelancers .AllFreelancersHeader {
+  width: 100%;
+  margin: 1rem 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.AllFreelancers .AllFreelancersHeader h2 {
+  color: #0a345e;
+  font-size: 2rem;
+}
+
+.AllFreelancers .AllFreelancersHeader ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.AllFreelancers .AllFreelancersHeader ul li {
+  margin: 0rem 0.2rem;
+  font-size: 0.9rem;
+  color: #797979;
+}
+
+.AllFreelancers .AllFreelancersHeader ul li a {
+  text-decoration: none;
+  color: #054e97;
+}
+
+.AllFreelancers .AllFreelancersHeader ul li a:hover {
+  text-decoration: underline;
+}
+
+.AllFreelancers .AllFreelancersContainer {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  margin: auto;
+  row-gap: 5rem;
+  -webkit-column-gap: 3rem;
+          column-gap: 3rem;
+}
+
+.AllFreelancers .AllFreelancersContainer .freelancerCard {
+  cursor: pointer;
+  border-radius: 10px;
+  border: 3px solid #054e97;
+  width: 100%;
+}
+
+.AllFreelancers .AllFreelancersContainer .freelancerCard:hover {
+  opacity: 0.8;
+}
+
+.AllFreelancers .AllFreelancersContainer .freelancerCard .freelancerImg {
+  height: 20rem;
+  width: 100%;
+  border-bottom: 3px solid #054e97;
+}
+
+.AllFreelancers .AllFreelancersContainer .freelancerCard .freelancerImg img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.AllFreelancers .AllFreelancersContainer .freelancerCard .freelancerInfo {
+  width: 100%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: white;
+}
+
+.AllFreelancers .AllFreelancersContainer .freelancerCard .freelancerInfo h2 {
+  font-size: 1.5rem;
+  color: #054e97;
+}
+
+.AllFreelancers .AllFreelancersContainer .freelancerCard .freelancerInfo h3 {
+  font-size: 1.4rem;
+  color: #0a345e;
+}
+
+.AllFreelancers .AllFreelancersContainer .freelancerCard .freelancerInfo h4,
+.AllFreelancers .AllFreelancersContainer .freelancerCard .freelancerInfo h5,
+.AllFreelancers .AllFreelancersContainer .freelancerCard .freelancerInfo p {
+  color: #1b1a1a;
+  font-size: 1rem;
+}
 /*# sourceMappingURL=style.css.map */
