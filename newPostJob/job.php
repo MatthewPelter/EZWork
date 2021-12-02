@@ -404,18 +404,18 @@ if (mysqli_num_rows($jobResult) > 0) {
                 <div class="options">
                     <?php if ($r['user_id'] == $_SESSION['user_id']) {
                         if ($r['paid'] == 0) { ?>
-                            <div class="pay">
+                            <button class="pay">
                                 <i class="fa fa-money" aria-hidden="true"></i>
-                                <span>Pay For Service</span>
-                            </div>
+                                Pay For Service
+                            </button>
                         <?php } else if ($r['status'] != 1) {
                         ?>
 
 
-                            <div class="complete">
+                            <button class="complete">
                                 <i class="fa fa-flag" aria-hidden="true"></i>
-                                <span>Mark Job as Complete</span>
-                            </div>
+                                Mark Job as Complete
+                            </button>
                     <?php }
                     } ?>
                 </div>
