@@ -534,8 +534,10 @@ if (mysqli_num_rows($jobResult) > 0) {
                                     icon: 'error',
                                     confirmButtonText: 'Add Funds',
                                     showCancelButton: true
-                                }).then(function() {
-                                    window.location.href = "https://ez-work.herokuapp.com/Settings/settings";
+                                }).then((result) => {
+                                    if (result.isConfirmed) {
+                                        window.location.href = "https://ez-work.herokuapp.com/Settings/settings";
+                                    }
                                 });
                             }
                         },
