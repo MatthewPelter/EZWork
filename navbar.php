@@ -205,7 +205,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                 <span onclick="toggleTalent()" id="talents">Freelancer</span>
                 <div class="talentCardContainer">
                     <div class="talentCard">
-                        <div class="card card1">
+                        <div class="card card1"  onclick="location.href='../Freelancer/AllFreelancers.php'">
                             <h4>Discover</h4>
                         </div>
                         <div class="card card2" onclick="location.href='../newPostJob/contracts.php'">

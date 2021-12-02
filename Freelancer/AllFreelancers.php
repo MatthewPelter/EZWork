@@ -5,9 +5,6 @@ require_once("../classes/DB.php");
 
 
 $username = $_SESSION['userid'];
-//$getUserID = "SELECT id FROM clients WHERE username = '$username'";
-// $getResult = mysqli_query($conn, $getUserID);
-// $userrow = mysqli_fetch_assoc($getResult);
 $userID = $_SESSION['user_id'];
 ?>
 <!DOCTYPE html>
@@ -47,54 +44,37 @@ $userID = $_SESSION['user_id'];
             </ul>
         </div>
         <div class="AllFreelancersContainer">
-            <div class="freelancerCard">
-                <div class="freelancerImg">
-                    <img src="../Users/leo.JPG" alt="">
-                </div>
-                <div class="freelancerInfo">
-                    <h2>Leonel Barrientos</h2>
-                    <h3>Web Developer</h3>
-                    <h4>$ <span>500</span> per hour</h4>
-                    <h5>United States</h5>
-                    <p>5 jobs completed</p>
-                </div>
-            </div>
-            <div class="freelancerCard">
-                <div class="freelancerImg">
-                    <img src="../Users/leo.JPG" alt="">
-                </div>
-                <div class="freelancerInfo">
-                    <h2>Leonel Barrientos</h2>
-                    <h3>Web Developer</h3>
-                    <h4>$ <span>500</span> per hour</h4>
-                    <h5>United States</h5>
-                    <p>5 jobs completed</p>
-                </div>
-            </div>
-            <div class="freelancerCard">
-                <div class="freelancerImg">
-                    <img src="../Users/leo.JPG" alt="">
-                </div>
-                <div class="freelancerInfo">
-                    <h2>Leonel Barrientos</h2>
-                    <h3>Web Developer</h3>
-                    <h4>$ <span>500</span> per hour</h4>
-                    <h5>United States</h5>
-                    <p>5 jobs completed</p>
-                </div>
-            </div>
-            <div class="freelancerCard">
-                <div class="freelancerImg">
-                    <img src="../Users/leo.JPG" alt="">
-                </div>
-                <div class="freelancerInfo">
-                    <h2>Leonel Barrientos</h2>
-                    <h3>Web Developer</h3>
-                    <h4>$ <span>500</span> per hour</h4>
-                    <h5>United States</h5>
-                    <p>5 jobs completed</p>
-                </div>
-            </div>
+        <?php
+                    $sql = "SELECT username, avatar, freelancer_id FROM clients";
+                    $result = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
+                    if (mysqli_num_rows($result) > 0) {
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            if ($row['username'] != $_SESSION['userid']) {
+
+                                if ($row['freelancer_id'] != NULL) {
+                    ?>
+                        
+                    <div class="freelancerCard"  onclick="location.href='../Profile/userprofile.php?name=<?php echo $row[`username`]; ?>'">
+                        <div class="freelancerImg">
+                            <img src="<?php echo $row['avatar']; ?>" alt=`<?php echo $row['username']; ?>`>
+                        </div>
+                        <div class="freelancerInfo">
+                            <h2><?php echo $row['username']; ?></h2>
+                            <h3>Web Developer</h3>
+                            <h4>$ <span>500</span> per hour</h4>
+                            <h5>United States</h5>
+                            <p>5 jobs completed</p>
+                        </div>
+                    </div>
+
+
+
+                        <?php
+                                }
+                            }
+                        }
+                    }
+                    ?>             
         </div>
     </div>
   
