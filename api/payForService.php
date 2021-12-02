@@ -16,8 +16,17 @@ if (isset($_SESSION['user_id']) && isset($_POST['postID'])) {
         die("Error: Missing Data");
     }
 
-    $user_id = $_SESSION['user_id'];
     $postID = securityscan($_POST['postID']);
+    $pullUser = mysqli_query($conn, "SELECT user_id FROM jobs WHERE id='$postID'");
+    $pullUser = mysqli_fetch_assoc($pullUser);
+    $pullUser = $pullUser['user_id'];
+
+    $user_id = $_SESSION['user_id'];
+
+    if ($pullUser != $user_id) {
+        die("Error: This is not your job");
+    }
+
     $pullBalance = mysqli_query($conn, "SELECT funds FROM clients WHERE id='$user_id'");
     $pullBalance = mysqli_fetch_assoc($pullBalance);
     $pullBalance = $pullBalance['funds'];
