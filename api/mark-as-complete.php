@@ -28,7 +28,8 @@ if (isset($_SESSION['user_id']) && isset($_POST['postID'])) {
     $pullFreelancerUserID = mysqli_query($conn, "SELECT id FROM clients WHERE freelancer_id='$pullFreelancer'") or die(mysqli_error($conn));
     $pullFreelancerUserID = mysqli_fetch_assoc($pullFreelancerUserID);
     $pullFreelancerUserID = $pullFreelancerUserID['id'];
-
+    date_default_timezone_set("America/New_York");
+    $date = date('Y-m-d H:i:s');
     if ($pullUserID == $user_id) {
         $pullBudget = mysqli_query($conn, "SELECT budget FROM jobs WHERE id='$postID'") or die(mysqli_error($conn));
         $pullBudget = mysqli_fetch_assoc($pullBudget);

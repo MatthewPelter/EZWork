@@ -46,6 +46,8 @@ if (isset($_SESSION['user_id']) && isset($_POST['postID'])) {
         $setFunds = mysqli_query($conn, "UPDATE clients SET funds = funds - '$pullBudget' WHERE id='$user_id'") or die(mysqli_errno($conn));
         if ($setFunds) {
             $setPaid = mysqli_query($conn, "UPDATE jobs SET paid=1 WHERE id='$postID'") or die(mysqli_errno($conn));
+            date_default_timezone_set("America/New_York");
+            $date = date('Y-m-d H:i:s');
             $sendNotification = mysqli_query($conn, "INSERT INTO notifications (type, receiver, sender, isRead, sentAt) VALUES ('p', '$pullFreelancerUserID', '$user_id', 0, '$date')") or die(mysqli_errno($conn));
         } else {
             die("Payment Failure, Try Again");
