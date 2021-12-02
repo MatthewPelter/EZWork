@@ -403,7 +403,7 @@ if (mysqli_num_rows($jobResult) > 0) {
 
                 <div class="options">
                     <?php if ($r['user_id'] == $_SESSION['user_id']) {
-                        if ($r['paid'] == 1) { ?>
+                        if ($r['paid'] == 0) { ?>
                             <div class="pay">
                                 <i class="fa fa-money" aria-hidden="true"></i>
                                 <span>Pay For Service</span>
@@ -567,7 +567,7 @@ if (mysqli_num_rows($jobResult) > 0) {
                         success: function(data) {
                             Swal.fire(
                                 'Deleted!',
-                                'Your file has been deleted.',
+                                'Your post has been deleted.',
                                 'success'
                             ).then(function() {
                                 window.location.reload(1);
