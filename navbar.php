@@ -90,28 +90,30 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
             </a>
         </ul>
     </div>
-    <?php // if ($avatarFetch['freelancer_id'] != NULL) { ?>
-        <div class="mobileNavCard" onclick="toggleFreelanceCard(this)">
-            <p>Freelancer</p>
-            <i class="fa fa-sort-down" id="freelanceArrow"></i>
-        </div>
-        <div class="mobileFreelanceCard">
-            <ul>
-                <a href="../newPostJob/jobs.php">
-                    <li>Discover</li>
-                </a>
-                <a href="#/">
-                    <li>Your Hires</li>
-                </a>
-                <a href="#/">
-                    <li>Freelance History</li>
-                </a>
-                <a href="../Profile/register.php">
-                    <li>Become Freelancer</li>
-                </a>
-            </ul>
-        </div>
-    <?php // } ?>
+    <?php // if ($avatarFetch['freelancer_id'] != NULL) { 
+    ?>
+    <div class="mobileNavCard" onclick="toggleFreelanceCard(this)">
+        <p>Freelancer</p>
+        <i class="fa fa-sort-down" id="freelanceArrow"></i>
+    </div>
+    <div class="mobileFreelanceCard">
+        <ul>
+            <a href="../newPostJob/jobs.php">
+                <li>Discover</li>
+            </a>
+            <a href="#/">
+                <li>Your Hires</li>
+            </a>
+            <a href="#/">
+                <li>Freelance History</li>
+            </a>
+            <a href="../Profile/register.php">
+                <li>Become Freelancer</li>
+            </a>
+        </ul>
+    </div>
+    <?php // } 
+    ?>
 
     <!--<div class="mobileNavCard" onclick="toggleProjectsCard(this)">
         <p>Projects</p>
@@ -200,28 +202,30 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                 </div>
             </div>
         </div>
-        <?php // if ($avatarFetch['freelancer_id'] != NULL) { ?>
-            <div class="freelancerNav">
-                <span onclick="toggleTalent()" id="talents">Freelancer</span>
-                <div class="talentCardContainer">
-                    <div class="talentCard">
-                        <div class="card card1"  onclick="location.href='../Freelancer/AllFreelancers.php'">
-                            <h4>Discover</h4>
-                        </div>
-                        <div class="card card2" onclick="location.href='../newPostJob/contracts.php'">
-                            <h4>Your Hires</h4>
-                        </div>
-                        <div class=" card card4">
-                            <h4>Freelance History</h4>
-                        </div>
-                        <div class="card card4" onclick="location.href='../Profile/register.php'">
-                            <h4>Become Freelancer</h4>
-                        </div>
+        <?php // if ($avatarFetch['freelancer_id'] != NULL) { 
+        ?>
+        <div class="freelancerNav">
+            <span onclick="toggleTalent()" id="talents">Freelancer</span>
+            <div class="talentCardContainer">
+                <div class="talentCard">
+                    <div class="card card1" onclick="location.href='../Freelancer/AllFreelancers.php'">
+                        <h4>Discover</h4>
+                    </div>
+                    <div class="card card2" onclick="location.href='../newPostJob/contracts.php'">
+                        <h4>Your Hires</h4>
+                    </div>
+                    <div class=" card card4">
+                        <h4>Freelance History</h4>
+                    </div>
+                    <div class="card card4" onclick="location.href='../Profile/register.php'">
+                        <h4>Become Freelancer</h4>
                     </div>
                 </div>
             </div>
-        <?php // } ?>
-        
+        </div>
+        <?php // } 
+        ?>
+
         <!--<div class="projectsNav">
             <span onclick="toggleProject()" id="projects">Projects</span>
             <div class="projectCardContainer">
@@ -264,33 +268,33 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                             <h4 onclick="readNotification(0);closeAll();">Mark as Read</h4>
                         </div>
                         <?php
-                        while ($r = mysqli_fetch_assoc($notifications)) {
-                            $senderID = $r['sender'];
+                        while ($row = mysqli_fetch_assoc($notifications)) {
+                            $senderID = $row['sender'];
                             $senderName = mysqli_query($conn, "SELECT username FROM clients WHERE id=$senderID");
                             $senderName = mysqli_fetch_assoc($senderName);
                             $senderName = $senderName['username'];
-                            if ($r['type'] == 'm') {
+                            if ($row['type'] == 'm') {
                         ?>
-                                <div onclick="readNotification(<?php echo $r['id']; ?>); location.href='../message/messages?mid=<?php echo $r['sender']; ?>';" class="card">
+                                <div onclick="readNotification(<?php echo $row['id']; ?>); location.href='../message/messages?mid=<?php echo $row['sender']; ?>';" class="card">
                                     <h4>You got a message from <?php echo $senderName; ?></h4>
 
                                 </div>
 
-                            <?php } else if ($r['type'] == 'a') { ?>
+                            <?php } else if ($row['type'] == 'a') { ?>
 
                                 <div class="card">
                                     <h4><?php echo $senderName; ?> has accepted your proposal!</h4>
 
                                 </div>
 
-                            <?php } else if ($r['type'] == 'd') { ?>
+                            <?php } else if ($row['type'] == 'd') { ?>
                                 <div class="card">
                                     <h4><?php echo $senderName; ?> denied your proposal.</h4>
 
                                 </div>
 
-                            <?php } else if ($r['type'] == 'r') { ?>
-                                <div onclick="readNotification(<?php echo $r['id']; ?>); location.href='../message/messages?mid=<?php echo $r['sender']; ?>';" class="card">
+                            <?php } else if ($row['type'] == 'r') { ?>
+                                <div onclick="readNotification(<?php echo $row['id']; ?>); location.href='../message/messages?mid=<?php echo $row['sender']; ?>';" class="card">
                                     <h4><?php echo $senderName; ?> has submitted a proprosal to your job.</h4>
                                 </div>
                         <?php }
