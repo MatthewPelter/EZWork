@@ -4,28 +4,8 @@ include '../components/session-checker.php';
 require_once("../classes/DB.php");
 
 
-$uname = $_GET['name'];
-$cleanuname = mysqli_real_escape_string($conn, $uname);
-
-if ($cleanuname == $_SESSION['userid']) {
-    header('Location: ../ClientProfile/index');
-}
-
-$sql = "SELECT * FROM clients WHERE username='$cleanuname'";
-$result = mysqli_query($conn, $sql);
-$dataFound = false;
-
-if (mysqli_num_rows($result) > 0) {
-    $dataFound = true;
-    $row = mysqli_fetch_assoc($result);
-
-    $client_id = $row['id'];
-    if ($row['freelancer_id'] != NULL) {
-
-        $freeResult = mysqli_query($conn, "SELECT * FROM freelancers WHERE user_id = '$client_id'");
-        $freelancer_array = mysqli_fetch_assoc($freeResult);
-    }
-}
+$username = $_SESSION['userid'];
+$userID = $_SESSION['user_id'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -66,7 +46,7 @@ if (mysqli_num_rows($result) > 0) {
         <div class="AllFreelancersContainer">
 
         <?php
-            if( $dataFound){
+            if($dataFound){
 
         ?>
             <span>FOUND</span>
