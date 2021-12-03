@@ -1,8 +1,8 @@
 .AllFreelancers {
-  margin: 0;
   width: 100%;
   background: whitesmoke;
-  padding: 0rem 6rem;
+  padding: 2.5rem 6rem;
+  margin: 0;
 }
 .AllFreelancers .AllFreelancersHeader {
   width: 100%;

@@ -7,6 +7,35 @@ require_once("../classes/DB.php");
 $username = $_SESSION['userid'];
 $userID = $_SESSION['user_id'];
 ?>
+<?php
+session_start();
+include '../components/session-checker.php';
+require_once("../classes/DB.php");
+
+
+$uname = $_GET['name'];
+$cleanuname = mysqli_real_escape_string($conn, $uname);
+
+if ($cleanuname == $_SESSION['userid']) {
+    header('Location: ../ClientProfile/index');
+}
+
+$sql = "SELECT * FROM clients WHERE username='$cleanuname'";
+$result = mysqli_query($conn, $sql);
+$dataFound = false;
+
+if (mysqli_num_rows($result) > 0) {
+    $dataFound = true;
+    $row = mysqli_fetch_assoc($result);
+
+    $client_id = $row['id'];
+    if ($row['freelancer_id'] != NULL) {
+
+        $freeResult = mysqli_query($conn, "SELECT * FROM freelancers WHERE user_id = '$client_id'");
+        $freelancer_array = mysqli_fetch_assoc($freeResult);
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -45,6 +74,9 @@ $userID = $_SESSION['user_id'];
         </div>
         <div class="AllFreelancersContainer">
         <?php
+            if ($dataFound) {
+            ?>
+        <?php
                     $sql = "SELECT username, avatar, freelancer_id FROM clients";
                     $result = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
                     if (mysqli_num_rows($result) > 0) {
@@ -53,22 +85,33 @@ $userID = $_SESSION['user_id'];
 
                                 if ($row['freelancer_id'] != NULL) {
                     ?>
-                        
-                    <div class="freelancerCard"  onclick="location.href='../Profile/userprofile.php?name=<?php echo $row[`username`]; ?>'">
-                        <div class="freelancerImg">
-                            <img src="<?php echo $row['avatar']; ?>" alt=`<?php echo $row['username']; ?>`>
+                     
+                    <a href="../Profile/userprofile.php?name=<?php echo $row['username']; ?>">
+                        <div class="freelancerCard" onclick="location.href=`" >
+                            <div class="freelancerImg">
+                                <img src="<?php echo $row['avatar']; ?>" alt=`<?php echo $row['username']; ?>`>
+                            </div>
+                            <div class="freelancerInfo">
+                                <h2><?php echo $row['username']; ?></h2>
+                                <h3>
+                                <?php
+                                        if ($freelancer_array['expertise'] != NULL) {
+                                            echo $freelancer_array['expertise'];
+                                        } else {
+                                            echo "No Expertise";
+                                        }
+                                        ?>                                    
+                                </h3>
+                                <h4>$ <span>$freelancer_array['hourRate']; ?></span> per hour</h4>
+                                <h5><?php echo $freelancer_array['country']; ?></h5>
+                                $freeID = $row['freelancer_id'];
+                                $pullJobs = mysqli_query($conn, "SELECT COUNT(*) AS completedJobs FROM jobs WHERE freelancer_id = '$freeID' AND status=1");
+                                $pullJobCount = mysqli_fetch_assoc($pullJobs);                            
+                                <p><?php echo $pullJobCount['completedJobs']; ?> jobs completed</p>
+                            </div>
                         </div>
-                        <div class="freelancerInfo">
-                            <h2><?php echo $row['username']; ?></h2>
-                            <h3>Web Developer</h3>
-                            <h4>$ <span>500</span> per hour</h4>
-                            <h5>United States</h5>
-                            $freeID = $row['freelancer_id'];
-                            $pullJobs = mysqli_query($conn, "SELECT COUNT(*) AS completedJobs FROM jobs WHERE freelancer_id = '$freeID' AND status=1");
-                            $pullJobCount = mysqli_fetch_assoc($pullJobs);                            
-                            <p><?php echo $pullJobCount['completedJobs']; ?> jobs completed</p>
-                        </div>
-                    </div>
+                    </a>
+
 
 
 
@@ -79,6 +122,13 @@ $userID = $_SESSION['user_id'];
                     }
                     ?>             
         </div>
+        <?php
+    } else {
+            ?>
+                <span>User does not Exists</span>
+            <?php
+            }
+            ?>
     </div>
   
     <!-- Footer -->
@@ -92,4 +142,5 @@ $userID = $_SESSION['user_id'];
 </body>
 <!--Script for the search bar and datalist-->
 <script src="../SkillsContainer/searchProfile.js"></script>
+
 </html>
