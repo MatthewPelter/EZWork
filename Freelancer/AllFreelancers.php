@@ -73,10 +73,6 @@ if (mysqli_num_rows($result) > 0) {
             </ul>
         </div>
         <div class="AllFreelancersContainer">
-        <?php
-            if ($dataFound) {
-            ?>
-        <?php
                     $sql = "SELECT username, avatar, freelancer_id FROM clients";
                     $result = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
                     if (mysqli_num_rows($result) > 0) {
@@ -122,13 +118,6 @@ if (mysqli_num_rows($result) > 0) {
                     }
                     ?>             
         </div>
-        <?php
-    } else {
-            ?>
-                <span>User does not Exists</span>
-            <?php
-            }
-            ?>
     </div>
   
     <!-- Footer -->
