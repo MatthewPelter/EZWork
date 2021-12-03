@@ -73,6 +73,7 @@ if (mysqli_num_rows($result) > 0) {
             </ul>
         </div>
         <div class="AllFreelancersContainer">
+        <?php
                     $sql = "SELECT username, avatar, freelancer_id FROM clients";
                     $result = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
                     if (mysqli_num_rows($result) > 0) {
@@ -90,7 +91,7 @@ if (mysqli_num_rows($result) > 0) {
                             <div class="freelancerInfo">
                                 <h2><?php echo $row['username']; ?></h2>
                                 <h3>
-                                <?php
+                                        <?php
                                         if ($freelancer_array['expertise'] != NULL) {
                                             echo $freelancer_array['expertise'];
                                         } else {
@@ -98,7 +99,7 @@ if (mysqli_num_rows($result) > 0) {
                                         }
                                         ?>                                    
                                 </h3>
-                                <h4>$ <span>$freelancer_array['hourRate']; ?></span> per hour</h4>
+                                <h4>$ <span><?php echo $freelancer_array['hourRate']; ?></span> per hour</h4>
                                 <h5><?php echo $freelancer_array['country']; ?></h5>
                                 $freeID = $row['freelancer_id'];
                                 $pullJobs = mysqli_query($conn, "SELECT COUNT(*) AS completedJobs FROM jobs WHERE freelancer_id = '$freeID' AND status=1");
