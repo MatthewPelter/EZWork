@@ -62,7 +62,8 @@ $userID = $_SESSION['user_id'];
                             <div class="freelancerInfo">
                                 <h2><?php echo $row['username']; ?></h2>
                                 <?php
-                                    $getInfoSQL = mysqli_query($conn, "SELECT * FROM freelancers");  
+                                    $freeID = $row['freelancer_id'];
+                                    $getInfoSQL = mysqli_query($conn, "SELECT * FROM freelancers WHERE freelancer_id = '$freeID'");  
                                     $getInfo = mysqli_fetch_assoc($getInfoSQL);   
                                 ?>
                                 <h3>
