@@ -44,25 +44,6 @@ $userID = $_SESSION['user_id'];
             </ul>
         </div>
         <div class="AllFreelancersContainer">
-
-        <?php
-            if($dataFound){
-
-        ?>
-            <span>FOUND</span>
-
-        <?php
-            }
-            else{
-        ?>        
-                <div class="error">
-                    <span>Unfortunatelly, there are no EZwork Freelancers</span>
-                    <img src="../Image/sad-cartoon.gif" alt="no-activity">
-                </div>
-        <?php        
-            }
-        ?>
-        <!--
         <?php
                     $sql = "SELECT username, avatar, freelancer_id FROM clients";
                     $result = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
@@ -109,7 +90,6 @@ $userID = $_SESSION['user_id'];
                     }
                     ?>             
         </div>
-                -->
     </div>
   
     <!-- Footer -->
