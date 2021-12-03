@@ -66,13 +66,7 @@ $userID = $_SESSION['user_id'];
                                     $getInfo = mysqli_fetch_assoc($getInfoSQL);   
                                 ?>
                                 <h3>
-                                        <?php
-                                        if ($getInfo['expertise'] != NULL) {
-                                            echo $getInfo['expertise'];
-                                        } else {
-                                            echo "No Expertise";
-                                        }
-                                        ?>                                    
+                                    <?php echo $getInfo['expertise']; ?>                                
                                 </h3>
                                 <h4>$ <span><?php echo $getInfo['hourRate']; ?></span> per hour</h4>
                                 <h5><?php echo $getInfo['country']; ?></h5>
