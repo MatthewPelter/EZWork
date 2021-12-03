@@ -61,27 +61,13 @@ $userID = $_SESSION['user_id'];
                             </div>
                             <div class="freelancerInfo">
                                 <h2><?php echo $row['username']; ?></h2>
-                                
-                                <?php
-                                    $dataSQL = "SELECT expertise, hourRate, country FROM freelancers";
-                                    $data = mysqli_query($conn, $dataSQL) or die(mysqli_errno($conn));
-                                    if (mysqli_num_rows($data) > 0) {
-                                        while ($dataArray = mysqli_fetch_assoc($data)) {
-                                            if ($row['username'] != $_SESSION['userid']) {
-                                                if ($row['freelancer_id'] != NULL) {
-                                    ?>
+                            
                                 <h3>
-                                    <?php echo $dataArray['expertise']; ?>                                
+                                    Web Developer                                
                                 </h3>
-                                <h4>$ <span><?php echo $dataArray['hourRate']; ?></span> per hour</h4>
-                                <h5><?php echo $dataArray['country']; ?></h5>
+                                <h4>$ <span>10</span> per hour</h4>
+                                <h5>China</h5>
 
-                                    <?php
-                                                }
-                                            }
-                                        }
-                                    }
-                                    ?>
                                 <?php
                                 $freeID = $row['freelancer_id'];
                                 $pullJobs = mysqli_query($conn, "SELECT COUNT(*) AS completedJobs FROM jobs WHERE freelancer_id = '$freeID' AND status=1");
