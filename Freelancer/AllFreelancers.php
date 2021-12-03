@@ -4,15 +4,6 @@ include '../components/session-checker.php';
 require_once("../classes/DB.php");
 
 
-$username = $_SESSION['userid'];
-$userID = $_SESSION['user_id'];
-?>
-<?php
-session_start();
-include '../components/session-checker.php';
-require_once("../classes/DB.php");
-
-
 $uname = $_GET['name'];
 $cleanuname = mysqli_real_escape_string($conn, $uname);
 
@@ -73,6 +64,25 @@ if (mysqli_num_rows($result) > 0) {
             </ul>
         </div>
         <div class="AllFreelancersContainer">
+
+        <?php
+            if( $dataFound){
+
+        ?>
+            <span>FOUND</span>
+
+        <?php
+            }
+            else{
+        ?>        
+                <div class="error">
+                    <span>Unfortunatelly, there are no EZwork Freelancers</span>
+                    <img src="../Image/sad-cartoon.gif" alt="no-activity">
+                </div>
+        <?php        
+            }
+        ?>
+        <!--
         <?php
                     $sql = "SELECT username, avatar, freelancer_id FROM clients";
                     $result = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
@@ -119,6 +129,7 @@ if (mysqli_num_rows($result) > 0) {
                     }
                     ?>             
         </div>
+                -->
     </div>
   
     <!-- Footer -->
