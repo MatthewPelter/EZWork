@@ -25341,7 +25341,7 @@ a:hover {
 }
 
 .AllFreelancers .AllFreelancersContainer .freelancerCard .freelancerImg {
-  height: 20rem;
+  height: 15rem;
   width: 100%;
   background-color: white;
   border-bottom: 3px solid #054e97;
@@ -25394,34 +25394,5 @@ a:hover {
 .AllFreelancers .AllFreelancersContainer .freelancerCard .freelancerInfo p {
   color: #1b1a1a;
   font-size: 1rem;
-}
-
-.AllFreelancers .error {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.AllFreelancers .error span {
-  font-size: 1.2rem;
-  color: #054e97;
-}
-
-.AllFreelancers .error img {
-  width: 15rem;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 12px;
 }
 /*# sourceMappingURL=style.css.map */
