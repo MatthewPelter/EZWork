@@ -67,6 +67,8 @@ $userID = $_SESSION['user_id'];
                                     $data = mysqli_query($conn, $dataSQL) or die(mysqli_errno($conn));
                                     if (mysqli_num_rows($data) > 0) {
                                         while ($dataArray = mysqli_fetch_assoc($data)) {
+                                            if ($row['username'] != $_SESSION['userid']) {
+                                                if ($row['freelancer_id'] != NULL) {
                                     ?>
                                 <h3>
                                     <?php echo $dataArray['expertise']; ?>                                
@@ -75,6 +77,8 @@ $userID = $_SESSION['user_id'];
                                 <h5><?php echo $dataArray['country']; ?></h5>
 
                                     <?php
+                                                }
+                                            }
                                         }
                                     }
                                     ?>
