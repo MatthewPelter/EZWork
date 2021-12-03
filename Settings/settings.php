@@ -59,7 +59,7 @@ $row = mysqli_fetch_assoc($result);
             <div class="settings-account-container">
                 <div class="settings-account-card">
                     <h3>Account</h3>
-                    <i class="fa fa-pencil" id="editAccountIcon" aria-hidden="true"></i>
+                    <i style="pointer-events: none;opacity: 0;" class="fa fa-pencil" id="editAccountIcon" aria-hidden="true"></i>
                 </div>
                 <div class="settings-account-profile-image">
                     <div class="image-card">

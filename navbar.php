@@ -177,7 +177,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                 <h2>E<span>z</span>Work</h2>
             </a>
         </div>
-        <div class="searchBar">
+        <div class="searchBar" style="opacity: 0;pointer-events: none;">
             <form id="searchContainer">
                 <input type="text" list="allskills" autocomplete="off" name="search" placeholder="Search">
                 <input type="submit" value="Find">

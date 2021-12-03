@@ -63,7 +63,10 @@ $userID = $_SESSION['user_id'];
                             <h3>Web Developer</h3>
                             <h4>$ <span>500</span> per hour</h4>
                             <h5>United States</h5>
-                            <p>5 jobs completed</p>
+                            $freeID = $row['freelancer_id'];
+                            $pullJobs = mysqli_query($conn, "SELECT COUNT(*) AS completedJobs FROM jobs WHERE freelancer_id = '$freeID' AND status=1");
+                            $pullJobCount = mysqli_fetch_assoc($pullJobs);                            
+                            <p><?php echo $pullJobCount['completedJobs']; ?> jobs completed</p>
                         </div>
                     </div>
 

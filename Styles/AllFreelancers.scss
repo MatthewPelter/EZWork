@@ -2,6 +2,8 @@ $color1: #0a345e;
 $lightColor: #054e97;
 $darktext: rgb(121, 121, 121);
 .AllFreelancers {
+    
+margin: 0;
   width: 100%;
   background: whitesmoke;
   padding: 2.5rem 6rem;
@@ -58,6 +60,7 @@ $darktext: rgb(121, 121, 121);
       .freelancerImg {
         height: 20rem;
         width: 100%;
+        background-color: white;
         border-bottom: 3px solid $lightColor;
         img {
           border-top-left-radius: 10px;
