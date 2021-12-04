@@ -225,7 +225,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
         <?php // } 
         ?>
         <div class="marketNav">
-            <span onclick="location.href='../Market/market.php'">MarketPlace</span>
+            <span onclick="location.href='../Market/market.php'">Marketplace</span>
         </div>
 
         <!--<div class="projectsNav">

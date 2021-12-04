@@ -69,6 +69,8 @@ $userID = $_SESSION['user_id'];
                 <?php
                 if (mysqli_num_rows($jobResult) > 0) {
                     while ($r = mysqli_fetch_assoc($jobResult)) {
+
+                        if ($r['status'] != 1){
                 ?>
                         <div class="allJobsCard" style="overflow-y: scroll;">
                             <div class="postedJob" data-postid="<?php echo $r['id']; ?>">
@@ -95,6 +97,7 @@ $userID = $_SESSION['user_id'];
                         </div>
 
                 <?php
+                        }
                     }
                 }
                 ?>
