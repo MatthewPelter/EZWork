@@ -62,8 +62,13 @@ $userID = $_SESSION['user_id'];
                             <div class="freelancerInfo">
                                 <h2><?php echo $row['username']; ?></h2>
                             
+                                <?php
+                                        $freeID1 = $row['freelancer_id'];
+                                        $pullExpertise = mysqli_query($conn, "SELECT expertise AS skill FROM freelancers WHERE freelancer_id = '$freeID1'"); 
+                                        $data = mysqli_fetch_assoc($pullExpertise);    
+                                ?>                                
                                 <h3>
-                                    Web Developer                                
+                                    <?php echo $data['skill']; ?>                                
                                 </h3>
                                 <h4>$ <span>10</span> per hour</h4>
                                 <h5>China</h5>
