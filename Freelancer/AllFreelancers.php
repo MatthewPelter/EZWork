@@ -44,23 +44,19 @@ $userID = $_SESSION['user_id'];
             </ul>
         </div>
         <div class="AllFreelancersContainer">
-
-        <?php
-                                    $dataSQL = "SELECT * FROM freelancers";
-                                    $dataResult = mysqli_query($conn, $dataSQL) or die(mysqli_errno($conn));
-
-                                    if (mysqli_num_rows($dataResult) > 0) {
-                                        while ($r = mysqli_fetch_assoc($dataResult)){
-                                ?>            
         <?php
                     $sql = "SELECT username, avatar, freelancer_id FROM clients";
                     $result = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
-                    if (mysqli_num_rows($result) > 0) {
-                        while ($row = mysqli_fetch_assoc($result)) {
+
+                    $dataSQL = "SELECT * FROM freelancers";
+                    $dataResult = mysqli_query($conn, $dataSQL) or die(mysqli_errno($conn));
+
+                    if (mysqli_num_rows($result) > 0 && mysqli_num_rows($dataResult) > 0) {
+                        while ($row = mysqli_fetch_assoc($result) && $r = mysqli_fetch_assoc($dataResult)) {
                             if ($row['username'] != $_SESSION['userid']) {
 
                                 if ($row['freelancer_id'] != NULL) {
-                    ?>        
+                    ?>          
                                             <a href="../Profile/userprofile.php?name=<?php echo $row['username']; ?>">
                                                 <div class="freelancerCard" onclick="location.href=`" >
                                                     <div class="freelancerImg">
@@ -91,15 +87,6 @@ $userID = $_SESSION['user_id'];
                                                     </div>
                                                 </div>
                                             </a>
-                                <?php            
-                                        }
-                                    }
-                                ?>                     
-
-
-
-
-
                         <?php
                                 }
                             }
