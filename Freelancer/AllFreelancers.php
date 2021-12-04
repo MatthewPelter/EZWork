@@ -61,7 +61,8 @@ $userID = $_SESSION['user_id'];
                             </div>
                             <div class="freelancerInfo">
                                 <h2><?php echo $row['username']; ?></h2>
-                                                                   
+                                
+                                <!-- Couldn't get the data such as expertise for each freelacner
                                 <h3>
                                     Software Developer                                
                                 </h3>
@@ -72,15 +73,10 @@ $userID = $_SESSION['user_id'];
                                      per hour
                                 </h4>
                                 
-                                <?php
-                                    $row = 1;
-                                    $totalRows = mysqli_query($conn, "SELECT COUNT(*) AS rows FROM freelancers");
-                                    $pullRows = mysqli_fetch_assoc($totalRows); 
-                                ?>
                                 <h5>
-                                    <?php $pullRows['rows']; ?>
+                                   
                                 </h5>
-
+                                -->
                                 <?php
                                     $freeID = $row['freelancer_id'];
                                     $pullJobs = mysqli_query($conn, "SELECT COUNT(*) AS completedJobs FROM jobs WHERE freelancer_id = '$freeID' AND status=1");
