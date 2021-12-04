@@ -189,9 +189,11 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
             <span onclick="toggleJob()" id="jobs">Jobs</span>
             <div class="jobCardContainer">
                 <div class="jobCard">
+                    <!--
                     <div class="card card1" onclick="location.href='../ClientProfile/index.php'">
                         <h4>My Profile</h4>
                     </div>
+                    -->
                     <div class="card card2" onclick="location.href='../newPostJob/jobs.php'">
                         <h4>All Jobs</h4>
                     </div>                    
