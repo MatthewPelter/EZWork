@@ -37,138 +37,6 @@ if (!isset($_SESSION['user_id'])) {
     <link rel="icon" href="../logo/logo.svg">
     <link rel="stylesheet" href="./Styles/style.css">
 
-    <style type="text/css">
-        #header {
-            text-align: center;
-        }
-
-        #main-page {
-            margin: 50px 0;
-        }
-
-        #notifications-section {
-            max-height: 70vh;
-            overflow: auto;
-            background: #e3e3e3;
-            max-width: 800px;
-            margin: 0 auto;
-            border-radius: 10px;
-        }
-
-        .Message {
-            display: table;
-            position: relative;
-            margin: 40px auto 0;
-            width: 500px;
-            background-color: #0074d9;
-            color: #fff;
-            transition: all .2s ease
-        }
-
-        .Message.is-hidden {
-            opacity: 0;
-            height: 0;
-            font-size: 0;
-            padding: 0;
-            margin: 0 auto;
-            display: block
-        }
-
-        .Message--orange {
-            background-color: #f39c12
-        }
-
-        .Message--red {
-            background-color: #ff4136
-        }
-
-        .Message--green {
-            background-color: #2ecc40
-        }
-
-        .Message-icon {
-            display: table-cell;
-            vertical-align: middle;
-            width: 60px;
-            padding: 30px;
-            text-align: center;
-            background-color: rgba(0, 0, 0, .25)
-        }
-
-        .Message-icon>i {
-            width: 20px;
-            font-size: 20px
-        }
-
-        .Message-body {
-            display: table-cell;
-            vertical-align: middle;
-            padding: 30px 20px 30px 10px
-        }
-
-        .Message-body>p {
-            line-height: 1.2;
-            margin-top: 6px
-        }
-
-        .Message-button {
-            position: relative;
-            margin: 15px 5px -10px;
-            background-color: rgba(0, 0, 0, .25);
-            box-shadow: 0 3px rgba(0, 0, 0, .4);
-            border: none;
-            padding: 10px 15px;
-            font-size: 16px;
-            font-family: "Source Sans Pro";
-            color: #fff;
-            outline: 0;
-            cursor: pointer
-        }
-
-        .Message-button:hover {
-            background: rgba(0, 0, 0, .3)
-        }
-
-        .Message-button:active {
-            background: rgba(0, 0, 0, .3);
-            box-shadow: 0 0 rgba(0, 0, 0, .4);
-            top: 3px
-        }
-
-        .Message-close {
-            position: absolute;
-            background-color: rgba(0, 0, 0, .3);
-            color: #fff;
-            border: none;
-            outline: 0;
-            font-size: 20px;
-            right: 5px;
-            top: 5px;
-            opacity: 0;
-            cursor: pointer
-        }
-
-        /* 
-        .Message:hover .Message-close {
-            opacity: 1
-        } */
-
-        .Message-close:hover {
-            background-color: rgba(0, 0, 0, .5)
-        }
-
-        .u-italic {
-            font-style: italic
-        }
-
-        .tint {
-            color: #ccc;
-        }
-
-        .dimmed {
-            filter: brightness(75%);
-        }
-    </style>
 </head>
 
 <body>
@@ -176,7 +44,7 @@ if (!isset($_SESSION['user_id'])) {
     <div id="main-page">
         <div id="header">
             <h1 id="title">Notifications</h1>
-            <button onclick="readNotification(0);closeAll();">Mark as Read</button>
+            <button onclick="readNotification(0);closeAll();" id="markAsRead">Mark as Read</button>
         </div>
         <div id="notifications-section">
             <?php
