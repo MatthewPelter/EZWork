@@ -74,11 +74,15 @@ $userID = $_SESSION['user_id'];
                                     <h4 id="jobTitle"><a href="../newPostJob/job.php?id=<?php echo $r['id']; ?>"><?php echo $r['title']; ?></a></h4>
 
                                 </div>
-                                <p>Status: <span id="status"><?php if ($r['status'] == 0) {
-                                                                    echo "Open";
-                                                                } else {
-                                                                    echo "Closed";
-                                                                } ?></span></p>
+                                <p>Status:
+                                    <?php if ($r['status'] == 0) { ?>
+                                        <span style="color: lightgreen;"><?php echo "Open"; ?></span>
+                                    <?php } else if($r['status'] == 1) { ?>
+                                        <span style="color: red;"><?php echo "Closed"; ?></span>                         
+                                    <?php }else{ ?>
+                                        <span style="color: yellow;"><?php echo "In-Progress"; ?></span>                                              
+                                    <?php } ?>
+                                </p>
                                 <p>Job Posted on <span id="date"><?php echo $r['datePosted']; ?></span> by <span id="postedBy">Me</span></p>
                             </div>
                         </div>
