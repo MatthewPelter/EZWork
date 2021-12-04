@@ -64,7 +64,7 @@ $userID = $_SESSION['user_id'];
                             
                                 <?php
                                         $freeID1 = $row['freelancer_id'];
-                                        $pullExpertise = mysqli_query($conn, "SELECT expertise AS skill FROM freelancers WHERE freelancer_id = '$freeID1'"); 
+                                        $pullExpertise = mysqli_query($conn, "SELECT expertise AS skill FROM freelancers"); 
                                         $data = mysqli_fetch_assoc($pullExpertise);    
                                 ?>                                
                                 <h3>
