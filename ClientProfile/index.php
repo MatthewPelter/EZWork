@@ -85,13 +85,15 @@ $userID = $_SESSION['user_id'];
                                         <button style="color: red;" id="deleteJob">Delete</button>
                                     </div>
                                 </div>
-                                <p>Status: <span id="status"><?php if ($r['status'] == 0) {
-                                                                    echo "Open";
-                                                                } else if ($r['status'] == -1) {
-                                                                    echo "In-Progress";
-                                                                } else {
-                                                                    echo "Closed";
-                                                                } ?></span></p>
+                                <p>Status:
+                                <?php if ($r['status'] == 0) { ?>
+                                        <span style="color: lightgreen;"><?php echo "Open"; ?></span>
+                                    <?php } else if($r['status'] == 1) { ?>
+                                        <span style="color: red;"><?php echo "Closed"; ?></span>                         
+                                    <?php }else{ ?>
+                                        <span style="color: yellow;"><?php echo "In-Progress"; ?></span>                                              
+                                    <?php } ?>                                    
+                                </p>
                                 <p>Job Posted on <span id="date"><?php echo $r['datePosted']; ?></span> by <span id="postedBy">Me</span></p>
                             </div>
                         </div>

@@ -74,14 +74,20 @@ if ($checkFreelancer == NULL) {
                                     <h4 id="jobTitle"><a href="../newPostJob/job.php?id=<?php echo $row['id']; ?>"><?php echo $row['title']; ?></a></h4>
 
                                 </div>
-                                <p>Status: <span id="status"><?php if ($row['status'] == 0) {
-                                                                    echo "Status: Open";
-                                                                } else if ($row['status'] == 1) {
-                                                                    echo "Status: Closed";
-                                                                } else {
-                                                                    echo "Status: In-Progress";
-                                                                } ?></span></p>
-                                <p>Job Posted on <span id="date"><?php echo $row['datePosted']; ?></span> by <span id="postedBy"><?php echo $row['uname']; ?></span></p>
+                                <p>Status:
+                                <?php if ($r['status'] == 0) { ?>
+                                        <span style="color: lightgreen;"><?php echo "Open"; ?></span>
+                                    <?php } else if($r['status'] == 1) { ?>
+                                        <span style="color: red;"><?php echo "Closed"; ?></span>                         
+                                    <?php }else{ ?>
+                                        <span style="color: yellow;"><?php echo "In-Progress"; ?></span>                                              
+                                    <?php } ?>                                    
+                                </p>
+                                <p>Job Posted on <span id="date"><?php echo $row['datePosted']; ?></span> by <span id="postedBy">                                            <?php if ($unameFetched['username'] != $_SESSION['userid']) {
+                                    echo "<a href='../Profile/userprofile.php?name=" . $unameFetched['username'] . "'>" . $unameFetched['username'] . "</a>";
+                                } else {
+                                    echo $unameFetched['username'];
+                                }  ?></span></p>
                             </div>
                         </div>
 
