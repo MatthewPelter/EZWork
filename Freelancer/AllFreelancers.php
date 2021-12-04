@@ -47,46 +47,53 @@ $userID = $_SESSION['user_id'];
         <?php
                     $sql = "SELECT username, avatar, freelancer_id FROM clients";
                     $result = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
-
-                    $dataSQL = "SELECT * FROM freelancers";
-                    $dataResult = mysqli_query($conn, $dataSQL) or die(mysqli_errno($conn));
-
-                    if (mysqli_num_rows($result) > 0 || mysqli_num_rows($dataResult) > 0) {
-                        while ($row = mysqli_fetch_assoc($result) || $r = mysqli_fetch_assoc($dataResult)) {
+                    if (mysqli_num_rows($result) > 0) {
+                        while ($row = mysqli_fetch_assoc($result)) {
                             if ($row['username'] != $_SESSION['userid']) {
 
                                 if ($row['freelancer_id'] != NULL) {
-                    ?>          
-                                            <a href="../Profile/userprofile.php?name=<?php echo $row['username']; ?>">
-                                                <div class="freelancerCard" onclick="location.href=`" >
-                                                    <div class="freelancerImg">
-                                                        <img src="<?php echo $row['avatar']; ?>" alt=`<?php echo $row['username']; ?>`>
-                                                    </div>
-                                                    <div class="freelancerInfo">
-                                                        <h2><?php echo $row['username']; ?></h2>
-                                                        <h3>
-                                                            <?php echo $r['expertise']; ?>                            
-                                                        </h3>
-                                                        <h4>$ 
-                                                            <span>
-                                                                <?php echo $r['hourRate']; ?>   
-                                                            </span>
-                                                             per hour
-                                                        </h4>
-                                                        
-                                                        <h5>
-                                                            <?php echo $r['country']; ?>   
-                                                        </h5>
-                        
-                                                        <?php
-                                                        $freeID = $row['freelancer_id'];
-                                                        $pullJobs = mysqli_query($conn, "SELECT COUNT(*) AS completedJobs FROM jobs WHERE freelancer_id = '$freeID' AND status=1");
-                                                        $pullJobCount = mysqli_fetch_assoc($pullJobs);                            
-                                                        ?>
-                                                        <p><?php echo $pullJobCount['completedJobs']; ?> jobs completed</p>
-                                                    </div>
-                                                </div>
-                                            </a>
+                    ?>
+                     
+                    <a href="../Profile/userprofile.php?name=<?php echo $row['username']; ?>">
+                        <div class="freelancerCard" onclick="location.href=`" >
+                            <div class="freelancerImg">
+                                <img src="<?php echo $row['avatar']; ?>" alt=`<?php echo $row['username']; ?>`>
+                            </div>
+                            <div class="freelancerInfo">
+                                <h2><?php echo $row['username']; ?></h2>
+                                                                   
+                                <h3>
+                                    Software Developer                                
+                                </h3>
+                                <h4>$ 
+                                    <span>
+                                        10
+                                    </span>
+                                     per hour
+                                </h4>
+                                
+                                <?php
+                                    $row = 1;
+                                    $totalRows = mysqli_query($conn, "SELECT COUNT(*) AS rows FROM freelancers");
+                                    $pullRows = mysqli_fetch_assoc($totalRows); 
+                                ?>
+                                <h5>
+                                    <?php $pullRows['rows']; ?>
+                                </h5>
+
+                                <?php
+                                    $freeID = $row['freelancer_id'];
+                                    $pullJobs = mysqli_query($conn, "SELECT COUNT(*) AS completedJobs FROM jobs WHERE freelancer_id = '$freeID' AND status=1");
+                                    $pullJobCount = mysqli_fetch_assoc($pullJobs);                            
+                                ?>
+                                <p><?php echo $pullJobCount['completedJobs']; ?> jobs completed</p>
+                            </div>
+                        </div>
+                    </a>
+
+
+
+
                         <?php
                                 }
                             }
