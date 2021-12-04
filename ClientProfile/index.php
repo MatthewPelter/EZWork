@@ -51,7 +51,7 @@ $userID = $_SESSION['user_id'];
             <div class="user-postings">
                 <div class="card title">
                     <h3>My Postings</h3>
-                    <span><a href="../newPostJob/jobs">All Jobs</a></span>
+                    <span><a href="../newPostJob/myJobs.php">All My Jobs</a></span>
                 </div>
                 <div class="card result" style="padding: 1rem;">
                     <button id="quick-link-job2" onclick="location.href='../newPostJob/start.php'">Post A Job</button>

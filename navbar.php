@@ -192,8 +192,11 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                     <div class="card card1" onclick="location.href='../ClientProfile/index.php'">
                         <h4>My Profile</h4>
                     </div>
+                    <div class="card card2" onclick="location.href='../newPostJob/jobs.php'">
+                        <h4>All Jobs</h4>
+                    </div>                    
                     <div class="card card2" onclick="location.href='../newPostJob/myJobs.php'">
-                        <h4>All My Job Posts</h4>
+                        <h4>My Jobs</h4>
                     </div>
                     <div class="card card3" onclick="location.href='../newPostJob/contracts.php'">
                         <h4>My Contracts</h4>

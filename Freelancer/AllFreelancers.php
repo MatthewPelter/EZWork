@@ -38,7 +38,7 @@ $userID = $_SESSION['user_id'];
         <div class="AllFreelancersHeader">
             <h2>All <span>EZWork</span> Freelancers</h2>
             <ul>
-                <li><a href="../ClientProfile/index.html">My Profile</a></li>
+                <li><a href="../ClientProfile/index.php">My Profile</a></li>
                 <li>/</li>
                 <li>All Freelancers</li>
             </ul>
