@@ -470,13 +470,14 @@ $darktext: rgb(121, 121, 121);
     
         width: 100%;
         background: whitesmoke;
-        padding: 2.5rem 10rem;
+        padding: 2.5rem 2rem;
         margin: 2rem 0rem;
         .AllFreelancersHeader {
           width: 100%;
           margin: 1rem 0rem;
           display: flex;
-          flex-direction: column;
+          flex-direction: row;
+          align-items: center;
           justify-content: center;
       
           h2 {
