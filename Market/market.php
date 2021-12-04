@@ -105,9 +105,9 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
 
     <?php include '../navbar.php'; ?>
 
-    <div class="all-jobs-container">
-        <div class="all-jobs-container-header">
-            <h4>All EZWork Jobs</h4>
+    <div class="market-container">
+        <div class="market-container-header">
+            <h4>EZWork MarketPlace</h4>
 
             <!-- Scrap the search bar... Too much work not enough time -->
             <!-- <div class="searchBar2">
@@ -391,17 +391,6 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
             </div>
 
             <div class="myProfile">
-
-                <div class="header">
-                    <img src="<?php echo $userfetch['avatar']; ?>" alt="Avatar">
-                    <h4>My Profile</h4>
-                </div>
-
-                <div class="view">
-                    <i class="fa fa-eye" aria-hidden="true"></i>
-                    <a href="https://ez-work.herokuapp.com/ClientProfile/index">View my Profile</a>
-                </div>
-
             </div>
         </div>
     </div>

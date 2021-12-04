@@ -59,12 +59,14 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
 </style>
 
 <div class="profile-mobile-nav">
+    <!--
     <div class="profile-nav-search">
         <form id="searchContainer">
             <input type="text" list="allskills" autocomplete="off" name="searchNAV" placeholder="Search">
             <input type="submit" value="Find">
         </form>
     </div>
+    -->
     <div class="mobileNavCard" id="navProfile">
         <img src="<?php echo $avatarFetch['avatar']; ?>" alt="Avatar">
         <span id="user"><?php echo $_SESSION['userid']; ?></span>

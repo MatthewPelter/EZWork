@@ -20521,7 +20521,7 @@ li {
 
 .all-jobs-container .all-jobs-container-header {
   width: 100%;
-  padding: 1rem 0rem;
+  padding: 2rem 0rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -25400,7 +25400,7 @@ a:hover {
   margin-top: 0;
   width: 100%;
   background: whitesmoke;
-  padding: 2.5rem 10rem;
+  padding: 2.5rem 6rem;
 }
 
 #main-page #header {
@@ -25415,9 +25415,9 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 #main-page #notifications-section {

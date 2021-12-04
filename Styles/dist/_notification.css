@@ -2,14 +2,14 @@
   margin-top: 0;
   width: 100%;
   background: whitesmoke;
-  padding: 2.5rem 10rem;
+  padding: 2.5rem 6rem;
 }
 #main-page #header {
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 #main-page #notifications-section {
   max-height: 90vh;

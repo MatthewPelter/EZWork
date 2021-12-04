@@ -6,14 +6,14 @@ $darktext: rgb(121, 121, 121);
     margin-top: 0;
     width: 100%;
     background: whitesmoke;
-    padding: 2.5rem 10rem;
+    padding: 2.5rem 6rem;
 
     #header{
         width: 100%;
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: space-between;
     }
 
     #notifications-section{
