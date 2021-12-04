@@ -51,8 +51,8 @@ $userID = $_SESSION['user_id'];
                     $dataSQL = "SELECT * FROM freelancers";
                     $dataResult = mysqli_query($conn, $dataSQL) or die(mysqli_errno($conn));
 
-                    if (mysqli_num_rows($result) > 0 && mysqli_num_rows($dataResult) > 0) {
-                        while ($row = mysqli_fetch_assoc($result) && $r = mysqli_fetch_assoc($dataResult)) {
+                    if (mysqli_num_rows($result) > 0 || mysqli_num_rows($dataResult) > 0) {
+                        while ($row = mysqli_fetch_assoc($result) || $r = mysqli_fetch_assoc($dataResult)) {
                             if ($row['username'] != $_SESSION['userid']) {
 
                                 if ($row['freelancer_id'] != NULL) {
