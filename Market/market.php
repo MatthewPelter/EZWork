@@ -305,9 +305,9 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                             $unameFetched = mysqli_fetch_assoc($unameResult);
                     ?>
 
-                            <div class="jobPost" onclick="location.href=`job.php?id=<?php echo $r['id']; ?>`">
+                            <div class="jobPost" onclick="location.href=`../newPostJob/job.php?id=<?php echo $r['id']; ?>`">
                                 <div class="job-title">
-                                    <a href="job.php?id=<?php echo $r['id']; ?>"><?php echo $r['title']; ?></a>
+                                    <a href="../newPostJob/job.php?id=<?php echo $r['id']; ?>"><?php echo $r['title']; ?></a>
                                 </div>
 
                                 <!-- ----------------------------------------- -->
@@ -391,9 +391,83 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
             </div>
 
             <div class="myProfile">
+
+                <div class="header">
+                    <img src="<?php echo $userfetch['avatar']; ?>" alt="Avatar">
+                    <h4>My Profile</h4>
+                </div>
+
+                <div class="view">
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                    <a href="https://ez-work.herokuapp.com/ClientProfile/index">View my Profile</a>
+                </div>
+
+            </div>
+        </div>   
+        <div class="AllFreelancers">
+
+            <div class="AllFreelancersHeader">
+                <h2>All <span>EZWork</span> Freelancers</h2>
+            </div>
+            <div class="AllFreelancersContainer">
+            <?php
+                        $sql = "SELECT username, avatar, freelancer_id FROM clients";
+                        $result = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
+                        if (mysqli_num_rows($result) > 0) {
+                            while ($row = mysqli_fetch_assoc($result)) {
+                                if ($row['username'] != $_SESSION['userid']) {
+    
+                                    if ($row['freelancer_id'] != NULL) {
+                        ?>
+                         
+                        <a href="../Profile/userprofile.php?name=<?php echo $row['username']; ?>">
+                            <div class="freelancerCard" onclick="location.href=`" >
+                                <div class="freelancerImg">
+                                    <img src="<?php echo $row['avatar']; ?>" alt=`<?php echo $row['username']; ?>`>
+                                </div>
+                                <div class="freelancerInfo">
+                                    <h2><?php echo $row['username']; ?></h2>
+                                    
+                                    <!-- Couldn't get the data such as expertise for each freelacner
+                                    <h3>
+                                        Software Developer                                
+                                    </h3>
+                                    <h4>$ 
+                                        <span>
+                                            10
+                                        </span>
+                                         per hour
+                                    </h4>
+                                    
+                                    <h5>
+                                       
+                                    </h5>
+                                    -->
+                                    <?php
+                                        $freeID = $row['freelancer_id'];
+                                        $pullJobs = mysqli_query($conn, "SELECT COUNT(*) AS completedJobs FROM jobs WHERE freelancer_id = '$freeID' AND status=1");
+                                        $pullJobCount = mysqli_fetch_assoc($pullJobs);                            
+                                    ?>
+                                    <p><?php echo $pullJobCount['completedJobs']; ?> jobs completed</p>
+                                </div>
+                            </div>
+                        </a>
+    
+    
+    
+    
+                            <?php
+                                    }
+                                }
+                            }
+                        }
+                        ?>             
             </div>
         </div>
+        
     </div>
+
+
 
 
     <?php include '../footer.php'; ?>
