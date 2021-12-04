@@ -1,9 +1,31 @@
-#header {
-    text-align: center;
-}
+$color1: #0a345e;
+$lightColor: #054e97;
+$darktext: rgb(121, 121, 121);
 
-#main-page {
-    margin: 50px 0;
+#main-page{
+    margin-top: 0;
+    width: 100%;
+    background: whitesmoke;
+    padding: 2.5rem 10rem;
+
+    #header{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    #notifications-section{
+        max-height: 90vh;
+        overflow: auto;
+        border: 1px solid lightgrey;
+        background: white;
+        max-width: 800px;
+        margin: 0 auto;
+        border-radius: 10px;
+    }
+
 }
 
 #markAsRead{
@@ -27,16 +49,6 @@
     }
 
 }
-
-#notifications-section {
-    max-height: 70vh;
-    overflow: auto;
-    background: #e3e3e3;
-    max-width: 800px;
-    margin: 0 auto;
-    border-radius: 10px;
-}
-
 .Message {
     display: table;
     position: relative;

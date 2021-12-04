@@ -80,10 +80,10 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                 <li>My Profile</li>
             </a>
             <a href="../newPostJob/myJobs.php">
-                <li>All My Job Posts</li>
+                <li>My Job Posts</li>
             </a>
             <a href="#/">
-                <li>All Contracts</li>
+                <li>My Contracts</li>
             </a>
             <a href="../newPostJob/length.php">
                 <li>Post A Job</li>
@@ -103,9 +103,6 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
             </a>
             <a href="#/">
                 <li>Your Hires</li>
-            </a>
-            <a href="#/">
-                <li>Freelance History</li>
             </a>
             <a href="../Profile/register.php">
                 <li>Become Freelancer</li>
@@ -188,13 +185,13 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
             <div class="jobCardContainer">
                 <div class="jobCard">
                     <div class="card card1" onclick="location.href='../ClientProfile/index.php'">
-                        <h4>My Jobs</h4>
+                        <h4>My Profile</h4>
                     </div>
                     <div class="card card2" onclick="location.href='../newPostJob/myJobs.php'">
-                        <h4>All Job Posts</h4>
+                        <h4>All My Job Posts</h4>
                     </div>
                     <div class="card card3" onclick="location.href='../newPostJob/contracts.php'">
-                        <h4>All Contracts</h4>
+                        <h4>My Contracts</h4>
                     </div>
                     <div class="card card4" onclick="location.href='../newPostJob/length.php'">
                         <h4>Post A Job</h4>
@@ -212,10 +209,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                         <h4>Discover</h4>
                     </div>
                     <div class="card card2" onclick="location.href='../newPostJob/contracts.php'">
-                        <h4>Your Hires</h4>
-                    </div>
-                    <div class=" card card4">
-                        <h4>Freelance History</h4>
+                        <h4>My Hires</h4>
                     </div>
                     <div class="card card4" onclick="location.href='../Profile/register.php'">
                         <h4>Become Freelancer</h4>
