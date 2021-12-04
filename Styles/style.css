@@ -4724,12 +4724,12 @@ section .container .login .login-container button:hover {
   display: none;
 }
 
-.jobsNav span, .freelancerNav span, .projectsNav span {
+.jobsNav span, .freelancerNav span, .projectsNav span, .marketNav span {
   color: white;
   cursor: pointer;
 }
 
-.jobsNav span:hover, .freelancerNav span:hover, .projectsNav span:hover {
+.jobsNav span:hover, .freelancerNav span:hover, .projectsNav span:hover, .marketNav span:hover {
   text-decoration: underline;
 }
 
@@ -20538,7 +20538,9 @@ li {
 }
 
 .all-jobs-container .all-jobs-container-header h4 {
-  width: 20%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   font-size: 2rem;
 }
 

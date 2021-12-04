@@ -133,6 +133,9 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
         </ul>
     </div>
     -->
+    <div class="mobileNavCard" onclick="location.href='../Market/market.php'">
+        <p>EZWork Market</p>
+    </div>
 
     <div class="mobileNavCard" onclick="location.href='../message/messages'">
         <p>Messages</p>
@@ -221,6 +224,9 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
         </div>
         <?php // } 
         ?>
+        <div class="marketNav">
+            <span  onclick="location.href='../Market/market.php'">EZWork Market</span>
+        </div>
 
         <!--<div class="projectsNav">
             <span onclick="toggleProject()" id="projects">Projects</span>

@@ -44,7 +44,7 @@ $userID = $_SESSION['user_id'];
             <h2 id="username">Welcome, <?php echo $_SESSION['userid']; ?></h2>
             <div class="quick-links">
                 <button id="quick-link-job" onclick="location.href='../newPostJob/start.php'">Post A Job</button>
-                <button id="quick-link-market" onclick="location.href='../newPostJob/jobs.php'">Browse Marketplace</button>
+                <button id="quick-link-market" onclick="location.href='../Market/market.php'">Browse EZWork Market</button>
             </div>
         </div>
         <div class="user-profile-body">
