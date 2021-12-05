@@ -4,10 +4,9 @@ $darktext: rgb(121, 121, 121);
 // Jobs Page Top Header CSS
 .market-container-header{
         width: 100%;
-        height: 40vh;
+        margin: 0;
         background-image: url(../Image/background4market.jpg);
         background-size: cover;
-        padding: 2rem 0rem;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -18,11 +17,12 @@ $darktext: rgb(121, 121, 121);
         }
 }
 .market-container{
+
     display: inline-block;
     width: 100%;
     background: whitesmoke;
     padding: 2.5rem 6rem;
-
+    margin-top: 1.5rem;
     //Under Jobs Page Top Header, jobs-container
     .jobs-container{
         display: grid;
