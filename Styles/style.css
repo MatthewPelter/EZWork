@@ -27231,4 +27231,307 @@ a:hover {
     font-size: 1rem;
   }
 }
+
+.myHired {
+  width: 100%;
+  background: whitesmoke;
+  padding: 2.5rem 10rem;
+  margin: 0;
+}
+
+.myHired .myHiredHeader {
+  width: 100%;
+  margin: 1rem 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.myHired .myHiredHeader h2 {
+  color: #0a345e;
+  font-size: 2rem;
+}
+
+.myHired .myHiredHeader ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.myHired .myHiredHeader ul li {
+  margin: 0rem 0.2rem;
+  font-size: 0.9rem;
+  color: #797979;
+}
+
+.myHired .myHiredHeader ul li a {
+  text-decoration: none;
+  color: #054e97;
+}
+
+.myHired .myHiredHeader ul li a:hover {
+  text-decoration: underline;
+}
+
+.myHired .myHiredContainer {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  margin: auto;
+  row-gap: 5rem;
+  -webkit-column-gap: 3rem;
+          column-gap: 3rem;
+}
+
+.myHired .myHiredContainer .noHired {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.myHired .myHiredContainer .noHired span {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #797979;
+}
+
+.myHired .myHiredContainer .noHired img {
+  height: 12rem;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+
+.myHired .myHiredContainer .freelancerCard {
+  cursor: pointer;
+  border-radius: 10px;
+  border: 3px solid #054e97;
+  width: 100%;
+}
+
+.myHired .myHiredContainer .freelancerCard:hover {
+  opacity: 0.8;
+}
+
+.myHired .myHiredContainer .freelancerCard .freelancerImg {
+  height: 18rem;
+  width: 100%;
+  background-color: white;
+  border-bottom: 3px solid #054e97;
+}
+
+.myHired .myHiredContainer .freelancerCard .freelancerImg img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.myHired .myHiredContainer .freelancerCard .freelancerInfo {
+  width: 100%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: white;
+}
+
+.myHired .myHiredContainer .freelancerCard .freelancerInfo h2 {
+  font-size: 1.5rem;
+  color: #054e97;
+}
+
+.myHired .myHiredContainer .freelancerCard .freelancerInfo h3 {
+  font-size: 1.4rem;
+  color: #0a345e;
+}
+
+.myHired .myHiredContainer .freelancerCard .freelancerInfo h4,
+.myHired .myHiredContainer .freelancerCard .freelancerInfo h5,
+.myHired .myHiredContainer .freelancerCard .freelancerInfo p {
+  color: #1b1a1a;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 754px) {
+  .myHired {
+    width: 100%;
+    background: whitesmoke;
+    padding: 2.5rem 1rem;
+    margin: 0;
+  }
+  .myHired .myHiredHeader {
+    width: 100%;
+    margin: 1rem 0rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .myHired .myHiredHeader h2 {
+    width: 100%;
+    text-align: center;
+    color: #0a345e;
+    font-size: 2rem;
+  }
+  .myHired .myHiredHeader ul {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .myHired .myHiredHeader ul li {
+    margin: 0rem 0.2rem;
+    font-size: 1rem;
+    color: #797979;
+  }
+  .myHired .myHiredHeader ul li a {
+    text-decoration: none;
+    color: #054e97;
+  }
+  .myHired .myHiredHeader ul li a:hover {
+    text-decoration: underline;
+  }
+  .myHired .myHiredContainer {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-grid-columns: none;
+        grid-template-columns: none;
+    margin: 0;
+    row-gap: 0;
+    -webkit-column-gap: 0;
+            column-gap: 0;
+  }
+  .myHired .myHiredContainer .freelancerCard {
+    cursor: pointer;
+    border-radius: 10px;
+    border: 3px solid #054e97;
+    width: 80%;
+  }
+  .myHired .myHiredContainer .freelancerCard:hover {
+    opacity: 0.8;
+  }
+  .myHired .myHiredContainer .freelancerCard .freelancerImg {
+    height: 14rem;
+    width: 100%;
+    background-color: white;
+    border-bottom: 3px solid #054e97;
+  }
+  .myHired .myHiredContainer .freelancerCard .freelancerImg img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+  }
+  .myHired .myHiredContainer .freelancerCard .freelancerInfo {
+    width: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 1rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: white;
+  }
+  .myHired .myHiredContainer .freelancerCard .freelancerInfo h2 {
+    font-size: 1.5rem;
+    color: #054e97;
+  }
+  .myHired .myHiredContainer .freelancerCard .freelancerInfo h3 {
+    font-size: 1.4rem;
+    color: #0a345e;
+  }
+  .myHired .myHiredContainer .freelancerCard .freelancerInfo h4,
+  .myHired .myHiredContainer .freelancerCard .freelancerInfo h5,
+  .myHired .myHiredContainer .freelancerCard .freelancerInfo p {
+    color: #1b1a1a;
+    font-size: 1rem;
+  }
+}
 /*# sourceMappingURL=style.css.map */
