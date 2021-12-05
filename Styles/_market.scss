@@ -8,7 +8,7 @@ $darktext: rgb(121, 121, 121);
         background-image: url(../Image/background4market.jpg);
         background-size: cover;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         h4{
@@ -24,7 +24,7 @@ $darktext: rgb(121, 121, 121);
             text-align: center;
         }
         span{
-            padding: 1rem;
+            padding: .25rem;
             background: white;
             border-radius: 7px;
             font-size: 1.5rem;
