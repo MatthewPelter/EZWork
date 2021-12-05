@@ -113,6 +113,8 @@ background: linear-gradient(90deg, rgba(0,147,233,1) 39%, rgba(128,208,199,1) 61
 
   a{
     text-decoration: none;
+    font-size: 1rem;
+    color: $lightColor;
     &:hover{
       text-decoration: underline;
     }

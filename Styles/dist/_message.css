@@ -110,6 +110,8 @@ li {
 }
 .chat .chat-header .chat-with a {
   text-decoration: none;
+  font-size: 1rem;
+  color: #054e97;
 }
 .chat .chat-header .chat-with a:hover {
   text-decoration: underline;
