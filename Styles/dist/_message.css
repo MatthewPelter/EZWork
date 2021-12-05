@@ -78,7 +78,7 @@ li {
 }
 
 .chat {
-  width: 600px;
+  width: 700px;
   float: left;
   background: #f2f5f8;
   border-top-right-radius: 5px;
@@ -87,7 +87,7 @@ li {
 }
 
 .chat .chat-header {
-  padding: 20px;
+  width: 700px;
   border-bottom: 2px solid white;
 }
 
