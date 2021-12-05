@@ -325,33 +325,6 @@ $userID = $_SESSION['user_id'];
         window.location = "https://ez-work.herokuapp.com/newPostJob/myJobs";
     }
 
-    const sortArrow = document.getElementById('sortArrow');
-
-    function toggleSortCard() {
-        const sortCard = document.querySelector('.sortCard');
-        if (getComputedStyle(sortCard).display === "none") {
-            sortArrow.style.transform = "rotate(180deg)";
-            sortCard.style.display = "inline-block";
-        } else {
-            sortCard.style.display = "none";
-            sortArrow.style.transform = "rotate(360deg)";
-        }
-    }
-
-
-    const filterArrow = document.getElementById('filterArrow');
-
-    function toggleFilterCard() {
-        const filterCard = document.querySelector('.filterCard');
-        if (getComputedStyle(filterCard).display === "none") {
-            filterArrow.style.transform = "rotate(180deg)";
-            filterCard.style.display = "inline-block";
-        } else {
-            filterCard.style.display = "none";
-            filterArrow.style.transform = "rotate(360deg)";
-        }
-    }
-
     function toggleHourlyCard() {
         var hourlyCard = document.querySelector(".hourlyCard");
         if (getComputedStyle(hourlyCard).display === "none") {

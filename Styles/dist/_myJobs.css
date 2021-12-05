@@ -96,7 +96,6 @@
   color: #054e97;
 }
 .myJobs .myJobs-parent .sortMenu .sortCard {
-  display: none;
   width: 100%;
 }
 .myJobs .myJobs-parent .sortMenu .sortCard .sortAtoZ, .myJobs .myJobs-parent .sortMenu .sortCard .sortZtoA, .myJobs .myJobs-parent .sortMenu .sortCard .sortPriceLowHigh, .myJobs .myJobs-parent .sortMenu .sortCard .sortPriceHighLow {
@@ -146,7 +145,6 @@
   color: #054e97;
 }
 .myJobs .myJobs-parent .sortMenu .filterCard {
-  display: none;
   width: 100%;
 }
 .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience {
