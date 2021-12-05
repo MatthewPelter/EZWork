@@ -21946,7 +21946,361 @@ li {
   background: #0a345e;
 }
 
-.myJobs .myJobs-container {
+.myJobs .myJobs-parent {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  -ms-grid-rows: (1fr)[5];
+      grid-template-rows: repeat(5, 1fr);
+}
+
+.myJobs .myJobs-parent .sortMenu {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 1 / 6 / 2;
+  width: 100%;
+  height: 75vh;
+  overflow: hidden;
+  overflow-y: scroll;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.myJobs .myJobs-parent .sortMenu #resetSortFilter {
+  margin: 0.3rem 0rem;
+  width: 90%;
+  cursor: pointer;
+  background: transparent;
+  color: #0a345e;
+  padding: 0.5rem 0rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: solid 0.7px #0a345e;
+}
+
+.myJobs .myJobs-parent .sortMenu #resetSortFilter:hover {
+  background: whitesmoke;
+}
+
+.myJobs .myJobs-parent .sortMenu .sort {
+  padding: 1rem 0rem;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.myJobs .myJobs-parent .sortMenu .sort h3 {
+  font-size: 1.5rem;
+}
+
+.myJobs .myJobs-parent .sortMenu .sort h3:hover {
+  text-decoration: underline;
+}
+
+.myJobs .myJobs-parent .sortMenu .sort i {
+  color: #0a345e;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.myJobs .myJobs-parent .sortMenu .sort:hover {
+  color: #054e97;
+}
+
+.myJobs .myJobs-parent .sortMenu .sortCard {
+  display: none;
+  width: 100%;
+}
+
+.myJobs .myJobs-parent .sortMenu .sortCard .sortAtoZ, .myJobs .myJobs-parent .sortMenu .sortCard .sortZtoA, .myJobs .myJobs-parent .sortMenu .sortCard .sortPriceLowHigh, .myJobs .myJobs-parent .sortMenu .sortCard .sortPriceHighLow {
+  width: 100%;
+  margin-bottom: .5rem;
+  padding: .5rem 0rem;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  font-size: 1rem;
+}
+
+.myJobs .myJobs-parent .sortMenu .sortCard .sortAtoZ p, .myJobs .myJobs-parent .sortMenu .sortCard .sortZtoA p, .myJobs .myJobs-parent .sortMenu .sortCard .sortPriceLowHigh p, .myJobs .myJobs-parent .sortMenu .sortCard .sortPriceHighLow p {
+  font-size: .9rem;
+  margin-left: 1rem;
+  font-weight: bolder;
+}
+
+.myJobs .myJobs-parent .sortMenu .sortCard .sortAtoZ i, .myJobs .myJobs-parent .sortMenu .sortCard .sortZtoA i, .myJobs .myJobs-parent .sortMenu .sortCard .sortPriceLowHigh i, .myJobs .myJobs-parent .sortMenu .sortCard .sortPriceHighLow i {
+  margin-left: .3rem;
+}
+
+.myJobs .myJobs-parent .sortMenu .sortCard .sortAtoZ:hover, .myJobs .myJobs-parent .sortMenu .sortCard .sortZtoA:hover, .myJobs .myJobs-parent .sortMenu .sortCard .sortPriceLowHigh:hover, .myJobs .myJobs-parent .sortMenu .sortCard .sortPriceHighLow:hover {
+  background: white;
+  color: #054e97;
+}
+
+.myJobs .myJobs-parent .sortMenu .filter {
+  cursor: pointer;
+  border-top: .7px solid lightgrey;
+  padding: 1rem 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.myJobs .myJobs-parent .sortMenu .filter h3 {
+  font-size: 1.5rem;
+}
+
+.myJobs .myJobs-parent .sortMenu .filter h3:hover {
+  text-decoration: underline;
+}
+
+.myJobs .myJobs-parent .sortMenu .filter i {
+  color: #0a345e;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.myJobs .myJobs-parent .sortMenu .filter:hover {
+  color: #054e97;
+}
+
+.myJobs .myJobs-parent .sortMenu .filterCard {
+  display: none;
+  width: 100%;
+}
+
+.myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience {
+  padding: 1rem 0rem;
+  border: .7px solid lightgrey;
+  border-left: none;
+  border-right: none;
+}
+
+.myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType h3, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize h3, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation h3, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill h3, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget h3, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience h3 {
+  font-size: 1.2rem;
+  color: #0a345e;
+}
+
+.myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .experienceCard, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .experienceCard, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .experienceCard, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .experienceCard, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .experienceCard, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .experienceCard {
+  padding: .5rem 0rem;
+}
+
+.myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .experienceCard .entry, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .experienceCard .intermediate, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .experienceCard .expert, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .experienceCard .entry, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .experienceCard .intermediate, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .experienceCard .expert, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .experienceCard .entry, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .experienceCard .intermediate, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .experienceCard .expert, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .experienceCard .entry, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .experienceCard .intermediate, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .experienceCard .expert, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .experienceCard .entry, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .experienceCard .intermediate, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .experienceCard .expert, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .experienceCard .entry, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .experienceCard .intermediate, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .experienceCard .expert {
+  padding: .5rem 0rem;
+}
+
+.myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .experienceCard .entry label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .experienceCard .intermediate label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .experienceCard .expert label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .experienceCard .entry label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .experienceCard .intermediate label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .experienceCard .expert label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .experienceCard .entry label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .experienceCard .intermediate label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .experienceCard .expert label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .experienceCard .entry label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .experienceCard .intermediate label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .experienceCard .expert label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .experienceCard .entry label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .experienceCard .intermediate label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .experienceCard .expert label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .experienceCard .entry label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .experienceCard .intermediate label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .experienceCard .expert label {
+  margin-left: .5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #2e2e2e;
+}
+
+.myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .experienceCard .entry label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .experienceCard .intermediate label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .experienceCard .expert label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .experienceCard .entry label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .experienceCard .intermediate label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .experienceCard .expert label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .experienceCard .entry label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .experienceCard .intermediate label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .experienceCard .expert label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .experienceCard .entry label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .experienceCard .intermediate label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .experienceCard .expert label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .experienceCard .entry label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .experienceCard .intermediate label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .experienceCard .expert label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .experienceCard .entry label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .experienceCard .intermediate label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .experienceCard .expert label:hover {
+  text-decoration: underline;
+}
+
+.myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterBudgetCard, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterBudgetCard, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterBudgetCard, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterBudgetCard, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterBudgetCard, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterBudgetCard {
+  padding: .5rem 0rem;
+}
+
+.myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterBudgetCard .hourly, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterBudgetCard .budget, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterBudgetCard .hourly, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterBudgetCard .budget, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterBudgetCard .hourly, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterBudgetCard .budget, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterBudgetCard .hourly, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterBudgetCard .budget, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterBudgetCard .hourly, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterBudgetCard .budget, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterBudgetCard .hourly, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterBudgetCard .budget {
+  padding: .5rem 0rem;
+}
+
+.myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterBudgetCard .hourly label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterBudgetCard .budget label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterBudgetCard .hourly label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterBudgetCard .budget label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterBudgetCard .hourly label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterBudgetCard .budget label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterBudgetCard .hourly label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterBudgetCard .budget label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterBudgetCard .hourly label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterBudgetCard .budget label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterBudgetCard .hourly label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterBudgetCard .budget label {
+  margin-left: .5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #2e2e2e;
+}
+
+.myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterBudgetCard .hourly label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterBudgetCard .budget label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterBudgetCard .hourly label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterBudgetCard .budget label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterBudgetCard .hourly label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterBudgetCard .budget label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterBudgetCard .hourly label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterBudgetCard .budget label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterBudgetCard .hourly label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterBudgetCard .budget label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterBudgetCard .hourly label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterBudgetCard .budget label:hover {
+  text-decoration: underline;
+}
+
+.myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterBudgetCard .hourlyCard, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterBudgetCard .hourlyCard, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterBudgetCard .hourlyCard, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterBudgetCard .hourlyCard, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterBudgetCard .hourlyCard, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterBudgetCard .hourlyCard {
+  display: none;
+  width: 100%;
+  margin-left: 1rem;
+}
+
+.myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterBudgetCard .hourlyCard .ZeroToTwentyFive, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterBudgetCard .hourlyCard .TwentySixToFifty, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterBudgetCard .hourlyCard .FiftyOneToSeventyfive, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterBudgetCard .hourlyCard .seventySixToOneHundred, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterBudgetCard .hourlyCard .more, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterBudgetCard .hourlyCard .ZeroToTwentyFive, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterBudgetCard .hourlyCard .TwentySixToFifty, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterBudgetCard .hourlyCard .FiftyOneToSeventyfive, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterBudgetCard .hourlyCard .seventySixToOneHundred, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterBudgetCard .hourlyCard .more, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterBudgetCard .hourlyCard .ZeroToTwentyFive, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterBudgetCard .hourlyCard .TwentySixToFifty, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterBudgetCard .hourlyCard .FiftyOneToSeventyfive, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterBudgetCard .hourlyCard .seventySixToOneHundred, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterBudgetCard .hourlyCard .more, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterBudgetCard .hourlyCard .ZeroToTwentyFive, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterBudgetCard .hourlyCard .TwentySixToFifty, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterBudgetCard .hourlyCard .FiftyOneToSeventyfive, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterBudgetCard .hourlyCard .seventySixToOneHundred, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterBudgetCard .hourlyCard .more, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterBudgetCard .hourlyCard .ZeroToTwentyFive, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterBudgetCard .hourlyCard .TwentySixToFifty, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterBudgetCard .hourlyCard .FiftyOneToSeventyfive, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterBudgetCard .hourlyCard .seventySixToOneHundred, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterBudgetCard .hourlyCard .more, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterBudgetCard .hourlyCard .ZeroToTwentyFive, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterBudgetCard .hourlyCard .TwentySixToFifty, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterBudgetCard .hourlyCard .FiftyOneToSeventyfive, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterBudgetCard .hourlyCard .seventySixToOneHundred, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterBudgetCard .hourlyCard .more {
+  padding: .5rem 0rem;
+}
+
+.myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterBudgetCard .hourlyCard label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterBudgetCard .hourlyCard label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterBudgetCard .hourlyCard label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterBudgetCard .hourlyCard label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterBudgetCard .hourlyCard label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterBudgetCard .hourlyCard label {
+  margin-left: .5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #2e2e2e;
+}
+
+.myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterBudgetCard .hourlyCard label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterBudgetCard .hourlyCard label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterBudgetCard .hourlyCard label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterBudgetCard .hourlyCard label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterBudgetCard .hourlyCard label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterBudgetCard .hourlyCard label:hover {
+  text-decoration: underline;
+}
+
+.myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterBudgetCard .budgetCard, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterBudgetCard .budgetCard, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterBudgetCard .budgetCard, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterBudgetCard .budgetCard, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterBudgetCard .budgetCard, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterBudgetCard .budgetCard {
+  display: none;
+  width: 100%;
+  margin-left: 1rem;
+}
+
+.myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterBudgetCard .budgetCard .ZeroToNinetyNine, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterBudgetCard .budgetCard .OneHundredOneToOneHundredNinetyNine, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterBudgetCard .budgetCard .TwoHundredOneToTwoeHundredNinetyNine, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterBudgetCard .budgetCard .threeHundredToThreeHundredNinetyNine, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterBudgetCard .budgetCard .fourHundredToFourHundredNinetyNine, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterBudgetCard .budgetCard .fiveHundredPlus, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterBudgetCard .budgetCard .ZeroToNinetyNine, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterBudgetCard .budgetCard .OneHundredOneToOneHundredNinetyNine, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterBudgetCard .budgetCard .TwoHundredOneToTwoeHundredNinetyNine, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterBudgetCard .budgetCard .threeHundredToThreeHundredNinetyNine, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterBudgetCard .budgetCard .fourHundredToFourHundredNinetyNine, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterBudgetCard .budgetCard .fiveHundredPlus, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterBudgetCard .budgetCard .ZeroToNinetyNine, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterBudgetCard .budgetCard .OneHundredOneToOneHundredNinetyNine, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterBudgetCard .budgetCard .TwoHundredOneToTwoeHundredNinetyNine, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterBudgetCard .budgetCard .threeHundredToThreeHundredNinetyNine, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterBudgetCard .budgetCard .fourHundredToFourHundredNinetyNine, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterBudgetCard .budgetCard .fiveHundredPlus, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterBudgetCard .budgetCard .ZeroToNinetyNine, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterBudgetCard .budgetCard .OneHundredOneToOneHundredNinetyNine, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterBudgetCard .budgetCard .TwoHundredOneToTwoeHundredNinetyNine, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterBudgetCard .budgetCard .threeHundredToThreeHundredNinetyNine, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterBudgetCard .budgetCard .fourHundredToFourHundredNinetyNine, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterBudgetCard .budgetCard .fiveHundredPlus, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterBudgetCard .budgetCard .ZeroToNinetyNine, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterBudgetCard .budgetCard .OneHundredOneToOneHundredNinetyNine, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterBudgetCard .budgetCard .TwoHundredOneToTwoeHundredNinetyNine, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterBudgetCard .budgetCard .threeHundredToThreeHundredNinetyNine, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterBudgetCard .budgetCard .fourHundredToFourHundredNinetyNine, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterBudgetCard .budgetCard .fiveHundredPlus, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterBudgetCard .budgetCard .ZeroToNinetyNine, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterBudgetCard .budgetCard .OneHundredOneToOneHundredNinetyNine, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterBudgetCard .budgetCard .TwoHundredOneToTwoeHundredNinetyNine, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterBudgetCard .budgetCard .threeHundredToThreeHundredNinetyNine, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterBudgetCard .budgetCard .fourHundredToFourHundredNinetyNine, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterBudgetCard .budgetCard .fiveHundredPlus {
+  padding: .5rem 0rem;
+}
+
+.myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterBudgetCard .budgetCard label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterBudgetCard .budgetCard label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterBudgetCard .budgetCard label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterBudgetCard .budgetCard label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterBudgetCard .budgetCard label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterBudgetCard .budgetCard label {
+  margin-left: .5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #2e2e2e;
+}
+
+.myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterBudgetCard .budgetCard label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterBudgetCard .budgetCard label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterBudgetCard .budgetCard label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterBudgetCard .budgetCard label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterBudgetCard .budgetCard label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterBudgetCard .budgetCard label:hover {
+  text-decoration: underline;
+}
+
+.myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterSkillCard, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterSkillCard, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterSkillCard, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterSkillCard, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterSkillCard, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterSkillCard {
+  padding: .5rem 0rem;
+}
+
+.myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterSkillCard select, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterSkillCard select, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterSkillCard select, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterSkillCard select, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterSkillCard select, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterSkillCard select {
+  width: 100%;
+  border: none;
+  font-size: 1rem;
+  font-weight: bolder;
+  color: #0a345e;
+  padding: .5rem 0rem;
+}
+
+.myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterLocationCard, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterLocationCard, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterLocationCard, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterLocationCard, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterLocationCard, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterLocationCard {
+  padding: .5rem 0rem;
+}
+
+.myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterLocationCard .worldwide, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterLocationCard .us, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterLocationCard .worldwide, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterLocationCard .us, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterLocationCard .worldwide, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterLocationCard .us, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterLocationCard .worldwide, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterLocationCard .us, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterLocationCard .worldwide, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterLocationCard .us, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterLocationCard .worldwide, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterLocationCard .us {
+  padding: .5rem 0rem;
+}
+
+.myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterLocationCard .worldwide label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterLocationCard .us label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterLocationCard .worldwide label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterLocationCard .us label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterLocationCard .worldwide label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterLocationCard .us label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterLocationCard .worldwide label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterLocationCard .us label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterLocationCard .worldwide label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterLocationCard .us label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterLocationCard .worldwide label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterLocationCard .us label {
+  margin-left: .5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #2e2e2e;
+}
+
+.myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterLocationCard .worldwide label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterLocationCard .us label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterLocationCard .worldwide label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterLocationCard .us label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterLocationCard .worldwide label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterLocationCard .us label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterLocationCard .worldwide label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterLocationCard .us label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterLocationCard .worldwide label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterLocationCard .us label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterLocationCard .worldwide label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterLocationCard .us label:hover {
+  text-decoration: underline;
+}
+
+.myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterProjectSizeCard, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterProjectSizeCard, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterProjectSizeCard, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterProjectSizeCard, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterProjectSizeCard, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterProjectSizeCard {
+  padding: .5rem 0rem;
+}
+
+.myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterProjectSizeCard .small, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterProjectSizeCard .medium, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterProjectSizeCard .large, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterProjectSizeCard .small, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterProjectSizeCard .medium, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterProjectSizeCard .large, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterProjectSizeCard .small, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterProjectSizeCard .medium, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterProjectSizeCard .large, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterProjectSizeCard .small, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterProjectSizeCard .medium, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterProjectSizeCard .large, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterProjectSizeCard .small, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterProjectSizeCard .medium, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterProjectSizeCard .large, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterProjectSizeCard .small, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterProjectSizeCard .medium, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterProjectSizeCard .large {
+  padding: .5rem 0rem;
+}
+
+.myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterProjectSizeCard .small label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterProjectSizeCard .medium label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterProjectSizeCard .large label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterProjectSizeCard .small label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterProjectSizeCard .medium label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterProjectSizeCard .large label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterProjectSizeCard .small label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterProjectSizeCard .medium label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterProjectSizeCard .large label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterProjectSizeCard .small label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterProjectSizeCard .medium label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterProjectSizeCard .large label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterProjectSizeCard .small label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterProjectSizeCard .medium label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterProjectSizeCard .large label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterProjectSizeCard .small label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterProjectSizeCard .medium label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterProjectSizeCard .large label {
+  margin-left: .5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #2e2e2e;
+}
+
+.myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterProjectSizeCard .small label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterProjectSizeCard .medium label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterProjectSizeCard .large label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterProjectSizeCard .small label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterProjectSizeCard .medium label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterProjectSizeCard .large label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterProjectSizeCard .small label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterProjectSizeCard .medium label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterProjectSizeCard .large label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterProjectSizeCard .small label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterProjectSizeCard .medium label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterProjectSizeCard .large label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterProjectSizeCard .small label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterProjectSizeCard .medium label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterProjectSizeCard .large label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterProjectSizeCard .small label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterProjectSizeCard .medium label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterProjectSizeCard .large label:hover {
+  text-decoration: underline;
+}
+
+.myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterProjectTypeCard, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterProjectTypeCard, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterProjectTypeCard, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterProjectTypeCard, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterProjectTypeCard, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterProjectTypeCard {
+  padding: .5rem 0rem;
+}
+
+.myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterProjectTypeCard .shortTerm, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterProjectTypeCard .longTerm, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterProjectTypeCard .shortTerm, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterProjectTypeCard .longTerm, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterProjectTypeCard .shortTerm, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterProjectTypeCard .longTerm, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterProjectTypeCard .shortTerm, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterProjectTypeCard .longTerm, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterProjectTypeCard .shortTerm, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterProjectTypeCard .longTerm, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterProjectTypeCard .shortTerm, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterProjectTypeCard .longTerm {
+  padding: .5rem 0rem;
+}
+
+.myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterProjectTypeCard .shortTerm label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterProjectTypeCard .longTerm label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterProjectTypeCard .shortTerm label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterProjectTypeCard .longTerm label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterProjectTypeCard .shortTerm label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterProjectTypeCard .longTerm label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterProjectTypeCard .shortTerm label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterProjectTypeCard .longTerm label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterProjectTypeCard .shortTerm label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterProjectTypeCard .longTerm label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterProjectTypeCard .shortTerm label, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterProjectTypeCard .longTerm label {
+  margin-left: .5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #2e2e2e;
+}
+
+.myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterProjectTypeCard .shortTerm label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectType .filterProjectTypeCard .longTerm label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterProjectTypeCard .shortTerm label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterProjectSize .filterProjectTypeCard .longTerm label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterProjectTypeCard .shortTerm label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterLocation .filterProjectTypeCard .longTerm label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterProjectTypeCard .shortTerm label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterSkill .filterProjectTypeCard .longTerm label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterProjectTypeCard .shortTerm label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterBudget .filterProjectTypeCard .longTerm label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterProjectTypeCard .shortTerm label:hover, .myJobs .myJobs-parent .sortMenu .filterCard .FilterExperience .filterProjectTypeCard .longTerm label:hover {
+  text-decoration: underline;
+}
+
+.myJobs .myJobs-parent .sortMenu .filterCard #submitFilter {
+  margin: 0.3rem 0rem;
+  width: 70%;
+  cursor: pointer;
+  background: transparent;
+  color: #0a345e;
+  padding: 0.2rem 0rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: solid 0.7px #0a345e;
+}
+
+.myJobs .myJobs-parent .sortMenu .filterCard #submitFilter:hover {
+  background: whitesmoke;
+}
+
+.myJobs .myJobs-parent .myJobs-grid {
+  width: 100%;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 5;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 4;
+  grid-area: 1 / 2 / 6 / 6;
+}
+
+.myJobs .myJobs-parent .myJobs-grid .myJobs-container {
   margin-top: 2rem;
   width: 100%;
   display: -webkit-box;
@@ -21961,7 +22315,7 @@ li {
   background-color: white;
 }
 
-.myJobs .myJobs-container .myJobs-container-header {
+.myJobs .myJobs-parent .myJobs-grid .myJobs-container .myJobs-container-header {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -21980,7 +22334,7 @@ li {
   border-bottom: .8px solid lightgrey;
 }
 
-.myJobs .myJobs-container .myJobs-container-header .searchBar {
+.myJobs .myJobs-parent .myJobs-grid .myJobs-container .myJobs-container-header .searchBar {
   width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -21997,40 +22351,18 @@ li {
           justify-content: flex-start;
 }
 
-.myJobs .myJobs-container .myJobs-container-header .searchBar h3 {
+.myJobs .myJobs-parent .myJobs-grid .myJobs-container .myJobs-container-header .searchBar h3 {
   font-size: 1.5rem;
   color: #0a345e;
 }
 
-.myJobs .myJobs-container .myJobs-container-header button {
-  border-radius: 15px;
-  border: none;
-  background: #e9e9e9;
-  font-size: 1rem;
-  color: #0a345e;
-  font-weight: bolder;
-  padding: 0.6rem 1.5rem;
-  margin-right: 0.25rem;
-  border: 1px solid lightgrey;
-}
-
-.myJobs .myJobs-container .myJobs-container-header button i {
-  margin-right: .3rem;
-}
-
-.myJobs .myJobs-container .myJobs-container-header button:hover {
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  background: #dbdbdb;
-}
-
-.myJobs .myJobs-container .postedJob {
+.myJobs .myJobs-parent .myJobs-grid .myJobs-container .postedJob {
   padding: 1.5rem;
   width: 100%;
   border-top: .7px solid lightgrey;
 }
 
-.myJobs .myJobs-container .postedJob .jobTitle {
+.myJobs .myJobs-parent .myJobs-grid .myJobs-container .postedJob .jobTitle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22046,33 +22378,33 @@ li {
           justify-content: space-between;
 }
 
-.myJobs .myJobs-container .postedJob .jobTitle h4 a {
+.myJobs .myJobs-parent .myJobs-grid .myJobs-container .postedJob .jobTitle h4 a {
   font-size: 1.2rem;
   color: #0a345e;
 }
 
-.myJobs .myJobs-container .postedJob .jobTitle h4 a:hover {
+.myJobs .myJobs-parent .myJobs-grid .myJobs-container .postedJob .jobTitle h4 a:hover {
   text-decoration: underline;
 }
 
-.myJobs .myJobs-container .postedJob p {
+.myJobs .myJobs-parent .myJobs-grid .myJobs-container .postedJob p {
   color: #797979;
   font-size: 1rem;
 }
 
-.myJobs .myJobs-container .postedJob #status,
-.myJobs .myJobs-container .postedJob #date,
-.myJobs .myJobs-container .postedJob #postedBy {
+.myJobs .myJobs-parent .myJobs-grid .myJobs-container .postedJob #status,
+.myJobs .myJobs-parent .myJobs-grid .myJobs-container .postedJob #date,
+.myJobs .myJobs-parent .myJobs-grid .myJobs-container .postedJob #postedBy {
   color: #054e97;
 }
 
-.myJobs .myJobs-container .spacer {
+.myJobs .myJobs-parent .myJobs-grid .myJobs-container .spacer {
   width: 100%;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
 
-.myJobs .myJobs-container .spacer h3 {
+.myJobs .myJobs-parent .myJobs-grid .myJobs-container .spacer h3 {
   opacity: 0;
 }
 

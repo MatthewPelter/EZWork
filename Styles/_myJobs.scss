@@ -49,97 +49,359 @@ $darktext: rgb(121, 121, 121);
      }
     }
 
-    .myJobs-container{
-        margin-top: 2rem;
+    .myJobs-parent{
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(5,1fr);
+      grid-template-rows: repeat(5,1fr);
+
+      .sortMenu{
+        grid-area:  1 / 1 / 6 / 2;
         width: 100%;
+        height: 75vh;
+        overflow: hidden;
+        overflow-y: scroll;
         display: flex;
         flex-direction: column;
-        border-radius: 10px;
-        border: .8px solid lightgrey;
-        background-color: white;
+        justify-content: flex-start;
 
-        .myJobs-container-header{
-            width: 100%;
+        #resetSortFilter{
+            margin: 0.3rem 0rem;
+            width: 90%;
+            cursor: pointer;
+            background: transparent;
+            color: $color1;
+            padding: 0.5rem 0rem;
+            font-size: 1rem;
+            border-radius: 10px;
+            border: solid .7px $color1;
+            &:hover {
+              background: whitesmoke;
+            }  
+        }
+        
+        .sort{
+            padding: 1rem 0rem;
+            cursor: pointer;
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
-            padding: 1.5rem 2rem;
-            border-bottom: .8px solid lightgrey;
-
-
-            .searchBar{
-                width: 60%;
-                display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-                justify-content: flex-start;
-              h3{
+            h3{
                 font-size: 1.5rem;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+            i{
                 color: $color1;
-              }
+                font-size: 1.5rem;
+                cursor: pointer;
+            }
+            &:hover{
+                color: $lightColor;
             }
 
-            button{
-                border-radius: 15px;
-                border: none;
-                background: rgb(233, 233, 233);
+        }
+        .sortCard{
+            display: none;
+            width: 100%;
+            .sortAtoZ,.sortZtoA,.sortPriceLowHigh,.sortPriceHighLow{
+                width: 100%;
+                margin-bottom: .5rem;
+                padding: .5rem 0rem;
+                cursor: pointer;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
                 font-size: 1rem;
-                color: $color1;
-                font-weight: bolder;
-                padding: 0.6rem 1.5rem;
-                margin-right: 0.25rem;
-                border: 1px solid lightgrey;
-                i{
-                    margin-right: .3rem;
+                p{
+                    font-size: .9rem;
+                    margin-left: 1rem;
+                    font-weight: bolder;
                 }
-                &:hover {
-                  transition: all 0.2s ease;
-                  background: rgb(219, 219, 219);
+                i{
+                    margin-left: .3rem;
+                }
+
+                &:hover{
+                    background: white;
+                    color: $lightColor;
                 }
             }
         }
 
-        .postedJob {
-            padding: 1.5rem;
+        .filter{
+            cursor: pointer;
+            border-top: .7px solid lightgrey ;
+            padding: 1rem 0rem;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            h3{
+                font-size: 1.5rem;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+            i{
+                color: $color1;
+                font-size: 1.5rem;
+                cursor: pointer;
+            }
+            &:hover{
+                color: $lightColor;
+            }
+
+        }
+
+        .filterCard{
+            display: none;
             width: 100%;
-            border-top: .7px solid lightgrey;
-            .jobTitle {
+            .FilterProjectType,.FilterProjectSize,.FilterLocation,.FilterSkill,.FilterBudget,.FilterExperience{
+                padding: 1rem 0rem;
+                border: .7px solid lightgrey;
+                border-left: none;
+                border-right: none;
+
+                h3{
+                    font-size: 1.2rem;
+                    color: $color1;
+                }
+
+                .experienceCard{
+                    padding: .5rem 0rem;
+                    .entry,.intermediate,.expert{
+                        padding: .5rem 0rem;
+
+                        label{
+                            margin-left: .5rem;
+                            cursor: pointer;
+                            font-size: 1rem;
+                            color: rgb(46, 46, 46);
+
+                            &:hover{
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+                .filterBudgetCard{
+                    padding: .5rem 0rem;
+                    .hourly,.budget{
+                        padding: .5rem 0rem;
+
+                        label{
+                            margin-left: .5rem;
+                            cursor: pointer;
+                            font-size: 1rem;
+                            color: rgb(46, 46, 46);
+
+                            &:hover{
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                    .hourlyCard{
+                        display: none;
+                        width: 100%;
+                        margin-left: 1rem;
+                        .ZeroToTwentyFive,.TwentySixToFifty,.FiftyOneToSeventyfive,.seventySixToOneHundred,.more{
+                            padding: .5rem 0rem;
+                        }
+                        label{
+                            margin-left: .5rem;
+                            cursor: pointer;
+                            font-size: 1rem;
+                            color: rgb(46, 46, 46);
+
+                            &:hover{
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                    .budgetCard{
+                        display: none;
+                        width: 100%;
+                        margin-left: 1rem;
+                        .ZeroToNinetyNine,.OneHundredOneToOneHundredNinetyNine,.TwoHundredOneToTwoeHundredNinetyNine,.threeHundredToThreeHundredNinetyNine,.fourHundredToFourHundredNinetyNine,.fiveHundredPlus{
+                            padding: .5rem 0rem;
+                        }
+                        label{
+                            margin-left: .5rem;
+                            cursor: pointer;
+                            font-size: 1rem;
+                            color: rgb(46, 46, 46);
+
+                            &:hover{
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+                .filterSkillCard{
+                    padding: .5rem 0rem;
+
+                    select{
+                        width: 100%;
+                        border: none;
+                        font-size: 1rem;
+                        font-weight: bolder;
+                        color: $color1;
+                        padding: .5rem 0rem;
+                    }
+                }
+                .filterLocationCard{
+                    padding: .5rem 0rem;
+                    .worldwide,.us{
+                        padding: .5rem 0rem;
+
+                        label{
+                            margin-left: .5rem;
+                            cursor: pointer;
+                            font-size: 1rem;
+                            color: rgb(46, 46, 46);
+
+                            &:hover{
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+                .filterProjectSizeCard{
+                    padding: .5rem 0rem;
+                    .small,.medium,.large{
+                        padding: .5rem 0rem;
+
+                        label{
+                            margin-left: .5rem;
+                            cursor: pointer;
+                            font-size: 1rem;
+                            color: rgb(46, 46, 46);
+
+                            &:hover{
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+                .filterProjectTypeCard{
+                    padding: .5rem 0rem;
+                    .shortTerm,.longTerm{
+                        padding: .5rem 0rem;
+
+                        label{
+                            margin-left: .5rem;
+                            cursor: pointer;
+                            font-size: 1rem;
+                            color: rgb(46, 46, 46);
+
+                            &:hover{
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+            #submitFilter{
+                margin: 0.3rem 0rem;
+                width: 70%;
+                cursor: pointer;
+                background: transparent;
+                color: $color1;
+                padding: 0.2rem 0rem;
+                font-size: 1rem;
+                border-radius: 10px;
+                border: solid .7px $color1;
+                &:hover {
+                  background: whitesmoke;
+                }  
+            }                    
+        }
+      }
+      .myJobs-grid{
+        width: 100%;
+        grid-area: 1 / 2 / 6 / 6;
+
+        .myJobs-container{
+          margin-top: 2rem;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          border-radius: 10px;
+          border: .8px solid lightgrey;
+          background-color: white;
+  
+          .myJobs-container-header{
+              width: 100%;
               display: flex;
               flex-direction: row;
               align-items: center;
               justify-content: space-between;
-              h4 {
-                a{
-                  font-size: 1.2rem;
+              padding: 1.5rem 2rem;
+              border-bottom: .8px solid lightgrey;
+  
+  
+              .searchBar{
+                  width: 60%;
+                  display: flex;
+                  flex-direction: row;
+                  align-items: flex-start;
+                  justify-content: flex-start;
+                h3{
+                  font-size: 1.5rem;
                   color: $color1;
-                  &:hover{
-                    text-decoration: underline;
-                  }
                 }
-      
+              }
+          }
+  
+          .postedJob {
+              padding: 1.5rem;
+              width: 100%;
+              border-top: .7px solid lightgrey;
+              .jobTitle {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                h4 {
+                  a{
+                    font-size: 1.2rem;
+                    color: $color1;
+                    &:hover{
+                      text-decoration: underline;
+                    }
+                  }
+        
+                }
+              }
+              p {
+                color: $darktext;
+                font-size: 1rem;
+              }
+              #status,
+              #date,
+              #postedBy {
+                color: $lightColor;
               }
             }
-            p {
-              color: $darktext;
-              font-size: 1rem;
-            }
-            #status,
-            #date,
-            #postedBy {
-              color: $lightColor;
-            }
+  
+          .spacer{
+              width: 100%;
+              h3{
+                  opacity: 0;
+              }
+              border-bottom-left-radius: 10px;
+              border-bottom-right-radius: 10px;
           }
-
-        .spacer{
-            width: 100%;
-            h3{
-                opacity: 0;
-            }
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
         }
+      }
+
     }
+
+
 }
 
 //Media Queires
