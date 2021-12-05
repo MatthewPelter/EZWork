@@ -5,7 +5,7 @@ $darktext: rgb(121, 121, 121);
     margin-top: 0;
     width: 100%;
     background: whitesmoke;
-    padding: 2.5rem 10rem;
+    padding: 2.5rem 8rem;
    
     .myJobs-header{
      display: flex;
@@ -50,6 +50,7 @@ $darktext: rgb(121, 121, 121);
     }
 
     .myJobs-parent{
+      margin-top: 1.5rem;
       width: 100%;
       display: grid;
       grid-template-columns: repeat(5,1fr);
@@ -326,7 +327,6 @@ $darktext: rgb(121, 121, 121);
         grid-area: 1 / 2 / 6 / 6;
 
         .myJobs-container{
-          margin-top: 2rem;
           width: 100%;
           display: flex;
           flex-direction: column;
@@ -360,7 +360,7 @@ $darktext: rgb(121, 121, 121);
           .postedJob {
               padding: 1.5rem;
               width: 100%;
-              border-top: .7px solid lightgrey;
+              border-bottom: .7px solid lightgrey;
               .jobTitle {
                 display: flex;
                 flex-direction: row;

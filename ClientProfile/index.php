@@ -44,14 +44,14 @@ $userID = $_SESSION['user_id'];
             <h2 id="username">Welcome, <?php echo $_SESSION['userid']; ?></h2>
             <div class="quick-links">
                 <button id="quick-link-job" onclick="location.href='../newPostJob/start.php'">Post A Job</button>
-                <button id="quick-link-market" onclick="location.href='../Market/market.php'">Browse MarketPlace</button>
+                <button id="quick-link-market" onclick="location.href='../Market/market'">Browse MarketPlace</button>
             </div>
         </div>
         <div class="user-profile-body">
             <div class="user-postings">
                 <div class="card title">
                     <h3>My Postings</h3>
-                    <span><a href="../newPostJob/myJobs.php">All My Jobs</a></span>
+                    <span><a href="../newPostJob/myJobs">All My Jobs</a></span>
                 </div>
                 <div class="card result" style="padding: 1rem;">
                     <button id="quick-link-job2" onclick="location.href='../newPostJob/start.php'">Post A Job</button>

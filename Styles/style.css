@@ -21881,7 +21881,7 @@ li {
   margin-top: 0;
   width: 100%;
   background: whitesmoke;
-  padding: 2.5rem 10rem;
+  padding: 2.5rem 8rem;
 }
 
 .myJobs .myJobs-header {
@@ -21947,6 +21947,7 @@ li {
 }
 
 .myJobs .myJobs-parent {
+  margin-top: 1.5rem;
   width: 100%;
   display: -ms-grid;
   display: grid;
@@ -22301,7 +22302,6 @@ li {
 }
 
 .myJobs .myJobs-parent .myJobs-grid .myJobs-container {
-  margin-top: 2rem;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22359,7 +22359,7 @@ li {
 .myJobs .myJobs-parent .myJobs-grid .myJobs-container .postedJob {
   padding: 1.5rem;
   width: 100%;
-  border-top: .7px solid lightgrey;
+  border-bottom: .7px solid lightgrey;
 }
 
 .myJobs .myJobs-parent .myJobs-grid .myJobs-container .postedJob .jobTitle {

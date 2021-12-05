@@ -283,4 +283,87 @@ $userID = $_SESSION['user_id'];
 </body>
 <!--Script for the search bar and datalist-->
 <script src="../SkillsContainer/searchProfile.js"></script>
+<!-- This script is used to function the filer section-->
+<script type="text/javascript">
+    var url = "https://ez-work.herokuapp.com/newPostJob/myJobs?";
+
+    // this function is such a mess but it works 
+    function sort(by) {
+        var newpage = "";
+        var text = window.location.href;
+        if (text.indexOf("sort") > 0) {
+            var remove = text.substring(text.indexOf("sort") - 1, text.length);
+            text = text.replace(remove, "");
+            if (text == "https://ez-work.herokuapp.com/newPostJob/myJobs") {
+                newpage = text + "?sort=" + by;
+            } else {
+                newpage = text + "&sort=" + by;
+            }
+
+            window.location = newpage;
+        } else {
+            if (window.location.href == "https://ez-work.herokuapp.com/newPostJob/myJobs") {
+                newpage = window.location.href + "?sort=" + by;
+            } else {
+                newpage = text + "&sort=" + by;
+            }
+            window.location = newpage;
+        }
+
+    }
+
+    $('#submitFilter').click(function() {
+
+        window.location = "https://ez-work.herokuapp.com/newPostJob/myJobs?" + $('#filterForm').serialize();
+    });
+
+    function resetOptions() {
+        window.location = "https://ez-work.herokuapp.com/newPostJob/myJobs";
+    }
+
+    const sortArrow = document.getElementById('sortArrow');
+
+    function toggleSortCard() {
+        const sortCard = document.querySelector('.sortCard');
+        if (getComputedStyle(sortCard).display === "none") {
+            sortArrow.style.transform = "rotate(180deg)";
+            sortCard.style.display = "inline-block";
+        } else {
+            sortCard.style.display = "none";
+            sortArrow.style.transform = "rotate(360deg)";
+        }
+    }
+
+
+    const filterArrow = document.getElementById('filterArrow');
+
+    function toggleFilterCard() {
+        const filterCard = document.querySelector('.filterCard');
+        if (getComputedStyle(filterCard).display === "none") {
+            filterArrow.style.transform = "rotate(180deg)";
+            filterCard.style.display = "inline-block";
+        } else {
+            filterCard.style.display = "none";
+            filterArrow.style.transform = "rotate(360deg)";
+        }
+    }
+
+    function toggleHourlyCard() {
+        var hourlyCard = document.querySelector(".hourlyCard");
+        if (getComputedStyle(hourlyCard).display === "none") {
+            hourlyCard.style.display = "inline-block";
+        } else {
+            hourlyCard.style.display = "none";
+        }
+    }
+
+    function toggleBudgetCard() {
+        var budgetCard = document.querySelector(".budgetCard");
+        if (getComputedStyle(budgetCard).display === "none") {
+            budgetCard.style.display = "inline-block";
+        } else {
+            budgetCard.style.display = "none";
+        }
+    }
+</script>
 </html>

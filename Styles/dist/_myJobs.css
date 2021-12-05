@@ -2,7 +2,7 @@
   margin-top: 0;
   width: 100%;
   background: whitesmoke;
-  padding: 2.5rem 10rem;
+  padding: 2.5rem 8rem;
 }
 .myJobs .myJobs-header {
   display: flex;
@@ -43,6 +43,7 @@
   background: #0a345e;
 }
 .myJobs .myJobs-parent {
+  margin-top: 1.5rem;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -297,7 +298,6 @@
   grid-area: 1/2/6/6;
 }
 .myJobs .myJobs-parent .myJobs-grid .myJobs-container {
-  margin-top: 2rem;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -328,7 +328,7 @@
 .myJobs .myJobs-parent .myJobs-grid .myJobs-container .postedJob {
   padding: 1.5rem;
   width: 100%;
-  border-top: 0.7px solid lightgrey;
+  border-bottom: 0.7px solid lightgrey;
 }
 .myJobs .myJobs-parent .myJobs-grid .myJobs-container .postedJob .jobTitle {
   display: flex;
