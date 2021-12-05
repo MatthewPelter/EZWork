@@ -107,7 +107,6 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
     <div class="market-container-header">
         <h4>EZWork MarketPlace</h4>
         <p>Browse through all jobs posted by thousands of our users or view all of our amazing freelancers.</p>
-        <span>Get Work Done</span>
         <!-- Scrap the search bar... Too much work not enough time -->
         <!-- <div class="searchBar2">
             <form id="searchContainer2">
