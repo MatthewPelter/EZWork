@@ -10,9 +10,9 @@ $checkFreelancer = mysqli_query($conn, "SELECT freelancer_id FROM clients WHERE 
 $checkFreelancer = mysqli_fetch_assoc($checkFreelancer);
 $checkFreelancer = $checkFreelancer['freelancer_id'];
 
-if ($checkFreelancer == NULL) {
-    die("You are not a freelancer buddy");
-}
+//if ($checkFreelancer == NULL) {
+//    die("You are not a freelancer buddy");
+//}
 ?>
 
 

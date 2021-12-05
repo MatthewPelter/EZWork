@@ -41,7 +41,7 @@ $userID = $_SESSION['user_id'];
             <ul>
                 <li><a href="../ClientProfile/index.php">My Profile</a></li>
                 <li>/</li>
-                <li>Job Postings</li>
+                <li>My Job Postings</li>
             </ul>
             <button onclick="location.href='../newPostJob/length.php'">Post a New Job</button>
         </div>
