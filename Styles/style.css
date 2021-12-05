@@ -26385,9 +26385,9 @@ a:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -26400,7 +26400,7 @@ a:hover {
   }
   .market-container .jobs-container .sortMenu #resetSortFilter {
     margin: 0rem 1rem;
-    width: 100%;
+    width: 50%;
     cursor: pointer;
     background: transparent;
     color: #0a345e;
@@ -26955,27 +26955,22 @@ a:hover {
   }
   .market-container .AllFreelancers .AllFreelancersContainer {
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    display: -ms-grid;
+    display: grid;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    -ms-grid-columns: (minmax(100px, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     margin: auto;
-    row-gap: 5rem;
-    -webkit-column-gap: 3rem;
-            column-gap: 3rem;
+    row-gap: 2rem;
+    -webkit-column-gap: 2rem;
+            column-gap: 2rem;
   }
   .market-container .AllFreelancers .AllFreelancersContainer .freelancerCard {
     cursor: pointer;
     border-radius: 6px;
     border: 1px solid #054e97;
-    width: 40%;
+    width: 100%;
   }
   .market-container .AllFreelancers .AllFreelancersContainer .freelancerCard:hover {
     opacity: 0.8;
