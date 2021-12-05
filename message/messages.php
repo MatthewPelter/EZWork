@@ -202,7 +202,7 @@ if (isset($_GET['mid'])) {
                                                     <div class="message my-message">
                                                         <?php echo $row['Sender']; ?> is interested in your project you posted.<br />
                                                         Make sure to view their profile and rating before you accept their proposal.<br />
-                                                        <span onclick="respondToJob(<?php echo $row['jobID']; ?>, <?php echo $fetchID; ?>, 'accept')" style="cursor: pointer;font-size: 1.25rem;color: lightgreen;">Agree</span>
+                                                        <span onclick="respondToJob(<?php echo $row['jobID']; ?>, <?php echo $fetchID; ?>, 'accept')" style="cursor: pointer;font-size: 1.25rem;color:royalblue;">Agree</span>
                                                         <span onclick="respondToJob(<?php echo $row['jobID']; ?>, <?php echo $fetchID; ?>, 'deny')" style="cursor: pointer;font-size: 1.25rem;color:maroon;">Deny</span>
                                                         <?php echo $row['body']; ?>
                                                     </div>
