@@ -139,7 +139,7 @@ li {
   color: white;
   padding: 18px 20px;
   line-height: 26px;
-  font-size: 16px;
+  font-size: 1.1rem;
   border-radius: 7px;
   margin-bottom: 30px;
   width: 90%;
@@ -181,7 +181,7 @@ li {
   width: 100%;
   border: none;
   padding: 10px 20px;
-  font: 14px/22px "Montserrat", Arial, sans-serif;
+  font: 1rem "Montserrat", Arial, sans-serif;
   margin-bottom: 10px;
   border-radius: 5px;
   resize: none;
@@ -197,7 +197,7 @@ li {
 .chat .chat-message .button {
   float: right;
   color: #94c2ed;
-  font-size: 16px;
+  font-size: 1.25rem;
   text-transform: uppercase;
   border: none;
   cursor: pointer;
