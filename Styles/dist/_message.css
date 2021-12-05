@@ -25,7 +25,7 @@ li {
   width: 100%;
   padding: 0;
   margin: 0;
-  background-color: #c7e3f3;
+  background-color: #054e97;
 }
 
 .message-container {
@@ -81,7 +81,7 @@ li {
   width: 700px;
   height: 100%;
   float: left;
-  background: lightgreen;
+  background: #f2f5f8;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   color: #434651;

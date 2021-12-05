@@ -16586,8 +16586,7 @@ li {
   width: 100%;
   padding: 0;
   margin: 0;
-  background-color: #0093E9;
-  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+  background-color: #054e97;
 }
 
 .message-container {
@@ -16644,7 +16643,7 @@ li {
   width: 700px;
   height: 100%;
   float: left;
-  background: #054e97;
+  background: #f2f5f8;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   color: #434651;
