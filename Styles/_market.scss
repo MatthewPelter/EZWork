@@ -22,10 +22,11 @@ $darktext: rgb(121, 121, 121);
         p{
             background: rgb(0,48,96);
             padding: 1px;
+            border-radius: 2px;
             pointer-events: none;
             margin: 1rem 0rem;
             width: 50%;
-            color: lightgreen;
+            color: white;
             font-size: 1.5rem;
             text-align: center;
         }

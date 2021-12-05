@@ -404,7 +404,7 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
 
             </div>
         </div>   
-        <div class="AllFreelancers" id="#all_freelancers>
+        <div class="AllFreelancers">
 
             <div class="AllFreelancersHeader">
                 <h2>All <span>EZWork</span> Freelancers</h2>
