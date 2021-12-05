@@ -58,9 +58,38 @@ $userID = $_SESSION['user_id'];
                         if (mysqli_num_rows($freelancers) > 0) {
                             while ($f = mysqli_fetch_assoc($freelancers)) {
                     ?>
-                    <span><?php echo $f['username']; ?></span>  
-                    <span><?php echo $f['avatar']; ?></span>  
-                    <span><?php echo $f['freelancer_id']; ?></span>  
+                    <a href="../Profile/userprofile.php?name=<?php echo $f['username']; ?>">
+                        <div class="freelancerCard">
+                            <div class="freelancerImg">
+                                <img src="<?php echo $f['avatar']; ?>" alt=`<?php echo $f['username']; ?>`>
+                            </div>
+                            <div class="freelancerInfo">
+                                <h2><?php echo $f['username']; ?></h2>
+                                
+                                <!-- Couldn't get the data such as expertise for each freelacner
+                                <h3>
+                                    Software Developer                                
+                                </h3>
+                                <h4>$ 
+                                    <span>
+                                        10
+                                    </span>
+                                     per hour
+                                </h4>
+                                
+                                <h5>
+                                   
+                                </h5>
+                                -->
+                                <?php
+                                    $freeID = $f['freelancer_id'];
+                                    $pullJobs = mysqli_query($conn, "SELECT COUNT(*) AS completedJobs FROM jobs WHERE freelancer_id = '$freeID' AND status=1");
+                                    $pullJobCount = mysqli_fetch_assoc($pullJobs);                            
+                                ?>
+                                <p><?php echo $pullJobCount['completedJobs']; ?> jobs completed</p>
+                            </div>
+                        </div>
+                    </a>
                     <?php
                             }
                         }
