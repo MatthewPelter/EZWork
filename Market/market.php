@@ -123,9 +123,9 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
 
             <div class="sortMenu">
                 <button id="resetSortFilter" onclick="resetOptions()">Reset</button>
-                <div class="sort" onclick="toggleSortCard()">
+                <div class="sort">
                     <h3>Sort</h3>
-                    <i class="fa fa-sort-desc" id="sortArrow" aria-hidden="true"></i>
+                   
                 </div>
                 <div class="sortCard">
                     <div class="sortAtoZ" onclick="sort('AtoZ')">
@@ -147,9 +147,8 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                     </div>
                     -->
                 </div>
-                <div class="filter" onclick="toggleFilterCard()">
+                <div class="filter">
                     <h3>Filter</h3>
-                    <i class="fa fa-sort-desc" id="filterArrow" aria-hidden="true"></i>
                 </div>
                 <div class="filterCard">
                     <form id="filterForm" action="javascript:void(0);">
@@ -520,33 +519,6 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
 
     function resetOptions() {
         window.location = "https://ez-work.herokuapp.com/Market/market";
-    }
-
-    const sortArrow = document.getElementById('sortArrow');
-
-    function toggleSortCard() {
-        const sortCard = document.querySelector('.sortCard');
-        if (getComputedStyle(sortCard).display === "none") {
-            sortArrow.style.transform = "rotate(180deg)";
-            sortCard.style.display = "inline-block";
-        } else {
-            sortCard.style.display = "none";
-            sortArrow.style.transform = "rotate(360deg)";
-        }
-    }
-
-
-    const filterArrow = document.getElementById('filterArrow');
-
-    function toggleFilterCard() {
-        const filterCard = document.querySelector('.filterCard');
-        if (getComputedStyle(filterCard).display === "none") {
-            filterArrow.style.transform = "rotate(180deg)";
-            filterCard.style.display = "inline-block";
-        } else {
-            filterCard.style.display = "none";
-            filterArrow.style.transform = "rotate(360deg)";
-        }
     }
 
     function toggleHourlyCard() {
