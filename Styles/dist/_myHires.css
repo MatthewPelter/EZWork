@@ -45,9 +45,9 @@
   color: #797979;
 }
 .myHired .noHired img {
-  height: 17rem;
-  width: 100%;
-  object-fit: cover;
+  height: 20rem;
+  width: 50%;
+  object-fit: contain;
   border-radius: 10px;
 }
 .myHired .myHiredContainer {

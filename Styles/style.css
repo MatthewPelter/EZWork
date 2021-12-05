@@ -27311,10 +27311,10 @@ a:hover {
 }
 
 .myHired .noHired img {
-  height: 17rem;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  height: 20rem;
+  width: 50%;
+  -o-object-fit: contain;
+     object-fit: contain;
   border-radius: 10px;
 }
 
