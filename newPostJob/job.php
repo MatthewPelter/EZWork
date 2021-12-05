@@ -287,9 +287,13 @@ if (mysqli_num_rows($jobResult) > 0) {
 
 
                 <?php if ($unameFetched['username'] != $_SESSION['userid']) { ?>
-                    <div class="flag">
+                    <div class="flag" onclick="report()">
                         <i class="fa fa-flag" aria-hidden="true"></i>
                         <span>Flag as Inappropiate</span>
+                    </div>
+                    <div class="reportMessage">
+                        <p>We are going to take a closer look into the report on this job</p>
+                        <p>Thank you, for helping us keep the system safe.</p>
                     </div>
                 <?php } ?>
                 <?php if ($unameFetched['username'] == $_SESSION['userid'] && $r['status'] != -1) {
@@ -671,6 +675,16 @@ if (mysqli_num_rows($jobResult) > 0) {
                 }
             });
         }); // end delete btn click
+
+        //Report fun
+        function report(){
+            const reportMsg = document.querySelector('.reportMessage');
+            if (getComputedStyle(reportMsg).display === "none") {
+                reportMsg.style.display = "inline-block";
+            } else {
+                reportMsg.style.display = "none";
+            }            
+        }
 
         function copyToClipboard(link) {
             const el = document.createElement("textarea");

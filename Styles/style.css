@@ -19864,6 +19864,14 @@ li {
   text-decoration: underline;
 }
 
+.job .job-container .options .reportMessage {
+  display: none;
+  width: 80%;
+  text-align: center;
+  font-size: 1rem;
+  color: #054e97;
+}
+
 .job .job-container .options #deleteBtn, .job .job-container .options #editBtn {
   margin: .5rem 0rem;
   -moz-appearance: none;

@@ -228,6 +228,13 @@ $darktext: rgb(121, 121, 121);
                     }
                 }
             }
+            .reportMessage{
+                display: none;
+                width: 80%;
+                text-align: center;
+                font-size: 1rem;
+                color: $lightColor;
+            }
 
             #deleteBtn,#editBtn{
                 margin: .5rem 0rem;
