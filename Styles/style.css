@@ -25550,15 +25550,11 @@ a:hover {
           filter: brightness(75%);
 }
 
-.market-container {
-  display: inline-block;
+.market-container-header {
   width: 100%;
-  background: whitesmoke;
-  padding: 2.5rem 6rem;
-}
-
-.market-container .market-container-header {
-  width: 100%;
+  height: 40vh;
+  background-image: url(../Image/background4market.jpg);
+  background-size: cover;
   padding: 2rem 0rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -25575,9 +25571,16 @@ a:hover {
           justify-content: center;
 }
 
-.market-container .market-container-header h4 {
+.market-container-header h4 {
   font-size: 3rem;
   text-decoration: underline;
+}
+
+.market-container {
+  display: inline-block;
+  width: 100%;
+  background: whitesmoke;
+  padding: 2.5rem 6rem;
 }
 
 .market-container .jobs-container {

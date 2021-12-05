@@ -1,15 +1,12 @@
 $color1: #0a345e;
 $lightColor: #054e97;
 $darktext: rgb(121, 121, 121);
-.market-container{
-    display: inline-block;
-    width: 100%;
-    background: whitesmoke;
-    padding: 2.5rem 6rem;
-
-    // Jobs Page Top Header CSS
-    .market-container-header{
+// Jobs Page Top Header CSS
+.market-container-header{
         width: 100%;
+        height: 40vh;
+        background-image: url(../Image/background4market.jpg);
+        background-size: cover;
         padding: 2rem 0rem;
         display: flex;
         flex-direction: row;
@@ -19,7 +16,12 @@ $darktext: rgb(121, 121, 121);
             font-size: 3rem;
             text-decoration: underline;
         }
-    }
+}
+.market-container{
+    display: inline-block;
+    width: 100%;
+    background: whitesmoke;
+    padding: 2.5rem 6rem;
 
     //Under Jobs Page Top Header, jobs-container
     .jobs-container{
