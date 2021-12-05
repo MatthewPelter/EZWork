@@ -104,19 +104,18 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
 <body>
 
     <?php include '../navbar.php'; ?>
+    <div class="market-container-header">
+        <h4>EZWork MarketPlace</h4>
 
+        <!-- Scrap the search bar... Too much work not enough time -->
+        <!-- <div class="searchBar2">
+            <form id="searchContainer2">
+                <input type="text" list="allskills" autocomplete="off" name="search" placeholder="Search" id="search2">
+                <input type="submit" value="Not Configured Yet :)" id="find2" disabled>
+            </form>
+        </div> -->
+    </div>
     <div class="market-container">
-        <div class="market-container-header">
-            <h4>EZWork MarketPlace</h4>
-
-            <!-- Scrap the search bar... Too much work not enough time -->
-            <!-- <div class="searchBar2">
-                <form id="searchContainer2">
-                    <input type="text" list="allskills" autocomplete="off" name="search" placeholder="Search" id="search2">
-                    <input type="submit" value="Not Configured Yet :)" id="find2" disabled>
-                </form>
-            </div> -->
-        </div>
 
         <div class="jobs-container">
 
