@@ -316,7 +316,7 @@ $userID = $_SESSION['user_id'];
 
     }
 
-    $('#submitFilter').click(function() {
+    var submit = document.querySelector('#submitFilter').click(function() {
 
         window.location = "https://ez-work.herokuapp.com/newPostJob/myJobs" + ('#filterForm').serialize();
     });
