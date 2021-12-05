@@ -207,9 +207,15 @@
 .job .job-container .options .reportMessage {
   display: none;
   width: 80%;
-  text-align: center;
-  font-size: 1rem;
-  color: #054e97;
+}
+.job .job-container .options .reportMessage .reportMessageCard {
+  width: 100%;
+  color: maroon;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .job .job-container .options #deleteBtn, .job .job-container .options #editBtn {
   margin: 0.5rem 0rem;
@@ -550,6 +556,19 @@
   }
   .job .job-container .options .flag span:hover {
     text-decoration: underline;
+  }
+  .job .job-container .options .reportMessage {
+    display: none;
+    width: 80%;
+  }
+  .job .job-container .options .reportMessage .reportMessageCard {
+    width: 100%;
+    color: maroon;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .job .job-container .options #deleteBtn {
     -moz-appearance: none;

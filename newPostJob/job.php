@@ -292,8 +292,11 @@ if (mysqli_num_rows($jobResult) > 0) {
                         <span>Flag as Inappropiate</span>
                     </div>
                     <div class="reportMessage">
-                        <p>We are going to take a closer look into the report on this job</p>
-                        <p>Thank you, for helping us keep the system safe.</p>
+                        <div class="reportMessageCard">
+                            <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                            <p>We are going to take a closer look into the report on this job</p>
+                            <p>Thank you, for helping us keep the system safe.</p>
+                        </div>
                     </div>
                 <?php } ?>
                 <?php if ($unameFetched['username'] == $_SESSION['userid'] && $r['status'] != -1) {
@@ -468,7 +471,7 @@ if (mysqli_num_rows($jobResult) > 0) {
 
     </datalist>
 </body>
-<script src="./app.js"></script>
+<!--<script src="./app.js"></script>-->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.2.1/dist/sweetalert2.all.min.js"></script>

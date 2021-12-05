@@ -231,9 +231,15 @@ $darktext: rgb(121, 121, 121);
             .reportMessage{
                 display: none;
                 width: 80%;
-                text-align: center;
-                font-size: 1rem;
-                color: $lightColor;
+                .reportMessageCard{
+                    width: 100%;
+                    color: maroon;
+                    font-size: 1.2rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                }
             }
 
             #deleteBtn,#editBtn{
@@ -607,6 +613,19 @@ $darktext: rgb(121, 121, 121);
                         &:hover{
                             text-decoration: underline;
                         }
+                    }
+                }
+                .reportMessage{
+                    display: none;
+                    width: 80%;
+                    .reportMessageCard{
+                        width: 100%;
+                        color: maroon;
+                        font-size: 1rem;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
                     }
                 }
     

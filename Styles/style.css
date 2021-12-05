@@ -19867,9 +19867,25 @@ li {
 .job .job-container .options .reportMessage {
   display: none;
   width: 80%;
-  text-align: center;
-  font-size: 1rem;
-  color: #054e97;
+}
+
+.job .job-container .options .reportMessage .reportMessageCard {
+  width: 100%;
+  color: maroon;
+  font-size: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .job .job-container .options #deleteBtn, .job .job-container .options #editBtn {
@@ -20346,6 +20362,28 @@ li {
   }
   .job .job-container .options .flag span:hover {
     text-decoration: underline;
+  }
+  .job .job-container .options .reportMessage {
+    display: none;
+    width: 80%;
+  }
+  .job .job-container .options .reportMessage .reportMessageCard {
+    width: 100%;
+    color: maroon;
+    font-size: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .job .job-container .options #deleteBtn {
     -moz-appearance: none;
