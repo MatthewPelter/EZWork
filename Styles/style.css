@@ -22362,10 +22362,6 @@ li {
   border-top: .7px solid lightgrey;
 }
 
-.myJobs .myJobs-parent .myJobs-grid .myJobs-container .postedJob:hover {
-  background: lightgrey;
-}
-
 .myJobs .myJobs-parent .myJobs-grid .myJobs-container .postedJob .jobTitle {
   display: -webkit-box;
   display: -ms-flexbox;
