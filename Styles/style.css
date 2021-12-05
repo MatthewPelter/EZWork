@@ -26399,7 +26399,7 @@ a:hover {
     overflow-y: scroll;
   }
   .market-container .jobs-container .sortMenu #resetSortFilter {
-    margin: 0rem 1rem;
+    margin: 0;
     width: 50%;
     cursor: pointer;
     background: transparent;
@@ -26454,9 +26454,9 @@ a:hover {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     width: 100%;
   }
   .market-container .jobs-container .sortMenu .sortCard .sortAtoZ, .market-container .jobs-container .sortMenu .sortCard .sortZtoA, .market-container .jobs-container .sortMenu .sortCard .sortPriceLowHigh, .market-container .jobs-container .sortMenu .sortCard .sortPriceHighLow {
@@ -26505,9 +26505,9 @@ a:hover {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   .market-container .jobs-container .sortMenu .filter h3 {
     font-size: 1.5rem;
@@ -26534,9 +26534,9 @@ a:hover {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     width: 100%;
   }
   .market-container .jobs-container .sortMenu .filterCard .FilterProjectType, .market-container .jobs-container .sortMenu .filterCard .FilterProjectSize, .market-container .jobs-container .sortMenu .filterCard .FilterLocation, .market-container .jobs-container .sortMenu .filterCard .FilterSkill, .market-container .jobs-container .sortMenu .filterCard .FilterBudget, .market-container .jobs-container .sortMenu .filterCard .FilterExperience {
@@ -26959,8 +26959,8 @@ a:hover {
     display: grid;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -ms-grid-columns: (minmax(100px, 1fr))[auto-fill];
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    -ms-grid-columns: (minmax(200px, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     margin: auto;
     row-gap: 2rem;
     -webkit-column-gap: 2rem;
