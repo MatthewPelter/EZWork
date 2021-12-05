@@ -136,6 +136,7 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                         <i class="fa fa-sort-alpha-desc" aria-hidden="true"></i>
                         <p>Z to A</p>
                     </div>
+                    <!--
                     <div class="sortPriceLowHigh" onclick="sort('lowHigh')">
                         <i class="fa fa-sort-amount-desc" aria-hidden="true"></i>
                         <p>Price: Low to High</p>
@@ -144,6 +145,7 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                         <i class="fa fa-sort-amount-asc" aria-hidden="true"></i>
                         <p>Price: High to Low</p>
                     </div>
+                -->
                 </div>
                 <div class="filter" onclick="toggleFilterCard()">
                     <h3>Filter</h3>
