@@ -100,7 +100,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
     </div>
     <div class="mobileFreelanceCard">
         <ul>
-            <a href="../newPostJob/jobs.php">
+            <a href="../Freelancer/AllFreelancers">
                 <li>Discover</li>
             </a>
             <a href="#/">
@@ -134,7 +134,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
     </div>
     -->
     <div class="mobileNavCard" onclick="location.href='../Market/market.php'">
-        <p>EZWork Market</p>
+        <p>Marketplace</p>
     </div>
 
     <div class="mobileNavCard" onclick="location.href='../message/messages'">
