@@ -14,12 +14,14 @@ $darktext: rgb(121, 121, 121);
         justify-content: center;
         h4{
             pointer-events: none;
-            font-size: 4rem;
+            font-size: 5rem;
             color: white;
-            outline: lightgreen;
-            text-decoration: underline;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: lightgreen;
         }
         p{
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: lightgreen;
             pointer-events: none;
             margin: 1rem 0rem;
             width: 40%;
