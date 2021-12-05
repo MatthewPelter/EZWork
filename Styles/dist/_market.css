@@ -618,7 +618,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     font-size: 1rem;
   }
   .market-container .jobs-container .sortMenu .sortCard .sortAtoZ p, .market-container .jobs-container .sortMenu .sortCard .sortZtoA p, .market-container .jobs-container .sortMenu .sortCard .sortPriceLowHigh p, .market-container .jobs-container .sortMenu .sortCard .sortPriceHighLow p {
