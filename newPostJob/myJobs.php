@@ -48,7 +48,7 @@ $userID = $_SESSION['user_id'];
         <div class="myJobs-parent">
             <div class="sortMenu">
                 <button id="resetSortFilter" onclick="resetOptions()">Reset</button>
-                <div class="sort" onclick="toggleSortCard()">
+                <div class="sort">
                     <h3>Sort</h3>
                     <i class="fa fa-sort-desc" id="sortArrow" aria-hidden="true"></i>
                 </div>
@@ -73,7 +73,7 @@ $userID = $_SESSION['user_id'];
                     -->
  
                 </div>
-                <div class="filter" onclick="toggleFilterCard()">
+                <div class="filter">
                     <h3>Filter</h3>
                     <i class="fa fa-sort-desc" id="filterArrow" aria-hidden="true"></i>
                 </div>
