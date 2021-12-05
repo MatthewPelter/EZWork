@@ -17,6 +17,7 @@ $darktext: rgb(121, 121, 121);
     }
 
     #notifications-section{
+        padding: 2rem;
         max-height: 90vh;
         overflow: auto;
         border: 1px solid lightgrey;
@@ -37,7 +38,7 @@ $darktext: rgb(121, 121, 121);
     border: none;
     background: rgb(219, 219, 219);
     font-size: 1.1rem;
-    color: $color1;
+    color: white;
     font-weight: bolder;
     padding: 0.6rem 1.5rem;
     margin: 0;
@@ -55,7 +56,7 @@ $darktext: rgb(121, 121, 121);
     margin: 40px auto 0;
     width: 500px;
     background-color: #0074d9;
-    color: #fff;
+    color:white;
     transition: all .2s ease
 }
 

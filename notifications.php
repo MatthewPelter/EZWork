@@ -64,6 +64,7 @@ if (!isset($_SESSION['user_id'])) {
                                 <i class="fa fa-bell-o"></i>
                             </div>
                             <div class="Message-body">
+                                
                                 <p>You got a message from <?php echo $senderName; ?></p>
                                 <p class="tint">at <?php echo $r['sentAt']; ?></p>
                                 <button class="Message-button" onclick="readNotification(<?php echo $r['id']; ?>); location.href='./message/messages?mid=<?php echo $r['sender']; ?>';" id="js-showMe">Show me</button>
