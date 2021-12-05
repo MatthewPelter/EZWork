@@ -16586,12 +16586,12 @@ li {
   width: 100%;
   padding: 0;
   margin: 0;
-  background-color: #c7e3f3;
+  background-color: whitesmoke;
 }
 
 .message-container {
   margin: 150px auto 0;
-  width: 750px;
+  width: 800px;
   background: #444753;
   border-radius: 5px;
 }
