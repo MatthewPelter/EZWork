@@ -25554,7 +25554,7 @@ a:hover {
   width: 100%;
   height: 70vh;
   background-image: url(../Image/background4market.jpg);
-  background-size: cover;
+  background-size: contain;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -25571,7 +25571,7 @@ a:hover {
 }
 
 .market-container-header h4 {
-  font-size: 3.5rem;
+  font-size: 4rem;
   color: white;
   text-decoration: underline;
 }
