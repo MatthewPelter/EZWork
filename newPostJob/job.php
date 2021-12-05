@@ -301,7 +301,15 @@ if (mysqli_num_rows($jobResult) > 0) {
                 <?php } ?>
                 <?php if ($unameFetched['username'] == $_SESSION['userid'] && $r['status'] != -1) {
                 ?>
+
+                <?php
+                    if( $r['status'] != 1){ 
+                ?>
                     <input type="button" onclick="location.href = 'edit?id=<?php echo $r['id']; ?>';" id="editBtn" value="Edit Post">
+                <?php
+                    }
+                ?>
+                   
                     <input type="button" id="deleteBtn" style="color: red;" value="Delete Post">
                     <span id="result"></span>
 

@@ -19888,6 +19888,10 @@ li {
           justify-content: center;
 }
 
+.job .job-container .options .reportMessage .reportMessageCard p {
+  text-align: center;
+}
+
 .job .job-container .options #deleteBtn, .job .job-container .options #editBtn {
   margin: .5rem 0rem;
   -moz-appearance: none;
@@ -20384,6 +20388,9 @@ li {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .job .job-container .options .reportMessage .reportMessageCard p {
+    text-align: center;
   }
   .job .job-container .options #deleteBtn {
     -moz-appearance: none;
