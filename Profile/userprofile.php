@@ -279,24 +279,6 @@ if (mysqli_num_rows($result) > 0) {
                             <div class="completedJobs">
                                 <h4>Completed Jobs</h4>
 
-                                <?php
-                                    $completedJobSQL = "SELECT * FROM jobs WHERE WHERE freelancer_id = '$freeID' AND status=1";
-                                    $completedJobData = mysqli_query($conn, $completedJobSQL) or die(mysqli_errno($conn));
-                                
-                                        if( mysqli_num_rows($completedJobData) == 0){
-                                ?>
-                                        <span>No Jobs completed.</span>
-                                   
-                                <?php
-                                        }
-                                        if (mysqli_num_rows($completedJobData) > 0) {
-                                            while ($r = mysqli_fetch_assoc($completedJobData)) {
-                                ?>
-                                    <span><?php echo $r['title']; ?></span>
-                                <?php                   
-                                            }
-                                        } 
-                                ?>
                                                                             
                             </div>
                             <div class="userJobsFreelancer">
