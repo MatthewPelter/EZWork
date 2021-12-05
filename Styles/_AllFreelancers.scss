@@ -152,10 +152,10 @@ $darktext: rgb(121, 121, 121);
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      margin: auto;
-      row-gap: 5rem;
-      column-gap: 3rem;
+      grid-template-columns: none;
+      margin: 0;
+      row-gap: 0;
+      column-gap: 0;
       .freelancerCard {
         cursor: pointer;
         border-radius: 10px;

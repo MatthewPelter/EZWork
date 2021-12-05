@@ -88,11 +88,13 @@ if (isset($_POST['title'])) {
                         <h4>Enter needed skill or expertise</h4>
                         <input type="text" list="allskills" autocomplete="off" name="skills" placeholder="Skills or Expertise">
                     </div>
-                    <div class="image">
+                    <form action="javascript:void(0);" class="image">
                         <h4>Upload An Image <span></span></h4>
                         <img id="output" alt="">
                         <input type="file" onchange="loadFile(event)" name="image" id="file" accept="image/gif, image/jpeg, image/png">
-                    </div>
+                        <input type="submit" name="changeAvatar" id="uploadPic" value="Upload Photo">
+                        <p id="url"></p>
+                    </form>
                     <div class="CancelOrNext">
                         <input type="submit" value="Next: Scope" id="nextScope" />
                     </div>

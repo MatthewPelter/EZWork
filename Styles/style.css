@@ -25445,12 +25445,12 @@ a:hover {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    margin: auto;
-    row-gap: 5rem;
-    -webkit-column-gap: 3rem;
-            column-gap: 3rem;
+    -ms-grid-columns: none;
+        grid-template-columns: none;
+    margin: 0;
+    row-gap: 0;
+    -webkit-column-gap: 0;
+            column-gap: 0;
   }
   .AllFreelancers .AllFreelancersContainer .freelancerCard {
     cursor: pointer;
