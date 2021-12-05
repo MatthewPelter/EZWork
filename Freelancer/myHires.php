@@ -58,7 +58,20 @@ $userID = $_SESSION['user_id'];
                         if (mysqli_num_rows($freelancers) > 0) {
                             while ($f = mysqli_fetch_assoc($freelancers)) {
                     ?>
-                    <span><?php echo $f['id']; ?></span>  
+
+                                <?php
+                                    $freeID2 = $f['id'];
+                                    $getFreelancers2SQL = "SELECT * from freelancers WHERE id='$freeID2'";
+                                    $freelancers2 = mysqli_query($conn, $getFreelancers2SQL) or die(mysqli_errno($conn));
+                    
+                                    if (mysqli_num_rows($freelancers2) > 0) {
+                                        while ($l = mysqli_fetch_assoc($freelancers2)) {
+                                ?>
+                                        <span><?php echo $l['description']; ?></span> 
+                                <?php
+                                        }   
+                                    }
+                                ?> 
                     <?php
                             }
                         }
