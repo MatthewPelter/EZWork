@@ -21947,6 +21947,7 @@ li {
 }
 
 .myJobs .myJobs-container {
+  margin-top: 1.5rem;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
