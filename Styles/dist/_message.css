@@ -108,6 +108,12 @@ li {
   font-weight: bold;
   font-size: 1rem;
 }
+.chat .chat-header .chat-with a {
+  text-decoration: none;
+}
+.chat .chat-header .chat-with a:hover {
+  text-decoration: underline;
+}
 
 .chat .chat-header .chat-num-messages {
   color: #92959e;
