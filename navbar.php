@@ -224,7 +224,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                         <h4>Become Freelancer</h4>
                     </div>
                     <?php }else{ ?>
-                   <div class="card card4"">
+                   <div class="card card4"" style="pointer-events: none;">
                         <h4 style="opacity: 0;">Become Freelancer</h4>
                     </div>
                     <?php } ?>
