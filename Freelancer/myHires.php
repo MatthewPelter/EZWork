@@ -47,9 +47,14 @@ $userID = $_SESSION['user_id'];
         </div>
         <div class="AllFreelancersContainer">
         <?php
+                if( $jobResult == 0){
+        ?>
+                <span>Seems like you have not hired anyone for some reason.</span>
+        <?php
+                }
                 if (mysqli_num_rows($jobResult) > 0) {
                     while ($r = mysqli_fetch_assoc($jobResult)) {
-?>
+        ?>
                     <?php
                         $freeID = $r['freelancer_id'];
                         $getFreelancersSQL = "SELECT * from clients WHERE freelancer_id='$freeID'";
@@ -93,11 +98,6 @@ $userID = $_SESSION['user_id'];
                     <?php
                             }
                         }
-                        else{
-                    ?>
-                        <span>Seems like you have not hired any freelancers yet</span>
-                    <?php
-                        }
                     ?>
                                   
 <?php
@@ -105,8 +105,7 @@ $userID = $_SESSION['user_id'];
                 }
 ?>              
         </div>
-    </div>
-        
+    </div>    
 
     <!-- Footer -->
     <?php include '../footer.php'; ?>
