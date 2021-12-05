@@ -47,7 +47,7 @@ $userID = $_SESSION['user_id'];
         </div>
         <div class="AllFreelancersContainer">
         <?php
-                if( $jobResult == 0){
+                if( mysqli_num_rows($jobResult) == 0){
         ?>
                 <span>Seems like you have not hired anyone for some reason.</span>
         <?php
