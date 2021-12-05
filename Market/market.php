@@ -107,10 +107,6 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
     <div class="market-container-header">
         <h4>EZWork MarketPlace</h4>
         <p>Browse through all jobs posted by thousands of our users or view all of our amazing freelancers.</p>
-        <div class="scroll">
-            <a href="#all_jobs">Browse Jobs</a>
-            <a href="#all_freelancers">Browse Freelancers</a>
-        </div>
         <!-- Scrap the search bar... Too much work not enough time -->
         <!-- <div class="searchBar2">
             <form id="searchContainer2">
@@ -121,7 +117,7 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
     </div>
     <div class="market-container">
 
-        <div class="jobs-container" id="#all_jobs">
+        <div class="jobs-container">
 
 
             <div class="sortMenu">

@@ -25580,41 +25580,14 @@ a:hover {
 }
 
 .market-container-header p {
+  background: #003060;
+  padding: 1px;
   pointer-events: none;
   margin: 1rem 0rem;
   width: 50%;
   color: lightgreen;
   font-size: 1.5rem;
   text-align: center;
-}
-
-.market-container-header .scroll {
-  width: 40%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.market-container-header .scroll a {
-  text-decoration: none;
-  color: lightgreen;
-  cursor: pointer;
-  font-size: 2rem;
-}
-
-.market-container-header .scroll a:hover {
-  color: green;
-  text-decoration: underline;
 }
 
 .market-container {
