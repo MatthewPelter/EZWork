@@ -45,7 +45,6 @@ $userID = $_SESSION['user_id'];
                 <li>My Hires</li>
             </ul>
         </div>
-        <div class="myHiredContainer">
         <?php
                 if( mysqli_num_rows($jobResult) == 0){
         ?>
@@ -56,6 +55,10 @@ $userID = $_SESSION['user_id'];
                
         <?php
                 }
+        ?>        
+        <div class="myHiredContainer">
+        <?php
+
                 if (mysqli_num_rows($jobResult) > 0) {
                     while ($r = mysqli_fetch_assoc($jobResult)) {
         ?>

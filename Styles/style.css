@@ -27287,19 +27287,7 @@ a:hover {
   text-decoration: underline;
 }
 
-.myHired .myHiredContainer {
-  width: 100%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  margin: auto;
-  row-gap: 5rem;
-  -webkit-column-gap: 3rem;
-          column-gap: 3rem;
-}
-
-.myHired .myHiredContainer .noHired {
+.myHired .noHired {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -27316,18 +27304,30 @@ a:hover {
           align-items: center;
 }
 
-.myHired .myHiredContainer .noHired span {
+.myHired .noHired span {
   font-size: 1.2rem;
   text-align: center;
   color: #797979;
 }
 
-.myHired .myHiredContainer .noHired img {
-  height: 12rem;
+.myHired .noHired img {
+  height: 17rem;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 10px;
+}
+
+.myHired .myHiredContainer {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  margin: auto;
+  row-gap: 5rem;
+  -webkit-column-gap: 3rem;
+          column-gap: 3rem;
 }
 
 .myHired .myHiredContainer .freelancerCard {

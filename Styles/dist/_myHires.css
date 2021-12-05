@@ -32,6 +32,24 @@
 .myHired .myHiredHeader ul li a:hover {
   text-decoration: underline;
 }
+.myHired .noHired {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.myHired .noHired span {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #797979;
+}
+.myHired .noHired img {
+  height: 17rem;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
 .myHired .myHiredContainer {
   width: 100%;
   display: grid;
@@ -39,24 +57,6 @@
   margin: auto;
   row-gap: 5rem;
   column-gap: 3rem;
-}
-.myHired .myHiredContainer .noHired {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-}
-.myHired .myHiredContainer .noHired span {
-  font-size: 1.2rem;
-  text-align: center;
-  color: #797979;
-}
-.myHired .myHiredContainer .noHired img {
-  height: 12rem;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 10px;
 }
 .myHired .myHiredContainer .freelancerCard {
   cursor: pointer;
