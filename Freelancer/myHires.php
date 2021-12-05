@@ -93,6 +93,11 @@ $userID = $_SESSION['user_id'];
                     <?php
                             }
                         }
+                        else{
+                    ?>
+                        <span>Seems like you have not hired any freelancers yet</span>
+                    <?php
+                        }
                     ?>
                                   
 <?php
