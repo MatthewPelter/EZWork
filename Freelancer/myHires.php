@@ -93,12 +93,7 @@ $userID = $_SESSION['user_id'];
                     <?php
                             }
                         }
-                    ?>
-                                  
-<?php
-                    }
-                }
-?>              
+                    ?>          
         </div>
 
         <div class="myJobs-container">
