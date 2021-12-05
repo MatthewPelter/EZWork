@@ -285,7 +285,7 @@ $userID = $_SESSION['user_id'];
 <script src="../SkillsContainer/searchProfile.js"></script>
 <!-- This script is used to function the filer section-->
 <script type="text/javascript">
-    var url = "https://ez-work.herokuapp.com/newPostJob/myJobs?";
+    var url = "https://ez-work.herokuapp.com/newPostJob/myJobs";
 
     // this function is such a mess but it works 
     function sort(by) {
@@ -314,7 +314,7 @@ $userID = $_SESSION['user_id'];
 
     $('#submitFilter').click(function() {
 
-        window.location = "https://ez-work.herokuapp.com/newPostJob/myJobs?" + $('#filterForm').serialize();
+        window.location = "https://ez-work.herokuapp.com/newPostJob/myJobs" + $('#filterForm').serialize();
     });
 
     function resetOptions() {
