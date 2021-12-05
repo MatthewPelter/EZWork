@@ -241,7 +241,7 @@ $userID = $_SESSION['user_id'];
                             while ($r = mysqli_fetch_assoc($jobResult)) {
                         ?>
                                 <div class="allJobsCard" style="overflow-y: scroll;">
-                                    <a href="../newPostJob/job.php?id=<?php echo $r['id']; ?>"><?php echo $r['title']; ?>">
+                                    <a href="../newPostJob/job.php?id=<?php echo $r['id']; ?>">
                                         <div class="postedJob" data-postid="<?php echo $r['id']; ?>">
                                             <div class="jobTitle">
                                                 <h4 id="jobTitle"><a href="../newPostJob/job.php?id=<?php echo $r['id']; ?>"><?php echo $r['title']; ?></a></h4>
