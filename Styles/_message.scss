@@ -27,7 +27,8 @@ $darktext: rgb(121, 121, 121);
   width: 100%;
   padding: 0;
   margin: 0;
-  background-color: $lightColor;
+  background: rgb(0,147,233);
+background: linear-gradient(90deg, rgba(0,147,233,1) 39%, rgba(128,208,199,1) 61%);
 }
 .message-container {
   margin: 150px auto 0;
