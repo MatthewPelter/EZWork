@@ -223,6 +223,10 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                     <div class="card card4" onclick="location.href='../Profile/register.php'">
                         <h4>Become Freelancer</h4>
                     </div>
+                    <?php }else{ ?>
+                   <div class="card card4"">
+                        <h4 style="opacity: 0;">Become Freelancer</h4>
+                    </div>
                     <?php } ?>
                 </div>
             </div>
