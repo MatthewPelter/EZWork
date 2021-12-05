@@ -358,9 +358,12 @@ $darktext: rgb(121, 121, 121);
           }
   
           .postedJob {
+              &:hover{
+                background: lightgrey;
+              }
               padding: 1.5rem;
               width: 100%;
-              border-bottom: .7px solid lightgrey;
+              border-top: .7px solid lightgrey;
               .jobTitle {
                 display: flex;
                 flex-direction: row;

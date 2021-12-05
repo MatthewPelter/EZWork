@@ -22359,7 +22359,11 @@ li {
 .myJobs .myJobs-parent .myJobs-grid .myJobs-container .postedJob {
   padding: 1.5rem;
   width: 100%;
-  border-bottom: .7px solid lightgrey;
+  border-top: .7px solid lightgrey;
+}
+
+.myJobs .myJobs-parent .myJobs-grid .myJobs-container .postedJob:hover {
+  background: lightgrey;
 }
 
 .myJobs .myJobs-parent .myJobs-grid .myJobs-container .postedJob .jobTitle {
