@@ -289,8 +289,8 @@ if (mysqli_num_rows($result) > 0) {
                                    
                                 <?php
                                         }
-                                        if (mysqli_num_rows($jobResult) > 0) {
-                                            while ($r = mysqli_fetch_assoc($jobResult)) {
+                                        if (mysqli_num_rows($completedJobData) > 0) {
+                                            while ($r = mysqli_fetch_assoc($completedJobData)) {
                                 ?>
                                     <span><?php echo $r['title']; ?></span>
                                 <?php                   
