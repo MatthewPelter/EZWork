@@ -35,9 +35,9 @@ $userID = $_SESSION['user_id'];
     <?php include '../navbar.php'; ?>
     <!-- END NAVBAR -->
 
-    <div class="AllFreelancers">
+    <div class="myHired">
 
-        <div class="AllFreelancersHeader">
+        <div class="myHiredHeader">
             <h2>My Hires</h2>
             <ul>
                 <li><a href="../ClientProfile/index.php">My Profile</a></li>
@@ -45,11 +45,15 @@ $userID = $_SESSION['user_id'];
                 <li>My Hires</li>
             </ul>
         </div>
-        <div class="AllFreelancersContainer">
+        <div class="myHiredContainer">
         <?php
                 if( mysqli_num_rows($jobResult) == 0){
         ?>
-                <span>Seems like you have not hired anyone for some reason.</span>
+                <div class="noHired">
+                    <span>Seems like you have not hired anyone for some reason.</span>
+                    <img src="../Image/sad-cartoon.gif" alt="no-activity">
+                </div>
+               
         <?php
                 }
                 if (mysqli_num_rows($jobResult) > 0) {
