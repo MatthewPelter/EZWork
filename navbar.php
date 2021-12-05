@@ -103,7 +103,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
             <a href="../Freelancer/AllFreelancers">
                 <li>Discover</li>
             </a>
-            <a href="#/">
+            <a href="../Freelancer/myHires.php">
                 <li>Your Hires</li>
             </a>
             <a href="../Profile/register.php">

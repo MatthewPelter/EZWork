@@ -48,7 +48,7 @@ $userID = $_SESSION['user_id'];
         <div class="myJobs-container">
             <div class="myJobs-container-header">
                 <div class="searchBar">
-                    <h3>All Jobs Postings</h3>
+                    <h3>All My Job Postings</h3>
                 </div>
 
             </div>
