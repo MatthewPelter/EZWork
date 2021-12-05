@@ -209,8 +209,6 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                 </div>
             </div>
         </div>
-        <?php if ($avatarFetch['freelancer_id'] == NULL) { 
-        ?>
         <div class="freelancerNav">
             <span onclick="toggleTalent()" id="talents">Freelancers</span>
             <div class="talentCardContainer">
@@ -221,15 +219,14 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                     <div class="card card2" onclick="location.href='../Freelancer/myHires'">
                         <h4>My Hires</h4>
                     </div>
+                    <?php if ($avatarFetch['freelancer_id'] == NULL) { ?>
                     <div class="card card4" onclick="location.href='../Profile/register.php'">
                         <h4>Become Freelancer</h4>
                     </div>
+                    <?php } ?>
                 </div>
             </div>
         </div>
-        <?php
-            } 
-        ?>
         <div class="marketNav">
             <span onclick="location.href='../Market/market'">Marketplace</span>
         </div>
