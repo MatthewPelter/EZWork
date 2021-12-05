@@ -276,6 +276,9 @@ if (mysqli_num_rows($result) > 0) {
                             <div class="ratings">
                                 <h4>Reviews</h4>
                             </div>
+                            <div class="completedJobs">
+                                <h3>Completed Jobs</h3>
+                            </div>
                             <div class="userJobsFreelancer">
 
                                 <?php

@@ -24279,6 +24279,18 @@ a:hover {
   text-align: start;
 }
 
+.profile .profile-container .profile-body .profile-info .completedJobs {
+  padding: 1rem 0rem;
+  width: 100%;
+  border-top: .7px solid lightgrey;
+}
+
+.profile .profile-container .profile-body .profile-info .completedJobs h4 {
+  font-size: 2rem;
+  width: 100%;
+  text-align: start;
+}
+
 .profile .profile-container .profile-body .profile-info .client-info {
   width: 100%;
   display: -webkit-box;
