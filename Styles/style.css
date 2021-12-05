@@ -26339,7 +26339,7 @@ a:hover {
   }
   .market-container-header h4 {
     pointer-events: none;
-    font-size: 2rem;
+    font-size: 3rem;
     text-align: center;
     color: white;
     -webkit-text-stroke-width: 2px;
@@ -26377,6 +26377,7 @@ a:hover {
     grid-column-gap: 1rem;
   }
   .market-container .jobs-container .sortMenu {
+    margin: 1rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -26396,11 +26397,6 @@ a:hover {
     height: fit-content;
     overflow: hidden;
     overflow-y: scroll;
-    display: flex;
-    flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
   }
   .market-container .jobs-container .sortMenu #resetSortFilter {
     margin: 0.3rem 0rem;
@@ -26648,8 +26644,8 @@ a:hover {
     text-decoration: underline;
   }
   .market-container .jobs-container .sortMenu .filterCard #submitFilter {
-    margin: 0.3rem 0rem;
-    width: 70%;
+    margin: 1rem;
+    width: 90%;
     cursor: pointer;
     background: transparent;
     color: #0a345e;
@@ -26669,7 +26665,7 @@ a:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin: 0rem .5rem;
+    margin: 1rem;
     width: 100%;
   }
   .market-container .jobs-container .allJobs .allJobsContainer {
@@ -26830,6 +26826,7 @@ a:hover {
     pointer-events: none;
   }
   .market-container .jobs-container .myProfile {
+    margin: 1rem 0rem;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -26858,6 +26855,9 @@ a:hover {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .market-container .jobs-container .myProfile .header img {
     width: 2rem;

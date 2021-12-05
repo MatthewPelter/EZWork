@@ -581,7 +581,7 @@ $darktext: rgb(121, 121, 121);
         justify-content: center;
         h4{
             pointer-events: none;
-            font-size: 2rem;
+            font-size: 3rem;
             text-align: center;
             color: white;
             -webkit-text-stroke-width: 2px;
@@ -615,6 +615,7 @@ $darktext: rgb(121, 121, 121);
         grid-column-gap: 1rem;
 
         .sortMenu{
+            margin:1rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -623,9 +624,6 @@ $darktext: rgb(121, 121, 121);
             height: fit-content;
             overflow: hidden;
             overflow-y: scroll;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
 
             #resetSortFilter{
                 margin: 0.3rem 0rem;
@@ -867,8 +865,8 @@ $darktext: rgb(121, 121, 121);
                     }
                 }
                 #submitFilter{
-                    margin: 0.3rem 0rem;
-                    width: 70%;
+                    margin: 1rem;
+                    width: 90%;
                     cursor: pointer;
                     background: transparent;
                     color: $color1;
@@ -886,7 +884,7 @@ $darktext: rgb(121, 121, 121);
         .allJobs{
             display: flex;
             flex-direction: column;
-            margin: 0rem .5rem;
+            margin: 1rem;
             width: 100%;
 
             .allJobsContainer{
@@ -1009,6 +1007,7 @@ $darktext: rgb(121, 121, 121);
         }
 
         .myProfile{
+            margin: 1rem 0rem;
             width: 100%;
             display: flex;
             flex-direction: column;
@@ -1021,6 +1020,7 @@ $darktext: rgb(121, 121, 121);
                 display: flex;
                 flex-direction: row;
                 align-items: center;
+                justify-content: center;
                 img{
                     width: 2rem;
                     height: 2rem;
@@ -1091,7 +1091,7 @@ $darktext: rgb(121, 121, 121);
             cursor: pointer;
             border-radius: 6px;
             border: 1px solid $lightColor;
-            width: 100%;
+            width: 40%;
       
             &:hover {
               opacity: 0.8;
