@@ -59,6 +59,8 @@ $userID = $_SESSION['user_id'];
                             while ($f = mysqli_fetch_assoc($freelancers)) {
                     ?>
                     <span><?php echo $f['username']; ?></span>  
+                    <span><?php echo $f['avatar']; ?></span>  
+                    <span><?php echo $f['freelancer_id']; ?></span>  
                     <?php
                             }
                         }
