@@ -6234,7 +6234,7 @@ section .container .login .login-container button:hover {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding: 1rem 0rem;
+    padding: 1rem;
   }
   .profile .user-profile-header h2 {
     width: 100%;

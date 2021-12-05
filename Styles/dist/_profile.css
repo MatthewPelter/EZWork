@@ -403,7 +403,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 0rem;
+    padding: 1rem;
   }
   .profile .user-profile-header h2 {
     width: 100%;
