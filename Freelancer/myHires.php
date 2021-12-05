@@ -58,7 +58,7 @@ $userID = $_SESSION['user_id'];
                         if (mysqli_num_rows($freelancers) > 0) {
                             while ($f = mysqli_fetch_assoc($freelancers)) {
                     ?>
-                    <span><?php echo $f['description']; ?></span>  
+                    <span><?php echo $f['username']; ?></span>  
                     <?php
                             }
                         }
