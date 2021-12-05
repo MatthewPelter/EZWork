@@ -93,18 +93,36 @@ $userID = $_SESSION['user_id'];
                     <?php
                             }
                         }
-                    ?>          
+                    ?>
+                                  
+<?php
+                    }
+                }
+?>              
         </div>
-
-        <div class="myJobs-container">
+    </div>
+    <div class="myJobs-container">
             <div class="myJobs-container-header">
                 <div class="searchBar">
-                    <h3>All Job Postings With Your Hires</h3>
+                    <h3>All My Job Postings</h3>
                 </div>
 
             </div>
 
             <div class="postedJob">
+                <span>
+                    <?php
+                    $jobSQL = "SELECT * FROM jobs WHERE user_id='$userID' ORDER BY id DESC";
+                    $jobResult = mysqli_query($conn, $jobSQL) or die(mysqli_errno($conn));
+                    if (mysqli_num_rows($jobResult) == 0) {
+                        echo "You currently have no job postings listed.";
+                    }
+                    ?>
+                </span>
+                <?php
+                if (mysqli_num_rows($jobResult) > 0) {
+                    while ($r = mysqli_fetch_assoc($jobResult)) {
+                ?>
                         <div class="allJobsCard" style="overflow-y: scroll;">
 
                             <div class="postedJob" data-postid="<?php echo $r['id']; ?>">
@@ -135,8 +153,7 @@ $userID = $_SESSION['user_id'];
             <div class="spacer">
                 <h3>SPACER</h3>
             </div>
-        </div>
-    </div>    
+        </div>    
 
     <!-- Footer -->
     <?php include '../footer.php'; ?>
