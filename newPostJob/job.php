@@ -294,7 +294,7 @@ if (mysqli_num_rows($jobResult) > 0) {
                     <div class="reportMessage">
                         <div class="reportMessageCard">
                             <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-                            <p>We are going to take a closer look into the report on this job</p>
+                            <p>Our staff are going to take a closer look into the report on this job.</p>
                             <p>Thank you, for helping us keep the system safe.</p>
                         </div>
                     </div>
