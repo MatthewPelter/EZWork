@@ -24,7 +24,8 @@ li {
   width: 100%;
   padding: 0;
   margin: 0;
-  background-color: #c7e3f3;
+  background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
 }
 .message-container {
   margin: 150px auto 0;
@@ -81,7 +82,7 @@ li {
   width: 700px;
   height: 100%;
   float: left;
-  background: #f2f5f8;
+  background: $lightColor;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   color: #434651;
@@ -105,7 +106,7 @@ li {
 
 .chat .chat-header .chat-with {
   font-weight: bold;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .chat .chat-header .chat-num-messages {

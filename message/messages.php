@@ -291,7 +291,9 @@ if (isset($_GET['mid'])) {
 
 
         <!--Can't understand why cant i add a margin so just adding padding to a div for space-->
-        <div class="spacerDiv" style="padding: 2rem;width: 100%;background-color: #c7e3f3;">
+        <div class="spacerDiv" style="padding: 2rem;width: 100%;background-color: #0093E9;
+background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+">
 
         </div>
         <!-- Footer -->
