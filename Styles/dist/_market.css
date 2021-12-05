@@ -1,6 +1,6 @@
 .market-container-header {
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   background-image: url(../Image/marketBackground.jpg);
   background-size: cover;
   background-position: bottom;
@@ -13,6 +13,7 @@
   pointer-events: none;
   font-size: 4rem;
   color: white;
+  outline: lightgreen;
   text-decoration: underline;
 }
 .market-container-header p {
@@ -20,6 +21,7 @@
   margin: 1rem 0rem;
   width: 40%;
   color: white;
+  outline: lightgreen;
   font-size: 1.5rem;
   text-align: center;
 }
