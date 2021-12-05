@@ -1,6 +1,6 @@
 .market-container-header {
   width: 100%;
-  margin: 0;
+  height: 70vh;
   background-image: url(../Image/background4market.jpg);
   background-size: cover;
   display: flex;
@@ -9,7 +9,8 @@
   justify-content: center;
 }
 .market-container-header h4 {
-  font-size: 3rem;
+  font-size: 3.5rem;
+  color: white;
   text-decoration: underline;
 }
 
@@ -18,7 +19,6 @@
   width: 100%;
   background: whitesmoke;
   padding: 2.5rem 6rem;
-  margin-top: 1.5rem;
 }
 .market-container .jobs-container {
   display: grid;
