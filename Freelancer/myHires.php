@@ -101,58 +101,7 @@ $userID = $_SESSION['user_id'];
 ?>              
         </div>
     </div>
-    <div class="myJobs-container">
-            <div class="myJobs-container-header">
-                <div class="searchBar">
-                    <h3>All My Job Postings</h3>
-                </div>
-
-            </div>
-
-            <div class="postedJob">
-                <span>
-                    <?php
-                  
-                    if (mysqli_num_rows($jobResult) == 0) {
-                        echo "You currently have no job postings listed.";
-                    }
-                    ?>
-                </span>
-                <?php
-                if (mysqli_num_rows($jobResult) > 0) {
-                    while ($r = mysqli_fetch_assoc($jobResult)) {
-                ?>
-                        <div class="allJobsCard" style="overflow-y: scroll;">
-
-                            <div class="postedJob" data-postid="<?php echo $r['id']; ?>">
-                                <div class="jobTitle">
-                                    <h4 id="jobTitle"><a href="../newPostJob/job.php?id=<?php echo $r['id']; ?>"><?php echo $r['title']; ?></a></h4>
-
-                                </div>
-                                <p>Status:
-                                    <?php if ($r['status'] == 0) { ?>
-                                        <span style="color: lightgreen;"><?php echo "Open"; ?></span>
-                                    <?php } else if($r['status'] == 1) { ?>
-                                        <span style="color: red;"><?php echo "Closed"; ?></span>                         
-                                    <?php }else{ ?>
-                                        <span style="color: yellow;"><?php echo "In-Progress"; ?></span>                                              
-                                    <?php } ?>
-                                </p>
-                                <p>Job Posted on <span id="date"><?php echo $r['datePosted']; ?></span> by <span id="postedBy">Me</span></p>
-                            </div>
-                        </div>
-
-                <?php
-                    }
-                }
-                ?>
-            </div>
-
-
-            <div class="spacer">
-                <h3>SPACER</h3>
-            </div>
-        </div>    
+        
 
     <!-- Footer -->
     <?php include '../footer.php'; ?>
