@@ -472,6 +472,17 @@ if (mysqli_num_rows($jobResult) > 0) {
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.2.1/dist/sweetalert2.all.min.js"></script>
+<script>
+            //Report fun
+            function report(){
+            const reportMsg = document.querySelector('.reportMessage');
+            if (getComputedStyle(reportMsg).display === "none") {
+                reportMsg.style.display = "inline-block";
+            } else {
+                reportMsg.style.display = "none";
+            }            
+        }
+</script>
 <script type="text/javascript">
     $(document).ready(function() {
 
@@ -675,16 +686,6 @@ if (mysqli_num_rows($jobResult) > 0) {
                 }
             });
         }); // end delete btn click
-
-        //Report fun
-        function report(){
-            const reportMsg = document.querySelector('.reportMessage');
-            if (getComputedStyle(reportMsg).display === "none") {
-                reportMsg.style.display = "inline-block";
-            } else {
-                reportMsg.style.display = "none";
-            }            
-        }
 
         function copyToClipboard(link) {
             const el = document.createElement("textarea");
