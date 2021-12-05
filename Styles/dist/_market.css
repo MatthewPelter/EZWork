@@ -17,15 +17,29 @@
   -webkit-text-stroke-color: lightgreen;
 }
 .market-container-header p {
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: lightgreen;
   pointer-events: none;
   margin: 1rem 0rem;
-  width: 40%;
-  color: white;
-  outline: lightgreen;
+  width: 50%;
+  color: lightgreen;
   font-size: 1.5rem;
   text-align: center;
+}
+.market-container-header .scroll {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.market-container-header .scroll a {
+  text-decoration: none;
+  color: lightgreen;
+  cursor: pointer;
+  font-size: 2rem;
+}
+.market-container-header .scroll a:hover {
+  color: green;
+  text-decoration: underline;
 }
 
 .market-container {
