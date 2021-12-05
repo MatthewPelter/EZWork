@@ -50,7 +50,7 @@ $userID = $_SESSION['user_id'];
                 if (mysqli_num_rows($jobResult) > 0) {
                     while ($r = mysqli_fetch_assoc($jobResult)) {
 ?>
-                     <span><?php echo $r['title']; ?></span>               
+                     <span><?php echo $r['freelancer_id']; ?></span>               
 <?php
                     }
                 }
