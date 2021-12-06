@@ -41,17 +41,16 @@ $userID = $_SESSION['user_id'];
             <ul>
                 <li><a href="../ClientProfile/index.php">My Profile</a></li>
                 <li>/</li>
-                <li>Job Postings</li>
+                <li>My Job Postings</li>
             </ul>
             <button onclick="location.href='../newPostJob/length.php'">Post a New Job</button>
         </div>
         <div class="myJobs-container">
             <div class="myJobs-container-header">
                 <div class="searchBar">
-                    <h3>All Jobs Postings</h3>
+                    <h3>All My Job Postings</h3>
                 </div>
 
-                <button><i class="fa fa-sliders" aria-hidden="true"></i>Filter</button>
             </div>
 
             <div class="postedJob">
@@ -69,16 +68,21 @@ $userID = $_SESSION['user_id'];
                     while ($r = mysqli_fetch_assoc($jobResult)) {
                 ?>
                         <div class="allJobsCard" style="overflow-y: scroll;">
+
                             <div class="postedJob" data-postid="<?php echo $r['id']; ?>">
                                 <div class="jobTitle">
                                     <h4 id="jobTitle"><a href="../newPostJob/job.php?id=<?php echo $r['id']; ?>"><?php echo $r['title']; ?></a></h4>
 
                                 </div>
-                                <p>Status: <span id="status"><?php if ($r['status'] == 0) {
-                                                                    echo "Open";
-                                                                } else {
-                                                                    echo "Closed";
-                                                                } ?></span></p>
+                                <p>Status:
+                                    <?php if ($r['status'] == 0) { ?>
+                                        <span style="color: lightgreen;"><?php echo "Open"; ?></span>
+                                    <?php } else if($r['status'] == 1) { ?>
+                                        <span style="color: red;"><?php echo "Closed"; ?></span>                         
+                                    <?php }else{ ?>
+                                        <span style="color: yellow;"><?php echo "In-Progress"; ?></span>                                              
+                                    <?php } ?>
+                                </p>
                                 <p>Job Posted on <span id="date"><?php echo $r['datePosted']; ?></span> by <span id="postedBy">Me</span></p>
                             </div>
                         </div>
@@ -94,6 +98,7 @@ $userID = $_SESSION['user_id'];
                 <h3>SPACER</h3>
             </div>
         </div>
+
     </div>
   
     <!-- Footer -->

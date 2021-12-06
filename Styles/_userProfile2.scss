@@ -331,6 +331,16 @@ $darktext: rgb(121, 121, 121);
                         text-align: start;
                     }
                 }
+                .completedJobs{
+                    padding: 1rem 0rem;
+                    width: 100%;
+                    border-top: .7px solid lightgrey;
+                    h4{
+                        font-size: 2rem;
+                        width: 100%;
+                        text-align: start;
+                    }
+                }
                 .client-info{
                     width: 100%;
                     display: flex;

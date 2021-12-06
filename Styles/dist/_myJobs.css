@@ -43,7 +43,7 @@
   background: #0a345e;
 }
 .myJobs .myJobs-container {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -70,25 +70,6 @@
 .myJobs .myJobs-container .myJobs-container-header .searchBar h3 {
   font-size: 1.5rem;
   color: #0a345e;
-}
-.myJobs .myJobs-container .myJobs-container-header button {
-  opacity: 0;
-  border-radius: 15px;
-  border: none;
-  background: #e9e9e9;
-  font-size: 1rem;
-  color: #0a345e;
-  font-weight: bolder;
-  padding: 0.6rem 1.5rem;
-  margin-right: 0.25rem;
-  border: 1px solid lightgrey;
-}
-.myJobs .myJobs-container .myJobs-container-header button i {
-  margin-right: 0.3rem;
-}
-.myJobs .myJobs-container .myJobs-container-header button:hover {
-  transition: all 0.2s ease;
-  background: #dbdbdb;
 }
 .myJobs .myJobs-container .postedJob {
   padding: 1.5rem;

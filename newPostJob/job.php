@@ -287,14 +287,29 @@ if (mysqli_num_rows($jobResult) > 0) {
 
 
                 <?php if ($unameFetched['username'] != $_SESSION['userid']) { ?>
-                    <div class="flag">
+                    <div class="flag" onclick="report()">
                         <i class="fa fa-flag" aria-hidden="true"></i>
                         <span>Flag as Inappropiate</span>
+                    </div>
+                    <div class="reportMessage">
+                        <div class="reportMessageCard">
+                            <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                            <p>Our staff are going to take a closer look into the report on this job.</p>
+                            <p>Thank you, for helping us keep the system safe.</p>
+                        </div>
                     </div>
                 <?php } ?>
                 <?php if ($unameFetched['username'] == $_SESSION['userid'] && $r['status'] != -1) {
                 ?>
+
+                <?php
+                    if( $r['status'] != 1){ 
+                ?>
                     <input type="button" onclick="location.href = 'edit?id=<?php echo $r['id']; ?>';" id="editBtn" value="Edit Post">
+                <?php
+                    }
+                ?>
+                   
                     <input type="button" id="deleteBtn" style="color: red;" value="Delete Post">
                     <span id="result"></span>
 
@@ -464,10 +479,21 @@ if (mysqli_num_rows($jobResult) > 0) {
 
     </datalist>
 </body>
-<script src="./app.js"></script>
+<!--<script src="./app.js"></script>-->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.2.1/dist/sweetalert2.all.min.js"></script>
+<script>
+            //Report fun
+            function report(){
+            const reportMsg = document.querySelector('.reportMessage');
+            if (getComputedStyle(reportMsg).display === "none") {
+                reportMsg.style.display = "inline-block";
+            } else {
+                reportMsg.style.display = "none";
+            }            
+        }
+</script>
 <script type="text/javascript">
     $(document).ready(function() {
 

@@ -104,28 +104,27 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
 <body>
 
     <?php include '../navbar.php'; ?>
-
-    <div class="all-jobs-container">
-        <div class="all-jobs-container-header">
-            <h4>All EZWork Jobs</h4>
-
-            <!-- Scrap the search bar... Too much work not enough time -->
-            <!-- <div class="searchBar2">
-                <form id="searchContainer2">
-                    <input type="text" list="allskills" autocomplete="off" name="search" placeholder="Search" id="search2">
-                    <input type="submit" value="Not Configured Yet :)" id="find2" disabled>
-                </form>
-            </div> -->
-        </div>
+    <div class="market-container-header">
+        <h4>EZWork MarketPlace</h4>
+        <p>Browse through all jobs posted by thousands of our users or view all of our amazing freelancers.</p>
+        <!-- Scrap the search bar... Too much work not enough time -->
+        <!-- <div class="searchBar2">
+            <form id="searchContainer2">
+                <input type="text" list="allskills" autocomplete="off" name="search" placeholder="Search" id="search2">
+                <input type="submit" value="Not Configured Yet :)" id="find2" disabled>
+            </form>
+        </div> -->
+    </div>
+    <div class="market-container">
 
         <div class="jobs-container">
 
 
             <div class="sortMenu">
                 <button id="resetSortFilter" onclick="resetOptions()">Reset</button>
-                <div class="sort" onclick="toggleSortCard()">
+                <div class="sort">
                     <h3>Sort</h3>
-                    <i class="fa fa-sort-desc" id="sortArrow" aria-hidden="true"></i>
+                   
                 </div>
                 <div class="sortCard">
                     <div class="sortAtoZ" onclick="sort('AtoZ')">
@@ -145,11 +144,10 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                         <i class="fa fa-sort-amount-asc" aria-hidden="true"></i>
                         <p>Price: High to Low</p>
                     </div>
-                -->
+                    -->
                 </div>
-                <div class="filter" onclick="toggleFilterCard()">
+                <div class="filter">
                     <h3>Filter</h3>
-                    <i class="fa fa-sort-desc" id="filterArrow" aria-hidden="true"></i>
                 </div>
                 <div class="filterCard">
                     <form id="filterForm" action="javascript:void(0);">
@@ -307,9 +305,9 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                             $unameFetched = mysqli_fetch_assoc($unameResult);
                     ?>
 
-                            <div class="jobPost" onclick="location.href=`job.php?id=<?php echo $r['id']; ?>`">
+                            <div class="jobPost" onclick="location.href=`../newPostJob/job.php?id=<?php echo $r['id']; ?>`">
                                 <div class="job-title">
-                                    <a href="job.php?id=<?php echo $r['id']; ?>"><?php echo $r['title']; ?></a>
+                                    <a href="../newPostJob/job.php?id=<?php echo $r['id']; ?>"><?php echo $r['title']; ?></a>
                                 </div>
 
                                 <!-- ----------------------------------------- -->
@@ -405,8 +403,71 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                 </div>
 
             </div>
+        </div>   
+        <div class="AllFreelancers">
+
+            <div class="AllFreelancersHeader">
+                <h2>All <span>EZWork</span> Freelancers</h2>
+            </div>
+            <div class="AllFreelancersContainer">
+            <?php
+                        $sql = "SELECT username, avatar, freelancer_id FROM clients";
+                        $result = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
+                        if (mysqli_num_rows($result) > 0) {
+                            while ($row = mysqli_fetch_assoc($result)) {
+                                if ($row['username'] != $_SESSION['userid']) {
+    
+                                    if ($row['freelancer_id'] != NULL) {
+                        ?>
+                         
+                        <a href="../Profile/userprofile.php?name=<?php echo $row['username']; ?>">
+                            <div class="freelancerCard" onclick="location.href=`" >
+                                <div class="freelancerImg">
+                                    <img src="<?php echo $row['avatar']; ?>" alt=`<?php echo $row['username']; ?>`>
+                                </div>
+                                <div class="freelancerInfo">
+                                    <h2><?php echo $row['username']; ?></h2>
+                                    
+                                    <!-- Couldn't get the data such as expertise for each freelacner
+                                    <h3>
+                                        Software Developer                                
+                                    </h3>
+                                    <h4>$ 
+                                        <span>
+                                            10
+                                        </span>
+                                         per hour
+                                    </h4>
+                                    
+                                    <h5>
+                                       
+                                    </h5>
+                                    -->
+                                    <?php
+                                        $freeID = $row['freelancer_id'];
+                                        $pullJobs = mysqli_query($conn, "SELECT COUNT(*) AS completedJobs FROM jobs WHERE freelancer_id = '$freeID' AND status=1");
+                                        $pullJobCount = mysqli_fetch_assoc($pullJobs);                            
+                                    ?>
+                                    <p><?php echo $pullJobCount['completedJobs']; ?> jobs completed</p>
+                                </div>
+                            </div>
+                        </a>
+    
+    
+    
+    
+                            <?php
+                                    }
+                                }
+                            }
+                        }
+                        ?>             
+            </div>
         </div>
+        
     </div>
+
+
 
 
     <?php include '../footer.php'; ?>
@@ -423,7 +484,7 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <!-- This script is used to function the filer section-->
 <script type="text/javascript">
-    var url = "https://ez-work.herokuapp.com/newPostJob/jobs?";
+    var url = "https://ez-work.herokuapp.com/Market/market?";
 
     // this function is such a mess but it works 
     function sort(by) {
@@ -432,7 +493,7 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
         if (text.indexOf("sort") > 0) {
             var remove = text.substring(text.indexOf("sort") - 1, text.length);
             text = text.replace(remove, "");
-            if (text == "https://ez-work.herokuapp.com/newPostJob/jobs") {
+            if (text == "https://ez-work.herokuapp.com/Market/market") {
                 newpage = text + "?sort=" + by;
             } else {
                 newpage = text + "&sort=" + by;
@@ -440,7 +501,7 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
 
             window.location = newpage;
         } else {
-            if (window.location.href == "https://ez-work.herokuapp.com/newPostJob/jobs") {
+            if (window.location.href == "https://ez-work.herokuapp.com/Market/market") {
                 newpage = window.location.href + "?sort=" + by;
             } else {
                 newpage = text + "&sort=" + by;
@@ -452,38 +513,11 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
 
     $('#submitFilter').click(function() {
 
-        window.location = "https://ez-work.herokuapp.com/newPostJob/jobs?" + $('#filterForm').serialize();
+        window.location = "https://ez-work.herokuapp.com/Market/market?" + $('#filterForm').serialize();
     });
 
     function resetOptions() {
-        window.location = "https://ez-work.herokuapp.com/newPostJob/jobs";
-    }
-
-    const sortArrow = document.getElementById('sortArrow');
-
-    function toggleSortCard() {
-        const sortCard = document.querySelector('.sortCard');
-        if (getComputedStyle(sortCard).display === "none") {
-            sortArrow.style.transform = "rotate(180deg)";
-            sortCard.style.display = "inline-block";
-        } else {
-            sortCard.style.display = "none";
-            sortArrow.style.transform = "rotate(360deg)";
-        }
-    }
-
-
-    const filterArrow = document.getElementById('filterArrow');
-
-    function toggleFilterCard() {
-        const filterCard = document.querySelector('.filterCard');
-        if (getComputedStyle(filterCard).display === "none") {
-            filterArrow.style.transform = "rotate(180deg)";
-            filterCard.style.display = "inline-block";
-        } else {
-            filterCard.style.display = "none";
-            filterArrow.style.transform = "rotate(360deg)";
-        }
+        window.location = "https://ez-work.herokuapp.com/Market/market";
     }
 
     function toggleHourlyCard() {

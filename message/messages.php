@@ -206,8 +206,8 @@ if (isset($_GET['mid'])) {
                                                     <div class="message my-message">
                                                         <?php echo $row['Sender']; ?> is interested in your project you posted.<br />
                                                         Make sure to view their profile and rating before you accept their proposal.<br />
-                                                        <span class="clicker" onclick="respondToJob(<?php echo $row['jobID']; ?>, <?php echo $fetchID; ?>, 'accept')">Agree</span>
-                                                        <span class="clicker" onclick="respondToJob(<?php echo $row['jobID']; ?>, <?php echo $fetchID; ?>, 'deny')">Deny</span>
+                                                        <span onclick="respondToJob(<?php echo $row['jobID']; ?>, <?php echo $fetchID; ?>, 'accept')" style="cursor: pointer;font-size: 1.25rem;color:royalblue;">Agree</span>
+                                                        <span onclick="respondToJob(<?php echo $row['jobID']; ?>, <?php echo $fetchID; ?>, 'deny')" style="cursor: pointer;font-size: 1.25rem;color:maroon;">Deny</span>
                                                         <?php echo $row['body']; ?>
                                                     </div>
                                                 </li>
@@ -295,7 +295,8 @@ if (isset($_GET['mid'])) {
 
 
         <!--Can't understand why cant i add a margin so just adding padding to a div for space-->
-        <div class="spacerDiv" style="padding: 2rem;width: 100%;background-color: #c7e3f3;">
+        <div class="spacerDiv" style="padding: 2rem;width: 100%;background: rgb(0,147,233);
+background: linear-gradient(90deg, rgba(0,147,233,1) 39%, rgba(128,208,199,1) 61%);">
 
         </div>
         <!-- Footer -->

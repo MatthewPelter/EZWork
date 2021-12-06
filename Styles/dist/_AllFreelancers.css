@@ -1,0 +1,190 @@
+.AllFreelancers {
+  width: 100%;
+  background: whitesmoke;
+  padding: 2.5rem 10rem;
+  margin: 0;
+}
+.AllFreelancers .AllFreelancersHeader {
+  width: 100%;
+  margin: 1rem 0rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.AllFreelancers .AllFreelancersHeader h2 {
+  color: #0a345e;
+  font-size: 2rem;
+}
+.AllFreelancers .AllFreelancersHeader ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.AllFreelancers .AllFreelancersHeader ul li {
+  margin: 0rem 0.2rem;
+  font-size: 0.9rem;
+  color: #797979;
+}
+.AllFreelancers .AllFreelancersHeader ul li a {
+  text-decoration: none;
+  color: #054e97;
+}
+.AllFreelancers .AllFreelancersHeader ul li a:hover {
+  text-decoration: underline;
+}
+.AllFreelancers .AllFreelancersContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  margin: auto;
+  row-gap: 5rem;
+  column-gap: 3rem;
+}
+.AllFreelancers .AllFreelancersContainer .freelancerCard {
+  cursor: pointer;
+  border-radius: 10px;
+  border: 3px solid #054e97;
+  width: 100%;
+}
+.AllFreelancers .AllFreelancersContainer .freelancerCard:hover {
+  opacity: 0.8;
+}
+.AllFreelancers .AllFreelancersContainer .freelancerCard .freelancerImg {
+  height: 18rem;
+  width: 100%;
+  background-color: white;
+  border-bottom: 3px solid #054e97;
+}
+.AllFreelancers .AllFreelancersContainer .freelancerCard .freelancerImg img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.AllFreelancers .AllFreelancersContainer .freelancerCard .freelancerInfo {
+  width: 100%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+.AllFreelancers .AllFreelancersContainer .freelancerCard .freelancerInfo h2 {
+  font-size: 1.5rem;
+  color: #054e97;
+}
+.AllFreelancers .AllFreelancersContainer .freelancerCard .freelancerInfo h3 {
+  font-size: 1.4rem;
+  color: #0a345e;
+}
+.AllFreelancers .AllFreelancersContainer .freelancerCard .freelancerInfo h4,
+.AllFreelancers .AllFreelancersContainer .freelancerCard .freelancerInfo h5,
+.AllFreelancers .AllFreelancersContainer .freelancerCard .freelancerInfo p {
+  color: #1b1a1a;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 754px) {
+  .AllFreelancers {
+    width: 100%;
+    background: whitesmoke;
+    padding: 2.5rem 1rem;
+    margin: 0;
+  }
+  .AllFreelancers .AllFreelancersHeader {
+    width: 100%;
+    margin: 1rem 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .AllFreelancers .AllFreelancersHeader h2 {
+    width: 100%;
+    text-align: center;
+    color: #0a345e;
+    font-size: 2rem;
+  }
+  .AllFreelancers .AllFreelancersHeader ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .AllFreelancers .AllFreelancersHeader ul li {
+    margin: 0rem 0.2rem;
+    font-size: 1rem;
+    color: #797979;
+  }
+  .AllFreelancers .AllFreelancersHeader ul li a {
+    text-decoration: none;
+    color: #054e97;
+  }
+  .AllFreelancers .AllFreelancersHeader ul li a:hover {
+    text-decoration: underline;
+  }
+  .AllFreelancers .AllFreelancersContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: none;
+    margin: 0;
+    row-gap: 0;
+    column-gap: 0;
+  }
+  .AllFreelancers .AllFreelancersContainer .freelancerCard {
+    cursor: pointer;
+    border-radius: 10px;
+    border: 3px solid #054e97;
+    width: 80%;
+  }
+  .AllFreelancers .AllFreelancersContainer .freelancerCard:hover {
+    opacity: 0.8;
+  }
+  .AllFreelancers .AllFreelancersContainer .freelancerCard .freelancerImg {
+    height: 14rem;
+    width: 100%;
+    background-color: white;
+    border-bottom: 3px solid #054e97;
+  }
+  .AllFreelancers .AllFreelancersContainer .freelancerCard .freelancerImg img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .AllFreelancers .AllFreelancersContainer .freelancerCard .freelancerInfo {
+    width: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+  }
+  .AllFreelancers .AllFreelancersContainer .freelancerCard .freelancerInfo h2 {
+    font-size: 1.5rem;
+    color: #054e97;
+  }
+  .AllFreelancers .AllFreelancersContainer .freelancerCard .freelancerInfo h3 {
+    font-size: 1.4rem;
+    color: #0a345e;
+  }
+  .AllFreelancers .AllFreelancersContainer .freelancerCard .freelancerInfo h4,
+.AllFreelancers .AllFreelancersContainer .freelancerCard .freelancerInfo h5,
+.AllFreelancers .AllFreelancersContainer .freelancerCard .freelancerInfo p {
+    color: #1b1a1a;
+    font-size: 1rem;
+  }
+}

@@ -17,19 +17,18 @@ li {
   list-style-type: none;
 }
 */
-$color1: #0a345e;
-$lightColor: #054e97;
-$darktext: rgb(121, 121, 121);
-.mobileSpacer{
+.mobileSpacer {
   display: none;
 }
+
 .body-container {
   width: 100%;
   padding: 0;
   margin: 0;
-  background: rgb(0,147,233);
-background: linear-gradient(90deg, rgba(0,147,233,1) 39%, rgba(128,208,199,1) 61%);
+  background: #0093e9;
+  background: linear-gradient(90deg, #0093e9 39%, #80d0c7 61%);
 }
+
 .message-container {
   margin: 150px auto 0;
   width: 1000px;
@@ -44,16 +43,14 @@ background: linear-gradient(90deg, rgba(0,147,233,1) 39%, rgba(128,208,199,1) 61
 
 .people-list .title {
   padding: 20px;
-  h4{
-    width: 100%;
-    text-align: center;
-    font-size: 1.5rem;
-    color: white;
-    text-decoration: underline;
-  }
 }
-
-
+.people-list .title h4 {
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: underline;
+}
 
 .people-list ul {
   padding: 20px;
@@ -110,15 +107,14 @@ background: linear-gradient(90deg, rgba(0,147,233,1) 39%, rgba(128,208,199,1) 61
 .chat .chat-header .chat-with {
   font-weight: bold;
   font-size: 1rem;
-
-  a{
-    text-decoration: none;
-    font-size: 1rem;
-    color: $lightColor;
-    &:hover{
-      text-decoration: underline;
-    }
-  }
+}
+.chat .chat-header .chat-with a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #054e97;
+}
+.chat .chat-header .chat-with a:hover {
+  text-decoration: underline;
 }
 
 .chat .chat-header .chat-num-messages {
@@ -261,27 +257,30 @@ background: linear-gradient(90deg, rgba(0,147,233,1) 39%, rgba(128,208,199,1) 61
   clear: both;
   height: 0;
 }
-#usernameCard{
+
+#usernameCard {
   width: 100%;
-  border-top: .7px solid lightgrey;
-  &:hover{
-    background-color: #585b69;
-  }
+  border-top: 0.7px solid lightgrey;
+}
+#usernameCard:hover {
+  background-color: #585b69;
 }
 
 @media screen and (max-width: 754px) {
-  .mobileSpacer{
+  .mobileSpacer {
     display: flex;
     padding: 2rem;
     width: 100%;
     background-color: #c7e3f3;
   }
+
   .body-container {
     width: 100%;
     padding: 0;
     margin: 0;
     background-color: #c7e3f3;
   }
+
   .message-container {
     margin: 0;
     display: flex;
@@ -433,7 +432,7 @@ background: linear-gradient(90deg, rgba(0,147,233,1) 39%, rgba(128,208,199,1) 61
   }
 
   .chat .chat-message .fa-file-o,
-  .chat .chat-message .fa-file-image-o {
+.chat .chat-message .fa-file-image-o {
     font-size: 16px;
     color: gray;
     cursor: pointer;
@@ -455,8 +454,8 @@ background: linear-gradient(90deg, rgba(0,147,233,1) 39%, rgba(128,208,199,1) 61
   }
 
   .online,
-  .offline,
-  .me {
+.offline,
+.me {
     margin-right: 3px;
     font-size: 10px;
   }

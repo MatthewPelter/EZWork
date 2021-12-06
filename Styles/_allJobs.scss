@@ -10,13 +10,13 @@ $darktext: rgb(121, 121, 121);
     // Jobs Page Top Header CSS
     .all-jobs-container-header{
         width: 100%;
-        padding: 1rem 0rem;
+        padding: 2rem 0rem;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: flex-start;
         h4{
-            width: 20%;
+            width: fit-content;
             font-size: 2rem;
         }
 

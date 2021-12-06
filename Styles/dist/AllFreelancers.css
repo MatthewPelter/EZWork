@@ -2,6 +2,7 @@
   width: 100%;
   background: whitesmoke;
   padding: 2.5rem 6rem;
+  margin: 0;
 }
 .AllFreelancers .AllFreelancersHeader {
   width: 100%;
@@ -51,6 +52,7 @@
 .AllFreelancers .AllFreelancersContainer .freelancerCard .freelancerImg {
   height: 20rem;
   width: 100%;
+  background-color: white;
   border-bottom: 3px solid #054e97;
 }
 .AllFreelancers .AllFreelancersContainer .freelancerCard .freelancerImg img {

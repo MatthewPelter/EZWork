@@ -44,14 +44,14 @@ $userID = $_SESSION['user_id'];
             <h2 id="username">Welcome, <?php echo $_SESSION['userid']; ?></h2>
             <div class="quick-links">
                 <button id="quick-link-job" onclick="location.href='../newPostJob/start.php'">Post A Job</button>
-                <button id="quick-link-market" onclick="location.href='../newPostJob/jobs.php'">Browse Marketplace</button>
+                <button id="quick-link-market" onclick="location.href='../Market/market'">Browse MarketPlace</button>
             </div>
         </div>
         <div class="user-profile-body">
             <div class="user-postings">
                 <div class="card title">
                     <h3>My Postings</h3>
-                    <span><a href="../newPostJob/jobs">All Jobs</a></span>
+                    <span><a href="../newPostJob/myJobs">All My Jobs</a></span>
                 </div>
                 <div class="card result" style="padding: 1rem;">
                     <button id="quick-link-job2" onclick="location.href='../newPostJob/start.php'">Post A Job</button>
@@ -69,6 +69,8 @@ $userID = $_SESSION['user_id'];
                 <?php
                 if (mysqli_num_rows($jobResult) > 0) {
                     while ($r = mysqli_fetch_assoc($jobResult)) {
+
+                        if ($r['status'] != 1){
                 ?>
                         <div class="allJobsCard" style="overflow-y: scroll;">
                             <div class="postedJob" data-postid="<?php echo $r['id']; ?>">
@@ -83,18 +85,21 @@ $userID = $_SESSION['user_id'];
                                         <button style="color: red;" id="deleteJob">Delete</button>
                                     </div>
                                 </div>
-                                <p>Status: <span id="status"><?php if ($r['status'] == 0) {
-                                                                    echo "Open";
-                                                                } else if ($r['status'] == -1) {
-                                                                    echo "In-Progress";
-                                                                } else {
-                                                                    echo "Closed";
-                                                                } ?></span></p>
+                                <p>Status:
+                                <?php if ($r['status'] == 0) { ?>
+                                        <span style="color: lightgreen;"><?php echo "Open"; ?></span>
+                                    <?php } else if($r['status'] == 1) { ?>
+                                        <span style="color: red;"><?php echo "Closed"; ?></span>                         
+                                    <?php }else{ ?>
+                                        <span style="color: yellow;"><?php echo "In-Progress"; ?></span>                                              
+                                    <?php } ?>                                    
+                                </p>
                                 <p>Job Posted on <span id="date"><?php echo $r['datePosted']; ?></span> by <span id="postedBy">Me</span></p>
                             </div>
                         </div>
 
                 <?php
+                        }
                     }
                 }
                 ?>

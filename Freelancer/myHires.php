@@ -3,9 +3,11 @@ session_start();
 include '../components/session-checker.php';
 require_once("../classes/DB.php");
 
-
 $username = $_SESSION['userid'];
 $userID = $_SESSION['user_id'];
+
+    $sql = "SELECT * FROM jobs WHERE user_id='$userID' AND freelancer_id <> ''";
+    $jobResult = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +18,7 @@ $userID = $_SESSION['user_id'];
             <meta name="description" content="A platform for skilled workers or talented people to freelance, find projects to work on, extra ways to earn income.">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <script src="https://kit.fontawesome.com/e9089fea9d.js" crossorigin="anonymous"></script>
-            <title>EZWork | My Postings</title>
+            <title>EZWork | My Hires</title>
             <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
@@ -33,34 +35,48 @@ $userID = $_SESSION['user_id'];
     <?php include '../navbar.php'; ?>
     <!-- END NAVBAR -->
 
-    <div class="AllFreelancers">
+    <div class="myHired">
 
-        <div class="AllFreelancersHeader">
-            <h2>All <span>EZWork</span> Freelancers</h2>
+        <div class="myHiredHeader">
+            <h2>My Hires</h2>
             <ul>
                 <li><a href="../ClientProfile/index.php">My Profile</a></li>
                 <li>/</li>
-                <li>All Freelancers</li>
+                <li>My Hires</li>
             </ul>
         </div>
-        <div class="AllFreelancersContainer">
         <?php
-                    $sql = "SELECT username, avatar, freelancer_id FROM clients";
-                    $result = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
-                    if (mysqli_num_rows($result) > 0) {
-                        while ($row = mysqli_fetch_assoc($result)) {
-                            if ($row['username'] != $_SESSION['userid']) {
+                if( mysqli_num_rows($jobResult) == 0){
+        ?>
+                <div class="noHired">
+                    <span>Seems like you have not hired anyone for some reason.</span>
+                    <img src="../Image/sad-cartoon.gif" alt="no-activity">
+                </div>
+               
+        <?php
+                }
+        ?>        
+        <div class="myHiredContainer">
+        <?php
 
-                                if ($row['freelancer_id'] != NULL) {
+                if (mysqli_num_rows($jobResult) > 0) {
+                    while ($r = mysqli_fetch_assoc($jobResult)) {
+        ?>
+                    <?php
+                        $freeID = $r['freelancer_id'];
+                        $getFreelancersSQL = "SELECT * from clients WHERE freelancer_id='$freeID'";
+                        $freelancers = mysqli_query($conn, $getFreelancersSQL) or die(mysqli_errno($conn));
+                    
+                        if (mysqli_num_rows($freelancers) > 0) {
+                            while ($f = mysqli_fetch_assoc($freelancers)) {
                     ?>
-                     
-                    <a href="../Profile/userprofile.php?name=<?php echo $row['username']; ?>">
-                        <div class="freelancerCard" onclick="location.href=`" >
+                    <a href="../Profile/userprofile.php?name=<?php echo $f['username']; ?>">
+                        <div class="freelancerCard">
                             <div class="freelancerImg">
-                                <img src="<?php echo $row['avatar']; ?>" alt=`<?php echo $row['username']; ?>`>
+                                <img src="<?php echo $f['avatar']; ?>" alt=`<?php echo $f['username']; ?>`>
                             </div>
                             <div class="freelancerInfo">
-                                <h2><?php echo $row['username']; ?></h2>
+                                <h2><?php echo $f['username']; ?></h2>
                                 
                                 <!-- Couldn't get the data such as expertise for each freelacner
                                 <h3>
@@ -78,7 +94,7 @@ $userID = $_SESSION['user_id'];
                                 </h5>
                                 -->
                                 <?php
-                                    $freeID = $row['freelancer_id'];
+                                    $freeID = $f['freelancer_id'];
                                     $pullJobs = mysqli_query($conn, "SELECT COUNT(*) AS completedJobs FROM jobs WHERE freelancer_id = '$freeID' AND status=1");
                                     $pullJobCount = mysqli_fetch_assoc($pullJobs);                            
                                 ?>
@@ -86,19 +102,18 @@ $userID = $_SESSION['user_id'];
                             </div>
                         </div>
                     </a>
-
-
-
-
-                        <?php
-                                }
+                    <?php
                             }
                         }
+                    ?>
+                                  
+<?php
                     }
-                    ?>             
+                }
+?>              
         </div>
-    </div>
-  
+    </div>    
+
     <!-- Footer -->
     <?php include '../footer.php'; ?>
     <!-- END Footer -->
@@ -107,8 +122,9 @@ $userID = $_SESSION['user_id'];
         <datalist id="allskills">
         
         </datalist>
+
+    
 </body>
 <!--Script for the search bar and datalist-->
 <script src="../SkillsContainer/searchProfile.js"></script>
-
 </html>

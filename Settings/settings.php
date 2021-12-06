@@ -59,7 +59,7 @@ $row = mysqli_fetch_assoc($result);
             <div class="settings-account-container">
                 <div class="settings-account-card">
                     <h3>Account</h3>
-                    <i class="fa fa-pencil" id="editAccountIcon" aria-hidden="true"></i>
+                    <i style="pointer-events: none;opacity: 0;" class="fa fa-pencil" id="editAccountIcon" aria-hidden="true"></i>
                 </div>
                 <div class="settings-account-profile-image">
                     <div class="image-card">
@@ -168,7 +168,7 @@ $row = mysqli_fetch_assoc($result);
                 ?>
                 <div class="settings-balance-card2">
                     <p class="balance">Your balance is <span>$</span><span id="balance"><?php echo $getCards['funds']; ?></span></p>
-                    <button id="payBalance">Add Funds</button>
+                    <button id="payBalance" <?php if ($getCards['card'] == NULL) { echo "disabled"; } ?>>Add Funds</button>
                 </div>
             </div>
             <div class="settings-billing-container">

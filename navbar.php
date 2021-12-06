@@ -59,12 +59,14 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
 </style>
 
 <div class="profile-mobile-nav">
+    <!--
     <div class="profile-nav-search">
         <form id="searchContainer">
             <input type="text" list="allskills" autocomplete="off" name="searchNAV" placeholder="Search">
             <input type="submit" value="Find">
         </form>
     </div>
+    -->
     <div class="mobileNavCard" id="navProfile">
         <img src="<?php echo $avatarFetch['avatar']; ?>" alt="Avatar">
         <span id="user"><?php echo $_SESSION['userid']; ?></span>
@@ -80,10 +82,10 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                 <li>My Profile</li>
             </a>
             <a href="../newPostJob/myJobs.php">
-                <li>All My Job Posts</li>
+                <li>My Job Posts</li>
             </a>
             <a href="#/">
-                <li>All Contracts</li>
+                <li>My Contracts</li>
             </a>
             <a href="../newPostJob/length.php">
                 <li>Post A Job</li>
@@ -98,14 +100,11 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
     </div>
     <div class="mobileFreelanceCard">
         <ul>
-            <a href="../newPostJob/jobs.php">
+            <a href="../Freelancer/AllFreelancers">
                 <li>Discover</li>
             </a>
-            <a href="#/">
+            <a href="../Freelancer/myHires.php">
                 <li>Your Hires</li>
-            </a>
-            <a href="#/">
-                <li>Freelance History</li>
             </a>
             <a href="../Profile/register.php">
                 <li>Become Freelancer</li>
@@ -134,6 +133,9 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
         </ul>
     </div>
     -->
+    <div class="mobileNavCard" onclick="location.href='../Market/market.php'">
+        <p>Marketplace</p>
+    </div>
 
     <div class="mobileNavCard" onclick="location.href='../message/messages'">
         <p>Messages</p>
@@ -177,7 +179,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                 <h2>E<span>z</span>Work</h2>
             </a>
         </div>
-        <div class="searchBar">
+        <div class="searchBar" style="opacity: 0;pointer-events: none;">
             <form id="searchContainer">
                 <input type="text" list="allskills" autocomplete="off" name="search" placeholder="Search">
                 <input type="submit" value="Find">
@@ -187,14 +189,19 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
             <span onclick="toggleJob()" id="jobs">Jobs</span>
             <div class="jobCardContainer">
                 <div class="jobCard">
+                    <!--
                     <div class="card card1" onclick="location.href='../ClientProfile/index.php'">
+                        <h4>My Profile</h4>
+                    </div>
+                    -->
+                    <div class="card card2" onclick="location.href='../newPostJob/jobs'">
+                        <h4>All Jobs</h4>
+                    </div>                    
+                    <div class="card card2" onclick="location.href='../newPostJob/myJobs'">
                         <h4>My Jobs</h4>
                     </div>
-                    <div class="card card2" onclick="location.href='../newPostJob/myJobs.php'">
-                        <h4>All Job Posts</h4>
-                    </div>
                     <div class="card card3" onclick="location.href='../newPostJob/contracts.php'">
-                        <h4>All Contracts</h4>
+                        <h4>My Contracts</h4>
                     </div>
                     <div class="card card4" onclick="location.href='../newPostJob/length.php'">
                         <h4>Post A Job</h4>
@@ -202,29 +209,31 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                 </div>
             </div>
         </div>
-        <?php // if ($avatarFetch['freelancer_id'] != NULL) { 
-        ?>
         <div class="freelancerNav">
-            <span onclick="toggleTalent()" id="talents">Freelancer</span>
+            <span onclick="toggleTalent()" id="talents">Freelancers</span>
             <div class="talentCardContainer">
                 <div class="talentCard">
                     <div class="card card1" onclick="location.href='../Freelancer/AllFreelancers.php'">
                         <h4>Discover</h4>
                     </div>
-                    <div class="card card2" onclick="location.href='../newPostJob/contracts.php'">
-                        <h4>Your Hires</h4>
+                    <div class="card card2" onclick="location.href='../Freelancer/myHires'">
+                        <h4>My Hires</h4>
                     </div>
-                    <div class=" card card4">
-                        <h4>Freelance History</h4>
-                    </div>
+                    <?php if ($avatarFetch['freelancer_id'] == NULL) { ?>
                     <div class="card card4" onclick="location.href='../Profile/register.php'">
                         <h4>Become Freelancer</h4>
                     </div>
+                    <?php }else{ ?>
+                   <div class="card card4"" style="pointer-events: none;">
+                        <h4 style="opacity: 0;">Become Freelancer</h4>
+                    </div>
+                    <?php } ?>
                 </div>
             </div>
         </div>
-        <?php // } 
-        ?>
+        <div class="marketNav">
+            <span onclick="location.href='../Market/market'">Marketplace</span>
+        </div>
 
         <!--<div class="projectsNav">
             <span onclick="toggleProject()" id="projects">Projects</span>
