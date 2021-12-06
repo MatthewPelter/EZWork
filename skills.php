@@ -615,6 +615,7 @@ HOME INDEX
     </div>
 </body>
 <script src="./SkillsContainer/allSkillsPage.js"></script>
+<script src="./js/mainPage.js"></script>
 <!--Toggle the nav button-->
 <script>
     const navIcon = document.getElementById("nav-burger");
