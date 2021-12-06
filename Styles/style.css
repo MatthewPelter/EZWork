@@ -4865,7 +4865,6 @@ section .container .login .login-container button:hover {
 .helpContainer .helpCard .card h4 {
   font-weight: lighter;
   font-size: 0.9rem;
-  text-align: center;
 }
 
 .helpContainer .helpCard .card:hover {
@@ -4875,7 +4874,7 @@ section .container .login .login-container button:hover {
 .helpContainer .helpCard::after {
   content: "";
   position: absolute;
-  top: -26%;
+  top: -25%;
   left: 5%;
   border-width: 0.8rem;
   border-style: solid;
@@ -4957,7 +4956,6 @@ section .container .login .login-container button:hover {
 .notificationCardContainer .notificationCard .card h4 {
   font-weight: lighter;
   font-size: 0.9rem;
-  text-align: center;
 }
 
 .notificationCardContainer .notificationCard .card:hover {
@@ -5002,7 +5000,6 @@ section .container .login .login-container button:hover {
 .talentCardContainer .talentCard .card h4 {
   font-weight: lighter;
   font-size: 0.9rem;
-  text-align: center;
 }
 
 .talentCardContainer .talentCard .card:hover {
@@ -5047,7 +5044,6 @@ section .container .login .login-container button:hover {
 .jobCardContainer .jobCard .card h4 {
   font-weight: lighter;
   font-size: 0.9rem;
-  text-align: center;
 }
 
 .jobCardContainer .jobCard .card:hover {

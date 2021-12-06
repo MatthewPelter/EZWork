@@ -226,7 +226,6 @@
       h4 {
         font-weight: lighter;
         font-size: 0.9rem;
-        text-align: center;
       }
       &:hover {
         background: lightgrey;
@@ -236,7 +235,7 @@
   .helpCard::after {
     content: "";
     position: absolute;
-    top: -26%;
+    top: -25%;
     left: 5%;
     border-width: 0.8rem;
     border-style: solid;
@@ -302,7 +301,6 @@
       h4 {
         font-weight: lighter;
         font-size: 0.9rem;
-        text-align: center;
       }
       &:hover {
         background: lightgrey;
@@ -339,7 +337,6 @@
       h4 {
         font-weight: lighter;
         font-size: 0.9rem;
-        text-align: center;
       }
       &:hover {
         background: lightgrey;
@@ -376,7 +373,6 @@
       h4 {
         font-weight: lighter;
         font-size: 0.9rem;
-        text-align: center;
       }
       &:hover {
         background: lightgrey;
