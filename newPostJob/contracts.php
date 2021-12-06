@@ -68,7 +68,7 @@ $checkFreelancer = $checkFreelancer['freelancer_id'];
 
                 if (mysqli_num_rows($fetchContracts) > 0) {
                     while ($row = mysqli_fetch_assoc($fetchContracts)) { 
-                        $uid = $r['user_id'];
+                        $uid = $row['user_id'];
                         $unameSQL = "SELECT username, avatar FROM clients WHERE id='$uid'";
                         $unameResult = mysqli_query($conn, $unameSQL);
                         $unameFetched = mysqli_fetch_assoc($unameResult);                        
