@@ -481,7 +481,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
             </div>
         </div>
 
-        <!--<i class="fa fa-search" id="mobileSearch"></i>-->
+        <i class="fa fa-search" id="mobileSearch"></i>
         <i class="fa fa-times" id="ExitmobileSearch"></i>
     </div>
 </div>
