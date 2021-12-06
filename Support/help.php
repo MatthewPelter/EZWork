@@ -28,7 +28,7 @@ require_once('../classes/DB.php');
     
     <div class="help">
         <div class="helpHeader">
-            <h2>All EZWork Guides</h2>
+            <h2>Help & Support</h2>
         </div>
 
         <div class="helpContainer">

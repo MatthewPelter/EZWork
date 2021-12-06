@@ -6,13 +6,9 @@ require_once("../classes/DB.php");
 $username = $_SESSION['userid'];
 $user_id = $_SESSION['user_id'];
 
-$checkFreelancer = mysqli_query($conn, "SELECT freelancer_id FROM clients WHERE id = '$user_id'");
-$checkFreelancer = mysqli_fetch_assoc($checkFreelancer);
-$checkFreelancer = $checkFreelancer['freelancer_id'];
+$sql = "SELECT * FROM jobs WHERE user_id='$userID' AND freelancer_id <> ''";
+$jobResult = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
 
-//if ($checkFreelancer == NULL) {
-//    die("You are not a freelancer buddy");
-//}
 ?>
 
 
@@ -64,14 +60,12 @@ $checkFreelancer = $checkFreelancer['freelancer_id'];
             <div class="postedJob">
 
                 <?php
-                $fetchContracts = mysqli_query($conn, "SELECT jobs.*, clients.username AS uname FROM jobs INNER JOIN clients ON jobs.user_id = clients.id WHERE jobs.freelancer_id='$checkFreelancer' ORDER BY jobs.id DESC") or die(mysqli_error($conn));
-
-                if (mysqli_num_rows($fetchContracts) > 0) {
-                    while ($row = mysqli_fetch_assoc($fetchContracts)) { ?>
+                if (mysqli_num_rows($jobResult) > 0) {
+                    while ($r = mysqli_fetch_assoc($jobResult)) { ?>
                         <div class="allJobsCard" style="overflow-y: scroll;">
-                            <div class="postedJob" data-postid="<?php echo $row['id']; ?>">
+                            <div class="postedJob" data-postid="<?php echo $r['id']; ?>">
                                 <div class="jobTitle">
-                                    <h4 id="jobTitle"><a href="../newPostJob/job.php?id=<?php echo $row['id']; ?>"><?php echo $row['title']; ?></a></h4>
+                                    <h4 id="jobTitle"><a href="../newPostJob/job.php?id=<?php echo $r['id']; ?>"><?php echo $row['title']; ?></a></h4>
 
                                 </div>
                                 <p>Status:
@@ -83,7 +77,7 @@ $checkFreelancer = $checkFreelancer['freelancer_id'];
                                         <span style="color: yellow;"><?php echo "In-Progress"; ?></span>                                              
                                     <?php } ?>                                    
                                 </p>
-                                <p>Job Posted on <span id="date"><?php echo $row['datePosted']; ?></span> by <span id="postedBy">                                            <?php if ($unameFetched['username'] != $_SESSION['userid']) {
+                                <p>Job Posted on <span id="date"><?php echo $r['datePosted']; ?></span> by <span id="postedBy">                                            <?php if ($unameFetched['username'] != $_SESSION['userid']) {
                                     echo "<a href='../Profile/userprofile.php?name=" . $unameFetched['username'] . "'>" . $unameFetched['username'] . "</a>";
                                 } else {
                                     echo $unameFetched['username'];

@@ -157,6 +157,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
             </a>
         </ul>
     </div>
+    
     <div class="mobileNavCard" onclick="location.href='../notifications'">
         <p>Notifications</p>
         <i class="fa fa-bell" title="Notification"></i>
@@ -216,9 +217,15 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                     <div class="card card2" onclick="location.href='../newPostJob/myJobs'">
                         <h4>My Jobs</h4>
                     </div>
+                    <?php if ($avatarFetch['freelancer_id'] == NULL) { ?>
+                    <div class="card card3" onclick="location.href='../newPostJob/clienContracts.php'">
+                        <h4>My Contracts</h4>
+                    </div>
+                    <?php }else{ ?>
                     <div class="card card3" onclick="location.href='../newPostJob/contracts.php'">
                         <h4>My Contracts</h4>
                     </div>
+                    <?php } ?>                    
                     <div class="card card4" onclick="location.href='../newPostJob/length.php'">
                         <h4>Post A Job</h4>
                     </div>
