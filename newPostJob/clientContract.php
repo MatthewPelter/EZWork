@@ -67,7 +67,7 @@ $jobResult = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
                             $unameResult = mysqli_query($conn, $unameSQL);
                             $unameFetched = mysqli_fetch_assoc($unameResult);                             
                             
-                            if($r['status'] < 1){
+                            if($r['status'] !== 0){
                 ?>
                             <div class="allJobsCard" style="overflow-y: scroll;">
                                 <div class="postedJob" data-postid="<?php echo $r['id']; ?>">
