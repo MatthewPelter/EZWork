@@ -84,9 +84,19 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
             <a href="../newPostJob/myJobs.php">
                 <li>My Job Posts</li>
             </a>
-            <a href="#/">
+            <?php if ($avatarFetch['freelancer_id'] == NULL) { ?>
+            <a href="../newPostJob/clientContract.php">
                 <li>My Contracts</li>
             </a>
+            <?php
+                } else {
+            ?>
+            <a href="../newPostJob/contracts.php">
+                <li>My Contracts</li>
+            </a>            
+            <?php
+                }
+            ?>
             <a href="../newPostJob/length.php">
                 <li>Post A Job</li>
             </a>

@@ -1537,15 +1537,17 @@ header {
 .allSkillsheader{
   margin-top: 10rem;
   width: 100%;
+
   h2{
+    text-align: center;
     font-size: 3rem;
-    color: black;
+    color: $color1;
     text-decoration: underline;
   }
 }
 .allSkills{
   width: 100%;
-  margin: 5rem 3rem;
+  margin: 3rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
