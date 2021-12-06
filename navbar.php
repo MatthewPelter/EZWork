@@ -218,7 +218,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                         <h4>My Jobs</h4>
                     </div>
                     <?php if ($avatarFetch['freelancer_id'] == NULL) { ?>
-                    <div class="card card3" onclick="location.href='../newPostJob/clienContracts.php'">
+                    <div class="card card3" onclick="location.href='../newPostJob/clientContracts.php'">
                         <h4>My Contracts</h4>
                     </div>
                     <?php }else{ ?>
