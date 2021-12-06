@@ -67,7 +67,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
         </form>
     </div>
     -->
-    <div class="mobileNavCard" id="navProfile" onclick="location.href='..ClientProfile/index'">
+    <div class="mobileNavCard" id="navProfile" onclick="location.href='../ClientProfile/index'">
         <img src="<?php echo $avatarFetch['avatar']; ?>" alt="Avatar">
         <span id="user"><?php echo $_SESSION['userid']; ?></span>
         <i class="fa fa-sort-down" style="opacity: 0;"></i>

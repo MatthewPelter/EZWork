@@ -5332,13 +5332,13 @@ section .container .login .login-container button:hover {
   color: lightgreen;
 }
 
-.profile-mobile-nav .mobileNavCard {
+.profile-mobile-nav .mobileHelpCard {
   width: 100%;
   padding: 0rem 1rem;
   display: none;
 }
 
-.profile-mobile-nav .mobileNavCard ul {
+.profile-mobile-nav .mobileHelpCard ul {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5349,7 +5349,7 @@ section .container .login .login-container button:hover {
           flex-direction: column;
 }
 
-.profile-mobile-nav .mobileNavCard ul a {
+.profile-mobile-nav .mobileHelpCard ul a {
   font-size: 0.8rem;
   margin: 0.5rem 0rem;
   width: 100%;
@@ -5357,7 +5357,7 @@ section .container .login .login-container button:hover {
   color: white;
 }
 
-.profile-mobile-nav .mobileNavCard ul a:hover {
+.profile-mobile-nav .mobileHelpCard ul a:hover {
   color: lightgreen;
 }
 
