@@ -2481,6 +2481,17 @@ header {
   color: lightgray;
 }
 
+.allSkillsheader {
+  margin-top: 5rem;
+  width: 100%;
+}
+
+.allSkillsheader h2 {
+  font-size: 3rem;
+  color: black;
+  text-decoration: underline;
+}
+
 .allSkills {
   width: 100%;
   margin: 5rem 3rem;
