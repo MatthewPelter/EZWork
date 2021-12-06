@@ -119,6 +119,24 @@
   }
 
 }
+.notificationNav{
+  margin-left: 1rem;
+}
+.notificationNav,.helpNav{
+
+  i {
+    cursor: pointer;
+    padding: 0rem 0.5rem;
+    color: white;
+    font-size: 1.2rem;
+    &:hover {
+      color: lightgreen;
+    }
+  }
+}
+
+
+
 // Header pulldown
 .sessionCardContainer {
   margin-top: .8rem;
@@ -257,6 +275,44 @@
     }
   }
   .projectCard::after {
+    content: "";
+    position: absolute;
+    top: -26%;
+    left: 4%;
+    border-width: 0.8rem;
+    border-style: solid;
+    margin-left: 0.8rem;
+    transform: rotate(180deg);
+    border-color: white transparent transparent transparent;
+  }
+}
+.notificationCardContainer {
+  margin-top: 1.5rem;
+  position: absolute;
+  z-index: 1;
+  .notificationCard {
+    z-index: 1;
+    display: none;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background: white;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    border-radius: 10px;
+    .card {
+      padding: 0.3rem 0rem;
+      cursor: pointer;
+      width: 100%;
+      h4 {
+        font-weight: lighter;
+        font-size: 0.9rem;
+        margin-left: 0.8rem;
+      }
+      &:hover {
+        background: lightgrey;
+      }
+    }
+  }
+  .notificationCard::after {
     content: "";
     position: absolute;
     top: -26%;

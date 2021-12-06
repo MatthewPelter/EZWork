@@ -67,7 +67,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
         </form>
     </div>
     -->
-    <div class="mobileNavCard" id="navProfile">
+    <div class="mobileNavCard" id="navProfile" onclick="location.href='..ClientProfile/index'">
         <img src="<?php echo $avatarFetch['avatar']; ?>" alt="Avatar">
         <span id="user"><?php echo $_SESSION['userid']; ?></span>
         <i class="fa fa-sort-down" style="opacity: 0;"></i>
@@ -255,8 +255,106 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
         <div class="messagesNav">
             <a style="color: white; text-decoration: none;" href="https://ez-work.herokuapp.com/message/messages">Messages</a>
         </div>
-        <div class="guide">
 
+        <div class="notificationNav">
+            <?php
+                $notiCount = mysqli_query($conn, "SELECT COUNT(*) AS notiCount FROM notifications WHERE receiver='$user_id' AND isRead=0");
+                $notiCount = mysqli_fetch_assoc($notiCount);
+                $notiCount = $notiCount['notiCount'];
+            ?>
+            <i onclick="toggleNotifications()" class="fa fa-bell" id="notifications"><?php if ($notiCount > 0) {
+                echo $notiCount;
+            } ?></i></a>
+            <div class="notificationCardContainer">
+                <div class="notificationCard">
+                    <div class="card card1"  onclick="location.href='../notifications'">
+                        <h4>View All Notifications</h4>
+                    </div>                    
+                    <?php
+                    $notifications = mysqli_query($conn, "SELECT * FROM notifications WHERE receiver='$user_id' AND isRead=0 ORDER BY id DESC");
+                    if (mysqli_num_rows($notifications) > 0) { ?>
+                        <div class="card card1">
+                            <h4 onclick="readNotification(0);/*closeAll();*/">Mark as Read</h4>
+                        </div>
+                        <?php
+                        while ($row = mysqli_fetch_assoc($notifications)) {
+                            $senderID = $row['sender'];
+                            $senderName = mysqli_query($conn, "SELECT username FROM clients WHERE id=$senderID");
+                            $senderName = mysqli_fetch_assoc($senderName);
+                            $senderName = $senderName['username'];
+                            if ($row['type'] == 'm') {
+                        ?>
+                                <div onclick="readNotification(<?php echo $row['id']; ?>); location.href='../message/messages?mid=<?php echo $row['sender']; ?>';" class="card">
+                                    <h4>You got a message from <?php echo $senderName; ?></h4>
+                                </div>
+
+                            <?php } else if ($row['type'] == 'a') { ?>
+
+                                <div class="card">
+                                    <h4><?php echo $senderName; ?> has accepted your proposal!</h4>
+
+                                </div>
+
+                            <?php } else if ($row['type'] == 'd') { ?>
+                                <div class="card">
+                                    <h4><?php echo $senderName; ?> denied your proposal.</h4>
+
+                                </div>
+
+                            <?php } else if ($row['type'] == 'r') { ?>
+                                <div onclick="readNotification(<?php echo $row['id']; ?>); location.href='../message/messages?mid=<?php echo $row['sender']; ?>';" class="card">
+                                    <h4><?php echo $senderName; ?> has submitted a proprosal to your job.</h4>
+                                </div>
+                            <?php } else if ($row['type'] == 'p') { ?>
+                                <div class="card">
+                                    <h4><?php echo $senderName; ?> sent their payment.</h4>
+
+                                </div>
+                            <?php
+                            } else if ($row['type'] == 'pr') { ?>
+                                <div class="card">
+                                    <h4>Your payment has been released.</h4>
+
+                                </div>
+
+                            <?php
+                            } else if ($row['type'] == 'fc') { ?>
+                                <div class="card">
+                                    <h4><?php echo $senderName; ?> has completed your job.</h4>
+
+                                </div>
+
+                        <?php
+                            }
+                        }
+                    } else { ?>
+                        <div class="card card1">
+                            <h4>You're all caught up!</h4>
+                        </div>
+                    <?php } ?>
+                </div>
+            </div>
+        </div>
+
+        <div class="helpNav">
+            <i class="fa fa-question" onclick="toggleHelp()" id="question"></i>
+            <div class="helpContainer">
+                <div class="helpCard">
+                    <div class="card card1">
+                        <h4>Help & Support</h4>
+                    </div>
+                    <div class="card card2">
+                        <h4>Guides</h4>
+                    </div>
+                    <div class="card card3">
+                        <h4>Contact Us</h4>
+                    </div>
+                </div>
+            </div>            
+        </div>
+        <!--
+        <div class="guide">
+        
             <?php
             $notiCount = mysqli_query($conn, "SELECT COUNT(*) AS notiCount FROM notifications WHERE receiver='$user_id' AND isRead=0");
             $notiCount = mysqli_fetch_assoc($notiCount);
@@ -286,7 +384,6 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                         ?>
                                 <div onclick="readNotification(<?php echo $row['id']; ?>); location.href='../message/messages?mid=<?php echo $row['sender']; ?>';" class="card">
                                     <h4>You got a message from <?php echo $senderName; ?></h4>
-
                                 </div>
 
                             <?php } else if ($row['type'] == 'a') { ?>
@@ -351,6 +448,8 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                 </div>
             </div>
         </div>
+        -->
+        
         <div class="divider"></div>
         <div class="profileImage" onclick="toggleSession()">
             <img src="<?php echo $avatarFetch['avatar']; ?>" id="profileImage1" alt="">

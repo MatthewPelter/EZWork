@@ -4733,6 +4733,21 @@ section .container .login .login-container button:hover {
   text-decoration: underline;
 }
 
+.notificationNav {
+  margin-left: 1rem;
+}
+
+.notificationNav i, .helpNav i {
+  cursor: pointer;
+  padding: 0rem 0.5rem;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.notificationNav i:hover, .helpNav i:hover {
+  color: lightgreen;
+}
+
 .sessionCardContainer {
   margin-top: .8rem;
   position: absolute;
@@ -4908,6 +4923,52 @@ section .container .login .login-container button:hover {
 }
 
 .projectCardContainer .projectCard::after {
+  content: "";
+  position: absolute;
+  top: -26%;
+  left: 4%;
+  border-width: 0.8rem;
+  border-style: solid;
+  margin-left: 0.8rem;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  border-color: white transparent transparent transparent;
+}
+
+.notificationCardContainer {
+  margin-top: 1.5rem;
+  position: absolute;
+  z-index: 1;
+}
+
+.notificationCardContainer .notificationCard {
+  z-index: 1;
+  display: none;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background: white;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.notificationCardContainer .notificationCard .card {
+  padding: 0.3rem 0rem;
+  cursor: pointer;
+  width: 100%;
+}
+
+.notificationCardContainer .notificationCard .card h4 {
+  font-weight: lighter;
+  font-size: 0.9rem;
+  margin-left: 0.8rem;
+}
+
+.notificationCardContainer .notificationCard .card:hover {
+  background: lightgrey;
+}
+
+.notificationCardContainer .notificationCard::after {
   content: "";
   position: absolute;
   top: -26%;
