@@ -7,6 +7,9 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="allSkills">
+        
+    </div>
     <!--DataList-->
     <datalist id="allskills"></datalist>
     <script src="./SkillsContainer/allSkillsPage.js"></script>
