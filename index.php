@@ -142,7 +142,7 @@ HOME INDEX
                                 <div class="MobileSkillsContainer">
                                     <div class="MobileSkillsCard">
                                         <p>Browse through our marketplace for all the skills our talented workers haves.
-                                            <a href="/404Page/index.html">Search all Skills</a>
+                                            <a href="./skills.php">Search all Skills</a>
                                         </p>
                                     </div>
                                     <div class="MobileSkillsCard">

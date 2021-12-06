@@ -311,7 +311,7 @@ if (mysqli_num_rows($result) > 0) {
                                                             <?php } else if ($r['status'] == 1) { ?>
                                                                 <span style="color: red;"><?php echo "Closed"; ?></span>
                                                             <?php } else if ($r['status'] == -1) { ?>
-                                                                <span style="color: yellow;"><?php echo "In-Progress"; ?></span>
+                                                                <span style="color: royalblue;"><?php echo "In-Progress"; ?></span>
                                                             <?php } ?>
                                                         </span>
                                                     </div>
