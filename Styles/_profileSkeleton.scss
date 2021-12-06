@@ -119,9 +119,6 @@
   }
 
 }
-.notificationNav{
-  margin-left: 1rem;
-}
 .notificationNav,.helpNav{
 
   i {
@@ -315,11 +312,11 @@
   .notificationCard::after {
     content: "";
     position: absolute;
-    top: -26%;
+    top: -24%;
     left: 4%;
     border-width: 0.8rem;
     border-style: solid;
-    margin-left: 0.8rem;
+    margin-left: 0.4rem;
     transform: rotate(180deg);
     border-color: white transparent transparent transparent;
   }
@@ -352,7 +349,7 @@
   .talentCard::after {
     content: "";
     position: absolute;
-    top: -20%;
+    top: -23%;
     left: 6%;
     border-width: 0.8rem;
     border-style: solid;
@@ -397,6 +394,7 @@
     border-color: white transparent transparent transparent;
   }
 }
+
 //Footer
 .profileFooter {
   width: 100%;
