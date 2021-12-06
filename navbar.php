@@ -680,7 +680,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
         }
     }
     
-    async function toggleHelp() {
+    async function toggleHelpCard() {
         var mobileHelpCard = document.querySelector(".mobileHelpCard");
         if (getComputedStyle(mobileHelpCard).display === "none") {
             mobileHelpCard.style.display = "inline-block";
