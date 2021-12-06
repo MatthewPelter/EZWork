@@ -62,6 +62,10 @@ $jobResult = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
                 <?php
                 if (mysqli_num_rows($jobResult) > 0) {
                         while ($r = mysqli_fetch_assoc($jobResult)) { 
+                            $uid = $r['user_id'];
+                            $unameSQL = "SELECT username, avatar FROM clients WHERE id='$uid'";
+                            $unameResult = mysqli_query($conn, $unameSQL);
+                            $unameFetched = mysqli_fetch_assoc($unameResult);                             
                             
                             if($r['status'] < 1){
                 ?>
