@@ -239,7 +239,7 @@ HOME INDEX
                 <div class="line3"></div>
             </div>
             <div class="logo">
-                <a href="./index.html">
+                <a href="./index">
                     <h3><span>E</span>z<span>Work</span></h3>
                 </a>
             </div>
@@ -302,17 +302,19 @@ HOME INDEX
         <div class="client-pulldown">
             <div class="client-card-container">
                 <div class="client-map">
-                    <div class="client-map-link" id="client-pulldown-link1" onclick="location.href='../login/index.php'">
+                    <div class="client-map-link" id="client-pulldown-link1">
                         <h3>Post A Job & Hire a Freelancer</h3>
                         <i class="fa fa-arrow-right" aria-hidden="true"></i>
                         <p>View EzWork Marketplace</p>
                     </div>
-                    <div class="client-map-link" id="client-pulldown-link2" onclick="location.href='../login/index.php'">
+                    
+                    <div class="client-map-link" id="client-pulldown-link2">
                         <h3>Browse & Choose By Projects</h3>
                         <i class="fa fa-arrow-right" aria-hidden="true"></i>
                         <p>Projects Marketplace</p>
                     </div>
-                    <div class="client-map-link" id="client-pulldown-link3" onclick="location.href='../login/index.php'">
+                    
+                    <div class="client-map-link" id="client-pulldown-link3">
                         <h3>Browse through all Skills</h3>
                         <i class="fa fa-arrow-right" aria-hidden="true"></i>
                         <p>Skills Marketplace</p>
@@ -327,25 +329,25 @@ HOME INDEX
                         </div>
                         <div class="job-result-card2">
                             <ul>
-                                <a href="/404Page/index.html">
+                                <a href="../login/index.php">
                                     <li>Developement & IT</li>
                                 </a>
-                                <a href="/404Page/index.html">
+                                <a href="../login/index.php">
                                     <li>Design & Creative</li>
                                 </a>
-                                <a href="/404Page/index.html">
+                                <a href="../login/index.php">
                                     <li>Sales & Marketing</li>
                                 </a>
-                                <a href="/404Page/index.html">
+                                <a href="../login/index.php">
                                     <li>Writing & Translation</li>
                                 </a>
-                                <a href="/404Page/index.html">
+                                <a href="../login/index.php">
                                     <li>Finance & Accounting</li>
                                 </a>
-                                <a href="/404Page/index.html">
+                                <a href="../login/index.php">
                                     <li>Admin & Customer Support</li>
                                 </a>
-                                <a href="/404Page/index.html">
+                                <a href="../login/index.php">
                                     <li>Find a Freelancer</li>
                                 </a>
                             </ul>

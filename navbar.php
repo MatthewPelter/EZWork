@@ -147,10 +147,10 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
     <div class="mobileHelpCard">
         <ul>
             <a href="../Support/help">
-                <li>Help & Support</li>
+                <li>Help & Support\</li>
             </a>
             <a href="../Support/guides">
-                <li>Guides</li>
+                <li>Why EZWork</li>
             </a>
             <a href="../Support/contact">
                 <li>Contact</li>
@@ -367,7 +367,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                         <h4>Help & Support</h4>
                     </div>
                     <div class="card card2" onclick="location.href='../Support/guides'">
-                        <h4>Guides</h4>
+                        <h4>Why EZWork</h4>
                     </div>
                     <div class="card card3" onclick="location.href='../Support/contact'">
                         <h4>Contact Us</h4>
