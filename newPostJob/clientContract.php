@@ -85,15 +85,8 @@ $jobResult = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
                             </div>
                         </div>
 
-
-
-
-                    <?php
-                    }
-                } else { ?>
-                    <h1>No current contracts</h1>
-
                 <?php
+                    }
                 }
                 ?>
             </div>
