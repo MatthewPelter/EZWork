@@ -2481,6 +2481,31 @@ header {
   color: lightgray;
 }
 
+.allSkills {
+  width: 100%;
+  margin: 5rem 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.allSkills a {
+  font-size: 1.5rem;
+  color: #0a345e;
+  text-decoration: none;
+  padding: 1rem;
+}
+
+.allSkills a:hover {
+  color: #054e97;
+}
+
 @media screen and (max-width: 754px) {
   /*Header Section */
   header {

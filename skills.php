@@ -469,6 +469,9 @@ HOME INDEX
         </div>
     </header>
 
+    <div class="allSkillsheader">
+        <h2>All EZWork Skills</h2>
+    </div>
     <div class="allSkills">
 
     </div>

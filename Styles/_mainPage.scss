@@ -1534,7 +1534,24 @@ header {
   }
 }
 // Other classes end
+.allSkills{
+  width: 100%;
+  margin: 5rem 3rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 
+  a{
+    font-size: 1.5rem;
+    color: $color1;
+    text-decoration: none;
+    padding: 1rem;
+
+    &:hover{
+      color: $lightColor;
+    }
+  }
+}
 //Media Queires
 @media screen and (max-width: 754px) {
   /*Header Section */
