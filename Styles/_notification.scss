@@ -173,6 +173,7 @@ $darktext: rgb(121, 121, 121);
         padding: 2.5rem 0rem;
     
         #header{
+            padding: 0rem 1rem;
             width: 100%;
             display: flex;
             flex-direction: row;
@@ -218,7 +219,7 @@ $darktext: rgb(121, 121, 121);
         display: table;
         position: relative;
         margin: 40px auto 0;
-        width: 600px;
+        width: 100%;
         background-color: #0074d9;
         color:white;
         transition: all .2s ease

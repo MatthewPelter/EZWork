@@ -25776,6 +25776,7 @@ a:hover {
     padding: 2.5rem 0rem;
   }
   #main-page #header {
+    padding: 0rem 1rem;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -25826,7 +25827,7 @@ a:hover {
     display: table;
     position: relative;
     margin: 40px auto 0;
-    width: 600px;
+    width: 100%;
     background-color: #0074d9;
     color: white;
     -webkit-transition: all .2s ease;
