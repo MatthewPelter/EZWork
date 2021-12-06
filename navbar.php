@@ -144,7 +144,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
         <p>Help</p>
         <i class="fa fa-question" title="Help"></i>
     </div>
-    <div class="mobileNavCard">
+    <div class="mobileNavCard" onclick="location.href='../notifications'">
         <p>Notifications</p>
         <i class="fa fa-bell" title="Notification"></i>
     </div>
@@ -512,10 +512,10 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
         x.classList.toggle("change");
         if (x.classList.contains('change')) {
             profileMobileNav.style.display = "inline-block";
-            searchIcon.style.opacity = '0';
+            //searchIcon.style.opacity = '0';
         } else {
             profileMobileNav.style.display = 'none';
-            searchIcon.style.opacity = '1';
+            //searchIcon.style.opacity = '1';
         }
     }
 
