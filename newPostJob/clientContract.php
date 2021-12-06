@@ -95,11 +95,6 @@ $jobResult = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
                                         echo $unameFetched['username'];
                                     }  ?></span>
                                     </p>
-                                    <p>Freelancer:
-                                        <a href="../Profile/userprofile.php?name=<?php echo $unameFetched2['username']; ?>">
-                                            <?php echo $unameFetched2['username'];  ?>
-                                        </a>
-                                    </p>
                                 </div>
                             </div>
                         <?php
