@@ -5566,6 +5566,8 @@ section .container .login .login-container button:hover {
     color: white;
     font-size: 1.25rem;
     margin-right: 1rem;
+    opacity: 0;
+    pointer-events: none;
   }
   .profile-header-container .profileHeader .fa-times {
     cursor: pointer;
