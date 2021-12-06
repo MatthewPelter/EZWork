@@ -4876,10 +4876,10 @@ section .container .login .login-container button:hover {
   content: "";
   position: absolute;
   top: -26%;
-  left: 14%;
+  left: 5%;
   border-width: 0.8rem;
   border-style: solid;
-  margin-left: 0.8rem;
+  margin-left: 0.2rem;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
   border-color: white transparent transparent transparent;
@@ -4967,8 +4967,8 @@ section .container .login .login-container button:hover {
 .notificationCardContainer .notificationCard::after {
   content: "";
   position: absolute;
-  top: -24%;
-  left: 4%;
+  top: -26%;
+  left: 2%;
   border-width: 0.8rem;
   border-style: solid;
   margin-left: 0.4rem;
