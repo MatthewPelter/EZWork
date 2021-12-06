@@ -331,7 +331,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                             }
                         }
                     } else { ?>
-                        <div class="card card1">
+                        <div class="card card1" style="pointer-events: none;">
                             <h4>You're all caught up!</h4>
                         </div>
                     <?php } ?>
