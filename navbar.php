@@ -140,9 +140,22 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
     <div class="mobileNavCard" onclick="location.href='../message/messages'">
         <p>Messages</p>
     </div>
-    <div class="mobileNavCard">
+    <div class="mobileNavCard" onclick="toggleHelpCard(this)">
         <p>Help</p>
         <i class="fa fa-question" title="Help"></i>
+    </div>
+    <div class="mobileHelpCard">
+        <ul>
+            <a href="../Support/help">
+                <li>Help & Support</li>
+            </a>
+            <a href="../Support/guides">
+                <li>Guides</li>
+            </a>
+            <a href="../Support/contact">
+                <li>Contact</li>
+            </a>
+        </ul>
     </div>
     <div class="mobileNavCard" onclick="location.href='../notifications'">
         <p>Notifications</p>
@@ -343,18 +356,19 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
             <i class="fa fa-question" onclick="toggleHelp()" id="question"></i>
             <div class="helpContainer">
                 <div class="helpCard">
-                    <div class="card card1">
+                    <div class="card card1" onclick="location.href='../Support/help'">
                         <h4>Help & Support</h4>
                     </div>
-                    <div class="card card2">
+                    <div class="card card2" onclick="location.href='../Support/guides'">
                         <h4>Guides</h4>
                     </div>
-                    <div class="card card3">
+                    <div class="card card3" onclick="location.href='../Support/contact'">
                         <h4>Contact Us</h4>
                     </div>
                 </div>
             </div>            
         </div>
+        
         <!--
         <div class="guide">
         
@@ -454,6 +468,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
         -->
 
         <div class="divider"></div>
+
         <div class="profileImage" onclick="toggleSession()">
             <img src="<?php echo $avatarFetch['avatar']; ?>" id="profileImage1" alt="">
             <div class="sessionCardContainer">
@@ -662,6 +677,15 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
         } else {
             mobileProjectsCard.style.display = "none";
             sortDownBtn3.style.transform = "rotate(360deg)";
+        }
+    }
+    
+    async function toggleHelp() {
+        var mobileHelpCard = document.querySelector(".mobileHelpCard");
+        if (getComputedStyle(mobileHelpCard).display === "none") {
+            mobileHelpCard.style.display = "inline-block";
+        } else {
+            mobileHelpCard.style.display = "none";
         }
     }
 </script>
