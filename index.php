@@ -394,7 +394,7 @@ HOME INDEX
                         <div class="categories-card1">
                             <h4>Skills Marketplace</h4>
                             <p>Browse through our marketplace for all the skills our talented workers haves.</p>
-                            <button>See All Skills<i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                            <button onclick="location.href='./skills.php'">See All Skills<i class="fa fa-arrow-right" aria-hidden="true"></i></button>
                         </div>
                         <div class="categories-card2">
                             <ul>
@@ -737,10 +737,10 @@ HOME INDEX
             </div>
             <div class="results">
                 <div class="skills-list-1 show">
-                    <a href="/404Page/index.html">Data Entry Specialists</a>
-                    <a href="/404Page/index.html">Video Editors</a>
-                    <a href="/404Page/index.html">Data Analyst</a>
-                    <a href="/404Page/index.html">Shopify Developer</a>
+                    <a href="#/">Data Entry Specialists</a>
+                    <a href="#/">Video Editors</a>
+                    <a href="#/">Data Analyst</a>
+                    <a href="#/">Shopify Developer</a>
                     <a href="/404Page/index.html">Ruby on Rails Developer</a>
                     <a href="/404Page/index.html">Android Developer</a>
                     <a href="/404Page/index.html">Bookkeeper</a>
