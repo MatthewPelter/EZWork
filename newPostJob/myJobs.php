@@ -80,7 +80,7 @@ $userID = $_SESSION['user_id'];
                                     <?php } else if($r['status'] == 1) { ?>
                                         <span style="color: red;"><?php echo "Closed"; ?></span>                         
                                     <?php }else{ ?>
-                                        <span style="color: yellow;"><?php echo "In-Progress"; ?></span>                                              
+                                        <span style="color: royalblue;"><?php echo "In-Progress"; ?></span>                                              
                                     <?php } ?>
                                 </p>
                                 <p>Job Posted on <span id="date"><?php echo $r['datePosted']; ?></span> by <span id="postedBy">Me</span></p>
