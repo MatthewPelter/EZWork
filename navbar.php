@@ -174,17 +174,20 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
             <div class="line2"></div>
             <div class="line3"></div>
         </div>
+        
         <div class="logo">
             <a href="https://ez-work.herokuapp.com/ClientProfile/index">
                 <h2>E<span>z</span>Work</h2>
             </a>
         </div>
+        
         <div class="searchBar" style="opacity: 0;pointer-events: none;">
             <form id="searchContainer">
                 <input type="text" list="allskills" autocomplete="off" name="search" placeholder="Search">
                 <input type="submit" value="Find">
             </form>
         </div>
+
         <div class="jobsNav">
             <span onclick="toggleJob()" id="jobs">Jobs</span>
             <div class="jobCardContainer">
@@ -449,7 +452,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
             </div>
         </div>
         -->
-        
+
         <div class="divider"></div>
         <div class="profileImage" onclick="toggleSession()">
             <img src="<?php echo $avatarFetch['avatar']; ?>" id="profileImage1" alt="">
@@ -477,6 +480,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                 </div>
             </div>
         </div>
+
         <i class="fa fa-search" id="mobileSearch"></i>
         <i class="fa fa-times" id="ExitmobileSearch"></i>
     </div>
@@ -520,6 +524,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
     var talent = document.querySelector('.talentCard');
     //var project = document.querySelector('.projectCard');
     var help = document.querySelector('.helpCard');
+    var notification = document.querySelector('.notificationCard');
     var session = document.querySelector('.sessionCard');
 
     function toggleJob() {
@@ -528,6 +533,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
             job.style.display = 'inline-block';
             talent.style.display = 'none';
             //project.style.display = 'none';
+            notification.style.display = 'none';
             help.style.display = 'none';
             session.style.display = 'none';
         } else {
@@ -542,6 +548,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
             talent.style.display = 'inline-block';
             job.style.display = 'none';
             //project.style.display = 'none';
+            notification.style.display = 'none';
             help.style.display = 'none';
             session.style.display = 'none';
         } else {
@@ -570,6 +577,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
             talent.style.display = 'none';
             //project.style.display = 'none';
             job.style.display = 'none';
+            notification.style.display = 'none';
             session.style.display = 'none';
         } else {
             help.style.display = 'none';
@@ -577,15 +585,16 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
     }
 
     function toggleNotifications() {
-        var help = document.querySelector('.notificationCard');
-        if (getComputedStyle(help).display === 'none') {
-            help.style.display = 'inline-block';
+        var notification = document.querySelector('.notificationCard');
+        if (getComputedStyle(notification).display === 'none') {
+            notification.style.display = 'inline-block';
+            help.style.display = 'none';
             talent.style.display = 'none';
             //project.style.display = 'none';
             job.style.display = 'none';
             session.style.display = 'none';
         } else {
-            help.style.display = 'none';
+            notification.style.display = 'none';
         }
     }
 
@@ -595,6 +604,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
             session.style.display = 'inline-block';
             talent.style.display = 'none';
             //project.style.display = 'none';
+            notification.style.display = 'none';
             help.style.display = 'none';
             job.style.display = 'none';
         } else {
