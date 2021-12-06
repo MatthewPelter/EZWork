@@ -48,6 +48,10 @@ if (isset($_GET['mid'])) {
             -webkit-animation: none !important;
             animation: none !important;
         }
+
+        .clicker:hover {
+            cursor: pointer;
+        }
     </style>
 
 </head>
@@ -202,8 +206,8 @@ if (isset($_GET['mid'])) {
                                                     <div class="message my-message">
                                                         <?php echo $row['Sender']; ?> is interested in your project you posted.<br />
                                                         Make sure to view their profile and rating before you accept their proposal.<br />
-                                                        <span onclick="respondToJob(<?php echo $row['jobID']; ?>, <?php echo $fetchID; ?>, 'accept')">Agree</span>
-                                                        <span onclick="respondToJob(<?php echo $row['jobID']; ?>, <?php echo $fetchID; ?>, 'deny')">Deny</span>
+                                                        <span class="clicker" onclick="respondToJob(<?php echo $row['jobID']; ?>, <?php echo $fetchID; ?>, 'accept')">Agree</span>
+                                                        <span class="clicker" onclick="respondToJob(<?php echo $row['jobID']; ?>, <?php echo $fetchID; ?>, 'deny')">Deny</span>
                                                         <?php echo $row['body']; ?>
                                                     </div>
                                                 </li>
