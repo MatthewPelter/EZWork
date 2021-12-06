@@ -66,11 +66,7 @@ $jobResult = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
                             $unameSQL = "SELECT username, avatar FROM clients WHERE id='$uid'";
                             $unameResult = mysqli_query($conn, $unameSQL);
                             $unameFetched = mysqli_fetch_assoc($unameResult); 
-                            
-                            $uid2 = $r['freelancer_id'];
-                            $unameSQL2 = "SELECT username, avatar FROM clients WHERE id='$uid2'";
-                            $unameResult2 = mysqli_query($conn, $unameSQL2);
-                            $unameFetched2 = mysqli_fetch_assoc($unameResult2); 
+             
                             
                             if($r['status'] != 0){
                 ?>
