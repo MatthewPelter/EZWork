@@ -25700,6 +25700,7 @@ a:hover {
   display: table-cell;
   vertical-align: middle;
   padding: 30px 20px 30px 10px;
+  color: white;
 }
 
 .Message-body > p {
