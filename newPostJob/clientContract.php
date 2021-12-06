@@ -65,7 +65,12 @@ $jobResult = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
                             $uid = $r['user_id'];
                             $unameSQL = "SELECT username, avatar FROM clients WHERE id='$uid'";
                             $unameResult = mysqli_query($conn, $unameSQL);
-                            $unameFetched = mysqli_fetch_assoc($unameResult);                             
+                            $unameFetched = mysqli_fetch_assoc($unameResult); 
+                            
+                            $uid2 = $r['freelancer_id'];
+                            $unameSQL2 = "SELECT username, avatar FROM clients WHERE id='$uid2'";
+                            $unameResult2 = mysqli_query($conn, $unameSQL2);
+                            $unameFetched2 = mysqli_fetch_assoc($unameResult2); 
                             
                             if($r['status'] != 0){
                 ?>
@@ -81,14 +86,20 @@ $jobResult = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
                                         <?php } else if($r['status'] == 1) { ?>
                                             <span style="color: red;"><?php echo "Closed"; ?></span>                         
                                         <?php }else{ ?>
-                                            <span style="color: yellow;"><?php echo "In-Progress"; ?></span>                                              
+                                            <span style="color: royalblue;"><?php echo "In-Progress"; ?></span>                                              
                                         <?php } ?>                                    
                                     </p>
                                     <p>Job Posted on <span id="date"><?php echo $r['datePosted']; ?></span> by <span id="postedBy">                                            <?php if ($unameFetched['username'] != $_SESSION['userid']) {
                                         echo "<a href='../Profile/userprofile.php?name=" . $unameFetched['username'] . "'>" . $unameFetched['username'] . "</a>";
                                     } else {
                                         echo $unameFetched['username'];
-                                    }  ?></span></p>
+                                    }  ?></span>
+                                    </p>
+                                    <p>Freelancer: 
+                                        <span>
+                                        echo "<a href='../Profile/userprofile.php?name=" . $unameFetched2['username'] . "'>" . $unameFetched2['username'] . "</a>";
+                                        </span>
+                                    </p>
                                 </div>
                             </div>
                         <?php

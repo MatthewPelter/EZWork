@@ -4965,7 +4965,7 @@ section .container .login .login-container button:hover {
 .notificationCardContainer .notificationCard::after {
   content: "";
   position: absolute;
-  top: -32%;
+  top: -27%;
   left: 2%;
   border-width: 0.8rem;
   border-style: solid;
