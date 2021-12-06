@@ -67,7 +67,13 @@ $checkFreelancer = $checkFreelancer['freelancer_id'];
                 $fetchContracts = mysqli_query($conn, "SELECT jobs.*, clients.username AS uname FROM jobs INNER JOIN clients ON jobs.user_id = clients.id WHERE jobs.freelancer_id='$checkFreelancer' ORDER BY jobs.id DESC") or die(mysqli_error($conn));
 
                 if (mysqli_num_rows($fetchContracts) > 0) {
-                    while ($row = mysqli_fetch_assoc($fetchContracts)) { ?>
+                    while ($row = mysqli_fetch_assoc($fetchContracts)) { 
+                        $uid = $r['user_id'];
+                        $unameSQL = "SELECT username, avatar FROM clients WHERE id='$uid'";
+                        $unameResult = mysqli_query($conn, $unameSQL);
+                        $unameFetched = mysqli_fetch_assoc($unameResult);                        
+                ?>
+
                         <div class="allJobsCard" style="overflow-y: scroll;">
                             <div class="postedJob" data-postid="<?php echo $row['id']; ?>">
                                 <div class="jobTitle">
@@ -75,9 +81,9 @@ $checkFreelancer = $checkFreelancer['freelancer_id'];
 
                                 </div>
                                 <p>Status:
-                                <?php if ($r['status'] == 0) { ?>
+                                <?php if ($row['status'] == 0) { ?>
                                         <span style="color: lightgreen;"><?php echo "Open"; ?></span>
-                                    <?php } else if($r['status'] == 1) { ?>
+                                    <?php } else if($row['status'] == 1) { ?>
                                         <span style="color: red;"><?php echo "Closed"; ?></span>                         
                                     <?php }else{ ?>
                                         <span style="color: yellow;"><?php echo "In-Progress"; ?></span>                                              
