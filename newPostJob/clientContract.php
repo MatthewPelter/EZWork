@@ -61,8 +61,10 @@ $jobResult = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
 
                 <?php
                 if (mysqli_num_rows($jobResult) > 0) {
-                    if($r['status'] == 1 || $r['status'] == -1){
-                        while ($r = mysqli_fetch_assoc($jobResult)) { ?>
+                        while ($r = mysqli_fetch_assoc($jobResult)) { 
+                            
+                            if($r['status'] < 0){
+                ?>
                             <div class="allJobsCard" style="overflow-y: scroll;">
                                 <div class="postedJob" data-postid="<?php echo $r['id']; ?>">
                                     <div class="jobTitle">
@@ -85,16 +87,11 @@ $jobResult = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
                                     }  ?></span></p>
                                 </div>
                             </div>
-    
-    
-    
-    
                         <?php
                         }
                     }
                 } else { ?>
                     <h1>No current contracts</h1>
-
                 <?php
                 }
                 ?>
