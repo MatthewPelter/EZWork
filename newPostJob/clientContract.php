@@ -95,11 +95,10 @@ $jobResult = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
                                         echo $unameFetched['username'];
                                     }  ?></span>
                                     </p>
-                                    <p>Freelancer:                                             <?php if ($unameFetched2['username'] != $_SESSION['userid']) {
-                                        echo "<a href='../Profile/userprofile.php?name=" . $unameFetched2['username'] . "'>" . $unameFetched2['username'] . "</a>";
-                                    } else {
-                                        echo $unameFetched2['username'];
-                                    }  ?></span>
+                                    <p>Freelancer:
+                                        <a href="../Profile/userprofile.php?name=<?php echo $unameFetched2['username']; ?>">
+                                            <?php echo $unameFetched2['username'];  ?>
+                                        </a>
                                     </p>
                                 </div>
                             </div>
