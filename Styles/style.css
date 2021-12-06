@@ -5009,7 +5009,7 @@ section .container .login .login-container button:hover {
 .talentCardContainer .talentCard::after {
   content: "";
   position: absolute;
-  top: -30%;
+  top: -28%;
   left: 6%;
   border-width: 0.8rem;
   border-style: solid;
@@ -27631,7 +27631,6 @@ a:hover {
   }
   .myHired .myHiredHeader h2 {
     width: 100%;
-    text-align: center;
     color: #0a345e;
     font-size: 2rem;
   }
@@ -27661,6 +27660,7 @@ a:hover {
     text-decoration: underline;
   }
   .myHired .myHiredContainer {
+    padding: 0rem 2rem;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -27686,7 +27686,8 @@ a:hover {
     cursor: pointer;
     border-radius: 10px;
     border: 3px solid #054e97;
-    width: 80%;
+    width: 100%;
+    margin: 1rem;
   }
   .myHired .myHiredContainer .freelancerCard:hover {
     opacity: 0.8;
