@@ -61,34 +61,36 @@ $jobResult = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
 
                 <?php
                 if (mysqli_num_rows($jobResult) > 0) {
-                    while ($r = mysqli_fetch_assoc($jobResult)) { ?>
-                        <div class="allJobsCard" style="overflow-y: scroll;">
-                            <div class="postedJob" data-postid="<?php echo $r['id']; ?>">
-                                <div class="jobTitle">
-                                    <h4 id="jobTitle"><a href="../newPostJob/job.php?id=<?php echo $r['id']; ?>"><?php echo $row['title']; ?></a></h4>
-
+                    if($r['status'] == 1 || $r['status'] == -1){
+                        while ($r = mysqli_fetch_assoc($jobResult)) { ?>
+                            <div class="allJobsCard" style="overflow-y: scroll;">
+                                <div class="postedJob" data-postid="<?php echo $r['id']; ?>">
+                                    <div class="jobTitle">
+                                        <h4 id="jobTitle"><a href="../newPostJob/job.php?id=<?php echo $r['id']; ?>"><?php echo $r['title']; ?></a></h4>
+    
+                                    </div>
+                                    <p>Status:
+                                    <?php if ($r['status'] == 0) { ?>
+                                            <span style="color: lightgreen;"><?php echo "Open"; ?></span>
+                                        <?php } else if($r['status'] == 1) { ?>
+                                            <span style="color: red;"><?php echo "Closed"; ?></span>                         
+                                        <?php }else{ ?>
+                                            <span style="color: yellow;"><?php echo "In-Progress"; ?></span>                                              
+                                        <?php } ?>                                    
+                                    </p>
+                                    <p>Job Posted on <span id="date"><?php echo $r['datePosted']; ?></span> by <span id="postedBy">                                            <?php if ($unameFetched['username'] != $_SESSION['userid']) {
+                                        echo "<a href='../Profile/userprofile.php?name=" . $unameFetched['username'] . "'>" . $unameFetched['username'] . "</a>";
+                                    } else {
+                                        echo $unameFetched['username'];
+                                    }  ?></span></p>
                                 </div>
-                                <p>Status:
-                                <?php if ($r['status'] == 0) { ?>
-                                        <span style="color: lightgreen;"><?php echo "Open"; ?></span>
-                                    <?php } else if($r['status'] == 1) { ?>
-                                        <span style="color: red;"><?php echo "Closed"; ?></span>                         
-                                    <?php }else{ ?>
-                                        <span style="color: yellow;"><?php echo "In-Progress"; ?></span>                                              
-                                    <?php } ?>                                    
-                                </p>
-                                <p>Job Posted on <span id="date"><?php echo $r['datePosted']; ?></span> by <span id="postedBy">                                            <?php if ($unameFetched['username'] != $_SESSION['userid']) {
-                                    echo "<a href='../Profile/userprofile.php?name=" . $unameFetched['username'] . "'>" . $unameFetched['username'] . "</a>";
-                                } else {
-                                    echo $unameFetched['username'];
-                                }  ?></span></p>
                             </div>
-                        </div>
-
-
-
-
-                    <?php
+    
+    
+    
+    
+                        <?php
+                        }
                     }
                 } else { ?>
                     <h1>No current contracts</h1>
