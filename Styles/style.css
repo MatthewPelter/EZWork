@@ -27660,7 +27660,7 @@ a:hover {
     text-decoration: underline;
   }
   .myHired .myHiredContainer {
-    padding: 0rem 2rem;
+    padding: 0rem 1rem;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -27687,13 +27687,13 @@ a:hover {
     border-radius: 10px;
     border: 3px solid #054e97;
     width: 100%;
-    margin: 1rem;
+    margin: 1rem 0rem;
   }
   .myHired .myHiredContainer .freelancerCard:hover {
     opacity: 0.8;
   }
   .myHired .myHiredContainer .freelancerCard .freelancerImg {
-    height: 14rem;
+    height: 15rem;
     width: 100%;
     background-color: white;
     border-bottom: 3px solid #054e97;
