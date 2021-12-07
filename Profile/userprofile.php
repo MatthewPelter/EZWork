@@ -307,11 +307,11 @@ if (mysqli_num_rows($result) > 0) {
                                                         <p>Status:</p>
                                                         <span>
                                                             <?php if ($r['status'] == 0) { ?>
-                                                                <span style="color: lightgreen;"><?php echo "Open"; ?></span>
+                                                                <span style="color: lightgreen;font-weight: bolder;"><?php echo "Open"; ?></span>
                                                             <?php } else if ($r['status'] == 1) { ?>
-                                                                <span style="color: red;"><?php echo "Closed"; ?></span>
+                                                                <span style="color: red;font-weight: bolder;"><?php echo "Closed"; ?></span>
                                                             <?php } else if ($r['status'] == -1) { ?>
-                                                                <span style="color: royalblue;"><?php echo "In-Progress"; ?></span>
+                                                                <span style="color: royalblue;font-weight: bolder;"><?php echo "In-Progress"; ?></span>
                                                             <?php } ?>
                                                         </span>
                                                     </div>
@@ -405,11 +405,11 @@ if (mysqli_num_rows($result) > 0) {
                                                         <p>Status:</p>
                                                         <span>
                                                             <?php if ($r['status'] == 0) { ?>
-                                                                <span style="color: lightgreen;"><?php echo "Open"; ?></span>
+                                                                <span style="color: lightgreen;font-weight: bolder;"><?php echo "Open"; ?></span>
                                                             <?php } else if ($r['status'] == 1) { ?>
-                                                                <span style="color: red;"><?php echo "Closed"; ?></span>
+                                                                <span style="color: red;font-weight: bolder;"><?php echo "Closed"; ?></span>
                                                             <?php } else if ($r['status'] == -1) { ?>
-                                                                <span style="color: yellow;"><?php echo "In-Progress"; ?></span>
+                                                                <span style="color: royalblue;font-weight: bolder;"><?php echo "In-Progress"; ?></span>
                                                             <?php } ?>
                                                         </span>
                                                     </div>
@@ -477,7 +477,8 @@ if (mysqli_num_rows($result) > 0) {
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="./app.js"></script>
-<script>
+
+<script type="text/javascript">
     $(document).ready(function() {
 
         var messageBox = document.querySelector('.js-message');
@@ -530,6 +531,7 @@ if (mysqli_num_rows($result) > 0) {
         });
     });
 </script>
+
 <!--Script for the search bar and datalist-->
 <script src="../SkillsContainer/searchProfile.js"></script>
 

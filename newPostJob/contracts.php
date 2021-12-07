@@ -82,11 +82,11 @@ $checkFreelancer = $checkFreelancer['freelancer_id'];
                                 </div>
                                 <p>Status:
                                 <?php if ($row['status'] == 0) { ?>
-                                        <span style="color: lightgreen;"><?php echo "Open"; ?></span>
+                                        <span style="color: lightgreen;font-weight: bolder;"><?php echo "Open"; ?></span>
                                     <?php } else if($row['status'] == 1) { ?>
-                                        <span style="color: red;"><?php echo "Closed"; ?></span>                         
+                                        <span style="color: red;font-weight: bolder;"><?php echo "Closed"; ?></span>                         
                                     <?php }else{ ?>
-                                        <span style="color: yellow;"><?php echo "In-Progress"; ?></span>                                              
+                                        <span style="color: yellow;font-weight: bolder;"><?php echo "In-Progress"; ?></span>                                              
                                     <?php } ?>                                    
                                 </p>
                                 <p>Job Posted on <span id="date"><?php echo $row['datePosted']; ?></span> by <span id="postedBy">                                            <?php if ($unameFetched['username'] != $_SESSION['userid']) {

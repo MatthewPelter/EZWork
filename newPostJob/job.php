@@ -193,11 +193,11 @@ if (mysqli_num_rows($jobResult) > 0) {
                     <!-- ----------------------------------------- -->
                     <p>Status:
                     <?php if ($r['status'] == 0) { ?>
-                                        <span style="color: lightgreen;"><?php echo "Open"; ?></span>
+                                        <span style="color: lightgreen;font-weight: bolder;"><?php echo "Open"; ?></span>
                                     <?php } else if($r['status'] == 1) { ?>
-                                        <span style="color: red;"><?php echo "Closed"; ?></span>                         
+                                        <span style="color: red;font-weight: bolder;"><?php echo "Closed"; ?></span>                         
                                     <?php }else{ ?>
-                                        <span style="color: royalblue;"><?php echo "In-Progress"; ?></span>                                              
+                                        <span style="color: royalblue;font-weight: bolder;"><?php echo "In-Progress"; ?></span>                                              
                                     <?php } ?>
                     </p>
                 </div>
