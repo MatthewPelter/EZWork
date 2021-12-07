@@ -87,7 +87,7 @@ if (mysqli_num_rows($result) > 0) {
                                 <?php } ?>
                             </div>
                             <div class="message">
-                                <button>Message</button>
+                                <button class="js-message-btn">Message</button>
                             </div>
                             <div class="profile-card-message js-message">
                                 <form class="profile-card-form">
