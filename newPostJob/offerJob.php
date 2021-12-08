@@ -188,7 +188,19 @@ if (mysqli_num_rows($jobResult) > 0) {
         </button>
     <?php } ?>
 
-
+    <?php
+    if ($r['status'] == 1 && $r['freelancer_id'] == $user_id) {
+        $jobid = $r['job_id'];
+        $checkRating = mysqli_query($conn, "SELECT * FROM ratings WHERE job_id='$jobid' AND rater='$user_id'");
+        if (mysqli_num_rows($checkRating) == 0) {
+    ?>
+            <button class="rate">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <span>Rate Client</span>
+            </button>
+    <?php }
+    }
+    ?>
 
     <div class="wrapper">
 
@@ -225,6 +237,66 @@ if (mysqli_num_rows($jobResult) > 0) {
 <script type="text/javascript">
     var $bar = $(".ProgressBar");
     $bar.children().first().addClass("is-current");
+
+    function rate(id) {
+        (async () => {
+            /* inputOptions can be an object or Promise */
+            const inputOptions = new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve({
+                        1: "1",
+                        2: "2",
+                        3: "3",
+                        4: "4",
+                        5: "5"
+                    });
+                }, 1000);
+            });
+
+            const {
+                value: rate
+            } = await Swal.fire({
+                title: "Rate the user",
+                input: "radio",
+                showCancelButton: true,
+                cancelButtonText: "No Thanks",
+                inputOptions: inputOptions,
+                inputValidator: (value) => {
+                    if (!value) {
+                        return "You need to choose something!";
+                    }
+                }
+            });
+
+            if (rate) {
+                console.log(rate);
+                $.ajax({
+                    type: "POST",
+                    url: "../api/set-rating.php",
+                    processData: false,
+                    contentType: "application/json",
+                    data: '{ "rate": "' + rate + '", "ratee": "' + id + '", "job_id": "<?php echo $r['job_id']; ?>" }',
+                    success: function(data) {
+                        var obj = JSON.parse(data);
+                        console.log(obj);
+                        if (obj.Success.length > 0) {
+                            Swal.fire(
+                                'Thanks!',
+                                'Thanks for your rating. It helps a lot :)',
+                                'success'
+                            ).then(function() {
+                                window.location.reload(1);
+                            });
+                        } else if (obj.Error.length > 0) {}
+
+                    },
+                    error: function(r) {
+                        console.log(r);
+                    }
+                });
+            }
+        })();
+    }
 
     // complete btn click
     $(".completeFreelancer").click(function() {
@@ -283,7 +355,7 @@ if (mysqli_num_rows($jobResult) > 0) {
                             'We are glad your job is complete.',
                             'success'
                         ).then(function() {
-                            window.location.reload(1);
+                            rate(<?php echo $r['freelancer_id']; ?>);
                         });
                     },
                     error: function(r) {

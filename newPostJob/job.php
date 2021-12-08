@@ -653,7 +653,7 @@ $getFreelancerID = $getFreelancerID['freelancer_id'];
             });
         }); // end pay for service btn click
 
-        function rate(id, job_id) {
+        function rate(id) {
             (async () => {
                 /* inputOptions can be an object or Promise */
                 const inputOptions = new Promise((resolve) => {
