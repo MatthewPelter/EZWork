@@ -46,14 +46,15 @@ if (isset($_SESSION['user_id']) && isset($_POST['postID'])) {
     } else {
         $setFunds = mysqli_query($conn, "UPDATE clients SET funds = funds - '$pullBudget' WHERE id='$user_id'") or die(mysqli_errno($conn));
         if ($setFunds) {
-            if ($pullUser['typeOfJob'] == "require") {
-                $setPaid = mysqli_query($conn, "UPDATE jobs SET paid=1 WHERE id='$postID'") or die(mysqli_errno($conn));
-            } else {
-                $setOfferJob = mysqli_query($conn, "INSERT INTO offerjobs(job_id, freelancer_id, client_id, status, freelancer_complete) VALUES ('$postID', '$pullUserID', '$user_id', 0, 0)");
-            }
             date_default_timezone_set("America/New_York");
             $date = date('Y-m-d H:i:s');
-            $sendNotification = mysqli_query($conn, "INSERT INTO notifications (type, receiver, sender, isRead, sentAt) VALUES ('p', '$pullFreelancerUserID', '$user_id', 0, '$date')") or die(mysqli_errno($conn));
+            if ($pullUser['typeOfJob'] == "require") {
+                $setPaid = mysqli_query($conn, "UPDATE jobs SET paid=1 WHERE id='$postID'") or die(mysqli_errno($conn));
+                $sendNotification = mysqli_query($conn, "INSERT INTO notifications (type, receiver, sender, isRead, sentAt) VALUES ('p', '$pullFreelancerUserID', '$user_id', 0, '$date')") or die(mysqli_errno($conn));
+            } else {
+                $setOfferJob = mysqli_query($conn, "INSERT INTO offerjobs(job_id, freelancer_id, client_id, status, freelancer_complete) VALUES ('$postID', '$pullUserID', '$user_id', 0, 0)");
+                $sendNotification = mysqli_query($conn, "INSERT INTO notifications (type, receiver, sender, isRead, sentAt) VALUES ('p', '$pullUserID', '$user_id', 0, '$date')") or die(mysqli_errno($conn));
+            }
         } else {
             die("Payment Failure, Try Again");
         }
