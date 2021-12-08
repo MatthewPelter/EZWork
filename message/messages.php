@@ -307,17 +307,20 @@ background: linear-gradient(90deg, rgba(0,147,233,1) 39%, rgba(128,208,199,1) 61
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="../SkillsContainer/searchProfile.js"></script>
+<script src="https://unpkg.com/validator@latest/validator.min.js"></script>
 <script type="text/javascript">
+    import validator from 'validator';
     var elem = document.querySelector('.chat-history');
     elem.scrollTop = elem.scrollHeight;
 
     $('#sendmessage').click(function() {
+        var text = validator.escape($("#message-to-send").val());
         $.ajax({
             type: "POST",
             url: "../api/message.php",
             processData: false,
             contentType: "application/json",
-            data: '{ "body": "' + $("#message-to-send").val() + '", "receiver": "<?php echo $getName; ?>" }',
+            data: '{ "body": "' + text + '", "receiver": "<?php echo $getName; ?>" }',
             success: function(data) {
                 var obj = JSON.parse(data);
                 console.log(obj);
