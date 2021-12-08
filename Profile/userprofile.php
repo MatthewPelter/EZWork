@@ -126,13 +126,14 @@ if (mysqli_num_rows($result) > 0) {
                             $pullJobCount = mysqli_fetch_assoc($pullJobs);
                             $pullJobCount = $pullJobCount['completedJobs'];
 
-                            $pullOfferCount = mysqli_query($conn, "SELECT COUNT(*) AS completedJobs FROM offerjobs WHERE freelancer_id = '$user_id' AND status=1");
+                            $pullOfferCount = mysqli_query($conn, "SELECT COUNT(*) AS completedJobs FROM offerjobs WHERE freelancer_id = '$client_id' AND status=1");
                             $pullOfferCount = mysqli_fetch_assoc($pullOfferCount);
                             $pullOfferCount = $pullOfferCount['completedJobs'];
+
+                            $total = (int)$pullJobCount + (int)$pullOfferCount;
                         ?>
                             <div class="jobCompleted">
-                                <p><?php echo $pullJobCount; ?> completed Jobs</p>
-                                <p><?php echo $pullOfferCount; ?> completed Jobs</p>
+                                <p><?php echo $total; ?> completed Jobs</p>
                             </div>
                         <?php } ?>
 
