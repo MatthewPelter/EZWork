@@ -684,6 +684,7 @@ $getFreelancerID = $getFreelancerID['freelancer_id'];
                 });
 
                 if (rate) {
+                    console.log(rate);
                     $.ajax({
                         type: "POST",
                         url: "../api/set-rating.php",
