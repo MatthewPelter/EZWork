@@ -70,7 +70,7 @@ if (mysqli_num_rows($result) > 0) {
                         Cancel
                     </button>
                 </div>
-                <span id="messageStatus"></span>
+
             </form>
         </div>
     </div>
@@ -492,13 +492,13 @@ if (mysqli_num_rows($result) > 0) {
     
 
     function messageSent() {
-        var messageStatus = document.getElementById('messageStatus');
-        messageStatus.value = "Message Was Successfully Sent.";
+        var messagecontent = document.getElementById('messagecontent');
+        messagecontent.value = "Message Was Sent.";
     }
 
 
     function sendBtn(){
-        setTimeout( messageSent(),100000);
+        setTimeout( messageSent(),500000);
     }
 
 </script>
