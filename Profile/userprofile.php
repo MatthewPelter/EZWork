@@ -142,6 +142,10 @@ if (mysqli_num_rows($result) > 0) {
                                 <div class="rating">
                                     <p><?php echo $rate; ?>/5 Rating</p>
                                 </div>
+                            <?php } else { ?>
+                                <div class="rating">
+                                    <p>Not Rated Yet</p>
+                                </div>
                             <?php } ?>
 
                             <div class="jobCompleted">
