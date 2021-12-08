@@ -28,6 +28,10 @@ $id = mysqli_query($conn, "SELECT id FROM clients WHERE username='$receiver'");
 $getID = mysqli_fetch_assoc($id);
 $getID = $getID['id'];
 
+if (strlen($body) > 100) {
+    die('{ "Error": "Message too long!" }');
+}
+
 if ($body == null || $body == "") {
     die('{ "Error": "Message body cannot be empty!" }');
 }
