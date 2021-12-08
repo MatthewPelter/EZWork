@@ -23526,6 +23526,11 @@ footer p {
   color: #ccc;
 }
 
+.blur {
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+}
+
 .profile {
   margin-top: 0;
   width: 100%;

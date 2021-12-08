@@ -481,12 +481,12 @@ if (mysqli_num_rows($result) > 0) {
     const profile = document.querySelector('.profile');
     function on() {
         document.getElementById("overlay").style.display = "block";
-        profile.style.filter = 'blur(3px)';
+        profile.classList.add('blur');
     }
 
     function off() {
         document.getElementById("overlay").style.display = "none";
-        profile.style.filter === "none";
+        profile.classList.remove('blur');
     }
 </script>
 <script>
