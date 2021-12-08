@@ -486,6 +486,7 @@ if (mysqli_num_rows($result) > 0) {
 
     function off() {
         document.getElementById("overlay").style.display = "none";
+        profile.style.filter === "none";
     }
 </script>
 <script>
