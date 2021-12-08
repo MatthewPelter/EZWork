@@ -131,7 +131,19 @@ if (mysqli_num_rows($result) > 0) {
                             $pullOfferCount = $pullOfferCount['completedJobs'];
 
                             $total = (int)$pullJobCount + (int)$pullOfferCount;
+
+
+                            $rate = mysqli_query($conn, "SELECT AVG(rating) as average FROM ratings WHERE ratee='$client_id'");
+                            $rate = mysqli_fetch_assoc($rate);
+                            $rate = $rate['average'];
+                            $rate = round($rate, 1);
                         ?>
+
+                            <div class="rating">
+                                <p><?php echo $rate; ?>/5</p>
+                            </div>
+
+
                             <div class="jobCompleted">
                                 <p><?php echo $total; ?> completed Jobs</p>
                             </div>
