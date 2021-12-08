@@ -649,7 +649,7 @@ $getFreelancerID = $getFreelancerID['freelancer_id'];
             });
         }); // end pay for service btn click
 
-        function rate(id) {
+        function rate(id, job_id) {
             (async () => {
                 /* inputOptions can be an object or Promise */
                 const inputOptions = new Promise((resolve) => {
@@ -683,13 +683,22 @@ $getFreelancerID = $getFreelancerID['freelancer_id'];
                     $.ajax({
                         type: "POST",
                         url: "../api/set-rating.php",
-                        data: 'rate=' + rate + ', ratee=' + id,
+                        processData: false,
+                        contentType: "application/json",
+                        data: '{ "rate": "' + rate + '", "ratee": "' + id + '", "job_id": "<?php echo $job_id; ?>" }',
                         success: function(data) {
-                            Swal.fire(
-                                'Thanks!',
-                                'Thanks for leaving a rating! It helps a lot :)',
-                                'success'
-                            );
+                            var obj = JSON.parse(data);
+                            console.log(obj);
+                            if (obj.Success.length > 0) {
+                                Swal.fire(
+                                    'Thanks!',
+                                    'Thanks for your rating. It helps a lot :)',
+                                    'success'
+                                ).then(function() {
+                                    window.location.reload(1);
+                                });
+                            } else if (obj.Error.length > 0) {}
+
                         },
                         error: function(r) {
                             console.log(r);
