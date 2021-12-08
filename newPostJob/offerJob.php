@@ -51,7 +51,95 @@ if (mysqli_num_rows($jobResult) > 0) {
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
     <link rel="icon" href="../logo/logo.svg">
     <link rel="stylesheet" href="../Styles/style.css">
+    <style type="text/css">
+        .ProgressBar {
+            margin: 0 auto;
+            padding: 2em 0 3em;
+            list-style: none;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+        }
 
+        .ProgressBar-step {
+            text-align: center;
+            position: relative;
+            width: 100%;
+        }
+
+        .ProgressBar-step:before,
+        .ProgressBar-step:after {
+            content: "";
+            height: 0.5em;
+            background-color: #9F9FA3;
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            left: -50%;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: all 0.25s ease-out;
+        }
+
+        .ProgressBar-step:first-child:before,
+        .ProgressBar-step:first-child:after {
+            display: none;
+        }
+
+        .ProgressBar-step:after {
+            background-color: #00637C;
+            width: 0%;
+        }
+
+        .ProgressBar-step.is-complete+.ProgressBar-step.is-current:after,
+        .ProgressBar-step.is-complete+.ProgressBar-step.is-complete:after {
+            width: 100%;
+        }
+
+        .ProgressBar-icon {
+            width: 1.5em;
+            height: 1.5em;
+            background-color: #F2E7BF;
+            fill: #9F9FA3;
+            border-radius: 50%;
+            padding: 0.5em;
+            max-width: 100%;
+            z-index: 10;
+            position: relative;
+            transition: all 0.25s ease-out;
+        }
+
+        .is-current .ProgressBar-icon {
+            fill: #00637C;
+            background-color: #00637C;
+        }
+
+        .is-complete .ProgressBar-icon {
+            fill: #DBF1FF;
+            background-color: #00637C;
+        }
+
+        .ProgressBar-stepLabel {
+            display: block;
+            text-transform: uppercase;
+            color: #9F9FA3;
+            position: absolute;
+            padding-top: 0.5em;
+            width: 100%;
+            transition: all 0.25s ease-out;
+        }
+
+        .is-current>.ProgressBar-stepLabel,
+        .is-complete>.ProgressBar-stepLabel {
+            color: #00637C;
+        }
+
+        .wrapper {
+            max-width: 1000px;
+            margin: 4em auto;
+            font-size: 16px;
+        }
+    </style>
 </head>
 
 <body>
@@ -89,6 +177,67 @@ if (mysqli_num_rows($jobResult) > 0) {
         </button>
     <?php } ?>
 
+
+
+    <div class="wrapper">
+
+        <h1>Project Progress</h1>
+
+        <ol class="ProgressBar">
+            <li class="ProgressBar-step">
+                <svg class="ProgressBar-icon">
+                    <use xlink:href="#checkmark-bold" />
+                </svg>
+                <span class="ProgressBar-stepLabel">Accepted Job</span>
+            </li>
+            <li class="ProgressBar-step">
+                <svg class="ProgressBar-icon">
+                    <use xlink:href="#checkmark-bold" />
+                </svg>
+                <span class="ProgressBar-stepLabel">Started Work</span>
+            </li>
+            <li class="ProgressBar-step">
+                <svg class="ProgressBar-icon">
+                    <use xlink:href="#checkmark-bold" />
+                </svg>
+                <span class="ProgressBar-stepLabel">Finished</span>
+            </li>
+        </ol>
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg">
+        <symbol id="checkmark-bold" viewBox="0 0 24 24">
+            <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" />
+        </symbol>
+    </svg>
 </body>
+
+<div class="messageChat">
+    <!-- insert message -->
+</div>
+
+<script type="text/javascript">
+    var $bar = $(".ProgressBar");
+    $bar.children().first().addClass("is-current");
+    $bar.children(".is-current").removeClass("is-current").addClass("is-complete").next().addClass("is-current");
+
+    <?php if ($r['client_id'] == $user_id) { ?>
+        $(".messageChat").load("https://ez-work.herokuapp.com/message/messages?mid=<?php echo $r['freelancer_id']; ?> .messageMainContainer", loadMessageScripts);
+    <?php } else if ($r['freelancer_id'] == $user_id) { ?>
+        $(".messageChat").load("https://ez-work.herokuapp.com/message/messages?mid=<?php echo $r['client_id']; ?> .messageMainContainer", loadMessageScripts);
+    <?php } ?>
+
+    <?php
+    if ($r['freelancer_complete'] == 1) { ?>
+        $bar.children(".is-current").removeClass("is-current").addClass("is-complete").next().addClass("is-current");
+    <?php }
+    ?>
+
+    <?php
+    if ($r['status'] == 1) { ?>
+        $bar.children(".is-current").removeClass("is-current").addClass("is-complete").next().addClass("is-current");
+    <?php }
+    ?>
+</script>
 
 </html>
