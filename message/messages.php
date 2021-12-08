@@ -309,7 +309,6 @@ background: linear-gradient(90deg, rgba(0,147,233,1) 39%, rgba(128,208,199,1) 61
 <script src="../SkillsContainer/searchProfile.js"></script>
 <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
 <script type="text/javascript">
-    import validator from 'validator';
     var elem = document.querySelector('.chat-history');
     elem.scrollTop = elem.scrollHeight;
 
