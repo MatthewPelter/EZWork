@@ -90,7 +90,7 @@ if (mysqli_num_rows($result) > 0) {
                                 <button id="messageUser">Message</button>
                             </div>
                             <div class="messageContainer" style="display: none;">
-                                <form class="profile-card-form">
+                                <form class="profile-card-form" onsubmit="return false">
                                     <div class="profile-card-form__container">
                                         <textarea id="messagecontent" placeholder="Say something..." required></textarea>
                                     </div>
