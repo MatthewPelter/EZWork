@@ -149,12 +149,11 @@ $getFreelancerID = $getFreelancerID['freelancer_id'];
             color: #00637C;
         }
 
-        /*.wrapper {
-            max-width: 1000px;
+        .wrapper {
+            width: 80%;
             margin: 4em auto;
             font-size: 16px;
         }
-        */
 
         .chat {
             width: 100%;

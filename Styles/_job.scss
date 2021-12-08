@@ -412,7 +412,7 @@ $darktext: rgb(121, 121, 121);
         }
         .options{
             display: flex;
-            height: 14rem;
+            height: fit-content;
             flex-direction: row;
             justify-content: center;
             align-items: center;
@@ -425,6 +425,7 @@ $darktext: rgb(121, 121, 121);
 
         .jobDescription{
             width: 100%;
+            height: fit-content;
             padding: 2rem;
             display: flex;
             justify-content: center;

@@ -377,7 +377,7 @@
 }
 .job-progress-section .job-progress-container .options {
   display: flex;
-  height: 14rem;
+  height: fit-content;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -389,6 +389,7 @@
 }
 .job-progress-section .job-progress-container .jobDescription {
   width: 100%;
+  height: fit-content;
   padding: 2rem;
   display: flex;
   justify-content: center;
