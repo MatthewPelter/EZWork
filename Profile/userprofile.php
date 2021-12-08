@@ -58,7 +58,7 @@ if (mysqli_num_rows($result) > 0) {
 
     <div class="profile">
 
-        <div class="profile-container">
+        <div class="profile-container profile-card">
             <?php
             if ($dataFound) {
             ?>
