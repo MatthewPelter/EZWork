@@ -119,7 +119,18 @@ if (mysqli_num_rows($result) > 0) {
                     <div class="profile-job-info">
                         <h4>EZWork Information</h4>
                         <!-- if freelancer -->
-
+                        <div class="rating">
+                            <?php
+                            $rate = mysqli_query($conn, "SELECT AVG(rating) as average FROM ratings WHERE ratee='$client_id'");
+                            $rate = mysqli_fetch_assoc($rate);
+                            $rate = $rate['average'];
+                            $rate = round($rate, 1);
+                            if ($rate != 0) { ?>
+                                <p><?php echo $rate; ?>/5 Rating</p>
+                            <?php } else { ?>
+                                <p>Not Rated Yet</p>
+                            <?php } ?>
+                        </div>
                         <?php if ($row['freelancer_id'] != NULL) {
                             $freeID = $row['freelancer_id'];
                             $pullJobs = mysqli_query($conn, "SELECT COUNT(*) AS completedJobs FROM jobs WHERE freelancer_id = '$freeID' AND status=1");
@@ -131,22 +142,7 @@ if (mysqli_num_rows($result) > 0) {
                             $pullOfferCount = $pullOfferCount['completedJobs'];
 
                             $total = (int)$pullJobCount + (int)$pullOfferCount;
-
-
-                            $rate = mysqli_query($conn, "SELECT AVG(rating) as average FROM ratings WHERE ratee='$client_id'");
-                            $rate = mysqli_fetch_assoc($rate);
-                            $rate = $rate['average'];
-                            $rate = round($rate, 1);
-                            if ($rate != 0) {
                         ?>
-                                <div class="rating">
-                                    <p><?php echo $rate; ?>/5 Rating</p>
-                                </div>
-                            <?php } else { ?>
-                                <div class="rating">
-                                    <p>Not Rated Yet</p>
-                                </div>
-                            <?php } ?>
 
                             <div class="jobCompleted">
                                 <p><?php echo $total; ?> completed Jobs</p>
