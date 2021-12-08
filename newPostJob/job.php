@@ -378,6 +378,9 @@ if (mysqli_num_rows($jobResult) > 0) {
                         </p>
                     </div>
                 </div>
+                <div class="messageChat" style="grid-area: 1/2;">
+                    <!-- messages loaded from jquery -->
+                </div>
 
                 <div class="jobDescription">
                     <div class="wrapper">
@@ -441,6 +444,7 @@ if (mysqli_num_rows($jobResult) > 0) {
                             <h2>Freelancer is working on your job now.</h2>
                         <?php
                         } ?>
+                        <br />
                         <button onclick="window.location='../message/messages?mid=<?php echo $freelancerUserID; ?>'">
                             <i class="fa fa-edit" aria-hidden="true"></i>
                             Message
@@ -459,7 +463,7 @@ if (mysqli_num_rows($jobResult) > 0) {
                                 </button>
                         <?php }
                         } ?>
-
+                        <br />
                         <button onclick="window.location='../message/messages?mid=<?php echo $r['user_id']; ?>'">
                             <i class="fa fa-edit" aria-hidden="true"></i>
                             Message
@@ -740,6 +744,13 @@ if (mysqli_num_rows($jobResult) > 0) {
 
         var $bar = $(".ProgressBar");
         $bar.children().first().addClass("is-current");
+
+        <?php if ($r['user_id'] == $_SESSION['user_id']) { ?>
+            $(".settings-billing-option").load("https://ez-work.herokuapp.com/message/messages?mid=<?php echo $freelancerUserID; ?> .messageMainContainer");
+        <?php } else if ($r['freelancer_id'] == $getFreelancerID) { ?>
+            $(".settings-billing-option").load("https://ez-work.herokuapp.com/message/messages?mid=<?php echo $r['user_id']; ?> .messageMainContainer");
+        <?php } ?>
+
         <?php
         if ($r['paid'] == 1) { ?>
             $bar.children(".is-current").removeClass("is-current").addClass("is-complete").next().addClass("is-current");
