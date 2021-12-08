@@ -43,9 +43,8 @@ $user_id = $_SESSION['user_id'];
             <ul>
                 <li><a href="../ClientProfile/index.php">My Profile</a></li>
                 <li>/</li>
-                <li>Contracts</li>
+                <li>Services</li>
             </ul>
-            <button onclick="location.href='../newPostJob/length.php'">Post a New Job</button>
         </div>
         <div class="myJobs-container">
             <div class="myJobs-container-header">
@@ -66,7 +65,7 @@ $user_id = $_SESSION['user_id'];
                         <div class="allJobsCard" style="overflow-y: scroll;">
                             <div class="postedJob" data-postid="<?php echo $row['id']; ?>">
                                 <div class="jobTitle">
-                                    <h4 id="jobTitle"><a href="./offerjob.php?id=<?php echo $row['id']; ?>"><?php echo $row['uname']; ?></a></h4>
+                                    <h4 id="jobTitle"><a href="./offerJob.php?id=<?php echo $row['id']; ?>"><?php echo $row['uname']; ?></a></h4>
 
                                 </div>
                                 <p>Status:
