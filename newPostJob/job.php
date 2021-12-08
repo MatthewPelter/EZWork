@@ -354,6 +354,28 @@ if (mysqli_num_rows($jobResult) > 0) {
         </div>
     </div>
 
+    <?php if ($r['typeOfJob'] == "offer" && $r['user_id'] == $user_id) {
+        $selectCurrentJobs = mysqli_query($conn, "SELECT * FROM offerJobs WHERE job_id='$job_id'");
+
+        if (mysqli_num_rows($selectCurrentJobs) > 0) {
+            while ($pull = mysqli_fetch_assoc($selectCurrentJobs)) { ?>
+                <div class="currentJob">
+                    <div class="currentUser"><? echo $pull['user_id']; ?></div>
+                    <div class="currentPaid"><? echo $pull['paid']; ?></div>
+                    <button>View Job</button>
+                </div>
+            <?php
+            }
+        } else { ?>
+            <h2>No active clients</h2>
+        <?php
+        }
+        ?>
+
+
+
+    <?php } ?>
+
     <!-- ---------------------------------------------------------- -->
     <!-- PROGRESS SECTION -->
     <!-- ---------------------------------------------------------- -->
