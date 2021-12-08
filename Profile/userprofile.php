@@ -491,7 +491,22 @@ if (mysqli_num_rows($result) > 0) {
 </script>
 <script>
     $(document).ready(function() {
+        
+        // Send message button
+        $("#sendmessage").click(function() {
+            (async () => {
+                const {
+                    value: text
+                } = await Swal.fire({
+                    title: "Message sent",
+                    position: 'center',
+                    timer: 3000,
+                    timerProgressBar: true,
+                });
 
+            })();
+
+        }); // end proposal btn click
         
         /*var messageBox = document.querySelector('.js-message');
         var messageBtn = document.querySelector('.js-message-btn');
