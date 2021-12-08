@@ -16,7 +16,7 @@ if (isset($_POST['submit'])) {
 		$password = securityscan($_POST['password']);
 
 		$sql = "SELECT * FROM clients WHERE email='$email' LIMIT 1";
-		$result = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
+		$result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 		$data = mysqli_fetch_assoc($result);
 		if (password_verify($password, $data['password'])) {
 			$_SESSION['userid'] = $data['username'];
@@ -26,7 +26,7 @@ if (isset($_POST['submit'])) {
 		} else {
 			$_SESSION['error'] = "Username or Password is incorrect! Try again...";
 			header("Location: ../login/index");
-			exit();
+			die();
 		}
 	} else {
 		echo "Please fill in the data";
