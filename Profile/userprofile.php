@@ -492,7 +492,7 @@ if (mysqli_num_rows($result) > 0) {
 
     function messageSent() {
         var messagecontent = document.getElementById('messagecontent');
-        messagecontent.innerText = "Message Was Sent.";
+        messagecontent.value = "Message Was Sent.";
     }
 
 
