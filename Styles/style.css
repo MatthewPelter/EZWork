@@ -20201,9 +20201,7 @@ li {
 
 .job-progress-section .job-progress-container .job-progress-header {
   width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 30vh;
   padding: 2rem;
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;

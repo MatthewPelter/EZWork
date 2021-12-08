@@ -362,7 +362,7 @@
 }
 .job-progress-section .job-progress-container .job-progress-header {
   width: 100%;
-  height: fit-content;
+  height: 30vh;
   padding: 2rem;
   grid-area: 1/1/2/6;
   display: flex;
