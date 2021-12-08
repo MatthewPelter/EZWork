@@ -497,7 +497,7 @@ if (mysqli_num_rows($result) > 0) {
 
 
     function sendBtn(){
-        setTimeout( messageSent(),10000);
+        setTimeout( messageSent(),15000);
     }
 
 </script>
