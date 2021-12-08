@@ -379,6 +379,113 @@ $darktext: rgb(121, 121, 121);
     }
 }
 
+.job-progress-section{
+    width: 100%;
+    background: whitesmoke;
+    padding: 2.5rem 8rem;
+
+    .job-progress-container{
+        width: 100%;
+        border-radius: 15px;
+        border: 1px solid lightgrey;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr); 
+        
+        .job-progress-header{
+            width: 100%;
+            padding: 1rem;
+            grid-area: 1 / 1 / 2 / 6;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            h2{
+                font-size: 2rem;
+                color: $lightColor;
+                width: fit-content;
+            }
+            p{
+                font-size: 1.2rem;
+            }
+        }
+
+        .job-progress-status{
+            width: 100%;
+            padding: 1rem;
+            grid-area: 2 / 1 / 3 / 4;
+            border-top: 1px solid lightgrey; 
+            border-bottom: 1px solid lightgrey; 
+        }
+
+        .job-poster-info{
+            width: 100%;
+            padding: 1rem;
+            grid-area: 2 / 4 / 3 / 6; 
+            border-top: 1px solid lightgrey; 
+            border-bottom: 1px solid lightgrey; 
+
+            .clientInfo{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                
+                h3{
+                    font-size: 1.3rem;
+                    color: $lightColor;
+                    width: 100%;
+                    text-decoration: underline;
+                    padding-bottom: 1rem;
+                }
+    
+                .username{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    p{
+                        font-size: 1.2rem;
+                        color: $color1;
+                        padding-right:.5rem ;
+                    }
+                    a{
+                        font-size: 1.2rem;
+                        color: $lightColor;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                }
+    
+                .img-card{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    padding: 1rem 0rem;
+                    img{
+                        width: 5rem;
+                        height: 5rem;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                }
+                
+            }
+        }
+
+        .job-chat{
+            width: 100%;
+            padding: 1rem;
+            grid-area: 3 / 1 / 6 / 6;
+            .messageChat{
+                width: 100%;
+            }
+        }
+    }
+   
+}
+
 
 //Media Queires
 @media screen and (max-width: 754px) {
