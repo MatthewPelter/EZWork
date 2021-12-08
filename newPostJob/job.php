@@ -34,6 +34,10 @@ if (mysqli_num_rows($jobResult) > 0) {
 } else {
     header("location: ./jobs.php");
 }
+
+$getFreelancerID = mysqli_query($conn, "SELECT freelancer_id FROM clients WHERE id='$user_id'");
+$getFreelancerID = mysqli_fetch_assoc($getFreelancerID);
+$getFreelancerID = $getFreelancerID['freelancer_id'];
 ?>
 
 <!-- ----------------------------------------- -->
@@ -390,9 +394,7 @@ if (mysqli_num_rows($jobResult) > 0) {
     <!-- PROGRESS SECTION -->
     <!-- ---------------------------------------------------------- -->
     <?php
-    $getFreelancerID = mysqli_query($conn, "SELECT freelancer_id FROM clients WHERE id='$user_id'");
-    $getFreelancerID = mysqli_fetch_assoc($getFreelancerID);
-    $getFreelancerID = $getFreelancerID['freelancer_id'];
+
     if ($r['status'] == -1 && ($r['user_id'] == $user_id || $r['freelancer_id'] == $getFreelancerID)) { ?>
         <!-- style as you please. just temporary -->
         <div class="job progress">
