@@ -606,7 +606,16 @@ if (mysqli_num_rows($jobResult) > 0) {
                                     text: 'Your payment has been accepted. The freelancer will now begin on your project.',
                                     icon: 'success',
                                 }).then(function() {
-                                    window.location.reload(1);
+                                    if (data == "offer") {
+                                        <?php
+                                        $selectOffer = mysqli_query($conn, "SELECT id FROM offerjobs WHERE job_id='$job_id' AND client_id='$user_id'");
+                                        $selectOffer = mysqli_fetch_assoc($selectOffer);
+                                        $selectOffer = $selectOffer['id'];
+                                        ?>
+                                        window.location.href = "https://ez-work.herokuapp.com/newPostJob/offerJob.php?id=<?php echo $selectOffer; ?>";
+                                    } else {
+                                        window.location.reload(1);
+                                    }
                                 });
                             } else {
                                 Swal.fire({

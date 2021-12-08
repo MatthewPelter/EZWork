@@ -54,6 +54,7 @@ if (isset($_SESSION['user_id']) && isset($_POST['postID'])) {
             } else {
                 $setOfferJob = mysqli_query($conn, "INSERT INTO offerjobs(job_id, freelancer_id, client_id, status, freelancer_complete) VALUES ('$postID', '$pullUserID', '$user_id', 0, 0)");
                 $sendNotification = mysqli_query($conn, "INSERT INTO notifications (type, receiver, sender, isRead, sentAt) VALUES ('p', '$pullUserID', '$user_id', 0, '$date')") or die(mysqli_errno($conn));
+                echo "offer";
             }
         } else {
             die("Payment Failure, Try Again");
