@@ -472,10 +472,6 @@
 .job-progress-section .job-progress-container .jobDescription .wrapper {
   width: 100%;
   font-size: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 .job-progress-section .job-progress-container .job-chat {
   width: 100%;
