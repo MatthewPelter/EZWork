@@ -743,9 +743,9 @@ if (mysqli_num_rows($jobResult) > 0) {
         $bar.children().first().addClass("is-current");
 
         <?php if ($r['user_id'] == $_SESSION['user_id']) { ?>
-            $(".messageChat").load("https://ez-work.herokuapp.com/message/messages?mid=<?php echo $freelancerUserID; ?> .messageMainContainer");
+            $(".messageChat").load("https://ez-work.herokuapp.com/message/messages?mid=<?php echo $freelancerUserID; ?> .messageMainContainer", loadMessageScripts());
         <?php } else if ($r['freelancer_id'] == $getFreelancerID) { ?>
-            $(".messageChat").load("https://ez-work.herokuapp.com/message/messages?mid=<?php echo $r['user_id']; ?> .messageMainContainer");
+            $(".messageChat").load("https://ez-work.herokuapp.com/message/messages?mid=<?php echo $r['user_id']; ?> .messageMainContainer", loadMessageScripts());
         <?php } ?>
 
         <?php
@@ -766,81 +766,83 @@ if (mysqli_num_rows($jobResult) > 0) {
         <?php }
         ?>
 
-        var elem = document.querySelector('.chat-history');
-        elem.scrollTop = elem.scrollHeight;
+        function loadMessageScripts() {
+            var elem = document.querySelector('.chat-history');
+            elem.scrollTop = elem.scrollHeight;
 
-        $('#sendmessage').click(function() {
-            $.ajax({
-                type: "POST",
-                url: "../api/message.php",
-                processData: false,
-                contentType: "application/json",
-                data: '{ "body": "' + $("#message-to-send").val() + '", "receiver": "<?php echo $getName; ?>" }',
-                success: function(data) {
-                    var obj = JSON.parse(data);
-                    console.log(obj);
-                    $("#message-to-send").val('');
-                    if (obj.Success.length > 0) {
-                        location.reload();
-                        //$('#result').html(obj.Success);
-                    } else if (obj.Error.length > 0) {
-                        $('#result').html(obj.Error);
+            $('#sendmessage').click(function() {
+                $.ajax({
+                    type: "POST",
+                    url: "../api/message.php",
+                    processData: false,
+                    contentType: "application/json",
+                    data: '{ "body": "' + $("#message-to-send").val() + '", "receiver": "<?php echo $getName; ?>" }',
+                    success: function(data) {
+                        var obj = JSON.parse(data);
+                        console.log(obj);
+                        $("#message-to-send").val('');
+                        if (obj.Success.length > 0) {
+                            location.reload();
+                            //$('#result').html(obj.Success);
+                        } else if (obj.Error.length > 0) {
+                            $('#result').html(obj.Error);
+                        }
+
+                    },
+                    error: function(r) {
+                        console.log(r);
                     }
-
-                },
-                error: function(r) {
-                    console.log(r);
-                }
+                });
             });
-        });
 
-        function respondToJob(jobID, free_id, response) {
-            if (response == "accept") {
-                $.ajax({
-                    type: "POST",
-                    url: "../api/accept.php",
-                    processData: false,
-                    contentType: "application/json",
-                    data: '{ "jobID": "' + jobID + '", "id": "<?php echo $user_id; ?>", "freelancer_id": "' + free_id + '" }',
-                    success: function(data) {
-                        var obj = JSON.parse(data);
-                        console.log(obj);
-                        if (obj.Success.length > 0) {
-                            $('#status').html(obj.Success);
-                            $('.propose').hide();
-                            location.reload();
-                        } else if (obj.Error.length > 0) {
-                            $('#status').html(obj.Error);
+            function respondToJob(jobID, free_id, response) {
+                if (response == "accept") {
+                    $.ajax({
+                        type: "POST",
+                        url: "../api/accept.php",
+                        processData: false,
+                        contentType: "application/json",
+                        data: '{ "jobID": "' + jobID + '", "id": "<?php echo $user_id; ?>", "freelancer_id": "' + free_id + '" }',
+                        success: function(data) {
+                            var obj = JSON.parse(data);
+                            console.log(obj);
+                            if (obj.Success.length > 0) {
+                                $('#status').html(obj.Success);
+                                $('.propose').hide();
+                                location.reload();
+                            } else if (obj.Error.length > 0) {
+                                $('#status').html(obj.Error);
+                            }
+
+                        },
+                        error: function(r) {
+                            console.log(r);
                         }
+                    });
+                } else {
+                    $.ajax({
+                        type: "POST",
+                        url: "../api/deny.php",
+                        processData: false,
+                        contentType: "application/json",
+                        data: '{ "jobID": "' + jobID + '", "id": "<?php echo $user_id; ?>", "freelancer_id": "' + free_id + '" }',
+                        success: function(data) {
+                            var obj = JSON.parse(data);
+                            console.log(obj);
+                            if (obj.Success.length > 0) {
+                                $('#status').html(obj.Success);
+                                $('.propose').hide();
+                                location.reload();
+                            } else if (obj.Error.length > 0) {
+                                $('#status').html(obj.Error);
+                            }
 
-                    },
-                    error: function(r) {
-                        console.log(r);
-                    }
-                });
-            } else {
-                $.ajax({
-                    type: "POST",
-                    url: "../api/deny.php",
-                    processData: false,
-                    contentType: "application/json",
-                    data: '{ "jobID": "' + jobID + '", "id": "<?php echo $user_id; ?>", "freelancer_id": "' + free_id + '" }',
-                    success: function(data) {
-                        var obj = JSON.parse(data);
-                        console.log(obj);
-                        if (obj.Success.length > 0) {
-                            $('#status').html(obj.Success);
-                            $('.propose').hide();
-                            location.reload();
-                        } else if (obj.Error.length > 0) {
-                            $('#status').html(obj.Error);
+                        },
+                        error: function(r) {
+                            console.log(r);
                         }
-
-                    },
-                    error: function(r) {
-                        console.log(r);
-                    }
-                });
+                    });
+                }
             }
         }
     });
