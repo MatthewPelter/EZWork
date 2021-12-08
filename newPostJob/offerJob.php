@@ -20,7 +20,7 @@ $job_id = $_GET['id'];
 $job_id = mysqli_real_escape_string($conn, $job_id);
 $job_id = htmlspecialchars($job_id);
 
-$jobSQL = "SELECT * FROM offerjobs WHERE id='$job_id' LIMIT 1";
+$jobSQL = "SELECT offerjobs.*, jobs.title, jobs.description FROM offerjobs INNER JOIN jobs ON offerjobs.job_id=jobs.id WHERE offerjobs.id='$job_id' LIMIT 1";
 $jobResult = mysqli_query($conn, $jobSQL);
 
 if (mysqli_num_rows($jobResult) > 0) {
@@ -42,7 +42,7 @@ if (mysqli_num_rows($jobResult) > 0) {
     <meta name="description" content="A platform for skilled workers or talented people to freelance, find projects to work on, extra ways to earn income.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/e9089fea9d.js" crossorigin="anonymous"></script>
-    <title>EZWork | <?php echo $r['title']; ?></title>
+    <title>EZWork | Service</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -165,6 +165,8 @@ if (mysqli_num_rows($jobResult) > 0) {
     $freelancerName = $freelancerName['username'];
     ?>
 
+    <h1>Title: <?php echo $r['title']; ?></h1>
+    <h2>Description: <?php echo $r['description']; ?></h2>
     <h2>Client: <?php echo $clientName; ?></h2>
     <h2>Freelancer: <?php echo $freelancerName; ?></h2>
     <p>Status: <?php echo ($r['status'] == 0) ? "Open" : "Closed"; ?></p>
