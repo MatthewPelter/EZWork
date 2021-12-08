@@ -362,7 +362,7 @@ if (mysqli_num_rows($jobResult) > 0) {
                 <div class="currentJob">
                     <div class="currentUser"><? echo $pull['uname']; ?></div>
                     <div class="currentStatus"><? echo ($pull['status'] == 0) ? "Open" : "Closed"; ?></div>
-                    <button onclick="location.href='./offerJob.php?id=<?php $pull['id'] ?>'">View Job</button>
+                    <button onclick="location.href='./offerJob.php?id=<?php echo $pull['id']; ?>'">View Job</button>
                 </div>
             <?php
             }
