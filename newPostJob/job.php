@@ -276,15 +276,18 @@ if (mysqli_num_rows($jobResult) > 0) {
                         if (mysqli_num_rows($checkProposal) > 0) { ?>
                             <button id="proposalBtn" disabled>Proposal Submitted</button>
                         <?php } else { ?>
-                            <!-- <a href="./proposal.php?id=<?php echo $job_id; ?>">--><button id="proposalBtn">Submit A Proposal</button>
-                            <!--</a> -->
+                            <button id="proposalBtn">Submit A Proposal</button>
                         <?php } ?>
-                    <?php }
+                        <?php }
                 } else {
 
-                    if ($unameFetched['username'] != $_SESSION['userid'] && $r['status'] == 0) { ?>
-                        <button class="pay">Pay for Service</button>
+                    if ($unameFetched['username'] != $_SESSION['userid'] && $r['status'] == 0) {
+
+                        $checkOffers = mysqli_query($conn, "SELECT * FROM offerjobs WHERE job_id ='$job_id' AND client_id='$user_id'");
+                        if (mysqli_num_rows($checkOffers) == 0) { ?>
+                            <button class="pay">Pay for Service</button>
                 <?php }
+                    }
                 } ?>
 
 
@@ -355,9 +358,9 @@ if (mysqli_num_rows($jobResult) > 0) {
     </div>
 
     <?php if ($r['typeOfJob'] == "offer" && $r['user_id'] == $user_id) {
-        $selectCurrentJobs = mysqli_query($conn, "SELECT offerjobs.id, offerjobs.status, clients.username as uname FROM offerjobs INNER JOIN clients on offerjobs.client_id=clients.id WHERE job_id='$job_id'");
-
-        if (mysqli_num_rows($selectCurrentJobs) > 0) {
+        $selectCurrentJobs = mysqli_query($conn, "SELECT offerjobs.id, offerjobs.status, clients.username as uname FROM offerjobs INNER JOIN clients on offerjobs.client_id=clients.id WHERE job_id='$job_id'"); ?>
+        <h1>Current Clients</h1>
+        <?php if (mysqli_num_rows($selectCurrentJobs) > 0) {
             while ($pull = mysqli_fetch_assoc($selectCurrentJobs)) { ?>
                 <div class="currentJob">
                     <div class="currentUser"><? echo $pull['uname']; ?></div>
