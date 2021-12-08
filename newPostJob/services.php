@@ -56,7 +56,7 @@ $user_id = $_SESSION['user_id'];
             <div class="postedJob">
 
                 <?php
-                $fetchContracts = mysqli_query($conn, "SELECT offerjobs.*, clients.username as uname, jobs.title FROM offerjobs INNER JOIN clients on offerjobs.client_id=clients.id INNER JOIN jobs on offerjobs.job_id=jobs.id WHERE offerjobs.client_id = '$user_id' OR offerjobs.freelancer_id='$user_id' ORDER BY id DESC") or die(mysqli_error($conn));
+                $fetchContracts = mysqli_query($conn, "SELECT offerjobs.*, jobs.title FROM offerjobs INNER JOIN jobs on offerjobs.job_id=jobs.id WHERE offerjobs.client_id = '$user_id' OR offerjobs.freelancer_id='$user_id' ORDER BY id DESC") or die(mysqli_error($conn));
 
                 if (mysqli_num_rows($fetchContracts) > 0) {
                     while ($row = mysqli_fetch_assoc($fetchContracts)) {
@@ -66,6 +66,20 @@ $user_id = $_SESSION['user_id'];
                             <div class="postedJob" data-postid="<?php echo $row['id']; ?>">
                                 <div class="jobTitle">
                                     <h4 id="jobTitle"><a href="./offerJob.php?id=<?php echo $row['id']; ?>"><?php echo $row['title']; ?></a></h4>
+                                    <?php
+                                    $client = $row['client_id'];
+                                    $freelancer = $row['freelancer_id'];
+
+                                    if ($client == $user_id) {
+                                        $uname = mysqli_query($conn, "SELECT username FROM clients WHERE id='$freelancer'");
+                                        $uname = mysqli_fetch_assoc($uname);
+                                        $uname = $uname['username'];
+                                    } else if ($freelancer == $user_id) {
+                                        $uname = mysqli_query($conn, "SELECT username FROM clients WHERE id='$client'");
+                                        $uname = mysqli_fetch_assoc($uname);
+                                        $uname = $uname['username'];
+                                    }
+                                    ?>
                                     <p><?php echo $row['uname']; ?></p>
                                 </div>
                                 <p>Status:
