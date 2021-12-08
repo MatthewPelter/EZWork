@@ -87,9 +87,9 @@ if (mysqli_num_rows($result) > 0) {
                                 <?php } ?>
                             </div>
                             <div class="message">
-                                <button class="js-message-btn">Message</button>
+                                <button id="messageUser">Message</button>
                             </div>
-                            <div class="profile-card-message js-message">
+                            <div class="messageContainer" style="display: none;">
                                 <form class="profile-card-form">
                                     <div class="profile-card-form__container">
                                         <textarea id="messagecontent" placeholder="Say something..." required></textarea>
@@ -108,6 +108,19 @@ if (mysqli_num_rows($result) > 0) {
 
                                 <div class="profile-card__overlay js-message-close"></div>
                             </div>
+                            <script>
+                                var messageUser = document.getElementById('messageUser');
+                                var messageContainer = document.querySelector('.messageContainer');
+
+                                messageUser.addEventListener('click',()=>{
+                                    if(getComputedStyle(messageContainer).display === "none"){
+                                        messageContainer.style.display = "inline-block";
+                                    }
+                                    else{
+                                        messageContainer.style.display = "none";
+                                    }
+                                })
+                            </script>
                         </div>
 
                     </div>
@@ -481,7 +494,8 @@ if (mysqli_num_rows($result) > 0) {
 <script>
     $(document).ready(function() {
 
-        var messageBox = document.querySelector('.js-message');
+        
+        /*var messageBox = document.querySelector('.js-message');
         var messageBtn = document.querySelector('.js-message-btn');
         var card = document.querySelector('.js-profile-card');
         var closeBtn = document.querySelectorAll('.js-message-close');
@@ -498,7 +512,7 @@ if (mysqli_num_rows($result) > 0) {
                 messageBox.classList.remove('active');
             });
         });
-
+        */
         <?php
         if (isset($_GET['name'])) {
             $receiver = $_GET['name'];
