@@ -150,6 +150,14 @@ if (mysqli_num_rows($jobResult) > 0) {
             margin: 4em auto;
             font-size: 16px;
         }
+
+        .chat {
+            width: 100%;
+        }
+
+        .people-list {
+            display: none;
+        }
     </style>
 </head>
 
@@ -192,13 +200,13 @@ if (mysqli_num_rows($jobResult) > 0) {
                     <!-- -1 : IN PROGRESS -->
                     <!-- ----------------------------------------- -->
                     <p>Status:
-                    <?php if ($r['status'] == 0) { ?>
-                                        <span style="color: lightgreen;font-weight: bolder;"><?php echo "Open"; ?></span>
-                                    <?php } else if($r['status'] == 1) { ?>
-                                        <span style="color: red;font-weight: bolder;"><?php echo "Closed"; ?></span>                         
-                                    <?php }else{ ?>
-                                        <span style="color: royalblue;font-weight: bolder;"><?php echo "In-Progress"; ?></span>                                              
-                                    <?php } ?>
+                        <?php if ($r['status'] == 0) { ?>
+                            <span style="color: lightgreen;font-weight: bolder;"><?php echo "Open"; ?></span>
+                        <?php } else if ($r['status'] == 1) { ?>
+                            <span style="color: red;font-weight: bolder;"><?php echo "Closed"; ?></span>
+                        <?php } else { ?>
+                            <span style="color: royalblue;font-weight: bolder;"><?php echo "In-Progress"; ?></span>
+                        <?php } ?>
                     </p>
                 </div>
 
@@ -299,14 +307,14 @@ if (mysqli_num_rows($jobResult) > 0) {
                 <?php if ($unameFetched['username'] == $_SESSION['userid'] && $r['status'] != -1) {
                 ?>
 
-                <?php
-                    if( $r['status'] != 1){ 
-                ?>
-                    <input type="button" onclick="location.href = 'edit?id=<?php echo $r['id']; ?>';" id="editBtn" value="Edit Post">
-                <?php
+                    <?php
+                    if ($r['status'] != 1) {
+                    ?>
+                        <input type="button" onclick="location.href = 'edit?id=<?php echo $r['id']; ?>';" id="editBtn" value="Edit Post">
+                    <?php
                     }
-                ?>
-                   
+                    ?>
+
                     <input type="button" id="deleteBtn" style="color: red;" value="Delete Post">
                     <span id="result"></span>
 
@@ -378,6 +386,9 @@ if (mysqli_num_rows($jobResult) > 0) {
                         </p>
                     </div>
                 </div>
+                <div class="messageChat" style="grid-area: 1/1/4/1;">
+                    <!-- messages loaded from jquery -->
+                </div>
 
                 <div class="jobDescription">
                     <div class="wrapper">
@@ -412,6 +423,14 @@ if (mysqli_num_rows($jobResult) > 0) {
                         </symbol>
                     </svg>
                 </div>
+
+                <?php
+                $workFreelancer = $r['freelancer_id'];
+                $getFreelancerName = mysqli_query($conn, "SELECT id, username, avatar FROM clients WHERE freelancer_id='$workFreelancer'");
+                $getFreelancerName = mysqli_fetch_assoc($getFreelancerName);
+
+                $freelancerUserID = $getFreelancerName['id'];
+                ?>
 
                 <div class="options">
                     <?php if ($r['user_id'] == $_SESSION['user_id']) {
@@ -453,11 +472,7 @@ if (mysqli_num_rows($jobResult) > 0) {
                     <h3>About the Freelancer</h3>
                     <div class="username">
                         <p>Work By: </p>
-                        <?php
-                        $workFreelancer = $r['freelancer_id'];
-                        $getFreelancerName = mysqli_query($conn, "SELECT username, avatar FROM clients WHERE freelancer_id='$workFreelancer'");
-                        $getFreelancerName = mysqli_fetch_assoc($getFreelancerName);
-                        ?>
+
                         <a href="../Profile/userprofile.php?name=<?php echo $getFreelancerName['username']; ?>"><?php echo $getFreelancerName['username']; ?></a>
                     </div>
                     <div class="img-card">
@@ -481,15 +496,15 @@ if (mysqli_num_rows($jobResult) > 0) {
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.2.1/dist/sweetalert2.all.min.js"></script>
 <script>
-            //Report fun
-            function report(){
-            const reportMsg = document.querySelector('.reportMessage');
-            if (getComputedStyle(reportMsg).display === "none") {
-                reportMsg.style.display = "inline-block";
-            } else {
-                reportMsg.style.display = "none";
-            }            
+    //Report fun
+    function report() {
+        const reportMsg = document.querySelector('.reportMessage');
+        if (getComputedStyle(reportMsg).display === "none") {
+            reportMsg.style.display = "inline-block";
+        } else {
+            reportMsg.style.display = "none";
         }
+    }
 </script>
 <script type="text/javascript">
     $(document).ready(function() {
@@ -726,6 +741,13 @@ if (mysqli_num_rows($jobResult) > 0) {
 
         var $bar = $(".ProgressBar");
         $bar.children().first().addClass("is-current");
+
+        <?php if ($r['user_id'] == $_SESSION['user_id']) { ?>
+            $(".messageChat").load("https://ez-work.herokuapp.com/message/messages?mid=<?php echo $freelancerUserID; ?> .messageMainContainer", loadMessageScripts);
+        <?php } else if ($r['freelancer_id'] == $getFreelancerID) { ?>
+            $(".messageChat").load("https://ez-work.herokuapp.com/message/messages?mid=<?php echo $r['user_id']; ?> .messageMainContainer", loadMessageScripts);
+        <?php } ?>
+
         <?php
         if ($r['paid'] == 1) { ?>
             $bar.children(".is-current").removeClass("is-current").addClass("is-complete").next().addClass("is-current");
@@ -743,6 +765,86 @@ if (mysqli_num_rows($jobResult) > 0) {
             $bar.children(".is-current").removeClass("is-current").addClass("is-complete").next().addClass("is-current");
         <?php }
         ?>
+
+        function loadMessageScripts() {
+            var elem = document.querySelector('.chat-history');
+            elem.scrollTop = elem.scrollHeight;
+
+            $('#sendmessage').click(function() {
+                $.ajax({
+                    type: "POST",
+                    url: "../api/message.php",
+                    processData: false,
+                    contentType: "application/json",
+                    data: '{ "body": "' + $("#message-to-send").val() + '", "receiver": "<?php echo $getName; ?>" }',
+                    success: function(data) {
+                        var obj = JSON.parse(data);
+                        console.log(obj);
+                        $("#message-to-send").val('');
+                        if (obj.Success.length > 0) {
+                            location.reload();
+                            //$('#result').html(obj.Success);
+                        } else if (obj.Error.length > 0) {
+                            $('#result').html(obj.Error);
+                        }
+
+                    },
+                    error: function(r) {
+                        console.log(r);
+                    }
+                });
+            });
+
+            function respondToJob(jobID, free_id, response) {
+                if (response == "accept") {
+                    $.ajax({
+                        type: "POST",
+                        url: "../api/accept.php",
+                        processData: false,
+                        contentType: "application/json",
+                        data: '{ "jobID": "' + jobID + '", "id": "<?php echo $user_id; ?>", "freelancer_id": "' + free_id + '" }',
+                        success: function(data) {
+                            var obj = JSON.parse(data);
+                            console.log(obj);
+                            if (obj.Success.length > 0) {
+                                $('#status').html(obj.Success);
+                                $('.propose').hide();
+                                location.reload();
+                            } else if (obj.Error.length > 0) {
+                                $('#status').html(obj.Error);
+                            }
+
+                        },
+                        error: function(r) {
+                            console.log(r);
+                        }
+                    });
+                } else {
+                    $.ajax({
+                        type: "POST",
+                        url: "../api/deny.php",
+                        processData: false,
+                        contentType: "application/json",
+                        data: '{ "jobID": "' + jobID + '", "id": "<?php echo $user_id; ?>", "freelancer_id": "' + free_id + '" }',
+                        success: function(data) {
+                            var obj = JSON.parse(data);
+                            console.log(obj);
+                            if (obj.Success.length > 0) {
+                                $('#status').html(obj.Success);
+                                $('.propose').hide();
+                                location.reload();
+                            } else if (obj.Error.length > 0) {
+                                $('#status').html(obj.Error);
+                            }
+
+                        },
+                        error: function(r) {
+                            console.log(r);
+                        }
+                    });
+                }
+            }
+        }
     });
 </script>
 <!--Script for the search bar and datalist-->
