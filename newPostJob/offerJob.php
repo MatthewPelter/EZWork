@@ -25,6 +25,10 @@ $jobResult = mysqli_query($conn, $jobSQL);
 
 if (mysqli_num_rows($jobResult) > 0) {
     $r = mysqli_fetch_assoc($jobResult);
+
+    if ($r['client_id'] != $user_id && $r['freelancer_id'] != $user_id) {
+        die("Invalid Authorization");
+    }
 } else {
     header("location: ./jobs.php");
 }
@@ -52,7 +56,38 @@ if (mysqli_num_rows($jobResult) > 0) {
 
 <body>
     <h1>Active Job</h1>
+    <?php
+    $client = $r['client_id'];
+    $freelancer = $r['freelancer_id'];
+    $clientName = mysqli_query($conn, "SELECT username FROM clients WHERE id='$client'");
+    $clientName = mysqli_fetch_assoc($clientName);
+    $clientName = $clientName['username'];
 
+    $freelancerName = mysqli_query($conn, "SELECT username FROM clients WHERE id='$freelancer'");
+    $freelancerName = mysqli_fetch_assoc($freelancerName);
+    $freelancerName = $freelancerName['username'];
+    ?>
+
+    <h2>Client: <?php echo $clientName; ?></h2>
+    <h2>Freelancer: <?php echo $freelancerName; ?></h2>
+    <p>Status: <?php ($r['status'] == 0) ? "Open" : "Closed"; ?></p>
+
+
+    <?php
+    if ($r['freelancer_id'] == $user_id && $r['freelancer_complete'] == 0) { ?>
+        <button class="completeFreelancer">
+            <i class="fa fa-flag" aria-hidden="true"></i>
+            Mark Job as Complete
+        </button>
+    <?php
+    }
+    ?>
+    <?php if ($r['client_id'] == $user_id && $r['freelancer_complete'] == 1) { ?>
+        <button class="completeFreelancer">
+            <i class="fa fa-flag" aria-hidden="true"></i>
+            Mark Job as Complete
+        </button>
+    <?php } ?>
 
 </body>
 
