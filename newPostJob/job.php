@@ -283,7 +283,7 @@ if (mysqli_num_rows($jobResult) > 0) {
                 } else {
 
                     if ($unameFetched['username'] != $_SESSION['userid'] && $r['status'] == 0) { ?>
-                        <button id="payBtn">Pay for Service</button>
+                        <button class="pay">Pay for Service</button>
                 <?php }
                 } ?>
 
@@ -558,7 +558,7 @@ if (mysqli_num_rows($jobResult) > 0) {
 
         }); // end proposal btn click
 
-        // pay for service btn click
+        // pay for service btn click (Require)
         $(".pay").click(function() {
             Swal.fire({
                 title: 'Pay For Service',
