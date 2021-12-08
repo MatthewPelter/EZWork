@@ -392,19 +392,15 @@ $darktext: rgb(121, 121, 121);
         width: 100%;
         border-radius: 15px;
         border: 3px solid lightgrey;
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(5, 1fr); 
-        
+        display: flex;
+        flex-direction: column;
         .job-progress-header{
             width: 100%;
-            height: 30vh;
             padding: 2rem;
-            grid-area: 1 / 1 / 2 / 6;
             display: flex;
             flex-direction: row;
             align-items: center;
-            justify-content: space-evenly;
+            justify-content: space-between;
             h2{
                 font-size: 4rem;
                 color: $lightColor;
@@ -414,81 +410,31 @@ $darktext: rgb(121, 121, 121);
                 font-size: 1.2rem;
             }
         }
-
-        .job-progress-status{
+        .options{
+            display: flex;
+            height: 14rem;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-bottom: 3px solid lightgrey;
+            border-top: 3px solid lightgrey;
             width: 100%;
-            height: fit-content;
             padding: 2rem;
-            grid-area: 2 / 1 / 3 / 4;
-            border-top: 3px solid lightgrey; 
-            border-bottom: 3px solid lightgrey; 
         }
 
-        .job-poster-info{
+        .jobDescription{
             width: 100%;
-            height: 30vh;
             padding: 2rem;
-            grid-area: 2 / 4 / 3 / 6; 
-            border-left: 3px solid lightgrey; 
-            border-top: 3px solid lightgrey; 
-            border-bottom: 3px solid lightgrey; 
             display: flex;
-            flex-direction: column;
-            align-items: center;
             justify-content: center;
-            .clientInfo{
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                
-                h3{
-                    font-size: 1.3rem;
-                    color: $lightColor;
-                    width: 100%;
-                    text-decoration: underline;
-                    padding-bottom: 1rem;
-                }
-    
-                .username{
-                    width: 100%;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    p{
-                        font-size: 1.2rem;
-                        color: $color1;
-                        padding-right:.5rem ;
-                    }
-                    a{
-                        font-size: 1.2rem;
-                        color: $lightColor;
-                        &:hover{
-                            text-decoration: underline;
-                        }
-                    }
-                }
-    
-                .img-card{
-                    width: 100%;
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: flex-start;
-                    padding: 1rem 0rem;
-                    img{
-                        width: 5rem;
-                        height: 5rem;
-                        border-radius: 50%;
-                        object-fit: cover;
-                    }
-                }
-                
-            }
+            align-items: center;
+            text-align: center;
         }
 
         .job-chat{
             width: 100%;
-            padding: 1rem;
-            grid-area: 3 / 1 / 6 / 6;
+            padding: 2rem;
         }
     }
    

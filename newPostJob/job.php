@@ -149,11 +149,12 @@ $getFreelancerID = $getFreelancerID['freelancer_id'];
             color: #00637C;
         }
 
-        .wrapper {
+        /*.wrapper {
             max-width: 1000px;
             margin: 4em auto;
             font-size: 16px;
         }
+        */
 
         .chat {
             width: 100%;
@@ -418,8 +419,7 @@ $getFreelancerID = $getFreelancerID['freelancer_id'];
                             <?php } ?>
                     </p>                
                 </div>
-
-                <div class="job-progress-status">
+                
                 <?php
                     $workFreelancer = $r['freelancer_id'];
                     $getFreelancerName = mysqli_query($conn, "SELECT id, username, avatar FROM clients WHERE freelancer_id='$workFreelancer'");
@@ -497,10 +497,7 @@ $getFreelancerID = $getFreelancerID['freelancer_id'];
                             </symbol>
                         </svg>
                     </div>
-    
- 
-                </div>
-
+                <!--
                 <div class="job-poster-info">
                     <div class="clientInfo">
                         <h3>About the Freelancer</h3>
@@ -514,6 +511,7 @@ $getFreelancerID = $getFreelancerID['freelancer_id'];
                         </div>
                     </div>
                 </div>
+                -->
 
                 <div class="job-chat">
                     <div class="messageChat">
