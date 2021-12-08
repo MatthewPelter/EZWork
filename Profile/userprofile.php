@@ -55,6 +55,23 @@ if (mysqli_num_rows($result) > 0) {
 <body>
     <div id="overlay">
         <span onclick="off()" class="closebtn">X</span>
+        <div class="messageContainer">
+            <form onsubmit="return false">
+                <div class="form-container">
+                    <textarea id="messagecontent" placeholder="Say something..."></textarea>
+                </div>
+
+                <div class="form-bottom">
+                    <button name="send-message" id="sendmessage" class="profile-card__button button--blue js-message-close">
+                        Send
+                    </button>
+
+                    <button class="profile-card__button button--gray js-message-close">
+                        Cancel
+                    </button>
+                </div>
+            </form>
+        </div>
     </div>
     <?php include '../navbar.php'; ?>
 
@@ -91,32 +108,6 @@ if (mysqli_num_rows($result) > 0) {
                             <div class="message">
                                 <button id="messageUser" onclick="on()">Message</button>
                             </div>
-                            <div class="messageContainer" style="display: none;">
-                                <form class="profile-card-form" onsubmit="return false">
-                                    <div class="profile-card-form__container">
-                                        <textarea id="messagecontent" placeholder="Say something..."></textarea>
-                                    </div>
-
-                                    <div class="profile-card-form__bottom">
-                                        <button name="send-message" id="sendmessage" class="profile-card__button button--blue js-message-close">
-                                            Send
-                                        </button>
-
-                                        <button class="profile-card__button button--gray js-message-close">
-                                            Cancel
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
-                            <script>
-                                function on() {
-                                    document.getElementById("overlay").style.display = "block";
-                                }
-
-                                function off() {
-                                    document.getElementById("overlay").style.display = "none";
-                                }
-                            </script>
                         </div>
 
                     </div>
@@ -486,7 +477,15 @@ if (mysqli_num_rows($result) > 0) {
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <!--<script src="./app.js"></script>-->
+<script>
+    function on() {
+        document.getElementById("overlay").style.display = "block";
+    }
 
+    function off() {
+        document.getElementById("overlay").style.display = "none";
+    }
+</script>
 <script>
     $(document).ready(function() {
 
