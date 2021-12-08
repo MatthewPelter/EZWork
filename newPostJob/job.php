@@ -291,7 +291,14 @@ if (mysqli_num_rows($jobResult) > 0) {
                 } ?>
 
 
-
+                <?php
+                if ($r['status'] == 1 && $r['freelancer_id'] == $getFreelancerID) { ?>
+                    <button class="rate">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <span>Rate Client</span>
+                    </button>
+                <?php }
+                ?>
 
 
                 <?php if ($unameFetched['username'] != $_SESSION['userid']) { ?>
@@ -640,6 +647,60 @@ if (mysqli_num_rows($jobResult) > 0) {
             });
         }); // end pay for service btn click
 
+        function rate(id) {
+            (async () => {
+                /* inputOptions can be an object or Promise */
+                const inputOptions = new Promise((resolve) => {
+                    setTimeout(() => {
+                        resolve({
+                            1: "1",
+                            2: "2",
+                            3: "3",
+                            4: "4",
+                            5: "5"
+                        });
+                    }, 1000);
+                });
+
+                const {
+                    value: rate
+                } = await Swal.fire({
+                    title: "Would you like to rate the freelancer?",
+                    input: "radio",
+                    showCancelButton: true,
+                    cancelButtonText: "No Thanks",
+                    inputOptions: inputOptions,
+                    inputValidator: (value) => {
+                        if (!value) {
+                            return "You need to choose something!";
+                        }
+                    }
+                });
+
+                if (rate) {
+                    $.ajax({
+                        type: "POST",
+                        url: "../api/set-rating.php",
+                        data: 'rate=' + rate + ', ratee=' + id,
+                        success: function(data) {
+                            Swal.fire(
+                                'Thanks!',
+                                'Thanks for leaving a rating! It helps a lot :)',
+                                'success'
+                            );
+                        },
+                        error: function(r) {
+                            console.log(r);
+                        }
+                    });
+                }
+            })();
+        }
+
+
+        $(".rate").click(() => {
+            rate(<? echo $r['user_id']; ?>);
+        });
 
         // complete btn click
         $(".completeClient").click(function() {
@@ -663,7 +724,7 @@ if (mysqli_num_rows($jobResult) > 0) {
                                 'We are glad your job is complete.',
                                 'success'
                             ).then(function() {
-                                window.location.reload(1);
+                                rate(<?php echo $freelancerUserID; ?>);
                             });
                         },
                         error: function(r) {
