@@ -62,7 +62,7 @@ if (mysqli_num_rows($result) > 0) {
                 </div>
 
                 <div class="form-bottom">
-                    <button onclick="off()" name="send-message" id="sendmessage" class="profile-card__button button--blue js-message-close">
+                    <button onclick="off2()" name="send-message" id="sendmessage" class="profile-card__button button--blue js-message-close">
                         Send
                     </button>
 
@@ -488,6 +488,20 @@ if (mysqli_num_rows($result) > 0) {
         document.getElementById("overlay").style.display = "none";
         profile.classList.remove('blur');
     }
+    
+
+    function messageSent() {
+        var messagecontent = document.getElementById('messagecontent');
+        messagecontent.innerText = "Message Was Sent.";
+    }
+
+
+    function sendBtn(){
+        setTimeout( messageSent(),5000);
+        var messagecontent2 = document.getElementById('messagecontent');
+        messagecontent.innerText = "";
+    }
+
 </script>
 <script>
     $(document).ready(function() {
