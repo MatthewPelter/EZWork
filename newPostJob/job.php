@@ -355,13 +355,14 @@ if (mysqli_num_rows($jobResult) > 0) {
     </div>
 
     <?php if ($r['typeOfJob'] == "offer" && $r['user_id'] == $user_id) {
-        $selectCurrentJobs = mysqli_query($conn, "SELECT offerjobs.*, clients.username as uname FROM offerjobs INNER JOIN clients on offerjobs.client_id=clients.id WHERE job_id='$job_id'");
+        $selectCurrentJobs = mysqli_query($conn, "SELECT offerjobs.id as offerID, offerjobs.status, clients.username as uname FROM offerjobs INNER JOIN clients on offerjobs.client_id=clients.id WHERE job_id='$job_id'");
 
         if (mysqli_num_rows($selectCurrentJobs) > 0) {
             while ($pull = mysqli_fetch_assoc($selectCurrentJobs)) { ?>
                 <div class="currentJob">
                     <div class="currentUser"><? echo $pull['uname']; ?></div>
-                    <button>View Job</button>
+                    <div class="currentStatus"><? echo $pull['status']; ?></div>
+                    <button onclick="location.href='./offerJob.php?id=<?php $pull['offerID'] ?>'">View Job</button>
                 </div>
             <?php
             }
