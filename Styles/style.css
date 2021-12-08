@@ -23410,7 +23410,7 @@ footer p {
   left: 0;
   right: 0;
   bottom: 0;
-  opacity: 0;
+  opacity: 0.8;
   background: rgba(22, 33, 72, 0.35);
   z-index: 2;
 }
