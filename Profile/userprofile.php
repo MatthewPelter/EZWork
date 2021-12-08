@@ -124,9 +124,16 @@ if (mysqli_num_rows($result) > 0) {
                             $freeID = $row['freelancer_id'];
                             $pullJobs = mysqli_query($conn, "SELECT COUNT(*) AS completedJobs FROM jobs WHERE freelancer_id = '$freeID' AND status=1");
                             $pullJobCount = mysqli_fetch_assoc($pullJobs);
+                            $pullJobCount = $pullJobCount['completedJobs'];
+
+                            $pullOfferCount = mysqli_query($conn, "SELECT COUNT(*) AS completedJobs FROM offerjobs WHERE freelancer_id = '$user_id' AND status=1");
+                            $pullOfferCount = mysqli_fetch_assoc($pullOfferCount);
+                            $pullOfferCount = $pullOfferCount['completedJobs'];
+
+                            $total = $pullJobCount + $pullOfferCount;
                         ?>
                             <div class="jobCompleted">
-                                <p><?php echo $pullJobCount['completedJobs']; ?> completed Jobs</p>
+                                <p><?php echo $total; ?> completed Jobs</p>
                             </div>
                         <?php } ?>
 
@@ -260,11 +267,11 @@ if (mysqli_num_rows($result) > 0) {
                                         <?php
                                         if ($freelancer_array['jobStart'] != 0000) {
                                             echo $freelancer_array['jobStart']; ?> - <?php echo $freelancer_array['jobEnd'];
-                                                                                } else {
-                                                                                    echo "None";
-                                                                                }
+                                                                                    } else {
+                                                                                        echo "None";
+                                                                                    }
 
-                                                                                    ?>
+                                                                                        ?>
                                     </p>
                                 </div>
 
@@ -357,7 +364,7 @@ if (mysqli_num_rows($result) > 0) {
                             </div>
                         </div>
                     <?php
-                    } else if ($row['freelancer_id'] == NULL )  {
+                    } else if ($row['freelancer_id'] == NULL) {
                     ?>
                         <div class="profile-info">
                             <div class="client-info">
@@ -480,6 +487,7 @@ if (mysqli_num_rows($result) > 0) {
 <!--<script src="./app.js"></script>-->
 <script>
     const profile = document.querySelector('.profile');
+
     function on() {
         document.getElementById("overlay").style.display = "block";
         profile.classList.add('blur');
@@ -489,7 +497,7 @@ if (mysqli_num_rows($result) > 0) {
         document.getElementById("overlay").style.display = "none";
         profile.classList.remove('blur');
     }
-    
+
 
     function messageSent() {
         var messagecontent = document.getElementById('messagecontent');
@@ -497,14 +505,13 @@ if (mysqli_num_rows($result) > 0) {
     }
 
 
-    function sendBtn(){
-        setTimeout( messageSent(),500000);
+    function sendBtn() {
+        setTimeout(messageSent(), 500000);
     }
-
 </script>
 <script>
     $(document).ready(function() {
-        
+
         /*var messageBox = document.querySelector('.js-message');
         var messageBtn = document.querySelector('.js-message-btn');
         var card = document.querySelector('.js-profile-card');
