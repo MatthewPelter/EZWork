@@ -450,14 +450,9 @@ if (mysqli_num_rows($jobResult) > 0) {
                             </button>
                         <?php } else { ?>
                             <h2>Freelancer is working on your job now.</h2>
-                        <?php
-                        } ?>
-                        <br />
-                        <button onclick="window.location='../message/messages?mid=<?php echo $freelancerUserID; ?>'">
-                            <i class="fa fa-edit" aria-hidden="true"></i>
-                            Message
-                        </button>
-                    <?php } ?>
+                    <?php
+                        }
+                    } ?>
                     <?php if ($r['freelancer_id'] == $getFreelancerID) {
                         if ($r['status'] != 1 && $r['freelancer_complete'] == 0) {
                             if ($r['paid'] == 0) { ?>
@@ -469,15 +464,9 @@ if (mysqli_num_rows($jobResult) > 0) {
                                     <i class="fa fa-flag" aria-hidden="true"></i>
                                     Mark Job as Complete
                                 </button>
-                        <?php }
-                        } ?>
-                        <br />
-                        <button onclick="window.location='../message/messages?mid=<?php echo $r['user_id']; ?>'">
-                            <i class="fa fa-edit" aria-hidden="true"></i>
-                            Message
-                        </button>
-
-                    <?php } ?>
+                    <?php }
+                        }
+                    } ?>
                 </div>
                 <div class="clientInfo">
                     <h3>About the Freelancer</h3>
