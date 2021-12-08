@@ -137,12 +137,12 @@ if (mysqli_num_rows($result) > 0) {
                             $rate = mysqli_fetch_assoc($rate);
                             $rate = $rate['average'];
                             $rate = round($rate, 1);
+                            if ($rate != 0) {
                         ?>
-
-                            <div class="rating">
-                                <p><?php echo $rate; ?>/5</p>
-                            </div>
-
+                                <div class="rating">
+                                    <p><?php echo $rate; ?>/5 Rating</p>
+                                </div>
+                            <?php } ?>
 
                             <div class="jobCompleted">
                                 <p><?php echo $total; ?> completed Jobs</p>
