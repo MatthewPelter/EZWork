@@ -259,6 +259,40 @@ if (mysqli_num_rows($jobResult) > 0) {
         });
     }); // end complete btn click
 
+    // complete btn click
+    $(".completeClient").click(function() {
+        Swal.fire({
+            title: 'Mark Job as Complete',
+            text: "If feel like the freelancer completed your job, you may mark it as complete and the payment will be released to the freelancer.",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Mark as Complete!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $.ajax({
+                    type: "POST",
+                    url: "../api/mark-as-complete.php",
+                    data: 'postID=' + <?php echo $job_id; ?>,
+                    success: function(data) {
+                        Swal.fire(
+                            'Complete!',
+                            'We are glad your job is complete.',
+                            'success'
+                        ).then(function() {
+                            window.location.reload(1);
+                        });
+                    },
+                    error: function(r) {
+                        console.log(r);
+                    }
+                });
+
+            }
+        });
+    }); // end complete btn click
+
     function loadMessageScripts() {
         var elem = document.querySelector('.chat-history');
         elem.scrollTop = elem.scrollHeight;
