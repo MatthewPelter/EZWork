@@ -380,7 +380,7 @@
 }
 .job-progress-section .job-progress-container .job-progress-status {
   width: 100%;
-  height: 30vh;
+  height: fit-content;
   padding: 2rem;
   grid-area: 2/1/3/4;
   border-top: 3px solid lightgrey;
