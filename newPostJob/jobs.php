@@ -136,7 +136,7 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                         <i class="fa fa-sort-alpha-desc" aria-hidden="true"></i>
                         <p>Z to A</p>
                     </div>
-                    
+
                     <div class="sortPriceLowHigh" onclick="sort('lowHigh')">
                         <i class="fa fa-sort-amount-desc" aria-hidden="true"></i>
                         <p>Price: Low to High</p>
@@ -145,7 +145,7 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                         <i class="fa fa-sort-amount-asc" aria-hidden="true"></i>
                         <p>Price: High to Low</p>
                     </div>
-                
+
                 </div>
                 <div class="filter" onclick="toggleFilterCard()">
                     <h3>Filter</h3>
@@ -153,6 +153,21 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                 </div>
                 <div class="filterCard">
                     <form id="filterForm" action="javascript:void(0);">
+                        <div class="FilterExperience">
+                            <h3>Service Type</h3>
+                            <div class="experienceCard">
+
+                                <div class="offering">
+                                    <input type="radio" name="typeOfJob" id="entry" value="offer">
+                                    <label for="entry">Offering a Service</label>
+                                </div>
+                                <div class="needs">
+                                    <input type="radio" name="typeOfJob" id="expert" value="require">
+                                    <label for="expert">Needs a service</label>
+                                </div>
+
+                            </div>
+                        </div>
                         <div class="FilterExperience">
                             <h3>By Experience</h3>
                             <div class="experienceCard">
