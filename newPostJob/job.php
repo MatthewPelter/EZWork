@@ -378,7 +378,7 @@ if (mysqli_num_rows($jobResult) > 0) {
                         </p>
                     </div>
                 </div>
-                <div class="messageChat" style="grid-area: 1/2;">
+                <div class="messageChat" style="grid-area: 1/1/4/1;">
                     <!-- messages loaded from jquery -->
                 </div>
 
