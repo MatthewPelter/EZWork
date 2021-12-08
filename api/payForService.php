@@ -23,7 +23,8 @@ if (isset($_SESSION['user_id']) && isset($_POST['postID'])) {
 
     $user_id = $_SESSION['user_id'];
 
-    if ($pullUserID != $user_id) {
+
+    if ($pullUserID != $user_id && $pullUser['typeOfJob'] == "require") {
         die("Error: This is not your job");
     }
 
@@ -47,6 +48,8 @@ if (isset($_SESSION['user_id']) && isset($_POST['postID'])) {
         if ($setFunds) {
             if ($pullUser['typeOfJob'] == "require") {
                 $setPaid = mysqli_query($conn, "UPDATE jobs SET paid=1 WHERE id='$postID'") or die(mysqli_errno($conn));
+            } else {
+                $setOfferJob = mysqli_query($conn, "INSERT INTO offerJobs(job_id, freelancer_id, client_id, paid, status, freelancer_complete) VALUES ('$postID', '$pullUserID', '$user_id', 0, 0, 0)");
             }
             date_default_timezone_set("America/New_York");
             $date = date('Y-m-d H:i:s');

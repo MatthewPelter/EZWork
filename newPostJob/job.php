@@ -360,7 +360,7 @@ if (mysqli_num_rows($jobResult) > 0) {
         if (mysqli_num_rows($selectCurrentJobs) > 0) {
             while ($pull = mysqli_fetch_assoc($selectCurrentJobs)) { ?>
                 <div class="currentJob">
-                    <div class="currentUser"><? echo $pull['user_id']; ?></div>
+                    <div class="currentUser"><? echo $pull['client_id']; ?></div>
                     <div class="currentPaid"><? echo $pull['paid']; ?></div>
                     <button>View Job</button>
                 </div>
