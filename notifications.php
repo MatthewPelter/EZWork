@@ -212,7 +212,6 @@ if (!isset($_SESSION['user_id'])) {
                     console.log(obj);
                     if (obj.Success.length > 0) {
                         $('#status').html(obj.Success);
-                        location.reload();
                     } else if (obj.Error.length > 0) {
                         $('#status').html(obj.Error);
                     }
