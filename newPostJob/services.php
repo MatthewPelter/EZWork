@@ -80,7 +80,7 @@ $user_id = $_SESSION['user_id'];
                                         $uname = $uname['username'];
                                     }
                                     ?>
-                                    <p><?php echo $row['uname']; ?></p>
+                                    <p><?php echo $uname; ?></p>
                                 </div>
                                 <p>Status:
                                     <?php if ($row['status'] == 0) { ?>
