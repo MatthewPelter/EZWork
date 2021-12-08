@@ -130,7 +130,7 @@ if (mysqli_num_rows($result) > 0) {
                             $pullOfferCount = mysqli_fetch_assoc($pullOfferCount);
                             $pullOfferCount = $pullOfferCount['completedJobs'];
 
-                            $total = $pullJobCount + $pullOfferCount;
+                            $total = (int)$pullJobCount + (int)$pullOfferCount;
                         ?>
                             <div class="jobCompleted">
                                 <p><?php echo $total; ?> completed Jobs</p>
