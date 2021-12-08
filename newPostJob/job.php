@@ -667,7 +667,7 @@ $getFreelancerID = $getFreelancerID['freelancer_id'];
                 const {
                     value: rate
                 } = await Swal.fire({
-                    title: "Would you like to rate the freelancer?",
+                    title: "Rate the user",
                     input: "radio",
                     showCancelButton: true,
                     cancelButtonText: "No Thanks",
