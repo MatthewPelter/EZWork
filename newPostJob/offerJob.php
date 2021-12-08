@@ -347,7 +347,7 @@ if (mysqli_num_rows($jobResult) > 0) {
             if (result.isConfirmed) {
                 $.ajax({
                     type: "POST",
-                    url: "../api/mark-as-complete.php",
+                    url: "../api/mark-offer-as-complete.php",
                     data: 'postID=' + <?php echo $job_id; ?>,
                     success: function(data) {
                         Swal.fire(
