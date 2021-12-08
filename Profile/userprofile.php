@@ -66,7 +66,7 @@ if (mysqli_num_rows($result) > 0) {
                         Send
                     </button>
 
-                    <button class="profile-card__button button--gray js-message-close">
+                    <button onclick="off()" class="profile-card__button button--gray js-message-close">
                         Cancel
                     </button>
                 </div>
