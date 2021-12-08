@@ -10,22 +10,37 @@ function securityscan($data)
     return $data;
 }
 
+if (!isset($_SESSION['user_id'])) {
+    die('{ "Error": "Invalid Authorization" }');
+}
 
-if (isset($_SESSION['user_id']) && isset($_POST['rate']) && isset($_POST['ratee'])) {
-    if (empty($_POST['rate']) || empty($_POST['ratee'])) {
-        die("Error: Missing Data");
-    }
+$user_id = $_SESSION['user_id'];
 
-    $user_id = $_SESSION['user_id'];
-    $rate = securityscan($_POST['rate']);
-    $ratee = securityscan($_POST['ratee']);
+$input = file_get_contents("php://input");
+$input = json_decode($input);
 
-    $setRating = mysqli_query($conn, "INSERT INTO ratings(rater, ratee, rating) VALUES('$user_id', '$ratee', '$rate')") or die(mysqli_error($conn));
-    if ($setRating) {
-        echo "Success!";
-    } else {
-        die("Error");
-    }
+$job_id = $input->job_id;
+$ratee = $input->ratee;
+$rate = $input->rate;
+
+$job_id = securityscan($job_id);
+$ratee = securityscan($ratee);
+$rate = securityscan($rate);
+
+
+if ($job_id == null || $job_id == "") {
+    die('{ "Error": "Job ID is null or empty" }');
+}
+if ($ratee == null || $ratee == "") {
+    die('{ "Error": "Ratee is null or empty" }');
+}
+if ($rate == null || $rate == "") {
+    die('{ "Error": "Rate is null or empty" }');
+}
+
+$setRating = mysqli_query($conn, "INSERT INTO ratings(rater, ratee, rating, job_id) VALUES('$user_id', '$ratee', '$rate', '$job_id')") or die(mysqli_error($conn));
+if ($setRating) {
+    echo '{ "Success": "Rating Set!" }';
 } else {
-    die("Fatal Error");
+    die('{ "Error": "Could not set" }');
 }
