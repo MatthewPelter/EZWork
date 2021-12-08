@@ -85,17 +85,17 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                 <li>My Job Posts</li>
             </a>
             <?php if ($avatarFetch['freelancer_id'] == NULL) { ?>
-            <a href="../newPostJob/clientContract.php">
-                <li>My Contracts</li>
-            </a>
+                <a href="../newPostJob/clientContract.php">
+                    <li>My Contracts</li>
+                </a>
             <?php
-                } else {
+            } else {
             ?>
-            <a href="../newPostJob/contracts.php">
-                <li>My Contracts</li>
-            </a>            
+                <a href="../newPostJob/contracts.php">
+                    <li>My Contracts</li>
+                </a>
             <?php
-                }
+            }
             ?>
             <a href="../newPostJob/length.php">
                 <li>Post A Job</li>
@@ -167,7 +167,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
             </a>
         </ul>
     </div>
-    
+
     <div class="mobileNavCard" onclick="location.href='../notifications'">
         <p>Notifications</p>
         <i class="fa fa-bell" title="Notification"></i>
@@ -198,13 +198,13 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
             <div class="line2"></div>
             <div class="line3"></div>
         </div>
-        
+
         <div class="logo">
             <a href="https://ez-work.herokuapp.com/ClientProfile/index">
                 <h2>E<span>z</span>Work</h2>
             </a>
         </div>
-        
+
         <div class="searchBar" style="opacity: 0;pointer-events: none;">
             <form id="searchContainer">
                 <input type="text" list="allskills" autocomplete="off" name="search" placeholder="Search">
@@ -223,19 +223,22 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                     -->
                     <div class="card card2" onclick="location.href='../newPostJob/jobs'">
                         <h4>All Jobs</h4>
-                    </div>                    
+                    </div>
                     <div class="card card2" onclick="location.href='../newPostJob/myJobs'">
                         <h4>My Jobs</h4>
                     </div>
                     <?php if ($avatarFetch['freelancer_id'] == NULL) { ?>
-                    <div class="card card3" onclick="location.href='../newPostJob/clientContract.php'">
-                        <h4>My Contracts</h4>
+                        <div class="card card3" onclick="location.href='../newPostJob/clientContract.php'">
+                            <h4>My Contracts</h4>
+                        </div>
+                    <?php } else { ?>
+                        <div class="card card3" onclick="location.href='../newPostJob/contracts.php'">
+                            <h4>My Contracts</h4>
+                        </div>
+                    <?php } ?>
+                    <div class="card card4" onclick="location.href='../newPostJob/services.php'">
+                        <h4>My Services</h4>
                     </div>
-                    <?php }else{ ?>
-                    <div class="card card3" onclick="location.href='../newPostJob/contracts.php'">
-                        <h4>My Contracts</h4>
-                    </div>
-                    <?php } ?>                    
                     <div class="card card4" onclick="location.href='../newPostJob/length.php'">
                         <h4>Post A Job</h4>
                     </div>
@@ -253,13 +256,13 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                         <h4>My Hires</h4>
                     </div>
                     <?php if ($avatarFetch['freelancer_id'] == NULL) { ?>
-                    <div class="card card4" onclick="location.href='../Profile/register.php'">
-                        <h4>Become Freelancer</h4>
-                    </div>
-                    <?php }else{ ?>
-                   <div class="card card4"" style="pointer-events: none;">
-                        <h4 style="opacity: 0;">Become Freelancer</h4>
-                    </div>
+                        <div class="card card4" onclick="location.href='../Profile/register.php'">
+                            <h4>Become Freelancer</h4>
+                        </div>
+                    <?php } else { ?>
+                        <div class="card card4"" style=" pointer-events: none;">
+                            <h4 style="opacity: 0;">Become Freelancer</h4>
+                        </div>
                     <?php } ?>
                 </div>
             </div>
@@ -291,18 +294,18 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
 
         <div class="notificationNav">
             <?php
-                $notiCount = mysqli_query($conn, "SELECT COUNT(*) AS notiCount FROM notifications WHERE receiver='$user_id' AND isRead=0");
-                $notiCount = mysqli_fetch_assoc($notiCount);
-                $notiCount = $notiCount['notiCount'];
+            $notiCount = mysqli_query($conn, "SELECT COUNT(*) AS notiCount FROM notifications WHERE receiver='$user_id' AND isRead=0");
+            $notiCount = mysqli_fetch_assoc($notiCount);
+            $notiCount = $notiCount['notiCount'];
             ?>
             <i onclick="toggleNotifications()" class="fa fa-bell" id="notifications"><?php if ($notiCount > 0) {
-                echo $notiCount;
-            } ?></i></a>
+                                                                                            echo $notiCount;
+                                                                                        } ?></i></a>
             <div class="notificationCardContainer">
                 <div class="notificationCard">
-                    <div class="card card1"  onclick="location.href='../notifications'">
+                    <div class="card card1" onclick="location.href='../notifications'">
                         <h4>View All Notifications</h4>
-                    </div>                    
+                    </div>
                     <?php
                     $notifications = mysqli_query($conn, "SELECT * FROM notifications WHERE receiver='$user_id' AND isRead=0 ORDER BY id DESC");
                     if (mysqli_num_rows($notifications) > 0) { ?>
@@ -383,9 +386,9 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                         <h4>Contact Us</h4>
                     </div>
                 </div>
-            </div>            
+            </div>
         </div>
-        
+
         <!--
         <div class="guide">
         
@@ -696,7 +699,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
             sortDownBtn3.style.transform = "rotate(360deg)";
         }
     }
-    
+
     async function toggleHelpCard() {
         var mobileHelpCard = document.querySelector(".mobileHelpCard");
         if (getComputedStyle(mobileHelpCard).display === "none") {
