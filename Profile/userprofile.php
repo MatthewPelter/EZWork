@@ -62,7 +62,7 @@ if (mysqli_num_rows($result) > 0) {
                 </div>
 
                 <div class="form-bottom">
-                    <button name="send-message" id="sendmessage" class="profile-card__button button--blue js-message-close">
+                    <button onclick="off()" name="send-message" id="sendmessage" class="profile-card__button button--blue js-message-close">
                         Send
                     </button>
 
@@ -491,7 +491,6 @@ if (mysqli_num_rows($result) > 0) {
 </script>
 <script>
     $(document).ready(function() {
-
         
         /*var messageBox = document.querySelector('.js-message');
         var messageBtn = document.querySelector('.js-message-btn');
