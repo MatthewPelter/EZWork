@@ -425,11 +425,9 @@ $getFreelancerID = $getFreelancerID['freelancer_id'];
                 </div>
                 -->
 
-                <div class="job-chat">
                     <div class="messageChat">
                         <!-- messages loaded from jquery -->
                     </div>
-                </div>
             </div>
 
         </div>
