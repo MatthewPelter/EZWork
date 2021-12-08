@@ -173,7 +173,7 @@ if (mysqli_num_rows($jobResult) > 0) {
 
 
     <?php
-    if ($r['freelancer_id'] == $user_id && $r['freelancer_complete'] == 0) { ?>
+    if ($r['freelancer_id'] == $user_id && $r['freelancer_complete'] == 0 && $r['status'] != 1) { ?>
         <button class="completeFreelancer">
             <i class="fa fa-flag" aria-hidden="true"></i>
             Mark Job as Complete
@@ -181,7 +181,7 @@ if (mysqli_num_rows($jobResult) > 0) {
     <?php
     }
     ?>
-    <?php if ($r['client_id'] == $user_id && $r['freelancer_complete'] == 1) { ?>
+    <?php if ($r['client_id'] == $user_id && $r['freelancer_complete'] == 1 && $r['status'] != 1) { ?>
         <button class="completeClient">
             <i class="fa fa-flag" aria-hidden="true"></i>
             Mark Job as Complete
