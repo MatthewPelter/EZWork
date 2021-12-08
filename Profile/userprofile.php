@@ -488,14 +488,14 @@ if (mysqli_num_rows($result) > 0) {
 
         messageBtn.addEventListener('click', function(e) {
             e.preventDefault();
-            messageBox.classList.add('active');
+            card.classList.add('active');
         });
 
         closeBtn.forEach(function(element, index) {
             console.log(element);
             element.addEventListener('click', function(e) {
                 e.preventDefault();
-                messageBox.classList.remove('active');
+                card.classList.remove('active');
             });
         });
 
