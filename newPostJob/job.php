@@ -355,7 +355,7 @@ if (mysqli_num_rows($jobResult) > 0) {
     </div>
 
     <?php if ($r['typeOfJob'] == "offer" && $r['user_id'] == $user_id) {
-        $selectCurrentJobs = mysqli_query($conn, "SELECT * FROM offerJobs WHERE job_id='$job_id'");
+        $selectCurrentJobs = mysqli_query($conn, "SELECT * FROM offerjobs WHERE job_id='$job_id'");
 
         if (mysqli_num_rows($selectCurrentJobs) > 0) {
             while ($pull = mysqli_fetch_assoc($selectCurrentJobs)) { ?>
