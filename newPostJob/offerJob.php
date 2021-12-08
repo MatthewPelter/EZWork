@@ -226,6 +226,15 @@ if (mysqli_num_rows($jobResult) > 0) {
         var elem = document.querySelector('.chat-history');
         elem.scrollTop = elem.scrollHeight;
 
+        <?php if ($r['client_id'] == $user_id) {
+            $id = $r['freelancer_id'];
+        } else {
+            $id = $r['client_id'];
+        }
+        $getName = mysqli_query($conn, "SELECT username FROM clients WHERE id='$id'");
+        $getName = mysqli_fetch_assoc($getName);
+        $getName = $getName['username']; ?>
+
         $('#sendmessage').click(function() {
             $.ajax({
                 type: "POST",
