@@ -298,6 +298,9 @@ if (mysqli_num_rows($jobResult) > 0) {
         })();
     }
 
+    $(".rate").click(() => {
+        rate(<? echo $r['client_id']; ?>);
+    });
     // complete btn click
     $(".completeFreelancer").click(function() {
         Swal.fire({
