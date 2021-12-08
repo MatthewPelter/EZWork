@@ -746,9 +746,9 @@ if (mysqli_num_rows($jobResult) > 0) {
         $bar.children().first().addClass("is-current");
 
         <?php if ($r['user_id'] == $_SESSION['user_id']) { ?>
-            $(".settings-billing-option").load("https://ez-work.herokuapp.com/message/messages?mid=<?php echo $freelancerUserID; ?> .messageMainContainer");
+            $(".messageChat").load("https://ez-work.herokuapp.com/message/messages?mid=<?php echo $freelancerUserID; ?> .messageMainContainer");
         <?php } else if ($r['freelancer_id'] == $getFreelancerID) { ?>
-            $(".settings-billing-option").load("https://ez-work.herokuapp.com/message/messages?mid=<?php echo $r['user_id']; ?> .messageMainContainer");
+            $(".messageChat").load("https://ez-work.herokuapp.com/message/messages?mid=<?php echo $r['user_id']; ?> .messageMainContainer");
         <?php } ?>
 
         <?php
