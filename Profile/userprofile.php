@@ -53,7 +53,26 @@ if (mysqli_num_rows($result) > 0) {
 </head>
 
 <body>
-    <div class="profile-card__overlay js-message-close"></div>
+    <div id="overlay">
+        <span onclick="off()" class="closebtn">X</span>
+        <div class="messageContainer">
+            <form onsubmit="return false">
+                <div class="form-container">
+                    <textarea id="messagecontent" placeholder="Say something..."></textarea>
+                </div>
+
+                <div class="form-bottom">
+                    <button name="send-message" id="sendmessage" class="profile-card__button button--blue js-message-close">
+                        Send
+                    </button>
+
+                    <button onclick="off()" class="profile-card__button button--gray js-message-close">
+                        Cancel
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
     <?php include '../navbar.php'; ?>
 
     <div class="profile">
@@ -87,41 +106,8 @@ if (mysqli_num_rows($result) > 0) {
                                 <?php } ?>
                             </div>
                             <div class="message">
-                                <button id="messageUser">Message</button>
+                                <button id="messageUser" onclick="on()">Message</button>
                             </div>
-                            <div class="messageContainer" style="display: none;">
-                                <form class="profile-card-form" onsubmit="return false">
-                                    <div class="profile-card-form__container">
-                                        <textarea id="messagecontent" placeholder="Say something..."></textarea>
-                                    </div>
-
-                                    <div class="profile-card-form__bottom">
-                                        <button name="send-message" id="sendmessage" class="profile-card__button button--blue js-message-close">
-                                            Send
-                                        </button>
-
-                                        <button class="profile-card__button button--gray js-message-close">
-                                            Cancel
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
-                            <script>
-                                const overlay = document.querySelector('.profile-card__overlay');
-                                var messageUser = document.getElementById('messageUser');
-                                var messageContainer = document.querySelector('.messageContainer');
-
-                                messageUser.addEventListener('click',()=>{
-                                    if(getComputedStyle(messageContainer).display === "none"){
-                                        messageContainer.style.display = "inline-block";
-                                        overlay.style.display = "inline-block";
-                                    }
-                                    else{
-                                        messageContainer.style.display = "none";
-                                        overlay.style.display = "none";
-                                    }
-                                })
-                            </script>
                         </div>
 
                     </div>
@@ -491,7 +477,15 @@ if (mysqli_num_rows($result) > 0) {
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <!--<script src="./app.js"></script>-->
+<script>
+    function on() {
+        document.getElementById("overlay").style.display = "block";
+    }
 
+    function off() {
+        document.getElementById("overlay").style.display = "none";
+    }
+</script>
 <script>
     $(document).ready(function() {
 
