@@ -425,7 +425,7 @@ $getFreelancerID = $getFreelancerID['freelancer_id'];
                 </div>
                 -->
 
-                    <div class="messageChat">
+                    <div class="messageChat" style="width: 100%;border-top: 3px solid lightgrey; height: 70vh;padding: 2rem; background: lightgreen;">
                         <!-- messages loaded from jquery -->
                     </div>
             </div>
@@ -447,10 +447,10 @@ $getFreelancerID = $getFreelancerID['freelancer_id'];
                         <!--
                         <p>Status:
                             <span id="status">
-                                <?php if ($r['status'] == 1) {
-                                    echo "Closed";
-                                } else if ($r['status'] == -1) {
-                                    echo "In-Progress";
+                                <?php //if ($r['status'] == 1) {
+                                    //echo "Closed";
+                                //} else if ($r['status'] == -1) {
+                                  //  echo "In-Progress";
                                 }
                                 ?>
                             </span>
@@ -498,11 +498,11 @@ $getFreelancerID = $getFreelancerID['freelancer_id'];
                 </div>
 
                 <?php
-                $workFreelancer = $r['freelancer_id'];
-                $getFreelancerName = mysqli_query($conn, "SELECT id, username, avatar FROM clients WHERE freelancer_id='$workFreelancer'");
-                $getFreelancerName = mysqli_fetch_assoc($getFreelancerName);
+                //$workFreelancer = $r['freelancer_id'];
+                //$getFreelancerName = mysqli_query($conn, "SELECT id, username, avatar FROM clients WHERE freelancer_id='$workFreelancer'");
+                //$getFreelancerName = mysqli_fetch_assoc($getFreelancerName);
 
-                $freelancerUserID = $getFreelancerName['id'];
+                //$freelancerUserID = $getFreelancerName['id'];
                 ?>
 
                 <div class="options">
