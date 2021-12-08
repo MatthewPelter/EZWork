@@ -57,7 +57,7 @@ $user_id = $_SESSION['user_id'];
             <div class="postedJob">
 
                 <?php
-                $fetchContracts = mysqli_query($conn, "SELECT offerjobs.*, clients.username as uname FROM offerjobs INNER JOIN clients on offerjobs.client_id=clients.id WHERE client_id = '$user_id' OR freelancer_id='$user_id' ORDER BY id DESC") or die(mysqli_error($conn));
+                $fetchContracts = mysqli_query($conn, "SELECT offerjobs.*, clients.username as uname FROM offerjobs INNER JOIN clients on offerjobs.client_id=clients.id WHERE offerjobs.client_id = '$user_id' OR offerjobs.freelancer_id='$user_id' ORDER BY id DESC") or die(mysqli_error($conn));
 
                 if (mysqli_num_rows($fetchContracts) > 0) {
                     while ($row = mysqli_fetch_assoc($fetchContracts)) {
