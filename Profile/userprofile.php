@@ -478,8 +478,10 @@ if (mysqli_num_rows($result) > 0) {
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <!--<script src="./app.js"></script>-->
 <script>
+    const profile = document.querySelector('.profile');
     function on() {
         document.getElementById("overlay").style.display = "block";
+        profile.style.filter = 'blur(3px)';
     }
 
     function off() {

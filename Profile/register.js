@@ -7,7 +7,6 @@ const hourlyRate = document.querySelector(".hourlyRate");
 const titleDescription = document.querySelector(".titleDescription");
 const profilePhoto = document.querySelector(".profilePhoto");
 const locationCard = document.querySelector(".locationCard");
-
 //Side Nav
 const expertiseNav = document.getElementById("expertiseNav");
 const linkeninNav = document.getElementById("linkeninNav");
