@@ -441,7 +441,7 @@ if (mysqli_num_rows($jobResult) > 0) {
                             <h2>Freelancer is working on your job now.</h2>
                         <?php
                         } ?>
-                        <button onclick="window.location='ez-work.herokuapp.com/message/messages?mid=<?php echo $freelancerUserID; ?>'">
+                        <button onclick="window.location='../message/messages?mid=<?php echo $freelancerUserID; ?>'">
                             <i class="fa fa-edit" aria-hidden="true"></i>
                             Message
                         </button>
@@ -460,7 +460,7 @@ if (mysqli_num_rows($jobResult) > 0) {
                         <?php }
                         } ?>
 
-                        <button onclick="window.location='ez-work.herokuapp.com/message/messages?mid=<?php echo $r['user_id']; ?>'">
+                        <button onclick="window.location='../message/messages?mid=<?php echo $r['user_id']; ?>'">
                             <i class="fa fa-edit" aria-hidden="true"></i>
                             Message
                         </button>
