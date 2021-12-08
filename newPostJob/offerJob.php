@@ -139,6 +139,14 @@ if (mysqli_num_rows($jobResult) > 0) {
             margin: 4em auto;
             font-size: 16px;
         }
+
+        .chat {
+            width: 100%;
+        }
+
+        .people-list {
+            display: none;
+        }
     </style>
 </head>
 
