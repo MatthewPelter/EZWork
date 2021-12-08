@@ -23416,10 +23416,10 @@ footer p {
 }
 
 #overlay form {
-  z-index: 5;
+  z-index: 8;
   position: fixed;
   top: 0;
-  left: 0;
+  left: 25%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23431,7 +23431,7 @@ footer p {
       -ms-flex-align: center;
           align-items: center;
   width: 50%;
-  height: 80%;
+  height: 100%;
   padding: 2rem;
   background: white;
   border-radius: 15px;
