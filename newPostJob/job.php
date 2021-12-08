@@ -766,6 +766,12 @@ if (mysqli_num_rows($jobResult) > 0) {
         <?php }
         ?>
 
+        <?php if ($r['user_id'] == $_SESSION['user_id']) {
+            $getName = $getFreelancerName['username'];
+        } else {
+            $getName = $unameFetched['username'];
+        } ?>
+
         function loadMessageScripts() {
             var elem = document.querySelector('.chat-history');
             elem.scrollTop = elem.scrollHeight;
