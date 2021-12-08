@@ -143,6 +143,11 @@ if (mysqli_num_rows($jobResult) > 0) {
 </head>
 
 <body>
+
+    <?php
+    include '../navbar.php';
+    ?>
+
     <h1>Active Job</h1>
     <?php
     $client = $r['client_id'];
@@ -188,12 +193,6 @@ if (mysqli_num_rows($jobResult) > 0) {
                 <svg class="ProgressBar-icon">
                     <use xlink:href="#checkmark-bold" />
                 </svg>
-                <span class="ProgressBar-stepLabel">Accepted Job</span>
-            </li>
-            <li class="ProgressBar-step">
-                <svg class="ProgressBar-icon">
-                    <use xlink:href="#checkmark-bold" />
-                </svg>
                 <span class="ProgressBar-stepLabel">Started Work</span>
             </li>
             <li class="ProgressBar-step">
@@ -210,6 +209,9 @@ if (mysqli_num_rows($jobResult) > 0) {
             <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" />
         </symbol>
     </svg>
+
+
+    <?php include '../footer.php'; ?>
 </body>
 
 <div class="messageChat">
@@ -220,7 +222,6 @@ if (mysqli_num_rows($jobResult) > 0) {
 <script type="text/javascript">
     var $bar = $(".ProgressBar");
     $bar.children().first().addClass("is-current");
-    $bar.children(".is-current").removeClass("is-current").addClass("is-complete").next().addClass("is-current");
 
     function loadMessageScripts() {
         var elem = document.querySelector('.chat-history');
