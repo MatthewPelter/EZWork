@@ -62,7 +62,7 @@ if (mysqli_num_rows($result) > 0) {
                 </div>
 
                 <div class="form-bottom">
-                    <button onclick="messageSent()" name="send-message" id="sendmessage" class="profile-card__button button--blue js-message-close">
+                    <button onclick="sendBtn()" name="send-message" id="sendmessage" class="profile-card__button button--blue js-message-close">
                         Send
                     </button>
 
@@ -497,9 +497,7 @@ if (mysqli_num_rows($result) > 0) {
 
 
     function sendBtn(){
-        setTimeout( messageSent(),5000);
-        var messagecontent2 = document.getElementById('messagecontent');
-        messagecontent.innerText = "";
+        setTimeout( messageSent(),30000);
     }
 
 </script>
