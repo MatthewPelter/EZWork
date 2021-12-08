@@ -478,15 +478,15 @@ if (mysqli_num_rows($result) > 0) {
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="./app.js"></script>
 
-<script type="text/javascript">
+<script>
     $(document).ready(function() {
 
         var messageBox = document.querySelector('.js-message');
-        var btn = document.querySelector('.js-message-btn');
+        var messageBtn = document.querySelector('.js-message-btn');
         var card = document.querySelector('.js-profile-card');
         var closeBtn = document.querySelectorAll('.js-message-close');
 
-        btn.addEventListener('click', function(e) {
+        messageBtn.addEventListener('click', function(e) {
             e.preventDefault();
             card.classList.add('active');
         });
