@@ -296,12 +296,16 @@ $getFreelancerID = $getFreelancerID['freelancer_id'];
 
 
                 <?php
-                if ($r['status'] == 1 && $r['freelancer_id'] == $getFreelancerID) { ?>
-                    <button class="rate">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <span>Rate Client</span>
-                    </button>
+                if ($r['status'] == 1 && $r['freelancer_id'] == $getFreelancerID) {
+                    $checkRating = mysqli_query($conn, "SELECT * FROM ratings WHERE job_id='$job_id' AND rater='$user_id'");
+                    if (mysqli_num_rows($checkRating) == 0) {
+                ?>
+                        <button class="rate">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <span>Rate Client</span>
+                        </button>
                 <?php }
+                }
                 ?>
 
 
