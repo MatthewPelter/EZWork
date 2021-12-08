@@ -142,7 +142,6 @@ if (isset($_GET['mid'])) {
 
                                 <?php
                                 while ($row = mysqli_fetch_assoc($result)) {
-                                    $row['body'] = htmlspecialchars(urldecode($row['body']));
                                     if ($row['Sender'] == $username) {
                                         if ($row['jobID'] != NULL) {
                                             if ($row['response'] == NULL) {
