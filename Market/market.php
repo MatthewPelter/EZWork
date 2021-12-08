@@ -124,7 +124,7 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                 <button id="resetSortFilter" onclick="resetOptions()">Reset</button>
                 <div class="sort">
                     <h3>Sort</h3>
-                   
+
                 </div>
                 <div class="sortCard">
                     <div class="sortAtoZ" onclick="sort('AtoZ')">
@@ -149,6 +149,21 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                 </div>
                 <div class="filterCard">
                     <form id="filterForm" action="javascript:void(0);">
+                        <div class="FilterExperience">
+                            <h3>Service Type</h3>
+                            <div class="experienceCard">
+
+                                <div class="offering">
+                                    <input type="radio" name="typeOfJob" id="entry" value="offer">
+                                    <label for="entry">Offering a Service</label>
+                                </div>
+                                <div class="needs">
+                                    <input type="radio" name="typeOfJob" id="expert" value="require">
+                                    <label for="expert">Needs a service</label>
+                                </div>
+
+                            </div>
+                        </div>
                         <div class="FilterExperience">
                             <h3>By Experience</h3>
                             <div class="experienceCard">
@@ -401,32 +416,32 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                 </div>
 
             </div>
-        </div>   
+        </div>
         <div class="AllFreelancers">
 
             <div class="AllFreelancersHeader">
                 <h2>All <span>EZWork</span> Freelancers</h2>
             </div>
             <div class="AllFreelancersContainer">
-            <?php
-                        $sql = "SELECT username, avatar, freelancer_id FROM clients";
-                        $result = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
-                        if (mysqli_num_rows($result) > 0) {
-                            while ($row = mysqli_fetch_assoc($result)) {
-                                if ($row['username'] != $_SESSION['userid']) {
-    
-                                    if ($row['freelancer_id'] != NULL) {
-                        ?>
-                         
-                        <a href="../Profile/userprofile.php?name=<?php echo $row['username']; ?>">
-                            <div class="freelancerCard" onclick="location.href=`" >
-                                <div class="freelancerImg">
-                                    <img src="<?php echo $row['avatar']; ?>" alt=`<?php echo $row['username']; ?>`>
-                                </div>
-                                <div class="freelancerInfo">
-                                    <h2><?php echo $row['username']; ?></h2>
-                                    
-                                    <!-- Couldn't get the data such as expertise for each freelacner
+                <?php
+                $sql = "SELECT username, avatar, freelancer_id FROM clients";
+                $result = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
+                if (mysqli_num_rows($result) > 0) {
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        if ($row['username'] != $_SESSION['userid']) {
+
+                            if ($row['freelancer_id'] != NULL) {
+                ?>
+
+                                <a href="../Profile/userprofile.php?name=<?php echo $row['username']; ?>">
+                                    <div class="freelancerCard" onclick="location.href=`">
+                                        <div class="freelancerImg">
+                                            <img src="<?php echo $row['avatar']; ?>" alt=`<?php echo $row['username']; ?>`>
+                                        </div>
+                                        <div class="freelancerInfo">
+                                            <h2><?php echo $row['username']; ?></h2>
+
+                                            <!-- Couldn't get the data such as expertise for each freelacner
                                     <h3>
                                         Software Developer                                
                                     </h3>
@@ -441,28 +456,28 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                                        
                                     </h5>
                                     -->
-                                    <?php
-                                        $freeID = $row['freelancer_id'];
-                                        $pullJobs = mysqli_query($conn, "SELECT COUNT(*) AS completedJobs FROM jobs WHERE freelancer_id = '$freeID' AND status=1");
-                                        $pullJobCount = mysqli_fetch_assoc($pullJobs);                            
-                                    ?>
-                                    <p><?php echo $pullJobCount['completedJobs']; ?> jobs completed</p>
-                                </div>
-                            </div>
-                        </a>
-    
-    
-    
-    
-                            <?php
-                                    }
-                                }
+                                            <?php
+                                            $freeID = $row['freelancer_id'];
+                                            $pullJobs = mysqli_query($conn, "SELECT COUNT(*) AS completedJobs FROM jobs WHERE freelancer_id = '$freeID' AND status=1");
+                                            $pullJobCount = mysqli_fetch_assoc($pullJobs);
+                                            ?>
+                                            <p><?php echo $pullJobCount['completedJobs']; ?> jobs completed</p>
+                                        </div>
+                                    </div>
+                                </a>
+
+
+
+
+                <?php
                             }
                         }
-                        ?>             
+                    }
+                }
+                ?>
             </div>
         </div>
-        
+
     </div>
 
 
