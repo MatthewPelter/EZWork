@@ -192,13 +192,13 @@ if (mysqli_num_rows($jobResult) > 0) {
                     <!-- -1 : IN PROGRESS -->
                     <!-- ----------------------------------------- -->
                     <p>Status:
-                    <?php if ($r['status'] == 0) { ?>
-                                        <span style="color: lightgreen;font-weight: bolder;"><?php echo "Open"; ?></span>
-                                    <?php } else if($r['status'] == 1) { ?>
-                                        <span style="color: red;font-weight: bolder;"><?php echo "Closed"; ?></span>                         
-                                    <?php }else{ ?>
-                                        <span style="color: royalblue;font-weight: bolder;"><?php echo "In-Progress"; ?></span>                                              
-                                    <?php } ?>
+                        <?php if ($r['status'] == 0) { ?>
+                            <span style="color: lightgreen;font-weight: bolder;"><?php echo "Open"; ?></span>
+                        <?php } else if ($r['status'] == 1) { ?>
+                            <span style="color: red;font-weight: bolder;"><?php echo "Closed"; ?></span>
+                        <?php } else { ?>
+                            <span style="color: royalblue;font-weight: bolder;"><?php echo "In-Progress"; ?></span>
+                        <?php } ?>
                     </p>
                 </div>
 
@@ -299,14 +299,14 @@ if (mysqli_num_rows($jobResult) > 0) {
                 <?php if ($unameFetched['username'] == $_SESSION['userid'] && $r['status'] != -1) {
                 ?>
 
-                <?php
-                    if( $r['status'] != 1){ 
-                ?>
-                    <input type="button" onclick="location.href = 'edit?id=<?php echo $r['id']; ?>';" id="editBtn" value="Edit Post">
-                <?php
+                    <?php
+                    if ($r['status'] != 1) {
+                    ?>
+                        <input type="button" onclick="location.href = 'edit?id=<?php echo $r['id']; ?>';" id="editBtn" value="Edit Post">
+                    <?php
                     }
-                ?>
-                   
+                    ?>
+
                     <input type="button" id="deleteBtn" style="color: red;" value="Delete Post">
                     <span id="result"></span>
 
@@ -413,6 +413,14 @@ if (mysqli_num_rows($jobResult) > 0) {
                     </svg>
                 </div>
 
+                <?php
+                $workFreelancer = $r['freelancer_id'];
+                $getFreelancerName = mysqli_query($conn, "SELECT id, username, avatar FROM clients WHERE freelancer_id='$workFreelancer'");
+                $getFreelancerName = mysqli_fetch_assoc($getFreelancerName);
+
+                $freelancerUserID = $getFreelancerName['id'];
+                ?>
+
                 <div class="options">
                     <?php if ($r['user_id'] == $_SESSION['user_id']) {
                         if ($r['paid'] == 0) { ?>
@@ -431,9 +439,13 @@ if (mysqli_num_rows($jobResult) > 0) {
                             </button>
                         <?php } else { ?>
                             <h2>Freelancer is working on your job now.</h2>
-                    <?php
-                        }
-                    } ?>
+                        <?php
+                        } ?>
+                        <button onclick="window.location='ez-work.herokuapp.com/message/messages?mid=<?php echo $freelancerUserID; ?>'">
+                            <i class="fa fa-edit" aria-hidden="true"></i>
+                            Message
+                        </button>
+                    <?php } ?>
                     <?php if ($r['freelancer_id'] == $getFreelancerID) {
                         if ($r['status'] != 1 && $r['freelancer_complete'] == 0) {
                             if ($r['paid'] == 0) { ?>
@@ -445,19 +457,21 @@ if (mysqli_num_rows($jobResult) > 0) {
                                     <i class="fa fa-flag" aria-hidden="true"></i>
                                     Mark Job as Complete
                                 </button>
-                    <?php }
-                        }
-                    } ?>
+                        <?php }
+                        } ?>
+
+                        <button onclick="window.location='ez-work.herokuapp.com/message/messages?mid=<?php echo $r['user_id']; ?>'">
+                            <i class="fa fa-edit" aria-hidden="true"></i>
+                            Message
+                        </button>
+
+                    <?php } ?>
                 </div>
                 <div class="clientInfo">
                     <h3>About the Freelancer</h3>
                     <div class="username">
                         <p>Work By: </p>
-                        <?php
-                        $workFreelancer = $r['freelancer_id'];
-                        $getFreelancerName = mysqli_query($conn, "SELECT username, avatar FROM clients WHERE freelancer_id='$workFreelancer'");
-                        $getFreelancerName = mysqli_fetch_assoc($getFreelancerName);
-                        ?>
+
                         <a href="../Profile/userprofile.php?name=<?php echo $getFreelancerName['username']; ?>"><?php echo $getFreelancerName['username']; ?></a>
                     </div>
                     <div class="img-card">
@@ -481,15 +495,15 @@ if (mysqli_num_rows($jobResult) > 0) {
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.2.1/dist/sweetalert2.all.min.js"></script>
 <script>
-            //Report fun
-            function report(){
-            const reportMsg = document.querySelector('.reportMessage');
-            if (getComputedStyle(reportMsg).display === "none") {
-                reportMsg.style.display = "inline-block";
-            } else {
-                reportMsg.style.display = "none";
-            }            
+    //Report fun
+    function report() {
+        const reportMsg = document.querySelector('.reportMessage');
+        if (getComputedStyle(reportMsg).display === "none") {
+            reportMsg.style.display = "inline-block";
+        } else {
+            reportMsg.style.display = "none";
         }
+    }
 </script>
 <script type="text/javascript">
     $(document).ready(function() {
