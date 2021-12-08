@@ -180,7 +180,7 @@ if (mysqli_num_rows($jobResult) > 0) {
     }
     ?>
     <?php if ($r['client_id'] == $user_id && $r['freelancer_complete'] == 1) { ?>
-        <button class="completeFreelancer">
+        <button class="completeClient">
             <i class="fa fa-flag" aria-hidden="true"></i>
             Mark Job as Complete
         </button>
