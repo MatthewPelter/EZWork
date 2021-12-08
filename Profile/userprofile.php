@@ -53,7 +53,9 @@ if (mysqli_num_rows($result) > 0) {
 </head>
 
 <body>
-    <div id="overlay" onclick="off()"></div>
+    <div id="overlay">
+        <span onclick="off()" class="closebtn">X</span>
+    </div>
     <?php include '../navbar.php'; ?>
 
     <div class="profile">
