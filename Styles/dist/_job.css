@@ -391,10 +391,91 @@
   width: 100%;
   height: fit-content;
   padding: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+}
+.job-progress-section .job-progress-container .jobDescription h1 {
+  width: 100%;
   text-align: center;
+  font-size: 2rem;
+  text-decoration: underline;
+}
+.job-progress-section .job-progress-container .jobDescription .ProgressBar {
+  margin: 0 auto;
+  padding: 2em 0 3em;
+  list-style: none;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.job-progress-section .job-progress-container .jobDescription .ProgressBar-step {
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+.job-progress-section .job-progress-container .jobDescription .ProgressBar-step:before,
+.job-progress-section .job-progress-container .jobDescription .ProgressBar-step:after {
+  content: "";
+  height: 0.5em;
+  background-color: #9F9FA3;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  left: -50%;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.25s ease-out;
+}
+.job-progress-section .job-progress-container .jobDescription .ProgressBar-step:first-child:before,
+.job-progress-section .job-progress-container .jobDescription .ProgressBar-step:first-child:after {
+  display: none;
+}
+.job-progress-section .job-progress-container .jobDescription .ProgressBar-step:after {
+  background-color: #00637C;
+  width: 0%;
+}
+.job-progress-section .job-progress-container .jobDescription .ProgressBar-step.is-complete + .ProgressBar-step.is-current:after,
+.job-progress-section .job-progress-container .jobDescription .ProgressBar-step.is-complete + .ProgressBar-step.is-complete:after {
+  width: 100%;
+}
+.job-progress-section .job-progress-container .jobDescription .ProgressBar-icon {
+  width: 1.5em;
+  height: 1.5em;
+  background-color: #F2E7BF;
+  fill: #9F9FA3;
+  border-radius: 50%;
+  padding: 0.5em;
+  max-width: 100%;
+  z-index: 10;
+  position: relative;
+  transition: all 0.25s ease-out;
+}
+.job-progress-section .job-progress-container .jobDescription .is-current .ProgressBar-icon {
+  fill: #00637C;
+  background-color: #00637C;
+}
+.job-progress-section .job-progress-container .jobDescription .is-complete .ProgressBar-icon {
+  fill: #DBF1FF;
+  background-color: #00637C;
+}
+.job-progress-section .job-progress-container .jobDescription .ProgressBar-stepLabel {
+  display: block;
+  text-transform: uppercase;
+  color: #9F9FA3;
+  position: absolute;
+  padding-top: 0.5em;
+  width: 100%;
+  transition: all 0.25s ease-out;
+}
+.job-progress-section .job-progress-container .jobDescription .is-current > .ProgressBar-stepLabel,
+.job-progress-section .job-progress-container .jobDescription .is-complete > .ProgressBar-stepLabel {
+  color: #00637C;
+}
+.job-progress-section .job-progress-container .jobDescription .wrapper {
+  width: 100%;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .job-progress-section .job-progress-container .job-chat {
   width: 100%;
