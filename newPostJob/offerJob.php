@@ -224,6 +224,41 @@ if (mysqli_num_rows($jobResult) > 0) {
     var $bar = $(".ProgressBar");
     $bar.children().first().addClass("is-current");
 
+    // complete btn click
+    $(".completeFreelancer").click(function() {
+        Swal.fire({
+            title: 'Mark Job as Complete',
+            text: "If feel like you have completed the clients required work, you may mark this job as complete.",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Mark as Complete!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $.ajax({
+                    type: "POST",
+                    url: "../api/mark-offer-as-complete.php",
+                    data: 'postID=' + <?php echo $job_id; ?>,
+                    success: function(data) {
+                        console.log(data);
+                        Swal.fire(
+                            'Complete!',
+                            'Once the client reviews your work and marks as complete, your payment will be released.',
+                            'success'
+                        ).then(function() {
+                            window.location.reload(1);
+                        });
+                    },
+                    error: function(r) {
+                        console.log(r);
+                    }
+                });
+
+            }
+        });
+    }); // end complete btn click
+
     function loadMessageScripts() {
         var elem = document.querySelector('.chat-history');
         elem.scrollTop = elem.scrollHeight;
