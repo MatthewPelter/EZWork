@@ -1,4 +1,7 @@
 <?php
+
+use Dotenv\Validator;
+
 session_start();
 include '../components/session-checker.php';
 require_once("../classes/DB.php");
@@ -139,7 +142,7 @@ if (isset($_GET['mid'])) {
 
                                 <?php
                                 while ($row = mysqli_fetch_assoc($result)) {
-                                    //echo $row['id'] . ": " . $row['body'] . "<br />";
+                                    $row['body'] = htmlspecialchars(urldecode($row['body']));
                                     if ($row['Sender'] == $username) {
                                         if ($row['jobID'] != NULL) {
                                             if ($row['response'] == NULL) {
