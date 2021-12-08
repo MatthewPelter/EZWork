@@ -215,11 +215,92 @@ if (mysqli_num_rows($jobResult) > 0) {
 <div class="messageChat">
     <!-- insert message -->
 </div>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.2.1/dist/sweetalert2.all.min.js"></script>
 <script type="text/javascript">
     var $bar = $(".ProgressBar");
     $bar.children().first().addClass("is-current");
     $bar.children(".is-current").removeClass("is-current").addClass("is-complete").next().addClass("is-current");
+
+    function loadMessageScripts() {
+        var elem = document.querySelector('.chat-history');
+        elem.scrollTop = elem.scrollHeight;
+
+        $('#sendmessage').click(function() {
+            $.ajax({
+                type: "POST",
+                url: "../api/message.php",
+                processData: false,
+                contentType: "application/json",
+                data: '{ "body": "' + $("#message-to-send").val() + '", "receiver": "<?php echo $getName; ?>" }',
+                success: function(data) {
+                    var obj = JSON.parse(data);
+                    console.log(obj);
+                    $("#message-to-send").val('');
+                    if (obj.Success.length > 0) {
+                        location.reload();
+                        //$('#result').html(obj.Success);
+                    } else if (obj.Error.length > 0) {
+                        $('#result').html(obj.Error);
+                    }
+
+                },
+                error: function(r) {
+                    console.log(r);
+                }
+            });
+        });
+
+        function respondToJob(jobID, free_id, response) {
+            if (response == "accept") {
+                $.ajax({
+                    type: "POST",
+                    url: "../api/accept.php",
+                    processData: false,
+                    contentType: "application/json",
+                    data: '{ "jobID": "' + jobID + '", "id": "<?php echo $user_id; ?>", "freelancer_id": "' + free_id + '" }',
+                    success: function(data) {
+                        var obj = JSON.parse(data);
+                        console.log(obj);
+                        if (obj.Success.length > 0) {
+                            $('#status').html(obj.Success);
+                            $('.propose').hide();
+                            location.reload();
+                        } else if (obj.Error.length > 0) {
+                            $('#status').html(obj.Error);
+                        }
+
+                    },
+                    error: function(r) {
+                        console.log(r);
+                    }
+                });
+            } else {
+                $.ajax({
+                    type: "POST",
+                    url: "../api/deny.php",
+                    processData: false,
+                    contentType: "application/json",
+                    data: '{ "jobID": "' + jobID + '", "id": "<?php echo $user_id; ?>", "freelancer_id": "' + free_id + '" }',
+                    success: function(data) {
+                        var obj = JSON.parse(data);
+                        console.log(obj);
+                        if (obj.Success.length > 0) {
+                            $('#status').html(obj.Success);
+                            $('.propose').hide();
+                            location.reload();
+                        } else if (obj.Error.length > 0) {
+                            $('#status').html(obj.Error);
+                        }
+
+                    },
+                    error: function(r) {
+                        console.log(r);
+                    }
+                });
+            }
+        }
+    }
 
     <?php if ($r['client_id'] == $user_id) { ?>
         $(".messageChat").load("https://ez-work.herokuapp.com/message/messages?mid=<?php echo $r['freelancer_id']; ?> .messageMainContainer", loadMessageScripts);
