@@ -23418,7 +23418,7 @@ footer p {
 #overlay form {
   z-index: 8;
   position: fixed;
-  top: 0;
+  top: 5%;
   left: 25%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -23431,7 +23431,7 @@ footer p {
       -ms-flex-align: center;
           align-items: center;
   width: 50%;
-  height: 100%;
+  height: 70%;
   padding: 2rem;
   background: white;
   border-radius: 15px;
@@ -23448,7 +23448,7 @@ footer p {
 #overlay form .form-container textarea {
   width: 100%;
   resize: none;
-  height: 210px;
+  height: 240px;
   margin-bottom: 20px;
   border: 2px solid #dcdcdc;
   border-radius: 10px;
@@ -23459,6 +23459,7 @@ footer p {
   outline: none;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  font-size: 1.1rem;
 }
 
 #overlay form .form-container textarea:focus {
