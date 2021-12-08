@@ -53,7 +53,7 @@ if (mysqli_num_rows($result) > 0) {
 </head>
 
 <body>
-
+    <div class="profile-card__overlay js-message-close"></div>
     <?php include '../navbar.php'; ?>
 
     <div class="profile">
@@ -92,7 +92,7 @@ if (mysqli_num_rows($result) > 0) {
                             <div class="messageContainer" style="display: none;">
                                 <form class="profile-card-form" onsubmit="return false">
                                     <div class="profile-card-form__container">
-                                        <textarea id="messagecontent" placeholder="Say something..." required></textarea>
+                                        <textarea id="messagecontent" placeholder="Say something..."></textarea>
                                     </div>
 
                                     <div class="profile-card-form__bottom">
@@ -105,19 +105,20 @@ if (mysqli_num_rows($result) > 0) {
                                         </button>
                                     </div>
                                 </form>
-
-                                <div class="profile-card__overlay js-message-close"></div>
                             </div>
                             <script>
+                                const overlay = document.querySelector('.profile-card__overlay');
                                 var messageUser = document.getElementById('messageUser');
                                 var messageContainer = document.querySelector('.messageContainer');
 
                                 messageUser.addEventListener('click',()=>{
                                     if(getComputedStyle(messageContainer).display === "none"){
                                         messageContainer.style.display = "inline-block";
+                                        overlay.style.display = "inline-block";
                                     }
                                     else{
                                         messageContainer.style.display = "none";
+                                        overlay.style.display = "none";
                                     }
                                 })
                             </script>

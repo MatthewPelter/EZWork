@@ -23401,6 +23401,21 @@ footer p {
   }
 }
 
+.profile-card__overlay {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+  background: rgba(22, 33, 72, 0.35);
+  border-radius: 12px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
 .profile {
   margin-top: 0;
   width: 100%;
@@ -23569,20 +23584,6 @@ footer p {
   pointer-events: none;
 }
 
-.profile .profile-container .profile-header .username .contact .message .messageContainer .profile-card__overlay {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  opacity: 0;
-  background: rgba(22, 33, 72, 0.35);
-  border-radius: 12px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
 .profile .profile-container .profile-header .username .contact .message .messageContainer .profile-card-form {
   -webkit-box-shadow: 0 4px 30px rgba(15, 22, 56, 0.35);
           box-shadow: 0 4px 30px rgba(15, 22, 56, 0.35);
@@ -23601,25 +23602,13 @@ footer p {
   transition: all 0.3s;
 }
 
-.profile .profile-container .profile-header .username .contact .message .messageContainer .profile-card-form .profile-card textarea {
-  width: 100%;
-  resize: none;
-  height: 210px;
-  margin-bottom: 20px;
-  border: 2px solid #dcdcdc;
-  border-radius: 10px;
-  padding: 15px 20px;
-  color: #324e63;
-  font-weight: 500;
-  font-family: "Quicksand", sans-serif;
-  outline: none;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.profile .profile-container .profile-header .username .contact .message .messageContainer .profile-card-form .profile-card textarea:focus {
-  outline: none;
-  border-color: #8a979e;
+.profile .profile-container .profile-header .username .contact .message .messageContainer .profile-card-form .profile-card-form__bottom {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .profile .profile-container .profile-body {
