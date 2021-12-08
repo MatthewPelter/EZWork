@@ -70,7 +70,7 @@ if (mysqli_num_rows($jobResult) > 0) {
 
     <h2>Client: <?php echo $clientName; ?></h2>
     <h2>Freelancer: <?php echo $freelancerName; ?></h2>
-    <p>Status: <?php ($r['status'] == 0) ? "Open" : "Closed"; ?></p>
+    <p>Status: <?php echo ($r['status'] == 0) ? "Open" : "Closed"; ?></p>
 
 
     <?php
