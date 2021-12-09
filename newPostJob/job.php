@@ -404,60 +404,20 @@ $getFreelancerID = $getFreelancerID['freelancer_id'];
                     <h2>
                         <?php echo $r['title']; ?>
                     </h2>
-                    <p>Status:
+                    <span id="status">
                         <?php if ($r['status'] == 1) {
                             echo "Closed";
                         } else if ($r['status'] == -1) {
                             echo "In-Progress";
                         }
                         ?>
-                    </p>
+                    </span>
+                </div>
+                <div class="messageChat" style="grid-area: 1/1/4/1;">
+                    <!-- messages loaded from jquery -->
+
                 </div>
 
-                <?php
-                $workFreelancer = $r['freelancer_id'];
-                $getFreelancerName = mysqli_query($conn, "SELECT id, username, avatar FROM clients WHERE freelancer_id='$workFreelancer'");
-                $getFreelancerName = mysqli_fetch_assoc($getFreelancerName);
-
-                $freelancerUserID = $getFreelancerName['id'];
-                ?>
-
-                <div class="options">
-                    <?php if ($r['user_id'] == $_SESSION['user_id']) {
-                        if ($r['paid'] == 0) { ?>
-                            <button class="pay">
-                                <i class="fa fa-money" aria-hidden="true"></i>
-                                Pay For Service
-                            </button>
-                        <?php } else if ($r['status'] != 1 && $r['freelancer_complete'] == 1) {
-                        ?>
-
-                            <h2>The freelancer has completed your job.</h2>
-                            <h3>If you think they completed it correctly, mark it as complete.</h3>
-                            <button class="completeClient">
-                                <i class="fa fa-flag" aria-hidden="true"></i>
-                                Mark Job as Complete
-                            </button>
-                        <?php } else { ?>
-                            <h2>Freelancer is working on your job now.</h2>
-                    <?php
-                        }
-                    } ?>
-                    <?php if ($r['freelancer_id'] == $getFreelancerID) {
-                        if ($r['status'] != 1 && $r['freelancer_complete'] == 0) {
-                            if ($r['paid'] == 0) { ?>
-                                <h2>Wait until the client pays before you begin working.</h2>
-                            <?php
-                            } else {
-                            ?>
-                                <button class="completeFreelancer">
-                                    <i class="fa fa-flag" aria-hidden="true"></i>
-                                    Mark Job as Complete
-                                </button>
-                    <?php }
-                        }
-                    } ?>
-                </div>
                 <div class="jobDescription">
                     <div class="wrapper">
 
@@ -492,11 +452,51 @@ $getFreelancerID = $getFreelancerID['freelancer_id'];
                     </svg>
                 </div>
 
-                <div class="messageChat" style="width: 100%;border-top: 3px solid lightgrey; height: 70vh;padding: 2rem; background: lightgreen;">
-                    <!-- messages loaded from jquery -->
+                <?php
+                $workFreelancer = $r['freelancer_id'];
+                $getFreelancerName = mysqli_query($conn, "SELECT id, username, avatar FROM clients WHERE freelancer_id='$workFreelancer'");
+                $getFreelancerName = mysqli_fetch_assoc($getFreelancerName);
+
+                $freelancerUserID = $getFreelancerName['id'];
+                ?>
+
+                <div class="options">
+                    <?php if ($r['user_id'] == $_SESSION['user_id']) {
+                        if ($r['paid'] == 0) { ?>
+                            <button class="pay">
+                                <i class="fa fa-money" aria-hidden="true"></i>
+                                Pay For Service
+                            </button>
+                        <?php } else if ($r['status'] != 1 && $r['freelancer_complete'] == 1) {
+                        ?>
+
+                            <h2>The freelancer has compelted your job.</h2>
+                            <h3>If you think they completed it correctly, mark it as complete.</h3>
+                            <button class="completeClient">
+                                <i class="fa fa-flag" aria-hidden="true"></i>
+                                Mark Job as Complete
+                            </button>
+                        <?php } else { ?>
+                            <h2>Freelancer is working on your job now.</h2>
+                    <?php
+                        }
+                    } ?>
+                    <?php if ($r['freelancer_id'] == $getFreelancerID) {
+                        if ($r['status'] != 1 && $r['freelancer_complete'] == 0) {
+                            if ($r['paid'] == 0) { ?>
+                                <h2>Wait until the client pays before you begin working.</h2>
+                            <?php
+                            } else {
+                            ?>
+                                <button class="completeFreelancer">
+                                    <i class="fa fa-flag" aria-hidden="true"></i>
+                                    Mark Job as Complete
+                                </button>
+                    <?php }
+                        }
+                    } ?>
                 </div>
             </div>
-
         </div>
     <?php } ?>
 
