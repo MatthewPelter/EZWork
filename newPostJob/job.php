@@ -397,7 +397,7 @@ $getFreelancerID = $getFreelancerID['freelancer_id'];
 
     if ($r['status'] == -1 && ($r['user_id'] == $user_id || $r['freelancer_id'] == $getFreelancerID)) { ?>
         <!-- style as you please. just temporary -->
-        <div class="job progress">
+        <div class="job-progress-section">
             <h2>Job Progress</h2>
             <div class="job-container">
                 <div class="jobCard">
