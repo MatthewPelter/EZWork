@@ -463,7 +463,7 @@ $getFreelancerID = $getFreelancerID['freelancer_id'];
                     } ?>
                 </div>
 
-                <div class="jobDescription" style="border-bottom: 3px solid lightgrey;">
+                <div class="jobDescription">
                     <div class="wrapper">
 
                         <h1>Project Progress</h1>
