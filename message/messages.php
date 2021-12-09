@@ -146,9 +146,7 @@ if (isset($_GET['mid'])) {
                                             if ($row['response'] == NULL) {
                                 ?>
                                                 <li>
-                                                    <div class="message-data align-right">
-                                                        <!-- <span class="message-data-name">Me</span> <i class="fa fa-circle me"></i> -->
-                                                    </div>
+
                                                     <div class="message other-message float-right">
                                                         Your request has been sent to the client.<br />
                                                         Give them time to view your portfolio and profile.<br />
@@ -157,9 +155,7 @@ if (isset($_GET['mid'])) {
                                             <?php }
                                             if ($row['response'] == "accept") { ?>
                                                 <li>
-                                                    <div class="message-data align-right">
-                                                        <!-- <span class="message-data-name">Me</span> <i class="fa fa-circle me"></i> -->
-                                                    </div>
+
                                                     <div class="message other-message float-right">
                                                         Your request has been accepted.<br />
                                                         View the job post to see the progress of the contract.<br />
@@ -168,9 +164,7 @@ if (isset($_GET['mid'])) {
                                             <?php  }
                                             if ($row['response'] == "denied") { ?>
                                                 <li>
-                                                    <div class="message-data align-right">
-                                                        <!-- <span class="message-data-name">Me</span> <i class="fa fa-circle me"></i> -->
-                                                    </div>
+
                                                     <div class="message other-message float-right">
                                                         Your request has been denied by the client.<br />
                                                     </div>
@@ -201,9 +195,7 @@ if (isset($_GET['mid'])) {
                                             if ($row['response'] == NULL) {
                                             ?>
                                                 <li class="propose">
-                                                    <div class="message-data">
-                                                        <!-- <span class="message-data-name"><i class="fa fa-circle online"></i><?php echo $row['Sender']; ?></span> -->
-                                                    </div>
+
                                                     <div class="message my-message">
                                                         <?php echo $row['Sender']; ?> is interested in your project you posted.<br />
                                                         Make sure to view their profile and rating before you accept their proposal.<br />
@@ -216,9 +208,7 @@ if (isset($_GET['mid'])) {
 
                                             if ($row['response'] == "accept") { ?>
                                                 <li class="propose">
-                                                    <div class="message-data">
-                                                        <!-- <span class="message-data-name"><i class="fa fa-circle online"></i><?php echo $row['Sender']; ?></span> -->
-                                                    </div>
+
                                                     <div class="message my-message">
                                                         You accepted the job.<br />
                                                         View the job page to view the progress of the contract.<br />
@@ -228,9 +218,7 @@ if (isset($_GET['mid'])) {
                                             <?php  }
                                             if ($row['response'] == "denied") { ?>
                                                 <li class="propose">
-                                                    <div class="message-data">
-                                                        <!-- <span class="message-data-name"><i class="fa fa-circle online"></i><?php echo $row['Sender']; ?></span> -->
-                                                    </div>
+
                                                     <div class="message my-message">
                                                         You denied the job.<br />
                                                     </div>
