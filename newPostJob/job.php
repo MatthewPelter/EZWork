@@ -404,15 +404,14 @@ $getFreelancerID = $getFreelancerID['freelancer_id'];
                     <h2>
                         <?php echo $r['title']; ?>
                     </h2>
-                    <p>Status:
-                        <?php if ($r['status'] == 0) { ?>
-                            <span style="color: lightgreen;font-weight: bolder;"><?php echo "Open"; ?></span>
-                        <?php } else if ($r['status'] == 1) { ?>
-                            <span style="color: red;font-weight: bolder;"><?php echo "Closed"; ?></span>
-                        <?php } else { ?>
-                            <span style="color: royalblue;font-weight: bolder;"><?php echo "In-Progress"; ?></span>
-                        <?php } ?>
-                    </p>
+                    <span id="status">
+                        <?php if ($r['status'] == 1) {
+                            echo "Closed";
+                        } else if ($r['status'] == -1) {
+                            echo "In-Progress";
+                        }
+                        ?>
+                    </span>
                 </div>
                 <div class="messageChat" style="grid-area: 1/1/4/1;">
                     <!-- messages loaded from jquery -->
