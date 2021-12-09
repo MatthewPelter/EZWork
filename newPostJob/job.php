@@ -405,7 +405,7 @@ $getFreelancerID = $getFreelancerID['freelancer_id'];
             <div class="job-progress-container">
                 <div class="job-progress-header">
                     <h2>
-                        <?php echo $r['title'] ?>
+                        <?php echo $r['title']; ?>
                     </h2>
                     <p>Status:
                         <?php if ($r['status'] == 0) { ?>
