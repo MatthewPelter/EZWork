@@ -415,9 +415,9 @@ $getFreelancerID = $getFreelancerID['freelancer_id'];
                     </p>
                 </div>
 
-                <div class="messageChat" style="width: 100%;border-top: 3px solid lightgrey; height: 70vh;padding: 2rem; background: lightgreen;">
+                <!--<div class="messageChat" style="width: 100%;border-top: 3px solid lightgrey; height: 70vh;padding: 2rem; background: lightgreen;">
+                    </div>
                     <!-- messages loaded from jquery -->
-                </div>
 
                 <?php
                 $workFreelancer = $r['freelancer_id'];
