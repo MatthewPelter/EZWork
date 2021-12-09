@@ -5038,7 +5038,6 @@ section .container .login .login-container button:hover {
 
 .talentCardContainer .talentCard .card {
   border-radius: 5px;
-  margin: .5rem 0rem;
   cursor: pointer;
   width: 100%;
 }

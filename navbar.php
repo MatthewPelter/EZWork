@@ -252,7 +252,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                     <div class="card card1" onclick="location.href='../Freelancer/AllFreelancers.php'">
                         <h4>Discover</h4>
                     </div>
-                    <div class="card card2" onclick="location.href='../Freelancer/myHires'">
+                    <div class="card card2" onclick="location.href='../Freelancer/myHires'" style="margin: .25rem 0rem;">
                         <h4>My Hires</h4>
                     </div>
                     <?php if ($avatarFetch['freelancer_id'] == NULL) { ?>
