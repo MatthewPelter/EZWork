@@ -161,6 +161,10 @@ $getFreelancerID = $getFreelancerID['freelancer_id'];
         .people-list {
             display: none;
         }
+
+        .job-progress-section .job-progress-container .messageChat {
+            margin-top: -300px;
+        }
     </style>
 </head>
 
