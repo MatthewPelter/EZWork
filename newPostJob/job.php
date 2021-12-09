@@ -534,20 +534,17 @@ $getFreelancerID = $getFreelancerID['freelancer_id'];
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.2.1/dist/sweetalert2.all.min.js"></script>
-<script>
-    //Report fun
-    function report() {
-        const reportMsg = document.querySelector('.reportMessage');
-        if (getComputedStyle(reportMsg).display === "none") {
-            reportMsg.style.display = "inline-block";
-        } else {
-            reportMsg.style.display = "none";
-        }
-    }
-</script>
 <script type="text/javascript">
     $(document).ready(function() {
-
+        //Report fun
+        function report() {
+            const reportMsg = document.querySelector('.reportMessage');
+            if (getComputedStyle(reportMsg).display === "none") {
+                reportMsg.style.display = "inline-block";
+            } else {
+                reportMsg.style.display = "none";
+            }
+        }
         // proposal btn click
         $("#proposalBtn").click(function() {
             (async () => {
@@ -851,39 +848,6 @@ $getFreelancerID = $getFreelancerID['freelancer_id'];
             status.style.color = "#e1b12c";
         }
 
-        var $bar = $(".ProgressBar");
-        $bar.children().first().addClass("is-current");
-
-        <?php if ($r['user_id'] == $_SESSION['user_id']) { ?>
-            $(".messageChat").load("https://ez-work.herokuapp.com/message/messages?mid=<?php echo $freelancerUserID; ?> .messageMainContainer", loadMessageScripts);
-        <?php } else if ($r['freelancer_id'] == $getFreelancerID) { ?>
-            $(".messageChat").load("https://ez-work.herokuapp.com/message/messages?mid=<?php echo $r['user_id']; ?> .messageMainContainer", loadMessageScripts);
-        <?php } ?>
-
-        <?php
-        if ($r['paid'] == 1) { ?>
-            $bar.children(".is-current").removeClass("is-current").addClass("is-complete").next().addClass("is-current");
-        <?php }
-        ?>
-
-        <?php
-        if ($r['freelancer_complete'] == 1) { ?>
-            $bar.children(".is-current").removeClass("is-current").addClass("is-complete").next().addClass("is-current");
-        <?php }
-        ?>
-
-        <?php
-        if ($r['status'] == 1) { ?>
-            $bar.children(".is-current").removeClass("is-current").addClass("is-complete").next().addClass("is-current");
-        <?php }
-        ?>
-
-        <?php if ($r['user_id'] == $_SESSION['user_id']) {
-            $getName = $getFreelancerName['username'];
-        } else {
-            $getName = $unameFetched['username'];
-        } ?>
-
         function loadMessageScripts() {
             var elem = document.querySelector('.chat-history');
             elem.scrollTop = elem.scrollHeight;
@@ -963,6 +927,40 @@ $getFreelancerID = $getFreelancerID['freelancer_id'];
                 }
             }
         }
+
+        var $bar = $(".ProgressBar");
+        $bar.children().first().addClass("is-current");
+
+        <?php if ($r['user_id'] == $_SESSION['user_id']) { ?>
+            $(".messageChat").load("https://ez-work.herokuapp.com/message/messages?mid=<?php echo $freelancerUserID; ?> .messageMainContainer", loadMessageScripts);
+        <?php } else if ($r['freelancer_id'] == $getFreelancerID) { ?>
+            $(".messageChat").load("https://ez-work.herokuapp.com/message/messages?mid=<?php echo $r['user_id']; ?> .messageMainContainer", loadMessageScripts);
+        <?php } ?>
+
+        <?php
+        if ($r['paid'] == 1) { ?>
+            $bar.children(".is-current").removeClass("is-current").addClass("is-complete").next().addClass("is-current");
+        <?php }
+        ?>
+
+        <?php
+        if ($r['freelancer_complete'] == 1) { ?>
+            $bar.children(".is-current").removeClass("is-current").addClass("is-complete").next().addClass("is-current");
+        <?php }
+        ?>
+
+        <?php
+        if ($r['status'] == 1) { ?>
+            $bar.children(".is-current").removeClass("is-current").addClass("is-complete").next().addClass("is-current");
+        <?php }
+        ?>
+
+        <?php if ($r['user_id'] == $_SESSION['user_id']) {
+            $getName = $getFreelancerName['username'];
+        } else {
+            $getName = $unameFetched['username'];
+        } ?>
+
     });
 </script>
 <!--Script for the search bar and datalist-->
