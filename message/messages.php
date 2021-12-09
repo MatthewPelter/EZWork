@@ -96,7 +96,7 @@ if (isset($_GET['mid'])) {
             <div class="message-container clearfix">
                 <div class="people-list" id="people-list">
                     <div class="title">
-                        <h4>Direct Message</h4>
+                        <h4 style="text-decoration:none;">Direct Message</h4>
                     </div>
                     <ul class="list">
 
@@ -134,7 +134,6 @@ if (isset($_GET['mid'])) {
                                 <div class="chat-with">Chat with <a href="https://ez-work.herokuapp.com/Profile/userprofile.php?name=<?php echo $otherUsername; ?>"><?php echo $otherUsername; ?></a></div>
                                 <div class="chat-num-messages">Do not share any confidential information</div>
                             </div>
-                            <i class="fa fa-star"></i>
                         </div> <!-- end chat-header -->
 
                         <div class="chat-history">
