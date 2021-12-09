@@ -413,44 +413,6 @@ $getFreelancerID = $getFreelancerID['freelancer_id'];
                         ?>
                     </span>
                 </div>
-                <div class="messageChat" style="grid-area: 1/1/4/1;">
-                    <!-- messages loaded from jquery -->
-
-                </div>
-
-                <div class="jobDescription">
-                    <div class="wrapper">
-
-                        <h1>Project Progress</h1>
-
-                        <ol class="ProgressBar">
-                            <li class="ProgressBar-step">
-                                <svg class="ProgressBar-icon">
-                                    <use xlink:href="#checkmark-bold" />
-                                </svg>
-                                <span class="ProgressBar-stepLabel">Accepted Job</span>
-                            </li>
-                            <li class="ProgressBar-step">
-                                <svg class="ProgressBar-icon">
-                                    <use xlink:href="#checkmark-bold" />
-                                </svg>
-                                <span class="ProgressBar-stepLabel">Started Work</span>
-                            </li>
-                            <li class="ProgressBar-step">
-                                <svg class="ProgressBar-icon">
-                                    <use xlink:href="#checkmark-bold" />
-                                </svg>
-                                <span class="ProgressBar-stepLabel">Finished</span>
-                            </li>
-                        </ol>
-                    </div>
-
-                    <svg xmlns="http://www.w3.org/2000/svg">
-                        <symbol id="checkmark-bold" viewBox="0 0 24 24">
-                            <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" />
-                        </symbol>
-                    </svg>
-                </div>
 
                 <?php
                 $workFreelancer = $r['freelancer_id'];
@@ -496,6 +458,45 @@ $getFreelancerID = $getFreelancerID['freelancer_id'];
                         }
                     } ?>
                 </div>
+
+                <div class="jobDescription">
+                    <div class="wrapper">
+
+                        <h1>Project Progress</h1>
+
+                        <ol class="ProgressBar">
+                            <li class="ProgressBar-step">
+                                <svg class="ProgressBar-icon">
+                                    <use xlink:href="#checkmark-bold" />
+                                </svg>
+                                <span class="ProgressBar-stepLabel">Accepted Job</span>
+                            </li>
+                            <li class="ProgressBar-step">
+                                <svg class="ProgressBar-icon">
+                                    <use xlink:href="#checkmark-bold" />
+                                </svg>
+                                <span class="ProgressBar-stepLabel">Started Work</span>
+                            </li>
+                            <li class="ProgressBar-step">
+                                <svg class="ProgressBar-icon">
+                                    <use xlink:href="#checkmark-bold" />
+                                </svg>
+                                <span class="ProgressBar-stepLabel">Finished</span>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <svg xmlns="http://www.w3.org/2000/svg">
+                        <symbol id="checkmark-bold" viewBox="0 0 24 24">
+                            <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" />
+                        </symbol>
+                    </svg>
+                </div>
+
+                <div class="messageChat">
+                    <!-- messages loaded from jquery -->
+                </div>
+
             </div>
         </div>
     <?php } ?>
