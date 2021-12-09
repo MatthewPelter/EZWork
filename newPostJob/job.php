@@ -388,9 +388,6 @@ $getFreelancerID = $getFreelancerID['freelancer_id'];
         <?php
         }
         ?>
-
-
-
     <?php } ?>
 
     <!-- ---------------------------------------------------------- -->
@@ -400,7 +397,7 @@ $getFreelancerID = $getFreelancerID['freelancer_id'];
 
     if ($r['status'] == -1 && ($r['user_id'] == $user_id || $r['freelancer_id'] == $getFreelancerID)) { ?>
         <!-- style as you please. just temporary -->
-        <div class="job-progress-section">
+        <div class="job progress">
             <h2>Job Progress</h2>
             <div class="job-progress-container">
                 <div class="job-progress-header">
