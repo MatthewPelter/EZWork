@@ -310,60 +310,62 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                     $notifications = mysqli_query($conn, "SELECT * FROM notifications WHERE receiver='$user_id' AND isRead=0 ORDER BY id DESC");
                     if (mysqli_num_rows($notifications) > 0) { ?>
                         <div class="card card1">
-                            <h4 onclick="readNotification(0);/*closeAll();*/">Mark as Read</h4>
+                            <h4 onclick="readNotification(0);">Mark as Read</h4>
                         </div>
-                        <?php
-                        while ($row = mysqli_fetch_assoc($notifications)) {
-                            $senderID = $row['sender'];
-                            $senderName = mysqli_query($conn, "SELECT username FROM clients WHERE id=$senderID");
-                            $senderName = mysqli_fetch_assoc($senderName);
-                            $senderName = $senderName['username'];
-                            if ($row['type'] == 'm') {
-                        ?>
-                                <div onclick="readNotification(<?php echo $row['id']; ?>); location.href='../message/messages?mid=<?php echo $row['sender']; ?>';" class="card">
-                                    <h4>You got a message from <?php echo $senderName; ?></h4>
-                                </div>
-
-                            <?php } else if ($row['type'] == 'a') { ?>
-
-                                <div class="card">
-                                    <h4><?php echo $senderName; ?> has accepted your proposal!</h4>
-
-                                </div>
-
-                            <?php } else if ($row['type'] == 'd') { ?>
-                                <div class="card">
-                                    <h4><?php echo $senderName; ?> denied your proposal.</h4>
-
-                                </div>
-
-                            <?php } else if ($row['type'] == 'r') { ?>
-                                <div onclick="readNotification(<?php echo $row['id']; ?>); location.href='../message/messages?mid=<?php echo $row['sender']; ?>';" class="card">
-                                    <h4><?php echo $senderName; ?> has submitted a proprosal to your job.</h4>
-                                </div>
-                            <?php } else if ($row['type'] == 'p') { ?>
-                                <div class="card">
-                                    <h4><?php echo $senderName; ?> sent their payment.</h4>
-
-                                </div>
+                        <div class="noti">
                             <?php
-                            } else if ($row['type'] == 'pr') { ?>
-                                <div class="card">
-                                    <h4>Your payment has been released.</h4>
+                            while ($row = mysqli_fetch_assoc($notifications)) {
+                                $senderID = $row['sender'];
+                                $senderName = mysqli_query($conn, "SELECT username FROM clients WHERE id=$senderID");
+                                $senderName = mysqli_fetch_assoc($senderName);
+                                $senderName = $senderName['username'];
+                                if ($row['type'] == 'm') {
+                            ?>
+                                    <div onclick="readNotification(<?php echo $row['id']; ?>); location.href='../message/messages?mid=<?php echo $row['sender']; ?>';" class="card">
+                                        <h4>You got a message from <?php echo $senderName; ?></h4>
+                                    </div>
 
-                                </div>
+                                <?php } else if ($row['type'] == 'a') { ?>
+
+                                    <div class="card">
+                                        <h4><?php echo $senderName; ?> has accepted your proposal!</h4>
+
+                                    </div>
+
+                                <?php } else if ($row['type'] == 'd') { ?>
+                                    <div class="card">
+                                        <h4><?php echo $senderName; ?> denied your proposal.</h4>
+
+                                    </div>
+
+                                <?php } else if ($row['type'] == 'r') { ?>
+                                    <div onclick="readNotification(<?php echo $row['id']; ?>); location.href='../message/messages?mid=<?php echo $row['sender']; ?>';" class="card">
+                                        <h4><?php echo $senderName; ?> has submitted a proprosal to your job.</h4>
+                                    </div>
+                                <?php } else if ($row['type'] == 'p') { ?>
+                                    <div class="card">
+                                        <h4><?php echo $senderName; ?> sent their payment.</h4>
+
+                                    </div>
+                                <?php
+                                } else if ($row['type'] == 'pr') { ?>
+                                    <div class="card">
+                                        <h4>Your payment has been released.</h4>
+
+                                    </div>
+
+                                <?php
+                                } else if ($row['type'] == 'fc') { ?>
+                                    <div class="card">
+                                        <h4><?php echo $senderName; ?> has completed your job.</h4>
+
+                                    </div>
 
                             <?php
-                            } else if ($row['type'] == 'fc') { ?>
-                                <div class="card">
-                                    <h4><?php echo $senderName; ?> has completed your job.</h4>
-
-                                </div>
-
-                        <?php
-                            }
-                        }
-                    } else { ?>
+                                }
+                            } ?>
+                        </div>
+                    <?php } else { ?>
                         <div class="card card1" style="pointer-events: none;">
                             <h4>You're all caught up!</h4>
                         </div>
@@ -388,104 +390,6 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                 </div>
             </div>
         </div>
-
-        <!--
-        <div class="guide">
-        
-            <?php
-            $notiCount = mysqli_query($conn, "SELECT COUNT(*) AS notiCount FROM notifications WHERE receiver='$user_id' AND isRead=0");
-            $notiCount = mysqli_fetch_assoc($notiCount);
-            $notiCount = $notiCount['notiCount'];
-            ?>
-            <i onclick="toggleNotifications()" class="fa fa-bell" id="notifications"><?php if ($notiCount > 0) {
-                                                                                            echo $notiCount;
-                                                                                        } ?></i></a>
-            <div class="helpContainer">
-                <div class="notificationCard">
-                    <div class="card card1">
-                        <h4 onclick="location.href='../notifications'">View All Notifications</h4>
-                    </div>
-                    <?php
-                    $notifications = mysqli_query($conn, "SELECT * FROM notifications WHERE receiver='$user_id' AND isRead=0 ORDER BY id DESC");
-                    if (mysqli_num_rows($notifications) > 0) { ?>
-                        <div class="card card1">
-                            <h4 onclick="readNotification(0);/*closeAll();*/">Mark as Read</h4>
-                        </div>
-                        <?php
-                        while ($row = mysqli_fetch_assoc($notifications)) {
-                            $senderID = $row['sender'];
-                            $senderName = mysqli_query($conn, "SELECT username FROM clients WHERE id=$senderID");
-                            $senderName = mysqli_fetch_assoc($senderName);
-                            $senderName = $senderName['username'];
-                            if ($row['type'] == 'm') {
-                        ?>
-                                <div onclick="readNotification(<?php echo $row['id']; ?>); location.href='../message/messages?mid=<?php echo $row['sender']; ?>';" class="card">
-                                    <h4>You got a message from <?php echo $senderName; ?></h4>
-                                </div>
-
-                            <?php } else if ($row['type'] == 'a') { ?>
-
-                                <div class="card">
-                                    <h4><?php echo $senderName; ?> has accepted your proposal!</h4>
-
-                                </div>
-
-                            <?php } else if ($row['type'] == 'd') { ?>
-                                <div class="card">
-                                    <h4><?php echo $senderName; ?> denied your proposal.</h4>
-
-                                </div>
-
-                            <?php } else if ($row['type'] == 'r') { ?>
-                                <div onclick="readNotification(<?php echo $row['id']; ?>); location.href='../message/messages?mid=<?php echo $row['sender']; ?>';" class="card">
-                                    <h4><?php echo $senderName; ?> has submitted a proprosal to your job.</h4>
-                                </div>
-                            <?php } else if ($row['type'] == 'p') { ?>
-                                <div class="card">
-                                    <h4><?php echo $senderName; ?> sent their payment.</h4>
-
-                                </div>
-                            <?php
-                            } else if ($row['type'] == 'pr') { ?>
-                                <div class="card">
-                                    <h4>Your payment has been released.</h4>
-
-                                </div>
-
-                            <?php
-                            } else if ($row['type'] == 'fc') { ?>
-                                <div class="card">
-                                    <h4><?php echo $senderName; ?> has completed your job.</h4>
-
-                                </div>
-
-                        <?php
-                            }
-                        }
-                    } else { ?>
-                        <div class="card card1">
-                            <h4>You're all caught up!</h4>
-                        </div>
-                    <?php } ?>
-                </div>
-            </div>
-
-            <i class="fa fa-question" onclick="toggleHelp()" id="question"></i>
-            <div class="helpContainer">
-                <div class="helpCard">
-                    <div class="card card1">
-                        <h4>Help & Support</h4>
-                    </div>
-                    <div class="card card2">
-                        <h4>Guides</h4>
-                    </div>
-                    <div class="card card3">
-                        <h4>Contact Us</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-        -->
 
         <div class="divider"></div>
 
@@ -525,7 +429,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
 
 <!--nav bar script -->
 <script type="text/javascript">
-    function readNotification(id, type) {
+    function readNotification(id) {
         $.ajax({
             type: "POST",
             url: "../api/readNotification.php",
@@ -536,7 +440,10 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                 var obj = JSON.parse(data);
                 console.log(obj);
                 if (obj.Success.length > 0) {
-                    //$('#status').html(obj.Success);
+                    if (id == 0) {
+                        $(".noti").hide();
+                        $("#notifications").empty();
+                    }
                 } else if (obj.Error.length > 0) {
                     //$('#status').html(obj.Error);
                 }
@@ -547,13 +454,6 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
             }
         });
     }
-
-    // function closeAll() {
-    //     $('.notificationCard .card').each(function() {
-    //         $(this).addClass('is-hidden');
-    //         $('.notificationCard').append("<div class='card card1'><h4>You are all caught up!</h4> </div>");
-    //     });
-    // }
 
     var job = document.querySelector('.jobCard');
     var talent = document.querySelector('.talentCard');
@@ -590,20 +490,6 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
             talent.style.display = 'none';
         }
     }
-
-    /*function toggleProject() {
-        var project = document.querySelector('.projectCard');
-        if (getComputedStyle(project).display === 'none') {
-            project.style.display = 'inline-block';
-            talent.style.display = 'none';
-            job.style.display = 'none';
-            help.style.display = 'none';
-            session.style.display = 'none';
-        } else {
-            project.style.display = 'none';
-        }
-    }
-    */
 
     function toggleHelp() {
         var help = document.querySelector('.helpCard');
