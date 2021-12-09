@@ -5027,7 +5027,7 @@ section .container .login .login-container button:hover {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  padding: 1rem 0rem;
+  padding: 1rem .5rem;
   background-color: white;
   color: #32557f;
   border-radius: 5px;
@@ -5037,6 +5037,8 @@ section .container .login .login-container button:hover {
 }
 
 .talentCardContainer .talentCard .card {
+  border-radius: 5px;
+  margin: .5rem 0rem;
   cursor: pointer;
   width: 100%;
 }
