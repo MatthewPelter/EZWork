@@ -397,7 +397,7 @@ $getFreelancerID = $getFreelancerID['freelancer_id'];
 
     if ($r['status'] == -1 && ($r['user_id'] == $user_id || $r['freelancer_id'] == $getFreelancerID)) { ?>
         <!-- style as you please. just temporary -->
-        <div class="job progress">
+        <div class="job-progress-section">
             <h2>Job Progress</h2>
             <div class="job-progress-container">
                 <div class="job-progress-header">
@@ -413,6 +413,10 @@ $getFreelancerID = $getFreelancerID['freelancer_id'];
                             <span style="color: royalblue;font-weight: bolder;"><?php echo "In-Progress"; ?></span>
                         <?php } ?>
                     </p>
+                </div>
+
+                <div class="messageChat" style="width: 100%;border-top: 3px solid lightgrey; height: 70vh;padding: 2rem; background: lightgreen;">
+                    <!-- messages loaded from jquery -->
                 </div>
 
                 <?php
@@ -492,28 +496,8 @@ $getFreelancerID = $getFreelancerID['freelancer_id'];
                         </symbol>
                     </svg>
                 </div>
-                <!--
-                <div class="job-poster-info">
-                    <div class="clientInfo">
-                        <h3>About the Freelancer</h3>
-                        <div class="username">
-                            <p>Work By: </p>
-    
-                            <a href="../Profile/userprofile.php?name=<?php //echo $getFreelancerName['username']; 
-                                                                        ?>"><?php //echo $getFreelancerName['username']; 
-                                                                            ?></a>
-                        </div>
-                        <div class="img-card">
-                            <img src="<?php //echo $getFreelancerName['avatar']; 
-                                        ?>" alt="">
-                        </div>
-                    </div>
-                </div>
-                -->
 
-                <div class="messageChat" style="width: 100%;border-top: 3px solid lightgrey; height: 70vh;padding: 2rem; background: lightgreen;">
-                    <!-- messages loaded from jquery -->
-                </div>
+
             </div>
 
         </div>
