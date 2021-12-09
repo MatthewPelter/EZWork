@@ -2,7 +2,7 @@
 session_start();
 include '../components/session-checker.php';
 require_once("../classes/DB.php");
-include('./classes/Mail.php');
+include('../classes/Mail.php');
 
 $user_id = $_SESSION['user_id'];
 $sql = "SELECT * FROM clients WHERE id='$user_id'";
