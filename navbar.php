@@ -403,10 +403,16 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                         </div>
                         <div class="name">
                             <span id="name"><?php echo $_SESSION['userid']; ?></span>
-                            <span id="type">Client</span>
+                            <?php if ($avatarFetch['freelancer_id'] == NULL) { ?>
+                                <span id="type">Client</span>
+                            <?php } else { ?>
+                                <span id="type">Freelancer</span>
+                            <?php    
+                            }
+                            ?>
                         </div>
                     </div>
-                    <div class="card card2" onclick="location.href='../Settings/settings'">
+                    <div class="card card2" style="margin: 0.25rem 0rem;" onclick="location.href='../Settings/settings'">
                         <p>
                             <i class="fa fa-cog" aria-hidden="true"></i> Settings
                         </p>
