@@ -5074,23 +5074,31 @@ section .container .login .login-container button:hover {
 
 .jobCardContainer .jobCard {
   display: none;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 1rem .5rem;
+  background-color: white;
+  color: #32557f;
+  border-radius: 5px;
+  border: 3px solid white;
   -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
           box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  background: white;
-  padding: 0.5rem 1rem;
-  width: 100%;
-  border-radius: 10px;
 }
 
 .jobCardContainer .jobCard .card {
-  padding: 0.3rem 0rem;
+  border-radius: 5px;
   cursor: pointer;
   width: 100%;
 }
 
 .jobCardContainer .jobCard .card h4 {
   font-weight: lighter;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .jobCardContainer .jobCard .card:hover {
@@ -5098,16 +5106,18 @@ section .container .login .login-container button:hover {
 }
 
 .jobCardContainer .jobCard::after {
-  content: "";
+  content: '\0020';
+  display: block;
   position: absolute;
-  top: -20%;
-  left: 4%;
-  border-width: 0.8rem;
-  border-style: solid;
-  margin-left: 0.8rem;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-  border-color: white transparent transparent transparent;
+  top: -15px;
+  left: 15px;
+  z-index: 2;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  border: solid 15px transparent;
+  border-top: 0;
+  border-bottom-color: white;
 }
 
 .profileFooter {

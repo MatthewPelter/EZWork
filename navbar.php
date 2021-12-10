@@ -221,23 +221,23 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                         <h4>My Profile</h4>
                     </div>
                     -->
-                    <div class="card card2" onclick="location.href='../newPostJob/jobs'">
-                        <h4>All Jobs</h4>
-                    </div>
                     <div class="card card2" onclick="location.href='../newPostJob/myJobs'">
                         <h4>My Jobs</h4>
                     </div>
                     <?php if ($avatarFetch['freelancer_id'] == NULL) { ?>
-                        <div class="card card3" onclick="location.href='../newPostJob/clientContract.php'">
+                        <div class="card card3" onclick="location.href='../newPostJob/clientContract.php'" style="margin: 0.25rem 0rem;">
                             <h4>My Contracts</h4>
                         </div>
                     <?php } else { ?>
-                        <div class="card card3" onclick="location.href='../newPostJob/contracts.php'">
+                        <div class="card card3" onclick="location.href='../newPostJob/contracts.php'" style="margin: 0.25rem 0rem;">
                             <h4>My Contracts</h4>
                         </div>
                     <?php } ?>
                     <div class="card card4" onclick="location.href='../newPostJob/services.php'">
                         <h4>My Services</h4>
+                    </div>
+                    <div class="card card2" onclick="location.href='../newPostJob/jobs'" style="margin: 0.25rem 0rem;">
+                        <h4>All Jobs</h4>
                     </div>
                     <div class="card card4" onclick="location.href='../newPostJob/length.php'">
                         <h4>Post A Job</h4>
