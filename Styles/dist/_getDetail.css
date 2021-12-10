@@ -1337,7 +1337,7 @@
   border: 0.7px solid #054e97;
 }
 .postJob-detail-budget .detail-budget-container .detail-input-section form #rateChecked, .postJob-detail-budget .detail-budget-container .detail-input-section form #budgetChecked {
-  display: none;
+  display: block;
   width: 100%;
 }
 .postJob-detail-budget .detail-budget-container .detail-input-section form #rateChecked span, .postJob-detail-budget .detail-budget-container .detail-input-section form #budgetChecked span {

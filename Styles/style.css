@@ -4761,12 +4761,12 @@ section .container .login .login-container button:hover {
   display: none;
 }
 
-.jobsNav span, .freelancerNav span, .projectsNav span, .marketNav span {
+.jobsNav span, .freelancerNav span, .projectsNav span, .marketNav span, .servicesNav span {
   color: white;
   cursor: pointer;
 }
 
-.jobsNav span:hover, .freelancerNav span:hover, .projectsNav span:hover, .marketNav span:hover {
+.jobsNav span:hover, .freelancerNav span:hover, .projectsNav span:hover, .marketNav span:hover, .servicesNav span:hover {
   text-decoration: underline;
 }
 
@@ -4927,6 +4927,60 @@ section .container .login .login-container button:hover {
 }
 
 .helpContainer .helpCard::after {
+  content: '\0020';
+  display: block;
+  position: absolute;
+  top: -15px;
+  left: 15px;
+  z-index: 2;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  border: solid 15px transparent;
+  border-top: 0;
+  border-bottom-color: white;
+}
+
+.serviceCardContainer {
+  margin-top: 1.5rem;
+  position: absolute;
+  z-index: 1;
+}
+
+.serviceCardContainer .serviceCard {
+  display: none;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 1rem .5rem;
+  background-color: white;
+  color: #32557f;
+  border-radius: 5px;
+  border: 3px solid white;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.serviceCardContainer .serviceCard .card {
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.serviceCardContainer .serviceCard .card h4 {
+  font-weight: lighter;
+  font-size: 1rem;
+}
+
+.serviceCardContainer .serviceCard .card:hover {
+  background: lightgrey;
+}
+
+.serviceCardContainer .serviceCard::after {
   content: '\0020';
   display: block;
   position: absolute;
@@ -5643,7 +5697,7 @@ section .container .login .login-container button:hover {
   .profile-header-container .profileHeader .profileImage {
     display: none;
   }
-  .profile-header-container .profileHeader .jobsNav, .profile-header-container .profileHeader .freelancerNav, .profile-header-container .profileHeader .projectsNav, .profile-header-container .profileHeader .messagesNav, .profile-header-container .profileHeader .marketNav, .profile-header-container .profileHeader .notificationNav, .profile-header-container .profileHeader .helpNav {
+  .profile-header-container .profileHeader .jobsNav, .profile-header-container .profileHeader .freelancerNav, .profile-header-container .profileHeader .projectsNav, .profile-header-container .profileHeader .messagesNav, .profile-header-container .profileHeader .marketNav, .profile-header-container .profileHeader .notificationNav, .profile-header-container .profileHeader .helpNav, .profile-header-container .profileHeader .servicesNav {
     display: none;
   }
   .profile-header-container .profileHeader .fa-search {
@@ -10393,7 +10447,7 @@ ul {
 }
 
 .postJob-detail-budget .detail-budget-container .detail-input-section form #rateChecked, .postJob-detail-budget .detail-budget-container .detail-input-section form #budgetChecked {
-  display: none;
+  display: block;
   width: 100%;
 }
 

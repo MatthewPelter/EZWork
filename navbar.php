@@ -233,9 +233,6 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                             <h4>My Contracts</h4>
                         </div>
                     <?php } ?>
-                    <div class="card card4" onclick="location.href='../newPostJob/services.php'">
-                        <h4>My Services</h4>
-                    </div>
                     <div class="card card2" onclick="location.href='../newPostJob/jobs'" style="margin: 0.25rem 0rem;">
                         <h4>All Jobs</h4>
                     </div>
@@ -245,6 +242,25 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                 </div>
             </div>
         </div>
+        <?php if ($avatarFetch['freelancer_id'] = NULL) { ?>
+            <div class="servicesNav">
+                <span onclick="toggleServices()" id="services">Services</span>
+                <div class="serviceCardContainer">
+                    <div class="serviceCard">
+                        <div class="card card4" onclick="location.href='../newPostJob/services.php'">
+                            <h4>My Services</h4>
+                        </div>
+                        <div class="card card2" onclick="location.href='../newPostJob/jobs'" style="margin: 0.25rem 0rem;">
+                            <h4>All Services</h4>
+                        </div>
+                        <div class="card card4" onclick="location.href='../newPostJob/start.php'">
+                            <h4>Offer Service</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php }?>
+
         <div class="freelancerNav">
             <span onclick="toggleTalent()" id="talents">Freelancers</span>
             <div class="talentCardContainer">
@@ -467,6 +483,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
     var help = document.querySelector('.helpCard');
     var notification = document.querySelector('.notificationCard');
     var session = document.querySelector('.sessionCard');
+    var service = document.querySelector('.serviceCard');
 
     function toggleJob() {
         var job = document.querySelector('.jobCard');
@@ -477,8 +494,24 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
             notification.style.display = 'none';
             help.style.display = 'none';
             session.style.display = 'none';
+            service.style.display = 'none';
         } else {
             job.style.display = 'none';
+
+        }
+    }
+    function toggleServices() {
+        var service = document.querySelector('.serviceCard');
+        if (getComputedStyle(service).display === 'none') {
+            service.style.display = 'inline-block';
+            talent.style.display = 'none';
+            //project.style.display = 'none';
+            notification.style.display = 'none';
+            help.style.display = 'none';
+            session.style.display = 'none';
+            job.style.display = 'none';
+        } else {
+            service.style.display = 'none';
 
         }
     }
@@ -492,6 +525,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
             notification.style.display = 'none';
             help.style.display = 'none';
             session.style.display = 'none';
+            service.style.display = 'none';
         } else {
             talent.style.display = 'none';
         }
@@ -506,6 +540,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
             job.style.display = 'none';
             notification.style.display = 'none';
             session.style.display = 'none';
+            service.style.display = 'none';
         } else {
             help.style.display = 'none';
         }
@@ -520,6 +555,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
             //project.style.display = 'none';
             job.style.display = 'none';
             session.style.display = 'none';
+            service.style.display = 'none';
         } else {
             notification.style.display = 'none';
         }
@@ -534,6 +570,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
             notification.style.display = 'none';
             help.style.display = 'none';
             job.style.display = 'none';
+            service.style.display = 'none';
         } else {
             session.style.display = 'none';
         }

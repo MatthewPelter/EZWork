@@ -105,11 +105,11 @@ if (isset($_POST['location'])) {
 <script src="../SkillsContainer/searchProfile.js"></script>
 
 <script type="text/javascript">
-    var budgetbtn = document.getElementById('budget');
+    //var budgetbtn = document.getElementById('budget');
 
-    budgetbtn.addEventListener("click", function() {
-        document.getElementById('budgetChecked').style.display = "block";
-    });
+    //budgetbtn.addEventListener("click", function() {
+        //document.getElementById('budgetChecked').style.display = "block";
+    //});
 </script>
 
 </html>
