@@ -252,7 +252,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                     <div class="card card1" onclick="location.href='../Freelancer/AllFreelancers.php'">
                         <h4>Discover</h4>
                     </div>
-                    <div class="card card2" onclick="location.href='../Freelancer/myHires'" style="margin: .25rem 0rem;">
+                    <div class="card card2" onclick="location.href='../Freelancer/myHires'" style="margin: 0.25rem 0rem;">
                         <h4>My Hires</h4>
                     </div>
                     <?php if ($avatarFetch['freelancer_id'] == NULL) { ?>
@@ -260,7 +260,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                             <h4>Become Freelancer</h4>
                         </div>
                     <?php } else { ?>
-                        <div class="card card4"" style=" pointer-events: none;">
+                        <div class="card card4"" style="pointer-events: none; display: none;">
                             <h4 style="opacity: 0;">Become Freelancer</h4>
                         </div>
                     <?php } ?>
@@ -309,7 +309,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                     <?php
                     $notifications = mysqli_query($conn, "SELECT * FROM notifications WHERE receiver='$user_id' AND isRead=0 ORDER BY id DESC");
                     if (mysqli_num_rows($notifications) > 0) { ?>
-                        <div class="card card1">
+                        <div class="card card1" style="margin: 0.25rem 0rem;">
                             <h4 onclick="readNotification(0);">Mark as Read</h4>
                         </div>
                         <div class="noti">
@@ -321,42 +321,42 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                                 $senderName = $senderName['username'];
                                 if ($row['type'] == 'm') {
                             ?>
-                                    <div onclick="readNotification(<?php echo $row['id']; ?>); location.href='../message/messages?mid=<?php echo $row['sender']; ?>';" class="card">
+                                    <div style="margin-bottom: 0.25rem;" onclick="readNotification(<?php echo $row['id']; ?>); location.href='../message/messages?mid=<?php echo $row['sender']; ?>';" class="card">
                                         <h4>You got a message from <?php echo $senderName; ?></h4>
                                     </div>
 
                                 <?php } else if ($row['type'] == 'a') { ?>
 
-                                    <div class="card">
+                                    <div class="card" style="margin-bottom: 0.25rem;">
                                         <h4><?php echo $senderName; ?> has accepted your proposal!</h4>
 
                                     </div>
 
                                 <?php } else if ($row['type'] == 'd') { ?>
-                                    <div class="card">
+                                    <div class="card" style="margin-bottom: 0.25rem;">
                                         <h4><?php echo $senderName; ?> denied your proposal.</h4>
 
                                     </div>
 
                                 <?php } else if ($row['type'] == 'r') { ?>
-                                    <div onclick="readNotification(<?php echo $row['id']; ?>); location.href='../message/messages?mid=<?php echo $row['sender']; ?>';" class="card">
+                                    <div style="margin-bottom: 0.25rem;" onclick="readNotification(<?php echo $row['id']; ?>); location.href='../message/messages?mid=<?php echo $row['sender']; ?>';" class="card">
                                         <h4><?php echo $senderName; ?> has submitted a proprosal to your job.</h4>
                                     </div>
                                 <?php } else if ($row['type'] == 'p') { ?>
-                                    <div class="card">
+                                    <div style="margin-bottom: 0.25rem;" class="card">
                                         <h4><?php echo $senderName; ?> sent their payment.</h4>
 
                                     </div>
                                 <?php
                                 } else if ($row['type'] == 'pr') { ?>
-                                    <div class="card">
+                                    <div style="margin-bottom: 0.25rem;" class="card">
                                         <h4>Your payment has been released.</h4>
 
                                     </div>
 
                                 <?php
                                 } else if ($row['type'] == 'fc') { ?>
-                                    <div class="card">
+                                    <div style="margin-bottom: 0.25rem;" class="card">
                                         <h4><?php echo $senderName; ?> has completed your job.</h4>
 
                                     </div>
@@ -381,7 +381,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                     <div class="card card1" onclick="location.href='../Support/help'">
                         <h4>Help & Support</h4>
                     </div>
-                    <div class="card card2" onclick="location.href='../Support/guides'">
+                    <div class="card card2" onclick="location.href='../Support/guides'" style="margin: 0.25rem 0rem;">
                         <h4>Why EZWork</h4>
                     </div>
                     <div class="card card3" onclick="location.href='../Support/contact'">
