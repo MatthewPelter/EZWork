@@ -250,7 +250,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                         <div class="card card4" onclick="location.href='../newPostJob/services.php'">
                             <h4>My Services</h4>
                         </div>
-                        <div class="card card2" onclick="location.href='../newPostJob/jobs'" style="margin: 0.25rem 0rem;">
+                        <div class="card card2" onclick="location.href='../newPostJob/allServices'" style="margin: 0.25rem 0rem;">
                             <h4>All Services</h4>
                         </div>
                         <div class="card card4" onclick="location.href='../newPostJob/start.php'">
