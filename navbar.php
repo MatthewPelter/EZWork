@@ -259,7 +259,11 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                     </div>
                 </div>
             </div>
-        <?php }?>
+        <?php } else{ ?>
+            <div class="servicesNav">
+                <span onclick="location.href='../newPostJob/allServices'">Services</span>
+            </div>
+        <? } ?>    
 
         <div class="freelancerNav">
             <span onclick="toggleTalent()" id="talents">Freelancers</span>

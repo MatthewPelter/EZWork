@@ -438,7 +438,7 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <!-- This script is used to function the filer section-->
 <script type="text/javascript">
-    var url = "https://ez-work.herokuapp.com/newPostJob/jobs?";
+    var url = "https://ez-work.herokuapp.com/newPostJob/allServices?";
 
     // this function is such a mess but it works 
     function sort(by) {
@@ -447,7 +447,7 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
         if (text.indexOf("sort") > 0) {
             var remove = text.substring(text.indexOf("sort") - 1, text.length);
             text = text.replace(remove, "");
-            if (text == "https://ez-work.herokuapp.com/newPostJob/jobs") {
+            if (text == "https://ez-work.herokuapp.com/newPostJob/allServices") {
                 newpage = text + "?sort=" + by;
             } else {
                 newpage = text + "&sort=" + by;
@@ -455,7 +455,7 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
 
             window.location = newpage;
         } else {
-            if (window.location.href == "https://ez-work.herokuapp.com/newPostJob/jobs") {
+            if (window.location.href == "https://ez-work.herokuapp.com/newPostJob//allServices") {
                 newpage = window.location.href + "?sort=" + by;
             } else {
                 newpage = text + "&sort=" + by;
@@ -467,11 +467,11 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
 
     $('#submitFilter').click(function() {
 
-        window.location = "https://ez-work.herokuapp.com/newPostJob/jobs?" + $('#filterForm').serialize();
+        window.location = "https://ez-work.herokuapp.com/newPostJob//allServices?" + $('#filterForm').serialize();
     });
 
     function resetOptions() {
-        window.location = "https://ez-work.herokuapp.com/newPostJob/jobs";
+        window.location = "https://ez-work.herokuapp.com/newPostJob//allServices";
     }
 
     const sortArrow = document.getElementById('sortArrow');
