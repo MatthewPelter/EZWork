@@ -242,7 +242,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                 </div>
             </div>
         </div>
-        <?php if ($avatarFetch['freelancer_id'] = NULL) { ?>
+        <?php if ($avatarFetch['freelancer_id'] != NULL) { ?>
             <div class="servicesNav">
                 <span onclick="toggleServices()" id="services">Services</span>
                 <div class="serviceCardContainer">
