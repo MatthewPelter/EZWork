@@ -292,10 +292,11 @@ if (mysqli_num_rows($result) > 0) {
                                 <h3>Location</h3>
                                 <p><?php echo $freelancer_array['country']; ?></p>
                             </div>
-
+                            <!--                                                        
                             <div class="ratings">
                                 <h4>Reviews</h4>
                             </div>
+                            -->
                             <div class="userJobsFreelancer">
 
                                 <?php
