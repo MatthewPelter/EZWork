@@ -455,7 +455,7 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
 
             window.location = newpage;
         } else {
-            if (window.location.href == "https://ez-work.herokuapp.com/newPostJob//allServices") {
+            if (window.location.href == "https://ez-work.herokuapp.com/newPostJob/allServices") {
                 newpage = window.location.href + "?sort=" + by;
             } else {
                 newpage = text + "&sort=" + by;
@@ -467,11 +467,11 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
 
     $('#submitFilter').click(function() {
 
-        window.location = "https://ez-work.herokuapp.com/newPostJob//allServices?" + $('#filterForm').serialize();
+        window.location = "https://ez-work.herokuapp.com/newPostJob/allServices?" + $('#filterForm').serialize();
     });
 
     function resetOptions() {
-        window.location = "https://ez-work.herokuapp.com/newPostJob//allServices";
+        window.location = "https://ez-work.herokuapp.com/newPostJob/allServices";
     }
 
     const sortArrow = document.getElementById('sortArrow');
