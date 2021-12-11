@@ -167,7 +167,9 @@ if (mysqli_num_rows($result) > 0) {
                         }
                         ?>
                     </div>
-                    <?php if ($row['freelancer_id'] != NULL) { ?>
+                    <?php 
+                        $arraySize = count($freelancer_array);
+                        if ($arraySize > 0) { ?>
                         <div class="profile-info">
                             <h4>Personal Information</h4>
                             <div class="profile-expertise">
