@@ -44,7 +44,7 @@
   width: 50%;
 }
 .contact .contactContainer .email .image img {
-  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 .contact .contactContainer .phone {
