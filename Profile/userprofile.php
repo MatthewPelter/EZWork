@@ -377,7 +377,7 @@ if (mysqli_num_rows($result) > 0) {
                             </div>
                         </div>
                     <?php
-                    } else if ($row['freelancer_id'] == NULL) {
+                    } else {
                     ?>
                         <div class="profile-info">
                             <div class="client-info">
