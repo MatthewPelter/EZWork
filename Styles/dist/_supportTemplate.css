@@ -1,108 +1,30 @@
-.myJobs {
+.contact {
   margin-top: 0;
   width: 100%;
   background: whitesmoke;
-  padding: 2.5rem 10rem;
+  padding: 2.5rem 8rem;
 }
-.myJobs .myJobs-header {
+.contact .contactHeader {
+  margin: 1.5rem 0rem;
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
-.myJobs .myJobs-header ul {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.myJobs .myJobs-header ul li {
-  margin: 0rem 0.2rem;
-  font-size: 0.9rem;
-  color: #797979;
-}
-.myJobs .myJobs-header ul li a {
-  text-decoration: none;
+.contact .contactHeader h2 {
+  font-size: 2rem;
+  text-decoration: underline;
   color: #054e97;
 }
-.myJobs .myJobs-header ul li a:hover {
-  text-decoration: underline;
-}
-.myJobs .myJobs-header button {
-  cursor: pointer;
-  border-radius: 15px;
-  border: none;
-  background: #054e97;
-  font-size: 1rem;
-  color: white;
-  font-weight: bolder;
-  padding: 0.6rem 1.5rem;
-  margin-left: 0.25rem;
-}
-.myJobs .myJobs-header button:hover {
-  transition: all 0.5s ease;
-  background: #0a345e;
-}
-.myJobs .myJobs-container {
-  margin-top: 1.5rem;
+.contact .contactContainer {
   width: 100%;
   display: flex;
   flex-direction: column;
-  border-radius: 10px;
-  border: 0.8px solid lightgrey;
+}
+.contact .contactContainer .email, .contact .contactContainer .phone, .contact .contactContainer .supportTeam, .contact .contactContainer .location {
+  width: 100%;
+  border-radius: 15px;
+  border: 2px solid lightgrey;
   background-color: white;
-}
-.myJobs .myJobs-container .myJobs-container-header {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1.5rem 2rem;
-  border-bottom: 0.8px solid lightgrey;
-}
-.myJobs .myJobs-container .myJobs-container-header .searchBar {
-  width: 60%;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-.myJobs .myJobs-container .myJobs-container-header .searchBar h3 {
-  font-size: 1.5rem;
-  color: #0a345e;
-}
-.myJobs .myJobs-container .postedJob {
-  padding: 1.5rem;
-  width: 100%;
-  border-top: 0.7px solid lightgrey;
-}
-.myJobs .myJobs-container .postedJob .jobTitle {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-.myJobs .myJobs-container .postedJob .jobTitle h4 a {
-  font-size: 1.2rem;
-  color: #0a345e;
-}
-.myJobs .myJobs-container .postedJob .jobTitle h4 a:hover {
-  text-decoration: underline;
-}
-.myJobs .myJobs-container .postedJob p {
-  color: #797979;
-  font-size: 1rem;
-}
-.myJobs .myJobs-container .postedJob #status,
-.myJobs .myJobs-container .postedJob #date,
-.myJobs .myJobs-container .postedJob #postedBy {
-  color: #054e97;
-}
-.myJobs .myJobs-container .spacer {
-  width: 100%;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-.myJobs .myJobs-container .spacer h3 {
-  opacity: 0;
 }
