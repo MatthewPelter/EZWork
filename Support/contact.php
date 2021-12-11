@@ -37,8 +37,8 @@ require_once('../classes/DB.php');
                     <img src="../Image/email.jpg" alt="emailUs">
                 </div>
                 <div class="emailCard">
-                    <h3>Contact via Email</h3>
-                    <a href="mailto:leobarrientos02@gmail.com?subject=EZWork%20Contact&cc=email@thisotherperson.com">Email Us</a>
+                    <h3>Contact EZWork via Email</h3>
+                    <a href="mailto:leobarrientos02@gmail.com?subject=EZWork%20Contact">Email Us</a>
                 </div>
             </div>
             <div class="phone">
