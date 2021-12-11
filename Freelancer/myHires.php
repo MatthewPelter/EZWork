@@ -6,12 +6,7 @@ require_once("../classes/DB.php");
 $username = $_SESSION['userid'];
 $userID = $_SESSION['user_id'];
 
-
-    $checkFreelancer = mysqli_query($conn, "SELECT freelancer_id FROM clients WHERE id = '$userID'");
-    $checkFreelancer = mysqli_fetch_assoc($checkFreelancer);
-    $checkFreelancer = $checkFreelancer['freelancer_id'];
-
-    $sql = "SELECT jobs.*, clients.username AS uname FROM jobs INNER JOIN clients ON jobs.user_id = clients.id WHERE jobs.freelancer_id='$checkFreelancer' ORDER BY jobs.id DESC";
+    $sql = "SELECT * FROM jobs WHERE user_id='$userID' AND freelancer_id <> ''";
     $jobResult = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
 ?>
 <!DOCTYPE html>
@@ -69,7 +64,7 @@ $userID = $_SESSION['user_id'];
         ?>
                     <?php
                         $freeID = $r['freelancer_id'];
-                        $getFreelancersSQL = "SELECT * from clients WHERE freelancer_id='$freeID'";
+                        $getFreelancersSQL = "SELECT * from clients WHERE freelancer_id='$freeID' LIMIT 1";
                         $freelancers = mysqli_query($conn, $getFreelancersSQL) or die(mysqli_errno($conn));
                     
                         if (mysqli_num_rows($freelancers) > 0) {
