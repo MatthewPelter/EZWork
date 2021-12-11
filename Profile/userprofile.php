@@ -20,11 +20,11 @@ if (mysqli_num_rows($result) > 0) {
     $row = mysqli_fetch_assoc($result);
 
     $client_id = $row['id'];
-    //if ($row['freelancer_id'] != NULL) {
+    if ($row['freelancer_id'] !== NULL) {
 
-    //    $freeResult = mysqli_query($conn, "SELECT * FROM freelancers WHERE user_id = '$client_id'");
-    //    $freelancer_array = mysqli_fetch_assoc($freeResult);
-    //}
+        $freeResult = mysqli_query($conn, "SELECT * FROM freelancers WHERE user_id = '$client_id'");
+        $freelancer_array = mysqli_fetch_assoc($freeResult);
+    }
 }
 ?>
 
