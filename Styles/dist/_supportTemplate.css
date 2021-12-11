@@ -36,7 +36,7 @@
   justify-content: space-between;
 }
 .contact .contactContainer .location .locationCard {
-  padding: 3rem;
+  width: 50%;
   background: #32557f;
   display: flex;
   flex-direction: column;

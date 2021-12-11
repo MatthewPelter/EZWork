@@ -27733,7 +27733,7 @@ footer p {
 }
 
 .contact .contactContainer .location .locationCard {
-  padding: 3rem;
+  width: 50%;
   background: #32557f;
   display: -webkit-box;
   display: -ms-flexbox;
