@@ -64,16 +64,7 @@ $userID = $_SESSION['user_id'];
         ?>
                     <?php
                         $freeID = $r['freelancer_id'];
-                        $temp = array($freeID);
-                        $temp = array_unique($temp);
-                        $tempSize = count($temp);
-                        $x = 0;
-                        while( $x < $tempSize){
-
-                        $getFreelancersSQL = "SELECT * from clients WHERE freelancer_id='$temp[$x]'";
-
-                        $x++;
-                    }
+                        $getFreelancersSQL = "SELECT * from clients WHERE freelancer_id='$freeID'";
                         $freelancers = mysqli_query($conn, $getFreelancersSQL) or die(mysqli_errno($conn));
                     
                         if (mysqli_num_rows($freelancers) > 0) {
