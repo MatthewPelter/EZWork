@@ -27721,7 +27721,6 @@ footer p {
 }
 
 .contact .contactContainer .email {
-  padding: 0rem 1rem;
   width: 100%;
   height: 60vh;
   background: #0a345e;
@@ -27739,12 +27738,15 @@ footer p {
 
 .contact .contactContainer .email .image {
   width: 50%;
+  height: 100%;
 }
 
 .contact .contactContainer .email .image img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 
 .contact .contactContainer .phone {
