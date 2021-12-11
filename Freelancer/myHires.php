@@ -68,7 +68,7 @@ $userID = $_SESSION['user_id'];
                         $temp = array_unique($temp);
                         $tempSize = Count(temp);
                         $x = 0;
-                        while( $x <= $tempSize){
+                        while( $x < $tempSize){
                             echo $temp[$x];
                             $x++;
                         }
