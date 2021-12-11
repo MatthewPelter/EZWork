@@ -7,7 +7,8 @@ $username = $_SESSION['userid'];
 $userID = $_SESSION['user_id'];
 
 
-    $sql = "SELECT * FROM jobs WHERE user_id='$userID'AND freelancer_id <> ''";
+
+    $sql = "SELECT jobs.*, clients.username AS uname FROM jobs INNER JOIN clients ON jobs.user_id = clients.id WHERE jobs.freelancer_id='$checkFreelancer' ORDER BY jobs.id DESC";
     $jobResult = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
 ?>
 <!DOCTYPE html>
