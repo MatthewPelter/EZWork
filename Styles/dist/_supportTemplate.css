@@ -40,10 +40,10 @@
   flex-direction: row;
   align-items: center;
 }
-.contact .contactContainer .email image {
+.contact .contactContainer .email .image {
   width: 50%;
 }
-.contact .contactContainer .email image img {
+.contact .contactContainer .email .image img {
   width: 100%;
   object-fit: contain;
 }
