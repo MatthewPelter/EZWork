@@ -63,6 +63,11 @@
   font-size: 2.5rem;
   color: white;
 }
+.contact .contactContainer .email .emailCard span {
+  font-size: 1.3rem;
+  color: white;
+  margin: 0.25rem 0rem;
+}
 .contact .contactContainer .email .emailCard a {
   text-decoration: none;
   font-size: 2rem;

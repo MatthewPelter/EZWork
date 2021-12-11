@@ -27775,6 +27775,12 @@ footer p {
   color: white;
 }
 
+.contact .contactContainer .email .emailCard span {
+  font-size: 1.3rem;
+  color: white;
+  margin: .25rem 0rem;
+}
+
 .contact .contactContainer .email .emailCard a {
   text-decoration: none;
   font-size: 2rem;
