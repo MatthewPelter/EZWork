@@ -50,8 +50,10 @@ $darktext: rgb(121, 121, 121);
             
             .image{
                 width: 50%;
+
                 img{
-                    width: 100%;
+                    width: 2rem;
+                    height: 1rem;
                     object-fit: contain;
 
                 }

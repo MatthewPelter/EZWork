@@ -27741,7 +27741,8 @@ footer p {
 }
 
 .contact .contactContainer .email .image img {
-  width: 100%;
+  width: 2rem;
+  height: 1rem;
   -o-object-fit: contain;
      object-fit: contain;
 }
