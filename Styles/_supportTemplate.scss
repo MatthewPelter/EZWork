@@ -1,0 +1,124 @@
+$color1: #0a345e;
+$lightColor: #054e97;
+$darktext: rgb(121, 121, 121);
+.myJobs{
+    margin-top: 0;
+    width: 100%;
+    background: whitesmoke;
+    padding: 2.5rem 10rem;
+   
+    .myJobs-header{
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: space-between;
+     
+     ul{
+         display: flex;
+         flex-direction: row;
+         align-items: center;
+         
+         li{
+             margin: 0rem .2rem;
+             font-size: .9rem;
+             color: $darktext;
+             a{
+                 text-decoration: none;
+                 color: $lightColor;
+                 &:hover{
+                     text-decoration: underline;
+                 }
+             }
+         }
+     }
+
+     button{
+        cursor: pointer;
+        border-radius: 15px;
+        border: none;
+        background: $lightColor;
+        font-size: 1rem;
+        color: white;
+        font-weight: bolder;
+        padding: 0.6rem 1.5rem;
+        margin-left: 0.25rem;
+        &:hover {
+          transition: all 0.5s ease;
+          background: $color1;
+        }
+     }
+    }
+    .myJobs-container{
+        margin-top: 1.5rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        border: .8px solid lightgrey;
+        background-color: white;
+
+        .myJobs-container-header{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.5rem 2rem;
+            border-bottom: .8px solid lightgrey;
+
+
+            .searchBar{
+                width: 60%;
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: flex-start;
+              h3{
+                font-size: 1.5rem;
+                color: $color1;
+              }
+            }
+        }
+
+        .postedJob {
+
+            padding: 1.5rem;
+            width: 100%;
+            border-top: .7px solid lightgrey;
+            .jobTitle {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: space-between;
+              h4 {
+                a{
+                  font-size: 1.2rem;
+                  color: $color1;
+                  &:hover{
+                    text-decoration: underline;
+                  }
+                }
+      
+              }
+            }
+            p {
+              color: $darktext;
+              font-size: 1rem;
+            }
+            #status,
+            #date,
+            #postedBy {
+              color: $lightColor;
+            }
+          }
+
+        .spacer{
+            width: 100%;
+            h3{
+                opacity: 0;
+            }
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+      }
+}
