@@ -33,7 +33,9 @@ require_once('../classes/DB.php');
 
         <div class="contactContainer">
             <div class="email">
-
+                <div class="image">
+                    <img src="../Image/email.jpg" alt="emailUs">
+                </div>
             </div>
             <div class="phone">
                 <h3>Call EZWork Support Team</h3>
