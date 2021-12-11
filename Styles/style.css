@@ -27730,12 +27730,12 @@ footer p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  background: #32557f;
 }
 
 .contact .contactContainer .location .locationCard {
   width: 50%;
   height: 100%;
-  background: #32557f;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -27746,12 +27746,16 @@ footer p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .contact .contactContainer .location .locationCard p {
   width: 100%;
   font-size: 1.2rem;
   color: white;
+  text-align: start;
 }
 
 .contact .contactContainer .location .locationCard span {

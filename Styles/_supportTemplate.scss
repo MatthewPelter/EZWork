@@ -40,18 +40,19 @@ $darktext: rgb(121, 121, 121);
             align-items: center;
             padding: 0;
             justify-content: space-between;
-
+            background: #32557f;
             .locationCard{
                 width: 50%;
                 height: 100%;
-                background: #32557f;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                justify-content: center;
                 p{
                     width: 100%;
                     font-size: 1.2rem;
                     color: white;
+                    text-align: start;
                 }
                 span{
                     font-size: 1.2rem;
