@@ -85,15 +85,9 @@ $jobResult = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
                                             <span style="color: royalblue;font-weight: bolder;"><?php echo "In-Progress"; ?></span>                                              
                                         <?php } ?>                                    
                                     </p>
-                                    <?php
-                                        $freelancer = $r['freelancer_id'];
-                                        $freelancerName = mysqli_query($conn, "SELECT username FROM clients WHERE id='$freelancer'");
-                                        $freelancerName = mysqli_fetch_assoc($freelancerName);
-                                        $freelancerName = $freelancerName['username'];
-                                    ?>
                                     <p>Job Posted on <span id="date"><?php echo $r['datePosted']; ?></span> by <span id="postedBy">Me</span>
                                     </p>
-                                    <p>Freelancer: <span><?php echo $freelancerName; ?></span></p>
+                                    <p>Freelancer: <span><?php echo $r['freelancer_id'] ?></span></p>
 
                                 </div>
                             </div>
