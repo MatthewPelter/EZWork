@@ -93,7 +93,7 @@ $jobResult = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
                                                 $freelancer = $r['freelancer_id'];  
                                                 $freelancerNameSQL = mysqli_query($conn, "SELECT username FROM clients WHERE id='$freelancer'");
                                                 $freelancerNameRUN = mysqli_fetch_assoc($freelancerNameSQL);
-                                                echo $freelancerName['username'];
+                                                echo $freelancerNameRUN['username'];
                                             ?>
                                         </span>
                                     </p>
