@@ -51,6 +51,7 @@ $darktext: rgb(121, 121, 121);
                 justify-content: center;
                 p{
                     width: 100%;
+                    margin-bottom: .5rem;
                     font-size: 1.2rem;
                     color: white;
                     text-align: start;
@@ -63,6 +64,8 @@ $darktext: rgb(121, 121, 121);
                 }
             }
             iframe{
+                border-top-right-radius: 15px;
+                border-bottom-right-radius: 15px;
                 width: 50%;
             }
         }
