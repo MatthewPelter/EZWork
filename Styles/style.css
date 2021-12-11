@@ -27714,4 +27714,50 @@ footer p {
   border: 2px solid lightgrey;
   background-color: white;
 }
+
+.contact .contactContainer .location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contact .contactContainer .location .locationCard {
+  padding: 3rem;
+  background: #32557f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact .contactContainer .location .locationCard p {
+  width: 100%;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.contact .contactContainer .location .locationCard span {
+  font-size: 1.2rem;
+  color: white;
+  width: 100%;
+  text-align: start;
+}
+
+.contact .contactContainer .location iframe {
+  width: 50%;
+}
 /*# sourceMappingURL=style.css.map */

@@ -43,6 +43,12 @@ require_once('../classes/DB.php');
             </div>
 
             <div class="location">
+                <div class="locationCard">
+                    <p>The EZWork Headquarters is located in, </p>
+                    <span style="font-weight: bolder;">Farmingdale State College</span>
+                    <span>2350 NY-110, Farmingdale, NY 11735</span>
+                    <span>United States</span>
+                </div>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.4138865725595!2d-73.42888748540187!3d40.7529207430495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e82afe99b445e9%3A0x6c53280083cbf6be!2sFarmingdale%20State%20College!5e0!3m2!1sen!2sus!4v1639216553053!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
