@@ -34,7 +34,7 @@
 }
 .contact .contactContainer .email {
   width: 100%;
-  height: 60vh;
+  height: fit-content;
   background: #0a345e;
   display: flex;
   flex-direction: row;
@@ -49,6 +49,26 @@
   object-fit: cover;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
+}
+.contact .contactContainer .email .emailCard {
+  width: 50%;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contact .contactContainer .email .emailCard h3 {
+  font-size: 2.5rem;
+  color: white;
+}
+.contact .contactContainer .email .emailCard a {
+  text-decoration: none;
+  font-size: 2rem;
+  color: white;
+}
+.contact .contactContainer .email .emailCard a:hover {
+  color: lightgreen;
 }
 .contact .contactContainer .phone {
   margin: 2.5rem 0rem;
