@@ -66,7 +66,7 @@ $userID = $_SESSION['user_id'];
                         $freeID = $r['freelancer_id'];
                         $temp = array($freeID);
                         $temp = array_unique($temp);
-                        $tempSize = Count(temp);
+                        $tempSize = count($temp);
                         $x = 0;
                         while( $x < $tempSize){
                             echo $temp[$x];
