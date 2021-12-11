@@ -91,12 +91,10 @@ $jobResult = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
                                         $freelancerName = mysqli_fetch_assoc($freelancerName);
                                         $freelancerName = $freelancerName['username'];
                                     ?>
-                                    <p>Job Posted on <span id="date"><?php echo $r['datePosted']; ?></span> by <span id="postedBy">                                            <?php if ($unameFetched['username'] != $_SESSION['userid']) {
-                                        echo "<a href='../Profile/userprofile.php?name=" . $freelancerName . "'>" . $freelancerName . "</a>";
-                                    } else {
-                                        echo $unameFetched['username'];
-                                    }  ?></span>
+                                    <p>Job Posted on <span id="date"><?php echo $r['datePosted']; ?></span> by <span id="postedBy">Me</span>
                                     </p>
+                                    <p>Freelancer: <span><?php echo $freelancerName; ?></span></p>
+
                                 </div>
                             </div>
                         <?php
