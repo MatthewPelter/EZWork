@@ -41,6 +41,7 @@ $darktext: rgb(121, 121, 121);
             }
         }
         .email{
+            padding: 0rem 1rem;
             width: 100%;
             height: 60vh;
             background: $color1;
@@ -52,7 +53,7 @@ $darktext: rgb(121, 121, 121);
                 width: 50%;
                 img{
                     width: 100%;
-                    object-fit: contain;
+                    object-fit: cover;
 
                 }
             }
