@@ -64,11 +64,18 @@ $userID = $_SESSION['user_id'];
         ?>
                     <?php
                         $freeID = $r['freelancer_id'];
-                        $getFreelancersSQL = "SELECT * from clients WHERE freelancer_id='$freeID' LIMIT 1";
+                        $temp = array($freeID);
+                        $arrSize = count($temp);
+                        for($x = 0; $x <= $arrSize; $x++ ){
+                            echo $temp[$x];
+                        }
+                        $getFreelancersSQL = "SELECT * from clients WHERE freelancer_id='$freeID'";
                         $freelancers = mysqli_query($conn, $getFreelancersSQL) or die(mysqli_errno($conn));
                     
                         if (mysqli_num_rows($freelancers) > 0) {
+
                             while ($f = mysqli_fetch_assoc($freelancers)) {
+                                
                     ?>
                     <a href="../Profile/userprofile.php?name=<?php echo $f['username']; ?>">
                         <div class="freelancerCard">
