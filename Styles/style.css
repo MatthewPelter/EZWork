@@ -27734,6 +27734,7 @@ footer p {
 
 .contact .contactContainer .location .locationCard {
   width: 50%;
+  height: 100%;
   background: #32557f;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -27742,6 +27743,9 @@ footer p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .contact .contactContainer .location .locationCard p {
