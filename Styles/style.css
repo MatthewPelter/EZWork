@@ -27736,6 +27736,7 @@ footer p {
 .contact .contactContainer .location .locationCard {
   width: 50%;
   height: 100%;
+  padding: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
