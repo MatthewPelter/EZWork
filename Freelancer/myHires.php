@@ -6,7 +6,8 @@ require_once("../classes/DB.php");
 $username = $_SESSION['userid'];
 $userID = $_SESSION['user_id'];
 
-    $sql = "SELECT * FROM jobs WHERE user_id='$userID' AND freelancer_id <> ''";
+
+    $sql = "SELECT * FROM jobs WHERE user_id='$userID' AND freelancer_id <> '' LIMIT 1";
     $jobResult = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
 ?>
 <!DOCTYPE html>
@@ -64,7 +65,7 @@ $userID = $_SESSION['user_id'];
         ?>
                     <?php
                         $freeID = $r['freelancer_id'];
-                        $getFreelancersSQL = "SELECT * from clients WHERE freelancer_id='$freeID' LIMIT 1";
+                        $getFreelancersSQL = "SELECT * from clients WHERE freelancer_id='$freeID'";
                         $freelancers = mysqli_query($conn, $getFreelancersSQL) or die(mysqli_errno($conn));
                     
                         if (mysqli_num_rows($freelancers) > 0) {
