@@ -64,7 +64,7 @@ $userID = $_SESSION['user_id'];
         ?>
                     <?php
                         $freeID = $r['freelancer_id'];
-                        $getFreelancersSQL = "SELECT * from clients WHERE freelancer_id='$freeID'";
+                        $getFreelancersSQL = "SELECT * from clients WHERE freelancer_id='$freeID' LIMIT 1";
                         $freelancers = mysqli_query($conn, $getFreelancersSQL) or die(mysqli_errno($conn));
                     
                         if (mysqli_num_rows($freelancers) > 0) {
