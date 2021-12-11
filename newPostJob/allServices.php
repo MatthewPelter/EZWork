@@ -354,7 +354,7 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                                         </span>
                                     </div>
                                     <div class="postedBy">
-                                        <p>Posted By:</p>
+                                        <p>Freelancer:</p>
                                         <img style="width: 16px; border-radius:50%; margin-right: 0.5rem;" src="<?php echo $unameFetched['avatar']; ?>" alt="Avatar">
                                         <span>
                                             <?php if ($unameFetched['username'] != $_SESSION['userid']) {

@@ -85,8 +85,14 @@ $jobResult = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
                                             <span style="color: royalblue;font-weight: bolder;"><?php echo "In-Progress"; ?></span>                                              
                                         <?php } ?>                                    
                                     </p>
+                                    <?php
+                                        $freelancer = $r['freelancer_id'];
+                                        $freelancerName = mysqli_query($conn, "SELECT username FROM clients WHERE id='$freelancer'");
+                                        $freelancerName = mysqli_fetch_assoc($freelancerName);
+                                        $freelancerName = $freelancerName['username'];
+                                    ?>
                                     <p>Job Posted on <span id="date"><?php echo $r['datePosted']; ?></span> by <span id="postedBy">                                            <?php if ($unameFetched['username'] != $_SESSION['userid']) {
-                                        echo "<a href='../Profile/userprofile.php?name=" . $unameFetched['username'] . "'>" . $unameFetched['username'] . "</a>";
+                                        echo "<a href='../Profile/userprofile.php?name=" . $freelancerName . "'>" . $freelancerName . "</a>";
                                     } else {
                                         echo $unameFetched['username'];
                                     }  ?></span>
