@@ -87,7 +87,16 @@ $jobResult = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
                                     </p>
                                     <p>Job Posted on <span id="date"><?php echo $r['datePosted']; ?></span> by <span id="postedBy">Me</span>
                                     </p>
-                                    <p>Freelancer: <span><?php echo $r['freelancer_id'] ?></span></p>
+                                    <p>Freelancer: 
+                                        <span>
+                                            <?php 
+                                                $freelancer = $r['freelancer_id'];  
+                                                $freelancerNameSQL = mysqli_query($conn, "SELECT username FROM clients WHERE id='$freelancer'");
+                                                $freelancerNameRUN = mysqli_fetch_assoc($freelancerNameSQL);
+                                                echo $freelancerName['username'];
+                                            ?>
+                                        </span>
+                                    </p>
 
                                 </div>
                             </div>
