@@ -7,7 +7,7 @@ $username = $_SESSION['userid'];
 $userID = $_SESSION['user_id'];
 
 
-    $sql = "SELECT * FROM jobs WHERE user_id='$userID'AND freelancer_id <> '' UNION SELECT * FROM clients WHERE freelancer_id IS NOT NULL";
+    $sql = "SELECT * FROM jobs WHERE user_id='$userID'AND freelancer_id <> ''";
     $jobResult = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
 ?>
 <!DOCTYPE html>
