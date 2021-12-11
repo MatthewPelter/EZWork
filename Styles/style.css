@@ -27692,7 +27692,7 @@ footer p {
 }
 
 .contact .contactHeader h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   text-decoration: underline;
   color: #054e97;
 }
@@ -27713,6 +27713,42 @@ footer p {
   border-radius: 15px;
   border: 2px solid lightgrey;
   background-color: white;
+}
+
+.contact .contactContainer .email h3, .contact .contactContainer .phone h3, .contact .contactContainer .supportTeam h3, .contact .contactContainer .location h3 {
+  font-size: 3rem;
+  color: black;
+}
+
+.contact .contactContainer .phone {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #6fbd8f;
+  color: #2b2b2b;
+}
+
+.contact .contactContainer .phone h3 {
+  font-size: 2.5rem;
+}
+
+.contact .contactContainer .phone p {
+  font-size: 1.5rem;
+}
+
+.contact .contactContainer .phone span {
+  font-size: 1rem;
 }
 
 .contact .contactContainer .location {

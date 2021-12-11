@@ -36,15 +36,16 @@ require_once('../classes/DB.php');
 
             </div>
             <div class="phone">
-
-            </div>
-            <div class="supportTeam">
-
+                <h3>Call EZWork Support Team</h3>
+                <p>(516)-960-8086</p>
+                <span>Tuesday & Thursday</span>
+                <span>9:25am to 10:45am</span>
+                <span>Business Hours</span>
             </div>
 
             <div class="location">
                 <div class="locationCard">
-                    <p>The EZWork Headquarters is located in, </p>
+                    <p>The EZWork Headquarters is located in,</p>
                     <span style="font-weight: bolder;">Farmingdale State College</span>
                     <span>2350 NY-110, Farmingdale, NY 11735</span>
                     <span>United States</span>

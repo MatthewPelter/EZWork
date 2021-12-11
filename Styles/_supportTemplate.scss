@@ -16,7 +16,7 @@ $darktext: rgb(121, 121, 121);
         justify-content: flex-start;
 
         h2{
-            font-size: 2rem;
+            font-size: 3rem;
             text-decoration: underline;
             color: $lightColor;
         }
@@ -33,6 +33,31 @@ $darktext: rgb(121, 121, 121);
             border-radius: 15px;
             border: 2px solid lightgrey;
             background-color: white;
+
+            h3{
+                font-size: 3rem;
+                color: black;
+
+            }
+        }
+        .phone{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgb(111, 189, 143);
+            color: rgb(43, 43, 43);
+
+            h3{
+                font-size: 2.5rem;
+            }
+            p{
+                font-size: 1.5rem;
+            }
+            span{
+                font-size: 1rem;
+            }
         }
         .location{
             display: flex;
