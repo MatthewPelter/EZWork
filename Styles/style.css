@@ -28083,6 +28083,7 @@ footer p {
 .whyEZWork .whyEZWorkContainer .userWrapper {
   width: 100%;
   display: block;
+  background-color: #4773a880;
 }
 
 .whyEZWork .whyEZWorkContainer .userWrapper .userCard {
@@ -28195,7 +28196,7 @@ footer p {
 .whyEZWork .whyEZWorkContainer .userWrapper .userCard .user2 .usernameBar2 span {
   font-size: 1.25rem;
   color: #797979;
-  margin-left: .5rem;
+  margin-right: .5rem;
 }
 
 .whyEZWork .whyEZWorkContainer .userWrapper .userCard .user2 .story2 {

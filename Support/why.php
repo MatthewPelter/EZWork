@@ -95,11 +95,42 @@ require_once('../classes/DB.php');
 
                     <div class="user2">
                         <div class="usernameBar2">
-                            <span>Leonel B.</span>
-                            <img src="../Users/john.jpg" alt="user">
+                            <span>Dustin P.</span>
+                            <img src="../Users/dustin.jpg" alt="user">
                         </div>
                         <div class="story2">
-                            <p>&#8220;As someone that had always used craigslist to find freelancers, this site 100 percent an upgrade. I no longer get applications from people who aren’t equipped with the right skill, which makes the hiring process even easier, and has overall better the company.&#8221;.</p>
+                            <p>&#8220;As someone that had always used craigslist to find freelancers, this site 100 percent an upgrade. I no longer get applications from people who aren’t equipped with the right skill, which makes the hiring process even easier, and has overall better the company&#8221;.</p>
+                        </div>
+                        
+                    </div>
+
+                    <div class="user">
+                        <div class="usernameBar">
+                            <img src="../Users/john.jpg" alt="user">
+                            <span>Jon Jones</span>
+                        </div>
+                        <div class="story">
+                            <p>&#8220; landed my dream job using this site, and I can still do mini side jobs to keep pushing my skills to the limit&#8221;.</p>
+                        </div>             
+                    </div>
+
+                    <div class="user2">
+                        <div class="usernameBar2">
+                            <span>Connor McGregor</span>
+                            <img src="../Users/connor.jpg" alt="user">
+                        </div>
+                        <div class="story2">
+                            <p>&#8220;Being able to sift through the different type of freelancers based on their skill base is extremely useful and has helped me find exactly what I needed&#8221;.</p>
+                        </div>
+                    </div>
+
+                    <div class="user">
+                        <div class="usernameBar">
+                            <img src="../Users/user.svg" alt="user">
+                            <span>John Cena</span>
+                        </div>
+                        <div class="story">
+                            <p>&#8220;I had a horrible time using going through other companies trying to get my window fixed before it got cold this winter, but when I found EZWorks it only took 3 days to find then get my window replaced&#8221;.</p>
                         </div>
                         
                     </div>

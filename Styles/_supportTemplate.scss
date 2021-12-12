@@ -284,6 +284,7 @@ $darktext: rgb(121, 121, 121);
       .userWrapper{
         width: 100%;
         display: block;
+        background-color: #4773a880;
         .userCard{
           width: 100%;
           padding: 2rem;
@@ -364,7 +365,7 @@ $darktext: rgb(121, 121, 121);
               span{
                 font-size: 1.25rem;
                 color: $darktext;
-                margin-left: .5rem;
+                margin-right: .5rem;
               }
             }
             .story2{
