@@ -246,7 +246,7 @@ if (isset($_GET['mid'])) {
 
                         <form class="form" action="javascript:void(0);" method="post" name="message">
                             <div class="chat-message clearfix">
-                                <textarea name="msg" id="message-to-send" placeholder="Type your message" rows="3" required></textarea>
+                                <input type="text" name="msg" id="message-to-send" placeholder="Type your message" required></input>
                                 <div id="result"></div>
                                 <input id="sendmessage" type="submit" value="Send" name="submit" class="button"></input>
 
