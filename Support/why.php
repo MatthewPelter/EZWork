@@ -140,7 +140,7 @@ require_once('../classes/DB.php');
             
             <div class="reviews">
                 <h3>Reviews</h3>
-                <i class="fas fa-chevron-up"></i>
+                <i id="reviewUp" class="fas fa-chevron-up"></i>
             </div>
             <div class="reviewsWrapper">
                 <div class="reviewsCard">
@@ -221,7 +221,22 @@ require_once('../classes/DB.php');
             userArrowUp.style.transform = "rotate(360deg)";
         }
 
-    });     
+    });  
+    
+    const reviewArrowUp = document.getElementById('reviewUp');
+
+    reviewArrowUp.addEventListener('click',()=>{
+        var reviewWrapper = document.querySelector('.reviewWrapper');
+
+        if(getComputedStyle(reviewWrapper).display === 'block'){
+            reviewWrapper.style.display = 'none';
+            reviewArrowUp.style.transform = "rotate(180deg)";
+        }else{
+            reviewWrapper.style.display = 'block';
+            reviewArrowUp.style.transform = "rotate(360deg)";
+        }
+
+    });      
 
 </script>
 
