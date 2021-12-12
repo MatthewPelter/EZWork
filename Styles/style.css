@@ -28131,7 +28131,7 @@ footer p {
   margin-left: .5rem;
 }
 
-.whyEZWork .whyEZWorkContainer .userWrapper .userCard p {
+.whyEZWork .whyEZWorkContainer .userWrapper .userCard .story p {
   position: relative;
   max-width: 30em;
   background-color: #fff;
@@ -28142,7 +28142,7 @@ footer p {
           box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.3), 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.2);
 }
 
-.whyEZWork .whyEZWorkContainer .userWrapper .userCard p::before {
+.whyEZWork .whyEZWorkContainer .userWrapper .userCard .story p::before {
   content: '';
   position: absolute;
   width: 0;
