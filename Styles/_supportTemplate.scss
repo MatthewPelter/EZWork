@@ -294,7 +294,7 @@ $darktext: rgb(121, 121, 121);
             width: 100%;
             margin: .5rem 0rem;
             .usernameBar{
-              margin-bottom: .5rem;
+              margin-bottom: .25rem;
               width: 100%;
               display: flex;
               flex-direction: row;
@@ -313,36 +313,91 @@ $darktext: rgb(121, 121, 121);
                 margin-left: .5rem;
               }
             }
-          }
-          .story{
-            p {
-              // layout
-              position: relative;
-              width: 60%;
+            .story{
+              p {
+                // layout
+                position: relative;
+                width: 60%;
+                
+                // looks
+                background-color: #fff;
+                padding: 1.125em 1.5em;
+                font-size: 1rem;
+                border-radius: 1rem;
+                box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);
+              }      
+              p::before {
+                // layout
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 0;
+                bottom: 100%;
+                left: 1.5em; // offset should move with padding of parent
+                border: .75rem solid transparent;
+                border-top: none;
               
-              // looks
-              background-color: #fff;
-              padding: 1.125em 1.5em;
-              font-size: 1rem;
-              border-radius: 1rem;
-              box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);
-            }      
-            p::before {
-              // layout
-              content: '';
-              position: absolute;
-              width: 0;
-              height: 0;
-              bottom: 100%;
-              left: 1.5em; // offset should move with padding of parent
-              border: .75rem solid transparent;
-              border-top: none;
-            
-              // looks
-              border-bottom-color: #fff;
-              filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, .1));
+                // looks
+                border-bottom-color: #fff;
+                filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, .1));
+              }
             }
           }
+
+          .user2{
+            width: 100%;
+            margin: .5rem 0rem;
+            .usernameBar2{
+              margin-bottom: .25rem;
+              width: 100%;
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: flex-end;
+              img{
+                border-radius: 50%;
+                height: 3rem;
+                width: 3rem;
+                object-fit: cover;
+                border: 2px solid lightgreen;
+              }
+              span{
+                font-size: 1.25rem;
+                color: $darktext;
+                margin-left: .5rem;
+              }
+            }
+            .story2{
+              p {
+                // layout
+                position: relative;
+                width: 60%;
+                
+                // looks
+                background-color: #fff;
+                padding: 1.125em 1.5em;
+                font-size: 1rem;
+                border-radius: 1rem;
+                box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);
+              }      
+              p::before {
+                // layout
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 0;
+                bottom: 100%;
+                right: 1.5em; // offset should move with padding of parent
+                border: .75rem solid transparent;
+                border-top: none;
+              
+                // looks
+                border-bottom-color: #fff;
+                filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, .1));
+              }
+            }
+          }
+
         }
       }
 

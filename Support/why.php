@@ -92,6 +92,17 @@ require_once('../classes/DB.php');
                         </div>
                         
                     </div>
+
+                    <div class="user2">
+                        <div class="usernameBar2">
+                            <span>Leonel B.</span>
+                            <img src="../Users/john.jpg" alt="user">
+                        </div>
+                        <div class="story2">
+                            <p>&#8220;As someone that had always used craigslist to find freelancers, this site 100 percent an upgrade. I no longer get applications from people who aren’t equipped with the right skill, which makes the hiring process even easier, and has overall better the company.&#8221;.</p>
+                        </div>
+                        
+                    </div>
                 </div>
             </div>
 

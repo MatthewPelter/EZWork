@@ -276,7 +276,7 @@
   margin: 0.5rem 0rem;
 }
 .whyEZWork .whyEZWorkContainer .userWrapper .userCard .user .usernameBar {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -295,7 +295,7 @@
   color: #797979;
   margin-left: 0.5rem;
 }
-.whyEZWork .whyEZWorkContainer .userWrapper .userCard .story p {
+.whyEZWork .whyEZWorkContainer .userWrapper .userCard .user .story p {
   position: relative;
   width: 60%;
   background-color: #fff;
@@ -304,13 +304,58 @@
   border-radius: 1rem;
   box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.3), 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.2);
 }
-.whyEZWork .whyEZWorkContainer .userWrapper .userCard .story p::before {
+.whyEZWork .whyEZWorkContainer .userWrapper .userCard .user .story p::before {
   content: "";
   position: absolute;
   width: 0;
   height: 0;
   bottom: 100%;
   left: 1.5em;
+  border: 0.75rem solid transparent;
+  border-top: none;
+  border-bottom-color: #fff;
+  filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, 0.1));
+}
+.whyEZWork .whyEZWorkContainer .userWrapper .userCard .user2 {
+  width: 100%;
+  margin: 0.5rem 0rem;
+}
+.whyEZWork .whyEZWorkContainer .userWrapper .userCard .user2 .usernameBar2 {
+  margin-bottom: 0.25rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+.whyEZWork .whyEZWorkContainer .userWrapper .userCard .user2 .usernameBar2 img {
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+  object-fit: cover;
+  border: 2px solid lightgreen;
+}
+.whyEZWork .whyEZWorkContainer .userWrapper .userCard .user2 .usernameBar2 span {
+  font-size: 1.25rem;
+  color: #797979;
+  margin-left: 0.5rem;
+}
+.whyEZWork .whyEZWorkContainer .userWrapper .userCard .user2 .story2 p {
+  position: relative;
+  width: 60%;
+  background-color: #fff;
+  padding: 1.125em 1.5em;
+  font-size: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.3), 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.2);
+}
+.whyEZWork .whyEZWorkContainer .userWrapper .userCard .user2 .story2 p::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 100%;
+  right: 1.5em;
   border: 0.75rem solid transparent;
   border-top: none;
   border-bottom-color: #fff;
