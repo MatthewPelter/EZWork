@@ -127,6 +127,57 @@ if (mysqli_num_rows($result) > 0) {
                             $rate = round($rate, 1);
                             if ($rate != 0) { ?>
                                 <p><?php echo $rate; ?>/5 Rating</p>
+                                <?php if( $rate == 1){ ?>
+                                    <div class="stars" style="color: #32557f;display: flex;flex-direction: row;align-items: center;">
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                <?php
+                                }else if ($rate == 2){
+                                ?>
+                                    <div class="stars" style="color: #32557f;display: flex;flex-direction: row;align-items: center;">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                <?php            
+                                }else if( $rate == 3){
+                                ?>
+                                    <div class="stars" style="color: #32557f;display: flex;flex-direction: row;align-items: center;">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                <?php                                        
+                                }else if( $rate == 4){
+                                ?>
+                                    <div class="stars" style="color: #32557f;display: flex;flex-direction: row;align-items: center;">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                <?php                                    
+                                }else{
+                                ?>
+                                    <div class="stars" style="color: #32557f;display: flex;flex-direction: row;align-items: center;">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>                                    
+                                <?php
+                                } 
+                                ?>
                             <?php } else { ?>
                                 <p>Not Rated Yet</p>
                             <?php } ?>
