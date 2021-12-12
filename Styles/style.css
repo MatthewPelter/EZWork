@@ -27886,4 +27886,73 @@ footer p {
   border-bottom-right-radius: 15px;
   width: 50%;
 }
+
+.whyEZWork {
+  margin-top: 0;
+  width: 100%;
+  background: whitesmoke;
+  padding: 2.5rem 10rem;
+}
+
+.whyEZWork .whyEZWorkHeader {
+  margin: 1.5rem 0rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.whyEZWork .whyEZWorkHeader h2 {
+  font-size: 3.5rem;
+  text-decoration: underline;
+  color: #054e97;
+}
+
+.whyEZWork .whyEZWorkContainer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.whyEZWork .whyEZWorkContainer .mission {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.whyEZWork .whyEZWorkContainer .mission h3 {
+  font-size: 2rem;
+  color: #054e97;
+}
+
+.whyEZWork .whyEZWorkContainer .mission i {
+  cursor: pointer;
+  font-size: 3rem;
+  color: #0a345e;
+}
 /*# sourceMappingURL=style.css.map */

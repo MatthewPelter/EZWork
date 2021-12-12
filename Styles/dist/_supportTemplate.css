@@ -136,3 +136,43 @@
   border-bottom-right-radius: 15px;
   width: 50%;
 }
+
+.whyEZWork {
+  margin-top: 0;
+  width: 100%;
+  background: whitesmoke;
+  padding: 2.5rem 10rem;
+}
+.whyEZWork .whyEZWorkHeader {
+  margin: 1.5rem 0rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.whyEZWork .whyEZWorkHeader h2 {
+  font-size: 3.5rem;
+  text-decoration: underline;
+  color: #054e97;
+}
+.whyEZWork .whyEZWorkContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.whyEZWork .whyEZWorkContainer .mission {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.whyEZWork .whyEZWorkContainer .mission h3 {
+  font-size: 2rem;
+  color: #054e97;
+}
+.whyEZWork .whyEZWorkContainer .mission i {
+  cursor: pointer;
+  font-size: 3rem;
+  color: #0a345e;
+}

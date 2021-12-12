@@ -159,7 +159,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
             <a href="../Support/help">
                 <li>Help & Support\</li>
             </a>
-            <a href="../Support/guides">
+            <a href="../Support/whyEZWork">
                 <li>Why EZWork</li>
             </a>
             <a href="../Support/contact">
