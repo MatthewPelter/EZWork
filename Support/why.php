@@ -88,7 +88,7 @@ require_once('../classes/DB.php');
 
             
             <div class="reviews">
-                <h3>EZWork Developers</h3>
+                <h3>Reviews</h3>
                 <i class="fas fa-chevron-up"></i>
             </div>
             <div class="reviewsWrapper">
