@@ -28029,7 +28029,8 @@ footer p {
 }
 
 .whyEZWork .whyEZWorkContainer .communityWrapper .communityCard img {
-  width: 75%;
+  border-radius: 10px;
+  width: 40%;
   -o-object-fit: cover;
      object-fit: cover;
 }

@@ -229,7 +229,8 @@
   align-items: center;
 }
 .whyEZWork .whyEZWorkContainer .communityWrapper .communityCard img {
-  width: 75%;
+  border-radius: 10px;
+  width: 40%;
   object-fit: cover;
 }
 .whyEZWork .whyEZWorkContainer .communityWrapper .communityCard p {

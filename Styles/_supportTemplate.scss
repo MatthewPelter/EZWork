@@ -244,7 +244,8 @@ $darktext: rgb(121, 121, 121);
           align-items: center;
 
           img{
-            width: 75%;
+            border-radius: 10px;
+            width: 40%;
             object-fit: cover;
           }
           p{
