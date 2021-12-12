@@ -27929,7 +27929,7 @@ footer p {
           flex-direction: column;
 }
 
-.whyEZWork .whyEZWorkContainer .mission {
+.whyEZWork .whyEZWorkContainer .mission, .whyEZWork .whyEZWorkContainer .whatIsEZWork, .whyEZWork .whyEZWorkContainer .community, .whyEZWork .whyEZWorkContainer .developers {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -27945,14 +27945,14 @@ footer p {
           justify-content: space-between;
 }
 
-.whyEZWork .whyEZWorkContainer .mission h3 {
+.whyEZWork .whyEZWorkContainer .mission h3, .whyEZWork .whyEZWorkContainer .whatIsEZWork h3, .whyEZWork .whyEZWorkContainer .community h3, .whyEZWork .whyEZWorkContainer .developers h3 {
   font-size: 2rem;
   color: #054e97;
 }
 
-.whyEZWork .whyEZWorkContainer .mission i {
+.whyEZWork .whyEZWorkContainer .mission i, .whyEZWork .whyEZWorkContainer .whatIsEZWork i, .whyEZWork .whyEZWorkContainer .community i, .whyEZWork .whyEZWorkContainer .developers i {
   cursor: pointer;
-  font-size: 3rem;
+  font-size: 1rem;
   color: #0a345e;
 }
 /*# sourceMappingURL=style.css.map */
