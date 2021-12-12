@@ -401,7 +401,7 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
                     <div class="card card1" onclick="location.href='../Support/help'">
                         <h4>Help & Support</h4>
                     </div>
-                    <div class="card card2" onclick="location.href='../Support/whyEZWork'" style="margin: 0.25rem 0rem;">
+                    <div class="card card2" onclick="location.href='../Support/whyEZWork.php'" style="margin: 0.25rem 0rem;">
                         <h4>Why EZWork</h4>
                     </div>
                     <div class="card card3" onclick="location.href='../Support/contact'">
