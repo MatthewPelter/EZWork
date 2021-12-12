@@ -283,9 +283,9 @@
 }
 .whyEZWork .whyEZWorkContainer .userWrapper .userCard .user .usernameBar img {
   border-radius: 50%;
-  height: 7rem;
-  width: 7rem;
-  object-fit: contain;
+  height: 3rem;
+  width: 3rem;
+  object-fit: cover;
   border: 2px solid #32557f;
 }
 .whyEZWork .whyEZWorkContainer .userWrapper .userCard .user .usernameBar span {
@@ -295,10 +295,10 @@
 }
 .whyEZWork .whyEZWorkContainer .userWrapper .userCard .story p {
   position: relative;
-  max-width: 30em;
+  width: 60%;
   background-color: #fff;
   padding: 1.125em 1.5em;
-  font-size: 1.1rem;
+  font-size: 1rem;
   border-radius: 1rem;
   box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.3), 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.2);
 }
