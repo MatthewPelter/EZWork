@@ -51,20 +51,17 @@ if (isset($postBody->jobID)) {
 
 date_default_timezone_set("America/New_York");
 $date = date('Y-m-d H:i:s');
-if ($stmt = mysqli_prepare($conn, $messageSQL)) {
-    mysqli_stmt_bind_param($stmt, "ssss", $body, $sender, $getID, $jobID);
-    mysqli_stmt_execute($stmt);
 
-    if ($jobID != NULL) {
-        $sendNotification = mysqli_query($conn, "INSERT INTO notifications (type, receiver, sender, isRead, sentAt) VALUES ('r', '$getID', '$sender', 0, '$date')") or die(mysqli_errno($conn));
-    } else {
-        $sendNotification = mysqli_query($conn, "INSERT INTO notifications (type, receiver, sender, isRead, sentAt) VALUES ('m', '$getID', '$sender', 0, '$date')") or die(mysqli_errno($conn));
-    }
-    echo '{ "Success": "Message Sent!" }';
-    mysqli_stmt_close($stmt);
+$stmt = mysqli_prepare($conn, $messageSQL);
+mysqli_stmt_bind_param($stmt, "ssss", $body, $sender, $getID, $jobID);
+mysqli_stmt_execute($stmt);
+
+if ($jobID != NULL) {
+    $sendNotification = mysqli_query($conn, "INSERT INTO notifications (type, receiver, sender, isRead, sentAt) VALUES ('r', '$getID', '$sender', 0, '$date')") or die(mysqli_errno($conn));
 } else {
-    echo '{ "Error": "Could not prepare query: $sql." }';
-    mysqli_stmt_close($stmt);
+    $sendNotification = mysqli_query($conn, "INSERT INTO notifications (type, receiver, sender, isRead, sentAt) VALUES ('m', '$getID', '$sender', 0, '$date')") or die(mysqli_errno($conn));
 }
+echo '{ "Success": "Message Sent!" }';
+mysqli_stmt_close($stmt);
 
 mysqli_close($conn);
