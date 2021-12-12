@@ -77,12 +77,18 @@ require_once('../classes/DB.php');
             </div>
             
             <div class="userStories">
-                <h3>User Stories</h3>
+                <h3>Success Stories</h3>
                 <i class="fas fa-chevron-up"></i>
             </div>
             <div class="userWrapper">
                 <div class="userCard">
-
+                    <div class="user">
+                        <div class="usernameBar">
+                            <img src="../Users/leo.JPG" alt="user">
+                            <p>Leonel B.</p>
+                        </div>
+                        <p>I’ve been using this website as a freelancer since it was first released and it has helped me so much. I loved how easy it was to set up a profile and get my resume out there to thousands of potential jobs. I found my first job out of college within weeks of using the site. I am truly forever grateful.</p>
+                    </div>
                 </div>
             </div>
 
@@ -96,18 +102,6 @@ require_once('../classes/DB.php');
 
                 </div>
             </div>
-
-            <div class="developers">
-                <h3>EZWork Developers</h3>
-                <i class="fas fa-chevron-up"></i>
-            </div>
-            <div class="developerWrapper">
-                <div class="developersCard">
-
-                </div>
-            </div>
-
-
         </div>
     </div>
     

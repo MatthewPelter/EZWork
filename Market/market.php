@@ -152,16 +152,14 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                         <div class="FilterExperience">
                             <h3>Service Type</h3>
                             <div class="experienceCard">
-
                                 <div class="offering">
-                                    <input type="radio" name="typeOfJob" id="entry" value="offer">
-                                    <label for="entry">Offering a Service</label>
+                                    <input type="radio" name="typeOfJob" id="offer" value="offer">
+                                    <label for="offer">Offering a Service</label>
                                 </div>
                                 <div class="needs">
-                                    <input type="radio" name="typeOfJob" id="expert" value="require">
-                                    <label for="expert">Needs a service</label>
+                                    <input type="radio" name="typeOfJob" id="require" value="require">
+                                    <label for="require">Needs a service</label>
                                 </div>
-
                             </div>
                         </div>
                         <div class="FilterExperience">

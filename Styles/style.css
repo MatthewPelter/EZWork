@@ -28085,20 +28085,74 @@ footer p {
   display: block;
 }
 
-.whyEZWork .whyEZWorkContainer .userWrapper .whatCard {
+.whyEZWork .whyEZWorkContainer .userWrapper .userCard {
   width: 100%;
   padding: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.whyEZWork .whyEZWorkContainer .userWrapper .whatCard p {
-  line-height: 1.8;
-  font-size: 1.1rem;
+.whyEZWork .whyEZWorkContainer .userWrapper .userCard .user {
+  width: 100%;
+  margin: .5rem 0rem;
+}
+
+.whyEZWork .whyEZWorkContainer .userWrapper .userCard .user .usernameBar {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.whyEZWork .whyEZWorkContainer .userWrapper .userCard .user .usernameBar img {
+  border-radius: 50%;
+  height: 7rem;
+  width: 7rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border: 2px solid #32557f;
+}
+
+.whyEZWork .whyEZWorkContainer .userWrapper .userCard .user .usernameBar p {
+  font-size: 1.5rem;
   color: #797979;
-  margin: 1rem 0rem;
+  margin-left: .5rem;
+}
+
+.whyEZWork .whyEZWorkContainer .userWrapper .userCard p {
+  position: relative;
+  max-width: 30em;
+  background-color: #fff;
+  padding: 1.125em 1.5em;
+  font-size: 1.25em;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.3), 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.3), 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.2);
+}
+
+.whyEZWork .whyEZWorkContainer .userWrapper .userCard p::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 100%;
+  left: 1.5em;
+  border: .75rem solid transparent;
+  border-top: none;
+  border-bottom-color: #fff;
+  -webkit-filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, 0.1));
+          filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, 0.1));
 }
 /*# sourceMappingURL=style.css.map */

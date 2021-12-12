@@ -119,7 +119,7 @@ if (mysqli_num_rows($result) > 0) {
                     <div class="profile-job-info">
                         <h4>EZWork Information</h4>
                         <!-- if freelancer -->
-                        <div class="rating">
+                        <div class="rating" style="color: rgb(121, 121, 121);">
                             <?php
                             $rate = mysqli_query($conn, "SELECT AVG(rating) as average FROM ratings WHERE ratee='$client_id'");
                             $rate = mysqli_fetch_assoc($rate);
