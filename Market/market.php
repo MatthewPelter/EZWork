@@ -149,9 +149,9 @@ $jobsQuery = mysqli_query($conn, $jobsSQL);
                 </div>
                 <div class="filterCard">
                     <form id="filterForm" action="javascript:void(0);">
-                        <div class="FilterExperience">
+                        <div class="FilterService">
                             <h3>Service Type</h3>
-                            <div class="experienceCard">
+                            <div class="filterCard">
                                 <div class="offering">
                                     <input type="radio" name="typeOfJob" id="offer" value="offer">
                                     <label for="offer">Offering a Service</label>

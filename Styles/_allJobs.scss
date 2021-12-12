@@ -86,7 +86,7 @@ $darktext: rgb(121, 121, 121);
         .sortMenu{
             grid-area:  1 / 1 / 2 / 2;
             width: 100%;
-            height: 75vh;
+            height: 90vh;
             overflow: hidden;
             overflow-y: scroll;
             display: flex;
@@ -188,7 +188,7 @@ $darktext: rgb(121, 121, 121);
             .filterCard{
                 display: none;
                 width: 100%;
-                .FilterProjectType,.FilterProjectSize,.FilterLocation,.FilterSkill,.FilterBudget,.FilterExperience{
+                .FilterProjectType,.FilterProjectSize,.FilterService,.FilterLocation,.FilterSkill,.FilterBudget,.FilterExperience{
                     padding: 1rem 0rem;
                     border: .7px solid lightgrey;
                     border-left: none;
@@ -197,6 +197,23 @@ $darktext: rgb(121, 121, 121);
                     h3{
                         font-size: 1.2rem;
                         color: $color1;
+                    }
+                    .filterCard{
+                        padding: .5rem 0rem;
+                        .offering,.needs{
+                            padding: .5rem 0rem;
+
+                            label{
+                                margin-left: .5rem;
+                                cursor: pointer;
+                                font-size: 1rem;
+                                color: rgb(46, 46, 46);
+
+                                &:hover{
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
                     }
 
                     .experienceCard{

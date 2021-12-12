@@ -142,7 +142,7 @@ require_once('../classes/DB.php');
                 <h3>Reviews</h3>
                 <i id="reviewUp" class="fas fa-chevron-up"></i>
             </div>
-            <div class="reviewsWrapper">
+            <div class="reviewWrapper">
                 <div class="reviewsCard">
 
                 </div>
