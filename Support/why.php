@@ -50,7 +50,7 @@ require_once('../classes/DB.php');
 
             <div class="whatIsEZWork">
                 <h3>What is EZWork?</h3>
-                <i id="whatUp" class="fas fa-chevron-down"></i>
+                <i id="whatUp" class="fas fa-chevron-up"></i>
             </div>
             <div class="whatWrapper">
                 <div class="whatCard">
