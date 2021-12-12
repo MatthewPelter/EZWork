@@ -2,7 +2,7 @@
   margin-top: 0;
   width: 100%;
   background: whitesmoke;
-  padding: 2.5rem 8rem;
+  padding: 2.5rem 10rem;
 }
 .contact .contactHeader {
   margin: 1.5rem 0rem;
@@ -22,13 +22,17 @@
   display: flex;
   flex-direction: column;
 }
-.contact .contactContainer .email, .contact .contactContainer .phone, .contact .contactContainer .location {
+.contact .contactContainer .email,
+.contact .contactContainer .phone,
+.contact .contactContainer .location {
   width: 100%;
   border-radius: 15px;
   border: 2px solid lightgrey;
   background-color: white;
 }
-.contact .contactContainer .email h3, .contact .contactContainer .phone h3, .contact .contactContainer .location h3 {
+.contact .contactContainer .email h3,
+.contact .contactContainer .phone h3,
+.contact .contactContainer .location h3 {
   font-size: 3rem;
   color: black;
 }

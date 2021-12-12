@@ -27670,7 +27670,7 @@ footer p {
   margin-top: 0;
   width: 100%;
   background: whitesmoke;
-  padding: 2.5rem 8rem;
+  padding: 2.5rem 10rem;
 }
 
 .contact .contactHeader {
@@ -27708,14 +27708,18 @@ footer p {
           flex-direction: column;
 }
 
-.contact .contactContainer .email, .contact .contactContainer .phone, .contact .contactContainer .location {
+.contact .contactContainer .email,
+.contact .contactContainer .phone,
+.contact .contactContainer .location {
   width: 100%;
   border-radius: 15px;
   border: 2px solid lightgrey;
   background-color: white;
 }
 
-.contact .contactContainer .email h3, .contact .contactContainer .phone h3, .contact .contactContainer .location h3 {
+.contact .contactContainer .email h3,
+.contact .contactContainer .phone h3,
+.contact .contactContainer .location h3 {
   font-size: 3rem;
   color: black;
 }
@@ -27778,7 +27782,7 @@ footer p {
 .contact .contactContainer .email .emailCard span {
   font-size: 1.3rem;
   color: white;
-  margin: .25rem 0rem;
+  margin: 0.25rem 0rem;
 }
 
 .contact .contactContainer .email .emailCard a {
@@ -27864,7 +27868,7 @@ footer p {
 
 .contact .contactContainer .location .locationCard p {
   width: 100%;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   font-size: 1.2rem;
   color: white;
   text-align: start;
