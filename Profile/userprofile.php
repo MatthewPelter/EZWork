@@ -127,7 +127,7 @@ if (mysqli_num_rows($result) > 0) {
                             $rate = round($rate, 1);
                             if ($rate != 0) { ?>
                                 <p><?php echo $rate; ?>/5 Rating</p>
-                                <?php if( $rate = 1){ ?>
+                                <?php if( $rate > 0 || $rate < 2){ ?>
                                     <div class="stars" style="color: #32557f;display: flex;flex-direction: row;align-items: center;">
                                         <i class="fas fa-star"></i>
                                         <i class="far fa-star"></i>
@@ -136,7 +136,7 @@ if (mysqli_num_rows($result) > 0) {
                                         <i class="far fa-star"></i>
                                     </div>
                                 <?php
-                                }else if ($rate = 2){
+                                }else if ($rate < 3 && $rate > 1){
                                 ?>
                                     <div class="stars" style="color: #32557f;display: flex;flex-direction: row;align-items: center;">
                                         <i class="fas fa-star"></i>
@@ -146,7 +146,7 @@ if (mysqli_num_rows($result) > 0) {
                                         <i class="far fa-star"></i>
                                     </div>
                                 <?php            
-                                }else if( $rate = 3){
+                                }else if( $rate < 4 && $rate > 2){
                                 ?>
                                     <div class="stars" style="color: #32557f;display: flex;flex-direction: row;align-items: center;">
                                         <i class="fas fa-star"></i>
@@ -156,7 +156,7 @@ if (mysqli_num_rows($result) > 0) {
                                         <i class="far fa-star"></i>
                                     </div>
                                 <?php                                        
-                                }else if( $rate = 4){
+                                }else if($rate < 5 && $rate > 3){
                                 ?>
                                     <div class="stars" style="color: #32557f;display: flex;flex-direction: row;align-items: center;">
                                         <i class="fas fa-star"></i>
@@ -166,7 +166,7 @@ if (mysqli_num_rows($result) > 0) {
                                         <i class="fas fa-star"></i>
                                     </div>
                                 <?php                                    
-                                }else if($rate = 5){
+                                }else if($rate < 6 && $rate > 4){
                                 ?>
                                     <div class="stars" style="color: #32557f;display: flex;flex-direction: row;align-items: center;">
                                         <i class="fas fa-star"></i>
