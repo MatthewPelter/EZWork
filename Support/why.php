@@ -88,7 +88,7 @@ require_once('../classes/DB.php');
                             <span>Leonel B.</span>
                         </div>
                         <div class="story">
-                            <p>I’ve been using this website as a freelancer since it was first released and it has helped me so much. I loved how easy it was to set up a profile and get my resume out there to thousands of potential jobs. I found my first job out of college within weeks of using the site. I am truly forever grateful.</p>
+                            <p>&#8220;I’ve been using this website as a freelancer since it was first released and it has helped me so much. I loved how easy it was to set up a profile and get my resume out there to thousands of potential jobs. I found my first job out of college within weeks of using the site. I am truly forever grateful&#8221;.</p>
                         </div>
                         
                     </div>
