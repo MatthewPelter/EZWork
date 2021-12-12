@@ -62,14 +62,18 @@ require_once('../classes/DB.php');
 
             <div class="community">
                 <h3>EZWork Community</h3>
-                <i class="fas fa-chevron-down"></i>
+                <i class="fas fa-chevron-up"></i>
             </div>
-            <div class="communityCard">
 
+            <div class="communityWrapper">
+                <div class="communityCard">
+                    <img src="../Image/community-guidelines.png" alt="community">
+                </div>
             </div>
+
             <div class="developers">
                 <h3>EZWork Developers</h3>
-                <i class="fas fa-chevron-down"></i>
+                <i class="fas fa-chevron-up"></i>
             </div>
             <div class="developersCard">
 

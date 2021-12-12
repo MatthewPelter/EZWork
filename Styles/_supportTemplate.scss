@@ -233,5 +233,28 @@ $darktext: rgb(121, 121, 121);
         }
       }
 
+      .communityWrapper{
+        width: 100%;
+        display: block;
+        .communityCard{
+          width: 100%;
+          padding: 2rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          img{
+            width: 75%;
+            object-fit: cover;
+          }
+          p{
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: $darktext;
+            margin: 1rem 0rem;
+          }
+        }
+      }
+
     }
   }

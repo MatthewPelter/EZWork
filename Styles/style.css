@@ -28008,4 +28008,36 @@ footer p {
   color: #797979;
   margin: 1rem 0rem;
 }
+
+.whyEZWork .whyEZWorkContainer .communityWrapper {
+  width: 100%;
+  display: block;
+}
+
+.whyEZWork .whyEZWorkContainer .communityWrapper .communityCard {
+  width: 100%;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.whyEZWork .whyEZWorkContainer .communityWrapper .communityCard img {
+  width: 75%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.whyEZWork .whyEZWorkContainer .communityWrapper .communityCard p {
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: #797979;
+  margin: 1rem 0rem;
+}
 /*# sourceMappingURL=style.css.map */
