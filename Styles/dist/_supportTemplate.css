@@ -264,8 +264,8 @@
 .whyEZWork .whyEZWorkContainer .userWrapper {
   width: 100%;
   display: block;
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: saturate(180%) blur(10px);
+  background-color: white;
+  border-radius: 10px;
 }
 .whyEZWork .whyEZWorkContainer .userWrapper .userCard {
   width: 100%;
