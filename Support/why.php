@@ -52,7 +52,7 @@ require_once('../classes/DB.php');
             </div>
             <div class="whatCard">
                 <span>
-                    The web application EZWork was created to provide a platform for skilled workers and talented people to freelance, and easily find projects to work on as an extra way to earn income. We found that consumers go to big companies like Home Depot, Best Buy’s geek squad because there is a dedicated place/platform to find skilled workers. Big corporations like the one previously mentioned take a high cut of what a freelancer worker would get. Now we bring the option of hiring skilled freelancers, or the people that work at geek squad to the consumers/employers, not only does consumers benefit from paying less, but the worker also takes the full payout (minus our small service fee) for their hard work!
+                    &nbsp;The web application EZWork was created to provide a platform for skilled workers and talented people to freelance, and easily find projects to work on as an extra way to earn income. We found that consumers go to big companies like Home Depot, Best Buy’s geek squad because there is a dedicated place/platform to find skilled workers. Big corporations like the one previously mentioned take a high cut of what a freelancer worker would get. Now we bring the option of hiring skilled freelancers, or the people that work at geek squad to the consumers/employers, not only does consumers benefit from paying less, but the worker also takes the full payout (minus our small service fee) for their hard work!
                 </span>
             </div>
 
