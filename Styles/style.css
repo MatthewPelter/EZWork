@@ -27961,11 +27961,16 @@ footer p {
 
 .whyEZWork .whyEZWorkContainer .mission i, .whyEZWork .whyEZWorkContainer .whatIsEZWork i, .whyEZWork .whyEZWorkContainer .community i, .whyEZWork .whyEZWorkContainer .developers i {
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 2rem;
   color: #0a345e;
 }
 
-.whyEZWork .whyEZWorkContainer .missionCard, .whyEZWork .whyEZWorkContainer .whatCard {
+.whyEZWork .whyEZWorkContainer .missionWrapper {
+  width: 100%;
+  display: block;
+}
+
+.whyEZWork .whyEZWorkContainer .missionWrapper .missionCard {
   width: 100%;
   padding: 2rem;
   display: -webkit-box;
@@ -27975,7 +27980,29 @@ footer p {
       flex-wrap: wrap;
 }
 
-.whyEZWork .whyEZWorkContainer .missionCard p, .whyEZWork .whyEZWorkContainer .whatCard p {
+.whyEZWork .whyEZWorkContainer .missionWrapper .missionCard p {
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: #797979;
+  margin: 1rem 0rem;
+}
+
+.whyEZWork .whyEZWorkContainer .whatWrapper {
+  width: 100%;
+  display: block;
+}
+
+.whyEZWork .whyEZWorkContainer .whatWrapper .whatCard {
+  width: 100%;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.whyEZWork .whyEZWorkContainer .whatWrapper .whatCard p {
   line-height: 1.8;
   font-size: 1.1rem;
   color: #797979;

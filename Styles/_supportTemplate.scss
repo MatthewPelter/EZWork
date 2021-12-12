@@ -192,22 +192,44 @@ $darktext: rgb(121, 121, 121);
 
           i{
               cursor: pointer;
-              font-size: 1rem;
+              font-size: 2rem;
               color: $color1;
           }
       }
 
-      .missionCard,.whatCard{
+      .missionWrapper{
         width: 100%;
-        padding: 2rem;
-        display: flex;
-        flex-wrap: wrap;
+        display: block;
+        .missionCard{
+          width: 100%;
+          padding: 2rem;
+          display: flex;
+          flex-wrap: wrap;
+  
+          p{
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: $darktext;
+            margin: 1rem 0rem;
+          }
+        }
+      }
 
-        p{
-          line-height: 1.8;
-          font-size: 1.1rem;
-          color: $darktext;
-          margin: 1rem 0rem;
+      .whatWrapper{
+        width: 100%;
+        display: block;
+        .whatCard{
+          width: 100%;
+          padding: 2rem;
+          display: flex;
+          flex-wrap: wrap;
+  
+          p{
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: $darktext;
+            margin: 1rem 0rem;
+          }
         }
       }
 
