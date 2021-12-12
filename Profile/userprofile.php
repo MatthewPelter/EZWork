@@ -17,10 +17,10 @@ $dataFound = false;
 
 if (mysqli_num_rows($result) > 0) {
     $dataFound = true;
-    $row = mysqli_fetch_assoc($result);
+    $pull = mysqli_fetch_assoc($result);
 
-    $client_id = $row['id'];
-    if ($row['freelancer_id'] !== NULL) {
+    $client_id = $pull['id'];
+    if ($pull['freelancer_id'] !== NULL) {
 
         $freeResult = mysqli_query($conn, "SELECT * FROM freelancers WHERE user_id = '$client_id'");
         $freelancer_array = mysqli_fetch_assoc($freeResult);
@@ -85,12 +85,12 @@ if (mysqli_num_rows($result) > 0) {
 
                 <div class="profile-header">
                     <div class="user-image">
-                        <img src="<?php echo $row['avatar']; ?>" alt="profile card">
+                        <img src="<?php echo $pull['avatar']; ?>" alt="profile card">
                     </div>
                     <div class="username">
-                        <h2><?php echo $row['firstname'] . " " . $row['lastname']; ?></h2>
+                        <h2><?php echo $pull['firstname'] . " " . $pull['lastname']; ?></h2>
                         <span>
-                            <?php if ($row['freelancer_id'] != NULL) {
+                            <?php if ($pull['freelancer_id'] != NULL) {
                                 echo "Freelancer";
                             } else {
                                 echo "Client";
@@ -98,7 +98,7 @@ if (mysqli_num_rows($result) > 0) {
                         </span>
                         <div class="contact">
                             <div class="linkedIn">
-                                <?php if ($row['freelancer_id'] != NULL && $freelancer_array['linkedin'] != "") { ?>
+                                <?php if ($pull['freelancer_id'] != NULL && $freelancer_array['linkedin'] != "") { ?>
                                     <a href="<?php echo $freelancer_array['linkedin']; ?>" target="_blank">
                                         <i class="fa fa-linkedin" aria-hidden="true"></i>
                                     </a>
@@ -131,8 +131,8 @@ if (mysqli_num_rows($result) > 0) {
                                 <p>Not Rated Yet</p>
                             <?php } ?>
                         </div>
-                        <?php if ($row['freelancer_id'] != NULL) {
-                            $freeID = $row['freelancer_id'];
+                        <?php if ($pull['freelancer_id'] != NULL) {
+                            $freeID = $pull['freelancer_id'];
                             $pullJobs = mysqli_query($conn, "SELECT COUNT(*) AS completedJobs FROM jobs WHERE freelancer_id = '$freeID' AND status=1");
                             $pullJobCount = mysqli_fetch_assoc($pullJobs);
                             $pullJobCount = $pullJobCount['completedJobs'];
@@ -150,7 +150,7 @@ if (mysqli_num_rows($result) > 0) {
                         <?php } ?>
 
                         <?php
-                        $userid = $row['id'];
+                        $userid = $pull['id'];
                         $getJobs = mysqli_query($conn, "SELECT COUNT(*) AS jobCount FROM jobs WHERE user_id = '$userid'");
                         $fetchJobCount = mysqli_fetch_assoc($getJobs);
                         ?>
@@ -158,7 +158,7 @@ if (mysqli_num_rows($result) > 0) {
                             <p><?php echo $fetchJobCount['jobCount']; ?> Job(s) Posted</p>
                         </div>
                         <?php
-                        if ($row['freelancer_id'] != NULL) {
+                        if ($pull['freelancer_id'] != NULL) {
                         ?>
                             <div class="freelancerQoute">
                                 <p>**Freelancers also have the option to post jobs to the <span>EZWORK</span> marketplace.</p>
@@ -167,7 +167,7 @@ if (mysqli_num_rows($result) > 0) {
                         }
                         ?>
                     </div>
-                    <?php if ($row['freelancer_id'] != NULL) { ?>
+                    <?php if ($pull['freelancer_id'] != NULL) { ?>
                         <div class="profile-info">
                             <h4>Personal Information</h4>
                             <div class="profile-expertise">
@@ -304,7 +304,7 @@ if (mysqli_num_rows($result) > 0) {
                                 ?>
                                     <h3>All Jobs Post(s)</h3>
                                     <?php
-                                    $userID = $row['id'];
+                                    $userID = $pull['id'];
                                     $jobSQL = "SELECT * FROM jobs WHERE user_id='$userID' ORDER BY id DESC";
                                     $jobResult = mysqli_query($conn, $jobSQL) or die(mysqli_errno($conn));
 
@@ -382,7 +382,7 @@ if (mysqli_num_rows($result) > 0) {
                         <div class="profile-info">
                             <div class="client-info">
                                 <h3>Username:</h3>
-                                <span><?php echo $row['username'] ?></span>
+                                <span><?php echo $pull['username'] ?></span>
                             </div>
                             <div class="userJobs">
 
@@ -390,7 +390,7 @@ if (mysqli_num_rows($result) > 0) {
                                 if ($fetchJobCount['jobCount'] < 1) {
                                 ?>
                                     <p>
-                                        <?php echo "Seems like " . $row['username'] . " is inactive."; ?>
+                                        <?php echo "Seems like " . $pull['username'] . " is inactive."; ?>
                                     </p>
                                     <img src="../Image/sad-cartoon.gif" alt="no-activity">
                                 <?php
@@ -398,7 +398,7 @@ if (mysqli_num_rows($result) > 0) {
                                 ?>
                                     <h3>All Jobs Post(s)</h3>
                                     <?php
-                                    $username = $row['username'];
+                                    $username = $pull['username'];
                                     $getUserID = "SELECT id FROM clients WHERE username = '$username'";
                                     $getResult = mysqli_query($conn, $getUserID);
                                     $userrow = mysqli_fetch_assoc($getResult);
@@ -510,7 +510,6 @@ if (mysqli_num_rows($result) > 0) {
         document.getElementById("overlay").style.display = "none";
         profile.classList.remove('blur');
     }
-
 </script>
 <script>
     $(document).ready(function() {
