@@ -233,9 +233,14 @@
   width: 40%;
   object-fit: cover;
 }
-.whyEZWork .whyEZWorkContainer .communityWrapper .communityCard p {
+.whyEZWork .whyEZWorkContainer .communityWrapper .communityCard .communityText {
+  margin: 0.5rem 0rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.whyEZWork .whyEZWorkContainer .communityWrapper .communityCard .communityText p {
   line-height: 1.8;
   font-size: 1.1rem;
   color: #797979;
-  margin: 1rem 0rem;
 }

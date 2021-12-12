@@ -62,12 +62,17 @@ require_once('../classes/DB.php');
 
             <div class="community">
                 <h3>EZWork Community</h3>
-                <i class="fas fa-chevron-up"></i>
+                <i id="communityArrow" class="fas fa-chevron-up"></i>
             </div>
 
             <div class="communityWrapper">
                 <div class="communityCard">
                     <img src="../Image/community-guidelines.png" alt="community">
+                    <div class="communityText">
+                        <p>
+                            The EZWork community is composed of thousands of clients and freelancers from all over the world. From clients looking for skilled freelancers to do work for an affordable price to freelancers looking for job opportunities based on their special skill. The EZWork system allows us to create a large awesome community full of hard workers.
+                        </p>
+                    </div>
                 </div>
             </div>
 

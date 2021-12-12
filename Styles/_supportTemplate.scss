@@ -248,11 +248,16 @@ $darktext: rgb(121, 121, 121);
             width: 40%;
             object-fit: cover;
           }
-          p{
-            line-height: 1.8;
-            font-size: 1.1rem;
-            color: $darktext;
-            margin: 1rem 0rem;
+          .communityText{
+            margin: .5rem 0rem;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            p{
+              line-height: 1.8;
+              font-size: 1.1rem;
+              color: $darktext;
+            }
           }
         }
       }

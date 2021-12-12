@@ -28035,10 +28035,22 @@ footer p {
      object-fit: cover;
 }
 
-.whyEZWork .whyEZWorkContainer .communityWrapper .communityCard p {
+.whyEZWork .whyEZWorkContainer .communityWrapper .communityCard .communityText {
+  margin: .5rem 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.whyEZWork .whyEZWorkContainer .communityWrapper .communityCard .communityText p {
   line-height: 1.8;
   font-size: 1.1rem;
   color: #797979;
-  margin: 1rem 0rem;
 }
 /*# sourceMappingURL=style.css.map */
