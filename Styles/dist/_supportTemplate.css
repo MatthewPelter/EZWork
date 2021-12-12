@@ -166,7 +166,7 @@
 }
 .whyEZWork .whyEZWorkContainer .mission, .whyEZWork .whyEZWorkContainer .whatIsEZWork, .whyEZWork .whyEZWorkContainer .community, .whyEZWork .whyEZWorkContainer .developers {
   width: 100%;
-  padding: 2rem 0rem;
+  padding: 1.5rem 0rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -185,13 +185,13 @@
   font-size: 1rem;
   color: #0a345e;
 }
-.whyEZWork .whyEZWorkContainer .missionCard {
+.whyEZWork .whyEZWorkContainer .missionCard, .whyEZWork .whyEZWorkContainer .whatCard {
   width: 100%;
   padding: 2rem;
   display: flex;
   flex-wrap: wrap;
 }
-.whyEZWork .whyEZWorkContainer .missionCard span {
+.whyEZWork .whyEZWorkContainer .missionCard span, .whyEZWork .whyEZWorkContainer .whatCard span {
   line-height: 1.8;
   font-size: 1.1rem;
   color: #797979;

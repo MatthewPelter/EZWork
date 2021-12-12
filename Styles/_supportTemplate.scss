@@ -176,7 +176,7 @@ $darktext: rgb(121, 121, 121);
 
       .mission,.whatIsEZWork,.community,.developers{
           width: 100%;
-          padding: 2rem 0rem;
+          padding: 1.5rem 0rem;
           display: flex;
           flex-direction: row;
           align-items: center;
@@ -197,7 +197,7 @@ $darktext: rgb(121, 121, 121);
           }
       }
 
-      .missionCard{
+      .missionCard,.whatCard{
         width: 100%;
         padding: 2rem;
         display: flex;

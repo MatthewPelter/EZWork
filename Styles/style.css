@@ -27934,7 +27934,7 @@ footer p {
 
 .whyEZWork .whyEZWorkContainer .mission, .whyEZWork .whyEZWorkContainer .whatIsEZWork, .whyEZWork .whyEZWorkContainer .community, .whyEZWork .whyEZWorkContainer .developers {
   width: 100%;
-  padding: 2rem 0rem;
+  padding: 1.5rem 0rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -27965,7 +27965,7 @@ footer p {
   color: #0a345e;
 }
 
-.whyEZWork .whyEZWorkContainer .missionCard {
+.whyEZWork .whyEZWorkContainer .missionCard, .whyEZWork .whyEZWorkContainer .whatCard {
   width: 100%;
   padding: 2rem;
   display: -webkit-box;
@@ -27975,7 +27975,7 @@ footer p {
       flex-wrap: wrap;
 }
 
-.whyEZWork .whyEZWorkContainer .missionCard span {
+.whyEZWork .whyEZWorkContainer .missionCard span, .whyEZWork .whyEZWorkContainer .whatCard span {
   line-height: 1.8;
   font-size: 1.1rem;
   color: #797979;
