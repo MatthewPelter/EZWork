@@ -50,7 +50,7 @@ require_once('../classes/DB.php');
 
             <div class="whatIsEZWork">
                 <h3>What is EZWork?</h3>
-                <i class="fas fa-chevron-down"></i>
+                <i id="whatUp" class="fas fa-chevron-down"></i>
             </div>
             <div class="whatWrapper">
                 <div class="whatCard">
@@ -102,6 +102,22 @@ require_once('../classes/DB.php');
         }else{
             missionWrapper.style.display = 'block';
             missionArrowUp.style.transform = "rotate(360deg)";
+        }
+
+    });
+
+
+    const whatArrowUp = document.getElementById('whatUp');
+
+    whatArrowUp.addEventListener('click',()=>{
+        var whatWrapper = document.querySelector('.whatWrapper');
+
+        if(getComputedStyle(whatWrapper).display === 'block'){
+            whatWrapper.style.display = 'none';
+            whatArrowUp.style.transform = "rotate(180deg)";
+        }else{
+            whatWrapper.style.display = 'block';
+            whatArrowUp.style.transform = "rotate(360deg)";
         }
 
     });
