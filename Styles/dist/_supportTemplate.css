@@ -340,6 +340,11 @@
   color: #797979;
   margin-left: 0.5rem;
 }
+.whyEZWork .whyEZWorkContainer .userWrapper .userCard .user2 .story2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
 .whyEZWork .whyEZWorkContainer .userWrapper .userCard .user2 .story2 p {
   position: relative;
   width: 60%;

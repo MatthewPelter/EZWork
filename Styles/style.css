@@ -28198,6 +28198,19 @@ footer p {
   margin-left: .5rem;
 }
 
+.whyEZWork .whyEZWorkContainer .userWrapper .userCard .user2 .story2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 .whyEZWork .whyEZWorkContainer .userWrapper .userCard .user2 .story2 p {
   position: relative;
   width: 60%;
