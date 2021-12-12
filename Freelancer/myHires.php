@@ -6,7 +6,7 @@ require_once("../classes/DB.php");
 $username = $_SESSION['userid'];
 $userID = $_SESSION['user_id'];
 
-$sql = "SELECT DISTINCT * FROM jobs WHERE user_id='$userID' AND freelancer_id <> ''";
+$sql = "SELECT DISTINCT freelancer_id FROM jobs WHERE user_id='$userID' AND freelancer_id <> ''";
 $jobResult = mysqli_query($conn, $sql) or die(mysqli_errno($conn));
 ?>
 <!DOCTYPE html>
