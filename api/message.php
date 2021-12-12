@@ -42,18 +42,18 @@ if ($receiver == null) {
 if ($sender == null) {
     die('{ "Error": "Missing Sender!" }');
 }
+if (isset($postBody->jobID)) {
+    $jobID = $postBody->jobID;
+    $messageSQL = "INSERT INTO messages(body, sender, receiver, isread, jobID, response) VALUES(?, ?, ?, 0, ?, NULL)";
+} else {
+    $messageSQL = "INSERT INTO messages(body, sender, receiver, isread, jobID, response) VALUES(?, ?, ?, 0, NULL, NULL)";
+}
+
 date_default_timezone_set("America/New_York");
 $date = date('Y-m-d H:i:s');
 if ($stmt = mysqli_prepare($conn, $messageSQL)) {
     mysqli_stmt_bind_param($stmt, "ssss", $body, $sender, $getID, $jobID);
-    if (isset($postBody->jobID)) {
-        $jobID = $postBody->jobID;
-        $messageSQL = "INSERT INTO messages(body, sender, receiver, isread, jobID, response) VALUES(?, ?, ?, 0, ?, NULL)";
-        mysqli_stmt_execute($stmt);
-    } else {
-        $messageSQL = "INSERT INTO messages(body, sender, receiver, isread, jobID, response) VALUES(?, ?, ?, 0, NULL, NULL)";
-        mysqli_stmt_execute($stmt);
-    }
+    mysqli_stmt_execute($stmt);
 
     if ($jobID != NULL) {
         $sendNotification = mysqli_query($conn, "INSERT INTO notifications (type, receiver, sender, isRead, sentAt) VALUES ('r', '$getID', '$sender', 0, '$date')") or die(mysqli_errno($conn));
@@ -67,4 +67,4 @@ if ($stmt = mysqli_prepare($conn, $messageSQL)) {
     mysqli_stmt_close($stmt);
 }
 
-mysqli_close($link);
+mysqli_close($conn);
