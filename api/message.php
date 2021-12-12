@@ -21,9 +21,8 @@ $postBody = json_decode($postBody);
 $body = $postBody->body;
 $receiver = $postBody->receiver;
 
-//$body = securityscan($body);
-//$receiver = securityscan($receiver);
-
+$body = mysqli_real_escape_string($conn, $body);
+$receiver = mysqli_real_escape_string($conn, $receiver);
 // i am stupid and made you send a username instead of a user id and im too lazy to fix it. now I have to convert username to a id. im dumb 
 $id = mysqli_query($conn, "SELECT id FROM clients WHERE username='$receiver'");
 $getID = mysqli_fetch_assoc($id);
@@ -42,29 +41,25 @@ if ($receiver == null) {
 if ($sender == null) {
     die('{ "Error": "Missing Sender!" }');
 }
+
 if (isset($postBody->jobID)) {
     $jobID = $postBody->jobID;
-    $messageSQL = "INSERT INTO messages(body, sender, receiver, isread, jobID, response) VALUES(?, ?, ?, 0, ?, NULL)";
+    $jobID = securityscan($jobID);
+    $query = mysqli_query($conn, "INSERT INTO messages(body, sender, receiver, isread, jobID, response) VALUES('$body', '$sender', '$getID', 0, '$jobID', NULL)") or die(mysqli_errno($conn));
 } else {
-    $messageSQL = "INSERT INTO messages(body, sender, receiver, isread, jobID, response) VALUES(?, ?, ?, 0, NULL, NULL)";
+    $query = mysqli_query($conn, "INSERT INTO messages(body, sender, receiver, isread, jobID, response) VALUES('$body', '$sender', '$getID', 0, NULL, NULL)") or die(mysqli_errno($conn));
 }
 
-date_default_timezone_set("America/New_York");
-$date = date('Y-m-d H:i:s');
-
-$stmt = mysqli_prepare($conn, $messageSQL);
-mysqli_stmt_bind_param($stmt, "ssss", $body, $sender, $getID, $jobID);
-if (mysqli_stmt_execute($stmt)) {
+if ($query) {
+    date_default_timezone_set("America/New_York");
+    $date = date('Y-m-d H:i:s');
     if ($jobID != NULL) {
         $sendNotification = mysqli_query($conn, "INSERT INTO notifications (type, receiver, sender, isRead, sentAt) VALUES ('r', '$getID', '$sender', 0, '$date')") or die(mysqli_errno($conn));
     } else {
         $sendNotification = mysqli_query($conn, "INSERT INTO notifications (type, receiver, sender, isRead, sentAt) VALUES ('m', '$getID', '$sender', 0, '$date')") or die(mysqli_errno($conn));
     }
+
     echo '{ "Success": "Message Sent!" }';
 } else {
-    echo '{ "Error": "Error exexuting query" }';
+    echo '{ "Error": "Query Failed" }';
 }
-
-
-mysqli_stmt_close($stmt);
-mysqli_close($conn);
