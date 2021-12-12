@@ -78,7 +78,7 @@ require_once('../classes/DB.php');
             
             <div class="userStories">
                 <h3>Success Stories</h3>
-                <i class="fas fa-chevron-up"></i>
+                <i id="userUp" class="fas fa-chevron-up"></i>
             </div>
             <div class="userWrapper">
                 <div class="userCard">
@@ -206,7 +206,22 @@ require_once('../classes/DB.php');
             communityArrowUp.style.transform = "rotate(360deg)";
         }
 
-    });    
+    }); 
+    
+    const userArrowUp = document.getElementById('userUp');
+
+    userArrowUp.addEventListener('click',()=>{
+        var userWrapper = document.querySelector('.userWrapper');
+
+        if(getComputedStyle(communityWrapper).display === 'block'){
+            userWrapper.style.display = 'none';
+            userArrowUp.style.transform = "rotate(180deg)";
+        }else{
+            userWrapper.style.display = 'block';
+            userArrowUp.style.transform = "rotate(360deg)";
+        }
+
+    });     
 
 </script>
 
