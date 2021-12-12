@@ -61,6 +61,10 @@ if ($stmt = mysqli_prepare($conn, $messageSQL)) {
         $sendNotification = mysqli_query($conn, "INSERT INTO notifications (type, receiver, sender, isRead, sentAt) VALUES ('m', '$getID', '$sender', 0, '$date')") or die(mysqli_errno($conn));
     }
     echo '{ "Success": "Message Sent!" }';
+    mysqli_stmt_close($stmt);
 } else {
     echo '{ "Error": "Could not prepare query: $sql." }';
+    mysqli_stmt_close($stmt);
 }
+
+mysqli_close($link);
