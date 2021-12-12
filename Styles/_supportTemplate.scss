@@ -284,7 +284,7 @@ $darktext: rgb(121, 121, 121);
       .userWrapper{
         width: 100%;
         display: block;
-        background-color: rgb(224, 224, 224);
+        background-color: rgb(236, 236, 236);
         border-radius: 10px;
         .userCard{
           width: 100%;
@@ -304,8 +304,8 @@ $darktext: rgb(121, 121, 121);
               justify-content: flex-start;
               img{
                 border-radius: 50%;
-                height: 3rem;
-                width: 3rem;
+                height: 4rem;
+                width: 4rem;
                 object-fit: cover;
                 border: 2px solid #32557f;
               }
@@ -358,8 +358,8 @@ $darktext: rgb(121, 121, 121);
               justify-content: flex-end;
               img{
                 border-radius: 50%;
-                height: 3rem;
-                width: 3rem;
+                height: 4rem;
+                width: 4rem;
                 object-fit: cover;
                 border: 2px solid lightgreen;
               }

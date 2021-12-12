@@ -28083,7 +28083,7 @@ footer p {
 .whyEZWork .whyEZWorkContainer .userWrapper {
   width: 100%;
   display: block;
-  background-color: #e0e0e0;
+  background-color: #ececec;
   border-radius: 10px;
 }
 
@@ -28124,8 +28124,8 @@ footer p {
 
 .whyEZWork .whyEZWorkContainer .userWrapper .userCard .user .usernameBar img {
   border-radius: 50%;
-  height: 3rem;
-  width: 3rem;
+  height: 4rem;
+  width: 4rem;
   -o-object-fit: cover;
      object-fit: cover;
   border: 2px solid #32557f;
@@ -28187,8 +28187,8 @@ footer p {
 
 .whyEZWork .whyEZWorkContainer .userWrapper .userCard .user2 .usernameBar2 img {
   border-radius: 50%;
-  height: 3rem;
-  width: 3rem;
+  height: 4rem;
+  width: 4rem;
   -o-object-fit: cover;
      object-fit: cover;
   border: 2px solid lightgreen;
