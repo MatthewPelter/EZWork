@@ -27898,6 +27898,7 @@ footer p {
   margin: 1.5rem 0rem;
   width: 100%;
   height: 25vh;
+  padding: 2rem;
   background-color: #32557f;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -27933,6 +27934,7 @@ footer p {
 
 .whyEZWork .whyEZWorkContainer .mission, .whyEZWork .whyEZWorkContainer .whatIsEZWork, .whyEZWork .whyEZWorkContainer .community, .whyEZWork .whyEZWorkContainer .developers {
   width: 100%;
+  padding: 2rem 0rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -27946,7 +27948,7 @@ footer p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: .5rem;
+  margin: .5rem 0;
   border: 2px solid lightgrey;
   border-left: none;
   border-right: none;

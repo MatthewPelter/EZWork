@@ -147,6 +147,7 @@
   margin: 1.5rem 0rem;
   width: 100%;
   height: 25vh;
+  padding: 2rem;
   background-color: #32557f;
   display: flex;
   flex-direction: row;
@@ -165,11 +166,12 @@
 }
 .whyEZWork .whyEZWorkContainer .mission, .whyEZWork .whyEZWorkContainer .whatIsEZWork, .whyEZWork .whyEZWorkContainer .community, .whyEZWork .whyEZWorkContainer .developers {
   width: 100%;
+  padding: 2rem 0rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 0.5rem;
+  margin: 0.5rem 0;
   border: 2px solid lightgrey;
   border-left: none;
   border-right: none;

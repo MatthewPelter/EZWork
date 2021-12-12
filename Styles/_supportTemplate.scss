@@ -155,6 +155,7 @@ $darktext: rgb(121, 121, 121);
       margin: 1.5rem 0rem;
       width: 100%;
       height: 25vh;
+      padding: 2rem;
       background-color: #32557f;
       display: flex;
       flex-direction: row;
@@ -175,11 +176,12 @@ $darktext: rgb(121, 121, 121);
 
       .mission,.whatIsEZWork,.community,.developers{
           width: 100%;
+          padding: 2rem 0rem;
           display: flex;
           flex-direction: row;
           align-items: center;
           justify-content: space-between;
-          margin-bottom: .5rem;
+          margin: .5rem 0;
           border: 2px solid lightgrey;
           border-left: none;
           border-right: none;
