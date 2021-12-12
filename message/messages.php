@@ -314,7 +314,7 @@ background: linear-gradient(90deg, rgba(0,147,233,1) 39%, rgba(128,208,199,1) 61
                 $("#message-to-send").val('');
                 if (obj.Success.length > 0) {
                     location.reload();
-                    //$('#result').html(obj.Success);
+                    $('#result').html(obj.Success);
                 } else if (obj.Error.length > 0) {
                     $('#result').html(obj.Error);
                 }

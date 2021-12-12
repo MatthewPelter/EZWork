@@ -5,7 +5,7 @@ require_once("../classes/DB.php");
 function securityscan($data)
 {
     $data = trim($data);
-    $data = stripslashes($data);
+    $data = addslashes($data);
     $data = htmlspecialchars($data);
     return $data;
 }
@@ -21,8 +21,8 @@ $postBody = json_decode($postBody);
 $body = $postBody->body;
 $receiver = $postBody->receiver;
 
-$body = mysqli_real_escape_string($conn, $body);
-$receiver = mysqli_real_escape_string($conn, $receiver);
+$body = securityscan($body);
+$receiver = securityscan($receiver);
 // i am stupid and made you send a username instead of a user id and im too lazy to fix it. now I have to convert username to a id. im dumb 
 $id = mysqli_query($conn, "SELECT id FROM clients WHERE username='$receiver'");
 $getID = mysqli_fetch_assoc($id);
