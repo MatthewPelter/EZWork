@@ -213,7 +213,7 @@ require_once('../classes/DB.php');
     userArrowUp.addEventListener('click',()=>{
         var userWrapper = document.querySelector('.userWrapper');
 
-        if(getComputedStyle(communityWrapper).display === 'block'){
+        if(getComputedStyle(userWrapper).display === 'block'){
             userWrapper.style.display = 'none';
             userArrowUp.style.transform = "rotate(180deg)";
         }else{
