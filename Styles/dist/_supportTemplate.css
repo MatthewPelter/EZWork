@@ -276,6 +276,7 @@
   margin: 0.5rem 0rem;
 }
 .whyEZWork .whyEZWorkContainer .userWrapper .userCard .user .usernameBar {
+  margin-bottom: 0.5rem;
   width: 100%;
   display: flex;
   flex-direction: row;

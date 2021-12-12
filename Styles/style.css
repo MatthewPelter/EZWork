@@ -28103,6 +28103,7 @@ footer p {
 }
 
 .whyEZWork .whyEZWorkContainer .userWrapper .userCard .user .usernameBar {
+  margin-bottom: .5rem;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
