@@ -191,7 +191,7 @@
   display: flex;
   flex-wrap: wrap;
 }
-.whyEZWork .whyEZWorkContainer .missionCard span, .whyEZWork .whyEZWorkContainer .whatCard span {
+.whyEZWork .whyEZWorkContainer .missionCard p, .whyEZWork .whyEZWorkContainer .whatCard p {
   line-height: 1.8;
   font-size: 1.1rem;
   color: #797979;
