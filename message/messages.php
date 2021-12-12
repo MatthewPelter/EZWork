@@ -302,7 +302,7 @@ background: linear-gradient(90deg, rgba(0,147,233,1) 39%, rgba(128,208,199,1) 61
     elem.scrollTop = elem.scrollHeight;
 
     $('#sendmessage').click(function() {
-        var text = validator.escape($("#message-to-send").val());
+        var text = $("#message-to-send").val();
         $.ajax({
             type: "POST",
             url: "../api/message.php",
