@@ -154,6 +154,8 @@ $darktext: rgb(121, 121, 121);
     .whyEZWorkHeader {
       margin: 1.5rem 0rem;
       width: 100%;
+      height: 25vh;
+      background-color: #32557f;
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -162,7 +164,7 @@ $darktext: rgb(121, 121, 121);
       h2 {
         font-size: 3.5rem;
         text-decoration: underline;
-        color: $lightColor;
+        color: whitesmoke;
       }
     }
   
@@ -172,11 +174,15 @@ $darktext: rgb(121, 121, 121);
       flex-direction: column;
 
       .mission,.whatIsEZWork,.community,.developers{
+          width: 100%;
           display: flex;
           flex-direction: row;
           align-items: center;
           justify-content: space-between;
-
+          margin-bottom: .5rem;
+          border: 2px solid lightgrey;
+          border-left: none;
+          border-right: none;
           h3{
               font-size: 2rem;
               color: $lightColor;
@@ -187,6 +193,20 @@ $darktext: rgb(121, 121, 121);
               font-size: 1rem;
               color: $color1;
           }
+      }
+
+      .missionCard{
+        width: 100%;
+        padding: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+
+        span{
+          line-height: 1.8;
+          font-size: 1.1rem;
+          color: $darktext;
+          margin: 1rem 0rem;
+        }
       }
 
     }
