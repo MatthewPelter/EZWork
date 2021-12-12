@@ -75,13 +75,36 @@ require_once('../classes/DB.php');
                     </div>
                 </div>
             </div>
+            
+            <div class="userStories">
+                <h3>User Stories</h3>
+                <i class="fas fa-chevron-up"></i>
+            </div>
+            <div class="userWrapper">
+                <div class="userCard">
+
+                </div>
+            </div>
+
+            
+            <div class="reviews">
+                <h3>EZWork Developers</h3>
+                <i class="fas fa-chevron-up"></i>
+            </div>
+            <div class="reviewsWrapper">
+                <div class="reviewsCard">
+
+                </div>
+            </div>
 
             <div class="developers">
                 <h3>EZWork Developers</h3>
                 <i class="fas fa-chevron-up"></i>
             </div>
-            <div class="developersCard">
+            <div class="developerWrapper">
+                <div class="developersCard">
 
+                </div>
             </div>
 
 

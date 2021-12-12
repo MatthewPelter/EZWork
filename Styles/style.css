@@ -27932,7 +27932,7 @@ footer p {
           flex-direction: column;
 }
 
-.whyEZWork .whyEZWorkContainer .mission, .whyEZWork .whyEZWorkContainer .whatIsEZWork, .whyEZWork .whyEZWorkContainer .community, .whyEZWork .whyEZWorkContainer .developers {
+.whyEZWork .whyEZWorkContainer .mission, .whyEZWork .whyEZWorkContainer .whatIsEZWork, .whyEZWork .whyEZWorkContainer .community, .whyEZWork .whyEZWorkContainer .developers, .whyEZWork .whyEZWorkContainer .reviews, .whyEZWork .whyEZWorkContainer .userStories {
   width: 100%;
   padding: 1.5rem 0rem;
   display: -webkit-box;
@@ -27954,12 +27954,12 @@ footer p {
   border-right: none;
 }
 
-.whyEZWork .whyEZWorkContainer .mission h3, .whyEZWork .whyEZWorkContainer .whatIsEZWork h3, .whyEZWork .whyEZWorkContainer .community h3, .whyEZWork .whyEZWorkContainer .developers h3 {
+.whyEZWork .whyEZWorkContainer .mission h3, .whyEZWork .whyEZWorkContainer .whatIsEZWork h3, .whyEZWork .whyEZWorkContainer .community h3, .whyEZWork .whyEZWorkContainer .developers h3, .whyEZWork .whyEZWorkContainer .reviews h3, .whyEZWork .whyEZWorkContainer .userStories h3 {
   font-size: 2rem;
   color: #054e97;
 }
 
-.whyEZWork .whyEZWorkContainer .mission i, .whyEZWork .whyEZWorkContainer .whatIsEZWork i, .whyEZWork .whyEZWorkContainer .community i, .whyEZWork .whyEZWorkContainer .developers i {
+.whyEZWork .whyEZWorkContainer .mission i, .whyEZWork .whyEZWorkContainer .whatIsEZWork i, .whyEZWork .whyEZWorkContainer .community i, .whyEZWork .whyEZWorkContainer .developers i, .whyEZWork .whyEZWorkContainer .reviews i, .whyEZWork .whyEZWorkContainer .userStories i {
   cursor: pointer;
   font-size: 2rem;
   color: #0a345e;
@@ -28056,5 +28056,49 @@ footer p {
   line-height: 1.8;
   font-size: 1.1rem;
   color: #797979;
+}
+
+.whyEZWork .whyEZWorkContainer .reviewsWrapper {
+  width: 100%;
+  display: block;
+}
+
+.whyEZWork .whyEZWorkContainer .reviewsWrapper .whatCard {
+  width: 100%;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.whyEZWork .whyEZWorkContainer .reviewsWrapper .whatCard p {
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: #797979;
+  margin: 1rem 0rem;
+}
+
+.whyEZWork .whyEZWorkContainer .userWrapper {
+  width: 100%;
+  display: block;
+}
+
+.whyEZWork .whyEZWorkContainer .userWrapper .whatCard {
+  width: 100%;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.whyEZWork .whyEZWorkContainer .userWrapper .whatCard p {
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: #797979;
+  margin: 1rem 0rem;
 }
 /*# sourceMappingURL=style.css.map */

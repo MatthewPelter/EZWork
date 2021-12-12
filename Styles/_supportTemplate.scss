@@ -174,7 +174,7 @@ $darktext: rgb(121, 121, 121);
       display: flex;
       flex-direction: column;
 
-      .mission,.whatIsEZWork,.community,.developers{
+      .mission,.whatIsEZWork,.community,.developers,.reviews,.userStories{
           width: 100%;
           padding: 1.5rem 0rem;
           display: flex;
@@ -259,6 +259,42 @@ $darktext: rgb(121, 121, 121);
               font-size: 1.1rem;
               color: $darktext;
             }
+          }
+        }
+      }
+
+      .reviewsWrapper{
+        width: 100%;
+        display: block;
+        .whatCard{
+          width: 100%;
+          padding: 2rem;
+          display: flex;
+          flex-wrap: wrap;
+  
+          p{
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: $darktext;
+            margin: 1rem 0rem;
+          }
+        }
+      }
+
+      .userWrapper{
+        width: 100%;
+        display: block;
+        .whatCard{
+          width: 100%;
+          padding: 2rem;
+          display: flex;
+          flex-wrap: wrap;
+  
+          p{
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: $darktext;
+            margin: 1rem 0rem;
           }
         }
       }
