@@ -1,0 +1,69 @@
+<?php
+session_start(); // Session starts here.
+require_once('../classes/DB.php');
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A platform for skilled workers or talented people to freelance, find projects to work on, extra ways to earn income.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e9089fea9d.js" crossorigin="anonymous"></script>
+    <title>EZWork | Why EZWork</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link rel="icon" href="../logo/logo.svg">
+    <link rel="stylesheet" href="../Styles/style.css">
+</head>
+
+<body>
+
+    <?php include '../navbar.php'; ?>
+    
+    <div class="whyEZWork">
+        <div class="whyEZWorkHeader">
+            <h2>Why EZWork?</h2>
+        </div>
+
+        <div class="whyEZWorkContainer">
+            <div class="mission">
+                <h3>Our Mission</h3>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+
+            <div class="whatIsEZWork">
+                <h3>What is EZWork?</h3>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+
+            <div class="community">
+                <h3>EZWork Community</h3>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="developers">
+                <h3>EZWork Developers</h3>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+
+
+        </div>
+    </div>
+    
+    <?php include '../footer.php'; ?>
+
+    <!--DataList-->
+    <datalist id="allskills">
+
+    </datalist>
+</body>
+
+<!--Script for the search bar and datalist-->
+<scrip src="../SkillsContainer/allJobsSkills.js"></script>
+
+</html>
