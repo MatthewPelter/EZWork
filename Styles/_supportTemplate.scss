@@ -284,7 +284,8 @@ $darktext: rgb(121, 121, 121);
       .userWrapper{
         width: 100%;
         display: block;
-        background-color: #9fc4f180;
+        background: rgba(0,0,0,0.8);
+        backdrop-filter: saturate(180%) blur(10px);
         .userCard{
           width: 100%;
           padding: 2rem;

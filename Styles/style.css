@@ -28083,7 +28083,9 @@ footer p {
 .whyEZWork .whyEZWorkContainer .userWrapper {
   width: 100%;
   display: block;
-  background-color: #9fc4f180;
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-backdrop-filter: saturate(180%) blur(10px);
+          backdrop-filter: saturate(180%) blur(10px);
 }
 
 .whyEZWork .whyEZWorkContainer .userWrapper .userCard {
