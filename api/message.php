@@ -4,9 +4,8 @@ require_once("../classes/DB.php");
 
 function securityscan($data)
 {
-    $data = trim($data);
-    $data = addslashes($data);
     $data = htmlspecialchars($data);
+    $data = addslashes($data);
     return $data;
 }
 
