@@ -163,7 +163,7 @@ if (mysqli_num_rows($result) > 0) {
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
                                     </div>
                                 <?php                                    
                                 }else if($rate == 5){
