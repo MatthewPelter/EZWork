@@ -28137,8 +28137,8 @@ footer p {
   height: 12rem;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: top;
-     object-position: top;
+  -o-object-position: center;
+     object-position: center;
   border-radius: 5px;
 }
 
@@ -28156,10 +28156,6 @@ footer p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.whyEZWork .whyEZWorkContainer .reviewWrapper .reviewsCard .card .starsWrapper span {
-  color: white;
 }
 
 .whyEZWork .whyEZWorkContainer .reviewWrapper .reviewsCard .card .starsWrapper .stars {
@@ -28204,8 +28200,8 @@ footer p {
   height: 12rem;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: top;
-     object-position: top;
+  -o-object-position: center;
+     object-position: center;
   border-radius: 5px;
 }
 
@@ -28223,10 +28219,6 @@ footer p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.whyEZWork .whyEZWorkContainer .reviewWrapper .reviewsCard .card2 .starsWrapper span {
-  color: white;
 }
 
 .whyEZWork .whyEZWorkContainer .reviewWrapper .reviewsCard .card2 .starsWrapper .stars {
