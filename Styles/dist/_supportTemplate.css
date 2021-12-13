@@ -248,6 +248,8 @@
 .whyEZWork .whyEZWorkContainer .reviewWrapper {
   width: 100%;
   display: block;
+  background: #e7e7e7;
+  border-radius: 12px;
 }
 .whyEZWork .whyEZWorkContainer .reviewWrapper .reviewsCard {
   width: 100%;
