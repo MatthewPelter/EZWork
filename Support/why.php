@@ -148,6 +148,7 @@ require_once('../classes/DB.php');
 
                         <img src="../Users/connor.jpg" alt="user">
                         <div class="starsWrapper">
+                            <span>Connor McGregor</span>
                             <div class="stars">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -163,6 +164,7 @@ require_once('../classes/DB.php');
 
                         <img src="../Users/beyonce.jpg" alt="user">
                         <div class="starsWrapper">
+                            <span>Boyonce</span>
                             <div class="stars" style="color: #32557f;display: flex;flex-direction: row;align-items: center;">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -179,6 +181,7 @@ require_once('../classes/DB.php');
 
                         <img src="../Users/dustin.jpg" alt="user">
                         <div class="starsWrapper">
+                            <span>Dustin Poirier</span>
                             <div class="stars">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -195,6 +198,7 @@ require_once('../classes/DB.php');
 
                         <img src="../Users/john.jpg" alt="user">
                         <div class="starsWrapper">
+                            <span>John Doe</span>
                             <div class="stars" style="color: #32557f;display: flex;flex-direction: row;align-items: center;">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -211,6 +215,7 @@ require_once('../classes/DB.php');
 
                         <img src="../Users/joseAldo.jpg" alt="user">
                         <div class="starsWrapper">
+                            <span>Jose Aldo</span>
                             <div class="stars">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -226,6 +231,7 @@ require_once('../classes/DB.php');
 
                         <img src="../Users/drake.png" alt="user">
                         <div class="starsWrapper">
+                            <span>Drake</span>
                             <div class="stars" style="color: #32557f;display: flex;flex-direction: row;align-items: center;">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -242,6 +248,7 @@ require_once('../classes/DB.php');
 
                         <img src="../Users/kanyeEast.jpeg" alt="user">
                         <div class="starsWrapper">
+                            <span>Kanye East</span>
                             <div class="stars">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
