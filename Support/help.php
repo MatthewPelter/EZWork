@@ -32,7 +32,47 @@ require_once('../classes/DB.php');
         </div>
 
         <div class="helpContainer">
-            
+            <div class="helpNav">
+                <div class="LoginRegister">
+                    <h2>Login & Register</h2>
+                </div>
+                <div class="postAJobHelp">
+                    <h2>Post A Job</h2>
+                </div>
+                <div class="FindFreelancerHelp">
+                    <h2>Find Freelancers</h2>
+                </div>
+                <div class="FindWorkHelp">
+                    <h2>Find Work</h2>
+                </div>
+
+                <div class="howToMessage">
+                    <h2>Messaging</h2>
+                </div>
+
+                <div class="ChangePasswordHelp">
+                    <h2>Change Password</h2>
+                </div>
+
+                <div class="changeAvatarHelp">
+                    <h2>Change Avatar</h2>
+                </div>
+
+                <div class="AddDebitCardHelp">
+                    <h2>Credit Card Help</h2>
+                </div>
+
+                <div class="JobHelp">
+                    <h2>Job Help</h2>
+                </div>
+
+                <div class="MarketplaceHelp">
+                    <h2>EZWork Marketplace</h2>
+                </div>
+
+
+            </div>
+            <div class="helpWrapper"></div>
         </div>
     </div>
     

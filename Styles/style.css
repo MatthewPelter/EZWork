@@ -28445,6 +28445,21 @@ footer p {
 
 .help .helpContainer {
   width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[5];
+      grid-template-rows: repeat(5, 1fr);
+}
+
+.help .helpContainer .helpNav {
+  width: 100%;
+  padding: 0rem 1rem;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 1 / 6 / 2;
+  border-left: 4px solid lightgrey;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -28452,5 +28467,32 @@ footer p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.help .helpContainer .helpNav .helpCard {
+  width: 100%;
+  background-color: white;
+}
+
+.help .helpContainer .helpNav .helpCard h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  color: #797979;
+  padding: 1rem 0rem;
+}
+
+.help .helpContainer .helpNav .helpCard:hover {
+  background-color: lightgrey;
+  color: #32557f;
+}
+
+.help .helpContainer .helpWrapper {
+  width: 100%;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 5;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 4;
+  grid-area: 1 / 2 / 6 / 6;
 }
 /*# sourceMappingURL=style.css.map */
