@@ -75,5 +75,15 @@ $darktext: rgb(121, 121, 121);
                 }
             }
         }
+
+        .messageChat{
+            width: 100%;
+            border: none;
+            padding: 10px 20px;
+            font: 1rem "Montserrat", Arial, sans-serif;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            resize: none;
+        }
     }
 }

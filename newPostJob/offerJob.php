@@ -135,10 +135,11 @@ if (mysqli_num_rows($jobResult) > 0) {
         }
 
         .wrapper {
+            border-bottom: 3px solid lightgrey;
             padding: 2rem 3rem;
             max-width: 100%;
             margin: 4em auto;
-            font-size: 16px;
+            font-size: 1rem;
         }
 
         .people-list {
@@ -234,10 +235,10 @@ if (mysqli_num_rows($jobResult) > 0) {
                 </symbol>
             </svg>
 
-            <div class="messageChat">
+            <div class="messageChat" style="margin-bottom: 2rem;">
                 <!-- insert message -->
             </div>
-            
+
         </div>
 
 
