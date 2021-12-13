@@ -28133,12 +28133,11 @@ footer p {
 }
 
 .whyEZWork .whyEZWorkContainer .reviewWrapper .reviewsCard .card img {
-  width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  -o-object-position: top;
-     object-position: top;
-  border-radius: 7px;
+  width: 8rem;
+  height: 8rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
 }
 
 .whyEZWork .whyEZWorkContainer .reviewWrapper .reviewsCard .card .stars {
@@ -28166,15 +28165,49 @@ footer p {
 }
 
 .whyEZWork .whyEZWorkContainer .reviewWrapper .reviewsCard .card2 {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 17rem;
   border-radius: 10px;
   background-color: lightgreen;
   border: 3px solid #32557f;
   -webkit-box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.3), 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.2);
           box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.3), 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.2);
   margin: 1rem;
+  padding: 2rem;
+}
+
+.whyEZWork .whyEZWorkContainer .reviewWrapper .reviewsCard .card2 img {
+  width: 8rem;
+  height: 8rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+}
+
+.whyEZWork .whyEZWorkContainer .reviewWrapper .reviewsCard .card2 .stars {
+  color: #32557f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.whyEZWork .whyEZWorkContainer .reviewWrapper .reviewsCard .card2 p {
+  text-align: center;
+  width: 100%;
+  color: #797979;
+  background: white;
+  border-radius: 5px;
+  padding: .5rem;
+  line-height: 1.5;
 }
 
 .whyEZWork .whyEZWorkContainer .userWrapper {

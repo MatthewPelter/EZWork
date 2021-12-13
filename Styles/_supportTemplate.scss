@@ -285,10 +285,10 @@ $darktext: rgb(121, 121, 121);
             padding: 2rem;
 
             img{
-              width: 100%;
-              object-fit: contain;
-              object-position: top;
-              border-radius: 7px;
+              width: 8rem;
+              height: 8rem;
+              object-fit: cover;
+              border-radius: 5px;
             }
             .stars{
               color: #32557f;display: flex;flex-direction: row;align-items: center;
@@ -304,13 +304,36 @@ $darktext: rgb(121, 121, 121);
               line-height: 1.5;
             }
           }
+          
           .card2{
-            width: fit-content;
+            height: fit-content;
+            width: 17rem;
             border-radius: 10px;
             background-color: lightgreen;
             border: 3px solid #32557f;
             box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);
             margin: 1rem;
+            padding: 2rem;
+
+            img{
+              width: 8rem;
+              height: 8rem;
+              object-fit: cover;
+              border-radius: 5px;
+            }
+            .stars{
+              color: #32557f;display: flex;flex-direction: row;align-items: center;
+            }
+
+            p{
+              text-align: center;
+              width: 100%;
+              color: $darktext;
+              background: white;
+              border-radius: 5px;
+              padding: .5rem;
+              line-height: 1.5;
+            }
           }
         }
       }

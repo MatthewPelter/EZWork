@@ -156,6 +156,84 @@ require_once('../classes/DB.php');
                         </div>
                         <p>&#8220;Simple, clean and makes life a little easier , I love using the site&#8221;.</p>
                     </div>
+
+                    <div class="card2">
+
+                        <img src="../Users/beyonce.jpg" alt="user">
+                        <div class="stars" style="color: #32557f;display: flex;flex-direction: row;align-items: center;">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>&#8220;This site makes my profile look amazing&#8221;.</p>
+                    </div>
+
+                    <div class="card">
+
+                        <img src="../Users/dustin.jpg" alt="user">
+                        <div class="stars" style="color: #32557f;display: flex;flex-direction: row;align-items: center;">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p>&#8220;Hiring people has become so easy, I can’t believe this site is free&#8221;.</p>
+                    </div>
+
+                    <div class="card2">
+
+                        <img src="../Users/john.jpg" alt="user">
+                        <div class="stars" style="color: #32557f;display: flex;flex-direction: row;align-items: center;">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p>&#8220;If you’re in need of talented freelancers with this is the place to go. Its great&#8221;.</p>
+                    </div>
+
+                    <div class="card">
+
+                        <img src="../Users/leo.JPG" alt="user">
+                        <div class="stars" style="color: #32557f;display: flex;flex-direction: row;align-items: center;">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p>&#8220;Will never use another site to apply to jobs again. EZWorks is top tier&#8221;.</p>
+                    </div>
+
+                    <div class="card2">
+
+                        <img src="../Image/carpentry.jpg" alt="user">
+                        <div class="stars" style="color: #32557f;display: flex;flex-direction: row;align-items: center;">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p>&#8220;My company has grown tremendously since I’ve been able to find good people to work for me&#8221;.</p>
+                    </div>
+
+                    <div class="card">
+
+                        <img src="../Image/appDeveloper.jpg" alt="user">
+                        <div class="stars" style="color: #32557f;display: flex;flex-direction: row;align-items: center;">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p>&#8220;Forbes should list site as one of the top growing applications of 2021, its amazing&#8221;.</p>
+                    </div>
                 </div>
             </div>
         </div>
