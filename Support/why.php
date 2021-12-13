@@ -240,7 +240,7 @@ require_once('../classes/DB.php');
 
                     <div class="card">
 
-                        <img src="../Image/appDeveloper.jpg" alt="user">
+                        <img src="../Users/kanyeEast.jpeg" alt="user">
                         <div class="starsWrapper">
                             <div class="stars">
                                 <i class="fas fa-star"></i>
