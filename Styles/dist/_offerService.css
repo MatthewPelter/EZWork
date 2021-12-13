@@ -81,7 +81,7 @@
   border-radius: 5px;
   resize: none;
 }
-.offerJob .offerJobWrapper .messageChat #sendmessage {
+.offerJob .offerJobWrapper .messageChat .button {
   float: right;
   color: #94c2ed;
   font-size: 16px;
@@ -91,6 +91,6 @@
   font-weight: bold;
   background: #f2f5f8;
 }
-.offerJob .offerJobWrapper .messageChat #sendmessage:hover {
+.offerJob .offerJobWrapper .messageChat .button:hover {
   color: #75b1e8;
 }

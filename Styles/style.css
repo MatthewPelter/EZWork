@@ -17170,7 +17170,7 @@ li {
   }
   .chat .chat-message textarea {
     width: 100%;
-    border: none;
+    border: 2px solid black;
     padding: 10px 20px;
     font: 14px/22px "Montserrat", Arial, sans-serif;
     margin-bottom: 10px;
@@ -29007,7 +29007,7 @@ footer p {
   resize: none;
 }
 
-.offerJob .offerJobWrapper .messageChat #sendmessage {
+.offerJob .offerJobWrapper .messageChat .button {
   float: right;
   color: #94c2ed;
   font-size: 16px;
@@ -29018,7 +29018,7 @@ footer p {
   background: #f2f5f8;
 }
 
-.offerJob .offerJobWrapper .messageChat #sendmessage:hover {
+.offerJob .offerJobWrapper .messageChat .button:hover {
   color: #75b1e8;
 }
 /*# sourceMappingURL=style.css.map */
