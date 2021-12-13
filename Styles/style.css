@@ -28999,11 +28999,26 @@ footer p {
   -webkit-appearance: none;
   appearance: none;
   width: 100%;
-  border: none;
+  border: 2px solid black;
   padding: 10px 20px;
   font: 1rem "Montserrat", Arial, sans-serif;
   margin-bottom: 10px;
   border-radius: 5px;
   resize: none;
+}
+
+.offerJob .offerJobWrapper .messageChat #sendmessage {
+  float: right;
+  color: #94c2ed;
+  font-size: 16px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  background: #f2f5f8;
+}
+
+.offerJob .offerJobWrapper .messageChat #sendmessage:hover {
+  color: #75b1e8;
 }
 /*# sourceMappingURL=style.css.map */
