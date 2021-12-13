@@ -135,7 +135,7 @@ if (mysqli_num_rows($jobResult) > 0) {
         }
 
         .wrapper {
-            max-width: 1000px;
+            max-width: 100%;
             margin: 4em auto;
             font-size: 16px;
         }
@@ -209,7 +209,7 @@ if (mysqli_num_rows($jobResult) > 0) {
         
             <div class="wrapper">
         
-                <h1>Project Progress</h1>
+                <h1 style="font-size: ;">Project Progress</h1>
         
                 <ol class="ProgressBar">
                     <li class="ProgressBar-step">
