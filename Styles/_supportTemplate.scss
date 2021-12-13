@@ -275,7 +275,7 @@ $darktext: rgb(121, 121, 121);
           flex-wrap: wrap;
 
           .card{
-            height: 60vh;
+            height: fit-content;
             width: 20rem;
             border-radius: 10px;
             background-color: #32557f;
