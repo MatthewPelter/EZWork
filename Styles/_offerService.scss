@@ -24,4 +24,47 @@ $darktext: rgb(121, 121, 121);
           color: #32557f;
         }
     }
+
+    .offerJobWrapper{
+        border-radius: 12px;
+        border: 3px solid lightgrey;
+        background-color: white;
+
+        .offerJobDescription{
+            width: 100%;
+            padding: 2rem;
+            border-bottom: 3px solid lightgrey;
+
+            h1{
+                font-size: 3rem;
+                color: $color1;
+                margin-bottom: 1rem;
+            }
+            h2{
+                margin-bottom: .25rem;
+                color: $darktext;
+                font-size: 1.5rem;
+            }
+            p{
+                font-size: 1.5rem;
+                color: #32557f;
+            }
+
+            button{
+                cursor: pointer;
+                border-radius: 15px;
+                border: none;
+                background: $lightColor;
+                font-size: 1.1rem;
+                color: white;
+                font-weight: bolder;
+                padding: 0.6rem 1.5rem;
+                margin-left: 0.25rem;
+                &:hover {
+                  transition: all 0.5s ease;
+                  background: $color1;
+                }
+            }
+        }
+    }
 }

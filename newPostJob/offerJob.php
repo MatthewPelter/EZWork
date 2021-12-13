@@ -152,81 +152,89 @@ if (mysqli_num_rows($jobResult) > 0) {
     include '../navbar.php';
     ?>
     <div class="offerJob">
-        <h1>Active Job</h1>
-        <?php
-        $client = $r['client_id'];
-        $freelancer = $r['freelancer_id'];
-        $clientName = mysqli_query($conn, "SELECT username FROM clients WHERE id='$client'");
-        $clientName = mysqli_fetch_assoc($clientName);
-        $clientName = $clientName['username'];
-    
-        $freelancerName = mysqli_query($conn, "SELECT username FROM clients WHERE id='$freelancer'");
-        $freelancerName = mysqli_fetch_assoc($freelancerName);
-        $freelancerName = $freelancerName['username'];
-        ?>
-    
-        <h1>Title: <?php echo $r['title']; ?></h1>
-        <h2>Description: <?php echo $r['description']; ?></h2>
-        <h2>Client: <?php echo $clientName; ?></h2>
-        <h2>Freelancer: <?php echo $freelancerName; ?></h2>
-        <p>Status: <?php echo ($r['status'] == 0) ? "Open" : "Closed"; ?></p>
-    
-    
-        <?php
-        if ($r['freelancer_id'] == $user_id && $r['freelancer_complete'] == 0 && $r['status'] != 1) { ?>
-            <button class="completeFreelancer">
-                <i class="fa fa-flag" aria-hidden="true"></i>
-                Mark Job as Complete
-            </button>
-        <?php
-        }
-        ?>
-        <?php if ($r['client_id'] == $user_id && $r['freelancer_complete'] == 1 && $r['status'] != 1) { ?>
-            <button class="completeClient">
-                <i class="fa fa-flag" aria-hidden="true"></i>
-                Mark Job as Complete
-            </button>
-        <?php } ?>
-    
-        <?php
-        if ($r['status'] == 1 && $r['freelancer_id'] == $user_id) {
-            $jobid = $r['job_id'];
-            $checkRating = mysqli_query($conn, "SELECT * FROM ratings WHERE job_id='$jobid' AND rater='$user_id'");
-            if (mysqli_num_rows($checkRating) == 0) {
-        ?>
-                <button class="rate">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <span>Rate Client</span>
-                </button>
-        <?php }
-        }
-        ?>
-    
-        <div class="wrapper">
-    
-            <h1>Project Progress</h1>
-    
-            <ol class="ProgressBar">
-                <li class="ProgressBar-step">
-                    <svg class="ProgressBar-icon">
-                        <use xlink:href="#checkmark-bold" />
-                    </svg>
-                    <span class="ProgressBar-stepLabel">Started Work</span>
-                </li>
-                <li class="ProgressBar-step">
-                    <svg class="ProgressBar-icon">
-                        <use xlink:href="#checkmark-bold" />
-                    </svg>
-                    <span class="ProgressBar-stepLabel">Finished</span>
-                </li>
-            </ol>
+        <div class="offerJobHeader">
+            <h1>Active Job</h1>
         </div>
-    
-        <svg xmlns="http://www.w3.org/2000/svg">
-            <symbol id="checkmark-bold" viewBox="0 0 24 24">
-                <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" />
-            </symbol>
-        </svg>
+
+        <div class="offerJobWrapper">
+            <?php
+            $client = $r['client_id'];
+            $freelancer = $r['freelancer_id'];
+            $clientName = mysqli_query($conn, "SELECT username FROM clients WHERE id='$client'");
+            $clientName = mysqli_fetch_assoc($clientName);
+            $clientName = $clientName['username'];
+        
+            $freelancerName = mysqli_query($conn, "SELECT username FROM clients WHERE id='$freelancer'");
+            $freelancerName = mysqli_fetch_assoc($freelancerName);
+            $freelancerName = $freelancerName['username'];
+            ?>
+            <div class="offerJobDescription">
+                <h1>Title: <?php echo $r['title']; ?></h1>
+                <h2>Description: <?php echo $r['description']; ?></h2>
+                <h2>Client: <?php echo $clientName; ?></h2>
+                <h2>Freelancer: <?php echo $freelancerName; ?></h2>
+                <p>Status: <?php echo ($r['status'] == 0) ? "Open" : "Closed"; ?></p>
+            
+            
+                <?php
+                if ($r['freelancer_id'] == $user_id && $r['freelancer_complete'] == 0 && $r['status'] != 1) { ?>
+                    <button class="completeFreelancer">
+                        <i class="fa fa-flag" aria-hidden="true"></i>
+                        Mark Job as Complete
+                    </button>
+                <?php
+                }
+                ?>
+                <?php if ($r['client_id'] == $user_id && $r['freelancer_complete'] == 1 && $r['status'] != 1) { ?>
+                    <button class="completeClient">
+                        <i class="fa fa-flag" aria-hidden="true"></i>
+                        Mark Job as Complete
+                    </button>
+                <?php } ?>
+            
+                <?php
+                if ($r['status'] == 1 && $r['freelancer_id'] == $user_id) {
+                    $jobid = $r['job_id'];
+                    $checkRating = mysqli_query($conn, "SELECT * FROM ratings WHERE job_id='$jobid' AND rater='$user_id'");
+                    if (mysqli_num_rows($checkRating) == 0) {
+                ?>
+                        <button class="rate">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <span>Rate Client</span>
+                        </button>
+                <?php }
+                }
+                ?>
+            </div>
+        
+            <div class="wrapper">
+        
+                <h1>Project Progress</h1>
+        
+                <ol class="ProgressBar" style="border-bottom: 3px solid lightgrey;">
+                    <li class="ProgressBar-step">
+                        <svg class="ProgressBar-icon">
+                            <use xlink:href="#checkmark-bold" />
+                        </svg>
+                        <span class="ProgressBar-stepLabel">Started Work</span>
+                    </li>
+                    <li class="ProgressBar-step">
+                        <svg class="ProgressBar-icon">
+                            <use xlink:href="#checkmark-bold" />
+                        </svg>
+                        <span class="ProgressBar-stepLabel">Finished</span>
+                    </li>
+                </ol>
+            </div>
+        
+            <svg xmlns="http://www.w3.org/2000/svg">
+                <symbol id="checkmark-bold" viewBox="0 0 24 24">
+                    <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" />
+                </symbol>
+            </svg>
+        
+        </div>
+
     </div>
 </body>
 
