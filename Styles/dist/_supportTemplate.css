@@ -270,7 +270,8 @@
 .whyEZWork .whyEZWorkContainer .reviewWrapper .reviewsCard .card img {
   width: 100%;
   height: 8rem;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: top;
   border-radius: 5px;
 }
 .whyEZWork .whyEZWorkContainer .reviewWrapper .reviewsCard .card .stars {
@@ -302,7 +303,8 @@
 .whyEZWork .whyEZWorkContainer .reviewWrapper .reviewsCard .card2 img {
   width: 100%;
   height: 8rem;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: top;
   border-radius: 5px;
 }
 .whyEZWork .whyEZWorkContainer .reviewWrapper .reviewsCard .card2 .stars {
