@@ -28119,8 +28119,8 @@ footer p {
 }
 
 .whyEZWork .whyEZWorkContainer .reviewWrapper .reviewsCard .card {
-  height: 20vh;
-  width: 14rem;
+  height: 50vh;
+  width: 17rem;
   border-radius: 10px;
   background-color: #32557f;
   border: 3px solid lightgreen;
@@ -28132,6 +28132,7 @@ footer p {
 
 .whyEZWork .whyEZWorkContainer .reviewWrapper .reviewsCard .card img {
   width: 100%;
+  height: 25vh;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 7px;
