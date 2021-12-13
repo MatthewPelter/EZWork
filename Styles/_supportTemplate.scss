@@ -275,8 +275,8 @@ $darktext: rgb(121, 121, 121);
           flex-wrap: wrap;
 
           .card{
-            margin-bottom: .5rem;
-            height: 342px;
+            margin-bottom: 1rem;
+            height: 345px;
             width: 17rem;
             border-radius: 10px;
             background-color: #32557f;
@@ -291,9 +291,16 @@ $darktext: rgb(121, 121, 121);
               object-position: top;
               border-radius: 5px;
             }
-            .stars{
-              margin: .5rem 0rem;
-              color: white;display: flex;flex-direction: row;align-items: center;
+            .starsWrapper{
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: center;
+
+              .stars{
+                margin: .5rem 0rem;
+                color: white;display: flex;flex-direction: row;align-items: center;
+              }
             }
 
             p{
@@ -308,8 +315,8 @@ $darktext: rgb(121, 121, 121);
           }
           
           .card2{
-            margin-bottom: .5rem;
-            height: 342px;
+            margin-bottom: 1rem;
+            height: 345px;
             width: 17rem;
             border-radius: 10px;
             background-color: lightgreen;
@@ -324,9 +331,15 @@ $darktext: rgb(121, 121, 121);
               object-position: top;
               border-radius: 5px;
             }
-            .stars{
-              margin: .5rem 0rem;
-              color: #32557f;display: flex;flex-direction: row;align-items: center;
+            .starsWrapper{
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: center;
+              .stars{
+                margin: .5rem 0rem;
+                color: #32557f;display: flex;flex-direction: row;align-items: center;
+              }
             }
 
             p{
