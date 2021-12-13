@@ -28907,9 +28907,8 @@ footer p {
 }
 
 .offerJob .offerJobHeader {
-  margin: 1rem 0rem;
+  margin: .5rem 0rem;
   width: 100%;
-  padding: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -28991,7 +28990,7 @@ footer p {
   background: #0a345e;
 }
 
-.offerJob .offerJobWrapper .messageChat {
+.offerJob .offerJobWrapper .messageChat textarea {
   width: 100%;
   border: none;
   padding: 10px 20px;

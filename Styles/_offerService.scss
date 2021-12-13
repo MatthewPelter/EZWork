@@ -9,9 +9,8 @@ $darktext: rgb(121, 121, 121);
     padding: 2.5rem 10rem;
 
     .offerJobHeader{
-        margin: 1rem 0rem;
+        margin: .5rem 0rem;
         width: 100%;
-        padding: 2rem;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -77,13 +76,15 @@ $darktext: rgb(121, 121, 121);
         }
 
         .messageChat{
-            width: 100%;
-            border: none;
-            padding: 10px 20px;
-            font: 1rem "Montserrat", Arial, sans-serif;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            resize: none;
+            textarea{
+                width: 100%;
+                border: none;
+                padding: 10px 20px;
+                font: 1rem "Montserrat", Arial, sans-serif;
+                margin-bottom: 10px;
+                border-radius: 5px;
+                resize: none;
+            }
         }
     }
 }

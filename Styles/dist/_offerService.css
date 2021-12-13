@@ -5,9 +5,8 @@
   padding: 2.5rem 10rem;
 }
 .offerJob .offerJobHeader {
-  margin: 1rem 0rem;
+  margin: 0.5rem 0rem;
   width: 100%;
-  padding: 2rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -67,7 +66,7 @@
   transition: all 0.5s ease;
   background: #0a345e;
 }
-.offerJob .offerJobWrapper .messageChat {
+.offerJob .offerJobWrapper .messageChat textarea {
   width: 100%;
   border: none;
   padding: 10px 20px;
