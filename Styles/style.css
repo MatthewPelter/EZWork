@@ -28096,12 +28096,12 @@ footer p {
   color: #797979;
 }
 
-.whyEZWork .whyEZWorkContainer .reviewsWrapper {
+.whyEZWork .whyEZWorkContainer .reviewWrapper {
   width: 100%;
   display: block;
 }
 
-.whyEZWork .whyEZWorkContainer .reviewsWrapper .reviewsCard {
+.whyEZWork .whyEZWorkContainer .reviewWrapper .reviewsCard {
   width: 100%;
   padding: 2rem;
   display: -webkit-box;
@@ -28118,7 +28118,7 @@ footer p {
       flex-wrap: wrap;
 }
 
-.whyEZWork .whyEZWorkContainer .reviewsWrapper .reviewsCard .card {
+.whyEZWork .whyEZWorkContainer .reviewWrapper .reviewsCard .card {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -28131,7 +28131,7 @@ footer p {
   padding: 2rem;
 }
 
-.whyEZWork .whyEZWorkContainer .reviewsWrapper .reviewsCard .card img {
+.whyEZWork .whyEZWorkContainer .reviewWrapper .reviewsCard .card img {
   width: 100%;
   height: 8rem;
   -o-object-fit: cover;
@@ -28141,7 +28141,7 @@ footer p {
      object-position: center;
 }
 
-.whyEZWork .whyEZWorkContainer .reviewsWrapper .reviewsCard .card p {
+.whyEZWork .whyEZWorkContainer .reviewWrapper .reviewsCard .card p {
   width: 100%;
   color: #797979;
   background: white;
@@ -28150,7 +28150,7 @@ footer p {
   line-height: 1.8;
 }
 
-.whyEZWork .whyEZWorkContainer .reviewsWrapper .reviewsCard .card2 {
+.whyEZWork .whyEZWorkContainer .reviewWrapper .reviewsCard .card2 {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;

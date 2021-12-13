@@ -245,11 +245,11 @@
   font-size: 1.1rem;
   color: #797979;
 }
-.whyEZWork .whyEZWorkContainer .reviewsWrapper {
+.whyEZWork .whyEZWorkContainer .reviewWrapper {
   width: 100%;
   display: block;
 }
-.whyEZWork .whyEZWorkContainer .reviewsWrapper .reviewsCard {
+.whyEZWork .whyEZWorkContainer .reviewWrapper .reviewsCard {
   width: 100%;
   padding: 2rem;
   display: flex;
@@ -257,7 +257,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.whyEZWork .whyEZWorkContainer .reviewsWrapper .reviewsCard .card {
+.whyEZWork .whyEZWorkContainer .reviewWrapper .reviewsCard .card {
   width: fit-content;
   border-radius: 10px;
   background-color: #32557f;
@@ -266,14 +266,14 @@
   margin: 1rem;
   padding: 2rem;
 }
-.whyEZWork .whyEZWorkContainer .reviewsWrapper .reviewsCard .card img {
+.whyEZWork .whyEZWorkContainer .reviewWrapper .reviewsCard .card img {
   width: 100%;
   height: 8rem;
   object-fit: cover;
   border: 1px solid lightgreen;
   object-position: center;
 }
-.whyEZWork .whyEZWorkContainer .reviewsWrapper .reviewsCard .card p {
+.whyEZWork .whyEZWorkContainer .reviewWrapper .reviewsCard .card p {
   width: 100%;
   color: #797979;
   background: white;
@@ -281,7 +281,7 @@
   padding: 1rem;
   line-height: 1.8;
 }
-.whyEZWork .whyEZWorkContainer .reviewsWrapper .reviewsCard .card2 {
+.whyEZWork .whyEZWorkContainer .reviewWrapper .reviewsCard .card2 {
   width: fit-content;
   border-radius: 10px;
   background-color: lightgreen;
