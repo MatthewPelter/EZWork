@@ -169,11 +169,11 @@ if (mysqli_num_rows($jobResult) > 0) {
             $freelancerName = $freelancerName['username'];
             ?>
             <div class="offerJobDescription">
-                <h1>Title: <?php echo $r['title']; ?></h1>
-                <h2>Description: <?php echo $r['description']; ?></h2>
-                <h2>Client: <?php echo $clientName; ?></h2>
-                <h2>Freelancer: <?php echo $freelancerName; ?></h2>
-                <p>Status: <?php echo ($r['status'] == 0) ? "Open" : "Closed"; ?></p>
+                <h1>Title: <span><?php echo $r['title']; ?></span></h1>
+                <h2>Description: <span><?php echo $r['description']; ?></span></h2>
+                <h2>Client: <span><?php echo $clientName; ?></span></h2>
+                <h2>Freelancer: <span><?php echo $freelancerName; ?></span></h2>
+                <p>Status: <span><?php echo ($r['status'] == 0) ? "Open" : "Closed"; ?></span></p>
             
             
                 <?php
@@ -211,7 +211,7 @@ if (mysqli_num_rows($jobResult) > 0) {
         
                 <h1>Project Progress</h1>
         
-                <ol class="ProgressBar" style="border-bottom: 3px solid lightgrey;">
+                <ol class="ProgressBar">
                     <li class="ProgressBar-step">
                         <svg class="ProgressBar-icon">
                             <use xlink:href="#checkmark-bold" />
