@@ -26,7 +26,7 @@ require_once('../classes/DB.php');
 
     <?php include '../navbar.php'; ?>
     
-    <div class="help">
+    <div class="helpSupport">
         <div class="helpHeader">
             <h2>Help & Support</h2>
         </div>
