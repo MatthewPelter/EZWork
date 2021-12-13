@@ -28174,6 +28174,7 @@ footer p {
 }
 
 .whyEZWork .whyEZWorkContainer .reviewWrapper .reviewsCard .card p {
+  font-size: .9rem;
   text-align: center;
   width: 100%;
   color: #797979;
@@ -28237,6 +28238,7 @@ footer p {
 }
 
 .whyEZWork .whyEZWorkContainer .reviewWrapper .reviewsCard .card2 p {
+  font-size: .9rem;
   text-align: center;
   width: 100%;
   color: #797979;
