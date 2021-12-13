@@ -28989,14 +28989,4 @@ footer p {
   transition: all 0.5s ease;
   background: #0a345e;
 }
-
-.offerJob .offerJobWrapper .messageChat textarea {
-  width: 100%;
-  border: none;
-  padding: 10px 20px;
-  font: 1rem "Montserrat", Arial, sans-serif;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  resize: none;
-}
 /*# sourceMappingURL=style.css.map */

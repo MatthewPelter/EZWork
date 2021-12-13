@@ -145,6 +145,18 @@ if (mysqli_num_rows($jobResult) > 0) {
         .people-list {
             display: none;
         }
+        .chat .chat-message textarea {
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            border: none;
+            padding: 10px 20px;
+            font: 14px/22px "Montserrat", Arial, sans-serif;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            resize: none;
+        }
     </style>
 </head>
 
@@ -235,7 +247,7 @@ if (mysqli_num_rows($jobResult) > 0) {
                 </symbol>
             </svg>
 
-            <div class="messageChat" style="margin-bottom: 2rem;">
+            <div class="messageChat" style="margin-bottom: 1rem;">
                 <!-- insert message -->
             </div>
 
