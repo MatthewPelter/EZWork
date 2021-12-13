@@ -273,6 +273,12 @@
   object-position: top;
   border-radius: 7px;
 }
+.whyEZWork .whyEZWorkContainer .reviewWrapper .reviewsCard .card .stars {
+  color: #32557f;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 .whyEZWork .whyEZWorkContainer .reviewWrapper .reviewsCard .card p {
   width: 100%;
   color: #797979;
