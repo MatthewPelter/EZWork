@@ -1,0 +1,21 @@
+.offerJob {
+  margin-top: 0;
+  width: 100%;
+  background: whitesmoke;
+  padding: 2.5rem 10rem;
+}
+.offerJob .offerJobHeader {
+  margin: 1.5rem 0rem;
+  width: 100%;
+  height: 22vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.offerJob .offerJobHeader h1 {
+  font-size: 3rem;
+  text-decoration: underline;
+  color: #32557f;
+}

@@ -33,34 +33,37 @@ require_once('../classes/DB.php');
 
         <div class="helpSupportContainer">
             <div class="helpSupportCard">
-                <h2>Login,Register, & Log Out</h2>
+                <h2>Log-In/Out Guide</h2>
+                <i class="fas fa-chevron-up"></i>
+            </div>
+            <div class="loginOutWrapper">
+                
+            </div>
+            <div class="helpSupportCard">
+                <h2>Post A Job Guide</h2>
                 <i class="fas fa-chevron-up"></i>
             </div>
             <div class="helpSupportCard">
-                <h2>Post A Job</h2>
+                <h2>Find Freelancers Guide</h2>
                 <i class="fas fa-chevron-up"></i>
             </div>
             <div class="helpSupportCard">
-                <h2>Find Freelancers</h2>
-                <i class="fas fa-chevron-up"></i>
-            </div>
-            <div class="helpSupportCard">
-                <h2>Find Work</h2>
-                <i class="fas fa-chevron-up"></i>
-            </div>
-
-            <div class="helpSupportCard">
-                <h2>Messaging</h2>
-                <i class="fas fa-chevron-up"></i>
-            </div>
-
-            <div class="helpSupportCard">
-                <h2>Change Password</h2>
+                <h2>Find Work Guide</h2>
                 <i class="fas fa-chevron-up"></i>
             </div>
 
             <div class="helpSupportCard">
-                <h2>Change Avatar</h2>
+                <h2>Messaging Guide</h2>
+                <i class="fas fa-chevron-up"></i>
+            </div>
+
+            <div class="helpSupportCard">
+                <h2>Change Password Guide</h2>
+                <i class="fas fa-chevron-up"></i>
+            </div>
+
+            <div class="helpSupportCard">
+                <h2>Change Avatar Guide</h2>
                 <i class="fas fa-chevron-up"></i>
             </div>
 
@@ -70,12 +73,12 @@ require_once('../classes/DB.php');
             </div>
 
             <div class="helpSupportCard">
-                <h2>Job Help</h2>
+                <h2>Job Help Guide</h2>
                 <i class="fas fa-chevron-up"></i>
             </div>
 
             <div class="helpSupportCard">
-                <h2>EZWork Marketplace</h2>
+                <h2>EZWork Marketplace Guide</h2>
                 <i class="fas fa-chevron-up"></i>
             </div>
         </div>

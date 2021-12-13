@@ -28898,4 +28898,37 @@ footer p {
   -webkit-filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, 0.1));
           filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, 0.1));
 }
+
+.offerJob {
+  margin-top: 0;
+  width: 100%;
+  background: whitesmoke;
+  padding: 2.5rem 10rem;
+}
+
+.offerJob .offerJobHeader {
+  margin: 1.5rem 0rem;
+  width: 100%;
+  height: 22vh;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.offerJob .offerJobHeader h1 {
+  font-size: 3rem;
+  text-decoration: underline;
+  color: #32557f;
+}
 /*# sourceMappingURL=style.css.map */
