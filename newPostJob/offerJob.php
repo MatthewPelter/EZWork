@@ -151,6 +151,20 @@ if (mysqli_num_rows($jobResult) > 0) {
             background: #444753;
             border-radius: 5px;
         }
+        .chat .chat-message .button {
+    float: right;
+    color: #94c2ed;
+    font-size: 16px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    background: #f2f5f8;
+  }
+
+  .chat .chat-message button:hover {
+    color: #75b1e8;
+  }
     </style>
 </head>
 
