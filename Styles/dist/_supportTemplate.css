@@ -290,6 +290,7 @@
   align-items: center;
 }
 .whyEZWork .whyEZWorkContainer .reviewWrapper .reviewsCard .card p {
+  z-index: 4;
   font-size: 0.9rem;
   text-align: center;
   width: 100%;
@@ -330,6 +331,7 @@
   align-items: center;
 }
 .whyEZWork .whyEZWorkContainer .reviewWrapper .reviewsCard .card2 p {
+  z-index: 4;
   font-size: 0.9rem;
   text-align: center;
   width: 100%;
@@ -445,4 +447,29 @@
   border-top: none;
   border-bottom-color: #fff;
   filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, 0.1));
+}
+
+.help {
+  margin-top: 0;
+  width: 100%;
+  background: whitesmoke;
+  padding: 2.5rem 10rem;
+}
+.help .helpHeader {
+  margin: 1.5rem 0rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.help .helpHeader h2 {
+  font-size: 3.5rem;
+  text-decoration: underline;
+  color: #054e97;
+}
+.help .helpContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
