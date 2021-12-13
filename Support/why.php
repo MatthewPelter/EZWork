@@ -271,8 +271,6 @@ require_once('../classes/DB.php');
     </datalist>
 </body>
 
-<!--Script for the search bar and datalist-->
-<script src="../SkillsContainer/allJobsSkills.js"></script>
 
 <script>
     const missionArrowUp = document.getElementById('missionUp');
