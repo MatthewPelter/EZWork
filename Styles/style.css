@@ -28419,7 +28419,7 @@ footer p {
   padding: 2.5rem 10rem;
 }
 
-.helpSupport .helpHeader {
+.helpSupport .helpSupportHeader {
   margin: 1.5rem 0rem;
   width: 100%;
   height: 25vh;
@@ -28440,13 +28440,13 @@ footer p {
           justify-content: flex-start;
 }
 
-.helpSupport .helpHeader h2 {
+.helpSupport .helpSupportHeader h2 {
   font-size: 3.5rem;
   text-decoration: underline;
   color: whitesmoke;
 }
 
-.helpSupport .helpContainer {
+.helpSupport .helpSupportContainer {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -28457,7 +28457,7 @@ footer p {
           flex-direction: column;
 }
 
-.helpSupport .helpContainer .helpCard {
+.helpSupport .helpSupportContainer .helpSupportCard {
   width: 100%;
   padding: 1.5rem 0rem;
   display: -webkit-box;
@@ -28479,23 +28479,23 @@ footer p {
   border-right: none;
 }
 
-.helpSupport .helpContainer .helpCard h2 {
+.helpSupport .helpSupportContainer .helpSupportCard h2 {
   font-size: 2rem;
   color: #054e97;
 }
 
-.helpSupport .helpContainer .helpCard i {
+.helpSupport .helpSupportContainer .helpSupportCard i {
   cursor: pointer;
   font-size: 2rem;
   color: #0a345e;
 }
 
-.helpSupport .helpContainer .missionWrapper {
+.helpSupport .helpSupportContainer .missionWrapper {
   width: 100%;
   display: block;
 }
 
-.helpSupport .helpContainer .missionWrapper .missionCard {
+.helpSupport .helpSupportContainer .missionWrapper .missionCard {
   width: 100%;
   padding: 2rem;
   display: -webkit-box;
@@ -28505,19 +28505,19 @@ footer p {
       flex-wrap: wrap;
 }
 
-.helpSupport .helpContainer .missionWrapper .missionCard p {
+.helpSupport .helpSupportContainer .missionWrapper .missionCard p {
   line-height: 1.8;
   font-size: 1.1rem;
   color: #797979;
   margin: 1rem 0rem;
 }
 
-.helpSupport .helpContainer .whatWrapper {
+.helpSupport .helpSupportContainer .whatWrapper {
   width: 100%;
   display: block;
 }
 
-.helpSupport .helpContainer .whatWrapper .whatCard {
+.helpSupport .helpSupportContainer .whatWrapper .whatCard {
   width: 100%;
   padding: 2rem;
   display: -webkit-box;
@@ -28527,19 +28527,19 @@ footer p {
       flex-wrap: wrap;
 }
 
-.helpSupport .helpContainer .whatWrapper .whatCard p {
+.helpSupport .helpSupportContainer .whatWrapper .whatCard p {
   line-height: 1.8;
   font-size: 1.1rem;
   color: #797979;
   margin: 1rem 0rem;
 }
 
-.helpSupport .helpContainer .communityWrapper {
+.helpSupport .helpSupportContainer .communityWrapper {
   width: 100%;
   display: block;
 }
 
-.helpSupport .helpContainer .communityWrapper .communityCard {
+.helpSupport .helpSupportContainer .communityWrapper .communityCard {
   width: 100%;
   padding: 2rem;
   display: -webkit-box;
@@ -28557,14 +28557,14 @@ footer p {
           align-items: center;
 }
 
-.helpSupport .helpContainer .communityWrapper .communityCard img {
+.helpSupport .helpSupportContainer .communityWrapper .communityCard img {
   border-radius: 10px;
   width: 40%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.helpSupport .helpContainer .communityWrapper .communityCard .communityText {
+.helpSupport .helpSupportContainer .communityWrapper .communityCard .communityText {
   margin: .5rem 0rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -28577,20 +28577,20 @@ footer p {
       flex-wrap: wrap;
 }
 
-.helpSupport .helpContainer .communityWrapper .communityCard .communityText p {
+.helpSupport .helpSupportContainer .communityWrapper .communityCard .communityText p {
   line-height: 1.8;
   font-size: 1.1rem;
   color: #797979;
 }
 
-.helpSupport .helpContainer .reviewWrapper {
+.helpSupport .helpSupportContainer .reviewWrapper {
   width: 100%;
   display: block;
   background: #e7e7e7;
   border-radius: 12px;
 }
 
-.helpSupport .helpContainer .reviewWrapper .reviewsCard {
+.helpSupport .helpSupportContainer .reviewWrapper .reviewsCard {
   width: 100%;
   padding: 2rem;
   display: -webkit-box;
@@ -28607,7 +28607,7 @@ footer p {
       flex-wrap: wrap;
 }
 
-.helpSupport .helpContainer .reviewWrapper .reviewsCard .card {
+.helpSupport .helpSupportContainer .reviewWrapper .reviewsCard .card {
   margin-bottom: 1rem;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -28621,7 +28621,7 @@ footer p {
   padding: 1rem;
 }
 
-.helpSupport .helpContainer .reviewWrapper .reviewsCard .card img {
+.helpSupport .helpSupportContainer .reviewWrapper .reviewsCard .card img {
   width: 100%;
   height: 12rem;
   -o-object-fit: cover;
@@ -28631,7 +28631,7 @@ footer p {
   border-radius: 5px;
 }
 
-.helpSupport .helpContainer .reviewWrapper .reviewsCard .card .starsWrapper {
+.helpSupport .helpSupportContainer .reviewWrapper .reviewsCard .card .starsWrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -28647,7 +28647,7 @@ footer p {
           justify-content: center;
 }
 
-.helpSupport .helpContainer .reviewWrapper .reviewsCard .card .starsWrapper .stars {
+.helpSupport .helpSupportContainer .reviewWrapper .reviewsCard .card .starsWrapper .stars {
   margin: .5rem 0rem;
   color: white;
   display: -webkit-box;
@@ -28662,7 +28662,7 @@ footer p {
           align-items: center;
 }
 
-.helpSupport .helpContainer .reviewWrapper .reviewsCard .card p {
+.helpSupport .helpSupportContainer .reviewWrapper .reviewsCard .card p {
   z-index: 4;
   font-size: .9rem;
   text-align: center;
@@ -28674,7 +28674,7 @@ footer p {
   line-height: 1.5;
 }
 
-.helpSupport .helpContainer .reviewWrapper .reviewsCard .card2 {
+.helpSupport .helpSupportContainer .reviewWrapper .reviewsCard .card2 {
   margin-bottom: 1rem;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -28688,7 +28688,7 @@ footer p {
   padding: 1rem;
 }
 
-.helpSupport .helpContainer .reviewWrapper .reviewsCard .card2 img {
+.helpSupport .helpSupportContainer .reviewWrapper .reviewsCard .card2 img {
   width: 100%;
   height: 12rem;
   -o-object-fit: cover;
@@ -28698,7 +28698,7 @@ footer p {
   border-radius: 5px;
 }
 
-.helpSupport .helpContainer .reviewWrapper .reviewsCard .card2 .starsWrapper {
+.helpSupport .helpSupportContainer .reviewWrapper .reviewsCard .card2 .starsWrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -28714,7 +28714,7 @@ footer p {
           justify-content: center;
 }
 
-.helpSupport .helpContainer .reviewWrapper .reviewsCard .card2 .starsWrapper .stars {
+.helpSupport .helpSupportContainer .reviewWrapper .reviewsCard .card2 .starsWrapper .stars {
   margin: .5rem 0rem;
   color: #32557f;
   display: -webkit-box;
@@ -28729,7 +28729,7 @@ footer p {
           align-items: center;
 }
 
-.helpSupport .helpContainer .reviewWrapper .reviewsCard .card2 p {
+.helpSupport .helpSupportContainer .reviewWrapper .reviewsCard .card2 p {
   z-index: 4;
   font-size: .9rem;
   text-align: center;
@@ -28741,14 +28741,14 @@ footer p {
   line-height: 1.5;
 }
 
-.helpSupport .helpContainer .userWrapper {
+.helpSupport .helpSupportContainer .userWrapper {
   width: 100%;
   display: block;
   background-color: #e6e4e4;
   border-radius: 10px;
 }
 
-.helpSupport .helpContainer .userWrapper .userCard {
+.helpSupport .helpSupportContainer .userWrapper .userCard {
   width: 100%;
   padding: 2rem;
   display: -webkit-box;
@@ -28760,12 +28760,12 @@ footer p {
           flex-direction: column;
 }
 
-.helpSupport .helpContainer .userWrapper .userCard .user {
+.helpSupport .helpSupportContainer .userWrapper .userCard .user {
   width: 100%;
   margin: .5rem 0rem;
 }
 
-.helpSupport .helpContainer .userWrapper .userCard .user .usernameBar {
+.helpSupport .helpSupportContainer .userWrapper .userCard .user .usernameBar {
   margin-bottom: .25rem;
   width: 100%;
   display: -webkit-box;
@@ -28783,7 +28783,7 @@ footer p {
           justify-content: flex-start;
 }
 
-.helpSupport .helpContainer .userWrapper .userCard .user .usernameBar img {
+.helpSupport .helpSupportContainer .userWrapper .userCard .user .usernameBar img {
   border-radius: 50%;
   height: 4rem;
   width: 4rem;
@@ -28792,13 +28792,13 @@ footer p {
   border: 2px solid #32557f;
 }
 
-.helpSupport .helpContainer .userWrapper .userCard .user .usernameBar span {
+.helpSupport .helpSupportContainer .userWrapper .userCard .user .usernameBar span {
   font-size: 1.25rem;
   color: #797979;
   margin-left: .5rem;
 }
 
-.helpSupport .helpContainer .userWrapper .userCard .user .story p {
+.helpSupport .helpSupportContainer .userWrapper .userCard .user .story p {
   position: relative;
   width: 60%;
   background-color: #fff;
@@ -28809,7 +28809,7 @@ footer p {
           box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.3), 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.2);
 }
 
-.helpSupport .helpContainer .userWrapper .userCard .user .story p::before {
+.helpSupport .helpSupportContainer .userWrapper .userCard .user .story p::before {
   content: '';
   position: absolute;
   width: 0;
@@ -28823,12 +28823,12 @@ footer p {
           filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, 0.1));
 }
 
-.helpSupport .helpContainer .userWrapper .userCard .user2 {
+.helpSupport .helpSupportContainer .userWrapper .userCard .user2 {
   width: 100%;
   margin: .5rem 0rem;
 }
 
-.helpSupport .helpContainer .userWrapper .userCard .user2 .usernameBar2 {
+.helpSupport .helpSupportContainer .userWrapper .userCard .user2 .usernameBar2 {
   margin-bottom: .25rem;
   width: 100%;
   display: -webkit-box;
@@ -28846,7 +28846,7 @@ footer p {
           justify-content: flex-end;
 }
 
-.helpSupport .helpContainer .userWrapper .userCard .user2 .usernameBar2 img {
+.helpSupport .helpSupportContainer .userWrapper .userCard .user2 .usernameBar2 img {
   border-radius: 50%;
   height: 4rem;
   width: 4rem;
@@ -28855,13 +28855,13 @@ footer p {
   border: 2px solid lightgreen;
 }
 
-.helpSupport .helpContainer .userWrapper .userCard .user2 .usernameBar2 span {
+.helpSupport .helpSupportContainer .userWrapper .userCard .user2 .usernameBar2 span {
   font-size: 1.25rem;
   color: #797979;
   margin-right: .5rem;
 }
 
-.helpSupport .helpContainer .userWrapper .userCard .user2 .story2 {
+.helpSupport .helpSupportContainer .userWrapper .userCard .user2 .story2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -28874,7 +28874,7 @@ footer p {
           justify-content: flex-end;
 }
 
-.helpSupport .helpContainer .userWrapper .userCard .user2 .story2 p {
+.helpSupport .helpSupportContainer .userWrapper .userCard .user2 .story2 p {
   position: relative;
   width: 60%;
   background-color: #fff;
@@ -28885,7 +28885,7 @@ footer p {
           box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.3), 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.2);
 }
 
-.helpSupport .helpContainer .userWrapper .userCard .user2 .story2 p::before {
+.helpSupport .helpSupportContainer .userWrapper .userCard .user2 .story2 p::before {
   content: '';
   position: absolute;
   width: 0;
