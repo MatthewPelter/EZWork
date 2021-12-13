@@ -275,6 +275,7 @@ $darktext: rgb(121, 121, 121);
           flex-wrap: wrap;
 
           .card{
+            height: 20vh;
             width: 14rem;
             border-radius: 10px;
             background-color: #32557f;
@@ -285,8 +286,8 @@ $darktext: rgb(121, 121, 121);
 
             img{
               width: 100%;
-              object-fit: contain;
-              border: 1px solid lightgreen;
+              object-fit: cover;
+              border-radius: 7px;
             }
 
             p{

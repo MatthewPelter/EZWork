@@ -258,6 +258,7 @@
   flex-wrap: wrap;
 }
 .whyEZWork .whyEZWorkContainer .reviewWrapper .reviewsCard .card {
+  height: 20vh;
   width: 14rem;
   border-radius: 10px;
   background-color: #32557f;
@@ -268,8 +269,8 @@
 }
 .whyEZWork .whyEZWorkContainer .reviewWrapper .reviewsCard .card img {
   width: 100%;
-  object-fit: contain;
-  border: 1px solid lightgreen;
+  object-fit: cover;
+  border-radius: 7px;
 }
 .whyEZWork .whyEZWorkContainer .reviewWrapper .reviewsCard .card p {
   width: 100%;
