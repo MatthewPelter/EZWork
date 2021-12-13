@@ -209,7 +209,7 @@ require_once('../classes/DB.php');
 
                     <div class="card">
 
-                        <img src="../Users/user.svg" alt="user">
+                        <img src="../Users/joseAldo.jpg" alt="user">
                         <div class="starsWrapper">
                             <div class="stars">
                                 <i class="fas fa-star"></i>
@@ -224,7 +224,7 @@ require_once('../classes/DB.php');
 
                     <div class="card2">
 
-                        <img src="../Image/carpentry.jpg" alt="user">
+                        <img src="../Users/drake.png" alt="user">
                         <div class="starsWrapper">
                             <div class="stars" style="color: #32557f;display: flex;flex-direction: row;align-items: center;">
                                 <i class="fas fa-star"></i>
