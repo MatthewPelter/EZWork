@@ -144,7 +144,18 @@ require_once('../classes/DB.php');
             </div>
             <div class="reviewWrapper">
                 <div class="reviewsCard">
+                    <div class="card">
 
+                        <img src="../Users/connor.jpg" alt="user">
+                        <div class="stars" style="color: #32557f;display: flex;flex-direction: row;align-items: center;">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p>&#8220;Simple, clean and makes life a little easier , I love using the site&#8221;.</p>
+                    </div>
                 </div>
             </div>
         </div>

@@ -28101,21 +28101,65 @@ footer p {
   display: block;
 }
 
-.whyEZWork .whyEZWorkContainer .reviewsWrapper .whatCard {
+.whyEZWork .whyEZWorkContainer .reviewsWrapper .reviewsCard {
   width: 100%;
   padding: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
-.whyEZWork .whyEZWorkContainer .reviewsWrapper .whatCard p {
-  line-height: 1.8;
-  font-size: 1.1rem;
+.whyEZWork .whyEZWorkContainer .reviewsWrapper .reviewsCard .card {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 10px;
+  background-color: #32557f;
+  border: 3px solid lightgreen;
+  -webkit-box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.3), 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.3), 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.2);
+  margin: 1rem;
+  padding: 2rem;
+}
+
+.whyEZWork .whyEZWorkContainer .reviewsWrapper .reviewsCard .card img {
+  width: 100%;
+  height: 8rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 1px solid lightgreen;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.whyEZWork .whyEZWorkContainer .reviewsWrapper .reviewsCard .card p {
+  width: 100%;
   color: #797979;
-  margin: 1rem 0rem;
+  background: white;
+  border-radius: 5px;
+  padding: 1rem;
+  line-height: 1.8;
+}
+
+.whyEZWork .whyEZWorkContainer .reviewsWrapper .reviewsCard .card2 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 10px;
+  background-color: lightgreen;
+  border: 3px solid #32557f;
+  -webkit-box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.3), 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.3), 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.2);
+  margin: 1rem;
 }
 
 .whyEZWork .whyEZWorkContainer .userWrapper {
