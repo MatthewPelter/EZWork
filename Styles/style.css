@@ -28128,12 +28128,11 @@ footer p {
   border: 3px solid lightgreen;
   -webkit-box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.3), 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.2);
           box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.3), 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.2);
-  margin: 1rem;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .whyEZWork .whyEZWorkContainer .reviewWrapper .reviewsCard .card img {
-  width: 8rem;
+  width: 100%;
   height: 8rem;
   -o-object-fit: cover;
      object-fit: cover;
@@ -28141,7 +28140,7 @@ footer p {
 }
 
 .whyEZWork .whyEZWorkContainer .reviewWrapper .reviewsCard .card .stars {
-  color: #32557f;
+  color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -28174,12 +28173,11 @@ footer p {
   border: 3px solid #32557f;
   -webkit-box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.3), 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.2);
           box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.3), 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.2);
-  margin: 1rem;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .whyEZWork .whyEZWorkContainer .reviewWrapper .reviewsCard .card2 img {
-  width: 8rem;
+  width: 100%;
   height: 8rem;
   -o-object-fit: cover;
      object-fit: cover;

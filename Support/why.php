@@ -147,7 +147,7 @@ require_once('../classes/DB.php');
                     <div class="card">
 
                         <img src="../Users/connor.jpg" alt="user">
-                        <div class="stars" style="color: #32557f;display: flex;flex-direction: row;align-items: center;">
+                        <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -173,7 +173,7 @@ require_once('../classes/DB.php');
                     <div class="card">
 
                         <img src="../Users/dustin.jpg" alt="user">
-                        <div class="stars" style="color: #32557f;display: flex;flex-direction: row;align-items: center;">
+                        <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -199,7 +199,7 @@ require_once('../classes/DB.php');
                     <div class="card">
 
                         <img src="../Users/leo.JPG" alt="user">
-                        <div class="stars" style="color: #32557f;display: flex;flex-direction: row;align-items: center;">
+                        <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="far fa-star"></i>
@@ -225,7 +225,7 @@ require_once('../classes/DB.php');
                     <div class="card">
 
                         <img src="../Image/appDeveloper.jpg" alt="user">
-                        <div class="stars" style="color: #32557f;display: flex;flex-direction: row;align-items: center;">
+                        <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="far fa-star"></i>
