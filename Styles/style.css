@@ -28122,7 +28122,7 @@ footer p {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  width: 20rem;
+  width: 17rem;
   border-radius: 10px;
   background-color: #32557f;
   border: 3px solid lightgreen;
@@ -28134,7 +28134,6 @@ footer p {
 
 .whyEZWork .whyEZWorkContainer .reviewWrapper .reviewsCard .card img {
   width: 100%;
-  height: 25vh;
   -o-object-fit: contain;
      object-fit: contain;
   -o-object-position: top;
@@ -28147,7 +28146,7 @@ footer p {
   color: #797979;
   background: white;
   border-radius: 5px;
-  padding: 1rem;
+  padding: .5rem;
   line-height: 1.8;
 }
 
