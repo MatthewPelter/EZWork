@@ -28445,6 +28445,9 @@ footer p {
 
 .help .helpContainer {
   width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: (1fr)[5];
@@ -28459,7 +28462,7 @@ footer p {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-area: 1 / 1 / 6 / 2;
-  border-left: 4px solid lightgrey;
+  border-right: 4px solid lightgrey;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -28471,7 +28474,10 @@ footer p {
 
 .help .helpContainer .helpNav .helpCard {
   width: 100%;
-  background-color: white;
+  border: 2px solid lightgrey;
+  border-left: none;
+  border-right: none;
+  cursor: pointer;
 }
 
 .help .helpContainer .helpNav .helpCard h2 {
@@ -28483,7 +28489,6 @@ footer p {
 }
 
 .help .helpContainer .helpNav .helpCard:hover {
-  background-color: lightgrey;
   color: #32557f;
 }
 
