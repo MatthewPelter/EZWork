@@ -135,6 +135,7 @@ if (mysqli_num_rows($jobResult) > 0) {
         }
 
         .wrapper {
+            padding: 2rem 3rem;
             max-width: 100%;
             margin: 4em auto;
             font-size: 16px;
@@ -209,7 +210,7 @@ if (mysqli_num_rows($jobResult) > 0) {
         
             <div class="wrapper">
         
-                <h1 style="font-size: ;">Project Progress</h1>
+                <h1 style="font-size: 2rem;color: #00637C;">Project Progress</h1>
         
                 <ol class="ProgressBar">
                     <li class="ProgressBar-step">
@@ -235,12 +236,14 @@ if (mysqli_num_rows($jobResult) > 0) {
         
         </div>
 
+        <div class="messageChat">
+            <!-- insert message -->
+        </div>
+
     </div>
 </body>
 
-<div class="messageChat">
-    <!-- insert message -->
-</div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.2.1/dist/sweetalert2.all.min.js"></script>
 <script type="text/javascript">
