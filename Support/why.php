@@ -146,7 +146,7 @@ require_once('../classes/DB.php');
                 <div class="reviewsCard">
                     <div class="card">
 
-                        <img src="../Users/connor.jpg" alt="user">
+                        <img src="../Users/hasbulla.jpg" alt="user">
                         <div class="starsWrapper">
                             <div class="stars">
                                 <i class="fas fa-star"></i>
