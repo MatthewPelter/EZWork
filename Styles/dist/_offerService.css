@@ -66,6 +66,9 @@
   transition: all 0.5s ease;
   background: #0a345e;
 }
+.offerJob .offerJobWrapper .messageChat {
+  background-color: #444753;
+}
 .offerJob .offerJobWrapper .messageChat input {
   -moz-appearance: none;
   -webkit-appearance: none;

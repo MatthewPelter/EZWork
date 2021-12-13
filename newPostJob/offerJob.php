@@ -145,6 +145,12 @@ if (mysqli_num_rows($jobResult) > 0) {
         .people-list {
             display: none;
         }
+        .message-container {
+            margin: 150px auto 0;
+            width: 700px;
+            background: #444753;
+            border-radius: 5px;
+        }
     </style>
 </head>
 
@@ -229,7 +235,7 @@ if (mysqli_num_rows($jobResult) > 0) {
                 </ol>
             </div>
 
-            <div class="messageChat" style="margin-bottom: 1rem;">
+            <div class="messageChat">
                 <!-- insert message -->
             </div>            
         
