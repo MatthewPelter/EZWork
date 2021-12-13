@@ -470,36 +470,24 @@
 }
 .help .helpContainer {
   width: 100%;
-  height: fit-content;
-  display: grid;
-  grid-template-rows: repeat(5, 1fr);
-}
-.help .helpContainer .helpNav {
-  width: 100%;
-  padding: 0rem 1rem;
-  grid-area: 1/1/6/2;
-  border-right: 4px solid lightgrey;
   display: flex;
   flex-direction: column;
 }
-.help .helpContainer .helpNav .helpCard {
+.help .helpContainer .helpCard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 0rem;
+  border: 3px solid lightgrey;
   width: 100%;
-  border: 2px solid lightgrey;
-  border-left: none;
-  border-right: none;
-  cursor: pointer;
+  margin-bottom: 0.25rem;
 }
-.help .helpContainer .helpNav .helpCard h2 {
-  width: 100%;
-  text-align: center;
-  font-size: 1rem;
-  color: #797979;
-  padding: 1rem 0rem;
-}
-.help .helpContainer .helpNav .helpCard:hover {
+.help .helpContainer .helpCard h2 {
+  font-size: 3rem;
   color: #32557f;
 }
-.help .helpContainer .helpWrapper {
-  width: 100%;
-  grid-area: 1/2/6/6;
+.help .helpContainer .helpCard i {
+  font-size: 1.5rem;
+  color: #0a345e;
 }

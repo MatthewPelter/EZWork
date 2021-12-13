@@ -28445,24 +28445,6 @@ footer p {
 
 .help .helpContainer {
   width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: (1fr)[5];
-      grid-template-rows: repeat(5, 1fr);
-}
-
-.help .helpContainer .helpNav {
-  width: 100%;
-  padding: 0rem 1rem;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 5;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-area: 1 / 1 / 6 / 2;
-  border-right: 4px solid lightgrey;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -28472,32 +28454,33 @@ footer p {
           flex-direction: column;
 }
 
-.help .helpContainer .helpNav .helpCard {
+.help .helpContainer .helpCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.5rem 0rem;
+  border: 3px solid lightgrey;
   width: 100%;
-  border: 2px solid lightgrey;
-  border-left: none;
-  border-right: none;
-  cursor: pointer;
+  margin-bottom: .25rem;
 }
 
-.help .helpContainer .helpNav .helpCard h2 {
-  width: 100%;
-  text-align: center;
-  font-size: 1rem;
-  color: #797979;
-  padding: 1rem 0rem;
-}
-
-.help .helpContainer .helpNav .helpCard:hover {
+.help .helpContainer .helpCard h2 {
+  font-size: 3rem;
   color: #32557f;
 }
 
-.help .helpContainer .helpWrapper {
-  width: 100%;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 5;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 4;
-  grid-area: 1 / 2 / 6 / 6;
+.help .helpContainer .helpCard i {
+  font-size: 1.5rem;
+  color: #0a345e;
 }
 /*# sourceMappingURL=style.css.map */

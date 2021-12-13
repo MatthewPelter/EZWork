@@ -32,47 +32,43 @@ require_once('../classes/DB.php');
         </div>
 
         <div class="helpContainer">
-            <div class="helpNav">
-                <div class="LoginRegister">
+        <div class="helpCard">
                     <h2>Login & Register</h2>
                 </div>
-                <div class="postAJobHelp">
+                <div class="helpCard">
                     <h2>Post A Job</h2>
                 </div>
-                <div class="FindFreelancerHelp">
+                <div class="helpCard">
                     <h2>Find Freelancers</h2>
                 </div>
-                <div class="FindWorkHelp">
+                <div class="helpCard">
                     <h2>Find Work</h2>
                 </div>
 
-                <div class="howToMessage">
+                <div class="helpCard">
                     <h2>Messaging</h2>
                 </div>
 
-                <div class="ChangePasswordHelp">
+                <div class="helpCard">
                     <h2>Change Password</h2>
                 </div>
 
-                <div class="changeAvatarHelp">
+                <div class="helpCard">
                     <h2>Change Avatar</h2>
                 </div>
 
-                <div class="AddDebitCardHelp">
+                <div class="helpCard">
                     <h2>Credit Card Help</h2>
                 </div>
 
-                <div class="JobHelp">
+                <div class="helpCard">
                     <h2>Job Help</h2>
                 </div>
 
-                <div class="MarketplaceHelp">
+                <div class="helpCard">
                     <h2>EZWork Marketplace</h2>
+                    <i class="fas fa-chevron-up"></i>
                 </div>
-
-
-            </div>
-            <div class="helpWrapper"></div>
         </div>
     </div>
     
