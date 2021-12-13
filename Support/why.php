@@ -239,7 +239,7 @@ require_once('../classes/DB.php');
                             </div>
                         </div>
 
-                        <p>&#8220;My company has grown tremendously since I’ve been able to find good people to work for me&#8221;.</p>
+                        <p>&#8220;My company has grown since I’ve been able to find good people to work for me&#8221;.</p>
                     </div>
 
                     <div class="card">
