@@ -280,12 +280,13 @@
   align-items: center;
 }
 .whyEZWork .whyEZWorkContainer .reviewWrapper .reviewsCard .card p {
+  text-align: center;
   width: 100%;
   color: #797979;
   background: white;
   border-radius: 5px;
   padding: 0.5rem;
-  line-height: 1.8;
+  line-height: 1.5;
 }
 .whyEZWork .whyEZWorkContainer .reviewWrapper .reviewsCard .card2 {
   width: fit-content;

@@ -295,12 +295,13 @@ $darktext: rgb(121, 121, 121);
             }
 
             p{
+              text-align: center;
               width: 100%;
               color: $darktext;
               background: white;
               border-radius: 5px;
               padding: .5rem;
-              line-height: 1.8;
+              line-height: 1.5;
             }
           }
           .card2{
