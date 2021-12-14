@@ -66,10 +66,28 @@ require_once('../classes/DB.php');
                     <span>Please do your best to provide the most information possible for our freelancers.</span>
                 </div>
             </div>
+            
 
             <div class="helpSupportCard">
                 <h2>Job Edit/Delete Guide</h2>
                 <i class="fas fa-chevron-up"></i>
+            </div>
+            <div class="editWrapper">
+                <div class="editCard">
+        
+                    <h2>How to edit your job?</h2>
+                    <video muted width="70%" height="50%" controls>
+                        <source src="../vid/postJob.mp4" type="video/mp4">
+                    </video>
+                    <p>The video above shows how to edit a job, you can edit most of the details posted.</p>
+                    
+                    <h2>How to delete your job?</h2>
+                    <video muted width="70%" height="50%" controls>
+                        <source src="../vid/deleteJob.mp4" type="video/mp4">
+                    </video>
+                    <p>The video above shows how to delete your job from the EZWork marketplace.</p>
+                    
+                </div>
             </div>
 
             <div class="helpSupportCard">
