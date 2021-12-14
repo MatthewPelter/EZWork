@@ -384,25 +384,28 @@ $getFreelancerID = $getFreelancerID['freelancer_id'];
             </div>
         </div>
     </div>
-
-    <?php if ($r['typeOfJob'] == "offer" && $r['user_id'] == $user_id) {
-        $selectCurrentJobs = mysqli_query($conn, "SELECT offerjobs.id, offerjobs.status, clients.username as uname FROM offerjobs INNER JOIN clients on offerjobs.client_id=clients.id WHERE job_id='$job_id'"); ?>
-        <h1>Current Clients</h1>
-        <?php if (mysqli_num_rows($selectCurrentJobs) > 0) {
-            while ($pull = mysqli_fetch_assoc($selectCurrentJobs)) { ?>
-                <div class="currentJob">
-                    <div class="currentUser"><? echo $pull['uname']; ?></div>
-                    <div class="currentStatus"><? echo ($pull['status'] == 0) ? "Open" : "Closed"; ?></div>
-                    <button onclick="location.href='./offerJob.php?id=<?php echo $pull['id']; ?>'">View Job</button>
-                </div>
+    
+    <div class="currentClients">
+        <?php if ($r['typeOfJob'] == "offer" && $r['user_id'] == $user_id) {
+            $selectCurrentJobs = mysqli_query($conn, "SELECT offerjobs.id, offerjobs.status, clients.username as uname FROM offerjobs INNER JOIN clients on offerjobs.client_id=clients.id WHERE job_id='$job_id'"); ?>
+            <h1>Current Clients</h1>
+            <?php if (mysqli_num_rows($selectCurrentJobs) > 0) {
+                while ($pull = mysqli_fetch_assoc($selectCurrentJobs)) { ?>
+                    <div class="currentJob">
+                        <div class="currentUser"><h2>User:</h2> <span><? echo $pull['uname']; ?></span></div>
+                        <div class="currentStatus"><h2>Status:</h2><span><? echo ($pull['status'] == 0) ? "Open" : "Closed"; ?></span></div>
+                        <button onclick="location.href='./offerJob.php?id=<?php echo $pull['id']; ?>'">View Job</button>
+                    </div>
+                <?php
+                }
+            } else { ?>
+                <h1>No active clients</h1>
             <?php
             }
-        } else { ?>
-            <h2>No active clients</h2>
-        <?php
-        }
-        ?>
-    <?php } ?>
+            ?>
+        <?php } ?>
+    </div>
+
 
     <!-- ---------------------------------------------------------- -->
     <!-- PROGRESS SECTION -->

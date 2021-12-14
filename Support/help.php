@@ -207,7 +207,7 @@ require_once('../classes/DB.php');
 
             <div class="stillWrapper">
                 <div class="stillCard">
-                    <h2>If you can't find the help that you are looking for,</h2>
+                    <h2>If you can't find the help that you are looking for?</h2>
                     <a href="./contact.php">Contact Us</a>
                 </div>
             </div>
