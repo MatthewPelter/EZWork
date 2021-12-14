@@ -77,7 +77,7 @@ require_once('../classes/DB.php');
         
                     <h2>How to edit your job?</h2>
                     <video muted width="70%" height="50%" controls>
-                        <source src="../vid/postJob.mp4" type="video/mp4">
+                        <source src="../vid/editJob.mp4" type="video/mp4">
                     </video>
                     <p>The video above shows how to edit a job, you can edit most of the details posted.</p>
                     
@@ -144,20 +144,60 @@ require_once('../classes/DB.php');
                 <h2>Change Password Guide</h2>
                 <i class="fas fa-chevron-up"></i>
             </div>
-
-            <div class="helpSupportCard">
-                <h2>Change Avatar Guide</h2>
-                <i class="fas fa-chevron-up"></i>
+            <div class="cPasswordWrapper">
+                <div class="cPasswordCard">
+                    <h2>How to use the message system and send direct messages to other users?</h2>
+                    <video muted width="70%" height="50%" controls>
+                        <source src="../vid/messageSystem.mp4" type="video/mp4">
+                    </video>
+                    <p>The video above shows how to message someone on the system, send messages, and read messages.</p>
+                    <span>Please try to not offend any one.</span>
+                </div>
             </div>
 
             <div class="helpSupportCard">
+                <h2>Change Avatar Guide</h2>
+                <i id="cAvatarUp" class="fas fa-chevron-up"></i>
+            </div>
+            <div class="cAvatarWrapper">
+                <div class="cAvatarCard">
+                    <h2>How to use the message system and send direct messages to other users?</h2>
+                    <video muted width="70%" height="50%" controls>
+                        <source src="../vid/messageSystem.mp4" type="video/mp4">
+                    </video>
+                    <p>The video above shows how to message someone on the system, send messages, and read messages.</p>
+                    <span>Please try to not offend any one.</span>
+                </div>
+            </div>
+
+            <div class="Card">
                 <h2>Credit Card Help</h2>
-                <i class="fas fa-chevron-up"></i>
+                <i id="creditUp" class="fas fa-chevron-up"></i>
+            </div>
+            <div class="creditWrapper">
+                <div class="creditCard">
+                    <h2>How to use the message system and send direct messages to other users?</h2>
+                    <video muted width="70%" height="50%" controls>
+                        <source src="../vid/messageSystem.mp4" type="video/mp4">
+                    </video>
+                    <p>The video above shows how to message someone on the system, send messages, and read messages.</p>
+                    <span>Please try to not offend any one.</span>
+                </div>
             </div>
 
             <div class="helpSupportCard">
                 <h2>EZWork Marketplace Guide</h2>
-                <i class="fas fa-chevron-up"></i>
+                <i id="ezMarketUp" class="fas fa-chevron-up"></i>
+            </div>
+            <div class="ezMarketWrapper">
+                <div class="ezMarketeCard">
+                    <h2>How to use the message system and send direct messages to other users?</h2>
+                    <video muted width="70%" height="50%" controls>
+                        <source src="../vid/messageSystem.mp4" type="video/mp4">
+                    </video>
+                    <p>The video above shows how to message someone on the system, send messages, and read messages.</p>
+                    <span>Please try to not offend any one.</span>
+                </div>
             </div>
         </div>
     </div>
@@ -259,6 +299,53 @@ require_once('../classes/DB.php');
         }
 
     });
+
+    const cAvatarArrow = document.getElementById('cAvatarUp');
+
+    cAvatarArrow.addEventListener('click',()=>{
+        var cAvatarWrapper = document.querySelector('.cAvatarWrapper');
+
+        if(getComputedStyle(cAvatarWrapper).display === 'block'){
+            cAvatarWrapper.style.display = 'none';
+            cAvatarArrow.style.transform = "rotate(180deg)";
+        }else{
+            cAvatarWrapper.style.display = 'block';
+            cAvatarArrow.style.transform = "rotate(360deg)";
+        }
+
+    });
+
+    const creditArrow = document.getElementById('creditUp');
+
+    creditArrow.addEventListener('click',()=>{
+        var creditWrapper = document.querySelector('.creditWrapper');
+
+        if(getComputedStyle(creditWrapper).display === 'block'){
+            creditWrapper.style.display = 'none';
+            creditArrow.style.transform = "rotate(180deg)";
+        }else{
+            creditWrapper.style.display = 'block';
+            creditArrow.style.transform = "rotate(360deg)";
+        }
+
+    });
+
+    const ezMarketArrow = document.getElementById('ezMarketUp');
+
+    ezMarketArrow.addEventListener('click',()=>{
+        var ezMarketWrapper = document.querySelector('.ezMarketWrapper');
+
+        if(getComputedStyle(ezMarketWrapper).display === 'block'){
+            ezMarketWrapper.style.display = 'none';
+            ezMarketArrow.style.transform = "rotate(180deg)";
+        }else{
+            ezMarketWrapper.style.display = 'block';
+            ezMarketArrow.style.transform = "rotate(360deg)";
+        }
+
+    });
+
+
 </script>
 
 </html>
