@@ -142,7 +142,7 @@ require_once('../classes/DB.php');
 
             <div class="helpSupportCard">
                 <h2>Change Password Guide</h2>
-                <i class="fas fa-chevron-up"></i>
+                <i id="cPasswordUp" class="fas fa-chevron-up"></i>
             </div>
             <div class="cPasswordWrapper">
                 <div class="cPasswordCard">
@@ -170,7 +170,7 @@ require_once('../classes/DB.php');
                 </div>
             </div>
 
-            <div class="Card">
+            <div class="helpSupportCard">
                 <h2>Credit Card Help</h2>
                 <i id="creditUp" class="fas fa-chevron-up"></i>
             </div>
@@ -341,6 +341,20 @@ require_once('../classes/DB.php');
         }else{
             ezMarketWrapper.style.display = 'block';
             ezMarketArrow.style.transform = "rotate(360deg)";
+        }
+
+    });
+    const cPasswordArrow = document.getElementById('cPasswordUp');
+
+    cPasswordArrow.addEventListener('click',()=>{
+        var cPasswordWrapper = document.querySelector('.cPasswordWrapper');
+
+        if(getComputedStyle(cPasswordWrapper).display === 'block'){
+            cPasswordWrapper.style.display = 'none';
+            cPasswordArrow.style.transform = "rotate(180deg)";
+        }else{
+            cPasswordWrapper.style.display = 'block';
+            cPasswordArrow.style.transform = "rotate(360deg)";
         }
 
     });
