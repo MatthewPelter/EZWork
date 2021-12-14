@@ -28492,6 +28492,7 @@ footer p {
 
 .helpSupport .helpSupportContainer .loginOutWrapper {
   width: 100%;
+  display: block;
 }
 
 .helpSupport .helpSupportContainer .loginOutWrapper .loginOutCard {
@@ -28506,11 +28507,17 @@ footer p {
           flex-direction: column;
 }
 
+.helpSupport .helpSupportContainer .loginOutWrapper .loginOutCard h2 {
+  font-size: 1.3rem;
+  color: #0a345e;
+  text-decoration: underline;
+  margin: .5rem 0rem;
+}
+
 .helpSupport .helpSupportContainer .loginOutWrapper .loginOutCard p {
   color: #797979;
-  font-size: 1.3rem;
+  font-size: 1rem;
   width: 100%;
-  margin: 1rem 0rem;
 }
 
 .helpSupport .helpSupportContainer .missionWrapper {

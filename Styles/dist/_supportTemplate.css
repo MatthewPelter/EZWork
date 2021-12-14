@@ -499,6 +499,7 @@
 }
 .helpSupport .helpSupportContainer .loginOutWrapper {
   width: 100%;
+  display: block;
 }
 .helpSupport .helpSupportContainer .loginOutWrapper .loginOutCard {
   width: 100%;

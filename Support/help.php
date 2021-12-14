@@ -34,7 +34,7 @@ require_once('../classes/DB.php');
         <div class="helpSupportContainer">
             <div class="helpSupportCard">
                 <h2>Log-In/Out Guide</h2>
-                <i class="fas fa-chevron-up"></i>
+                <i id="logUp" class="fas fa-chevron-up"></i>
             </div>
             <div class="loginOutWrapper">
                 <div class="loginOutCard">
@@ -106,7 +106,21 @@ require_once('../classes/DB.php');
     </datalist>
 </body>
 
-<!--Script for the search bar and datalist-->
-<scrip src="../SkillsContainer/allJobsSkills.js"></script>
+<script>
+    const logArrow = document.getElementById('logUp');
+
+    logArrow.addEventListener('click',()=>{
+        var logWrapper = document.querySelector('.loginOutWrapper');
+
+        if(getComputedStyle(logWrapper).display === 'block'){
+            logWrapper.style.display = 'none';
+            logArrow.style.transform = "rotate(180deg)";
+        }else{
+            logWrapper.style.display = 'block';
+            logArrow.style.transform = "rotate(360deg)";
+        }
+
+    });    
+</script>
 
 </html>
