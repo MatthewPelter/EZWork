@@ -38,15 +38,15 @@ require_once('../classes/DB.php');
             </div>
             <div class="loginOutWrapper">
                 <div class="loginOutCard">
-                    <h3>How to log in to your account?</h3>
-                    <video autoplay muted loop width="70%" height="50%" controls>
+                    <h2>How to log in to your account?</h2>
+                    <video muted width="70%" height="50%" controls>
                         <source src="../vid/login.mp4" type="video/mp4">
                     </video>
                     <p>The video above shows how you log into the system.</p>
                     <p>You can press on "Show Password" to see the text you write.</p>
                     
                     <h2>How to log out of your account?</h2>
-                    <video autoplay muted loop width="70%" height="50%" controls>
+                    <video muted width="70%" height="50%" controls>
                         <source src="../vid/logout.mp4" type="video/mp4">
                     </video>
                     <p>The video above shows how to log out the system.</p>
@@ -55,8 +55,24 @@ require_once('../classes/DB.php');
             </div>
             <div class="helpSupportCard">
                 <h2>Post A Job Guide</h2>
+                <i id="postUp" class="fas fa-chevron-up"></i>
+            </div>
+            <div class="postWrapper">
+                <div class="postCard">
+                    <h2>How post a job?</h2>
+                    <video muted width="70%" height="50%" controls>
+                        <source src="../vid/postJob.mp4" type="video/mp4">
+                    </video>
+                    <p>The video above shows the step by step process of posting a job to the EZWork Marketplace.</p>
+                    <p>Please do your best to provide the most information possible for our freelancers.</p>
+                </div>
+            </div>
+
+            <div class="helpSupportCard">
+                <h2>Job Edit/Delete Guide</h2>
                 <i class="fas fa-chevron-up"></i>
             </div>
+
             <div class="helpSupportCard">
                 <h2>Find Freelancers Guide</h2>
                 <i class="fas fa-chevron-up"></i>
@@ -83,11 +99,6 @@ require_once('../classes/DB.php');
 
             <div class="helpSupportCard">
                 <h2>Credit Card Help</h2>
-                <i class="fas fa-chevron-up"></i>
-            </div>
-
-            <div class="helpSupportCard">
-                <h2>Job Help Guide</h2>
                 <i class="fas fa-chevron-up"></i>
             </div>
 
@@ -121,6 +132,21 @@ require_once('../classes/DB.php');
         }
 
     });    
+
+    const postArrow = document.getElementById('postUp');
+
+    postArrow.addEventListener('click',()=>{
+        var postWrapper = document.querySelector('.postWrapper');
+
+        if(getComputedStyle(postWrapper).display === 'block'){
+            postWrapper.style.display = 'none';
+            postArrow.style.transform = "rotate(180deg)";
+        }else{
+            postWrapper.style.display = 'block';
+            postArrow.style.transform = "rotate(360deg)";
+        }
+
+    });        
 </script>
 
 </html>

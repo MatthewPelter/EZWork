@@ -1,0 +1,14 @@
+const postArrow = document.getElementById('postUp');
+
+postArrow.addEventListener('click',()=>{
+    var postWrapper = document.querySelector('.postWrapper');
+
+    if(getComputedStyle(postWrapper).display === 'block'){
+        postWrapper.style.display = 'none';
+        postArrow.style.transform = "rotate(180deg)";
+    }else{
+        postWrapper.style.display = 'block';
+        postArrow.style.transform = "rotate(360deg)";
+    }
+
+}); 
