@@ -20282,9 +20282,10 @@ li {
 .currentClients {
   width: 100%;
   background: whitesmoke;
-  padding: 2.5rem;
-  border: 3px solid lightgrey;
-  border-radius: 12px;
+  padding: 2.5rem 8rem;
+  border-top: 3px solid lightgrey;
+  border-bottom: 3px solid lightgrey;
+  border-radius: 15px;
 }
 
 .currentClients h1 {
