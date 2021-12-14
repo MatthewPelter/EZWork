@@ -146,12 +146,12 @@ require_once('../classes/DB.php');
             </div>
             <div class="cPasswordWrapper">
                 <div class="cPasswordCard">
-                    <h2>How to use the message system and send direct messages to other users?</h2>
+                    <h2>How to change your password?</h2>
                     <video muted width="70%" height="50%" controls>
-                        <source src="../vid/messageSystem.mp4" type="video/mp4">
+                        <source src="../vid/cPassword.mp4" type="video/mp4">
                     </video>
-                    <p>The video above shows how to message someone on the system, send messages, and read messages.</p>
-                    <span>Please try to not offend any one.</span>
+                    <p>The video above shows how you can change your current password. You must enter the correct current password, the new password must by at least 8 characters, and you must match your new password.</p>
+                    <span>If you done remember your password, please visit the login page and press on "Forgot Password".</span>
                 </div>
             </div>
 
@@ -161,12 +161,12 @@ require_once('../classes/DB.php');
             </div>
             <div class="cAvatarWrapper">
                 <div class="cAvatarCard">
-                    <h2>How to use the message system and send direct messages to other users?</h2>
+                    <h2>How to change your avatar or profile picture?</h2>
                     <video muted width="70%" height="50%" controls>
-                        <source src="../vid/messageSystem.mp4" type="video/mp4">
+                        <source src="../vid/avatar.mp4" type="video/mp4">
                     </video>
-                    <p>The video above shows how to message someone on the system, send messages, and read messages.</p>
-                    <span>Please try to not offend any one.</span>
+                    <p>The video above shows how you can change your avatar or your profile picture through the settings page. If you plan on changing your avatar, you must press on browse and select an image. You will see the file name on the bottom of the browse button. If file name is visible, then you must remember to press on upload photo. Once done, you have succesfully changed your avatar.</p>
+                    <span>Please try to upload a clear image for everyone.</span>
                 </div>
             </div>
 
@@ -176,12 +176,12 @@ require_once('../classes/DB.php');
             </div>
             <div class="creditWrapper">
                 <div class="creditCard">
-                    <h2>How to use the message system and send direct messages to other users?</h2>
+                    <h2>How to add a credit card and add funds?</h2>
                     <video muted width="70%" height="50%" controls>
-                        <source src="../vid/messageSystem.mp4" type="video/mp4">
+                        <source src="../vid/credit.mp4" type="video/mp4">
                     </video>
-                    <p>The video above shows how to message someone on the system, send messages, and read messages.</p>
-                    <span>Please try to not offend any one.</span>
+                    <p>The video above shows how to add a credit card and add funds. This can be done by going to the settings page and clicked on the "Billing Methods" tab. Here you can add your credit card and once done, you can begin to add funds.</p>
+                    <span>Please try to not share your private information to other.</span>
                 </div>
             </div>
 
@@ -207,7 +207,7 @@ require_once('../classes/DB.php');
 
             <div class="stillWrapper">
                 <div class="stillCard">
-                    <h2>If you can't find the help that you are looking for?</h2>
+                    <h2>Can't find what you are looking for?</h2>
                     <a href="./contact.php">Contact Us</a>
                 </div>
             </div>
