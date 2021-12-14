@@ -3,7 +3,7 @@
             <div class="links">
                 <ul>
                     <a href="../newPostJob/length.php">Post a Job</a>
-                    <a href="../Freelancer/AllFreelancers.php">Find Talent</a>
+                    <a href="../Freelancer/AllFreelancers.php">Find Freelancers</a>
                     <a href="../Market/market.php">Browse Marketplace</a>
                 </ul>
             </div>
@@ -17,7 +17,7 @@
             <div class="links">
                 <ul>
                     <a href="../Support/help.php">Help & Support</a>
-                    <a href="./Support/why.php">EZWork Reviews</a>
+                    <a href="../Support/why.php">EZWork Reviews</a>
                     <a href="#/">Trust & Security</a>
                 </ul>
             </div>
