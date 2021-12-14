@@ -28499,20 +28499,6 @@ footer p {
   padding: 2rem;
 }
 
-.helpSupport .helpSupportContainer .loginOutWrapper .loginOutCard #loginOutVid {
-  height: 30rem;
-  width: 50rem;
-  padding-top: 0.5rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  border-radius: 1rem;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
 .helpSupport .helpSupportContainer .missionWrapper {
   width: 100%;
   display: block;

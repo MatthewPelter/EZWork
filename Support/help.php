@@ -38,7 +38,7 @@ require_once('../classes/DB.php');
             </div>
             <div class="loginOutWrapper">
                 <div class="loginOutCard">
-                    <video autoplay muted loop id="loginOutVid" controls>
+                    <video autoplay muted loop id="loginOutVid" width="50vw" height="50vh" controls>
                         <source src="../vid/login.mp4" type="video/mp4">
                     </video>
                 </div>
