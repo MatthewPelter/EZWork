@@ -38,13 +38,14 @@ require_once('../classes/DB.php');
             </div>
             <div class="loginOutWrapper">
                 <div class="loginOutCard">
-                    
+                    <h3>How to log in to your account?</h3>
                     <video autoplay muted loop width="70%" height="50%" controls>
                         <source src="../vid/login.mp4" type="video/mp4">
                     </video>
                     <p>The video above shows how you log into the system.</p>
                     <p>You can press on "Show Password" to see the text you write.</p>
-
+                    
+                    <h2>How to log out of your account?</h2>
                     <video autoplay muted loop width="70%" height="50%" controls>
                         <source src="../vid/logout.mp4" type="video/mp4">
                     </video>
