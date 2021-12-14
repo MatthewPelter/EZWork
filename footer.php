@@ -3,21 +3,21 @@
             <div class="links">
                 <ul>
                     <a href="../newPostJob/length.php">Post a Job</a>
-                    <a href="#/">Find Talent</a>
-                    <a href="#/">Browse Projects</a>
+                    <a href="../Freelancer/AllFreelancers.php">Find Talent</a>
+                    <a href="../Market/market.php">Browse Marketplace</a>
                 </ul>
             </div>
             <div class="links">
                 <ul>
-                    <a href="#/">About Us</a>
+                    <a href="../Support/why.php">About Us</a>
                     <a href="#/">Developers</a>
-                    <a href="#/">Contact Us</a>
+                    <a href="../Support/contact.php">Contact Us</a>
                 </ul>
             </div>
             <div class="links">
                 <ul>
-                    <a href="#/">Help & Support</a>
-                    <a href="#/">EZWork Reviews</a>
+                    <a href="../Support/help.php">Help & Support</a>
+                    <a href="./Support/why.php">EZWork Reviews</a>
                     <a href="#/">Trust & Security</a>
                 </ul>
             </div>
