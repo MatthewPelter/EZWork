@@ -7,7 +7,7 @@ include('../classes/Mail.php');
 $user_id = $_SESSION['user_id'];
 $sql = "SELECT * FROM clients WHERE id='$user_id'";
 $result = mysqli_query($conn, $sql);
-$row = mysqli_fetch_assoc($result);
+$rowSettings = mysqli_fetch_assoc($result);
 
 
 ?>
@@ -63,7 +63,7 @@ $row = mysqli_fetch_assoc($result);
                 </div>
                 <div class="settings-account-profile-image">
                     <div class="image-card">
-                        <img id="img" src="<?php echo $row['avatar']; ?>" alt="Avatar">
+                        <img id="img" src="<?php echo $rowSettings['avatar']; ?>" alt="Avatar">
                     </div>
 
                     <form action="javascript:void(0);" class="avatar">
@@ -78,18 +78,18 @@ $row = mysqli_fetch_assoc($result);
                     </form>
                 </div>
                 <div class="settings-account-profile-info">
-                    <p>UserName: <span id="settingsName"><?php echo $row['username']; ?></span></p>
-                    <p>Account Type: <span><?php if ($row['freelancer_id'] == NULL) {
+                    <p>UserName: <span id="settingsName"><?php echo $rowSettings['username']; ?></span></p>
+                    <p>Account Type: <span><?php if ($rowSettings['freelancer_id'] == NULL) {
                                                 echo "Client";
                                             } else {
                                                 echo "Freelancer";
                                             } ?></span></p>
-                    <p>Phone Number: <span id="settingsPhone"><?php echo $row['phone']; ?></span></p>
-                    <p>Email: <span id="settingsEmail"><?php echo $row['email']; ?></span></p>
+                    <p>Phone Number: <span id="settingsPhone"><?php echo $rowSettings['phone']; ?></span></p>
+                    <p>Email: <span id="settingsEmail"><?php echo $rowSettings['email']; ?></span></p>
                 </div>
             </div>
             <div class="settings-account-godMode">
-                <?php if ($row['freelancer_id'] == NULL) {
+                <?php if ($rowSettings['freelancer_id'] == NULL) {
                 ?>
                     <p>This is a <span id="accountType">Client</span> account.</p>
 
@@ -168,7 +168,9 @@ $row = mysqli_fetch_assoc($result);
                 ?>
                 <div class="settings-balance-card2">
                     <p class="balance">Your balance is <span>$</span><span id="balance"><?php echo $getCards['funds']; ?></span></p>
-                    <button id="payBalance" <?php if ($getCards['card'] == NULL) { echo "disabled"; } ?>>Add Funds</button>
+                    <button id="payBalance" <?php if ($getCards['card'] == NULL) {
+                                                echo "disabled";
+                                            } ?>>Add Funds</button>
                 </div>
             </div>
             <div class="settings-billing-container">

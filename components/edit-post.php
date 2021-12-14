@@ -42,11 +42,10 @@ if (isset($_POST['submit'])) {
     $title = securityscan($_POST['title']);
     $size = securityscan($_POST['size']);
     $budget = securityscan($_POST['budget']);
-    $rate = securityscan($_POST['rate']);
     $description = securityscan($_POST['description']);
     $experience = securityscan($_POST['experience']);
 
-    $editPost = mysqli_query($conn, "UPDATE jobs SET length = '$length', title = '$title', size = '$size', budget = '$budget', rate = '$rate', description = '$description', experience = '$experience' WHERE id='$job_id'") or die(mysqli_errno($conn));
+    $editPost = mysqli_query($conn, "UPDATE jobs SET length = '$length', title = '$title', size = '$size', budget = '$budget', description = '$description', experience = '$experience' WHERE id='$job_id'") or die(mysqli_errno($conn));
     if ($editPost) {
         header("location: https://ez-work.herokuapp.com/newPostJob/job.php?id=" . $job_id);
     } else {
