@@ -70,7 +70,7 @@ require_once('../classes/DB.php');
 
             <div class="helpSupportCard">
                 <h2>Job Edit/Delete Guide</h2>
-                <i class="fas fa-chevron-up"></i>
+                <i id="editUp" class="fas fa-chevron-up"></i>
             </div>
             <div class="editWrapper">
                 <div class="editCard">
@@ -161,6 +161,21 @@ require_once('../classes/DB.php');
         }else{
             postWrapper.style.display = 'block';
             postArrow.style.transform = "rotate(360deg)";
+        }
+
+    });
+    
+    const editArrow = document.getElementById('editUp');
+
+    editArrow.addEventListener('click',()=>{
+        var editWrapper = document.querySelector('.editWrapper');
+
+        if(getComputedStyle(editWrapper).display === 'block'){
+            editWrapper.style.display = 'none';
+            editArrow.style.transform = "rotate(180deg)";
+        }else{
+            editWrapper.style.display = 'block';
+            editArrow.style.transform = "rotate(360deg)";
         }
 
     });        
