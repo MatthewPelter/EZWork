@@ -28497,6 +28497,20 @@ footer p {
 .helpSupport .helpSupportContainer .loginOutWrapper .loginOutCard {
   width: 100%;
   padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.helpSupport .helpSupportContainer .loginOutWrapper .loginOutCard p {
+  color: #797979;
+  font-size: 1.3rem;
+  width: 100%;
+  margin: 1rem 0rem;
 }
 
 .helpSupport .helpSupportContainer .missionWrapper {

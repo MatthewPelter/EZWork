@@ -548,6 +548,15 @@ $darktext: rgb(121, 121, 121);
       .loginOutCard{
         width: 100%;
         padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        p{
+          color: $darktext;
+          font-size: 1.3rem;
+          width: 100%;
+          margin: 1rem 0rem;
+        }
+
       }
     }
 
