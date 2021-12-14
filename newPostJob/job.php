@@ -165,6 +165,16 @@ $getFreelancerID = $getFreelancerID['freelancer_id'];
         .job-progress-section .job-progress-container .messageChat {
             margin-top: -300px;
         }
+
+        .chat .chat-message #message-to-send {
+            width: 100%;
+            border: none;
+            padding: 10px 20px;
+            font: 1rem "Montserrat", Arial, sans-serif;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            resize: none;
+        }
     </style>
 </head>
 
