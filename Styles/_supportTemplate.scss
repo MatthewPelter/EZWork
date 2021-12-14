@@ -542,10 +542,10 @@ $darktext: rgb(121, 121, 121);
         }
     }
 
-    .loginOutWrapper,.postWrapper,.editWrapper{
+    .loginOutWrapper,.postWrapper,.editWrapper,.findFwrapper{
       width: 100%;
       display: block;
-      .loginOutCard,.postCard,.editCard{
+      .loginOutCard,.postCard,.editCard,.findFCard{
         width: 100%;
         padding: 2rem;
         display: flex;

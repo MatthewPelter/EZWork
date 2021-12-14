@@ -92,8 +92,18 @@ require_once('../classes/DB.php');
 
             <div class="helpSupportCard">
                 <h2>Find Freelancers Guide</h2>
-                <i class="fas fa-chevron-up"></i>
+                <i id="findFUp" class="fas fa-chevron-up"></i>
             </div>
+            <div class="findFWrapper">
+                <div class="findFCard">
+                    <h2>How to find an EZWork Freelancer??</h2>
+                    <video muted width="70%" height="50%" controls>
+                        <source src="../vid/findFreelancer.mp4" type="video/mp4">
+                    </video>
+                    <p>The video above shows all ways you can find a freelancer in our EZWork System.</p>
+                </div>
+            </div>
+
             <div class="helpSupportCard">
                 <h2>Find Work Guide</h2>
                 <i class="fas fa-chevron-up"></i>
@@ -178,7 +188,22 @@ require_once('../classes/DB.php');
             editArrow.style.transform = "rotate(360deg)";
         }
 
-    });        
+    });
+    
+    const findFArrow = document.getElementById('findFUp');
+
+    findFArrow.addEventListener('click',()=>{
+        var findFWrapper = document.querySelector('.findFWrapper');
+
+        if(getComputedStyle(findFWrapper).display === 'block'){
+            findFWrapper.style.display = 'none';
+            findFArrow.style.transform = "rotate(180deg)";
+        }else{
+            findFWrapper.style.display = 'block';
+            findFArrow.style.transform = "rotate(360deg)";
+        }
+
+    });    
 </script>
 
 </html>
