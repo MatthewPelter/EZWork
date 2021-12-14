@@ -112,6 +112,21 @@ require_once('../classes/DB.php');
             </div>
 
             <div class="helpSupportCard">
+                <h2>Become a Freelancer Guide</h2>
+                <i id="bFreelancerUp" class="fas fa-chevron-up"></i>
+            </div>
+            <div class="bFreelancerWWrapper">
+                <div class="bFreelancerCard">
+                    <h2>How to become an EZWork Freelancer?</h2>
+                    <video muted width="70%" height="50%" controls>
+                        <source src="../vid/bFreelancer.mp4" type="video/mp4">
+                    </video>
+                    <p>If you have a skill you want to make profit from, it is a smart idea to become a freelancer under the EZWork system, to open many oppurtunities to meet new people, find work, and make money. The video above shows the step by step process of becoming a freelancer under the EZWork system.</p>
+                    <span>Please ensure you provide as much detail as possible.</span>
+                </div>
+            </div>
+
+            <div class="helpSupportCard">
                 <h2>Find Work Guide</h2>
                 <i id="findWUp" class="fas fa-chevron-up"></i>
             </div>
@@ -223,6 +238,20 @@ require_once('../classes/DB.php');
 </body>
 
 <script>
+    const bFreelancerArrow = document.getElementById('bFreelancerUp');
+
+    bFreelancerArrow.addEventListener('click',()=>{
+        var bFreelancerWrapper = document.querySelector('.bFreelancerWrapper');
+
+        if(getComputedStyle(bFreelancerWrapper).display === 'block'){
+            bFreelancerWrapper.style.display = 'none';
+            bFreelancerArrow.style.transform = "rotate(180deg)";
+        }else{
+            bFreelancerWrapper.style.display = 'block';
+            bFreelancerArrow.style.transform = "rotate(360deg)";
+        }
+
+    });
     const logArrow = document.getElementById('logUp');
 
     logArrow.addEventListener('click',()=>{

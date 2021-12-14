@@ -542,10 +542,10 @@ $darktext: rgb(121, 121, 121);
         }
     }
 
-    .loginOutWrapper,.stillWrapper,.postWrapper,.editWrapper,.findFWrapper,.findWWrapper,.messageWrapper,.cPasswordWrapper,.cAvatarWrapper,.creditWrapper,.ezMarketWrapper{
+    .loginOutWrapper, .bFreelancerWWrapper,.stillWrapper,.postWrapper,.editWrapper,.findFWrapper,.findWWrapper,.messageWrapper,.cPasswordWrapper,.cAvatarWrapper,.creditWrapper,.ezMarketWrapper{
       width: 100%;
       display: block;
-      .loginOutCard,.postCard,.stillCard,.editCard,.findFCard,.findWCard,.messageCard,.cPasswordCard,.cAvatarCard,.creditCard,.ezMarketCard{
+      .loginOutCard, .bFreelancerCard,.postCard,.stillCard,.editCard,.findFCard,.findWCard,.messageCard,.cPasswordCard,.cAvatarCard,.creditCard,.ezMarketCard{
         width: 100%;
         padding: 2rem;
         display: flex;
