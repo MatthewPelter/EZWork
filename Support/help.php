@@ -96,17 +96,33 @@ require_once('../classes/DB.php');
             </div>
             <div class="findFWrapper">
                 <div class="findFCard">
-                    <h2>How to find an EZWork Freelancer??</h2>
+                    <h2>How to find an EZWork Freelancer?</h2>
                     <video muted width="70%" height="50%" controls>
                         <source src="../vid/findFreelancer.mp4" type="video/mp4">
                     </video>
                     <p>The video above shows all ways you can find a freelancer in our EZWork System.</p>
+                    
+                    <h2>How to hire an EZWork Freelancer?</h2>
+                    <video muted width="70%" height="50%" controls>
+                        <source src="../vid/hireFreelancer.mp4" type="video/mp4">
+                    </video>
+                    <p>Unless a freelancer send you a proposal, the only way you can hire a freelancer is by viewing the Services Page.</p>
+                    
                 </div>
             </div>
 
             <div class="helpSupportCard">
                 <h2>Find Work Guide</h2>
-                <i class="fas fa-chevron-up"></i>
+                <i id="findWUp" class="fas fa-chevron-up"></i>
+            </div>
+            <div class="findWWrapper">
+                <div class="findWCard">
+                    <h2>How to find Work as a Freelancer?</h2>
+                    <video muted width="70%" height="50%" controls>
+                        <source src="../vid/findWork.mp4" type="video/mp4">
+                    </video>
+                    <p>If you are a freelancer, the EZWork system provides many job oppurtunities, the video above demonstrates how you can find work using the EZWork system.</p>
+                </div>
             </div>
 
             <div class="helpSupportCard">
@@ -203,7 +219,22 @@ require_once('../classes/DB.php');
             findFArrow.style.transform = "rotate(360deg)";
         }
 
-    });    
+    });
+    
+    const findWArrow = document.getElementById('findWUp');
+
+    findWArrow.addEventListener('click',()=>{
+        var findWWrapper = document.querySelector('.findWWrapper');
+
+        if(getComputedStyle(findWWrapper).display === 'block'){
+            findWWrapper.style.display = 'none';
+            findWArrow.style.transform = "rotate(180deg)";
+        }else{
+            findWWrapper.style.display = 'block';
+            findWArrow.style.transform = "rotate(360deg)";
+        }
+
+    });
 </script>
 
 </html>
