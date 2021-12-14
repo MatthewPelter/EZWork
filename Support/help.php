@@ -127,7 +127,17 @@ require_once('../classes/DB.php');
 
             <div class="helpSupportCard">
                 <h2>Messaging Guide</h2>
-                <i class="fas fa-chevron-up"></i>
+                <i id="messageUp" class="fas fa-chevron-up"></i>
+            </div>
+            <div class="messageWrapper">
+                <div class="messageCard">
+                    <h2>How to use the message system and send direct messages to other users?</h2>
+                    <video muted width="70%" height="50%" controls>
+                        <source src="../vid/messageSystem.mp4" type="video/mp4">
+                    </video>
+                    <p>The video above shows how to message someone on the system, send messages, and read messages.</p>
+                    <span>Please try to not offend any one.</span>
+                </div>
             </div>
 
             <div class="helpSupportCard">
@@ -232,6 +242,20 @@ require_once('../classes/DB.php');
         }else{
             findWWrapper.style.display = 'block';
             findWArrow.style.transform = "rotate(360deg)";
+        }
+
+    });
+    const messageArrow = document.getElementById('messageUp');
+
+    messageArrow.addEventListener('click',()=>{
+        var messageWrapper = document.querySelector('.messageWrapper');
+
+        if(getComputedStyle(messageWrapper).display === 'block'){
+            messageWrapper.style.display = 'none';
+            messageArrow.style.transform = "rotate(180deg)";
+        }else{
+            messageWrapper.style.display = 'block';
+            messageArrow.style.transform = "rotate(360deg)";
         }
 
     });
