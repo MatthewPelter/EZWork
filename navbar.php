@@ -261,8 +261,17 @@ to style the notification dropdown. it is still ugly and needs fixing. -->
             </div>
         <?php } else { ?>
             <div class="servicesNav">
-                <span onclick="location.href='../newPostJob/allServices'">Services</span>
-                <span onclick="location.href='../newPostJob/services.php'">My Services</span>
+            <span onclick="toggleServices()" id="services">Services</span>
+                <div class="serviceCardContainer">
+                    <div class="serviceCard">
+                        <div class="card card4" onclick="location.href='../newPostJob/services.php'">
+                            <h4>My Paid Service</h4>
+                        </div>
+                        <div class="card card2" onclick="location.href='../newPostJob/allServices'" style="margin: 0.25rem 0rem;">
+                            <h4>All Services</h4>
+                        </div>
+                    </div>
+                </div>
             </div>
         <? } ?>
 
