@@ -42,8 +42,7 @@ require_once('../classes/DB.php');
                     <video muted width="70%" height="50%" controls>
                         <source src="../vid/login.mp4" type="video/mp4">
                     </video>
-                    <p>The video above shows how you log into the system.</p>
-                    <p>You can press on "Show Password" to see the text you write.</p>
+                    <p>The video above shows how you log into the system. You can press on "Show Password" to see the text you write.</p>
                     
                     <h2>How to log out of your account?</h2>
                     <video muted width="70%" height="50%" controls>
@@ -64,7 +63,7 @@ require_once('../classes/DB.php');
                         <source src="../vid/postJob.mp4" type="video/mp4">
                     </video>
                     <p>The video above shows the step by step process of posting a job to the EZWork Marketplace.</p>
-                    <p>Please do your best to provide the most information possible for our freelancers.</p>
+                    <span>Please do your best to provide the most information possible for our freelancers.</span>
                 </div>
             </div>
 
