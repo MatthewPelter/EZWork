@@ -41,6 +41,8 @@ require_once('../classes/DB.php');
                     <video autoplay muted loop width="70%" height="50%" controls>
                         <source src="../vid/login.mp4" type="video/mp4">
                     </video>
+                    <p>This is how you log into the system.</p>
+                    <p>You can press on "Show Password" to see the text you write.</p>
                 </div>
             </div>
             <div class="helpSupportCard">
