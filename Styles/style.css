@@ -20317,6 +20317,7 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 1rem;
 }
 
 .currentClients .currentJob .currentUser h2, .currentClients .currentJob .currentStatus h2 {
@@ -20330,6 +20331,9 @@ li {
 }
 
 .currentClients .currentJob button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   cursor: pointer;
   border-radius: 15px;
   border: none;
@@ -20338,7 +20342,6 @@ li {
   color: #0a345e;
   font-weight: bolder;
   padding: 0.6rem 1.5rem;
-  margin-right: 0.25rem;
   border: 1px solid lightgrey;
 }
 
