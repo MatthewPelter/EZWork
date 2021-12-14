@@ -190,13 +190,25 @@ require_once('../classes/DB.php');
                 <i id="ezMarketUp" class="fas fa-chevron-up"></i>
             </div>
             <div class="ezMarketWrapper">
-                <div class="ezMarketeCard">
-                    <h2>How to use the message system and send direct messages to other users?</h2>
+                <div class="ezMarketCard">
+                    <h2>How to use the EZWork Marketplace to find what you are looking for?</h2>
                     <video muted width="70%" height="50%" controls>
-                        <source src="../vid/messageSystem.mp4" type="video/mp4">
+                        <source src="../vid/ezMarket.mp4" type="video/mp4">
                     </video>
-                    <p>The video above shows how to message someone on the system, send messages, and read messages.</p>
-                    <span>Please try to not offend any one.</span>
+                    <p>The video above shows the EZWork Martplace. Here is where you can find all jobs posted and all freelancers in the EZWork System. You can click on the freelancers card to go straight to their profile. In addition, you can filter and sort through all the jobs posted in the system, to find exactly what you need or want.</p>
+                </div>
+            </div>
+
+
+            <div class="helpSupportCard">
+                <h2>Still need Help?</h2>
+                <i id="stillUp" class="fas fa-chevron-up"></i>
+            </div>
+
+            <div class="stillWrapper">
+                <div class="stillCard">
+                    <h2>If you can't find the help that you are looking for,</h2>
+                    <a href="./contact.php">Contact Us</a>
                 </div>
             </div>
         </div>
@@ -358,7 +370,20 @@ require_once('../classes/DB.php');
         }
 
     });
+    const stillArrow = document.getElementById('stillUp');
 
+    stillArrow.addEventListener('click',()=>{
+        var stillWrapper = document.querySelector('.stillWrapper');
+
+        if(getComputedStyle(stillWrapper).display === 'block'){
+            stillWrapper.style.display = 'none';
+            stillArrow.style.transform = "rotate(180deg)";
+        }else{
+            stillWrapper.style.display = 'block';
+            stillArrow.style.transform = "rotate(360deg)";
+        }
+
+    });
 
 </script>
 

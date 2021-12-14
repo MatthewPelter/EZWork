@@ -542,10 +542,10 @@ $darktext: rgb(121, 121, 121);
         }
     }
 
-    .loginOutWrapper,.postWrapper,.editWrapper,.findFWrapper,.findWWrapper,.messageWrapper,.cPassword,.cAvatarWrapper,.creditWrapper,.ezMarketWrapper{
+    .loginOutWrapper,.stillWrapper,.postWrapper,.editWrapper,.findFWrapper,.findWWrapper,.messageWrapper,.cPassword,.cAvatarWrapper,.creditWrapper,.ezMarketWrapper{
       width: 100%;
       display: block;
-      .loginOutCard,.postCard,.editCard,.findFCard,.findWCard,.messageCard,.cPasswordCard,.cAvatarCard,.creditCard,.ezMarketCard{
+      .loginOutCard,.postCard,.stillCard,.editCard,.findFCard,.findWCard,.messageCard,.cPasswordCard,.cAvatarCard,.creditCard,.ezMarketCard{
         width: 100%;
         padding: 2rem;
         display: flex;
@@ -561,6 +561,16 @@ $darktext: rgb(121, 121, 121);
           color: $darktext;
           font-size: 1.5rem;
           width: 100%;
+        }
+        a{
+          text-decoration: none;
+          margin: .5rem 0rem;
+          color: $darktext;
+          font-size: 1.5rem;
+          width: 100%;
+          &:hover{
+            color: #0a345e;
+          }
         }
         span{
           color: $darktext;

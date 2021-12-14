@@ -1,14 +1,14 @@
-const postArrow = document.getElementById('postUp');
+const stillArrow = document.getElementById('stillUp');
 
-postArrow.addEventListener('click',()=>{
-    var postWrapper = document.querySelector('.postWrapper');
+stillArrow.addEventListener('click',()=>{
+    var stillWrapper = document.querySelector('.stillWrapper');
 
-    if(getComputedStyle(postWrapper).display === 'block'){
-        postWrapper.style.display = 'none';
-        postArrow.style.transform = "rotate(180deg)";
+    if(getComputedStyle(stillWrapper).display === 'block'){
+        stillWrapper.style.display = 'none';
+        stillArrow.style.transform = "rotate(180deg)";
     }else{
-        postWrapper.style.display = 'block';
-        postArrow.style.transform = "rotate(360deg)";
+        stillWrapper.style.display = 'block';
+        stillArrow.style.transform = "rotate(360deg)";
     }
 
-}); 
+});
