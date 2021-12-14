@@ -37,7 +37,11 @@ require_once('../classes/DB.php');
                 <i class="fas fa-chevron-up"></i>
             </div>
             <div class="loginOutWrapper">
-                
+                <div class="loginOutCard">
+                    <video width="100%" height="60vh" controls>
+                        <source src="../vid/login.mp4" type="video/mp4">
+                    </video>
+                </div>
             </div>
             <div class="helpSupportCard">
                 <h2>Post A Job Guide</h2>

@@ -28490,6 +28490,16 @@ footer p {
   color: #0a345e;
 }
 
+.helpSupport .helpSupportContainer .loginOutWrapper {
+  width: 100%;
+  padding: 2rem;
+}
+
+.helpSupport .helpSupportContainer .loginOutWrapper video {
+  width: 100%;
+  height: 60vh;
+}
+
 .helpSupport .helpSupportContainer .missionWrapper {
   width: 100%;
   display: block;
